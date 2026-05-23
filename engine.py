@@ -109,10 +109,10 @@ def get_valid_choice(choices):
     return player_choice
 
 
-def play_story(story, story_id, save_data=None):
+def play_story(story, story_id, save_data=None, testing=False):
     if save_data:
         print()
-        print("Loading saved adventure...")
+        print("Loading adventure...")
 
         hero_name = save_data["hero_name"]
         world_name = save_data["world_name"]
@@ -135,7 +135,10 @@ def play_story(story, story_id, save_data=None):
         if scene.get("ending") == True:
             print()
             print("The End.")
-            clear_save()
+
+            if not testing:
+                clear_save()
+
             break
 
         choices = scene["choices"]
@@ -161,8 +164,76 @@ def play_story(story, story_id, save_data=None):
             "current_entry_intro": current_entry_intro
         }
 
-        save_game(save_data)
+        if not testing:
+            save_game(save_data)
 
+def choose_entry_intro(scene):
+    if "entry_intros" not in scene:
+        return None
+
+    print()
+    print("This scene has optional entry intros.")
+    print("0. No entry intro")
+
+    intro_options = {"0": None}
+
+    number = 1
+    for intro_key in scene["entry_intros"].keys():
+        intro_options[str(number)] = intro_key
+        print(f"{number}. {intro_key}")
+        number += 1
+
+    intro_choice = input("Choose an entry intro: ")
+
+    while intro_choice not in intro_options:
+        print("Hmm, that wasn't one of the choices. Try again!")
+        intro_choice = input("Choose an entry intro: ")
+
+    return intro_options[intro_choice]
+
+
+def developer_test_mode(stories):
+    print()
+    print("==============================")
+    print("      Developer Test Mode")
+    print("==============================")
+
+    story_id, selected_story = choose_story(stories)
+
+    print()
+    print("Available scenes:")
+    print()
+
+    for scene_id, scene_data in selected_story["scenes"].items():
+        print(f"{scene_id}: {scene_data['title']}")
+
+    print()
+    scene_id = input("Enter the scene ID you want to test: ")
+
+    while scene_id not in selected_story["scenes"]:
+        print("That scene ID does not exist. Try again.")
+        scene_id = input("Enter the scene ID you want to test: ")
+
+    selected_scene = selected_story["scenes"][scene_id]
+    entry_intro = choose_entry_intro(selected_scene)
+
+    hero_name = input("Test hero name? Press Enter for Test Hero: ")
+    if hero_name == "":
+        hero_name = "Test Hero"
+
+    world_name = input("Test world name? Press Enter for Test World: ")
+    if world_name == "":
+        world_name = "Test World"
+
+    test_save_data = {
+        "story_id": story_id,
+        "hero_name": hero_name,
+        "world_name": world_name,
+        "current_scene_id": scene_id,
+        "current_entry_intro": entry_intro
+    }
+
+    play_story(selected_story, story_id, test_save_data, testing=True)
 
 def show_welcome_menu(has_save):
     print()
@@ -174,25 +245,34 @@ def show_welcome_menu(has_save):
     if has_save:
         print("1. Continue Adventure")
         print("2. Start New Adventure")
-        print("3. Quit")
+        print("3. Developer Test Mode")
+        print("4. Quit")
 
-        menu_choice = input("Choose an option: ")
-
-        while menu_choice not in ["1", "2", "3"]:
-            print("Hmm, that wasn't one of the choices. Try again!")
-            menu_choice = input("Choose an option: ")
+        menu_options = {
+            "1": "continue",
+            "2": "new",
+            "3": "developer",
+            "4": "quit"
+        }
 
     else:
         print("1. Start New Adventure")
-        print("2. Quit")
+        print("2. Developer Test Mode")
+        print("3. Quit")
 
+        menu_options = {
+            "1": "new",
+            "2": "developer",
+            "3": "quit"
+        }
+
+    menu_choice = input("Choose an option: ")
+
+    while menu_choice not in menu_options:
+        print("Hmm, that wasn't one of the choices. Try again!")
         menu_choice = input("Choose an option: ")
 
-        while menu_choice not in ["1", "2"]:
-            print("Hmm, that wasn't one of the choices. Try again!")
-            menu_choice = input("Choose an option: ")
-
-    return menu_choice
+    return menu_options[menu_choice]
 
 
 def start_new_game(stories):
@@ -205,25 +285,19 @@ def start_game(stories):
     saved_game = load_game()
     has_save = saved_game is not None
 
-    menu_choice = show_welcome_menu(has_save)
+    menu_action = show_welcome_menu(has_save)
 
-    if has_save:
-        if menu_choice == "1":
-            story_id = saved_game["story_id"]
-            story = stories[story_id]
-            play_story(story, story_id, saved_game)
+    if menu_action == "continue":
+        story_id = saved_game["story_id"]
+        story = stories[story_id]
+        play_story(story, story_id, saved_game)
 
-        elif menu_choice == "2":
-            start_new_game(stories)
+    elif menu_action == "new":
+        start_new_game(stories)
 
-        elif menu_choice == "3":
-            print()
-            print("See you next time!")
+    elif menu_action == "developer":
+        developer_test_mode(stories)
 
-    else:
-        if menu_choice == "1":
-            start_new_game(stories)
-
-        elif menu_choice == "2":
-            print()
-            print("See you next time!")
+    elif menu_action == "quit":
+        print()
+        print("See you next time!")
