@@ -63,12 +63,14 @@ def choose_story(stories):
     return story_choice, stories[story_choice]
 
 
-def setup_player():
+def setup_player(story):
     print("Welcome to Adventure Engine")
     print()
 
     hero_name = input("What is your hero's name? ")
-    world_name = input("What would you like to name your world? ")
+
+    name_prompt = story.get("setup_prompt", "What would you like to name your world? ")
+    world_name = input(name_prompt)
 
     player = {
         "hero_name": hero_name,
@@ -120,7 +122,7 @@ def play_story(story, story_id, save_data=None, testing=False):
         current_entry_intro = save_data["current_entry_intro"]
 
     else:
-        player = setup_player()
+        player = setup_player(story)
 
         hero_name = player["hero_name"]
         world_name = player["world_name"]

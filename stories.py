@@ -7,13 +7,14 @@ space_walker = {
     "title": "The Space Walker",
     "description": "A sci-fi space adventure that starts aboard a mysterious starship.",
     "theme": "space",
+    "setup_prompt": "What would you like to name the starship? ",
     "start_scene": "scene_001",
 
     "scenes": {
         "scene_001": {
             "title": "The Portal",
             "text": """
-{hero_name} steps through a glowing portal into {world_name}.
+{hero_name} steps through a glowing portal onto the starship {world_name}.
 
 Disoriented, you look around and see that you are no longer home. It looks like you have stepped into a starship from some of your favorite movies.
 
@@ -283,8 +284,9 @@ This scene still needs to be written.
 summoned_mage = {
     "id": "summoned_mage",
     "title": "The Summoned Mage",
-    "description": "A fantasy adventure about a world losing its magic.",
+    "description": "A fantasy adventure about being summoned into a world losing its magic.",
     "theme": "fantasy",
+    "setup_prompt": "What would you like to name the magical world? ",
     "start_scene": "scene_001",
 
     "scenes": {
@@ -487,10 +489,410 @@ This scene still needs to be written.
 }
 
 # ----------------------------
+# THE CAN OPENER
+# ----------------------------
+
+the_can_opener = {
+    "id": "the_can_opener",
+    "title": "The Can Opener",
+    "description": "A high-tech neighborhood hero story about a kid inventor, broken robots, and one very badly named tool.",
+    "theme": "tech_hero",
+    "setup_prompt": "What is the name of your neighborhood? ",
+    "start_scene": "scene_001",
+
+    "scenes": {
+        "scene_001": {
+            "title": "Getting Home",
+            "text": """
+The garage door opens, and there you stand in front of your tools.
+
+Home.
+
+After walking through the wreckage of {world_name}, it feels good to be back in the garage.
+
+You unsling your backpack, toss it onto the table, and unzip it.
+
+“Got some good stuff today,” you say.
+
+“That is great, sir. What did you get?”
+
+The voice comes from your computer: your trusty AI assistant and friend, Droider.
+
+“Well, Droider, I got some storage drives, scrap metal I can melt down for other uses, a few chips, and the real win here…”
+
+You reach into your bag and hold up a glowing power core.
+
+“One of the robot’s power cores.”
+
+“Now those sound like real wins, sir,” Droider says. “Can you hook up the drives to me so I can analyze the data?”
+
+“You got it, bud.”
+
+You walk over to Droider, unsling the trusty monkey wrench you always carry on your belt, and set it on the desk beside you. Then you connect the storage drives.
+
+“Check these against the others we’ve found before,” you say. “See if they still have that same strange code attached.”
+
+Just as you finish the sentence, you hear a commotion outside.
+
+What do you do next?
+""",
+            "choices": {
+                "1": {
+                    "text": "Rush outside to see what is going on",
+                    "next_scene": "scene_002"
+                },
+                "2": {
+                    "text": "Check your security cameras to see what is happening outside",
+                    "next_scene": "scene_003"
+                },
+                "3": {
+                    "text": "Ignore it and keep working on the data",
+                    "next_scene": "scene_004"
+                }
+            }
+        },
+
+        "scene_002": {
+            "title": "Rush Outside",
+            "text": """
+You rush to open the garage door, hearing something scraping around outside your home.
+
+“Be careful, sir,” Droider says. “It sounds like another bot.”
+
+As you get outside, you see what is causing the problem.
+
+A bot is going haywire, spinning in all directions and smashing into anything nearby.
+
+You reach down for your wrench, but realize you took it off your belt.
+
+“Dang it. First thing next time.”
+
+You look around and notice a few landscaping rocks in the yard.
+
+Not ideal, but it will have to work.
+
+The bot has already done so much damage to itself that it looks like it is on its last legs. If you can hit its central eye, you might be able to disable it.
+
+You grab a rock, aim carefully, and throw.
+
+Direct hit.
+
+The red eye light flickers.
+
+You throw a second rock, knocking the robot over. Its eye light goes dark.
+
+You approach slowly, making sure it will not reboot.
+
+Looks like you got it.
+
+A fully assembled robot this close to home?
+
+Jackpot.
+
+You run inside, grab your hand truck, and haul the robot into the garage.
+
+Once it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Droider.
+
+“Hey, Droider. Run diagnostics on this guy. It might be the best data we’ll ever get.”
+
+“Understood, sir,” Droider replies.
+
+You start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.
+
+“Droider, how long until the diagnostic is done?”
+
+“About twelve hours, sir. This bot has a lot of data to crawl through.”
+
+“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”
+""",
+            "choices": {
+                "1": {
+                    "text": "Grab some copper wire first",
+                    "next_scene": "scene_005",
+                    "entry_intro": "copper_wire"
+                },
+                "2": {
+                    "text": "Pull out your grinder",
+                    "next_scene": "scene_005",
+                    "entry_intro": "grinder_work"
+                },
+                "3": {
+                    "text": "Grab the power core",
+                    "next_scene": "scene_005",
+                    "entry_intro": "power_core"
+                }
+            }
+        },
+
+        "scene_003": {
+            "title": "Security Cameras",
+            "text": """
+You run over to your security station and check the cameras.
+
+Outside, a bot is going haywire, spinning in all directions and smashing into anything nearby.
+
+You reach down for your wrench and realize you took it off your belt.
+
+Luckily, it is sitting right there on the table.
+
+You grab it and head outside.
+
+That is when you see the bot spinning away from you, completely out of control and destroying everything in its path.
+
+So you do what any kid would do.
+
+You rush it with your wrench overhead.
+
+As you get close, you swing down with all your might and smash the dome of the bot, stopping it dead in its tracks.
+
+You give it a little kick to make sure it is out.
+
+Looks like you got it.
+
+A fully assembled robot this close to home?
+
+Jackpot.
+
+You run inside, grab your hand truck, and haul the robot into the garage.
+
+Once it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Droider.
+
+“Hey, Droider. Run diagnostics on this guy. It might be the best data we’ll ever get.”
+
+“Understood, sir,” Droider replies.
+
+You start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.
+
+“Droider, how long until the diagnostic is done?”
+
+“About twelve hours, sir. This bot has a lot of data to crawl through.”
+
+“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”
+""",
+            "choices": {
+                "1": {
+                    "text": "Grab some copper wire first",
+                    "next_scene": "scene_005",
+                    "entry_intro": "copper_wire"
+                },
+                "2": {
+                    "text": "Pull out your grinder",
+                    "next_scene": "scene_005",
+                    "entry_intro": "grinder_work"
+                },
+                "3": {
+                    "text": "Grab the power core",
+                    "next_scene": "scene_005",
+                    "entry_intro": "power_core"
+                }
+            }
+        },
+
+        "scene_004": {
+            "title": "Focused Work",
+            "text": """
+You are so focused on your work that you completely ignore the noise outside.
+
+Then something smashes into the garage door.
+
+That wakes you up.
+
+“Oh man. What’s happening, Droider? What hit the door?”
+
+“Well, sir,” Droider says, “it appears to be a bot outside. You should grab your wrench and stop it before it destroys our lab.”
+
+You quickly grab your wrench off the table and open the door.
+
+That is when you see it.
+
+A bot is spinning away from you, completely haywire and destroying everything in its path.
+
+So you do what any kid would do.
+
+You rush it with your wrench.
+
+As you get close, you swing with all your might and smash the dome of the bot, stopping it dead in its tracks.
+
+You give it a little kick to make sure it is out.
+
+Looks like you got it.
+
+A fully assembled robot this close to home?
+
+Jackpot.
+
+You run inside, grab your hand truck, and haul the robot into the garage.
+
+Once it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Droider.
+
+“Hey, Droider. Run diagnostics on this guy. It might be the best data we’ll ever get.”
+
+“Understood, sir,” Droider replies.
+
+You start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.
+
+“Droider, how long until the diagnostic is done?”
+
+“About twelve hours, sir. This bot has a lot of data to crawl through.”
+
+“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”
+""",
+            "choices": {
+                "1": {
+                    "text": "Grab some copper wire first",
+                    "next_scene": "scene_005",
+                    "entry_intro": "copper_wire"
+                },
+                "2": {
+                    "text": "Pull out your grinder",
+                    "next_scene": "scene_005",
+                    "entry_intro": "grinder_work"
+                },
+                "3": {
+                    "text": "Grab the power core",
+                    "next_scene": "scene_005",
+                    "entry_intro": "power_core"
+                }
+            }
+        },
+
+        "scene_005": {
+            "title": "Building The Can Opener",
+
+            "entry_intros": {
+                "copper_wire": """
+You uncoil the copper wire and look at the wrench.
+
+You know exactly where this should go.
+""",
+
+                "grinder_work": """
+You power up the grinder and toss on your goggles.
+
+Time to make some adjustments.
+""",
+
+                "power_core": """
+You pick up the power core. It is still glowing with a dull blue light.
+
+This is going to be perfect for what you have planned.
+"""
+            },
+
+            "text": """
+Piece by piece, the invention comes together.
+
+A heavy monkey wrench body.
+
+A prybar end.
+
+A reinforced hammer face.
+
+Copper coils under silicone insulation.
+
+A salvaged power core.
+
+A hidden cutter built into the jaws.
+
+You twist the handle.
+
+For one second, nothing happens.
+
+Then the coils glow.
+
+The wrench head shifts with a sharp mechanical click, and a crackling energy edge snaps into place across the front like an axe made of lightning.
+
+You stare at it.
+
+“It works,” you whisper.
+
+Then you think about what to call it.
+
+After a long moment, you nod proudly.
+
+“The Can Opener.”
+
+A beat passes.
+
+“I mean, robots are basically cans with legs, right, Droider?”
+
+Outside, something crashes in the street.
+
+You grab The Can Opener and run.
+""",
+
+            "choices": {
+                "1": {
+                    "text": "Rush straight toward the crash",
+                    "next_scene": "scene_006"
+                },
+                "2": {
+                    "text": "Climb to the roof first to see what is happening",
+                    "next_scene": "scene_007"
+                },
+                "3": {
+                    "text": "Stop and grab a homemade energy shield prototype",
+                    "next_scene": "scene_008"
+                }
+            }
+        },
+
+        "scene_006": {
+            "title": "First Fight",
+            "text": """
+You run into the street and see a corrupted robot smashing into parked cars, streetlights, and storefront shutters.
+
+The Can Opener feels heavy in your hands.
+
+The robot turns.
+
+You have one chance to act.
+
+This scene still needs to be written.
+""",
+            "ending": True
+        },
+
+        "scene_007": {
+            "title": "Rooftop View",
+            "text": """
+You climb to the roof and look out over the neighborhood.
+
+More than one robot is moving through the streets.
+
+They are not wandering randomly.
+
+They seem to be following a signal.
+
+Then you spot it: a blinking drone hovering above the block.
+
+This scene still needs to be written.
+""",
+            "ending": True
+        },
+
+        "scene_008": {
+            "title": "Shield Prototype",
+            "text": """
+You grab the unfinished energy shield device from the workbench.
+
+It is ugly, unstable, and held together with tape, but it might work.
+
+When the robot attacks, the shield flickers to life just in time.
+
+This scene still needs to be written.
+""",
+            "ending": True
+        }
+    }
+}
+
+# ----------------------------
 # AVAILABLE STORIES
 # ----------------------------
 
 available_stories = {
     "1": space_walker,
-    "2": summoned_mage
+    "2": summoned_mage,
+    "3": the_can_opener
 }
