@@ -1,0 +1,141 @@
+{
+  "id": "space_walker",
+  "title": "The Space Walker",
+  "description": "A sci-fi space adventure that starts aboard a mysterious starship.",
+  "theme": "space",
+  "setup_prompt": "What would you like to name the starship? ",
+  "start_scene": "scene_001",
+  "scenes": {
+    "scene_001": {
+      "title": "The Portal",
+      "text": "\n{hero_name} steps through a glowing portal onto the starship {world_name}.\n\nDisoriented, you look around and see that you are no longer home. It looks like you have stepped into a starship from some of your favorite movies.\n\nYou walk around, touching the cold metal walls, and find a window. You look out and see a vast starscape.\n\nShocked, you turn around and notice the portal is gone. In its place is a door with the word BRIDGE written above it. To your left, you see a smaller starship. In front of you, you hear footsteps coming toward you.\n\nNow choose your path:\n",
+      "choices": {
+        "1": {
+          "text": "Go through the door onto the bridge",
+          "next_scene": "scene_002"
+        },
+        "2": {
+          "text": "Run to the starship and take off into space",
+          "next_scene": "scene_003"
+        },
+        "3": {
+          "text": "Walk toward the footsteps and see who, or what, is approaching",
+          "next_scene": "scene_004"
+        }
+      }
+    },
+    "scene_002": {
+      "title": "The Bridge",
+      "text": "\nYou go through the door onto the bridge and see what looks like airplane flight controls, along with flashing lights and buttons everywhere.\n\nYou look closer and discover that you can actually read all the labels.\n\nYou look up at the screens and see what looks like a giant green sun and an orange-and-yellow planet.\n\nAs you are exploring the bridge, you hear the door behind you start to open.\n\nWhat do you do next?\n",
+      "choices": {
+        "1": {
+          "text": "Try to hide from whoever is coming in",
+          "next_scene": "scene_005",
+          "entry_intro": "bridge_hide"
+        },
+        "2": {
+          "text": "Turn around and greet whoever enters",
+          "next_scene": "scene_005",
+          "entry_intro": "bridge_greet"
+        },
+        "3": {
+          "text": "Try to run away through the opposite door before they notice you",
+          "next_scene": "scene_005",
+          "entry_intro": "bridge_run"
+        }
+      }
+    },
+    "scene_003": {
+      "title": "The Shuttle",
+      "text": "\nYou take off toward the starship and jump inside the cockpit.\n\nYou look down and see a button labeled ENGINES. You press it as you slide smoothly into the pilot seat.\n\nThe engines roar to life, and the ship launches forward, pinning you to your seat.\n\nYou think to yourself, I need to get out of here and find a way home.\n\nBut as you leave the ship, you look up and see a giant green sun and a planet that looks similar to Earth. Instead of familiar blue and green, it glows yellow and orange.\n\nThat is when you realize you are not even in your solar system anymore.\n\nAs you cruise forward, you notice a sharp pull on your ship. You look around and realize you are being pulled backward by a tether.\n\nThen you hear a voice through the ship’s speakers:\n\n“To whoever took my shuttle, power down your engines and let us pull you back in.”\n\nWhat do you do next?\n",
+      "choices": {
+        "1": {
+          "text": "Push forward on the controls and try to break the tether",
+          "next_scene": "scene_005",
+          "entry_intro": "shuttle_break_tether"
+        },
+        "2": {
+          "text": "Look for the comms button and power down the engines",
+          "next_scene": "scene_005",
+          "entry_intro": "shuttle_power_down"
+        },
+        "3": {
+          "text": "Get up and look around the ship for something to help you out of this mess",
+          "next_scene": "scene_005",
+          "entry_intro": "shuttle_search",
+          "sets_flag": "has_stun_device"
+        }
+      }
+    },
+    "scene_004": {
+      "title": "The Footsteps",
+      "text": "\nYou decide the best course of action is to walk toward the footsteps and hope whoever is coming can help you figure out where you are.\n\nAs you turn the corner, you see an almost seven-foot-tall humanoid creature with a large nose, wide ears, and skin that glistens blue.\n\nTo their left is a smaller humanoid creature, and beside them stands a gray robot about five feet tall, holding a tablet-like device.\n\nWhat do you do next?\n",
+      "choices": {
+        "1": {
+          "text": "Walk closer to the aliens and see if you can speak with them",
+          "next_scene": "scene_005",
+          "entry_intro": "footsteps_approach"
+        },
+        "2": {
+          "text": "Turn around and head toward the bridge again",
+          "next_scene": "scene_005",
+          "entry_intro": "footsteps_bridge"
+        },
+        "3": {
+          "text": "Run back to the ship you saw earlier and try to get out of here",
+          "next_scene": "scene_005",
+          "entry_intro": "footsteps_ship"
+        }
+      }
+    },
+    "scene_005": {
+      "title": "Meeting the Captain",
+      "entry_intros": {
+        "bridge_hide": "\nYou duck behind the captain’s chair just as the bridge door slides open.\n\nThe captain walks toward the chair, pauses, and notices you almost immediately.\n",
+        "bridge_greet": "\nYou turn around and raise your hand awkwardly as the bridge door slides open.\n\nThree figures step inside and freeze when they see you standing near the controls.\n",
+        "bridge_run": "\nYou sprint for the opposite door, but you are too late.\n\nYou hear a commotion behind you. You spin around and see three figures staring directly at you.\n",
+        "shuttle_break_tether": "\nYou push the controls all the way forward, and the shuttle lurches violently as the engines fight against the tether.\n\nThen you feel another bump. And another.\n\nThree more tethers latch onto the shuttle.\n\nSlowly, you are pulled back in. Resigned to your fate, you power everything down and wait to meet whoever is on the other end.\n",
+        "shuttle_power_down": "\nYou find the comms button, shut down the engines, and the shuttle is slowly pulled back.\n\n“Umm, hi,” you say into the comms. “Sorry about that. I’m shutting everything down now.”\n\nThen you sit back and wait to meet whoever is on the other end of the tether.\n",
+        "shuttle_search": "\nYou unbuckle yourself and stumble through the shuttle, looking for anything useful.\n\nThen you find it: a small stun device.\n\nYou shove it into your pocket and head back to the console, only to realize you are no longer moving forward.\n\nNow it is just a waiting game until you meet whoever is on the other side of the tether.\n",
+        "footsteps_approach": "\nYou walk toward the footsteps and turn the corner.\n\nThe three figures stop as soon as they see you.\n",
+        "footsteps_bridge": "\nYou turn back toward the bridge, but the footsteps grow louder behind you.\n\nYou run toward the bridge, but before you can reach it, you hear a commotion behind you.\n",
+        "footsteps_ship": "\nYou race back toward the small ship, but someone calls out behind you.\n\nBefore you can reach the cockpit, three figures appear at the entrance to the hangar.\n"
+      },
+      "text": "\nThe tallest one stops dead and says, “Stop there. How did you get in here?”\n\nYou put your hands up and say, “Hi, umm, I honestly don’t know. I walked through a portal and ended up here. I promise I’m not dangerous.”\n\nThe robot moves closer and says, “It’s okay, Captain. I scanned them. They have no weapons. Their heart rate is elevated, but they appear to be telling the truth.”\n\nThe captain lowers their weapon slightly, but their eyes stay locked on you.\n",
+      "choices": {
+        "1": {
+          "text": "Ask where you are",
+          "next_scene": "scene_006"
+        },
+        "2": {
+          "text": "Ask if they know about portals",
+          "next_scene": "scene_007"
+        },
+        "3": {
+          "text": "Ask if they can help you get home",
+          "next_scene": "scene_008"
+        },
+        "4": {
+          "text": "Quietly mention the stun device you picked up on the shuttle",
+          "next_scene": "scene_008",
+          "requires_flag": "has_stun_device"
+        }
+      }
+    },
+    "scene_006": {
+      "title": "Where Am I?",
+      "text": "\nThe captain studies you carefully.\n\n“You are aboard the starship Horizon Walker,” they say. “And if you truly came through a portal, then you are much farther from home than you realize.”\n\nThis scene still needs to be written.\n",
+      "ending": true
+    },
+    "scene_007": {
+      "title": "The Portal Question",
+      "text": "\nAt the word portal, the smaller alien looks sharply at the captain.\n\nThe robot taps quickly on its tablet and says, “Captain, we may have a match in the anomaly records.”\n\nThis scene still needs to be written.\n",
+      "ending": true
+    },
+    "scene_008": {
+      "title": "Finding a Way Home",
+      "text": "\nThe captain looks at the robot, then back at you.\n\n“If you are telling the truth,” they say, “then helping you get home may be more important than you know.”\n\nThis scene still needs to be written.\n",
+      "ending": true
+    }
+  }
+}

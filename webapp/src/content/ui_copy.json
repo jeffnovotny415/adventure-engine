@@ -1,0 +1,32 @@
+{
+  "app_title": "Paths of Wonder",
+  "home": {
+    "welcome_heading": "Welcome to Paths of Wonder",
+    "choose_adventure_heading": "Choose your adventure:",
+    "continue_adventure": "Continue Adventure",
+    "start_new_adventure": "Start New Adventure",
+    "developer_test_mode": "Developer Test Mode",
+    "theme_label": "Theme"
+  },
+  "hero_setup": {
+    "hero_name_label": "What is your hero's name?",
+    "hero_name_placeholder": "Hero name",
+    "world_name_fallback_label": "What would you like to name your world?",
+    "world_name_placeholder": "World name",
+    "continue_button": "Continue"
+  },
+  "story": {
+    "ready_prompt": "Press Continue when you're ready to see your choices...",
+    "continue_reading": "Continue",
+    "choose_prompt": "What do you do next?"
+  },
+  "end": {
+    "heading": "The End",
+    "restart_button": "Restart This Story",
+    "new_story_button": "Choose a New Story"
+  },
+  "errors": {
+    "invalid_choice": "Hmm, that wasn't one of the choices. Try again!",
+    "unknown_scene": "Something went wrong loading that scene."
+  }
+}

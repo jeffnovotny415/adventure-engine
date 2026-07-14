@@ -1,0 +1,26 @@
+{
+  "space_walker": {
+    "id": "space_walker",
+    "title": "The Space Walker",
+    "description": "A sci-fi space adventure that starts aboard a mysterious starship.",
+    "theme": "space",
+    "setup_prompt": "What would you like to name the starship? ",
+    "file": "space_walker.json"
+  },
+  "summoned_mage": {
+    "id": "summoned_mage",
+    "title": "The Summoned Mage",
+    "description": "A fantasy adventure about being summoned into a world losing its magic.",
+    "theme": "fantasy",
+    "setup_prompt": "What would you like to name the magical world? ",
+    "file": "summoned_mage.json"
+  },
+  "the_can_opener": {
+    "id": "the_can_opener",
+    "title": "The Can Opener",
+    "description": "A high-tech neighborhood hero story about a kid inventor, broken robots, and one very badly named tool.",
+    "theme": "tech_hero",
+    "setup_prompt": "What is the name of your neighborhood? ",
+    "file": "the_can_opener.json"
+  }
+}
