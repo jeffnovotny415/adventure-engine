@@ -1,0 +1,176 @@
+space_walker = {
+    "id": "space_walker",
+    "title": "The Space Walker",
+    "description": "A sci-fi space adventure that starts aboard a mysterious starship.",
+    "theme": "space",
+    "setup_prompt": "What would you like to name the starship? ",
+    "start_scene": "scene_001",
+
+    "scenes": {
+
+        "scene_001": {
+            "title": "The Portal",
+
+            "text": """
+You adjust the goggles on your head for the 5th time. Ok, this is your first portal but you’ve got this. Just jump through, {hero_name}. Just a little step.
+Finally, you steel up your courage, pull down your goggles and jump.
+You land with a loud clank on a hard metal floor. As you look around, you notice your surroundings are not what you expected. Cold metal everywhere and large panes of glass, not the sandy desert filled with ruins your research suggested. 
+You spin around and get a really good view out the windows. “Are those stars…where the heck did I end up...is this a spaceship?” you say as you look out at the vastness of space and stars.
+You turn around and notice your portal has closed, leaving you stranded here. That shouldn’t have happened, you think to yourself. I guess I need to figure out where I am and how to get home.
+You are in a long hallway that leads in both directions. 
+Where do you go?
+""",
+
+            "choices": {
+                "1": {
+                    "text": "Head towards the left",
+                    "next_scene": "scene_002"
+                },
+                "2": {
+                    "text": "Head towards the right",
+                    "next_scene": "scene_003"
+                }
+            }
+        },
+
+        # INFERRED: no explicit arrow in source for these 2 choices. Mapped 'go into bridge' -> direct to the merge (scene_006), 'keep exploring' -> the second-stop variant scene (scene_004). Please confirm this is what you intended.
+        "scene_002": {
+            "title": "Path 1 - Robot",
+
+            "text": """
+As you start walking down the hallway to the left, you start to hear the noise of something shuffling around. You stop for a second to listen closer for voices, but after a few seconds you hear nothing. You steel yourself and push forward, coming into a big room with a lot of very high tech machinery. As you look around, you notice something is shuffling towards you. You look closer and inspect it…it’s a robot! You excitedly wave at it, “Hi, I’m {hero_name}, Can you tell me where I am? I am honestly really confused.”
+The robot keeps shuffling forwards towards you, completely ignoring you while looking right past you. 
+“Ummm, hello? Can you not see me or…” you say.
+As it gets close to you, it makes a quick adjustment and walks right around you, like you aren’t even there.
+“Ok then, guess I will keep looking around haha.” you say with a chuckle as the robot completely ignores you.
+You look around the room one more time and decide it looks an awful lot like an engine room. You grab a piece of paper from your notebook and do a quick sketch of the layout of the ship you have seen so far, just in case. Then you start following the hallway again.
+You come to a big door with a sign above it that reads THE BRIDGE, and you stop and think to yourself. Ok, well I can either go in here or keep exploring this hallway.
+""",
+
+            "choices": {
+                "1": {
+                    "text": "Go into THE BRIDGE",
+                    "next_scene": "scene_006"
+                },
+                "2": {
+                    "text": "Keep exploring the hallway",
+                    "next_scene": "scene_004"
+                }
+            }
+        },
+
+        # INFERRED: same as scene_002 - no explicit arrow in source. Mapped 'go through the door' -> direct to merge (scene_006), 'keep walking' -> the second-stop variant scene (scene_005). Please confirm.
+        "scene_003": {
+            "title": "Path 2 - Shuttle Bay",
+
+            "text": """
+You start walking down the hallway to the right, looking out the windows at the stars. As you walk forward, you see the hallway opening into a very large room. At the center, you see something that stops you in your tracks. A small ship…a shuttle. You walk up to it to get a closer look and take out your camera to take pictures. No one at home is going to believe this.
+You open the door to the craft and take a closer look inside. You see 2 seats up front with flight controls and screens you can’t really understand. In the back, there are 2 benches along the walls and what look like blasters of some sort. Amazing!
+A part of you wants to do nothing but pore over this discovery, but you decide you need to keep moving, try to find someone to help you understand where you are. As you exit the shuttle you look up and notice a huge door that must open so you can fly the shuttle out…wait, if there is a shuttle here, how big is the ship I’m on now?
+After one more passing glance back at the shuttle, you decide to keep walking down the hallway, eventually coming to a door that reads THE BRIDGE.
+What do you do?
+""",
+
+            "choices": {
+                "1": {
+                    "text": "Go through the door",
+                    "next_scene": "scene_006"
+                },
+                "2": {
+                    "text": "Keep walking down the hallway",
+                    "next_scene": "scene_005"
+                }
+            }
+        },
+
+        "scene_004": {
+            "title": "Shuttle Bay (reached after Robot)",
+
+            "text": """
+You start walking down the hallway to the right, looking out the windows at the stars. As you walk forward, you see the hallway opening into a very large room. At the center, you see something that stops you in your tracks. A small ship…a shuttle. You walk up to it to get a closer look and take out your camera to take pictures. No one at home is going to believe this.
+You open the door to the craft and take a closer look inside. You see 2 seats up front with flight controls and screens you can’t really understand. In the back, there are 2 benches along the walls and what look like blasters of some sort. Amazing!
+A part of you wants to do nothing but pore over this discovery, but you decide you need to keep moving, try to find someone to help you understand where you are. As you exit the shuttle you look up and notice a huge door that must open so you can fly the shuttle out…wait, if there is a shuttle here, how big is the ship I’m on now?
+After one more passing glance back at the shuttle, you decide it’s time to actually go check out The Bridge.
+""",
+
+            "choices": {
+                "1": {
+                    "text": "Go into the Bridge",
+                    "next_scene": "scene_006"
+                }
+            }
+        },
+
+        "scene_005": {
+            "title": "Robot (reached after Shuttle Bay)",
+
+            "text": """
+As you start walking down the hallway to the left, you start to hear the noise of something shuffling around. You stop for a second to listen closer for voices, but after a few seconds you hear nothing. You steel yourself and push forward, coming into a big room with a lot of very high tech machinery. As you look around, you notice something is shuffling towards you. You look closer and inspect it…it’s a robot! You excitedly wave at it, “Hi, I’m {hero_name}, Can you tell me where I am? I am honestly really confused.”
+The robot keeps shuffling forwards towards you, completely ignoring you while looking right past you. 
+“Ummm, hello? Can you not see me or…” you say.
+As it gets close to you, it makes a quick adjustment and walks right around you, like you aren’t even there.
+“Ok then, guess I will keep looking around haha.” you say with a chuckle as the robot completely ignores you.
+You look around the room one more time and decide it looks an awful lot like an engine room. You grab a piece of paper from your notebook and do a quick sketch of the layout of the ship you have seen so far, just in case. 
+After you tuck the book back into your satchel, you stand up and notice the other path leads you back to where you started. Looks like it’s time to check out The Bridge
+""",
+
+            "choices": {
+                "1": {
+                    "text": "Go back to the bridge and go inside",
+                    "next_scene": "scene_006"
+                }
+            }
+        },
+
+        # Confirmed clean merge - no entry_intros needed, same text regardless of path taken to get here.
+        "scene_006": {
+            "title": "The Bridge",
+
+            "text": """
+You press the button on the side of the door and walk through. You immediately find the people you have been looking for since you got here, and boy do they look different than you expected.
+The one in the middle of the room is tall, really tall, with a large nose, far apart eyes, and wide ears, kind of like a kaola. Did I mention they are blue? Next, you see another alien seated at what looks like flight controls. They seem on the shorter side, with wild yellow hair, and their eyes are two long antennae, swaying above their hair. The last one you notice looks like a robot, but slightly more animated. Fully metal from head to toe, its movement is fluid, and you see it clock you the minute you walk in the room. All of them are dressed the same, in loose-fitting grey jumpsuits with zippers down the middle and patches everywhere.
+“I was wondering how long it would take you to get here,” says the taller one. “But the more important question is, how did you get on my ship?”
+You put your hands up and say, “Hi, umm, I am not sure how come, but I walked through this portal on my world and ended up here. It was supposed to take me somewhere else, though. I promise I’m not dangerous. I was honestly hoping you could help me figure out why I’m here.”
+The robot moves closer and says, “Captain. I’ve scanned them. They have no weapons, and while their heart rate is elevated, they appear to be telling the truth. It looks like it has happened again.”
+The one with the wild yellow hair sighs. ”Another planet, huh?”
+You look at them all and then directly at the Captain. “What do they mean, another planet? Did something happen to Solaris?”
+The Captain looks up from his data pad. “Solaris, you say? Well, that’s a few jumps away, but we should start at the beginning.”
+""",
+
+            "choices": {
+                "1": {
+                    "text": "Ask about how they knew you were here",
+                    "next_scene": "scene_007"
+                },
+                "2": {
+                    "text": "Ask about how they scanned you",
+                    "next_scene": "scene_008"
+                }
+            }
+        },
+
+        # Dead end as written - no CHOICES section in source, story doesn't continue past this point yet.
+        # Source text ends with a stray extra open-quote character (“) after "how?" - left exactly as written, possible typo to check.
+        "scene_007": {
+            "title": "Question 1",
+
+            "text": """
+“I’m curious: how did you know I was even here? You said you were waiting for me; how?”
+""",
+
+            "ending": True
+        },
+
+        # Dead end as written - no CHOICES section in source, story doesn't continue past this point yet.
+        "scene_008": {
+            "title": "Question 2",
+
+            "text": """
+“Hold on, you scanned me? With what?”
+""",
+
+            "ending": True
+        },
+
+    }
+}

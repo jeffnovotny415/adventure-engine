@@ -7,29 +7,29 @@
   "start_scene": "scene_001",
   "scenes": {
     "scene_001": {
-      "title": "The Summoning Circle",
-      "text": "\nYou open your eyes and look around. The darkness breaks away into the barest hint of light.\n\nAs your eyes adjust, you notice that you are seated inside a small circle with unlit candles all around you.\n\nConfused, you look up and realize you are not alone. Lying on the floor in front of you is a girl about your age, splayed out and unmoving.\n\nAs you slowly move forward, she stirs, and her eyes snap open.\n\n“It worked… oh my, it worked.”\n\nShe looks you in the eyes and says, “I can’t believe it worked. You must be so confused. I am Elliana, and I summoned you here to help my world.”\n\nYou look back at her, mouth dry and heart pounding, unsure whether to speak, run, or simply breathe.\n",
+      "title": "Opening",
+      "text": "\nYou open your eyes and look around you, the darkness breaking way to the barest of light. As your eyes adjust you notice you are seated inside of a small circle with unlit candles all around you. Confused you look up and notice you are not alone, laying on the floor in front of you is a girl about your age splayed out and unmoving. As you slowly move forward she stirs and her eye snap open. “It worked…oh my; it worked.” She looks you in the eyes and says “I can’t believe it worked, you must be so confused. I am Elliana, and I summoned you here to help my world.” You look back at her, mouth dry and heart pounding, unsure whether to speak, run, or simply breathe.\n",
       "choices": {
         "1": {
-          "text": "“You summoned me? What does that even mean? Where am I? Why did you summon me?”",
+          "text": "“You summoned me? What does that even mean, where am I? Why me?”",
           "next_scene": "scene_002"
         },
         "2": {
-          "text": "Get up and run, as fast as your legs can handle, which honestly is not very fast right now",
+          "text": "You get up and run, as fast as your legs can handle, which honestly isn’t that fast. You are feeling awful weak",
           "next_scene": "scene_003"
         },
         "3": {
-          "text": "Close your eyes and focus on your breathing, something you always do when you feel worried",
+          "text": "You close your eyes and take a deep breath, something you learned from your Dad, it always helped when you were worried",
           "next_scene": "scene_004"
         }
       }
     },
     "scene_002": {
-      "title": "Too Many Questions",
-      "text": "\n“Okay, so you have a lot of questions,” Elliana says. “That’s fair. Yes, I summoned you, and…”\n\nAs she talks, you notice her purple hair and fluffy tail.\n\nWait.\n\nA tail?\n\nThen you look closer at her eyes. They are a deep yellow and shaped sort of like a cat’s.\n",
+      "title": "Questions",
+      "text": "\nOk, so you have a lot of questions, that’s fair. Yes, I summoned you and…as she is talking you notice her purple hair and fluffy tail….she has a tail!?!? Then you look closer at her eyes, they are a deep yellow with slits like a cat. As you look around you notice the air around her is glowing a deep blue…”Hello, are you listening?” Breaks you out of your revere at your environment\n",
       "choices": {
         "1": {
-          "text": "“I’m sorry,” you say. “I drifted there for a second. Can you explain this all again?”",
+          "text": "[I’m sorry, you say. I drifted there for a second, can you explain this all again?]",
           "next_scene": "scene_005",
           "entry_intro": "asked_questions"
         }
@@ -37,10 +37,10 @@
     },
     "scene_003": {
       "title": "The Barrier",
-      "text": "\nYou try to run, but your legs feel weak and shaky.\n\nAfter only a few steps, you stumble forward and hit the ground hard.\n\nYou look back, and Elliana is staring at you with wide eyes.\n\nYou get back to your feet and look around. Spotting a doorway ahead, you rush toward it, but you slam into a clear, glass-like barrier and bounce backward.\n\nYou look back at Elliana again.\n",
+      "text": "\nIn a split second you are up and running towards the opening you saw but your legs betray you and you stumble forwards and hit the ground…hard, you look back and Elliana is staring at you with wide eyes. You get back to your feet and try to move again, finding the doorways ahead of you rush forwards as your legs pump, but are greeted with a clear almost glass like barrier. You rebound off the barrier and smash backwards into the ground. Slightly dazed you look back at Elliana.\n",
       "choices": {
         "1": {
-          "text": "Realizing you have nowhere to go, head back to Elliana",
+          "text": "Realizing you have no where to go, you head back to Elliana",
           "next_scene": "scene_005",
           "entry_intro": "ran_into_barrier"
         }
@@ -48,10 +48,10 @@
     },
     "scene_004": {
       "title": "The Candle Flame",
-      "text": "\nYou close your eyes and picture a flame flickering in the dark.\n\nFocusing on it makes you feel calmer.\n\nBut it also strangely makes you feel warmer.\n\nYou open your eyes and look down.\n\nThe candles around you are all lit.\n\nBut how did that happen?\n\nYou look up at Elliana.\n",
+      "text": "\nAs you breath, you picture a flame flickering in the dark, focusing on it makes you feel better, but it also strangely makes you feel a lot warmer. You look down and notice the candles are all alight. But how did that happen, you look up at Elliana.\n",
       "choices": {
         "1": {
-          "text": "“Okay, well, I hope you are going to explain what is going on here.”",
+          "text": "Ok, well I hope you are going to explain what is going on here.",
           "next_scene": "scene_005",
           "entry_intro": "lit_candles"
         }
@@ -60,11 +60,11 @@
     "scene_005": {
       "title": "Elliana Explains",
       "entry_intros": {
-        "asked_questions": "\n“Yes, of course,” Elliana says quickly. “You must be completely overwhelmed.”\n",
-        "ran_into_barrier": "\n“I’m sorry,” Elliana says, rushing toward you. “You’re probably weak from the summoning, but I can’t let you run before I explain.”\n",
-        "lit_candles": "\nElliana stares at the candles, her yellow eyes wide.\n\n“You lit them,” she whispers. “But you shouldn’t know how to do that.”\n"
+        "asked_questions": "\n        “Yes, of course,” Elliana says quickly. “You must be completely overwhelmed.”\n",
+        "ran_into_barrier": "\n        “I’m sorry,” Elliana says, rushing toward you. “You’re probably weak from the summoning, but I can’t let you run before we talk about this.”\n",
+        "lit_candles": "\n        Elliana stares at the candles, her yellow eyes wide. “You lit them,” she whispers. “But how did you do that, its impossible.”\n"
       },
-      "text": "\n“First things first,” Elliana says. “I summoned you here to help my world. As you can probably tell, things are a little different here.”\n\nHer tail flicks nervously.\n\n“For one thing, I noticed you do not have a tail.”\n",
+      "text": "\nElliana, shakes her head to clear it and starts talking again, “well first things first,” Elliana says. “I summoned you here to help my world. As you can probably tell, things are a little different here.” Her tail flicks nervously. “For one thing, you look different from anyone I have ever met, where is your tail?”\n",
       "choices": {
         "1": {
           "text": "Ask what kind of help her world needs",
@@ -75,25 +75,266 @@
           "next_scene": "scene_007"
         },
         "3": {
-          "text": "Ask what happens if you just want to go home",
+          "text": "Ask if she can just send you home",
           "next_scene": "scene_008"
         }
       }
     },
     "scene_006": {
-      "title": "A World in Trouble",
-      "text": "\nElliana takes a deep breath.\n\n“My world is losing its magic,” she says. “Not all at once. Slowly. Quietly. Like a candle burning down.”\n\nShe looks at the flames around the circle.\n\n“And somehow, you were able to light those candles without even knowing what you were doing.”\n\nThis scene still needs to be written.\n",
-      "ending": true
+      "title": "What Help Is Needed",
+      "text": "\nElliana takes a deep breath then starts to explain.\n\n“My worlds magic is…dying,” she says. “Not all at once. Slowly. Quietly. And no one knows why.”\n\n→ Leads to: SM_009 - The Seers' Prophecy\n",
+      "choices": {
+        "1": {
+          "text": "(continue)",
+          "next_scene": "scene_009"
+        }
+      }
     },
     "scene_007": {
-      "title": "Why You?",
-      "text": "\n“I didn’t choose you exactly,” Elliana says.\n\nShe looks embarrassed.\n\n“The spell was supposed to find someone who could help. Someone with a spark strong enough to answer.”\n\nShe looks at the candles again.\n\n“I think it found you.”\n\nThis scene still needs to be written.\n",
-      "ending": true
+      "title": "Why You",
+      "text": "\n“Well, I didn’t choose you exactly,” Elliana says.\n\nShe looks embarrassed.\n\n“The spell was supposed to find someone who could help. Someone with a spark for magic strong enough to answer.”\n\n→ Leads to: SM_009 - The Seers' Prophecy\n",
+      "choices": {
+        "1": {
+          "text": "(continue)",
+          "next_scene": "scene_009"
+        }
+      }
     },
     "scene_008": {
       "title": "Going Home",
-      "text": "\nElliana’s ears lower.\n\n“I understand,” she says softly. “I really do. But sending you home is not as simple as opening the door again.”\n\nThe candles flicker.\n\n“The portal brought you here because something answered from your side. To send you back, we may need to find out what that something was.”\n\nThis scene still needs to be written.\n",
+      "text": "\nElliana’s ears lower. Wait, she can lower her ears…stop getting distracted.\n\n“I understand,” she says softly. “I really do. But sending you home is not as simple as opening the door again.”\n\n“The magic portal brought you here because something answered from your side. To send you back, we may need to find out what that something was.”\n\n→ Leads to: SM_009 - The Seers' Prophecy\n",
+      "choices": {
+        "1": {
+          "text": "(continue)",
+          "next_scene": "scene_009"
+        }
+      }
+    },
+    "scene_009": {
+      "title": "The Seers' Prophecy",
+      "text": "\nYou see, our seers foretold a summoned mage would come and put the world back on track. The problem was, no one knew the ritual. I went and gathered all the stories in the world and tried and tried until finally…finally…well…you!\n",
+      "choices": {
+        "1": {
+          "text": "Did you say, magic…wait, hold on…does this mean I’m a mage?",
+          "next_scene": "scene_010",
+          "entry_intro": "Magic/Mage"
+        }
+      }
+    },
+    "scene_010": {
+      "title": "Am I a Mage",
+      "text": "\n“Did you say, magic…wait, hold on…does this mean I’m a mage?”\n“It does, doesn’t it. If I was the one summoned…does that mean I can use magic?”\nYou walk over to Elliana, who is still sitting on the ground in the circle and reach down with your hand out. “I’m {hero_name}, Id love to hear more about this magic.”\nElliana, reaching out here hand grasps it in hers and lets out a breath she didn’t realize she was holding. “Does this mean you are willing to help?”\n“Yes, I think…it is still a lot to be honest, but if I can’t get home without fixing this issue anyway I may as well jump right into it with you right?” I say as I turn around and fling out my hand like I am going to shoot a fireball.\n",
       "ending": true
+    },
+    "scene_011": {
+      "title": "Choose Your Element",
+      "text": "\nSYNOPSIS: Player poses and thinks of a spell: fire, lightning, or stone.\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Pose and think of Fire",
+          "next_scene": "scene_012"
+        },
+        "2": {
+          "text": "Pose and think of Lightning",
+          "next_scene": "scene_013"
+        },
+        "3": {
+          "text": "Pose and think of Stone",
+          "next_scene": "scene_014"
+        }
+      }
+    },
+    "scene_012": {
+      "title": "Fire Spell Happens",
+      "text": "\nSYNOPSIS: The fire spell happens.\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "(continues into)",
+          "next_scene": "scene_015"
+        }
+      }
+    },
+    "scene_013": {
+      "title": "Lightning Spell Happens",
+      "text": "\nSYNOPSIS: The lightning spell happens.\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "(continues into)",
+          "next_scene": "scene_015"
+        }
+      }
+    },
+    "scene_014": {
+      "title": "Stone Bullet Spell Happens",
+      "text": "\nSYNOPSIS: The stone bullet spell happens.\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "(continues into)",
+          "next_scene": "scene_015"
+        }
+      }
+    },
+    "scene_015": {
+      "title": "The Spell Lands",
+      "text": "\nSYNOPSIS: Fire/Lightning/Stone merge back together after the spell lands. “Oh my goodness, I'm a MAGE.”\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Leave through the Door",
+          "next_scene": "scene_016"
+        },
+        "2": {
+          "text": "Leave through the Hole",
+          "next_scene": "scene_017"
+        },
+        "3": {
+          "text": "Teleport away",
+          "next_scene": "scene_018"
+        }
+      }
+    },
+    "scene_016": {
+      "title": "The Door",
+      "text": "\nSYNOPSIS: You leave with Elliana.\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Take trail to town",
+          "next_scene": "scene_019",
+          "entry_intro": "from_door"
+        },
+        "2": {
+          "text": "Head towards Forest",
+          "next_scene": "scene_025",
+          "entry_intro": "from_door"
+        }
+      }
+    },
+    "scene_017": {
+      "title": "The Hole",
+      "text": "\nSYNOPSIS: Leave the cave through a hole punched in the wall by accident - made by whichever spell the player cast (fire/lightning/stone).\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Walk out onto the mountains",
+          "next_scene": "scene_023",
+          "entry_intro": "from_hole"
+        },
+        "2": {
+          "text": "Head towards forest",
+          "next_scene": "scene_025",
+          "entry_intro": "from_hole"
+        },
+        "3": {
+          "text": "Go toward trail",
+          "next_scene": "scene_019",
+          "entry_intro": "from_hole"
+        }
+      }
+    },
+    "scene_018": {
+      "title": "Teleport Away",
+      "text": "\nSYNOPSIS: Test your ability and teleport.\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Try to teleport back",
+          "next_scene": "scene_028"
+        },
+        "2": {
+          "text": "Explore your surroundings (forest)",
+          "next_scene": "scene_025",
+          "entry_intro": "from_teleport"
+        }
+      }
+    },
+    "scene_019": {
+      "title": "Trail to Town",
+      "text": "\nSYNOPSIS: Reused destination, reached via Door, Hole, and Mountains' \"make way down to trail\" reuse (3 routes total).\n\nPossible entry points (not yet written): from_door, from_hole, from_mountains\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Attack bandits with magic",
+          "next_scene": "scene_020"
+        },
+        "2": {
+          "text": "Try to escape",
+          "next_scene": "scene_021"
+        },
+        "3": {
+          "text": "Leave it to Elliana",
+          "next_scene": "scene_022"
+        }
+      }
+    },
+    "scene_020": {
+      "title": "Attack Bandits",
+      "text": "\nSYNOPSIS: How the player attacks - not yet decided which of these become separate paths vs flavor text.\n\n(not yet written)\n",
+      "ending": true
+    },
+    "scene_021": {
+      "title": "Try to Escape",
+      "text": "\nSYNOPSIS: Open thread - only \"Fight\" noted so far.\n\n(not yet written)\n",
+      "ending": true
+    },
+    "scene_022": {
+      "title": "Leave It to Elliana",
+      "text": "\nSYNOPSIS: Open thread - only \"Continue to town\" noted so far.\n\n(not yet written)\n",
+      "ending": true
+    },
+    "scene_023": {
+      "title": "Mountains",
+      "text": "\nSYNOPSIS: Reached by leaving through the Hole.\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Check rock slide",
+          "next_scene": "scene_024"
+        },
+        "2": {
+          "text": "Make way down to trail",
+          "next_scene": "scene_019",
+          "entry_intro": "from_mountains"
+        }
+      }
+    },
+    "scene_024": {
+      "title": "Check Rock Slide",
+      "text": "\nSYNOPSIS: Mostly crossed out/undecided in the notes - open thread.\n\n(not yet written)\n\n(no further choices mapped yet)\n",
+      "ending": true
+    },
+    "scene_025": {
+      "title": "Forest",
+      "text": "\nSYNOPSIS: Reused destination - noted as \"3 unique intros\": from the Door (head towards forest), from the Hole (head towards forest), and from Teleport (explore your surroundings).\n\nPossible entry points (not yet written): from_door, from_hole, from_teleport\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Look for yelling person",
+          "next_scene": "scene_026"
+        },
+        "2": {
+          "text": "Run from Animals",
+          "next_scene": "scene_027"
+        }
+      }
+    },
+    "scene_026": {
+      "title": "Look for Yelling Person",
+      "text": "\nSYNOPSIS: Crossed out: an idea about finding a young woman. Surviving options below.\n\n(not yet written)\n",
+      "ending": true
+    },
+    "scene_027": {
+      "title": "Run From Animals",
+      "text": "\nSYNOPSIS: Open thread.\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Follow trail to town",
+          "next_scene": "scene_019"
+        }
+      }
+    },
+    "scene_028": {
+      "title": "Teleport Back",
+      "text": "\nSYNOPSIS: Leads straight back into the Forest scene.\n\n(not yet written)\n",
+      "choices": {
+        "1": {
+          "text": "Explore Forest",
+          "next_scene": "scene_025"
+        }
+      }
     }
   }
 }
