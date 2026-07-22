@@ -1,43 +1,107 @@
-/* Per-story theme tokens. Background/accent changes by story, not by
-   scene — set data-theme on the app shell once per story.
+/* Paths of Wonder theme tokens — one shared set of 9 custom properties
+   per theme; every component is built once and skinned via these.
+   Theme keys map 1:1 to story ids (see utils/themeKey.js) so the
+   mapping never drifts from the data contract:
+     space_walker  -> space-walker
+     summoned_mage -> summoned-mage
+     the_can_opener -> tech-hero
+     (app shell / home / hero setup) -> shell */
 
-   --theme-bg / --theme-fg: the ambient page background and the text
-   color used directly on top of it (headings, prompts outside cards).
-   --theme-accent / --theme-heading: used for buttons and in-card
-   titles, which always sit on a fixed light card background, so they
-   stay legible regardless of theme or OS light/dark preference. */
-
-[data-theme='space'] {
-  --theme-bg: linear-gradient(180deg, #0f0c29 0%, #24243e 100%);
-  --theme-fg: #ece7ff;
-  --theme-accent: #7c3aed;
-  --theme-heading: #4c1d95;
+[data-theme='shell'] {
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Public Sans', sans-serif;
+  --color-bg: #f3e8d2;
+  --color-panel: #ecdfc0;
+  --color-text-primary: #2a2015;
+  --color-text-secondary: #6b5b42;
+  --color-border: #c9bba0;
+  --color-accent-1: #7b2d2d; /* cloth — primary CTA */
+  --color-accent-2: #5c6b4f; /* ribbon — secondary */
+  --color-accent-3: #b8863c; /* gilt — dividers/decoration */
 }
 
-[data-theme='fantasy'] {
-  --theme-bg: linear-gradient(180deg, #fdf6e3 0%, #f1dfb0 100%);
-  --theme-fg: #5b3a1a;
-  --theme-accent: #b45309;
-  --theme-heading: #78350f;
+[data-theme='space-walker'] {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Public Sans', sans-serif;
+  --color-bg: #0b0e16;
+  --color-panel: #131a28;
+  --color-text-primary: #edeff3;
+  --color-text-secondary: #8b93a3;
+  --color-border: #232b3b;
+  --color-accent-1: #4fd7de; /* signal cyan — primary */
+  --color-accent-2: #9c6bf0; /* nebula violet — rare accent */
+  --color-accent-3: #c9d0d8; /* chrome — frames/structure */
 }
 
-[data-theme='tech_hero'] {
-  --theme-bg: linear-gradient(180deg, #ecfeff 0%, #cffafe 100%);
-  --theme-fg: #164e63;
-  --theme-accent: #0891b2;
-  --theme-heading: #164e63;
+[data-theme='summoned-mage'] {
+  --font-display: 'Fraunces', serif; /* italic optical variant */
+  --font-body: 'Public Sans', sans-serif;
+  --color-bg: #3b2a1e;
+  --color-panel: #4a3728;
+  --color-text-primary: #ead9af;
+  --color-text-secondary: #b29c74;
+  --color-border: #5a4632;
+  --color-accent-1: #e4693a; /* ember — primary */
+  --color-accent-2: #9ed9d6; /* glacier — secondary spark */
+  --color-accent-3: #66765a; /* moss — grounding/structure */
 }
 
-[data-theme='default'] {
-  --theme-bg: linear-gradient(180deg, #eef2ff 0%, #dbe3fd 100%);
-  --theme-fg: #312e81;
-  --theme-accent: #4f46e5;
-  --theme-heading: #312e81;
+[data-theme='tech-hero'] {
+  --font-display: 'IBM Plex Mono', monospace;
+  --font-body: 'Public Sans', sans-serif;
+  --color-bg: #15181c;
+  --color-panel: #1d2226;
+  --color-text-primary: #e8ecee;
+  --color-text-secondary: #7c8790;
+  --color-border: #2a3034;
+  --color-accent-1: #35e4a0; /* circuit green — primary */
+  --color-accent-2: #ff3d7f; /* arc magenta — rare/signature */
+  --color-accent-3: #ffb020; /* hazard amber — secondary/CTA */
 }
 
-.theme-shell {
-  background: var(--theme-bg);
-  color: var(--theme-fg);
+/* Hover/active states are derived from whichever accent is in use,
+   never hand-picked per theme — keeps the token count fixed at nine
+   no matter how many interactive states get added later. */
+.accent-1-surface {
+  background: var(--color-accent-1);
+}
+.accent-1-surface:hover {
+  background: color-mix(in srgb, var(--color-accent-1) 85%, black);
+}
+.accent-1-surface:active {
+  background: color-mix(in srgb, var(--color-accent-1) 90%, black);
+}
+
+/* Summoned Mage uses Fraunces' italic optical variant for display
+   text — the only theme where display font-style differs. */
+[data-theme='summoned-mage'] .scene-title {
+  font-style: italic;
+}
+
+.choice-button {
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+.choice-button:hover {
+  border-color: var(--color-accent-1);
+  background: color-mix(in srgb, var(--color-accent-1) 12%, var(--color-panel));
+}
+.choice-button:active {
+  background: color-mix(in srgb, var(--color-accent-1) 20%, var(--color-panel));
+}
+
+.app-shell {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  min-height: 100%;
+}
+
+.story-shell {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
   min-height: 100%;
 }
 

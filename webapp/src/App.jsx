@@ -7,6 +7,7 @@ import { DevTestScreen } from './components/screens/DevTestScreen/DevTestScreen'
 import { useGameState } from './state/useGameState';
 import { getScene, getSceneDisplayText, getAvailableChoices, isEnding } from './engine/sceneEngine';
 import { getStoryIndex, getStory } from './utils/storyData';
+import { themeKeyForStory, SHELL_THEME } from './utils/themeKey';
 
 const SCREENS = {
   HOME: 'home',
@@ -50,8 +51,10 @@ export default function App() {
 
   const choices = scene ? getAvailableChoices(scene, activeSave.flags) : {};
 
-  const themeStoryId = pendingStoryId ?? activeStoryId;
-  const themeName = (themeStoryId ? storiesWithScenes[themeStoryId]?.theme : null) ?? 'default';
+  // The app shell (nav/home/hero-setup/dev-test chrome) always stays
+  // in the neutral "book" theme. Only the active story's screen and
+  // its ending switch into that story's own theme.
+  const activeThemeKey = activeStoryId ? themeKeyForStory(activeStoryId) : SHELL_THEME;
 
   function goHome() {
     setPendingStoryId(null);
@@ -127,7 +130,7 @@ export default function App() {
   }, [screen, scene, devTestState, finishGame]);
 
   return (
-    <div className="theme-shell h-full" data-theme={themeName}>
+    <div className="app-shell h-full" data-theme={SHELL_THEME}>
       {screen === SCREENS.HOME && (
         <HomeScreen
           stories={stories}
@@ -147,23 +150,29 @@ export default function App() {
       )}
 
       {screen === SCREENS.STORY && scene && !isEnding(scene) && (
-        <StoryScreen
-          title={displayText.title}
-          intro={displayText.intro}
-          body={displayText.body}
-          choices={choices}
-          onChoose={handleChoose}
-        />
+        <div className="story-shell h-full" data-theme={activeThemeKey}>
+          <StoryScreen
+            themeKey={activeThemeKey}
+            title={displayText.title}
+            intro={displayText.intro}
+            body={displayText.body}
+            choices={choices}
+            onChoose={handleChoose}
+          />
+        </div>
       )}
 
       {screen === SCREENS.END && scene && (
-        <EndScreen
-          title={displayText.title}
-          intro={displayText.intro}
-          body={displayText.body}
-          onRestart={handleRestart}
-          onNewStory={handleNewStory}
-        />
+        <div className="story-shell h-full" data-theme={activeThemeKey}>
+          <EndScreen
+            themeKey={activeThemeKey}
+            title={displayText.title}
+            intro={displayText.intro}
+            body={displayText.body}
+            onRestart={handleRestart}
+            onNewStory={handleNewStory}
+          />
+        </div>
       )}
     </div>
   );

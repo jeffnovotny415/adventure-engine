@@ -20,8 +20,8 @@ export function DevTestScreen({ stories, onStartTest, onBack }) {
   const [entryIntro, setEntryIntro] = useState('');
 
   return (
-    <div className="mx-auto flex h-full max-w-md flex-col gap-4 p-6" style={{ color: 'var(--theme-fg)' }}>
-      <h1 className="text-2xl font-bold">Developer Test Mode</h1>
+    <div className="mx-auto flex h-full max-w-md flex-col gap-4 p-6" >
+      <h1 className="text-2xl font-medium" style={{ fontFamily: 'var(--font-display)' }}>Developer Test Mode</h1>
 
       <label className="flex flex-col gap-1">
         <span className="text-sm font-medium">Story</span>
@@ -32,7 +32,8 @@ export function DevTestScreen({ stories, onStartTest, onBack }) {
             setSceneId('');
             setEntryIntro('');
           }}
-          className="rounded-lg border border-slate-900/15 bg-white/90 px-3 py-2 text-slate-900"
+          className="rounded-lg border px-3 py-2"
+          style={{ borderColor: 'var(--color-border)', background: 'var(--color-panel)', color: 'var(--color-text-primary)' }}
         >
           {storyList.map((story) => (
             <option key={story.id} value={story.id}>
@@ -50,7 +51,8 @@ export function DevTestScreen({ stories, onStartTest, onBack }) {
             setSceneId(event.target.value);
             setEntryIntro('');
           }}
-          className="rounded-lg border border-slate-900/15 bg-white/90 px-3 py-2 text-slate-900"
+          className="rounded-lg border px-3 py-2"
+          style={{ borderColor: 'var(--color-border)', background: 'var(--color-panel)', color: 'var(--color-text-primary)' }}
         >
           {sceneIds.map((id) => (
             <option key={id} value={id}>
@@ -66,7 +68,8 @@ export function DevTestScreen({ stories, onStartTest, onBack }) {
           <select
             value={entryIntro}
             onChange={(event) => setEntryIntro(event.target.value)}
-            className="rounded-lg border border-slate-900/15 bg-white/90 px-3 py-2 text-slate-900"
+            className="rounded-lg border px-3 py-2"
+          style={{ borderColor: 'var(--color-border)', background: 'var(--color-panel)', color: 'var(--color-text-primary)' }}
           >
             <option value="">No entry intro</option>
             {entryIntroKeys.map((key) => (
@@ -83,14 +86,15 @@ export function DevTestScreen({ stories, onStartTest, onBack }) {
           type="button"
           onClick={() => onStartTest(storyId, activeSceneId, entryIntro || null)}
           disabled={!storyId || !activeSceneId}
-          className="rounded-lg bg-[var(--theme-accent)] px-4 py-3 font-semibold text-white shadow disabled:opacity-40"
+          className="accent-1-surface rounded-lg px-4 py-3 font-semibold text-white shadow disabled:opacity-40"
         >
           Jump to Scene
         </button>
         <button
           type="button"
           onClick={onBack}
-          className="rounded-lg border border-slate-900/15 bg-white/90 px-4 py-2 text-sm text-slate-900"
+          className="rounded-lg border px-4 py-2 text-sm"
+          style={{ borderColor: 'var(--color-border)', background: 'var(--color-panel)', color: 'var(--color-text-primary)' }}
         >
           Back
         </button>

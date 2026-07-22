@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 128 128"
+     role="img"
+     aria-labelledby="fireball-title fireball-desc">
+  <title id="fireball-title">Animated fireball spell</title>
+  <desc id="fireball-desc">A compact orange fireball with a bright gold core, trailing flame tongues, and drifting embers.</desc>
+
+  <style>
+    .fireball {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: fireball-hover 1.5s ease-in-out infinite;
+    }
+
+    .outer-flame {
+      transform-box: fill-box;
+      transform-origin: 48% 72%;
+      animation: outer-flicker .58s ease-in-out infinite alternate;
+    }
+
+    .mid-flame {
+      transform-box: fill-box;
+      transform-origin: 48% 72%;
+      animation: mid-flicker .42s ease-in-out infinite alternate-reverse;
+    }
+
+    .hot-core {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: fb-core-pulse .62s ease-in-out infinite alternate;
+    }
+
+    .ember {
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .ember-a { animation: ember-a 1.15s ease-out infinite; }
+    .ember-b { animation: ember-b 1.45s ease-out .25s infinite; }
+    .ember-c { animation: ember-c 1.3s ease-out .55s infinite; }
+
+    @keyframes fireball-hover {
+      0%, 100% { transform: translateY(1px); }
+      50% { transform: translateY(-1px); }
+    }
+
+    @keyframes outer-flicker {
+      from { transform: rotate(-1.4deg) scaleX(.985) scaleY(1.015); }
+      to   { transform: rotate(1.2deg) scaleX(1.015) scaleY(.985); }
+    }
+
+    @keyframes mid-flicker {
+      from { transform: translate(-.6px, .3px) rotate(.8deg) scale(.985); }
+      to   { transform: translate(.7px, -.5px) rotate(-.7deg) scale(1.02); }
+    }
+
+    @keyframes fb-core-pulse {
+      from { transform: scale(.96); opacity: .90; }
+      to   { transform: scale(1.035); opacity: 1; }
+    }
+
+    @keyframes ember-a {
+      0%   { transform: translate(0, 3px) scale(.55) rotate(0deg); opacity: 0; }
+      18%  { opacity: .95; }
+      100% { transform: translate(7px, -18px) scale(.2) rotate(28deg); opacity: 0; }
+    }
+
+    @keyframes ember-b {
+      0%   { transform: translate(0, 2px) scale(.5) rotate(0deg); opacity: 0; }
+      16%  { opacity: .85; }
+      100% { transform: translate(-7px, -21px) scale(.18) rotate(-34deg); opacity: 0; }
+    }
+
+    @keyframes ember-c {
+      0%   { transform: translate(0, 3px) scale(.55) rotate(0deg); opacity: 0; }
+      20%  { opacity: .9; }
+      100% { transform: translate(10px, -15px) scale(.22) rotate(42deg); opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <g class="fireball">
+    <!-- Distinct outer silhouette layer -->
+    <path id="outer-flame"
+          class="outer-flame"
+          fill="#E4693A"
+          d="M21 83
+             C20 68 28 56 41 48
+             C35 39 40 28 51 21
+             C49 31 56 34 61 29
+             C70 21 67 11 75 5
+             C81 18 78 30 72 40
+             C82 34 91 26 95 16
+             C99 32 96 46 88 56
+             C98 51 108 44 113 33
+             C116 52 108 67 97 76
+             C104 76 111 73 117 67
+             C116 84 106 99 92 108
+             C77 118 57 122 41 115
+             C28 109 21 98 21 83Z"/>
+
+    <!-- Distinct middle flame layer -->
+    <path id="mid-flame"
+          class="mid-flame"
+          fill="#F4A15C"
+          d="M31 86
+             C29 74 35 64 46 57
+             C43 50 47 43 55 39
+             C54 47 59 50 65 45
+             C72 39 72 31 77 26
+             C81 38 76 49 69 57
+             C80 51 90 43 95 34
+             C97 48 91 60 82 69
+             C92 66 101 60 106 53
+             C106 68 98 79 88 87
+             C93 88 98 87 103 84
+             C98 99 84 108 68 111
+             C53 114 39 106 33 96
+             C31 92 30 89 31 86Z"/>
+
+    <!-- Distinct hot core layer -->
+    <path id="hot-core"
+          class="hot-core"
+          fill="#FFDE9E"
+          d="M42 89
+             C39 80 44 71 53 66
+             C51 61 54 55 61 52
+             C60 59 64 62 69 58
+             C74 54 75 48 78 44
+             C81 53 77 62 71 68
+             C78 65 84 60 88 54
+             C90 64 85 73 78 79
+             C85 78 91 74 95 70
+             C94 82 87 92 78 98
+             C68 104 55 103 47 97
+             C44 95 43 92 42 89Z"/>
+
+    <!-- Small separate highlight -->
+    <path id="core-highlight"
+          fill="#FFF3C4"
+          d="M50 89
+             C48 83 51 77 57 74
+             C56 69 59 66 63 64
+             C63 69 66 71 70 68
+             C74 65 74 61 77 58
+             C79 65 76 72 72 76
+             C77 74 81 71 84 67
+             C85 75 81 82 76 86
+             C80 86 84 84 87 82
+             C84 91 77 96 69 98
+             C61 99 53 95 50 89Z"/>
+
+    <!-- Independent ember pieces -->
+    <path class="ember ember-a" fill="#F4A15C"
+          d="M96 47 C101 43 105 42 108 42 C106 47 103 51 98 53 C97 51 96 49 96 47Z"/>
+    <path class="ember ember-b" fill="#E4693A"
+          d="M46 42 C42 39 39 35 39 31 C44 33 48 36 50 40 C49 41 48 42 46 42Z"/>
+    <path class="ember ember-c" fill="#FFDE9E"
+          d="M102 71 C106 68 110 67 113 68 C111 72 108 75 104 76 C103 74 102 73 102 71Z"/>
+  </g>
+</svg>

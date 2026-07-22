@@ -7,14 +7,23 @@ function paragraphsOf(text) {
 
 export function StoryTextPanel({ title, intro, body }) {
   return (
-    <div className="flex-1 min-h-0 overflow-y-auto rounded-xl border border-slate-900/10
-                     bg-white/95 p-5 text-slate-900">
-      <h1 className="mb-3 text-xl font-semibold" style={{ color: 'var(--theme-heading)' }}>
+    <div
+      className="flex-1 min-h-0 overflow-y-auto rounded-xl border p-5"
+      style={{
+        background: 'var(--color-panel)',
+        borderColor: 'var(--color-border)',
+        color: 'var(--color-text-primary)',
+      }}
+    >
+      <h1
+        className="scene-title mb-3 text-xl font-semibold"
+        style={{ fontFamily: 'var(--font-display)' }}
+      >
         {title}
       </h1>
 
       {intro && (
-        <div className="mb-3 space-y-3 italic text-slate-600">
+        <div className="mb-3 space-y-3 italic" style={{ color: 'var(--color-text-secondary)' }}>
           {paragraphsOf(intro).map((paragraph, index) => (
             <p key={`intro-${index}`}>{paragraph}</p>
           ))}

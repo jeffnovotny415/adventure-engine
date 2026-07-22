@@ -1,0 +1,88 @@
+/* SignatureMotif visuals. Naming stays collision-free from the two
+   imported SVG assets' own internal `fb-*` / `orb-*` keyframes —
+   nothing here shares a name with either file. */
+
+.viewscreen-frame {
+  position: relative;
+  padding: 22px;
+}
+
+.viewscreen-frame__corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-accent-3);
+  pointer-events: none;
+}
+.viewscreen-frame__corner--tl {
+  top: 2px;
+  left: 2px;
+  border-right: none;
+  border-bottom: none;
+}
+.viewscreen-frame__corner--tr {
+  top: 2px;
+  right: 2px;
+  border-left: none;
+  border-bottom: none;
+}
+.viewscreen-frame__corner--bl {
+  bottom: 2px;
+  left: 2px;
+  border-right: none;
+  border-top: none;
+}
+.viewscreen-frame__corner--br {
+  bottom: 2px;
+  right: 2px;
+  border-left: none;
+  border-top: none;
+}
+
+.viewscreen-frame__glint {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent 70%);
+  pointer-events: none;
+  border-radius: 0 4px 0 0;
+}
+
+.viewscreen-frame__star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--color-text-primary);
+  animation: pow-twinkle 2.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pow-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viewscreen-frame__star {
+    animation: none;
+    opacity: 0.7;
+  }
+}
+
+.signature-float {
+  position: absolute;
+  top: -20px;
+  right: -14px;
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+  pointer-events: none;
+}

@@ -1,7 +1,8 @@
 {
   "app_title": "Paths of Wonder",
   "home": {
-    "welcome_heading": "Welcome to Paths of Wonder",
+    "welcome_heading": "Paths of Wonder",
+    "tagline": "Choose your path. Shape your story.",
     "choose_adventure_heading": "Choose your adventure:",
     "continue_adventure": "Continue Adventure",
     "start_new_adventure": "Start New Adventure",

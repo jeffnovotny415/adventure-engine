@@ -1,28 +1,31 @@
 import { useState } from 'react';
 import { StoryTextPanel } from '../../shared/StoryTextPanel/StoryTextPanel';
 import { ChoiceButton } from '../../shared/ChoiceButton/ChoiceButton';
+import { SignatureMotif } from '../../shared/SignatureMotif/SignatureMotif';
 import { useContent } from '../../../hooks/useContent';
 
-export function StoryScreen({ title, intro, body, choices, onChoose }) {
+export function StoryScreen({ themeKey, title, intro, body, choices, onChoose }) {
   const { getText } = useContent();
   const [readyToChoose, setReadyToChoose] = useState(false);
 
   return (
     <div className="story-layout p-6">
-      <StoryTextPanel title={title} intro={intro} body={body} />
+      <SignatureMotif themeKey={themeKey}>
+        <StoryTextPanel title={title} intro={intro} body={body} />
+      </SignatureMotif>
 
       <div className="story-choices">
         {!readyToChoose ? (
           <button
             type="button"
             onClick={() => setReadyToChoose(true)}
-            className="rounded-lg bg-[var(--theme-accent)] px-4 py-3 font-semibold text-white shadow"
+            className="accent-1-surface rounded-lg px-4 py-3 font-semibold text-white shadow"
           >
             {getText('story.continue_reading')}
           </button>
         ) : (
           <>
-            <p className="text-sm font-medium opacity-80" style={{ color: 'var(--theme-fg)' }}>
+            <p className="text-sm font-medium" style={{ color: 'var(--color-text-secondary)' }}>
               {getText('story.choose_prompt')}
             </p>
             {Object.entries(choices).map(([choiceId, choice]) => (

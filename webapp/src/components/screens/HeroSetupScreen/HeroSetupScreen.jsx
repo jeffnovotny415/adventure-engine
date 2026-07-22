@@ -16,12 +16,10 @@ export function HeroSetupScreen({ story, onSubmit }) {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="mx-auto flex h-full max-w-md flex-col justify-center gap-5 p-6"
-      style={{ color: 'var(--theme-fg)' }}
-    >
-      <h1 className="text-2xl font-bold">{story.title}</h1>
+    <form onSubmit={handleSubmit} className="mx-auto flex h-full max-w-md flex-col justify-center gap-5 p-6">
+      <h1 className="text-2xl font-medium" style={{ fontFamily: 'var(--font-display)' }}>
+        {story.title}
+      </h1>
 
       <label className="flex flex-col gap-1">
         <span className="text-sm font-medium">{getText('hero_setup.hero_name_label')}</span>
@@ -31,7 +29,12 @@ export function HeroSetupScreen({ story, onSubmit }) {
           value={heroName}
           onChange={(event) => setHeroName(event.target.value)}
           placeholder={getText('hero_setup.hero_name_placeholder')}
-          className="rounded-lg border border-slate-900/15 bg-white/90 px-3 py-2 text-slate-900"
+          className="rounded-lg border px-3 py-2"
+          style={{
+            borderColor: 'var(--color-border)',
+            background: 'var(--color-panel)',
+            color: 'var(--color-text-primary)',
+          }}
         />
       </label>
 
@@ -42,15 +45,19 @@ export function HeroSetupScreen({ story, onSubmit }) {
           value={worldName}
           onChange={(event) => setWorldName(event.target.value)}
           placeholder={getText('hero_setup.world_name_placeholder')}
-          className="rounded-lg border border-slate-900/15 bg-white/90 px-3 py-2 text-slate-900"
+          className="rounded-lg border px-3 py-2"
+          style={{
+            borderColor: 'var(--color-border)',
+            background: 'var(--color-panel)',
+            color: 'var(--color-text-primary)',
+          }}
         />
       </label>
 
       <button
         type="submit"
         disabled={!canSubmit}
-        className="rounded-lg bg-[var(--theme-accent)] px-4 py-3 font-semibold text-white
-                   shadow disabled:opacity-40"
+        className="accent-1-surface rounded-lg px-4 py-3 font-semibold text-white shadow disabled:opacity-40"
       >
         {getText('hero_setup.continue_button')}
       </button>
