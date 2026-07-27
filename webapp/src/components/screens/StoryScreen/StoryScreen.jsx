@@ -4,14 +4,14 @@ import { ChoiceButton } from '../../shared/ChoiceButton/ChoiceButton';
 import { SignatureMotif } from '../../shared/SignatureMotif/SignatureMotif';
 import { useContent } from '../../../hooks/useContent';
 
-export function StoryScreen({ themeKey, title, intro, body, choices, onChoose }) {
+export function StoryScreen({ themeKey, title, intro, body, image, choices, onChoose }) {
   const { getText } = useContent();
   const [readyToChoose, setReadyToChoose] = useState(false);
 
   return (
     <div className="story-layout p-6">
       <SignatureMotif themeKey={themeKey}>
-        <StoryTextPanel title={title} intro={intro} body={body} />
+        <StoryTextPanel title={title} intro={intro} body={body} image={image} />
       </SignatureMotif>
 
       <div className="story-choices">

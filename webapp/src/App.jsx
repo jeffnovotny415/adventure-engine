@@ -156,6 +156,7 @@ export default function App() {
             title={displayText.title}
             intro={displayText.intro}
             body={displayText.body}
+            image={displayText.image}
             choices={choices}
             onChoose={handleChoose}
           />
@@ -169,6 +170,7 @@ export default function App() {
             title={displayText.title}
             intro={displayText.intro}
             body={displayText.body}
+            image={displayText.image}
             onRestart={handleRestart}
             onNewStory={handleNewStory}
           />

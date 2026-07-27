@@ -2,13 +2,13 @@ import { StoryTextPanel } from '../../shared/StoryTextPanel/StoryTextPanel';
 import { SignatureMotif } from '../../shared/SignatureMotif/SignatureMotif';
 import { useContent } from '../../../hooks/useContent';
 
-export function EndScreen({ themeKey, title, intro, body, onRestart, onNewStory }) {
+export function EndScreen({ themeKey, title, intro, body, image, onRestart, onNewStory }) {
   const { getText } = useContent();
 
   return (
     <div className="mx-auto flex h-full max-w-2xl flex-col gap-5 p-6">
       <SignatureMotif themeKey={themeKey}>
-        <StoryTextPanel title={title} intro={intro} body={body} />
+        <StoryTextPanel title={title} intro={intro} body={body} image={image} />
       </SignatureMotif>
 
       <h2

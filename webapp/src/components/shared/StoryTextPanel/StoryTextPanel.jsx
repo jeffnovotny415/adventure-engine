@@ -1,3 +1,5 @@
+import { SceneImage } from '../SceneImage/SceneImage';
+
 function paragraphsOf(text) {
   return (text ?? '')
     .split('\n')
@@ -5,7 +7,7 @@ function paragraphsOf(text) {
     .filter((line) => line.length > 0);
 }
 
-export function StoryTextPanel({ title, intro, body }) {
+export function StoryTextPanel({ title, intro, body, image }) {
   return (
     <div
       className="flex-1 min-h-0 overflow-y-auto rounded-xl border p-5"
@@ -15,6 +17,8 @@ export function StoryTextPanel({ title, intro, body }) {
         color: 'var(--color-text-primary)',
       }}
     >
+      <SceneImage image={image} />
+
       <h1
         className="scene-title mb-3 text-xl font-semibold"
         style={{ fontFamily: 'var(--font-display)' }}

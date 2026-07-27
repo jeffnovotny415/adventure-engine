@@ -27,7 +27,7 @@ export function getSceneDisplayText(scene, entryIntroKey, substitutions) {
   const intro = introRaw ? fillTemplate(introRaw, substitutions) : null;
   const body = fillTemplate(scene.text, substitutions);
 
-  return { title: scene.title, intro, body };
+  return { title: scene.title, intro, body, image: scene.image ?? null };
 }
 
 export function getAvailableChoices(scene, flags) {

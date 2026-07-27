@@ -56,6 +56,7 @@ export function DevTestScreen({ stories, onStartTest, onBack }) {
         >
           {sceneIds.map((id) => (
             <option key={id} value={id}>
+              {selectedStory.scenes[id].image ? '🖼️ ' : ''}
               {id}: {selectedStory.scenes[id].title}
             </option>
           ))}
