@@ -89,6 +89,10 @@
     },
     "scene_005": {
       "title": "Building The Can Opener",
+      "image": {
+        "src": "/images/stories/the_can_opener/can_opener_blueprint.jpg",
+        "alt": "Blueprint diagram of The Can Opener, labeling the wrench body, hammer face, energy axe blade, power core, insulated copper wire, and pry bar"
+      },
       "entry_intros": {
         "copper_wire": "\nYou uncoil the copper wire and look at the wrench.\n\nYou know exactly where this should go.\n",
         "grinder_work": "\nYou power up the grinder and toss on your goggles.\n\nTime to make some adjustments.\n",

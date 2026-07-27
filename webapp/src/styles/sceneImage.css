@@ -1,12 +1,28 @@
-/* SceneImage — optional chapter-header art shown above a scene's text.
-   Themed entirely via the shared token set; no per-theme overrides. */
+/* SceneImage — optional chapter-header art shown below a scene's
+   title. A small accompanying thumbnail, not a full-bleed hero image
+   — capped at 140px wide on desktop, scaled down on smaller devices
+   so it never needs its own scroll. Themed via the shared token set;
+   no per-theme overrides. */
 
 .scene-image {
   position: relative;
-  margin-bottom: 1rem;
-  border-radius: 0.75rem;
+  width: 90px;
+  margin: 0 auto 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   border: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+  .scene-image {
+    width: 115px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scene-image {
+    width: 140px;
+  }
 }
 
 .scene-image__img {

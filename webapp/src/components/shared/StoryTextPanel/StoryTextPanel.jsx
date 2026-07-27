@@ -17,14 +17,14 @@ export function StoryTextPanel({ title, intro, body, image }) {
         color: 'var(--color-text-primary)',
       }}
     >
-      <SceneImage image={image} />
-
       <h1
         className="scene-title mb-3 text-xl font-semibold"
         style={{ fontFamily: 'var(--font-display)' }}
       >
         {title}
       </h1>
+
+      <SceneImage image={image} />
 
       {intro && (
         <div className="mb-3 space-y-3 italic" style={{ color: 'var(--color-text-secondary)' }}>
