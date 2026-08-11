@@ -39,6 +39,14 @@ const TEXTURE_BY_STORY_ID = {
 };
 const DEFAULT_TEXTURE = '/images/textures/leather-tan.jpg';
 
+// Space Walker and The Can Opener share the same leather-tan photo —
+// sampling a different crop of it (smoother grain near the top of the
+// source photo vs. the more heavily creased center) gives real
+// textural variation on top of the color filter, not just a tint.
+const TEXTURE_POSITION_BY_STORY_ID = {
+  space_walker: '50% 12%',
+};
+
 // Soft handling-wear highlights scattered along each cover's edges —
 // varied per entry so the stack doesn't read as identically mirrored
 // corner treatment on every book.
@@ -83,6 +91,7 @@ export function BookSpine({ story, themeKey, index, total, onClick }) {
   const cords = CORD_OFFSETS[index % CORD_OFFSETS.length];
   const foxSpots = FOX_SPOTS[index % FOX_SPOTS.length];
   const texture = TEXTURE_BY_STORY_ID[story.id] ?? DEFAULT_TEXTURE;
+  const texturePosition = TEXTURE_POSITION_BY_STORY_ID[story.id] ?? 'center';
   const patinaSpots = PATINA_SPOTS[index % PATINA_SPOTS.length];
   const edgeWearSpots = EDGE_WEAR_SPOTS[index % EDGE_WEAR_SPOTS.length];
 
@@ -91,7 +100,12 @@ export function BookSpine({ story, themeKey, index, total, onClick }) {
       type="button"
       className="book-bar"
       data-theme={themeKey}
-      style={{ '--book-shift': shift, '--book-texture': `url('${texture}')`, zIndex }}
+      style={{
+        '--book-shift': shift,
+        '--book-texture': `url('${texture}')`,
+        '--book-texture-pos': texturePosition,
+        zIndex,
+      }}
       onClick={onClick}
     >
       {edgeWearSpots.map((spot, spotIndex) => (
