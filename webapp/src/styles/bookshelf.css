@@ -24,40 +24,75 @@
   padding: 14px 28px;
   cursor: pointer;
   font: inherit;
-  background: linear-gradient(
-    160deg,
-    color-mix(in srgb, var(--color-accent-1) 80%, black) 0%,
-    color-mix(in srgb, var(--color-accent-1) 55%, black) 55%,
-    color-mix(in srgb, var(--color-accent-1) 38%, black) 100%
-  );
-  filter: saturate(0.85);
   border-radius: 8px 10px 7px 9px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   transform: translateX(var(--book-shift, 0));
-  transition: filter 0.15s ease;
 }
 
-.book-bar:hover,
-.book-bar:focus-visible {
-  filter: saturate(0.95) brightness(1.07);
-  z-index: 10;
-}
-
-.book-bar:active {
-  filter: saturate(0.8) brightness(0.95);
-}
-
-/* Grain/noise texture — breaks up the flat gradient, across the
-   whole cover. */
+/* The texture photo lives on its own layer so the contrast/brightness
+   filter tuning below only touches the leather, never the title,
+   description, or decorative overlays stacked on top of it. */
 .book-bar::before {
   content: '';
   position: absolute;
   inset: 0;
+  background-image: var(--book-texture);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: contrast(1.08) brightness(0.9) saturate(1.05);
+  transition: filter 0.15s ease;
+}
+
+.book-bar:hover::before,
+.book-bar:focus-visible::before {
+  filter: contrast(1.08) brightness(1) saturate(1.05);
+}
+
+.book-bar:active::before {
+  filter: contrast(1.08) brightness(0.82) saturate(1.05);
+}
+
+.book-bar:hover,
+.book-bar:focus-visible {
+  z-index: 10;
+}
+
+/* Space Walker shares the same leather-tan photo as The Can Opener —
+   this nudges it cooler/greyer so the two covers read as distinct
+   without needing a separate texture photo. */
+.book-bar[data-theme='space-walker']::before {
+  filter: contrast(1.08) brightness(0.86) saturate(0.6) hue-rotate(-8deg);
+}
+.book-bar[data-theme='space-walker']:hover::before,
+.book-bar[data-theme='space-walker']:focus-visible::before {
+  filter: contrast(1.08) brightness(0.96) saturate(0.6) hue-rotate(-8deg);
+}
+.book-bar[data-theme='space-walker']:active::before {
+  filter: contrast(1.08) brightness(0.78) saturate(0.6) hue-rotate(-8deg);
+}
+
+/* Handling wear — soft highlights scattered along each cover's
+   edges rather than fixed at all 4 corners, so the stack doesn't
+   read as identically mirrored. Per-index positions in BookSpine.jsx. */
+.book-edge-wear {
+  position: absolute;
+  width: 42px;
+  height: 38px;
   pointer-events: none;
-  opacity: 0.5;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.55), transparent 68%);
+  mix-blend-mode: soft-light;
+}
+
+/* Soft uneven patina blotches — irregular aging, not uniform
+   noise. Per-index positions/sizes come from BookSpine.jsx. */
+.book-patina {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  filter: blur(5px);
 }
 
 /* Foil-stamped rule near the top of the cover — echoes a spine's
@@ -69,8 +104,8 @@
   left: 20px;
   right: 20px;
   height: 2px;
-  background: var(--color-accent-3);
-  opacity: 0.6;
+  background: #e0b96a;
+  opacity: 0.7;
   pointer-events: none;
 }
 
@@ -80,8 +115,8 @@
   bottom: 10px;
   width: 3px;
   border-radius: 1px;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.14), -1px 0 0 rgba(0, 0, 0, 0.26);
+  background: rgba(224, 185, 106, 0.5);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.12), -1px 0 0 rgba(0, 0, 0, 0.22);
   pointer-events: none;
 }
 
@@ -109,8 +144,8 @@
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 600;
-  color: #fbf6ea;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #e0b96a;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(0, 0, 0, 0.75), 0 0 8px rgba(0, 0, 0, 0.5);
   line-height: 1.15;
   text-align: center;
 }
@@ -118,15 +153,15 @@
 .book-ornament {
   width: 34px;
   height: 2px;
-  background: var(--color-accent-3);
-  opacity: 0.7;
+  background: #e0b96a;
+  opacity: 0.85;
 }
 
 .book-description {
   font-size: 0.82rem;
   line-height: 1.35;
-  color: rgba(251, 246, 234, 0.85);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  color: rgba(224, 185, 106, 0.92);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.7);
   text-align: center;
   overflow: hidden;
   display: -webkit-box;
