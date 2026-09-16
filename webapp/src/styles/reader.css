@@ -1,0 +1,60 @@
+.reader-layout { max-width: 1180px; margin: auto; padding: 0 max(24px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left)); }
+.reader-nav { display: flex; gap: 18px; align-items: center; justify-content: space-between; min-height: 66px; }
+.reader-nav-title { font-family: var(--font-display); color: var(--color-text-secondary); text-align: center; font-size: .9rem; }
+.text-size-button { min-width: 46px; min-height: 40px; padding: 5px 12px; border: 1px solid var(--color-border); border-radius: 5px; background: var(--color-panel); color: var(--color-text-primary); }
+.text-size-button[aria-pressed='true'] { border-color: var(--color-accent-1); box-shadow: inset 0 0 0 1px var(--color-accent-1); }
+.paper-book { position: relative; background: var(--color-panel); color: var(--color-text-primary); }
+.reader-viewport { position: relative; margin: 0 30px; padding: 0; overflow: hidden; height: clamp(240px, calc(100dvh - 178px), 780px); }
+.reader-columns { height: 100%; column-count: 1; column-gap: 60px; column-fill: auto; padding-top: 22px; }
+.scene-heading { break-inside: avoid; }
+.scene-title { margin: 8px 0 20px; font-size: clamp(1.5rem, 3vw, 1.9rem); line-height: 1.2; letter-spacing: -.03em; overflow-wrap: anywhere; }
+.story-name { color: var(--color-accent-1); }
+.story-paragraph { margin: 0 0 17px; font-size: 1.08rem; line-height: 1.8; orphans: 2; widows: 2; }
+.story-intro { font-style: italic; color: var(--color-text-secondary); }
+.reader-layout[data-large-text='true'] .story-paragraph { font-size: 1.28rem; }
+.reader-footer { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 15px; margin: 12px 30px 0; border-top: 1px solid color-mix(in srgb, var(--color-border) 65%, transparent); padding: 11px 0 15px; }
+.reader-footer .text-button { flex-shrink: 0; }
+.page-status { color: var(--color-text-secondary); font-size: .73rem; text-align: center; }
+.ending-label { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; }
+.ending-actions { position: relative; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 18px; padding: 0 28px 25px; }
+.closing-ornament { color: var(--color-accent-3); font-size: 26px; }
+.decision-page { position: relative; max-width: 760px; margin: auto; padding: 35px 35px 25px; min-height: min(450px, 65dvh); }
+.decision-page h1 { margin: 10px 0 24px; font-size: clamp(1.6rem, 4vw, 2.1rem); line-height: 1.25; }
+.choice-list { margin-bottom: 20px; }
+.choice-button { display: grid; grid-template-columns: 28px minmax(0,1fr) 18px; align-items: baseline; gap: 12px; width: 100%; min-height: 56px; padding: 18px 8px; background: transparent; border: 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-primary); text-align: left; line-height: 1.65; font-size: 1rem; }
+.choice-button:hover { background: color-mix(in srgb, var(--color-accent-1) 5%, transparent); }
+.choice-number { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-accent-1); }
+.choice-arrow { color: var(--color-accent-1); }
+/* A spread on landscape tablets; a readable single page on short phones. */
+@media (orientation: landscape) and (min-width: 900px) and (min-height: 600px) {
+  .paper-book:not(.bookplate):not(.paper-book--choices) { background: linear-gradient(90deg, var(--color-panel) 0% 47%, #e9ddc5 49.7%, #c4b598 50%, #eee2cc 50.3%, var(--color-panel) 53%); }
+  .reader-columns { column-count: 2; }
+  .reader-viewport { margin-inline: 40px; }
+  .reader-footer { margin-inline: 40px; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .reader-nav { min-height: 50px; }
+  .reader-viewport { height: max(210px, calc(100dvh - 148px)); }
+  .reader-columns { padding-top: 14px; }
+  .scene-title { font-size: 1.45rem; margin-bottom: 12px; }
+  .story-paragraph { font-size: 1rem; line-height: 1.65; margin-bottom: 12px; }
+  .reader-footer { margin-top: 7px; padding-block: 6px 10px; }
+  .decision-page { padding-block: 22px; }
+  .decision-page h1 { margin-bottom: 14px; }
+  .choice-button { padding-block: 12px; }
+}
+@media (max-width: 480px) {
+  .reader-layout { padding-inline: 12px; }
+  .reader-nav { gap: 10px; }
+  .reader-nav-title { display: none; }
+  .reader-viewport { margin-inline: 23px; }
+  .reader-footer { margin-inline: 23px; flex-wrap: wrap; gap: 8px; }
+  .reader-footer .primary-button { font-size: .75rem; padding-inline: 11px; }
+  .page-status { font-size: .65rem; }
+  .decision-page { padding-inline: 23px; }
+}
+
+/* Irregular paper edges remain outside the reading and touch areas. */
+.paper-book { border:0; border-radius:1px; box-shadow:none; clip-path:polygon(2px 2px,6% 1px,6.4% 3px,10% 1px,17% 2px,24% 0,30% 2px,30.3% 4px,31% 1px,41% 2px,49% 0,57% 2px,66% 1px,71% 3px,79% 1px,87% 2px,94% 0,calc(100% - 2px) 2px,calc(100% - 1px) 7%,calc(100% - 3px) 11%,100% 17%,calc(100% - 2px) 26%,calc(100% - 1px) 35%,calc(100% - 4px) 35.5%,calc(100% - 1px) 36.2%,calc(100% - 2px) 49%,100% 57%,calc(100% - 3px) 65%,calc(100% - 1px) 77%,calc(100% - 3px) 91%,calc(100% - 1px) calc(100% - 3px),91% calc(100% - 1px),86% calc(100% - 3px),78% 100%,71% calc(100% - 2px),63% calc(100% - 1px),62.6% calc(100% - 4px),62% calc(100% - 1px),54% calc(100% - 2px),49% 100%,43% calc(100% - 2px),35% calc(100% - 1px),29% calc(100% - 3px),20% 100%,13% calc(100% - 2px),5% calc(100% - 1px),1px calc(100% - 3px),3px 89%,1px 81%,2px 69%,0 61%,2px 54%,1px 43%,4px 42.5%,1px 41%,3px 29%,1px 22%,2px 13%,0 6%); }
+.paper-book::before { content:''; position:absolute; inset:0; pointer-events:none; box-shadow:inset 0 0 0 1px #94744140; background:linear-gradient(90deg,#ad8c5440,transparent 7px,transparent calc(100% - 6px),#ad8c5438),linear-gradient(180deg,#ab8c5430,transparent 5px,transparent calc(100% - 7px),#ad8c5438); }
+.paper-book::after { content:''; position:absolute; inset:0; pointer-events:none; opacity:.6; background:linear-gradient(115deg,transparent 30%,#987749 45% 53%,transparent 66%) left 12%/4px 9px no-repeat,linear-gradient(72deg,transparent 40%,#987749 47% 55%,transparent 63%) left 72%/3px 13px no-repeat,linear-gradient(58deg,transparent 36%,#987749 46% 53%,transparent 66%) right 37%/4px 7px no-repeat,linear-gradient(112deg,transparent 40%,#987749 46% 52%,transparent 62%) right 85%/3px 12px no-repeat,linear-gradient(12deg,transparent 36%,#987749 45% 52%,transparent 64%) 22% top/13px 3px no-repeat,linear-gradient(-8deg,transparent 30%,#987749 42% 53%,transparent 69%) 81% bottom/17px 4px no-repeat; }

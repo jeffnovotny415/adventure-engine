@@ -1,170 +1,64 @@
-/* HomeScreen's signature: the book stack. Full-width entries resting
-   flat and touching, directly on top of each other — like a real
-   pile of books set down, not floating cards. Each entry only shifts
-   a few px left/right from the one before it (edges that don't quite
-   line up), no tilt, no gap. Each entry is a worn book cover end to
-   end: colored, grained, foil-stamped, with binding cords and foxing
-   spots near the edges and centered, book-spine-style title text. */
-
-.book-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  width: 100%;
+.library-layout { display: grid; grid-template-columns: minmax(190px, .75fr) minmax(0, 1.5fr); align-items: center; gap: clamp(28px, 5vw, 64px); max-width: 1080px; margin: auto; padding: clamp(28px, 6vh, 70px) 40px 25px; }
+.library-intro h1 { margin: 10px 0 17px; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.16; letter-spacing: -.045em; }
+.library-tagline { font-size: .9rem; line-height: 1.7; }
+.bookmark { margin-top: 30px; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 18px 0; display: grid; grid-template-columns: 22px 1fr; gap: 10px 12px; align-items: start; }
+.bookmark-ribbon { display: block; width: 22px; height: 51px; background: var(--color-accent-1); clip-path: polygon(0 0,100% 0,100% 100%,50% 84%,0 100%); }
+.bookmark-title { margin: 3px 0; font-weight: 500; font-size: .94rem; }
+.bookmark .primary-button { grid-column: 2; justify-self: start; }
+.shelf-label { font-family: var(--font-body) !important; font-size: .79rem; color: var(--color-text-secondary); margin-bottom: 15px; }
+.book-stack { isolation: isolate; display: flex; flex-direction: column; padding: 0 5px; }
+.book-bar { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr) 25px; gap: 14px; align-items: center; width: 100%; min-height: 126px; padding: 24px 36px; overflow: hidden; background: #4b291b; border-top: 2px solid #ad88514a; border-bottom: 3px solid #211309; border-radius: 9px 17px 9px 6px; box-shadow: inset 1px 0 1px #edcb8244, inset 0 -6px 8px #1a0e0b80, 0 3px 3px #2c1a1130; text-align: left; transform: translateX(-5px); }
+/* Keep filters on the photo layer, preserving legibility of the gold type. */
+.book-bar::before { content: ''; position: absolute; inset: 0; z-index: -2; background: url('/images/textures/leather-tan.jpg') 50% 46% / 100% auto; filter: brightness(.64) saturate(.8); }
+.book-bar::after { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(90deg,transparent 0 6%,#170a0799 6.3%,#80553455 6.7%,transparent 7.2% 92%,#78513355 92.3%,#18090690 93%,transparent 94%); box-shadow: inset 0 1px 0 #96714655, inset 0 -2px 0 #29160d99; }
+.book-bar[data-book='summoned_mage'] { transform: translateX(5px); min-height: 138px; border-radius: 7px 10px 15px 11px; }
+.book-bar[data-book='summoned_mage']::before { background-position: 40% 90%; filter: brightness(.54) sepia(.2) saturate(.75) hue-rotate(332deg); }
+.book-bar[data-book='summoned_mage']::after { background: linear-gradient(90deg,transparent 0 9%,#200b0890 9.2%,#87604544 9.7%,transparent 10.2% 88%,#1f0c0977 88.3%,#79513f44 89%,transparent 89.4%); }
+.book-bar[data-book='the_can_opener'] { transform: none; border-radius: 11px 13px 7px 9px; }
+.book-bar[data-book='the_can_opener']::before { background-position: 65% 16%; filter: brightness(.61) saturate(.35); }
+.book-bar[data-book='the_can_opener']::after { background: linear-gradient(90deg,transparent 0 4%,#170f0a99 4.2%,#77614744 4.8%,transparent 5.1% 94%,#1d110d88 94.3%,#84674544 94.9%,transparent 95.4%); }
+.book-bar:hover .book-title { color: #ffe7b8; }
+.book-bar:focus-visible { z-index: 3; }
+.book-text { min-width: 0; }
+.book-title { display: block; font-family: var(--font-display); color: #edd3a0; font-size: clamp(1.35rem, 2.5vw, 1.7rem); line-height: 1.2; font-weight: 400; letter-spacing: -.03em; text-shadow: 0 1px 1px #130901; }
+.book-description { display: block; margin-top: 9px; color: #e5ccb0; font-size: .74rem; line-height: 1.5; }
+.book-ornament { color: #dcbf82; font-size: 27px; }
+.library-caption { margin-top: 23px; text-align: center; font-family: var(--font-display); font-size: .9rem; color: var(--color-text-secondary); }
+.library-footer { text-align: center; padding: 0 24px max(15px, env(safe-area-inset-bottom)); }
+@media (max-width: 699px) {
+  .library-layout { display: block; padding: 30px 25px 18px; }
+  .library-intro { margin-bottom: 28px; }
+  .library-intro h1 { max-width: 12ch; }
+  .bookmark { grid-template-columns: 22px 1fr auto; align-items: center; }
+  .bookmark .primary-button { grid-column: 3; grid-row: 1; }
+  .book-bar { padding: 22px 28px; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .library-layout { padding-block: 20px 8px; gap: 30px; }
+  .library-intro h1 { font-size: 1.9rem; }
+  .book-bar { min-height: 86px; padding-block: 15px; }
+  .book-bar[data-book='summoned_mage'] { min-height: 96px; }
+  .book-title { font-size: 1.35rem; }
+  .book-description { font-size: .7rem; margin-top: 5px; }
+  .bookmark { margin-top: 17px; padding-block: 12px; }
+  .library-caption { margin-top: 13px; }
 }
 
-.book-bar {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 116px;
-  border: none;
-  padding: 14px 28px;
-  cursor: pointer;
-  font: inherit;
-  border-radius: 8px 10px 7px 9px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  transform: translateX(var(--book-shift, 0));
-}
-
-/* The texture photo lives on its own layer so the contrast/brightness
-   filter tuning below only touches the leather, never the title,
-   description, or decorative overlays stacked on top of it. */
-.book-bar::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: var(--book-texture);
-  background-size: cover;
-  background-position: var(--book-texture-pos, center);
-  background-repeat: no-repeat;
-  filter: contrast(1.08) brightness(0.9) saturate(1.05);
-  transition: filter 0.15s ease;
-}
-
-.book-bar:hover::before,
-.book-bar:focus-visible::before {
-  filter: contrast(1.08) brightness(1) saturate(1.05);
-}
-
-.book-bar:active::before {
-  filter: contrast(1.08) brightness(0.82) saturate(1.05);
-}
-
-.book-bar:hover,
-.book-bar:focus-visible {
-  z-index: 10;
-}
-
-/* Space Walker shares the same leather-tan photo as The Can Opener —
-   this nudges it cooler/greyer so the two covers read as distinct
-   without needing a separate texture photo. */
-.book-bar[data-theme='space-walker']::before {
-  filter: contrast(1.08) brightness(0.86) saturate(0.6) hue-rotate(-8deg);
-}
-.book-bar[data-theme='space-walker']:hover::before,
-.book-bar[data-theme='space-walker']:focus-visible::before {
-  filter: contrast(1.08) brightness(0.96) saturate(0.6) hue-rotate(-8deg);
-}
-.book-bar[data-theme='space-walker']:active::before {
-  filter: contrast(1.08) brightness(0.78) saturate(0.6) hue-rotate(-8deg);
-}
-
-/* Handling wear — soft highlights scattered along each cover's
-   edges rather than fixed at all 4 corners, so the stack doesn't
-   read as identically mirrored. Per-index positions in BookSpine.jsx. */
-.book-edge-wear {
-  position: absolute;
-  width: 42px;
-  height: 38px;
-  pointer-events: none;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.55), transparent 68%);
-  mix-blend-mode: soft-light;
-}
-
-/* Soft uneven patina blotches — irregular aging, not uniform
-   noise. Per-index positions/sizes come from BookSpine.jsx. */
-.book-patina {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  mix-blend-mode: soft-light;
-  filter: blur(5px);
-}
-
-/* Foil-stamped rule near the top of the cover — echoes a spine's
-   gilt title rule. */
-.book-bar::after {
-  content: '';
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  right: 20px;
-  height: 2px;
-  background: #e0b96a;
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-.book-cord {
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  width: 3px;
-  border-radius: 1px;
-  background: rgba(224, 185, 106, 0.5);
-  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.12), -1px 0 0 rgba(0, 0, 0, 0.22);
-  pointer-events: none;
-}
-
-.book-fox {
-  position: absolute;
-  width: 7px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(30, 18, 10, 0.28);
-  filter: blur(0.5px);
-  pointer-events: none;
-}
-
-.book-text {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  max-width: 78%;
-}
-
-.book-title {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #e0b96a;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(0, 0, 0, 0.75), 0 0 8px rgba(0, 0, 0, 0.5);
-  line-height: 1.15;
-  text-align: center;
-}
-
-.book-ornament {
-  width: 34px;
-  height: 2px;
-  background: #e0b96a;
-  opacity: 0.85;
-}
-
-.book-description {
-  font-size: 0.82rem;
-  line-height: 1.35;
-  color: rgba(224, 185, 106, 0.92);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.7);
-  text-align: center;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
+/* Individual, matte leather abrasions and narrow creases. */
+.book-scuff { position:absolute; pointer-events:none; background:#967248; opacity:.67; }
+.book-bar[data-book='space_walker'] .book-scuff-a { top:0; left:15%; width:58px; height:7px; clip-path:polygon(0 0,100% 0,92% 23%,77% 28%,80% 60%,68% 42%,51% 83%,45% 44%,29% 71%,17% 31%,0 47%); }
+.book-bar[data-book='space_walker'] .book-scuff-b { bottom:1px; left:42%; width:33px; height:3px; clip-path:polygon(0 60%,22% 10%,39% 53%,61% 27%,100% 69%,88% 100%,11% 100%); }
+.book-bar[data-book='space_walker'] .book-scuff-c { top:18%; right:2px; width:7px; height:35px; clip-path:polygon(73% 0,100% 8%,100% 96%,42% 100%,53% 76%,0 68%,49% 51%,24% 29%); }
+.book-bar[data-book='summoned_mage'] .book-scuff-a { top:1px; right:28%; width:21px; height:3px; background:#81543e; clip-path:polygon(0 0,100% 0,82% 100%,60% 46%,43% 82%,24% 35%,0 78%); }
+.book-bar[data-book='summoned_mage'] .book-scuff-b { bottom:0; left:8%; width:84px; height:9px; background:#9d7150; clip-path:polygon(0 75%,9% 45%,22% 66%,29% 27%,34% 36%,45% 15%,53% 48%,67% 30%,81% 67%,95% 50%,100% 100%,0 100%); }
+.book-bar[data-book='summoned_mage'] .book-scuff-c { top:24%; left:1px; width:5px; height:22px; background:#986745; clip-path:polygon(0 0,71% 9%,100% 36%,50% 52%,83% 77%,22% 100%,0 81%); }
+.book-bar[data-book='the_can_opener'] .book-scuff-a { top:0; right:7%; width:37px; height:6px; background:#8d7960; clip-path:polygon(0 0,100% 0,90% 45%,63% 32%,69% 76%,38% 44%,19% 88%,7% 51%); }
+.book-bar[data-book='the_can_opener'] .book-scuff-b { bottom:0; left:26%; width:46px; height:4px; background:#8a7152; clip-path:polygon(0 78%,18% 36%,37% 59%,57% 12%,67% 41%,100% 64%,98% 100%,0 100%); }
+.book-bar[data-book='the_can_opener'] .book-scuff-c { bottom:15%; right:1px; width:6px; height:47px; background:#8d7554; clip-path:polygon(100% 0,100% 100%,41% 86%,63% 69%,12% 56%,48% 34%,4% 19%,70% 9%); }
+.book-crease { position:absolute; pointer-events:none; height:1px; background:#1f130ca6; box-shadow:0 1px 0 #926a4036; transform-origin:left center; }
+.book-bar[data-book='space_walker'] .book-crease-a { width:44px; top:17px; left:1%; transform:rotate(21deg); }
+.book-bar[data-book='space_walker'] .book-crease-b { width:63px; bottom:16px; right:5%; transform:rotate(-11deg); }
+.book-bar[data-book='summoned_mage'] .book-crease-a { width:72px; bottom:14px; left:14%; transform:rotate(-7deg); }
+.book-bar[data-book='summoned_mage'] .book-crease-b { width:30px; top:9px; right:3%; transform:rotate(39deg); }
+.book-bar[data-book='the_can_opener'] .book-crease-a { width:33px; top:20px; right:18%; transform:rotate(-17deg); }
+.book-bar[data-book='the_can_opener'] .book-crease-b { width:24px; bottom:27px; left:3%; transform:rotate(61deg); }

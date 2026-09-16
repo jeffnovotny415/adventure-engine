@@ -1,44 +1,23 @@
 import { SceneImage } from '../SceneImage/SceneImage';
 
 function paragraphsOf(text) {
-  return (text ?? '')
-    .split('\n')
-    .map((line) => line.trim())
-    .filter((line) => line.length > 0);
+  return (text ?? '').split('\n').map((line) => line.trim()).filter(Boolean);
 }
 
-export function StoryTextPanel({ title, intro, body, image }) {
+export function StoryTextPanel({ storyTitle, title, intro, body, image, headingRef }) {
   return (
-    <div
-      className="flex-1 min-h-0 overflow-y-auto rounded-xl border p-5"
-      style={{
-        background: 'var(--color-panel)',
-        borderColor: 'var(--color-border)',
-        color: 'var(--color-text-primary)',
-      }}
-    >
-      <h1
-        className="scene-title mb-3 text-xl font-semibold"
-        style={{ fontFamily: 'var(--font-display)' }}
-      >
-        {title}
-      </h1>
-
-      <SceneImage image={image} />
-
-      {intro && (
-        <div className="mb-3 space-y-3 italic" style={{ color: 'var(--color-text-secondary)' }}>
-          {paragraphsOf(intro).map((paragraph, index) => (
-            <p key={`intro-${index}`}>{paragraph}</p>
-          ))}
-        </div>
-      )}
-
-      <div className="space-y-3 leading-relaxed">
-        {paragraphsOf(body).map((paragraph, index) => (
-          <p key={`body-${index}`}>{paragraph}</p>
-        ))}
+    <>
+      <div className="scene-heading">
+        <p className="eyebrow story-name">{storyTitle}</p>
+        <h1 className="scene-title" ref={headingRef} tabIndex={-1}>{title}</h1>
+        <SceneImage image={image} />
       </div>
-    </div>
+      {paragraphsOf(intro).map((paragraph, index) => (
+        <p className="story-paragraph story-intro" key={`intro-${index}`}>{paragraph}</p>
+      ))}
+      {paragraphsOf(body).map((paragraph, index) => (
+        <p className="story-paragraph" key={`body-${index}`}>{paragraph}</p>
+      ))}
+    </>
   );
 }

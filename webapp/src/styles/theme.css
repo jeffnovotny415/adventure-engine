@@ -1,134 +1,54 @@
-/* Paths of Wonder theme tokens — one shared set of 9 custom properties
-   per theme; every component is built once and skinned via these.
-   Theme keys map 1:1 to story ids (see utils/themeKey.js) so the
-   mapping never drifts from the data contract:
-     space_walker  -> space-walker
-     summoned_mage -> summoned-mage
-     the_can_opener -> tech-hero
-     (app shell / home / hero setup) -> shell */
-
+/* Warm paper remains constant; each story contributes a quiet ink accent. */
+:root,
 [data-theme='shell'] {
-  --font-display: 'Fraunces', serif;
+  --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Public Sans', sans-serif;
-  --color-bg: #f3e8d2;
-  --color-panel: #ecdfc0;
-  --color-text-primary: #2a2015;
-  --color-text-secondary: #6b5b42;
-  --color-border: #c9bba0;
-  --color-accent-1: #7b2d2d; /* cloth — primary CTA */
-  --color-accent-2: #5c6b4f; /* ribbon — secondary */
-  --color-accent-3: #b8863c; /* gilt — dividers/decoration */
+  --color-bg: #eee5d4;
+  --color-panel: #fbf4e5;
+  --color-text-primary: #33291f;
+  --color-text-secondary: #70604d;
+  --color-border: #cebea3;
+  --color-accent-1: #713d32;
+  --color-accent-2: #535a40;
+  --color-accent-3: #987749;
 }
+[data-theme='space-walker'] { --color-accent-1: #375b60; }
+[data-theme='summoned-mage'] { --color-accent-1: #793f32; }
+[data-theme='tech-hero'] { --color-accent-1: #4d5b3c; }
 
-[data-theme='space-walker'] {
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'Public Sans', sans-serif;
-  --color-bg: #0b0e16;
-  --color-panel: #131a28;
-  --color-text-primary: #edeff3;
-  --color-text-secondary: #8b93a3;
-  --color-border: #232b3b;
-  --color-accent-1: #4fd7de; /* signal cyan — primary */
-  --color-accent-2: #9c6bf0; /* nebula violet — rare accent */
-  --color-accent-3: #c9d0d8; /* chrome — frames/structure */
-}
-
-[data-theme='summoned-mage'] {
-  --font-display: 'Fraunces', serif; /* italic optical variant */
-  --font-body: 'Public Sans', sans-serif;
-  --color-bg: #3b2a1e;
-  --color-panel: #4a3728;
-  --color-text-primary: #ead9af;
-  --color-text-secondary: #b29c74;
-  --color-border: #5a4632;
-  --color-accent-1: #e4693a; /* ember — primary */
-  --color-accent-2: #9ed9d6; /* glacier — secondary spark */
-  --color-accent-3: #66765a; /* moss — grounding/structure */
-}
-
-[data-theme='tech-hero'] {
-  --font-display: 'IBM Plex Mono', monospace;
-  --font-body: 'Public Sans', sans-serif;
-  --color-bg: #15181c;
-  --color-panel: #1d2226;
-  --color-text-primary: #e8ecee;
-  --color-text-secondary: #7c8790;
-  --color-border: #2a3034;
-  --color-accent-1: #35e4a0; /* circuit green — primary */
-  --color-accent-2: #ff3d7f; /* arc magenta — rare/signature */
-  --color-accent-3: #ffb020; /* hazard amber — secondary/CTA */
-}
-
-/* Hover/active states are derived from whichever accent is in use,
-   never hand-picked per theme — keeps the token count fixed at nine
-   no matter how many interactive states get added later. */
-.accent-1-surface {
-  background: var(--color-accent-1);
-}
-.accent-1-surface:hover {
-  background: color-mix(in srgb, var(--color-accent-1) 85%, black);
-}
-.accent-1-surface:active {
-  background: color-mix(in srgb, var(--color-accent-1) 90%, black);
-}
-
-/* Summoned Mage uses Fraunces' italic optical variant for display
-   text — the only theme where display font-style differs. */
-[data-theme='summoned-mage'] .scene-title {
-  font-style: italic;
-}
-
-.choice-button {
-  background: var(--color-panel);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-primary);
-}
-.choice-button:hover {
-  border-color: var(--color-accent-1);
-  background: color-mix(in srgb, var(--color-accent-1) 12%, var(--color-panel));
-}
-.choice-button:active {
-  background: color-mix(in srgb, var(--color-accent-1) 20%, var(--color-panel));
-}
-
-.app-shell {
-  background: var(--color-bg);
-  color: var(--color-text-primary);
-  font-family: var(--font-body);
-  min-height: 100%;
-}
-
-.story-shell {
-  background: var(--color-bg);
-  color: var(--color-text-primary);
-  font-family: var(--font-body);
-  min-height: 100%;
-}
-
-/* StoryScreen: one component, two layouts. Buttons dock below the
-   text panel in portrait, beside it in landscape on wider viewports
-   (tablets), per the sketched wireframes. */
-.story-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-  min-height: 0;
-}
-
-.story-choices {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-@media (orientation: landscape) and (min-width: 700px) {
-  .story-layout {
-    flex-direction: row;
-  }
-
-  .story-choices {
-    width: 320px;
-    flex-shrink: 0;
-  }
+.app-shell { min-height: 100dvh; color: var(--color-text-primary); background: var(--color-bg); font-family: var(--font-body); }
+.app-shell h1, .app-shell h2 { font-family: var(--font-display); font-weight: 400; }
+.app-shell h1 { text-wrap: balance; }
+.app-shell button { cursor: pointer; }
+.app-shell button:disabled { cursor: default; opacity: .45; }
+.app-shell :is(button, input, select):focus-visible { outline: 3px solid var(--color-accent-1); outline-offset: 4px; }
+.app-shell h1:focus { outline: none; }
+.app-shell p { overflow-wrap: anywhere; }
+.muted { color: var(--color-text-secondary); }
+.small { font-size: .78rem; }
+.eyebrow { font-size: .68rem; line-height: 1.5; letter-spacing: .16em; text-transform: uppercase; color: var(--color-text-secondary); }
+.app-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px max(26px, env(safe-area-inset-left)); border-bottom: 1px solid var(--color-border); }
+.app-wordmark { font-family: var(--font-display); font-size: 1.3rem; letter-spacing: -.04em; }
+.app-header-note { font-size: .76rem; color: var(--color-text-secondary); }
+.primary-button, .accent-1-surface { background: var(--color-accent-1); color: #fff8ec; border: 0; border-radius: 5px; padding: 12px 19px; min-height: 44px; font-size: .85rem; font-weight: 500; }
+.primary-button:hover, .accent-1-surface:hover { background: color-mix(in srgb, var(--color-accent-1) 85%, black); }
+.primary-button:active, .accent-1-surface:active { background: color-mix(in srgb, var(--color-accent-1) 75%, black); }
+.text-button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px 0; border: 0; background: transparent; color: var(--color-text-secondary); font-size: .84rem; }
+.text-button:hover { color: var(--color-accent-1); }
+.setup-layout { max-width: 760px; padding: 20px 28px 40px; margin: auto; }
+.bookplate { margin-top: 14px; padding: 32px clamp(24px, 6vw, 60px) 40px; text-align: center; }
+.bookplate h1 { margin: 8px 0 26px; font-size: clamp(1.7rem, 4vw, 2.2rem); line-height: 1.25; }
+.bookplate-ornament { display: block; margin-top: 18px; font-size: 26px; color: var(--color-accent-3); }
+.bookplate-fields { display: grid; gap: 24px; margin: 0 0 28px; text-align: left; }
+.bookplate-fields label { display: flex; flex-direction: column; gap: 9px; font-size: .86rem; color: var(--color-text-secondary); }
+.bookplate-fields input { width: 100%; min-width: 0; padding: 10px 2px; background: transparent; border: 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-primary); border-radius: 0; font-size: 1.1rem; }
+@media (max-width: 480px) { .app-header-note { display: none; } }
+@media (orientation: landscape) and (min-width: 700px) { .bookplate-fields { grid-template-columns: 1fr 1fr; } }
+@media (orientation: landscape) and (max-height: 500px) {
+  .app-header { padding-block: 10px; }
+  .setup-layout { padding-top: 7px; }
+  .bookplate { margin-top: 0; padding-block: 18px; }
+  .bookplate-ornament { display: none; }
+  .bookplate h1 { margin: 8px 0 18px; }
+  .bookplate-fields { margin-bottom: 20px; }
 }

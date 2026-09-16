@@ -5,6 +5,7 @@ import { StoryScreen } from './components/screens/StoryScreen/StoryScreen';
 import { EndScreen } from './components/screens/EndScreen/EndScreen';
 import { DevTestScreen } from './components/screens/DevTestScreen/DevTestScreen';
 import { useGameState } from './state/useGameState';
+import { loadSave } from './state/storage';
 import { getScene, getSceneDisplayText, getAvailableChoices, isEnding } from './engine/sceneEngine';
 import { getStoryIndex, getStory } from './utils/storyData';
 import { themeKeyForStory, SHELL_THEME } from './utils/themeKey';
@@ -24,17 +25,27 @@ export default function App() {
     [stories]
   );
 
-  const { save, hasSavedGame, startNewGame, continueGame, applyChoice, finishGame } =
+  const { save, startNewGame, continueGame, applyChoice, finishGame } =
     useGameState();
 
   const [screen, setScreen] = useState(SCREENS.HOME);
   const [pendingStoryId, setPendingStoryId] = useState(null);
-  const [savedGameExists, setSavedGameExists] = useState(false);
+  const [bookmark, setBookmark] = useState(null);
   const [devTestState, setDevTestState] = useState(null);
+  const [largeText, setLargeText] = useState(false);
 
   useEffect(() => {
-    setSavedGameExists(hasSavedGame());
-  }, [hasSavedGame, screen]);
+    if (screen !== SCREENS.HOME) return;
+    // The shelf describes the real persisted bookmark, including after reload.
+    try {
+      const saved = loadSave();
+      const story = storiesWithScenes[saved?.storyId];
+      const savedScene = story?.scenes[saved?.currentSceneId];
+      setBookmark(savedScene ? { storyTitle: story.title, sceneTitle: savedScene.title } : null);
+    } catch {
+      setBookmark(null);
+    }
+  }, [screen, storiesWithScenes]);
 
   const activeStoryId = devTestState?.storyId ?? save?.storyId;
   const activeStory = activeStoryId ? storiesWithScenes[activeStoryId] : null;
@@ -51,9 +62,7 @@ export default function App() {
 
   const choices = scene ? getAvailableChoices(scene, activeSave.flags) : {};
 
-  // The app shell (nav/home/hero-setup/dev-test chrome) always stays
-  // in the neutral "book" theme. Only the active story's screen and
-  // its ending switch into that story's own theme.
+  // Paper stays warm and neutral; each story supplies a quiet ink accent.
   const activeThemeKey = activeStoryId ? themeKeyForStory(activeStoryId) : SHELL_THEME;
 
   function goHome() {
@@ -130,11 +139,11 @@ export default function App() {
   }, [screen, scene, devTestState, finishGame]);
 
   return (
-    <div className="app-shell h-full" data-theme={SHELL_THEME}>
+    <div className="app-shell" data-theme={SHELL_THEME}>
       {screen === SCREENS.HOME && (
         <HomeScreen
           stories={stories}
-          hasSavedGame={savedGameExists}
+          bookmark={bookmark}
           onContinue={handleContinue}
           onSelectStory={handleSelectStory}
           onDeveloperMode={handleDeveloperMode}
@@ -142,7 +151,7 @@ export default function App() {
       )}
 
       {screen === SCREENS.HERO_SETUP && pendingStoryId && (
-        <HeroSetupScreen story={storiesWithScenes[pendingStoryId]} onSubmit={handleHeroSetupSubmit} />
+        <HeroSetupScreen story={storiesWithScenes[pendingStoryId]} onSubmit={handleHeroSetupSubmit} onBack={goHome} />
       )}
 
       {screen === SCREENS.DEV_TEST && (
@@ -150,29 +159,38 @@ export default function App() {
       )}
 
       {screen === SCREENS.STORY && scene && !isEnding(scene) && (
-        <div className="story-shell h-full" data-theme={activeThemeKey}>
+        <div className="story-shell" data-theme={activeThemeKey}>
           <StoryScreen
-            themeKey={activeThemeKey}
+            key={`${activeStoryId}:${activeSave.currentSceneId}:${activeSave.currentEntryIntro ?? ''}`}
+            storyTitle={activeStory.title}
             title={displayText.title}
             intro={displayText.intro}
             body={displayText.body}
             image={displayText.image}
             choices={choices}
             onChoose={handleChoose}
+            onHome={goHome}
+            largeText={largeText}
+            onToggleTextSize={() => setLargeText((current) => !current)}
+            testing={Boolean(devTestState)}
           />
         </div>
       )}
 
       {screen === SCREENS.END && scene && (
-        <div className="story-shell h-full" data-theme={activeThemeKey}>
+        <div className="story-shell" data-theme={activeThemeKey}>
           <EndScreen
-            themeKey={activeThemeKey}
+            key={`${activeStoryId}:${activeSave.currentSceneId}:${activeSave.currentEntryIntro ?? ''}`}
+            storyTitle={activeStory.title}
             title={displayText.title}
             intro={displayText.intro}
             body={displayText.body}
             image={displayText.image}
             onRestart={handleRestart}
-            onNewStory={handleNewStory}
+            onHome={handleNewStory}
+            largeText={largeText}
+            onToggleTextSize={() => setLargeText((current) => !current)}
+            testing={Boolean(devTestState)}
           />
         </div>
       )}

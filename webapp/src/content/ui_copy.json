@@ -1,25 +1,41 @@
 {
   "app_title": "Paths of Wonder",
   "home": {
-    "welcome_heading": "Paths of Wonder",
-    "tagline": "Choose your path. Shape your story.",
-    "choose_adventure_heading": "Choose your adventure:",
-    "continue_adventure": "Continue Adventure",
+    "welcome_heading": "Your next adventure is waiting.",
+    "tagline": "Open a book. Find your own way through.",
+    "eyebrow": "A world on every shelf",
+    "header_note": "A story to step inside.",
+    "bookmark": "Your bookmark",
+    "shelf_caption": "Every choice turns the story.",
+    "choose_adventure_heading": "Your bookshelf",
+    "continue_adventure": "Resume",
     "start_new_adventure": "Start New Adventure",
     "developer_test_mode": "Developer Test Mode",
     "theme_label": "Theme"
   },
   "hero_setup": {
+    "heading": "This adventure belongs to…",
     "hero_name_label": "What is your hero's name?",
     "hero_name_placeholder": "Hero name",
     "world_name_fallback_label": "What would you like to name your world?",
     "world_name_placeholder": "World name",
-    "continue_button": "Continue"
+    "continue_button": "Open your book"
   },
   "story": {
     "ready_prompt": "Press Continue when you're ready to see your choices...",
-    "continue_reading": "Continue",
+    "continue_reading": "I'm ready to choose",
     "choose_prompt": "What do you do next?"
+  },
+  "reader": {
+    "navigation": "Reading controls",
+    "bookshelf": "Bookshelf",
+    "text_size": "Larger reading text",
+    "text_size_symbol": "Aa",
+    "previous": "Previous",
+    "next": "Next",
+    "page_status": "{current} / {total}",
+    "back_to_passage": "Back to the passage",
+    "test_preview": "Author preview"
   },
   "end": {
     "heading": "The End",

@@ -1,66 +1,42 @@
 import { useState } from 'react';
 import { useContent } from '../../../hooks/useContent';
+import { AppHeader } from '../../shared/AppHeader/AppHeader';
 
-export function HeroSetupScreen({ story, onSubmit }) {
+export function HeroSetupScreen({ story, onSubmit, onBack }) {
   const { getText } = useContent();
   const [heroName, setHeroName] = useState('');
   const [worldName, setWorldName] = useState('');
-
-  const worldPrompt = story.setup_prompt?.trim() || getText('hero_setup.world_name_fallback_label');
   const canSubmit = heroName.trim().length > 0 && worldName.trim().length > 0;
-
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     event.preventDefault();
-    if (!canSubmit) return;
-    onSubmit(heroName.trim(), worldName.trim());
-  };
-
+    if (canSubmit) onSubmit(heroName.trim(), worldName.trim());
+  }
   return (
-    <form onSubmit={handleSubmit} className="mx-auto flex h-full max-w-md flex-col justify-center gap-5 p-6">
-      <h1 className="text-2xl font-medium" style={{ fontFamily: 'var(--font-display)' }}>
-        {story.title}
-      </h1>
-
-      <label className="flex flex-col gap-1">
-        <span className="text-sm font-medium">{getText('hero_setup.hero_name_label')}</span>
-        <input
-          autoFocus
-          type="text"
-          value={heroName}
-          onChange={(event) => setHeroName(event.target.value)}
-          placeholder={getText('hero_setup.hero_name_placeholder')}
-          className="rounded-lg border px-3 py-2"
-          style={{
-            borderColor: 'var(--color-border)',
-            background: 'var(--color-panel)',
-            color: 'var(--color-text-primary)',
-          }}
-        />
-      </label>
-
-      <label className="flex flex-col gap-1">
-        <span className="text-sm font-medium">{worldPrompt}</span>
-        <input
-          type="text"
-          value={worldName}
-          onChange={(event) => setWorldName(event.target.value)}
-          placeholder={getText('hero_setup.world_name_placeholder')}
-          className="rounded-lg border px-3 py-2"
-          style={{
-            borderColor: 'var(--color-border)',
-            background: 'var(--color-panel)',
-            color: 'var(--color-text-primary)',
-          }}
-        />
-      </label>
-
-      <button
-        type="submit"
-        disabled={!canSubmit}
-        className="accent-1-surface rounded-lg px-4 py-3 font-semibold text-white shadow disabled:opacity-40"
-      >
-        {getText('hero_setup.continue_button')}
-      </button>
-    </form>
+    <>
+      <AppHeader />
+      <main className="setup-layout">
+        <button type="button" className="text-button" onClick={onBack}>
+          <span aria-hidden="true">← </span>{getText('reader.bookshelf')}
+        </button>
+        <form onSubmit={handleSubmit} className="paper-book bookplate">
+          <p className="eyebrow">{story.title}</p>
+          <span className="bookplate-ornament" aria-hidden="true">✧</span>
+          <h1>{getText('hero_setup.heading')}</h1>
+          <div className="bookplate-fields">
+            <label>
+              <span>{getText('hero_setup.hero_name_label')}</span>
+              <input autoFocus type="text" value={heroName} onChange={(e) => setHeroName(e.target.value)}
+                placeholder={getText('hero_setup.hero_name_placeholder')} autoComplete="off" required />
+            </label>
+            <label>
+              <span>{story.setup_prompt?.trim() || getText('hero_setup.world_name_fallback_label')}</span>
+              <input type="text" value={worldName} onChange={(e) => setWorldName(e.target.value)}
+                placeholder={getText('hero_setup.world_name_placeholder')} autoComplete="off" required />
+            </label>
+          </div>
+          <button type="submit" disabled={!canSubmit} className="primary-button">{getText('hero_setup.continue_button')}</button>
+        </form>
+      </main>
+    </>
   );
 }

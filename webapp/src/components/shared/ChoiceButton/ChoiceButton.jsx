@@ -1,12 +1,9 @@
-export function ChoiceButton({ label, onClick }) {
+export function ChoiceButton({ label, number, onClick }) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="choice-button w-full rounded-lg px-4 py-3 text-left shadow-sm
-                 transition active:scale-[0.99]"
-    >
-      {label}
+    <button type="button" onClick={onClick} className="choice-button">
+      <span className="choice-number" aria-hidden="true">{String(number).padStart(2, '0')}</span>
+      <span>{label}</span>
+      <span className="choice-arrow" aria-hidden="true">→</span>
     </button>
   );
 }
