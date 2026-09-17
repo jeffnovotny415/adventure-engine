@@ -35,4 +35,6 @@
 - Use matte scuffs, creases, and chipped edges; avoid glowing wear patches.
 - Use warm neutral reading pages with subtle frayed edges and clear typography.
 - Optional scene drawings sit immediately below the scene title, before prose.
-- Keep ordinary reading and choice transitions quiet and immediate.
+- Use a brief page-turn animation for Previous and Next, respecting reduced
+  motion preferences. Hide unavailable page navigation buttons.
+- Keep choice transitions quiet and immediate.

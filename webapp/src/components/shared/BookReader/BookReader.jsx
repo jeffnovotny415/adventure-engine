@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useContent } from '../../../hooks/useContent';
 import { StoryTextPanel } from '../StoryTextPanel/StoryTextPanel';
+import { startPageTurn } from './pageTurn';
 import { ChoiceButton } from '../ChoiceButton/ChoiceButton';
 
 // Real columns preserve every paragraph and adapt to the device and text size.
@@ -11,6 +12,8 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   const columnsRef = useRef(null);
   const headingRef = useRef(null);
   const decisionRef = useRef(null);
+  const footerRef = useRef(null);
+  const turnRef = useRef(null);
   const [page, setPage] = useState(0);
   const [layout, setLayout] = useState({ count: 1, step: 0 });
   const [choosing, setChoosing] = useState(false);
@@ -22,6 +25,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     const columns = columnsRef.current;
     function measure() {
       if (!active || !viewport || !columns) return;
+      turnRef.current?.();
       const gap = parseFloat(getComputedStyle(columns).columnGap) || 0;
       const width = viewport.clientWidth;
       const step = width + gap;
@@ -41,6 +45,25 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       images.forEach((img) => img.removeEventListener('load', measure));
     };
   }, [choosing, largeText, title, intro, body, image]);
+
+  useEffect(() => {
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const cancelTurn = () => turnRef.current?.();
+    preference.addEventListener('change', cancelTurn);
+    return () => {
+      cancelTurn();
+      preference.removeEventListener('change', cancelTurn);
+    };
+  }, []);
+
+  function turnPage(target) {
+    if (turnRef.current || target < 0 || target >= layout.count) return;
+    turnRef.current = startPageTurn(viewportRef.current, columnsRef.current,
+      { from: page, to: target, step: layout.step }, () => { turnRef.current = null; });
+    // Keep keyboard focus in the reader when its navigation button disappears.
+    if (target === 0 || target === layout.count - 1) footerRef.current?.focus({ preventScroll: true });
+    setPage(target);
+  }
 
   useEffect(() => { headingRef.current?.focus({ preventScroll: true }); }, []);
   useEffect(() => { if (choosing) decisionRef.current?.focus({ preventScroll: true }); }, [choosing]);
@@ -79,20 +102,26 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
                 <StoryTextPanel {...{ storyTitle, title, intro, body, image, headingRef }} />
               </div>
             </div>
-            <footer className="reader-footer">
-              <button type="button" className="text-button" disabled={page === 0} onClick={() => setPage(page - 1)}>
-                <span aria-hidden="true">← </span>{getText('reader.previous')}
-              </button>
+            <footer className="reader-footer" ref={footerRef} tabIndex={-1}>
+              <span className="reader-footer-previous">
+                {page > 0 && (
+                  <button type="button" className="text-button" onClick={() => turnPage(page - 1)}>
+                    <span aria-hidden="true">← </span>{getText('reader.previous')}
+                  </button>
+                )}
+              </span>
               <span className="page-status" aria-live="polite">{pageLabel}</span>
-              {!lastPage ? (
-                <button type="button" className="text-button" onClick={() => setPage(page + 1)}>
-                  {getText('reader.next')}<span aria-hidden="true"> →</span>
-                </button>
-              ) : !ending ? (
-                <button type="button" className="primary-button" onClick={() => setChoosing(true)}>
-                  {getText('story.continue_reading')}
-                </button>
-              ) : <span className="ending-label">{getText('end.heading')}</span>}
+              <span className="reader-footer-next">
+                {!lastPage ? (
+                  <button type="button" className="text-button" onClick={() => turnPage(page + 1)}>
+                    {getText('reader.next')}<span aria-hidden="true"> →</span>
+                  </button>
+                ) : !ending ? (
+                  <button type="button" className="primary-button" onClick={() => { turnRef.current?.(); setChoosing(true); }}>
+                    {getText('story.continue_reading')}
+                  </button>
+                ) : <span className="ending-label">{getText('end.heading')}</span>}
+              </span>
             </footer>
             {ending && lastPage && (
               <div className="ending-actions">
