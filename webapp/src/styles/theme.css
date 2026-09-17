@@ -52,3 +52,9 @@
   .bookplate h1 { margin: 8px 0 18px; }
   .bookplate-fields { margin-bottom: 20px; }
 }
+
+/* Recovery remains scrollable in short iPhone landscape viewports. */
+.save-recovery p { line-height: 1.6; overflow-wrap: anywhere; }
+.save-recovery h1:focus { outline: none; }
+.recovery-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+.recovery-actions button { min-height: 44px; max-width: 100%; white-space: normal; }

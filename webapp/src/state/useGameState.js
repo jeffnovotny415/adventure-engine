@@ -1,15 +1,13 @@
 import { useCallback, useState } from 'react';
 import { createEmptySave } from './saveSchema';
-import { clearSave, loadSave, writeSave } from './storage';
+import { clearSave, loadSave, startSavedGame, writeSave } from './storage';
 import { applyChoiceEffects } from '../engine/flagsEngine';
 import { resolveChoiceDestination } from '../engine/sceneEngine';
 
 // Exposes the active save's state and the actions that mutate it,
 // keeping every mutation synced to localStorage.
-export function useGameState() {
+export function useGameState(stories) {
   const [save, setSave] = useState(null);
-
-  const hasSavedGame = useCallback(() => loadSave() !== null, []);
 
   const startNewGame = useCallback((storyId, heroName, worldName, startSceneId) => {
     const next = {
@@ -20,16 +18,16 @@ export function useGameState() {
       currentSceneId: startSceneId,
       currentEntryIntro: null,
     };
-    writeSave(next);
-    setSave(next);
-    return next;
-  }, []);
+    const result = startSavedGame(next, stories);
+    if (result.status === 'valid') setSave(result.save);
+    return result;
+  }, [stories]);
 
   const continueGame = useCallback(() => {
-    const loaded = loadSave();
-    setSave(loaded);
-    return loaded;
-  }, []);
+    const result = loadSave(stories);
+    setSave(result.status === 'valid' ? result.save : null);
+    return result;
+  }, [stories]);
 
   const applyChoice = useCallback((choice) => {
     setSave((current) => {
@@ -62,7 +60,6 @@ export function useGameState() {
 
   return {
     save,
-    hasSavedGame,
     startNewGame,
     continueGame,
     applyChoice,

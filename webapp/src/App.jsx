@@ -5,7 +5,8 @@ import { StoryScreen } from './components/screens/StoryScreen/StoryScreen';
 import { EndScreen } from './components/screens/EndScreen/EndScreen';
 import { DevTestScreen } from './components/screens/DevTestScreen/DevTestScreen';
 import { useGameState } from './state/useGameState';
-import { loadSave } from './state/storage';
+import { discardInvalidSave, loadSave, needsSaveRecovery } from './state/storage';
+import { SaveRecoveryScreen } from './components/screens/SaveRecoveryScreen/SaveRecoveryScreen';
 import { getScene, getSceneDisplayText, getAvailableChoices, isEnding } from './engine/sceneEngine';
 import { getStoryIndex, getStory } from './utils/storyData';
 import { themeKeyForStory, SHELL_THEME } from './utils/themeKey';
@@ -16,6 +17,7 @@ const SCREENS = {
   STORY: 'story',
   END: 'end',
   DEV_TEST: 'dev_test',
+  SAVE_RECOVERY: 'save_recovery',
 };
 
 export default function App() {
@@ -26,26 +28,26 @@ export default function App() {
   );
 
   const { save, startNewGame, continueGame, applyChoice, finishGame } =
-    useGameState();
+    useGameState(storiesWithScenes);
 
-  const [screen, setScreen] = useState(SCREENS.HOME);
+  const [savedResult, setSavedResult] = useState(() => loadSave(storiesWithScenes));
+  const [screen, setScreen] = useState(() => needsSaveRecovery(savedResult) ? SCREENS.SAVE_RECOVERY : SCREENS.HOME);
   const [pendingStoryId, setPendingStoryId] = useState(null);
-  const [bookmark, setBookmark] = useState(null);
   const [devTestState, setDevTestState] = useState(null);
   const [largeText, setLargeText] = useState(false);
 
   useEffect(() => {
     if (screen !== SCREENS.HOME) return;
-    // The shelf describes the real persisted bookmark, including after reload.
-    try {
-      const saved = loadSave();
-      const story = storiesWithScenes[saved?.storyId];
-      const savedScene = story?.scenes[saved?.currentSceneId];
-      setBookmark(savedScene ? { storyTitle: story.title, sceneTitle: savedScene.title } : null);
-    } catch {
-      setBookmark(null);
-    }
+    const result = loadSave(storiesWithScenes);
+    setSavedResult(result);
+    if (needsSaveRecovery(result)) setScreen(SCREENS.SAVE_RECOVERY);
   }, [screen, storiesWithScenes]);
+
+  const bookmarkedStory = savedResult.status === 'valid' ? storiesWithScenes[savedResult.save.storyId] : null;
+  const bookmark = bookmarkedStory ? {
+    storyTitle: bookmarkedStory.title,
+    sceneTitle: bookmarkedStory.scenes[savedResult.save.currentSceneId].title,
+  } : null;
 
   const activeStoryId = devTestState?.storyId ?? save?.storyId;
   const activeStory = activeStoryId ? storiesWithScenes[activeStoryId] : null;
@@ -71,20 +73,29 @@ export default function App() {
     setScreen(SCREENS.HOME);
   }
 
+  function showSaveResult(result, validScreen = SCREENS.HOME) {
+    setSavedResult(result);
+    setScreen(needsSaveRecovery(result) ? SCREENS.SAVE_RECOVERY : validScreen);
+  }
+
   function handleSelectStory(storyId) {
+    const result = loadSave(storiesWithScenes);
+    if (needsSaveRecovery(result)) {
+      showSaveResult(result);
+      return;
+    }
     setPendingStoryId(storyId);
     setScreen(SCREENS.HERO_SETUP);
   }
 
   function handleHeroSetupSubmit(heroName, worldName) {
     const story = storiesWithScenes[pendingStoryId];
-    startNewGame(pendingStoryId, heroName, worldName, story.start_scene);
-    setScreen(SCREENS.STORY);
+    showSaveResult(startNewGame(pendingStoryId, heroName, worldName, story.start_scene), SCREENS.STORY);
   }
 
   function handleContinue() {
-    const loaded = continueGame();
-    if (loaded) setScreen(SCREENS.STORY);
+    const result = continueGame();
+    showSaveResult(result, result.status === 'valid' ? SCREENS.STORY : SCREENS.HOME);
   }
 
   function handleChoose(choice) {
@@ -106,8 +117,7 @@ export default function App() {
       return;
     }
     const story = storiesWithScenes[activeStoryId];
-    startNewGame(activeStoryId, save.heroName, save.worldName, story.start_scene);
-    setScreen(SCREENS.STORY);
+    showSaveResult(startNewGame(activeStoryId, save.heroName, save.worldName, story.start_scene), SCREENS.STORY);
   }
 
   function handleNewStory() {
@@ -140,6 +150,14 @@ export default function App() {
 
   return (
     <div className="app-shell" data-theme={SHELL_THEME}>
+      {screen === SCREENS.SAVE_RECOVERY && (
+        <SaveRecoveryScreen
+          result={savedResult}
+          onRetry={() => showSaveResult(loadSave(storiesWithScenes))}
+          onDiscard={() => showSaveResult(discardInvalidSave(savedResult.raw, storiesWithScenes))}
+        />
+      )}
+
       {screen === SCREENS.HOME && (
         <HomeScreen
           stories={stories}

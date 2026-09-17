@@ -1,5 +1,9 @@
 # Paths of Wonder project rules
 
+## Completion workflow
+
+- Always commit and push completed changes after the relevant checks pass.
+
 ## Product and platform
 
 - This is an iPhone and iPad app. Those devices are the primary design targets.

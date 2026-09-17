@@ -2,8 +2,8 @@
 // only ID lookups into the story data and delegation to the other
 // engine modules.
 
-import { fillTemplate } from './variableSubstitution';
-import { filterAvailableChoices } from './flagsEngine';
+import { fillTemplate } from './variableSubstitution.js';
+import { filterAvailableChoices } from './flagsEngine.js';
 
 export function getScene(story, sceneId) {
   const scene = story.scenes[sceneId];
@@ -18,7 +18,7 @@ export function isEnding(scene) {
 }
 
 export function getEntryIntroText(scene, entryIntroKey) {
-  if (!entryIntroKey || !scene.entry_intros) return null;
+  if (!entryIntroKey || !scene.entry_intros || !Object.hasOwn(scene.entry_intros, entryIntroKey)) return null;
   return scene.entry_intros[entryIntroKey] ?? null;
 }
 

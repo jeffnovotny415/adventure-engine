@@ -45,5 +45,23 @@
   "errors": {
     "invalid_choice": "Hmm, that wasn't one of the choices. Try again!",
     "unknown_scene": "Something went wrong loading that scene."
+  },
+  "save_recovery": {
+    "heading": "Your bookmark needs attention",
+    "preserved": "We have not changed or deleted your saved progress.",
+    "retry": "Try again",
+    "reset": "Reset saved progress…",
+    "confirm_heading": "Delete this saved progress?",
+    "confirm_body": "This removes your saved place, names, and choices from this device. You can then start a new adventure. This cannot be undone.",
+    "keep": "Keep saved progress",
+    "confirm_delete": "Delete saved progress",
+    "reasons": {
+      "malformed": "We couldn’t read the saved progress on this device.",
+      "unsupported_version": "This saved progress uses a version this app doesn’t support. Try opening it with the version of the app that saved it.",
+      "unknown_story": "The book for this saved progress isn’t available in this version of the app.",
+      "unknown_scene": "The page for this saved progress isn’t available in this version of the app.",
+      "storage_unavailable": "This app can’t access saved progress on this device right now. Check your browser’s storage permissions, then try again.",
+      "reset_failed": "We couldn’t delete the saved progress. Check your browser’s storage permissions, then try again."
+    }
   }
 }

@@ -10,32 +10,54 @@ export function createEmptySave() {
     currentEntryIntro: null,
     flags: {},
     inventory: [],
-    uiPrefs: {
-      hideButtonsWhileReading: false,
-    },
+    uiPrefs: { hideButtonsWhileReading: false },
   };
 }
 
-// Fills in any fields missing from an older or partial save with v1
-// defaults so the app never crashes on a stale localStorage value.
-export function normalizeSave(raw) {
-  const empty = createEmptySave();
-  if (!raw || typeof raw !== 'object') return empty;
+function isRecord(value) {
+  return value !== null && typeof value === 'object' &&
+    (Object.getPrototypeOf(value) === Object.prototype || Object.getPrototypeOf(value) === null);
+}
+
+// Only the original, versionless web format and v1 are understood. Never
+// relabel a future save as v1, or replace malformed supplied fields with defaults.
+export function migrateSave(raw, stories) {
+  const invalid = (reason) => ({ status: 'invalid', reason });
+  if (!isRecord(raw)) return invalid('malformed');
+  if (Object.hasOwn(raw, 'version') && raw.version !== SAVE_SCHEMA_VERSION) {
+    return invalid('unsupported_version');
+  }
+  if (typeof raw.storyId !== 'string' || typeof raw.currentSceneId !== 'string' ||
+      typeof raw.heroName !== 'string' || typeof raw.worldName !== 'string') {
+    return invalid('malformed');
+  }
+  if (!Object.hasOwn(stories, raw.storyId)) return invalid('unknown_story');
+  if (!Object.hasOwn(stories[raw.storyId].scenes, raw.currentSceneId)) {
+    return invalid('unknown_scene');
+  }
+  if (Object.hasOwn(raw, 'currentEntryIntro') && raw.currentEntryIntro !== null &&
+      typeof raw.currentEntryIntro !== 'string') return invalid('malformed');
+  if (Object.hasOwn(raw, 'flags') && (!isRecord(raw.flags) ||
+      !Object.values(raw.flags).every((value) => typeof value === 'boolean'))) return invalid('malformed');
+  if (Object.hasOwn(raw, 'inventory') && (!Array.isArray(raw.inventory) ||
+      !raw.inventory.every((item) => typeof item === 'string'))) return invalid('malformed');
+  if (Object.hasOwn(raw, 'uiPrefs') && (!isRecord(raw.uiPrefs) ||
+      (Object.hasOwn(raw.uiPrefs, 'hideButtonsWhileReading') &&
+        typeof raw.uiPrefs.hideButtonsWhileReading !== 'boolean'))) return invalid('malformed');
 
   return {
-    ...empty,
-    ...raw,
-    version: SAVE_SCHEMA_VERSION,
-    flags: { ...empty.flags, ...(raw.flags ?? {}) },
-    inventory: Array.isArray(raw.inventory) ? raw.inventory : empty.inventory,
-    uiPrefs: { ...empty.uiPrefs, ...(raw.uiPrefs ?? {}) },
+    status: 'valid',
+    save: {
+      ...createEmptySave(),
+      version: SAVE_SCHEMA_VERSION,
+      storyId: raw.storyId,
+      heroName: raw.heroName,
+      worldName: raw.worldName,
+      currentSceneId: raw.currentSceneId,
+      currentEntryIntro: raw.currentEntryIntro ?? null,
+      flags: { ...raw.flags },
+      inventory: [...(raw.inventory ?? [])],
+      uiPrefs: { hideButtonsWhileReading: raw.uiPrefs?.hideButtonsWhileReading ?? false },
+    },
   };
-}
-
-// No-op today — exists so the migration pattern is already in place
-// before a real v1 -> v2 schema change needs one.
-export function migrateSave(raw) {
-  if (!raw) return null;
-  if (raw.version === SAVE_SCHEMA_VERSION) return normalizeSave(raw);
-  return normalizeSave(raw);
 }
