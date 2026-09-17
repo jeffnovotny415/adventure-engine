@@ -63,5 +63,12 @@
       "storage_unavailable": "This app can’t access saved progress on this device right now. Check your browser’s storage permissions, then try again.",
       "reset_failed": "We couldn’t delete the saved progress. Check your browser’s storage permissions, then try again."
     }
+  },
+  "image_viewer": {
+    "open": "Enlarge illustration",
+    "title": "Illustration",
+    "actual_size": "Actual size",
+    "fit": "Fit image",
+    "close": "Close"
   }
 }

@@ -1,0 +1,119 @@
+import { useCallback, useEffect, useRef } from 'react';
+import { createPageTurn, shouldCompleteSwipe, swipeProgress } from './pageTurn';
+
+function release(gesture) {
+  if (gesture?.element.hasPointerCapture(gesture.id)) gesture.element.releasePointerCapture(gesture.id);
+}
+
+export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChange }) {
+  const turnRef = useRef(null);
+  const gestureRef = useRef(null);
+  const suppressClickRef = useRef(false);
+
+  const cancelTurn = useCallback(() => {
+    const gesture = gestureRef.current;
+    gestureRef.current = null;
+    release(gesture);
+    turnRef.current?.cancel();
+    turnRef.current = null;
+    viewportRef.current?.removeAttribute('data-dragging');
+  }, [viewportRef]);
+  useEffect(() => {
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    preference.addEventListener('change', cancelTurn);
+    window.addEventListener('blur', cancelTurn);
+    return () => {
+      cancelTurn();
+      preference.removeEventListener('change', cancelTurn);
+      window.removeEventListener('blur', cancelTurn);
+    };
+  }, [cancelTurn]);
+
+  function finish(target, complete) {
+    const turn = turnRef.current;
+    const done = () => {
+      if (complete) onPageChange(target);
+      turnRef.current = null;
+    };
+    if (turn) turn.settle(complete, done);
+    else done();
+  }
+  function turnPage(target) {
+    if (turnRef.current || gestureRef.current || target < 0 || target >= layout.count) return;
+    turnRef.current = createPageTurn(viewportRef.current, columnsRef.current, { from: page, to: target, step: layout.step });
+    finish(target, true);
+  }
+  function onPointerDown(event) {
+    if (!event.isPrimary) { cancelTurn(); return; }
+    suppressClickRef.current = false;
+    if (turnRef.current || event.button !== 0 || event.target.closest('button, a, input, dialog')) return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    gestureRef.current = {
+      id: event.pointerId, element: event.currentTarget, bounds,
+      startX: event.clientX, startY: event.clientY, lastX: event.clientX,
+      lastTime: event.timeStamp, velocity: 0, started: false,
+    };
+  }
+  function onPointerMove(event) {
+    const gesture = gestureRef.current;
+    if (!gesture || gesture.id !== event.pointerId) return;
+    const dx = event.clientX - gesture.startX;
+    const dy = event.clientY - gesture.startY;
+    if (!gesture.started) {
+      if (Math.max(Math.abs(dx), Math.abs(dy)) < 10) return;
+      // Let native vertical scrolling and pinch zoom win over a page turn.
+      if (Math.abs(dx) < Math.abs(dy) * 1.3) { cancelTurn(); return; }
+      const forward = dx < 0;
+      const target = page + (forward ? 1 : -1);
+      const spread = getComputedStyle(columnsRef.current).columnCount === '2';
+      const x = gesture.startX - gesture.bounds.left;
+      const width = gesture.bounds.width;
+      if (target < 0 || target >= layout.count || (spread && (forward ? x < width / 2 : x > width / 2))) {
+        cancelTurn(); return;
+      }
+      gesture.started = true;
+      gesture.target = target;
+      gesture.direction = forward ? -1 : 1;
+      gesture.leafWidth = spread ? width / 2 : width;
+      const hinge = spread ? width / 2 : forward ? 0 : width;
+      gesture.grabDistance = Math.max(gesture.leafWidth * .25, Math.abs(x - hinge));
+      gesture.element.setPointerCapture(gesture.id);
+      gesture.element.setAttribute('data-dragging', 'true');
+      suppressClickRef.current = true;
+      turnRef.current = createPageTurn(viewportRef.current, columnsRef.current,
+        { from: page, to: target, step: layout.step, grabY: (event.clientY - gesture.bounds.top) / gesture.bounds.height });
+    }
+    const elapsed = event.timeStamp - gesture.lastTime;
+    if (elapsed > 0) gesture.velocity = (event.clientX - gesture.lastX) * gesture.direction / elapsed;
+    gesture.lastX = event.clientX;
+    gesture.lastTime = event.timeStamp;
+    gesture.distance = Math.max(0, dx * gesture.direction);
+    turnRef.current?.update(swipeProgress(gesture.distance, gesture.grabDistance),
+      (event.clientY - gesture.bounds.top) / gesture.bounds.height);
+  }
+  function onPointerUp(event) {
+    const gesture = gestureRef.current;
+    if (!gesture || gesture.id !== event.pointerId) return;
+    gestureRef.current = null;
+    release(gesture);
+    gesture.element.removeAttribute('data-dragging');
+    if (!gesture.started) return;
+    const distance = Math.max(0, (event.clientX - gesture.startX) * gesture.direction);
+    const velocity = event.timeStamp - gesture.lastTime < 100 ? gesture.velocity : 0;
+    turnRef.current?.update(swipeProgress(distance, gesture.grabDistance),
+      (event.clientY - gesture.bounds.top) / gesture.bounds.height);
+    finish(gesture.target, shouldCompleteSwipe(distance, gesture.leafWidth, velocity));
+  }
+  return {
+    cancelTurn, turnPage,
+    gestureHandlers: {
+      onPointerDown, onPointerMove, onPointerUp,
+      onPointerCancel: cancelTurn,
+      onPointerLeave: () => { if (gestureRef.current && !gestureRef.current.started) cancelTurn(); },
+      onLostPointerCapture: () => { if (gestureRef.current) cancelTurn(); },
+      onClickCapture: (event) => {
+        if (suppressClickRef.current) { event.preventDefault(); event.stopPropagation(); suppressClickRef.current = false; }
+      },
+    },
+  };
+}

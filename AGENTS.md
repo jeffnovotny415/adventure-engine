@@ -35,6 +35,9 @@
 - Use matte scuffs, creases, and chipped edges; avoid glowing wear patches.
 - Use warm neutral reading pages with subtle frayed edges and clear typography.
 - Optional scene drawings sit immediately below the scene title, before prose.
+- Tapping an illustration opens a larger viewer with a way to inspect its detail.
 - Use a brief page-turn animation for Previous and Next, respecting reduced
   motion preferences. Hide unavailable page navigation buttons.
+- Support finger-tracked page swipes that complete or return on release. Keep
+  vertical scrolling, pinch zoom, and illustration taps available.
 - Keep choice transitions quiet and immediate.
