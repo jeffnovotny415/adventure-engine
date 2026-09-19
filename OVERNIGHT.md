@@ -41,10 +41,11 @@ against overwriting invalid saves during new-game setup.
 
 1. Runtime recovery completed in the second overnight batch below. Continue
    with reader correctness; do not duplicate the recovery/isolation work.
-2. Reader correctness and accessibility: investigate preserving reading position
-   on rotation/text-size changes (currently page ordinal is clamped), keyboard
-   focus through hidden columns, gesture cancellation/multiple pointers, and
-   modal image behavior. Reproduce before changing; retain the approved design.
+2. Reading position preservation completed in the third batch below. Continue
+   with keyboard focus after returning from choices and gesture cancellation/
+   multiple pointers. Illustration enlargement, Escape focus restoration, and
+   offscreen illustration tab exclusion passed this batch. Reproduce remaining
+   issues before changing; retain the approved design.
 3. Read-only story graph diagnostics and useful author-facing reporting. Do not
    repair story links, add intros, rewrite placeholders, or fabricate endings.
 4. Build/release checks and accurate project documentation. No `.github` checks
@@ -99,7 +100,7 @@ past the requested overnight window.
   baseline `f7a5d4e` byte-for-byte. No physical iOS testing is claimed.
   Next: runtime recovery and developer-preview isolation, then reader issues.
 
-- September 19, second overnight batch (commit `fix: recover from reader render failures`):
+- September 19, second overnight batch (`74ad244`, `fix: recover from reader render failures`):
   reproduced a missing-scene render exception in an isolated browser fixture:
   without a boundary React unmounted the app, leaving no recovery controls.
   Added a root React boundary with a focused, warm-paper recovery screen. Its
@@ -121,3 +122,24 @@ past the requested overnight window.
   exceptions, arbitrary asynchronous callbacks, or failures before JS loads.
   Next: reproduce reading-position loss on rotation/text-size changes and audit
   gesture cancellation/accessibility, then story diagnostics and release checks.
+
+- September 19, third overnight batch (commit `fix: preserve reading position when pages reflow`):
+  reproduced scene_002 in Can Opener shifting to earlier prose when larger text
+  kept page 4 while total pages changed 7→9. Replaced ordinal clamping with a
+  paragraph/character anchor captured on a completed page turn. Reflow locates
+  the spread containing that character; it retains the original anchor for
+  rotation round trips and survives passage unmounting for choices. Beginning
+  remains at the title/illustration. Character lookup uses binary search within
+  a split paragraph rather than scanning every letter. No prose modifications.
+  Browser verification: the previously visible paragraph remains on-screen at
+  667×375 normal/larger text, 1024×768 facing pages, and 390×844 portrait; returning
+  to the original phone layout restores page 4/7 and the same passage. Last-page
+  choices→tablet rotation→Back to passage keeps the ending portion visible.
+  Illustration enlargement/actual-size/Escape still work, focus returns to its
+  trigger, and its offscreen button has tabindex=-1 on the next spread. No console
+  errors. Added four offset/reflow tests, including a long split paragraph,
+  two-column spreads, remounting, and bounds. All 67 tests, lint, production build,
+  and diff checks passed; all 15 protected files match `f7a5d4e` byte-for-byte.
+  This preserves the first visible text position, not a particular line's pixel
+  placement. In-scene position is not persisted across app restarts. Browser
+  checks only; multi-touch behavior still needs the remaining gesture audit.

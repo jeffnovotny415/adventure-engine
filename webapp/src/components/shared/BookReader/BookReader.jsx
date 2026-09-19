@@ -3,6 +3,7 @@ import { useContent } from '../../../hooks/useContent';
 import { StoryTextPanel } from '../StoryTextPanel/StoryTextPanel';
 import { usePageTurn } from './usePageTurn';
 import { ChoiceButton } from '../ChoiceButton/ChoiceButton';
+import { captureReadingAnchor, pageForReadingAnchor } from './readingPosition';
 
 // Real columns preserve every paragraph and adapt to the device and text size.
 export function BookReader({ storyTitle, title, intro, body, image, choices, onChoose,
@@ -13,6 +14,8 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   const headingRef = useRef(null);
   const decisionRef = useRef(null);
   const footerRef = useRef(null);
+  const readingAnchorRef = useRef(null);
+  const captureAnchorRef = useRef(false);
   const [page, setPage] = useState(0);
   const [layout, setLayout] = useState({ count: 1, step: 0 });
   const [choosing, setChoosing] = useState(false);
@@ -20,6 +23,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     viewportRef, columnsRef, page, layout,
     onPageChange: (target) => {
       if (target === 0 || target === layout.count - 1) footerRef.current?.focus({ preventScroll: true });
+      captureAnchorRef.current = true;
       setPage(target);
     },
   });
@@ -37,7 +41,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       const step = width + gap;
       const count = Math.max(1, Math.ceil((columns.scrollWidth + gap - 1) / step));
       setLayout((current) => current.count === count && current.step === step ? current : { count, step });
-      setPage((current) => Math.min(current, count - 1));
+      setPage(pageForReadingAnchor(readingAnchorRef.current, columns, step, count));
     }
     const observer = new ResizeObserver(measure);
     observer.observe(viewport);
@@ -55,6 +59,10 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   useLayoutEffect(() => {
     const viewport = viewportRef.current;
     if (!viewport || choosing) return;
+    if (captureAnchorRef.current) {
+      readingAnchorRef.current = page === 0 ? null : captureReadingAnchor(viewport, columnsRef.current);
+      captureAnchorRef.current = false;
+    }
     const visible = viewport.getBoundingClientRect();
     // An illustration in an offscreen column must not receive keyboard focus
     // and cause the browser to scroll the paginated surface sideways.
