@@ -58,3 +58,7 @@
 .save-recovery h1:focus { outline: none; }
 .recovery-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
 .recovery-actions button { min-height: 44px; max-width: 100%; white-space: normal; }
+
+.persistence-notice { padding: 12px max(24px, env(safe-area-inset-right)) 12px max(24px, env(safe-area-inset-left)); background: #f3dfc2; border-bottom: 1px solid var(--color-border); }
+.persistence-notice p { margin: 0; line-height: 1.5; font-size: .9rem; }
+.persistence-notice__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 8px; }

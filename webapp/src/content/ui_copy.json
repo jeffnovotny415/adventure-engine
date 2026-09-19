@@ -70,5 +70,13 @@
     "actual_size": "Actual size",
     "fit": "Fit image",
     "close": "Close"
+  },
+  "persistence": {
+    "heading": "Saved progress needs attention",
+    "write_failed": "We couldn’t save that action. Your saved progress has not been replaced. Try again when storage is available.",
+    "delete_failed": "You can still read the ending. We couldn’t clear its bookmark, so it may appear again on your bookshelf. Try again when storage is available.",
+    "save_changed": "Saved progress changed in another window. We left that bookmark untouched. Return to the bookshelf to load it.",
+    "navigation_failed": "We couldn’t open the next page. Your saved place is unchanged. Return to the bookshelf to resume.",
+    "retry": "Try again"
   }
 }

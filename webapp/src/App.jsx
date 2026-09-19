@@ -6,6 +6,7 @@ import { EndScreen } from './components/screens/EndScreen/EndScreen';
 import { DevTestScreen } from './components/screens/DevTestScreen/DevTestScreen';
 import { useGameState } from './state/useGameState';
 import { discardInvalidSave, loadSave, needsSaveRecovery } from './state/storage';
+import { PersistenceNotice } from './components/shared/PersistenceNotice/PersistenceNotice';
 import { SaveRecoveryScreen } from './components/screens/SaveRecoveryScreen/SaveRecoveryScreen';
 import { getScene, getSceneDisplayText, getAvailableChoices, isEnding } from './engine/sceneEngine';
 import { getStoryIndex, getStory } from './utils/storyData';
@@ -27,7 +28,7 @@ export default function App() {
     [stories]
   );
 
-  const { save, startNewGame, continueGame, applyChoice, finishGame } =
+  const { save, persistenceError, startNewGame, continueGame, applyChoice, finishGame, retryPersistence, cancelPersistence } =
     useGameState(storiesWithScenes);
 
   const [savedResult, setSavedResult] = useState(() => loadSave(storiesWithScenes));
@@ -68,12 +69,14 @@ export default function App() {
   const activeThemeKey = activeStoryId ? themeKeyForStory(activeStoryId) : SHELL_THEME;
 
   function goHome() {
+    cancelPersistence();
     setPendingStoryId(null);
     setDevTestState(null);
     setScreen(SCREENS.HOME);
   }
 
   function showSaveResult(result, validScreen = SCREENS.HOME) {
+    if (!['valid', 'empty', 'invalid', 'unavailable'].includes(result.status)) return;
     setSavedResult(result);
     setScreen(needsSaveRecovery(result) ? SCREENS.SAVE_RECOVERY : validScreen);
   }
@@ -125,6 +128,7 @@ export default function App() {
   }
 
   function handleDeveloperMode() {
+    cancelPersistence();
     setScreen(SCREENS.DEV_TEST);
   }
 
@@ -150,6 +154,16 @@ export default function App() {
 
   return (
     <div className="app-shell" data-theme={SHELL_THEME}>
+      {persistenceError && (
+        <PersistenceNotice
+          error={persistenceError}
+          onRetry={() => {
+            const result = retryPersistence();
+            if (result.status !== 'empty') showSaveResult(result, SCREENS.STORY);
+          }}
+          onHome={goHome}
+        />
+      )}
       {screen === SCREENS.SAVE_RECOVERY && (
         <SaveRecoveryScreen
           result={savedResult}

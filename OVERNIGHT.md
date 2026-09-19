@@ -24,22 +24,18 @@ Completed earlier: invalid-save validation/recovery; worn-book reader design;
 button and finger-driven page turns; expanded illustration viewer; protection
 against overwriting invalid saves during new-game setup.
 
-## Next batch: storage failures (confirmed, not fixed yet)
+## Completed batch: storage failures
 
-- `state/storage.js`: `writeSave` and `clearSave` let storage exceptions escape.
-  A read-only fault-injection check on September 18 confirmed that a fake
-  `setItem` throwing a quota error escapes `writeSave`. It touched no real saves.
-- `startSavedGame` calls `writeSave` directly. A write failure escapes the setup
-  handler instead of showing a recoverable error.
-- `useGameState.applyChoice` performs a storage write inside a React state
-  updater. Make the updater pure and only advance after a successful save;
-  preserve the previous valid bookmark and current choices when saving fails.
-- Ending cleanup invokes `clearSave` from an effect. Handle deletion failures
-  without hiding the ending, crashing, or silently pretending cleanup succeeded.
-- Include recoverable UI with actionable retry behavior. Avoid retrying stale
-  actions after a newer game/action or navigation; inspect this explicitly.
-- Test quota/security failures, retry success, unchanged state/storage on failure,
-  and ordinary start/continue/choice/ending flows. Preserve first-fix recovery.
+- Storage writes and deletes now return recoverable results instead of throwing.
+- A session controller performs persistence outside React state updaters, advances
+  only after a successful write, and retains the ending if cleanup fails.
+- Retry UI preserves setup fields and existing choices. The notice receives focus
+  so recovery controls are visible in short landscape viewports.
+- Retries compare the original saved bytes before writing/deleting. A newer
+  bookmark produces a conflict notice; navigation cancels pending retries.
+  This is a stale-action guard, not an atomic cross-tab transaction.
+- Duplicate choices from an old scene are ignored; invalid destinations cannot
+  replace the current valid bookmark.
 
 ## Subsequent work, in priority order
 
@@ -92,3 +88,15 @@ past the requested overnight window.
 - Initial run: scheduled follow-up work, reproduced the unhandled storage-write
   failure without touching actual saves, and audited story references read-only.
   This commit prepares the work queue; no additional app fix is claimed yet.
+
+- September 19, first overnight batch (commit `fix: recover from save write and deletion failures`):
+  completed the storage work above. Added 13 session tests; all 63 tests, lint,
+  production build, and diff whitespace checks passed. Browser fault injection
+  used a temporary in-memory storage fixture, never real device bookmarks.
+  Verified failed start and retry, failed choice and retry (one successful write
+  per action), ending deletion failure and retry (one deletion, ending remains),
+  and no browser console errors. Checked 667×375 phone landscape, 1024×768 tablet
+  landscape with larger reading text, and rotation to 390×844 portrait. Removed
+  the temporary fixture. All 15 tracked story/data/draft/public asset files match
+  baseline `f7a5d4e` byte-for-byte. No physical iOS testing is claimed.
+  Next: runtime recovery and developer-preview isolation, then reader issues.

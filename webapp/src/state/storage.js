@@ -30,13 +30,13 @@ export function loadSave(stories, storage) {
 }
 
 // Recheck before replacing progress, including if storage changed during setup.
-export function startSavedGame(save, stories, storage) {
+export function startSavedGame(save, stories, storage, expectedRaw) {
   const current = loadSave(stories, storage);
   if (needsSaveRecovery(current)) return current;
+  if (expectedRaw !== undefined && (current.raw ?? null) !== expectedRaw) return saveConflict();
   const validated = migrateSave(save, stories);
   if (validated.status !== 'valid') return validated;
-  writeSave(validated.save, storage);
-  return validated;
+  return writeSave(validated.save, storage, current.raw ?? null);
 }
 
 // A stale recovery screen must not delete a newer save from another tab.
@@ -51,12 +51,34 @@ export function discardInvalidSave(expectedRaw, stories, storage) {
   }
 }
 
-export function writeSave(save, storage) {
-  (storage ?? globalThis.localStorage).setItem(SAVE_KEY, JSON.stringify(save));
+function saveConflict() {
+  return { status: 'conflict', reason: 'save_changed' };
 }
 
-export function clearSave() {
-  globalThis.localStorage.removeItem(SAVE_KEY);
+// Compare the exact bytes read for this operation, including on retries. This
+// prevents a stale action from replacing or deleting a newer bookmark.
+export function writeSave(save, storage, expectedRaw) {
+  try {
+    const target = storage ?? globalThis.localStorage;
+    if (expectedRaw !== undefined && target.getItem(SAVE_KEY) !== expectedRaw) return saveConflict();
+    const raw = JSON.stringify(save);
+    target.setItem(SAVE_KEY, raw);
+    return { status: 'valid', save, raw };
+  } catch {
+    return { status: 'write_failed', reason: 'write_failed' };
+  }
+}
+
+export function clearSave(storage, expectedRaw) {
+  try {
+    const target = storage ?? globalThis.localStorage;
+    const raw = target.getItem(SAVE_KEY);
+    if (expectedRaw !== undefined && raw !== expectedRaw) return saveConflict();
+    if (raw !== null) target.removeItem(SAVE_KEY);
+    return { status: 'empty' };
+  } catch {
+    return { status: 'delete_failed', reason: 'delete_failed' };
+  }
 }
 
 export function exportSave(save) {
