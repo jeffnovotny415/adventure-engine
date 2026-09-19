@@ -10,11 +10,11 @@ function characterRect(paragraph, offset) {
   return range.getBoundingClientRect();
 }
 
-export function captureReadingAnchor(viewport, columns) {
-  const bounds = viewport.getBoundingClientRect();
+export function captureReadingAnchor(viewport, columns, continuous = false) {
+  const bounds = continuous ? { left: 0, right: Infinity } : viewport.getBoundingClientRect();
   const paragraphs = [...columns.querySelectorAll('.story-paragraph')];
   const index = paragraphs.findIndex((paragraph) =>
-    [...paragraph.getClientRects()].some((rect) => rect.right > bounds.left + 1 && rect.left < bounds.right - 1));
+    [...paragraph.getClientRects()].some((rect) => continuous ? rect.bottom > 1 : rect.right > bounds.left + 1 && rect.left < bounds.right - 1));
   if (index < 0) return null;
   const paragraph = paragraphs[index];
   let low = 0;
@@ -25,10 +25,16 @@ export function captureReadingAnchor(viewport, columns) {
     const middle = Math.floor((low + high) / 2);
     const rect = characterRect(paragraph, middle);
     if (!rect) return null;
-    if (rect.right <= bounds.left + 1) low = middle + 1;
+    if (continuous ? rect.bottom <= 1 : rect.right <= bounds.left + 1) low = middle + 1;
     else high = middle;
   }
   return { paragraph: index, offset: low };
+}
+
+export function readingAnchorTop(anchor, columns) {
+  if (!anchor) return null;
+  const paragraph = columns.querySelectorAll('.story-paragraph')[anchor.paragraph];
+  return (paragraph && characterRect(paragraph, anchor.offset))?.top ?? null;
 }
 
 export function pageForReadingAnchor(anchor, columns, step, count) {

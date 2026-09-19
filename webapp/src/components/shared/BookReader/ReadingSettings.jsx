@@ -3,7 +3,8 @@ import { createPortal } from 'react-dom';
 import { useContent } from '../../../hooks/useContent';
 import { TEXT_SCALES } from '../../../state/readingPreferences';
 
-export function ReadingSettings({ textScale, onChange, onClose }) {
+export function ReadingSettings({ textScale, onChange, onClose, nativeReading,
+  pageHaptics, onPageHapticsChange }) {
   const { getText } = useContent();
   const dialogRef = useRef(null);
   const sliderRef = useRef(null);
@@ -43,7 +44,12 @@ export function ReadingSettings({ textScale, onChange, onClose }) {
       </div>
       <p className="reading-settings__preview" style={{ fontSize: `${textScale}rem` }}>{getText('reader.size_preview')}</p>
       <button type="button" className="text-button" onClick={() => onChange(1)}>{getText('reader.size_reset')}</button>
-      <p className="reading-settings__help">{getText('reader.gesture_help')}</p>
+      {nativeReading?.available && <p>{getText('reader.system_size_help')}</p>}
+      {nativeReading?.hapticsAvailable && <label className="reading-settings__haptics">
+        <input type="checkbox" checked={pageHaptics} onChange={(event) => onPageHapticsChange?.(event.target.checked)} />
+        <span>{getText('reader.page_haptics')}</span>
+      </label>}
+      <p className="reading-settings__help">{getText(nativeReading?.voiceOver ? 'reader.voiceover_help' : 'reader.gesture_help')}</p>
     </dialog>, document.body
   );
 }

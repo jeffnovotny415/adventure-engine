@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { captureReadingAnchor, pageForReadingAnchor } from '../src/components/shared/BookReader/readingPosition.js';
+import { captureReadingAnchor, pageForReadingAnchor, readingAnchorTop } from '../src/components/shared/BookReader/readingPosition.js';
 
 // Model fragmented paragraph boxes and character ranges. Browser checks cover
 // actual CSS columns; these cases exercise offsets across split paragraphs.
@@ -68,4 +68,22 @@ test('beginning, absent content, and constrained layouts stay within page bounds
   assert.equal(pageForReadingAnchor({paragraph:0,offset:200}, current.columns, 0, 1), 0);
   const empty = flow([], 100);
   assert.equal(captureReadingAnchor(empty.viewport, empty.columns), null);
+});
+
+test('continuous reading captures a character within a long scrolled paragraph', () => {
+  const paragraph = {
+    textContent: 'x'.repeat(100), firstChild: { nodeType: 3, length: 100 },
+    getClientRects: () => [{ top: -200, bottom: 200 }],
+    ownerDocument: { createRange() {
+      let offset;
+      return { setStart(node, value) { offset = value; }, setEnd() {},
+        getBoundingClientRect: () => ({ top: Math.floor(offset / 10) * 40 - 200, bottom: Math.floor(offset / 10) * 40 - 160 }) };
+    } },
+  };
+  const columns = { querySelectorAll: () => [paragraph] };
+  const anchor = captureReadingAnchor(null, columns, true);
+  assert.deepEqual(anchor, { paragraph: 0, offset: 50 });
+  assert.equal(readingAnchorTop(anchor, columns), 0);
+  assert.equal(readingAnchorTop(null, columns), null);
+  assert.equal(readingAnchorTop({ paragraph: 9, offset: 0 }, columns), null);
 });

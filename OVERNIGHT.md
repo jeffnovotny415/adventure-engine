@@ -391,3 +391,37 @@ of those features is claimed as part of this reader update.
 The final signed Release build passed bundle and signature verification and was
 installed over Jeff's existing iPhone app; device tools confirmed launch. All 15
 protected story/draft/public files match f7a5d4e byte-for-byte.
+
+## September 19 native reading accessibility and optional feedback
+
+Added a local Capacitor bridge for the current iOS preferred text category,
+VoiceOver status, and optional soft iPhone page feedback. System text size scales
+the interface and combines with the existing per-book size control; updates
+arrive live and on foregrounding. Haptics are off by default, saved per book,
+shown only on supported hardware, and requested only after a completed turn.
+Cancelled turns, reflow and choices do not request feedback. No extra packages,
+permissions, network services or authored content changes were introduced.
+
+VoiceOver uses one continuous passage in DOM reading order, with custom page
+swipe/tap handlers removed so native VoiceOver gestures remain available. The
+same paragraph/character anchors support scrolling, reopening, reflow and
+returning from choices. Pending scroll positions flush on navigation/background;
+listeners and timers are removed when the passage unmounts. Page status also has
+a full spoken label. At extreme system/book sizes the page allows enough height
+for complete lines, and settings wrap and scroll vertically without overflow.
+
+Validation: 91 Node tests pass, including opt-in haptic persistence/isolation,
+failed-write retry, native-value validation and continuous character anchors.
+Lint, story diagnostics and production build pass. All 107 browser cases pass:
+98 normal/reduced-motion/large-book-size gesture and continuous-reading cases
+across 667x375, 1024x768 and 390x844, plus nine cases combining maximum system and
+book sizes. Additional checks cover rotation anchors, the checkbox, and zero
+horizontal settings overflow at the maximum sizes. The native simulator bridge
+was verified in the actual app: increasing then decreasing preferred text size
+updated the passage live and returned to the same original reading place.
+
+The signed Release device build passed bundle and signature verification and
+was installed over Jeff's existing iPhone app; device tools confirmed launch.
+All 15 protected files remain byte-for-byte identical to f7a5d4e. Physical
+VoiceOver spoken navigation and haptic feel still need hands-on confirmation;
+scripted layout checks and successful installation do not certify those senses.

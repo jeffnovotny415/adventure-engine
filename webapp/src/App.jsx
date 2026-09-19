@@ -12,6 +12,7 @@ import { getScene, getSceneDisplayText, getAvailableChoices, isEnding } from './
 import { getStoryIndex, getStory } from './utils/storyData';
 import { themeKeyForStory, SHELL_THEME } from './utils/themeKey';
 import { readingTextScale } from './state/readingPreferences';
+import { useNativeReading } from './hooks/useNativeReading';
 
 const SCREENS = {
   HOME: 'home',
@@ -23,6 +24,7 @@ const SCREENS = {
 };
 
 export default function App() {
+  const nativeReading = useNativeReading();
   const stories = useMemo(() => getStoryIndex(), []);
   const storiesWithScenes = useMemo(
     () => Object.fromEntries(Object.keys(stories).map((id) => [id, getStory(id)])),
@@ -37,7 +39,9 @@ export default function App() {
   const [pendingStoryId, setPendingStoryId] = useState(null);
   const [devTestState, setDevTestState] = useState(null);
   const [previewTextScale, setPreviewTextScale] = useState(1);
+  const [previewHaptics, setPreviewHaptics] = useState(false);
   const textScale = devTestState ? previewTextScale : readingTextScale(save?.uiPrefs);
+  const pageHaptics = devTestState ? previewHaptics : save?.uiPrefs.pageHaptics === true;
 
   useEffect(() => {
     if (screen !== SCREENS.HOME) return;
@@ -135,6 +139,11 @@ export default function App() {
     else updateReading({ uiPrefs: { textScale: scale, largeText: scale >= 1.28 } });
   }
 
+  function changePageHaptics(enabled) {
+    if (devTestState) setPreviewHaptics(enabled);
+    else updateReading({ uiPrefs: { pageHaptics: enabled } });
+  }
+
   function handleDeveloperMode() {
     cancelPersistence();
     setScreen(SCREENS.DEV_TEST);
@@ -211,6 +220,9 @@ export default function App() {
             onChoose={handleChoose}
             onHome={goHome}
             textScale={textScale}
+            nativeReading={nativeReading}
+            pageHaptics={pageHaptics}
+            onPageHapticsChange={changePageHaptics}
             onTextScaleChange={changeTextScale}
             initialReadingPosition={activeSave.readingPosition}
             onReadingPositionChange={devTestState ? undefined : (readingPosition) => updateReading({ readingPosition })}
@@ -231,6 +243,9 @@ export default function App() {
             onRestart={handleRestart}
             onHome={handleNewStory}
             textScale={textScale}
+            nativeReading={nativeReading}
+            pageHaptics={pageHaptics}
+            onPageHapticsChange={changePageHaptics}
             onTextScaleChange={changeTextScale}
             testing={Boolean(devTestState)}
           />

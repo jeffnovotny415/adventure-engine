@@ -3,13 +3,16 @@ import { useContent } from '../../../hooks/useContent';
 import { StoryTextPanel } from '../StoryTextPanel/StoryTextPanel';
 import { usePageTurn } from './usePageTurn';
 import { ChoiceButton } from '../ChoiceButton/ChoiceButton';
-import { captureReadingAnchor, pageForReadingAnchor } from './readingPosition';
+import { captureReadingAnchor, pageForReadingAnchor, readingAnchorTop } from './readingPosition';
 import { ReadingSettings } from './ReadingSettings';
+import { DEFAULT_NATIVE_READING } from '../../../state/readingPreferences';
+import { pageTurnFeedback } from '../../../state/nativeReading';
 
 // Real columns preserve every paragraph and adapt to the device and text size.
 export function BookReader({ storyTitle, title, intro, body, image, choices, onChoose,
   onHome, ending = false, onRestart, textScale = 1, onTextScaleChange, testing = false,
-  initialReadingPosition = null, onReadingPositionChange }) {
+  initialReadingPosition = null, onReadingPositionChange, nativeReading = DEFAULT_NATIVE_READING,
+  pageHaptics = false, onPageHapticsChange }) {
   const { getText } = useContent();
   const viewportRef = useRef(null);
   const columnsRef = useRef(null);
@@ -25,11 +28,14 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   const [layout, setLayout] = useState({ count: 1, step: 0 });
   const [choosing, setChoosing] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const continuous = nativeReading.voiceOver;
+  const saveScrollRef = useRef(() => {});
   const [zoomed, setZoomed] = useState(() => (window.visualViewport?.scale ?? 1) > 1.05);
   const { turnPage, cancelTurn, gestureHandlers } = usePageTurn({
     viewportRef, columnsRef, page, layout,
     onOpenSettings: () => setSettingsOpen(true),
     onPageChange: (target) => {
+      if (pageHaptics && nativeReading.hapticsAvailable) void pageTurnFeedback();
       if (target === 0 || target === layout.count - 1) footerRef.current?.focus({ preventScroll: true });
       captureAnchorRef.current = true;
       setPage(target);
@@ -54,6 +60,14 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     function measure() {
       if (!active || !viewport || !columns) return;
       cancelTurn();
+      if (continuous) {
+        columns.style.columnWidth = 'auto';
+        const top = readingAnchorTop(readingAnchorRef.current, columns);
+        if (top !== null) window.scrollBy({ top: top - 12, behavior: 'instant' });
+        setLayout({ count: 1, step: 0 });
+        setPage(0);
+        return;
+      }
       const gap = parseFloat(getComputedStyle(columns).columnGap) || 0;
       const width = viewport.clientWidth;
       // WebKit needs an explicit width to fragment a single-column passage.
@@ -76,7 +90,32 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       observer.disconnect();
       images.forEach((img) => img.removeEventListener('load', measure));
     };
-  }, [choosing, textScale, title, intro, body, image, cancelTurn]);
+  }, [choosing, continuous, textScale, nativeReading.textScale, title, intro, body, image, cancelTurn]);
+
+  useEffect(() => {
+    if (!continuous || choosing) return;
+    let timer;
+    function save() {
+      clearTimeout(timer);
+      const anchor = window.scrollY <= 1 ? null : captureReadingAnchor(viewportRef.current, columnsRef.current, true);
+      if (JSON.stringify(anchor) === JSON.stringify(readingAnchorRef.current)) return;
+      readingAnchorRef.current = anchor;
+      positionChangeRef.current?.(anchor);
+    }
+    function scroll() { clearTimeout(timer); timer = setTimeout(save, 180); }
+    function visibilityChanged() { if (document.hidden) save(); }
+    saveScrollRef.current = save;
+    window.addEventListener('scroll', scroll, { passive: true });
+    window.addEventListener('pagehide', save);
+    document.addEventListener('visibilitychange', visibilityChanged);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', scroll);
+      window.removeEventListener('pagehide', save);
+      document.removeEventListener('visibilitychange', visibilityChanged);
+      saveScrollRef.current = () => {};
+    };
+  }, [continuous, choosing]);
 
   useLayoutEffect(() => {
     const viewport = viewportRef.current;
@@ -91,24 +130,28 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     // and cause the browser to scroll the paginated surface sideways.
     columnsRef.current.querySelectorAll('.scene-image__open').forEach((button) => {
       const bounds = button.getBoundingClientRect();
-      button.tabIndex = bounds.right > visible.left && bounds.left < visible.right ? 0 : -1;
+      button.tabIndex = continuous || (bounds.right > visible.left && bounds.left < visible.right) ? 0 : -1;
     });
-  }, [page, layout, choosing]);
+  }, [page, layout, choosing, continuous]);
 
   useEffect(() => { headingRef.current?.focus({ preventScroll: true }); }, []);
   useEffect(() => {
     if (choosing) decisionRef.current?.focus({ preventScroll: true });
-    else if (wasChoosingRef.current) footerRef.current?.focus();
+    else if (continuous) {
+      const paragraph = columnsRef.current?.querySelectorAll('.story-paragraph')[readingAnchorRef.current?.paragraph];
+      if (paragraph) paragraph.tabIndex = -1;
+      (paragraph ?? headingRef.current)?.focus({ preventScroll: true });
+    } else if (wasChoosingRef.current) footerRef.current?.focus();
     wasChoosingRef.current = choosing;
-  }, [choosing]);
-  const lastPage = page === layout.count - 1;
+  }, [choosing, continuous]);
+  const lastPage = continuous || page === layout.count - 1;
   const pageLabel = getText('reader.page_status')
     .replace('{current}', String(page + 1)).replace('{total}', String(layout.count));
 
   return (
-    <main className="reader-layout" style={{ '--reading-scale': textScale }}>
+    <main className={`reader-layout${continuous ? ' reader-layout--continuous' : ''}`} style={{ '--reading-scale': textScale }}>
       <nav className="reader-nav" aria-label={getText('reader.navigation')}>
-        <button type="button" className="text-button" onClick={onHome}>
+        <button type="button" className="text-button" onClick={() => { saveScrollRef.current(); onHome(); }}>
           <span aria-hidden="true">← </span>{getText('reader.bookshelf')}
         </button>
         <span className="reader-nav-title">{testing ? getText('reader.test_preview') : storyTitle}</span>
@@ -131,27 +174,28 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
           </section>
         ) : (
           <>
-            <div className="reader-viewport" data-zoomed={zoomed} ref={viewportRef} {...gestureHandlers}>
-              <div className="reader-columns" ref={columnsRef} style={{ transform: `translateX(${-page * layout.step}px)` }}>
+            <div className="reader-viewport" data-zoomed={zoomed} ref={viewportRef} {...(continuous ? {} : gestureHandlers)}>
+              <div className="reader-columns" ref={columnsRef} style={{ transform: continuous ? 'none' : `translateX(${-page * layout.step}px)` }}>
                 <StoryTextPanel {...{ storyTitle, title, intro, body, image, headingRef }} />
               </div>
             </div>
             <footer className="reader-footer" ref={footerRef} tabIndex={-1}>
               <span className="reader-footer-previous">
-                {page > 0 && (
+                {!continuous && page > 0 && (
                   <button type="button" className="text-button" onClick={() => turnPage(page - 1)}>
                     <span aria-hidden="true">← </span>{getText('reader.previous')}
                   </button>
                 )}
               </span>
-              <span className="page-status" aria-live="polite">{pageLabel}</span>
+              {!continuous && <span className="page-status" aria-live="polite" aria-atomic="true"
+                aria-label={getText('reader.page_spoken').replace('{current}', String(page + 1)).replace('{total}', String(layout.count))}>{pageLabel}</span>}
               <span className="reader-footer-next">
                 {!lastPage ? (
                   <button type="button" className="text-button" onClick={() => turnPage(page + 1)}>
                     {getText('reader.next')}<span aria-hidden="true"> →</span>
                   </button>
                 ) : !ending ? (
-                  <button type="button" className="primary-button" onClick={() => { cancelTurn(); setChoosing(true); }}>
+                  <button type="button" className="primary-button" onClick={() => { saveScrollRef.current(); cancelTurn(); setChoosing(true); }}>
                     {getText('story.continue_reading')}
                   </button>
                 ) : <span className="ending-label">{getText('end.heading')}</span>}
@@ -167,7 +211,8 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
           </>
         )}
       </article>
-      {settingsOpen && <ReadingSettings textScale={textScale}
+      {settingsOpen && <ReadingSettings textScale={textScale} nativeReading={nativeReading}
+        pageHaptics={pageHaptics} onPageHapticsChange={onPageHapticsChange}
         onChange={(scale) => { cancelTurn(); onTextScaleChange?.(scale); }}
         onClose={() => setSettingsOpen(false)} />}
     </main>

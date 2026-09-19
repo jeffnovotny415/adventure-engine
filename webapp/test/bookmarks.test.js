@@ -102,3 +102,22 @@ test('invalid sizes and failed size writes preserve the previous bookmark', () =
   storage.fail=false; session.retryPersistence();
   assert.equal(readingTextScale(loadSave(stories,storage).save.uiPrefs),2.25);
 });
+
+test('page haptics are opt-in, per-book, and recover from failed preference writes', () => {
+  const storage=fixture(), session=createGameSession(stories,storage);
+  start(session,'a'); start(session,'b'); session.continueGame('a');
+  assert.notEqual(session.getSnapshot().save.uiPrefs.pageHaptics,true);
+  const before=storage.getItem();
+  for (const pageHaptics of ['true',1,null]) {
+    assert.equal(session.updateReading({uiPrefs:{pageHaptics}}).status,'ignored');
+    assert.equal(storage.getItem(),before);
+  }
+  storage.fail=true;
+  assert.equal(session.updateReading({uiPrefs:{pageHaptics:true}}).status,'write_failed');
+  assert.equal(storage.getItem(),before);
+  storage.fail=false; session.retryPersistence();
+  assert.equal(createGameSession(stories,storage).continueGame('a').save.uiPrefs.pageHaptics,true);
+  assert.notEqual(loadSave(stories,storage,'b').save.uiPrefs.pageHaptics,true);
+  session.updateReading({uiPrefs:{pageHaptics:false}});
+  assert.equal(loadSave(stories,storage,'a').save.uiPrefs.pageHaptics,false);
+});

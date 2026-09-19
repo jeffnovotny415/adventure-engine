@@ -1,7 +1,8 @@
 // Development-only regression fixture. No story imports, saved progress, or
 // network writes. Synthetic pointers check event routing, not native iOS pinch.
-import { StrictMode, useState } from 'react';
+import { StrictMode, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { captureReadingAnchor } from '../../src/components/shared/BookReader/readingPosition';
 import { BookReader } from '../../src/components/shared/BookReader/BookReader';
 import '../../src/index.css';
 import '../../src/styles/theme.css';
@@ -13,6 +14,8 @@ if (new URLSearchParams(location.search).has('reduced')) {
     ? { matches: true, addEventListener() {}, removeEventListener() {} }
     : matchMedia(query);
 }
+const systemScale = new URLSearchParams(location.search).has('system') ? 53 / 17 : 1;
+document.documentElement.style.fontSize = `${systemScale * 100}%`;
 const body = Array.from({ length: 80 }, (_, index) => `Reader layout test line ${index + 1}.`).join('\n');
 const frame = () => new Promise(requestAnimationFrame);
 async function settled() {
@@ -21,6 +24,9 @@ async function settled() {
   await frame();
 }
 export function Fixture() {
+  const [voiceOver, setVoiceOver] = useState(false);
+  const [haptics, setHaptics] = useState(false);
+  const anchor = useRef(null);
   const [generation, reset] = useState(0);
   const [result, setResult] = useState('Not run');
   const [running, setRunning] = useState(false);
@@ -33,6 +39,38 @@ export function Fixture() {
     setResult('Running');
     reset((n) => n + 1);
     await frame(); await frame();
+    if (kind === 'continuous reading') {
+      document.querySelector('.reader-footer-next button').click();
+      await settled();
+      const paginatedAnchor = anchor.current;
+      setVoiceOver(true);
+      await frame(); await frame();
+      const columns = document.querySelector('.reader-columns');
+      const viewport = document.querySelector('.reader-viewport');
+      const paragraph = columns.querySelectorAll('.story-paragraph')[paginatedAnchor.paragraph];
+      const restored = paragraph.getBoundingClientRect().bottom > 0 && paragraph.getBoundingClientRect().top < innerHeight;
+      const continuous = getComputedStyle(columns).columnCount === '1' && !document.querySelector('.page-status') && viewport.scrollWidth <= viewport.clientWidth + 1;
+      // All paragraphs occupy a single sequential reading surface.
+      const paragraphs = [...columns.querySelectorAll('.story-paragraph')];
+      const ordered = paragraphs.every((p,i) => i === 0 || p.getBoundingClientRect().top > paragraphs[i-1].getBoundingClientRect().top);
+      paragraphs[30].scrollIntoView();
+      await new Promise(resolve => setTimeout(resolve,250));
+      const saved = anchor.current;
+      reset(n => n + 1);
+      await frame(); await frame();
+      const resumed = captureReadingAnchor(document.querySelector('.reader-viewport'),document.querySelector('.reader-columns'),true);
+      const preserved = saved?.paragraph === resumed?.paragraph;
+      document.querySelector('.reader-footer-next button').click();
+      await frame();
+      const decision = document.querySelector('.decision-page h1');
+      const choices = document.activeElement === decision;
+      document.querySelector('.decision-page > button').click();
+      await frame(); await frame();
+      const returned = captureReadingAnchor(document.querySelector('.reader-viewport'),document.querySelector('.reader-columns'),true);
+      setResult(`${restored && continuous && ordered && preserved && choices && returned?.paragraph === saved?.paragraph ? 'PASS' : 'FAIL'}: continuous reading; restored ${restored}; layout ${continuous}; ordered ${ordered}; saved ${JSON.stringify(saved)}; resumed ${JSON.stringify(resumed)}; choices ${choices}; returned ${JSON.stringify(returned)}`);
+      setRunning(false);
+      return;
+    }
     if (kind === 'left edge tap') {
       document.querySelector('.reader-footer-next button').click();
       await settled();
@@ -99,9 +137,9 @@ export function Fixture() {
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
-    <BookReader key={generation} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{}} />
+    <BookReader key={generation} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{}} />
   </>;
 }
 createRoot(document.getElementById('root')).render(<StrictMode><Fixture /></StrictMode>);

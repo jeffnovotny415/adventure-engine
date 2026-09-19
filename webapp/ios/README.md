@@ -173,3 +173,20 @@ These controls use the bundled reader. Native Dynamic Type integration, a full
 physical VoiceOver audit, and optional iPhone haptics remain follow-up work.
 Reduce Motion is already respected. The iPhone leaf fades once it crosses the
 binding, and its shadows disappear with it to avoid the reported edge sliver.
+
+### Native reading preferences
+
+`ReaderBridgeViewController` registers the local `ReaderAccessibility` bridge.
+It reports Dynamic Type scale and VoiceOver status at startup and on system
+changes/foregrounding. Manual book size remains an additional per-book setting.
+VoiceOver reads a continuous passage instead of offscreen page columns; standard
+VoiceOver gestures are left to iOS. Paragraph/character bookmarks are shared
+between continuous and paginated layouts.
+
+On supported iPhones, **Aa → Gentle page-turn vibration** enables optional soft
+feedback after completed page turns. It defaults off and is saved per book.
+Unsupported devices hide the setting. No new permissions are requested.
+
+Before release, verify spoken order, headings, illustration controls, choices,
+settings and resumed reading with physical VoiceOver, and check the haptic feel
+on an iPhone. Browser fixtures cover layout/event handling, not sensory feedback.

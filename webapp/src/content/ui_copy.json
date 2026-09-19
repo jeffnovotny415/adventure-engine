@@ -42,6 +42,10 @@
     "gesture_help": "Swipe left or right to turn a page. Tap the left edge to go back, the right edge to go forward, or the middle for reading settings. Pinch to zoom in for a closer look.",
     "previous": "Previous",
     "next": "Next",
+    "system_size_help": "Your iPhone or iPad text-size setting is applied automatically. This control adjusts the book size further.",
+    "page_haptics": "Gentle page-turn vibration",
+    "voiceover_help": "VoiceOver reads the passage continuously. Use your usual VoiceOver gestures to read and navigate, then choose what happens next below the passage.",
+    "page_spoken": "Page {current} of {total}",
     "page_status": "{current} / {total}",
     "back_to_passage": "Back to the passage",
     "test_preview": "Author preview"

@@ -40,3 +40,10 @@ long press must not turn. `?max` uses 225% text. Verify all cases at 667×375 an
 In the real app, use Aa to change the slider, close with Done/Escape, reload and
 resume the book, and verify both the size and passage. Illustration taps must
 still open their viewer; maximum-size choices must remain scrollable.
+
+The reader gesture fixture also includes **continuous reading**, which checks
+paginated-to-continuous anchor restoration, sequential paragraph layout, scroll
+bookmark remounting and returning from choices. Run it last in each fresh page.
+`?system` simulates the largest iOS body text category (53/17), and can combine
+with `&max` to stress the manual book-size maximum. These are development-only
+inputs; they do not change any device preferences or access real saved books.
