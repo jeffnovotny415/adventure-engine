@@ -43,9 +43,15 @@ export function Fixture() {
     function pointer(target, type, x, extra = {}) {
       target.dispatchEvent(new PointerEvent(type, { bubbles: true, cancelable: true, pointerType: 'touch', pointerId: 11, isPrimary: true, button: 0, clientX: x, clientY: y, ...extra }));
     }
-    pointer(viewport, 'pointerdown', start);
-    pointer(viewport, 'pointermove', kind === 'vertical scroll' ? start - 3 : end,
+    const child = viewport.querySelector('.story-paragraph');
+    const captureTransfer = kind === 'touch capture transfer';
+    const origin = captureTransfer ? child : viewport;
+    pointer(origin, 'pointerdown', start);
+    pointer(origin, 'pointermove', kind === 'vertical scroll' ? start - 3 : end,
       kind === 'vertical scroll' ? { clientY: y + 50 } : {});
+    // Touch implicitly captures the initial text element. Once the reader
+    // explicitly captures the drag, the old child's loss bubbles to it.
+    if (captureTransfer) pointer(child, 'lostpointercapture', end);
     if (kind === 'second pointer outside') pointer(document.body, 'pointerdown', start, { pointerId: 12, isPrimary: false });
     if (kind === 'second pointer inside') pointer(viewport, 'pointerdown', start, { pointerId: 12, isPrimary: false });
     if (kind === 'pointer cancellation') pointer(viewport, 'pointercancel', end);
@@ -54,22 +60,23 @@ export function Fixture() {
     pointer(viewport, 'pointerup', end);
     await settled();
     const status = document.querySelector('.page-status').textContent;
-    const expected = kind === 'completed swipe' ? '2 / ' : '1 / ';
+    const completes = kind === 'completed swipe' || captureTransfer;
+    const expected = completes ? '2 / ' : '1 / ';
     const clean = !viewport.hasAttribute('data-dragging') && !document.querySelector('.page-turn-overlay') && captured.size === 0;
     const passed = status.startsWith(expected) && clean;
     // A cancelled gesture must not leave the regular Next button locked.
-    if (passed && kind !== 'completed swipe') {
+    if (passed && !completes) {
       document.querySelector('.reader-footer-next button').click();
       await settled();
     }
-    const reusable = kind === 'completed swipe' || document.querySelector('.page-status').textContent.startsWith('2 / ');
+    const reusable = completes || document.querySelector('.page-status').textContent.startsWith('2 / ');
     setResult(`${passed && reusable ? 'PASS' : 'FAIL'}: ${kind}; after gesture ${status}; cleaned up ${clean}; next usable ${reusable}`);
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
-    <BookReader key={generation} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{}} onHome={()=>{}} onChoose={()=>{}} onToggleTextSize={()=>{}} />
+    <BookReader key={generation} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{}} largeText={new URLSearchParams(location.search).has('large')} onHome={()=>{}} onChoose={()=>{}} onToggleTextSize={()=>{}} />
   </>;
 }
 createRoot(document.getElementById('root')).render(<StrictMode><Fixture /></StrictMode>);

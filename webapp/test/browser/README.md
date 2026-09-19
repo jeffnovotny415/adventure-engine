@@ -9,6 +9,14 @@ a completed swipe reaches page 2. Repeat with `?reduced` to exercise the JavaScr
 reduced-motion path without changing system preferences. The fixture uses no
 story data or saved progress and is excluded from the production entry bundle.
 
+The touch capture transfer case starts on a paragraph and bubbles its
+lostpointercapture event after the viewport takes capture. This reproduces the
+implicit-to-explicit capture handoff used by touch browsers. It must complete
+the turn, while loss on the viewport itself must still cancel. Before the fix,
+the child's bubbled event cancelled the swipe and left page 1 visible.
+Use `?large` to repeat the cases with larger reading text, including 390×844
+portrait. Query flags can be combined (`?large&reduced`).
+
 These are synthetic DOM pointer events with modeled pointer capture. They check
 React event routing and cleanup, not OS/browser touch arbitration. Before an iOS
 release, also test actual iPhone/iPad horizontal drags, aborted/reversed swipes,

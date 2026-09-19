@@ -331,3 +331,23 @@ confirmed installation and successful launch on iOS 26.6.2. No TestFlight upload
 or signed archive was needed. All 15 protected files still match f7a5d4e
 byte-for-byte. Physical touch, accessibility and airplane-mode checks remain for
 on-device testing; successful launch alone does not certify them.
+
+## September 19 physical-device swipe report
+
+Jeff reported that Next works on his iPhone but swiping does not. Reproduced an
+event-routing defect: touch implicitly captures the paragraph, and its bubbled
+lostpointercapture event during transfer to the reader cancelled the new drag.
+The reader now cancels only when its own capture for the active pointer is lost.
+The finger-tracked page turn, native vertical scrolling/pinch, image taps, and
+reduced-motion behavior remain intact.
+
+Added a browser regression that fails before the fix (page stays at 1) and
+passes after it (page 2). All 56 browser gesture cases pass across 667×375 and
+1024×768 in normal, reduced-motion and large-text modes, plus 390×844 with large
+text. Existing cancellation/second-pointer cases still clean up and leave Next
+usable. All 84 Node tests, lint, story diagnostics, production build, signed
+Release device build, bundle checks and signature verification pass. All 15
+protected files remain byte-identical to f7a5d4e. These scripted event tests do
+not replace Jeff's confirmation of real finger tracking on the phone.
+Installed the signed update over the existing iPhone app without uninstalling;
+Apple's device tools confirmed successful installation and launch.

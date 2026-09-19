@@ -118,7 +118,13 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
       onPointerDown, onPointerMove, onPointerUp,
       onPointerCancel: cancelTurn,
       onPointerLeave: () => { if (gestureRef.current && !gestureRef.current.started) cancelTurn(); },
-      onLostPointerCapture: () => { if (gestureRef.current) cancelTurn(); },
+      onLostPointerCapture: (event) => {
+        const gesture = gestureRef.current;
+        // Touch starts with implicit capture on the paragraph/heading. Taking
+        // capture on the viewport makes that child's loss bubble here; it is
+        // a handoff, not a cancelled swipe. Only our own capture loss ends it.
+        if (gesture && event.pointerId === gesture.id && event.target === gesture.element) cancelTurn();
+      },
       onClickCapture: (event) => {
         if (suppressClickRef.current) { event.preventDefault(); event.stopPropagation(); suppressClickRef.current = false; }
       },
