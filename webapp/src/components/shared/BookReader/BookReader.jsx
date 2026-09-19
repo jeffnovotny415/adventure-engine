@@ -16,6 +16,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   const footerRef = useRef(null);
   const readingAnchorRef = useRef(null);
   const captureAnchorRef = useRef(false);
+  const wasChoosingRef = useRef(false);
   const [page, setPage] = useState(0);
   const [layout, setLayout] = useState({ count: 1, step: 0 });
   const [choosing, setChoosing] = useState(false);
@@ -73,7 +74,11 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   }, [page, layout, choosing]);
 
   useEffect(() => { headingRef.current?.focus({ preventScroll: true }); }, []);
-  useEffect(() => { if (choosing) decisionRef.current?.focus({ preventScroll: true }); }, [choosing]);
+  useEffect(() => {
+    if (choosing) decisionRef.current?.focus({ preventScroll: true });
+    else if (wasChoosingRef.current) footerRef.current?.focus();
+    wasChoosingRef.current = choosing;
+  }, [choosing]);
   const lastPage = page === layout.count - 1;
   const pageLabel = getText('reader.page_status')
     .replace('{current}', String(page + 1)).replace('{total}', String(layout.count));

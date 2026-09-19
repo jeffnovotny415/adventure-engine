@@ -20,12 +20,20 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
   }, [viewportRef]);
   useEffect(() => {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function cancelForOtherPointer(event) {
+      const gesture = gestureRef.current;
+      if (gesture && event.pointerId !== gesture.id) cancelTurn();
+    }
     preference.addEventListener('change', cancelTurn);
     window.addEventListener('blur', cancelTurn);
+    // A pinch may start with one finger on the page and the other on the
+    // toolbar/margin. Observe capture phase without preventing native zoom.
+    document.addEventListener('pointerdown', cancelForOtherPointer, true);
     return () => {
       cancelTurn();
       preference.removeEventListener('change', cancelTurn);
       window.removeEventListener('blur', cancelTurn);
+      document.removeEventListener('pointerdown', cancelForOtherPointer, true);
     };
   }, [cancelTurn]);
 

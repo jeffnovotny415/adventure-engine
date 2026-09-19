@@ -41,11 +41,10 @@ against overwriting invalid saves during new-game setup.
 
 1. Runtime recovery completed in the second overnight batch below. Continue
    with reader correctness; do not duplicate the recovery/isolation work.
-2. Reading position preservation completed in the third batch below. Continue
-   with keyboard focus after returning from choices and gesture cancellation/
-   multiple pointers. Illustration enlargement, Escape focus restoration, and
-   offscreen illustration tab exclusion passed this batch. Reproduce remaining
-   issues before changing; retain the approved design.
+2. Reading position, choice-return keyboard focus, and confirmed gesture
+   cancellation defect are fixed (third/fourth batches below). Browser illustration
+   and gesture checks passed. Physical iPhone/iPad multi-touch remains a release
+   verification requirement; no additional confirmed reader defect is queued.
 3. Read-only story graph diagnostics and useful author-facing reporting. Do not
    repair story links, add intros, rewrite placeholders, or fabricate endings.
 4. Build/release checks and accurate project documentation. No `.github` checks
@@ -123,7 +122,7 @@ past the requested overnight window.
   Next: reproduce reading-position loss on rotation/text-size changes and audit
   gesture cancellation/accessibility, then story diagnostics and release checks.
 
-- September 19, third overnight batch (commit `fix: preserve reading position when pages reflow`):
+- September 19, third overnight batch (`ddba59f`, `fix: preserve reading position when pages reflow`):
   reproduced scene_002 in Can Opener shifting to earlier prose when larger text
   kept page 4 while total pages changed 7→9. Replaced ordinal clamping with a
   paragraph/character anchor captured on a completed page turn. Reflow locates
@@ -143,3 +142,25 @@ past the requested overnight window.
   This preserves the first visible text position, not a particular line's pixel
   placement. In-scene position is not persisted across app restarts. Browser
   checks only; multi-touch behavior still needs the remaining gesture audit.
+
+- September 19, fourth overnight batch (commit `fix: cancel multi-pointer swipes and restore reader focus`):
+  reproduced Back to the passage leaving document.body focused. Returning now
+  focuses the reader footer; Tab reaches Previous without scrolling columns
+  sideways. Verified 667×375 normal/larger text, 1024×768 tablet, and rotation
+  from choices into 390×844 portrait. Reader scrollLeft remains zero.
+  A synthetic event fixture reproduced a second finger outside the reader failing
+  to cancel the first finger's swipe (page advanced 1→2). Added a document capture
+  listener to cancel the active gesture when another pointer arrives, without
+  preventing default browser scrolling/zooming. Cleanup removes the listener.
+  Retained a reusable development-only fixture at
+  `webapp/test/browser/reader-gestures.html` with instructions beside it. Seven
+  cases each passed at phone/tablet sizes with normal and mocked reduced-motion
+  JS handling (28 browser results): second pointer inside/outside, pointercancel,
+  lost capture, blur, vertical movement, and completed swipe. Cancelled gestures
+  remove overlays/capture state and leave Next usable. These synthetic checks
+  model pointer capture; they do not certify actual iOS pinch/OS touch handling.
+  No physical-device test is claimed. No story/save imports in the fixture.
+  All 67 Node tests, lint (no warnings), production build, and diff checks pass.
+  Fixture code is absent from production assets. All 15 protected content/asset
+  files remain identical to baseline `f7a5d4e`. No console errors in the app check.
+  Next: read-only story graph diagnostics and build/release documentation/checks.

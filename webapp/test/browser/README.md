@@ -1,0 +1,22 @@
+# Reader gesture regression fixture
+
+Run `npm run dev` in `webapp`, then open
+`http://127.0.0.1:5190/test/browser/reader-gestures.html`.
+
+Run every case at 667×375 and 1024×768. Each result must say PASS: cancelled
+swipes leave page 1, remove the animation/capture state, and allow Next to work;
+a completed swipe reaches page 2. Repeat with `?reduced` to exercise the JavaScript
+reduced-motion path without changing system preferences. The fixture uses no
+story data or saved progress and is excluded from the production entry bundle.
+
+These are synthetic DOM pointer events with modeled pointer capture. They check
+React event routing and cleanup, not OS/browser touch arbitration. Before an iOS
+release, also test actual iPhone/iPad horizontal drags, aborted/reversed swipes,
+a second finger on the page and outside it, vertical scrolling, pinch zoom,
+rotation during a drag, and Reduce Motion. Check illustration taps after a
+cancelled drag.
+
+For keyboard regression, use author preview in the normal app: reach choices,
+activate Back to the passage, and confirm focus returns to the reader footer.
+Tab should then reach Previous (or the remaining next-page control), with no
+sideways viewport jump. Test larger text and rotation as well.
