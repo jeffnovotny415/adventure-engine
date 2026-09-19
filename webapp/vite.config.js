@@ -10,5 +10,8 @@ export default defineConfig({
     // projects (e.g. Reforge) that run on Vite's default 5173.
     port: 5190,
     strictPort: true,
+    // Native build output is not web source. Watching it reloads the reader
+    // during Xcode builds and needlessly tracks DerivedData.
+    watch: { ignored: ['**/ios/**'] },
   },
 })

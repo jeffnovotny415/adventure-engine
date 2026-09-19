@@ -22,7 +22,9 @@ npm run dev
 ```
 
 The development server uses port **5190** and fails if that port is occupied.
-Open `http://localhost:5190`. To run commands from the repository root, use
+Open `http://localhost:5190`. The watcher excludes `ios/`, so native build
+output does not reload the browser reader or add DerivedData to the watch set.
+To run commands from the repository root, use
 `npm --prefix webapp run check`, for example.
 
 | Command | Purpose |

@@ -276,3 +276,27 @@ is pending because native window controls and browser testing became unavailable
 Safe-area spacing improved in the observed landscape iPhone view. No TestFlight
 upload or signed archive is claimed. Resume from the verification checklist in
 webapp/ios/README.md after Mac controls reconnect. All protected assets unchanged.
+
+## September 19 follow-up after disk cleanup
+
+Testing access returned with about 37 GiB available. Verified the native WebKit
+pagination fix: iPhone 17 shows four normal-text pages, all five larger-text
+pages are reachable, rotation retains the passage, and a clean app replacement/
+relaunch resumes page 3 with larger text. Agent test servers were stopped during
+that launch; bundled fonts and textures loaded. iPad (A16) verified facing pages,
+Next, authored choices, illustration placement, enlarged viewer and Actual size.
+Responsive browser checks at 667×375, 1024×768, and 390×844 also passed.
+
+Resolved the apparent native input failures as test-tool limitations: coordinate
+actions were offset from the cropped iPhone screenshot, and drag events contained
+no pointermove. Calibrated Next taps worked. Temporary pointer logging and forced
+console logging were removed and a clean simulator build installed. Physical
+swipe/pinch, image panning, accessibility, and airplane-mode tests remain required;
+no TestFlight upload or signed archive is claimed.
+
+Fixed a verified development issue: Vite was watching generated iOS output and
+reloading the reader during Xcode builds. Excluded ios/ from the watcher. A live
+server check confirmed web source remains watched, native output is absent from
+the watch set, and updating generated index.html emits no native watch event.
+The native build, 84 tests, lint, story diagnostics and production build pass.
+All 15 protected files continue to match f7a5d4e byte-for-byte.

@@ -76,17 +76,31 @@ Debug simulator (arm64/x86_64) and Release device (arm64) builds pass with Xcode
 production web assets. No server URL is configured. Dependency audit: zero
 reported vulnerabilities.
 
-The app launched on iPhone 17 and iPad (A16) simulators. iPhone inspection verified
-the bookshelf, name entry, preserved names after app replacement/relaunch, and
-landscape safe-area improvement. It also exposed a single-column WebKit issue:
-only the first screen of prose was visible while the footer reported 1/1. The
-reader now supplies an explicit column width, but the final native check is
-**pending**: Mac window controls and the browser testing connection became
-unavailable before the corrected build could be inspected. Do not treat the
-wrapper as ready for TestFlight until this is confirmed.
+After Mac testing access returned, the single-column WebKit fix was verified on
+iPhone 17: the formerly clipped passage reports four normal-text pages, all
+five larger-text pages are reachable, and the choice control appears on the last
+page. Portrait and both landscape orientations reflow while retaining the anchored
+passage. A clean reinstall/relaunch preserved page 3 and larger text with the
+agent's development/preview servers stopped. Fonts and book textures loaded from
+the bundle. This is a server-independent launch check, not a physical airplane-
+mode certification.
 
-Next: install the latest build, confirm every page is reachable, exercise Next,
-finger tracking and the image viewer, rotate both simulators through portrait
-and landscape, test larger text and bookmark restore, and cold-launch with the
-development server stopped. Then perform the physical-device checklist. The
-latest build contains no temporary measurement overlay or diagnostic fixture.
+On iPad (A16), verified portrait/landscape shell rotation, facing-page reading,
+Next reaching the remaining passage, authored choice navigation into the
+illustrated scene, illustration placement, the enlarged viewer, Actual size,
+and closing the viewer. Browser checks also passed at 667×375, 1024×768, and
+390×844 with large text, saved anchors, working Next, and no horizontal overflow.
+
+Native input tooling needs care: Mac coordinate actions can be offset from the
+cropped simulator screenshot. A temporary event trace confirmed that apparent
+missed Next taps landed on the surrounding footer; calibrated taps reached the
+button and advanced the page normally. Automated drags emitted pointerdown and
+pointerup with no pointermove events, so they do not verify finger tracking or
+image panning. All temporary instrumentation was removed; clean builds were
+restored. Do not change gesture code solely to satisfy that tool limitation.
+
+Before TestFlight, finish physical iPhone/iPad touch checks: finger tracking,
+reverse/cancel, multi-touch/pinch, image panning, Reduce Motion, VoiceOver, and
+system text sizing. Also run a physical cold launch in airplane mode and complete
+signing/archive and App Store Connect setup. No upload or signed archive has
+been performed.
