@@ -7,9 +7,12 @@ import './styles/bookshelf.css'
 import './styles/reader.css'
 import './styles/sceneImage.css'
 import App from './App.jsx'
+import { RuntimeBoundary } from './components/shared/RuntimeBoundary/RuntimeBoundary.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <RuntimeBoundary>
+      <App />
+    </RuntimeBoundary>
   </StrictMode>,
 )

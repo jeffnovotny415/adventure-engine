@@ -71,6 +71,11 @@
     "fit": "Fit image",
     "close": "Close"
   },
+  "runtime_recovery": {
+    "heading": "Let’s reopen your book",
+    "body": "Something went wrong displaying this screen. Return to the bookshelf to try again.",
+    "preserved": "Returning to the bookshelf will not change or delete your saved progress."
+  },
   "persistence": {
     "heading": "Saved progress needs attention",
     "write_failed": "We couldn’t save that action. Your saved progress has not been replaced. Try again when storage is available.",

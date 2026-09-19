@@ -39,10 +39,8 @@ against overwriting invalid saves during new-game setup.
 
 ## Subsequent work, in priority order
 
-1. Runtime recovery: inspect missing-scene/invalid-navigation/render failures.
-   `getScene` throws and there is no React error boundary in the current entry
-   point. Add useful recovery only for confirmed paths; never erase the save
-   automatically. Verify developer preview cannot damage real saved progress.
+1. Runtime recovery completed in the second overnight batch below. Continue
+   with reader correctness; do not duplicate the recovery/isolation work.
 2. Reader correctness and accessibility: investigate preserving reading position
    on rotation/text-size changes (currently page ordinal is clamped), keyboard
    focus through hidden columns, gesture cancellation/multiple pointers, and
@@ -89,7 +87,7 @@ past the requested overnight window.
   failure without touching actual saves, and audited story references read-only.
   This commit prepares the work queue; no additional app fix is claimed yet.
 
-- September 19, first overnight batch (commit `fix: recover from save write and deletion failures`):
+- September 19, first overnight batch (`a3043f1`, `fix: recover from save write and deletion failures`):
   completed the storage work above. Added 13 session tests; all 63 tests, lint,
   production build, and diff whitespace checks passed. Browser fault injection
   used a temporary in-memory storage fixture, never real device bookmarks.
@@ -100,3 +98,26 @@ past the requested overnight window.
   the temporary fixture. All 15 tracked story/data/draft/public asset files match
   baseline `f7a5d4e` byte-for-byte. No physical iOS testing is claimed.
   Next: runtime recovery and developer-preview isolation, then reader issues.
+
+- September 19, second overnight batch (commit `fix: recover from reader render failures`):
+  reproduced a missing-scene render exception in an isolated browser fixture:
+  without a boundary React unmounted the app, leaving no recovery controls.
+  Added a root React boundary with a focused, warm-paper recovery screen. Its
+  Bookshelf action remounts App through normal saved-progress validation and
+  performs no storage writes or deletes. Tested render and effect exceptions,
+  successful return and resume, and a persistent exception returning to the
+  recovery screen without looping or deleting data. Existing session navigation
+  guards handle invalid choice destinations; no authored links were changed.
+  Verified developer preview start, choice, ending, restart, and subsequent real
+  resume with a seeded in-memory bookmark: exact saved bytes unchanged, zero
+  writes/deletes. No preview-isolation defect was found, so no speculative
+  preview rewrite was made. Temporary fixtures were removed.
+  All 63 tests, lint, production build, and diff checks passed. Browser checks:
+  667×375 landscape phone, 1024×768 landscape tablet, 390×844 portrait, rotation,
+  and 24px root text; recovery remains scrollable with reachable touch controls
+  and no horizontal overflow. All 15 protected data/draft/public files remain
+  byte-for-byte identical to `f7a5d4e`. These are browser checks, not physical iOS.
+  Boundary scope: React render/lifecycle errors; it does not catch event-handler
+  exceptions, arbitrary asynchronous callbacks, or failures before JS loads.
+  Next: reproduce reading-position loss on rotation/text-size changes and audit
+  gesture cancellation/accessibility, then story diagnostics and release checks.
