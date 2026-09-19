@@ -2,7 +2,7 @@ import { useContent } from '../../../hooks/useContent';
 import { BookSpine } from '../../shared/BookSpine/BookSpine';
 import { AppHeader } from '../../shared/AppHeader/AppHeader';
 
-export function HomeScreen({ stories, bookmark, onContinue, onSelectStory, onDeveloperMode }) {
+export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onDeveloperMode }) {
   const { getText } = useContent();
   return (
     <>
@@ -12,19 +12,19 @@ export function HomeScreen({ stories, bookmark, onContinue, onSelectStory, onDev
           <p className="eyebrow">{getText('home.eyebrow')}</p>
           <h1>{getText('home.welcome_heading')}</h1>
           <p className="muted library-tagline">{getText('home.tagline')}</p>
-          {bookmark && (
-            <section className="bookmark" aria-label={getText('home.bookmark')}>
+          {bookmarks.map((bookmark) => (
+            <section key={bookmark.storyId} className="bookmark" aria-label={`${getText('home.bookmark')}: ${bookmark.storyTitle}`}>
               <span className="bookmark-ribbon" aria-hidden="true" />
               <div className="bookmark-details">
                 <p className="small muted">{getText('home.bookmark')}</p>
                 <p className="bookmark-title">{bookmark.storyTitle}</p>
                 <p className="small muted">{bookmark.sceneTitle}</p>
               </div>
-              <button type="button" className="primary-button" onClick={onContinue}>
+              <button type="button" className="primary-button" aria-label={`${getText('home.continue_adventure')}: ${bookmark.storyTitle}`} onClick={() => onContinue(bookmark.storyId)}>
                 {getText('home.continue_adventure')}
               </button>
             </section>
-          )}
+          ))}
         </section>
         <section className="library-books" aria-label={getText('home.choose_adventure_heading')}>
           <h2 className="shelf-label">{getText('home.choose_adventure_heading')}</h2>

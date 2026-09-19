@@ -28,14 +28,15 @@ export default function App() {
     [stories]
   );
 
-  const { save, persistenceError, startNewGame, continueGame, applyChoice, finishGame, retryPersistence, cancelPersistence } =
+  const { save, persistenceError, startNewGame, continueGame, applyChoice, finishGame, updateReading, retryPersistence, cancelPersistence } =
     useGameState(storiesWithScenes);
 
   const [savedResult, setSavedResult] = useState(() => loadSave(storiesWithScenes));
   const [screen, setScreen] = useState(() => needsSaveRecovery(savedResult) ? SCREENS.SAVE_RECOVERY : SCREENS.HOME);
   const [pendingStoryId, setPendingStoryId] = useState(null);
   const [devTestState, setDevTestState] = useState(null);
-  const [largeText, setLargeText] = useState(false);
+  const [previewLargeText, setPreviewLargeText] = useState(false);
+  const largeText = devTestState ? previewLargeText : Boolean(save?.uiPrefs.largeText);
 
   useEffect(() => {
     if (screen !== SCREENS.HOME) return;
@@ -44,11 +45,11 @@ export default function App() {
     if (needsSaveRecovery(result)) setScreen(SCREENS.SAVE_RECOVERY);
   }, [screen, storiesWithScenes]);
 
-  const bookmarkedStory = savedResult.status === 'valid' ? storiesWithScenes[savedResult.save.storyId] : null;
-  const bookmark = bookmarkedStory ? {
-    storyTitle: bookmarkedStory.title,
-    sceneTitle: bookmarkedStory.scenes[savedResult.save.currentSceneId].title,
-  } : null;
+  const bookmarks = Object.values(savedResult.books ?? {}).map((bookSave) => ({
+    storyId: bookSave.storyId,
+    storyTitle: storiesWithScenes[bookSave.storyId].title,
+    sceneTitle: storiesWithScenes[bookSave.storyId].scenes[bookSave.currentSceneId].title,
+  }));
 
   const activeStoryId = devTestState?.storyId ?? save?.storyId;
   const activeStory = activeStoryId ? storiesWithScenes[activeStoryId] : null;
@@ -82,11 +83,12 @@ export default function App() {
   }
 
   function handleSelectStory(storyId) {
-    const result = loadSave(storiesWithScenes);
+    const result = loadSave(storiesWithScenes, undefined, storyId);
     if (needsSaveRecovery(result)) {
       showSaveResult(result);
       return;
     }
+    if (result.status === 'valid') { handleContinue(storyId); return; }
     setPendingStoryId(storyId);
     setScreen(SCREENS.HERO_SETUP);
   }
@@ -96,8 +98,8 @@ export default function App() {
     showSaveResult(startNewGame(pendingStoryId, heroName, worldName, story.start_scene), SCREENS.STORY);
   }
 
-  function handleContinue() {
-    const result = continueGame();
+  function handleContinue(storyId) {
+    const result = continueGame(storyId);
     showSaveResult(result, result.status === 'valid' ? SCREENS.STORY : SCREENS.HOME);
   }
 
@@ -125,6 +127,11 @@ export default function App() {
 
   function handleNewStory() {
     goHome();
+  }
+
+  function toggleTextSize() {
+    if (devTestState) setPreviewLargeText((current) => !current);
+    else updateReading({ uiPrefs: { largeText: !largeText } });
   }
 
   function handleDeveloperMode() {
@@ -175,7 +182,7 @@ export default function App() {
       {screen === SCREENS.HOME && (
         <HomeScreen
           stories={stories}
-          bookmark={bookmark}
+          bookmarks={bookmarks}
           onContinue={handleContinue}
           onSelectStory={handleSelectStory}
           onDeveloperMode={handleDeveloperMode}
@@ -203,7 +210,9 @@ export default function App() {
             onChoose={handleChoose}
             onHome={goHome}
             largeText={largeText}
-            onToggleTextSize={() => setLargeText((current) => !current)}
+            onToggleTextSize={toggleTextSize}
+            initialReadingPosition={activeSave.readingPosition}
+            onReadingPositionChange={devTestState ? undefined : (readingPosition) => updateReading({ readingPosition })}
             testing={Boolean(devTestState)}
           />
         </div>
@@ -221,7 +230,7 @@ export default function App() {
             onRestart={handleRestart}
             onHome={handleNewStory}
             largeText={largeText}
-            onToggleTextSize={() => setLargeText((current) => !current)}
+            onToggleTextSize={toggleTextSize}
             testing={Boolean(devTestState)}
           />
         </div>

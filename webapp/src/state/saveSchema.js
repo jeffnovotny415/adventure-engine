@@ -8,6 +8,7 @@ export function createEmptySave() {
     worldName: '',
     currentSceneId: null,
     currentEntryIntro: null,
+    readingPosition: null,
     flags: {},
     inventory: [],
     uiPrefs: { hideButtonsWhileReading: false },
@@ -44,6 +45,10 @@ export function migrateSave(raw, stories) {
   if (Object.hasOwn(raw, 'uiPrefs') && (!isRecord(raw.uiPrefs) ||
       (Object.hasOwn(raw.uiPrefs, 'hideButtonsWhileReading') &&
         typeof raw.uiPrefs.hideButtonsWhileReading !== 'boolean'))) return invalid('malformed');
+  if (raw.uiPrefs && Object.hasOwn(raw.uiPrefs, 'largeText') && typeof raw.uiPrefs.largeText !== 'boolean') return invalid('malformed');
+  if (raw.readingPosition != null && (!isRecord(raw.readingPosition) ||
+      !Number.isSafeInteger(raw.readingPosition.paragraph) || raw.readingPosition.paragraph < 0 ||
+      !Number.isSafeInteger(raw.readingPosition.offset) || raw.readingPosition.offset < 0)) return invalid('malformed');
 
   return {
     status: 'valid',
@@ -55,9 +60,11 @@ export function migrateSave(raw, stories) {
       worldName: raw.worldName,
       currentSceneId: raw.currentSceneId,
       currentEntryIntro: raw.currentEntryIntro ?? null,
+      readingPosition: raw.readingPosition ? { paragraph: raw.readingPosition.paragraph, offset: raw.readingPosition.offset } : null,
       flags: { ...raw.flags },
       inventory: [...(raw.inventory ?? [])],
-      uiPrefs: { hideButtonsWhileReading: raw.uiPrefs?.hideButtonsWhileReading ?? false },
+      uiPrefs: { hideButtonsWhileReading: raw.uiPrefs?.hideButtonsWhileReading ?? false,
+        ...(Object.hasOwn(raw.uiPrefs ?? {}, 'largeText') ? { largeText: raw.uiPrefs.largeText } : {}) },
     },
   };
 }

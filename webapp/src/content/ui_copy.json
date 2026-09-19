@@ -47,14 +47,14 @@
     "unknown_scene": "Something went wrong loading that scene."
   },
   "save_recovery": {
-    "heading": "Your bookmark needs attention",
+    "heading": "Your saved bookmarks need attention",
     "preserved": "We have not changed or deleted your saved progress.",
     "retry": "Try again",
-    "reset": "Reset saved progress…",
-    "confirm_heading": "Delete this saved progress?",
-    "confirm_body": "This removes your saved place, names, and choices from this device. You can then start a new adventure. This cannot be undone.",
+    "reset": "Reset saved bookmarks…",
+    "confirm_heading": "Delete all saved bookmarks?",
+    "confirm_body": "This removes every saved book’s place, names, and choices from this device. You can then start new adventures. This cannot be undone.",
     "keep": "Keep saved progress",
-    "confirm_delete": "Delete saved progress",
+    "confirm_delete": "Delete all saved bookmarks",
     "reasons": {
       "malformed": "We couldn’t read the saved progress on this device.",
       "unsupported_version": "This saved progress uses a version this app doesn’t support. Try opening it with the version of the app that saved it.",

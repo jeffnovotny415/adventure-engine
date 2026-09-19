@@ -242,3 +242,23 @@ code changes tonight:
 
 No further confirmed code defect remains in this overnight queue. This is not
 an exhaustive guarantee against future bugs or a declaration of release readiness.
+
+## September 19 follow-up: bookmarks and iOS preparation
+
+Jeff authorized continued work on persistent per-book bookmarks and the iOS
+project. He confirmed disconnected routes and unfinished stories are intentional
+work in progress, not content defects to repair. The overnight automation remains
+paused; this is a separately requested follow-up.
+
+Completed bookmark batch: each book retains independent names, scene, reading
+anchor, and text size. Legacy single saves migrate only on a successful write;
+ending cleanup removes only the selected book. Write/delete failures and stale
+retries preserve other bookmarks. Verified with 84 Node tests, lint, diagnostics,
+production build, and production-browser checks at 667×375, 1024×768, and 390×844.
+Three-book switching, reload, text preferences, rotation, and saved-page resume
+passed with no browser console warnings/errors or horizontal overflow. All 15
+protected files still match f7a5d4e byte-for-byte.
+
+Native work is in progress: simulator and unsigned Release builds compile. Native
+reading checks exposed WebKit pagination clipping and safe-area spacing to resolve
+before the wrapper can be considered ready for device testing.

@@ -4,6 +4,11 @@ Read-only review, September 19, 2026. No authored files were edited. These
 findings need Jeff's authoring decisions; they are not permission to alter text,
 links, intro variants, titles, choices, or endings.
 
+Jeff clarified that the disconnected routes and unfinished material are
+intentional work in progress: the high-level outlines are present while he
+writes the stories. Treat this report as an authoring inventory, not a queue of
+content repairs.
+
 ## Current findings
 
 | Story ID | Reachable scenes | Reachable endings | Findings |

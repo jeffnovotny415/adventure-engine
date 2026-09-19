@@ -7,14 +7,17 @@ import { captureReadingAnchor, pageForReadingAnchor } from './readingPosition';
 
 // Real columns preserve every paragraph and adapt to the device and text size.
 export function BookReader({ storyTitle, title, intro, body, image, choices, onChoose,
-  onHome, ending = false, onRestart, largeText, onToggleTextSize, testing = false }) {
+  onHome, ending = false, onRestart, largeText, onToggleTextSize, testing = false,
+  initialReadingPosition = null, onReadingPositionChange }) {
   const { getText } = useContent();
   const viewportRef = useRef(null);
   const columnsRef = useRef(null);
   const headingRef = useRef(null);
   const decisionRef = useRef(null);
   const footerRef = useRef(null);
-  const readingAnchorRef = useRef(null);
+  const readingAnchorRef = useRef(initialReadingPosition);
+  const positionChangeRef = useRef(onReadingPositionChange);
+  positionChangeRef.current = onReadingPositionChange;
   const captureAnchorRef = useRef(false);
   const wasChoosingRef = useRef(false);
   const [page, setPage] = useState(0);
@@ -63,6 +66,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     if (captureAnchorRef.current) {
       readingAnchorRef.current = page === 0 ? null : captureReadingAnchor(viewport, columnsRef.current);
       captureAnchorRef.current = false;
+      positionChangeRef.current?.(readingAnchorRef.current);
     }
     const visible = viewport.getBoundingClientRect();
     // An illustration in an offscreen column must not receive keyboard focus

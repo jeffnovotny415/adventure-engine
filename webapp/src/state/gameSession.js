@@ -38,15 +38,16 @@ export function createGameSession(stories, storage) {
   }
   function startNewGame(storyId, heroName, worldName, startSceneId) {
     cancelPersistence();
-    const current = loadSave(stories, storage);
+    const current = loadSave(stories, storage, storyId);
     if (needsSaveRecovery(current)) return current;
-    const next = { ...createEmptySave(), storyId, heroName, worldName, currentSceneId: startSceneId };
+    const next = { ...createEmptySave(), storyId, heroName, worldName, currentSceneId: startSceneId,
+      uiPrefs: current.save?.uiPrefs ?? createEmptySave().uiPrefs };
     const expectedRaw = current.raw ?? null;
     return attempt(() => startSavedGame(next, stories, storage, expectedRaw), (result) => result.save);
   }
-  function continueGame() {
+  function continueGame(storyId) {
     cancelPersistence();
-    const result = loadSave(stories, storage);
+    const result = loadSave(stories, storage, storyId);
     persistedRaw = result.raw ?? null;
     publish(result.status === 'valid' ? result.save : null);
     return result;
@@ -61,7 +62,7 @@ export function createGameSession(stories, storage) {
     }
     cancelPersistence();
     const { nextSceneId, entryIntro } = resolveChoiceDestination(choice);
-    const next = { ...current, currentSceneId: nextSceneId, currentEntryIntro: entryIntro,
+    const next = { ...current, currentSceneId: nextSceneId, currentEntryIntro: entryIntro, readingPosition: null,
       ...applyChoiceEffects(choice, current) };
     const expectedRaw = persistedRaw;
     return attempt(() => {
@@ -74,7 +75,22 @@ export function createGameSession(stories, storage) {
   function finishGame() {
     const current = snapshot.save;
     const expectedRaw = persistedRaw;
-    return attempt(() => clearSave(storage, expectedRaw), () => current);
+    return attempt(() => clearSave(storage, expectedRaw, current?.storyId), () => current);
+  }
+  function updateReading(patch) {
+    const current = snapshot.save;
+    if (!current) return { status: 'ignored' };
+    const next = { ...current, ...patch, uiPrefs: { ...current.uiPrefs, ...patch.uiPrefs } };
+    const validated = migrateSave(next, stories);
+    if (validated.status !== 'valid') return { status: 'ignored' };
+    // Endings are still readable after their bookmark has been removed.
+    if (stories[current.storyId]?.scenes[current.currentSceneId]?.ending) {
+      publish(validated.save, snapshot.persistenceError);
+      return { status: 'valid', save: validated.save };
+    }
+    if (pending) return { status: 'ignored' };
+    const expectedRaw = persistedRaw;
+    return attempt(() => writeSave(validated.save, storage, expectedRaw), (result) => result.save);
   }
   function retryPersistence() {
     if (!pending) return { status: 'ignored' };
@@ -83,6 +99,6 @@ export function createGameSession(stories, storage) {
   return {
     getSnapshot: () => snapshot,
     subscribe: (listener) => { listeners.add(listener); return () => listeners.delete(listener); },
-    startNewGame, continueGame, applyChoice, finishGame, retryPersistence, cancelPersistence,
+    startNewGame, continueGame, applyChoice, finishGame, updateReading, retryPersistence, cancelPersistence,
   };
 }

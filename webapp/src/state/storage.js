@@ -1,6 +1,14 @@
 import { migrateSave } from './saveSchema.js';
 
 const SAVE_KEY = 'paths_of_wonder_save';
+const LIBRARY_FORMAT = 'paths_of_wonder_library';
+
+// An explicit format marker distinguishes the collection from a future single
+// save schema. Existing single-book saves migrate only on a successful write.
+function libraryOf(parsed) {
+  if (parsed?.format === LIBRARY_FORMAT) return parsed;
+  return { format: LIBRARY_FORMAT, version: 1, lastStoryId: parsed.storyId, books: { [parsed.storyId]: parsed } };
+}
 
 export function needsSaveRecovery(result) {
   return result.status === 'invalid' || result.status === 'unavailable';
@@ -18,7 +26,7 @@ export function importSave(jsonText, stories) {
 
 // Reading, validating and migrating are read-only: retain the exact original
 // bytes until the reader explicitly discards them or continues a valid game.
-export function loadSave(stories, storage) {
+export function loadSave(stories, storage, storyId) {
   let raw;
   try {
     raw = (storage ?? globalThis.localStorage).getItem(SAVE_KEY);
@@ -26,12 +34,32 @@ export function loadSave(stories, storage) {
     return { status: 'unavailable', reason: 'storage_unavailable' };
   }
   if (raw === null) return { status: 'empty' };
-  return { ...importSave(raw, stories), raw };
+  let parsed;
+  try { parsed = JSON.parse(raw); } catch { return { status: 'invalid', reason: 'malformed', raw }; }
+  if (parsed?.format !== LIBRARY_FORMAT) {
+    const result = importSave(raw, stories);
+    if (result.status !== 'valid') return { ...result, raw };
+    const books = { [result.save.storyId]: result.save };
+    return storyId && storyId !== result.save.storyId ? { status: 'empty', books, raw } : { ...result, books, raw };
+  }
+  const invalid = (reason) => ({ status: 'invalid', reason, raw });
+  if (parsed.version !== 1) return invalid('unsupported_version');
+  if (!parsed.books || typeof parsed.books !== 'object' || Array.isArray(parsed.books)) return invalid('malformed');
+  const books = Object.create(null);
+  for (const [id, value] of Object.entries(parsed.books)) {
+    const result = migrateSave(value, stories);
+    if (result.status !== 'valid') return invalid(result.reason);
+    if (id !== result.save.storyId) return invalid('malformed');
+    books[id] = result.save;
+  }
+  if (typeof parsed.lastStoryId !== 'string' || !Object.hasOwn(books, parsed.lastStoryId)) return invalid('malformed');
+  const save = books[storyId ?? parsed.lastStoryId];
+  return save ? { status: 'valid', save, books, raw } : { status: 'empty', books, raw };
 }
 
 // Recheck before replacing progress, including if storage changed during setup.
 export function startSavedGame(save, stories, storage, expectedRaw) {
-  const current = loadSave(stories, storage);
+  const current = loadSave(stories, storage, save.storyId);
   if (needsSaveRecovery(current)) return current;
   if (expectedRaw !== undefined && (current.raw ?? null) !== expectedRaw) return saveConflict();
   const validated = migrateSave(save, stories);
@@ -60,21 +88,36 @@ function saveConflict() {
 export function writeSave(save, storage, expectedRaw) {
   try {
     const target = storage ?? globalThis.localStorage;
-    if (expectedRaw !== undefined && target.getItem(SAVE_KEY) !== expectedRaw) return saveConflict();
-    const raw = JSON.stringify(save);
+    const previous = target.getItem(SAVE_KEY);
+    if (expectedRaw !== undefined && previous !== expectedRaw) return saveConflict();
+    const library = previous === null ? { books: {} } : libraryOf(JSON.parse(previous));
+    const books = { ...library.books, [save.storyId]: save };
+    const raw = JSON.stringify({ format: LIBRARY_FORMAT, version: 1, lastStoryId: save.storyId, books });
     target.setItem(SAVE_KEY, raw);
-    return { status: 'valid', save, raw };
+    return { status: 'valid', save, books, raw };
   } catch {
     return { status: 'write_failed', reason: 'write_failed' };
   }
 }
 
-export function clearSave(storage, expectedRaw) {
+export function clearSave(storage, expectedRaw, storyId) {
   try {
     const target = storage ?? globalThis.localStorage;
     const raw = target.getItem(SAVE_KEY);
     if (expectedRaw !== undefined && raw !== expectedRaw) return saveConflict();
-    if (raw !== null) target.removeItem(SAVE_KEY);
+    if (raw === null) return { status: 'empty' };
+    if (storyId) {
+      const library = libraryOf(JSON.parse(raw));
+      const books = { ...library.books };
+      delete books[storyId];
+      const lastStoryId = Object.keys(books).at(-1);
+      if (lastStoryId) {
+        const updated = JSON.stringify({ ...library, lastStoryId, books });
+        target.setItem(SAVE_KEY, updated);
+        return { status: 'empty', raw: updated, books };
+      }
+    }
+    target.removeItem(SAVE_KEY);
     return { status: 'empty' };
   } catch {
     return { status: 'delete_failed', reason: 'delete_failed' };
