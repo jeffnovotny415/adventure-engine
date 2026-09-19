@@ -16,7 +16,7 @@
 [data-theme='summoned-mage'] { --color-accent-1: #793f32; }
 [data-theme='tech-hero'] { --color-accent-1: #4d5b3c; }
 
-.app-shell { min-height: 100dvh; color: var(--color-text-primary); background: var(--color-bg); font-family: var(--font-body); }
+.app-shell { min-height: 100dvh; padding-top: env(safe-area-inset-top); color: var(--color-text-primary); background: var(--color-bg); font-family: var(--font-body); }
 .app-shell h1, .app-shell h2 { font-family: var(--font-display); font-weight: 400; }
 .app-shell h1 { text-wrap: balance; }
 .app-shell button { cursor: pointer; }
@@ -27,7 +27,7 @@
 .muted { color: var(--color-text-secondary); }
 .small { font-size: .78rem; }
 .eyebrow { font-size: .68rem; line-height: 1.5; letter-spacing: .16em; text-transform: uppercase; color: var(--color-text-secondary); }
-.app-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px max(26px, env(safe-area-inset-left)); border-bottom: 1px solid var(--color-border); }
+.app-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px max(26px, env(safe-area-inset-right)) 20px max(26px, env(safe-area-inset-left)); border-bottom: 1px solid var(--color-border); }
 .app-wordmark { font-family: var(--font-display); font-size: 1.3rem; letter-spacing: -.04em; }
 .app-header-note { font-size: .76rem; color: var(--color-text-secondary); }
 .primary-button, .accent-1-surface { background: var(--color-accent-1); color: #fff8ec; border: 0; border-radius: 5px; padding: 12px 19px; min-height: 44px; font-size: .85rem; font-weight: 500; }
@@ -35,7 +35,7 @@
 .primary-button:active, .accent-1-surface:active { background: color-mix(in srgb, var(--color-accent-1) 75%, black); }
 .text-button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px 0; border: 0; background: transparent; color: var(--color-text-secondary); font-size: .84rem; }
 .text-button:hover { color: var(--color-accent-1); }
-.setup-layout { max-width: 760px; padding: 20px 28px 40px; margin: auto; }
+.setup-layout { max-width: 760px; padding: 20px max(28px, env(safe-area-inset-right)) max(40px, env(safe-area-inset-bottom)) max(28px, env(safe-area-inset-left)); margin: auto; }
 .bookplate { margin-top: 14px; padding: 32px clamp(24px, 6vw, 60px) 40px; text-align: center; }
 .bookplate h1 { margin: 8px 0 26px; font-size: clamp(1.7rem, 4vw, 2.2rem); line-height: 1.25; }
 .bookplate-ornament { display: block; margin-top: 18px; font-size: 26px; color: var(--color-accent-3); }

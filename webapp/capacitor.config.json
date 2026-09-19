@@ -1,0 +1,13 @@
+{
+  "appId": "com.jeffnovotny.pathsofwonder",
+  "appName": "Paths of Wonder",
+  "webDir": "dist",
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#eee5d4",
+    "preferredContentMode": "mobile"
+  },
+  "server": {
+    "hostname": "localhost"
+  }
+}

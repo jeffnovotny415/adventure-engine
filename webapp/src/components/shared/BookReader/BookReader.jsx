@@ -42,6 +42,10 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       cancelTurn();
       const gap = parseFloat(getComputedStyle(columns).columnGap) || 0;
       const width = viewport.clientWidth;
+      // WebKit needs an explicit width to fragment a single-column passage.
+      // Keep the same computed page width for phone pages and tablet spreads.
+      const visibleColumns = Number.parseInt(getComputedStyle(columns).columnCount, 10) || 1;
+      columns.style.columnWidth = `${(width - gap * (visibleColumns - 1)) / visibleColumns}px`;
       const step = width + gap;
       const count = Math.max(1, Math.ceil((columns.scrollWidth + gap - 1) / step));
       setLayout((current) => current.count === count && current.step === step ? current : { count, step });

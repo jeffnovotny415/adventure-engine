@@ -3,8 +3,9 @@
 The current implementation of Paths of Wonder lives here. iPhone and iPad are
 the design targets: landscape phone reading uses one page, and sufficiently
 large landscape tablets show facing pages. Portrait remains usable. Desktop is
-a development preview. A native iOS wrapper, signing, distribution, and device
-integration are separate work, not implemented by this responsive web app.
+a development preview. The Capacitor iOS project is in `ios/`; see the
+[iOS build and release guide](ios/README.md). Physical-device verification and
+App Store distribution remain separate release steps.
 
 V1 contains only Jeff's authored stories. AI-generated storytelling belongs to
 a separate V2 release. Preserve every story's wording, title, choices, intro
@@ -44,8 +45,8 @@ not configured by the workflow.
 
 Current story diagnostics report nine warnings: eight missing optional intros
 and one group of 18 unreachable Mage scenes. These are visible in the normal
-check output; strict mode fails while they remain. Jeff must decide their
-content changes. See [the exact findings](../STORY_DIAGNOSTICS.md).
+check output; strict mode fails while they remain. Jeff confirmed these are expected work in progress while he writes the
+stories and connects his outlines. Keep them informational. See [the exact findings](../STORY_DIAGNOSTICS.md).
 
 ## Project map
 
@@ -67,16 +68,19 @@ sources. They are not the web reader's live content.
 
 ## Saved progress and recovery
 
-There is one bookmark per browser origin, stored under `paths_of_wonder_save`
-in localStorage. Starting another book replaces valid progress. Names, scene,
-flags, and inventory are saved; the current subpage and text-size selection are
-not persisted across reloads. Different domains/ports have separate bookmarks;
-there is no cloud sync or native storage layer.
+Each book has its own bookmark under `paths_of_wonder_save` in localStorage.
+Opening another book preserves existing progress. Each bookmark stores names,
+scene, flags, inventory, a paragraph/character reading anchor, and text size.
+The anchor restores the passage across reloads and adapts to the current screen
+size. Existing single-book saves migrate on the next successful write.
+Different browser origins and the installed iOS app have separate libraries;
+there is no cloud sync or cross-install transfer.
 
-Invalid or newer-format bookmarks offer recovery without automatic deletion.
+Invalid or newer-format libraries offer recovery without automatic deletion.
+The explicit reset clears all saved bookmarks and is labeled accordingly.
 Write failures leave the current scene intact and offer retry. Stale retries
 check the previously read bytes before changing storage; this is not an atomic
-cross-tab transaction. Ending entry clears its bookmark; failed cleanup leaves
+cross-tab transaction. Ending entry clears only that book’s bookmark; failed cleanup leaves
 the ending readable and offers retry. Author preview does not write or delete
 saved progress. A React render/lifecycle error offers a return to the bookshelf;
 that recovery does not write storage. It cannot recover failures before the
@@ -104,7 +108,7 @@ JavaScript bundle loads.
 6. Compare `src/data/`, root `stories.py`, and root `drafts/` against the pre-change
    commit byte-for-byte after presentation work. Preserve illustration assets.
 
-Fonts and illustrations are local assets, but there is no service worker or
-installed offline cache. A previously loaded page may keep working without a
-network; cold offline launch is not guaranteed. There is no backend deployment,
-App Store package, or automatic publishing in these checks.
+The browser build has no service worker, so its cold offline launch is not
+guaranteed. The iOS build bundles stories, fonts, scripts, and illustrations for
+launch without a development server. Neither build uses an AI service or
+backend. These commands do not upload or publish the app.

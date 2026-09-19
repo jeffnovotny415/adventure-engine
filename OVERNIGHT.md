@@ -262,3 +262,17 @@ protected files still match f7a5d4e byte-for-byte.
 Native work is in progress: simulator and unsigned Release builds compile. Native
 reading checks exposed WebKit pagination clipping and safe-area spacing to resolve
 before the wrapper can be considered ready for device testing.
+
+Bookmark batch pushed as `0af1fc7`; hosted checks passed at
+https://github.com/jeffnovotny415/adventure-engine/actions/runs/35447028591.
+
+Native foundation batch: Capacitor 8.4.3 pinned with zero audit findings,
+`com.jeffnovotny.pathsofwonder`, team J29FAX7T97 (from Reforge), iOS 17 minimum,
+iPhone/iPad orientations, bundled offline assets, warm launch screen and book
+icon, build/sync commands, and release guide. All 84 tests and both unsigned
+simulator/device Release builds pass. Native test found single-column WebKit
+clipping; explicit column width is implemented but its final visual verification
+is pending because native window controls and browser testing became unavailable.
+Safe-area spacing improved in the observed landscape iPhone view. No TestFlight
+upload or signed archive is claimed. Resume from the verification checklist in
+webapp/ios/README.md after Mac controls reconnect. All protected assets unchanged.

@@ -3,7 +3,7 @@
 > **Current app: Paths of Wonder.** Development is in [`webapp/`](webapp/README.md),
 > designed for landscape iPhone and iPad reading. V1 uses entirely authored
 > stories; AI-generated storytelling is reserved for a separate V2 release.
-> The responsive web app does not yet include a native iOS wrapper.
+> An iOS project is now available in `webapp/ios/` for device and release testing.
 > The sections below describe the original Python prototype. See the
 > [web-app guide](webapp/README.md) for setup, checks, and release requirements.
 
