@@ -47,9 +47,9 @@ against overwriting invalid saves during new-game setup.
    verification requirement; no additional confirmed reader defect is queued.
 3. Read-only story diagnostics completed in the fifth batch below. Author
    decisions remain in STORY_DIAGNOSTICS.md; do not repair that content.
-4. Build/release setup implemented in the sixth batch below. Verify its first
-   GitHub Actions run after pushing, then finish the overnight report. All queued
-   confirmed code defects have been addressed; authoring/device checks remain.
+4. Build/release setup complete. The first hosted Node 24 CI run passed.
+   All queued confirmed code defects have been addressed; authoring/device
+   checks remain. Overnight automation is PAUSED; see the final handoff below.
 
 ## Confirmed authored-content findings — report, do not change
 
@@ -183,7 +183,7 @@ past the requested overnight window.
   validate the runtime import registry, images, prose quality, or all flag states;
   these limits are documented. Next: build/release checks and project docs.
 
-- September 19, sixth overnight batch (commit `ci: add repeatable web app release checks`):
+- September 19, sixth overnight batch (`487cdae`, `ci: add repeatable web app release checks`):
   confirmed no CI workflow and a Vite-template README. Added a read-only GitHub
   Actions workflow for main pushes/PRs/manual runs, official actions pinned to
   verified commit SHAs, Node 24 selection, locked `npm ci`, combined `npm run check`,
@@ -199,5 +199,46 @@ past the requested overnight window.
   loaded fonts/illustration, enlarged the image, turned pages, followed an authored
   choice into its ending, and passed phone/tablet/portrait and larger-text checks
   with no console errors or horizontal overflow. Used author preview, not saves.
-  All 15 protected files still match `f7a5d4e`. First hosted Node 24 CI result is
-  pending the push and must be recorded before calling the overnight work done.
+  All 15 protected files still match `f7a5d4e`. The first hosted Node 24 CI run
+  passed: https://github.com/jeffnovotny415/adventure-engine/actions/runs/35427857739
+
+## Final overnight handoff
+
+Completed all confirmed implementation items in this queue and paused
+`paths-of-wonder-overnight-fixes` early, as authorized when the work is finished.
+Every completed batch is pushed to origin/main. No story text, title, choice,
+intro, Python story, draft, or illustration asset changed. V1 remains authored
+content only; no AI feature or native wrapper was introduced.
+
+| Commit | Shipped |
+| --- | --- |
+| `a3043f1` | Recoverable save writes/deletes, retries, stale-action checks |
+| `74ad244` | React runtime recovery back to the bookshelf |
+| `ddba59f` | Reading-position anchors through text resizing and rotation |
+| `03929af` | Multi-pointer swipe cancellation and choice-return keyboard focus |
+| `50668c4` | Read-only story diagnostics and authoring report |
+| `487cdae` | CI, combined checks, Node selection, and project/release docs |
+
+Verification: 75 Node tests pass; lint, diagnostics, and production build pass.
+A fresh isolated local installation and a hosted Linux/Node 24 installation pass.
+All 28 synthetic browser gesture cases pass. Phone/tablet/portrait, larger text,
+rotation, illustration viewer, keyboard focus, and production preview checks
+passed. The 15 tracked protected data/draft/public files match baseline
+`f7a5d4e` byte-for-byte. CI reports 0 structural story errors and the 9 documented
+warnings; strict authoring checks intentionally fail while those warnings remain.
+
+Remaining release work requires Jeff or actual devices, not further speculative
+code changes tonight:
+
+- Jeff's authoring decisions: 18 disconnected Mage scenes, eight missing optional
+  intro references, and unfinished Can Opener ending notes. Exact locations are
+  in STORY_DIAGNOSTICS.md. Nothing was repaired or rewritten on Jeff's behalf.
+- Physical iPhone/iPad Safari testing, especially real multi-touch/pinch behavior,
+  VoiceOver, system text scaling, and safe areas. Browser emulation and synthetic
+  pointers do not certify these. The checklist is in webapp/README.md.
+- A native iOS wrapper, App Store distribution, offline cold launch, cloud sync,
+  and in-scene bookmarks across restarts are not implemented; they were outside
+  this confirmed-fix queue. Responsive web changes do not imply native support.
+
+No further confirmed code defect remains in this overnight queue. This is not
+an exhaustive guarantee against future bugs or a declaration of release readiness.
