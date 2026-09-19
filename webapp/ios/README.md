@@ -141,3 +141,17 @@ Physical pinch verification remains outstanding; a config check does not certify
 real touch behavior. The earlier iPad reading/viewer checks above still describe
 the unchanged web UI. The unsigned archive is ready for packaging inspection;
 signed distribution and TestFlight remain deferred until Jeff is ready.
+
+Direct-device follow-up: a Release build of be3151e was development-signed with
+Jeff's existing team and installed on his paired iPhone 16 Pro (iOS 26.6.2).
+Developer Mode was already enabled. The bundle check passed with 101 identical
+production assets, and strict code-signature verification passed. Apple's device
+tools confirmed installation and successful launch. This is a direct development
+installation, not a TestFlight upload; physical interaction and accessibility
+checks still need to be exercised on the phone.
+
+For a future direct update, connect the phone to Xcode, run `npm run ios:sync`,
+select that iPhone as the destination with the existing team and automatic
+signing, then build/run. Keep the bundle identifier unchanged and install over
+the existing app to retain its local bookmarks. Do not uninstall as an update
+step. Development signing must remain valid for the app to keep launching.

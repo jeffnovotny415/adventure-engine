@@ -320,3 +320,14 @@ larger text, Previous and portrait reflow pass. iPad relaunch preserves its
 bookmark; further interactions hit a simulator window-coordinate tool error.
 Real touch/pinch, VoiceOver, Reduce Motion and airplane-mode device checks remain.
 No signed archive or TestFlight upload was attempted.
+
+## September 19 direct iPhone installation
+
+At Jeff's request, built be3151e in Release configuration using his existing
+development identity and team, with automatic provisioning for his paired
+iPhone 16 Pro. The signed app passed compiled-bundle validation (101 identical
+production assets) and strict code-signature verification. Apple's device tools
+confirmed installation and successful launch on iOS 26.6.2. No TestFlight upload
+or signed archive was needed. All 15 protected files still match f7a5d4e
+byte-for-byte. Physical touch, accessibility and airplane-mode checks remain for
+on-device testing; successful launch alone does not certify them.
