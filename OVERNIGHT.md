@@ -47,9 +47,9 @@ against overwriting invalid saves during new-game setup.
    verification requirement; no additional confirmed reader defect is queued.
 3. Read-only story diagnostics completed in the fifth batch below. Author
    decisions remain in STORY_DIAGNOSTICS.md; do not repair that content.
-4. Build/release checks and accurate project documentation. No `.github` checks
-   were present in the initial inventory; `webapp/README.md` is still the Vite
-   template. Add focused checks/documentation if useful, not a framework rewrite.
+4. Build/release setup implemented in the sixth batch below. Verify its first
+   GitHub Actions run after pushing, then finish the overnight report. All queued
+   confirmed code defects have been addressed; authoring/device checks remain.
 
 ## Confirmed authored-content findings — report, do not change
 
@@ -165,7 +165,7 @@ past the requested overnight window.
   files remain identical to baseline `f7a5d4e`. No console errors in the app check.
   Next: read-only story graph diagnostics and build/release documentation/checks.
 
-- September 19, fifth overnight batch (commit `feat: add read-only authored story diagnostics`):
+- September 19, fifth overnight batch (`50668c4`, `feat: add read-only authored story diagnostics`):
   added `npm run check:stories`, JSON output, and optional strict warning failure.
   The checker reads the live indexed JSON files without writing them; validates
   shapes and links; reports missing optional intros, disconnected scenes, dead
@@ -182,3 +182,22 @@ past the requested overnight window.
   changed, so the prior device-layout checks remain applicable. The tool does not
   validate the runtime import registry, images, prose quality, or all flag states;
   these limits are documented. Next: build/release checks and project docs.
+
+- September 19, sixth overnight batch (commit `ci: add repeatable web app release checks`):
+  confirmed no CI workflow and a Vite-template README. Added a read-only GitHub
+  Actions workflow for main pushes/PRs/manual runs, official actions pinned to
+  verified commit SHAs, Node 24 selection, locked `npm ci`, combined `npm run check`,
+  and a check for unintended tracked-source modifications. No deployment or
+  publishing step. Added `.nvmrc` and Node engine metadata without dependency
+  version changes. Replaced the web README with actual setup, architecture,
+  storage limitations, authored-content rules, and release/device verification.
+  Added a current-app notice above the preserved Python prototype README.
+  All 75 tests, lint, diagnostics (0 errors / 9 known warnings), and build pass,
+  including a fresh `npm ci` in an isolated temporary copy on local Node 26.5.0.
+  npm 11 reported an unapproved optional fsevents install script; installation
+  and all checks succeeded without approving it. Production preview on port 5191
+  loaded fonts/illustration, enlarged the image, turned pages, followed an authored
+  choice into its ending, and passed phone/tablet/portrait and larger-text checks
+  with no console errors or horizontal overflow. Used author preview, not saves.
+  All 15 protected files still match `f7a5d4e`. First hosted Node 24 CI result is
+  pending the push and must be recorded before calling the overnight work done.

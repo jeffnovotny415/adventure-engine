@@ -1,4 +1,12 @@
 # Adventure Engine
+
+> **Current app: Paths of Wonder.** Development is in [`webapp/`](webapp/README.md),
+> designed for landscape iPhone and iPad reading. V1 uses entirely authored
+> stories; AI-generated storytelling is reserved for a separate V2 release.
+> The responsive web app does not yet include a native iOS wrapper.
+> The sections below describe the original Python prototype. See the
+> [web-app guide](webapp/README.md) for setup, checks, and release requirements.
+
 A branching interactive fiction engine built in Python. Write a story world once — scenes, choices, and paths — and the engine handles the rest.
 
 ## Why I Built This
