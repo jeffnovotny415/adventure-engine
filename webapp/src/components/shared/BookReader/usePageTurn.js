@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react';
+import { flushSync } from 'react-dom';
 import { createPageTurn, shouldCompleteSwipe, swipeProgress } from './pageTurn';
 
 function release(gesture) {
@@ -40,7 +41,12 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
   function finish(target, complete) {
     const turn = turnRef.current;
     const done = () => {
-      if (complete) onPageChange(target);
+      if (complete) {
+        // Commit the destination underneath before the Web Animation removes
+        // its temporary leaf. A batched update can briefly expose the old page.
+        if (turn) flushSync(() => onPageChange(target));
+        else onPageChange(target);
+      }
       turnRef.current = null;
     };
     if (turn) turn.settle(complete, done);

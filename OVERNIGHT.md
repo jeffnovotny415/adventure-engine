@@ -351,3 +351,14 @@ protected files remain byte-identical to f7a5d4e. These scripted event tests do
 not replace Jeff's confirmation of real finger tracking on the phone.
 Installed the signed update over the existing iPhone app without uninstalling;
 Apple's device tools confirmed successful installation and launch.
+
+Jeff confirmed the swipe fix works on his physical iPhone, then reported a
+brief settling/reloading feel. A second regression proved that removing the
+animation exposed page 1 before React committed page 2. Animated completions
+now synchronously commit the destination before removing the temporary leaf;
+reduced-motion turns retain their immediate path. The regression fails before
+the fix and passes afterward at the actual cleanup boundary. All 63 browser
+gesture checks pass across the same phone/tablet/portrait and text/motion matrix,
+alongside 84 Node tests, lint, diagnostics, production and signed device builds.
+Bundle/signature checks pass and protected content is unchanged. No story text
+or animation artwork was altered.

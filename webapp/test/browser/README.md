@@ -17,6 +17,10 @@ the child's bubbled event cancelled the swipe and left page 1 visible.
 Use `?large` to repeat the cases with larger reading text, including 390×844
 portrait. Query flags can be combined (`?large&reduced`).
 
+The animation handoff case checks the real page at the instant the temporary
+leaf is removed. It must already be page 2; checking only the eventual page
+number misses a flash of the old text during React's batched update.
+
 These are synthetic DOM pointer events with modeled pointer capture. They check
 React event routing and cleanup, not OS/browser touch arbitration. Before an iOS
 release, also test actual iPhone/iPad horizontal drags, aborted/reversed swipes,

@@ -57,24 +57,34 @@ export function Fixture() {
     if (kind === 'pointer cancellation') pointer(viewport, 'pointercancel', end);
     if (kind === 'capture loss') pointer(viewport, 'lostpointercapture', end);
     if (kind === 'window blur') window.dispatchEvent(new Event('blur'));
+    let exposedStatus = null;
+    const overlay = viewport.querySelector('.page-turn-overlay');
+    if (kind === 'animation handoff' && overlay) {
+      const remove = overlay.remove.bind(overlay);
+      overlay.remove = () => {
+        exposedStatus = document.querySelector('.page-status').textContent;
+        remove();
+      };
+    }
     pointer(viewport, 'pointerup', end);
     await settled();
     const status = document.querySelector('.page-status').textContent;
-    const completes = kind === 'completed swipe' || captureTransfer;
+    const completes = kind === 'completed swipe' || kind === 'animation handoff' || captureTransfer;
     const expected = completes ? '2 / ' : '1 / ';
     const clean = !viewport.hasAttribute('data-dragging') && !document.querySelector('.page-turn-overlay') && captured.size === 0;
-    const passed = status.startsWith(expected) && clean;
+    const coherent = kind !== 'animation handoff' || !overlay || exposedStatus?.startsWith(expected);
+    const passed = status.startsWith(expected) && clean && coherent;
     // A cancelled gesture must not leave the regular Next button locked.
     if (passed && !completes) {
       document.querySelector('.reader-footer-next button').click();
       await settled();
     }
     const reusable = completes || document.querySelector('.page-status').textContent.startsWith('2 / ');
-    setResult(`${passed && reusable ? 'PASS' : 'FAIL'}: ${kind}; after gesture ${status}; cleaned up ${clean}; next usable ${reusable}`);
+    setResult(`${passed && reusable ? 'PASS' : 'FAIL'}: ${kind}; after gesture ${status}; cleaned up ${clean}; next usable ${reusable}${kind === 'animation handoff' ? `; page exposed at cleanup ${exposedStatus ?? 'no animation'}` : ''}`);
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
     <BookReader key={generation} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{}} largeText={new URLSearchParams(location.search).has('large')} onHome={()=>{}} onChoose={()=>{}} onToggleTextSize={()=>{}} />
   </>;
