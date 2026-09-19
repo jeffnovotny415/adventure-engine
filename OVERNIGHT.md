@@ -300,3 +300,23 @@ server check confirmed web source remains watched, native output is absent from
 the watch set, and updating generated index.html emits no native watch event.
 The native build, 84 tests, lint, story diagnostics and production build pass.
 All 15 protected files continue to match f7a5d4e byte-for-byte.
+
+## September 19 build-readiness follow-up
+
+Jeff requested continued build preparation while he finishes authoring; TestFlight
+is deferred. Confirmed Capacitor defaults native pinch zoom off and explicitly
+enabled ios.zoomEnabled. Added an unsigned Release archive command and compiled-
+bundle validation for matching production assets/configuration, local launch,
+native zoom, iPhone/iPad families and orientations, icon and launch resources.
+The GitHub workflow now also builds the simulator app and unsigned device archive
+on macOS; no signing or upload is configured.
+
+Local verification: 84 tests, lint, expected story diagnostics, production build,
+Debug simulator build and Release archive pass. Both compiled apps contain 101
+byte-identical production assets. Temporary copied-archive negative checks reject
+disabled zoom, a remote server URL, modified index.html and an extra stale file.
+All 15 protected files match f7a5d4e byte-for-byte. iPhone relaunch/bookmark resume,
+larger text, Previous and portrait reflow pass. iPad relaunch preserves its
+bookmark; further interactions hit a simulator window-coordinate tool error.
+Real touch/pinch, VoiceOver, Reduce Motion and airplane-mode device checks remain.
+No signed archive or TestFlight upload was attempted.

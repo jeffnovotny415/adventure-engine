@@ -1,4 +1,4 @@
-name: Web app checks
+name: App checks
 
 on:
   push:
@@ -32,4 +32,27 @@ jobs:
       - run: npm ci
       - run: npm run check
       - name: Verify checks did not modify tracked sources
+        run: git diff --exit-code
+
+  ios:
+    runs-on: macos-26
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: webapp
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: webapp/.nvmrc
+          cache: npm
+          cache-dependency-path: webapp/package-lock.json
+      - run: npm ci
+      - name: Build and verify simulator app
+        run: npm run ios:build
+      - name: Archive and verify unsigned device app
+        run: npm run ios:archive
+      - name: Verify builds did not modify tracked sources
         run: git diff --exit-code

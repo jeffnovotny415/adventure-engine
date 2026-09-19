@@ -13,7 +13,8 @@
     "check": "npm run lint && npm test && npm run check:stories && npm run build",
     "ios:sync": "npm run build && cap sync ios",
     "ios:open": "cap open ios",
-    "ios:build": "npm run ios:sync && xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -destination \"generic/platform=iOS Simulator\" -derivedDataPath ios/DerivedData -packageAuthorizationProvider netrc CODE_SIGNING_ALLOWED=NO build"
+    "ios:build": "npm run ios:sync && xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -destination \"generic/platform=iOS Simulator\" -derivedDataPath ios/DerivedData -packageAuthorizationProvider netrc CODE_SIGNING_ALLOWED=NO build && node scripts/check-ios-bundle.js ios/DerivedData/Build/Products/Debug-iphonesimulator/App.app",
+    "ios:archive": "npm run ios:sync && xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release -destination \"generic/platform=iOS\" -derivedDataPath ios/DerivedData -archivePath ios/DerivedData/Archives/PathsOfWonder.xcarchive -packageAuthorizationProvider netrc CODE_SIGNING_ALLOWED=NO archive && node scripts/check-ios-bundle.js ios/DerivedData/Archives/PathsOfWonder.xcarchive/Products/Applications/App.app"
   },
   "dependencies": {
     "@capacitor/core": "8.4.3",

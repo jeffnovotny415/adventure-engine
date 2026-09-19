@@ -47,6 +47,27 @@ not certify networking, real multi-touch, VoiceOver, or system text scaling.
 
 ## Archive and TestFlight handoff
 
+To check Release packaging while the stories are still being written:
+
+```sh
+npm run ios:archive
+```
+
+This rebuilds the web app and creates an **unsigned** device archive at
+`ios/DerivedData/Archives/PathsOfWonder.xcarchive`. It needs no Apple account,
+provisioning profile, or App Store Connect record. It cannot be installed or
+uploaded as-is; its purpose is to catch device compilation and packaging failures
+before distribution. Rerunning the command replaces this generated archive.
+
+Both `ios:build` and `ios:archive` inspect the compiled app: every production web
+asset must match the current build byte-for-byte, unexpected stale assets fail,
+the native configuration must match, and local launch, pinch zoom, both device
+families, supported orientations, icon resources, and launch screen are checked.
+The GitHub workflow runs both commands on macOS, alongside the web checks on
+Linux. It does not sign, upload, or distribute builds.
+
+When the stories and physical-device checks are ready:
+
 1. Run the web checks and simulator build above. Exercise landscape phone/tablet,
    portrait, large text, page turns, illustration zoom, choices, and save resume.
 2. In Xcode, select the App target, Jeff's team, and automatic signing. The bundle
@@ -104,3 +125,19 @@ reverse/cancel, multi-touch/pinch, image panning, Reduce Motion, VoiceOver, and
 system text sizing. Also run a physical cold launch in airplane mode and complete
 signing/archive and App Store Connect setup. No upload or signed archive has
 been performed.
+
+Build-readiness follow-up: enabled native pinch zoom explicitly (Capacitor's
+default disables it). The updated Debug simulator app and unsigned Release
+archive both pass the bundle check with 101 identical production assets. On a
+temporary copy of the archive, the check correctly rejected disabled zoom, a
+remote server URL, modified index.html, and a stale extra asset. The actual
+archive was not modified. All 84 web tests still pass, and protected content
+matches f7a5d4e byte-for-byte.
+
+The rebuilt iPhone app resumes larger-text reading, Previous works, and normal
+portrait retains the passage. The rebuilt iPad launches with its saved bookmark;
+further interaction this run was blocked by simulator window-coordinate errors.
+Physical pinch verification remains outstanding; a config check does not certify
+real touch behavior. The earlier iPad reading/viewer checks above still describe
+the unchanged web UI. The unsigned archive is ready for packaging inspection;
+signed distribution and TestFlight remain deferred until Jeff is ready.

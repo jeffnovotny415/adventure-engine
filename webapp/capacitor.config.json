@@ -3,6 +3,7 @@
   "appName": "Paths of Wonder",
   "webDir": "dist",
   "ios": {
+    "zoomEnabled": true,
     "contentInset": "never",
     "backgroundColor": "#eee5d4",
     "preferredContentMode": "mobile"
