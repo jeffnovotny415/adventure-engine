@@ -45,8 +45,8 @@ against overwriting invalid saves during new-game setup.
    cancellation defect are fixed (third/fourth batches below). Browser illustration
    and gesture checks passed. Physical iPhone/iPad multi-touch remains a release
    verification requirement; no additional confirmed reader defect is queued.
-3. Read-only story graph diagnostics and useful author-facing reporting. Do not
-   repair story links, add intros, rewrite placeholders, or fabricate endings.
+3. Read-only story diagnostics completed in the fifth batch below. Author
+   decisions remain in STORY_DIAGNOSTICS.md; do not repair that content.
 4. Build/release checks and accurate project documentation. No `.github` checks
    were present in the initial inventory; `webapp/README.md` is still the Vite
    template. Add focused checks/documentation if useful, not a framework rewrite.
@@ -143,7 +143,7 @@ past the requested overnight window.
   placement. In-scene position is not persisted across app restarts. Browser
   checks only; multi-touch behavior still needs the remaining gesture audit.
 
-- September 19, fourth overnight batch (commit `fix: cancel multi-pointer swipes and restore reader focus`):
+- September 19, fourth overnight batch (`03929af`, `fix: cancel multi-pointer swipes and restore reader focus`):
   reproduced Back to the passage leaving document.body focused. Returning now
   focuses the reader footer; Tab reaches Previous without scrolling columns
   sideways. Verified 667×375 normal/larger text, 1024×768 tablet, and rotation
@@ -164,3 +164,21 @@ past the requested overnight window.
   Fixture code is absent from production assets. All 15 protected content/asset
   files remain identical to baseline `f7a5d4e`. No console errors in the app check.
   Next: read-only story graph diagnostics and build/release documentation/checks.
+
+- September 19, fifth overnight batch (commit `feat: add read-only authored story diagnostics`):
+  added `npm run check:stories`, JSON output, and optional strict warning failure.
+  The checker reads the live indexed JSON files without writing them; validates
+  shapes and links; reports missing optional intros, disconnected scenes, dead
+  ends, ending choices, and paths to endings. Cycles with exits are allowed;
+  reachability explicitly ignores flag gating and stops at declared endings.
+  Current result: 0 errors, 9 warnings (eight intro refs plus one grouped list
+  of 18 unreachable Mage scenes). No missing choice destinations. Default exits
+  0; strict exits 1 as intended. STORY_DIAGNOSTICS.md records exact source/choice/
+  destination/intro IDs and the three Can Opener unfinished ending notes for Jeff.
+  Added eight meaningful diagnostics/CLI tests, including frozen-input immutability,
+  cycles/trapped loops, malformed shapes, flag limitations, exit codes, and exact
+  live-file byte preservation. All 75 tests, lint, production build, and diff
+  checks pass. All 15 protected files remain identical to `f7a5d4e`. No reader UI
+  changed, so the prior device-layout checks remain applicable. The tool does not
+  validate the runtime import registry, images, prose quality, or all flag states;
+  these limits are documented. Next: build/release checks and project docs.
