@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { swipeProgress, shouldCompleteSwipe } from '../src/components/shared/BookReader/pageTurn.js';
+import { swipeProgress, shouldCompleteSwipe, pageTapAction, leafAppearance } from '../src/components/shared/BookReader/pageTurn.js';
 
 test('the grabbed point projects to the finger position across the turn', () => {
   for (const grab of [90, 240, 450]) {
@@ -33,4 +33,27 @@ test('deliberate drags complete on both phone and tablet', () => {
 test('a quick flick can complete without a long drag', () => {
   assert.equal(shouldCompleteSwipe(30, 500, .8), true);
   assert.equal(shouldCompleteSwipe(30, 500, .3), false);
+});
+
+test('tap zones have a quiet middle for reading controls and bounded page edges', () => {
+  for (const width of [300, 667, 1024]) {
+    assert.equal(pageTapAction(width * .15, width), 'previous');
+    assert.equal(pageTapAction(width * .5, width), 'settings');
+    assert.equal(pageTapAction(width * .85, width), 'next');
+    assert.equal(pageTapAction(-1, width), null);
+    assert.equal(pageTapAction(width + 1, width), null);
+  }
+  assert.equal(pageTapAction(0, 0), null);
+});
+
+test('the single-page leaf clears the binding edge and all resting shadows disappear', () => {
+  assert.equal(leafAppearance(0, false).opacity, 1);
+  assert.equal(leafAppearance(.5, false).opacity, 1);
+  assert.equal(leafAppearance(.6, false).opacity, 0);
+  assert.equal(leafAppearance(1, false).opacity, 0);
+  assert.equal(leafAppearance(.6, true).opacity, 1);
+  for (const spread of [false, true]) {
+    assert.equal(leafAppearance(0, spread).boxShadow, '0 0 0px rgba(51, 41, 31, 0)');
+    assert.equal(leafAppearance(1, spread).boxShadow, '0 0 0px rgba(51, 41, 31, 0)');
+  }
 });

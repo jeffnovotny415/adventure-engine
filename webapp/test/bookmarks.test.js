@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createEmptySave, migrateSave } from '../src/state/saveSchema.js';
 import { createGameSession } from '../src/state/gameSession.js';
 import { loadSave, startSavedGame, discardInvalidSave } from '../src/state/storage.js';
+import { readingTextScale, TEXT_SCALES } from '../src/state/readingPreferences.js';
 const link = { next_scene:'end' };
 const stories = Object.fromEntries(['a','b','c'].map(id=>[id,{id,scenes:{start:{choices:{1:link}},end:{ending:true}}}]));
 function fixture(initial = null) {
@@ -70,4 +71,34 @@ test('malformed or future libraries are preserved and cannot be overwritten',()=
 test('invalid reading positions/text preferences cannot enter a save',()=>{
   for(const readingPosition of [{paragraph:-1,offset:0},{paragraph:0,offset:-1},{paragraph:1.5,offset:0},[],{paragraph:Infinity,offset:0}])assert.equal(migrateSave({...legacy(),readingPosition},stories).status,'invalid');
   assert.equal(migrateSave({...legacy(),uiPrefs:{largeText:'yes'}},stories).status,'invalid');
+});
+
+test('legacy larger text remains readable and each supported size survives a restart', () => {
+  assert.equal(readingTextScale(migrateSave(legacy(), stories).save.uiPrefs), 1);
+  assert.equal(readingTextScale(migrateSave({...legacy(),uiPrefs:{largeText:true}},stories).save.uiPrefs), 1.28);
+  const storage=fixture(), session=createGameSession(stories,storage);
+  start(session,'a'); start(session,'b');
+  for (const textScale of TEXT_SCALES) {
+    session.continueGame('a');
+    session.updateReading({readingPosition:{paragraph:8,offset:7},uiPrefs:{textScale}});
+    const restored=createGameSession(stories,storage).continueGame('a').save;
+    assert.equal(readingTextScale(restored.uiPrefs),textScale);
+    assert.deepEqual(restored.readingPosition,{paragraph:8,offset:7});
+    assert.equal(readingTextScale(loadSave(stories,storage,'b').save.uiPrefs),1);
+  }
+});
+
+test('invalid sizes and failed size writes preserve the previous bookmark', () => {
+  const storage=fixture(),session=createGameSession(stories,storage); start(session,'a');
+  const before=storage.getItem();
+  for(const textScale of [0,-1,100,1.3,'2',null,Infinity,NaN]) {
+    assert.equal(session.updateReading({uiPrefs:{textScale}}).status,'ignored');
+    assert.equal(storage.getItem(),before);
+  }
+  storage.fail=true;
+  assert.equal(session.updateReading({uiPrefs:{textScale:2.25}}).status,'write_failed');
+  assert.equal(storage.getItem(),before);
+  assert.equal(readingTextScale(session.getSnapshot().save.uiPrefs),1);
+  storage.fail=false; session.retryPersistence();
+  assert.equal(readingTextScale(loadSave(stories,storage).save.uiPrefs),2.25);
 });

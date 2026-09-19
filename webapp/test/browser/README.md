@@ -32,3 +32,11 @@ For keyboard regression, use author preview in the normal app: reach choices,
 activate Back to the passage, and confirm focus returns to the reader footer.
 Tab should then reach Previous (or the remaining next-page control), with no
 sideways viewport jump. Test larger text and rotation as well.
+
+Reader controls: run the right/left edge taps, middle tap, and long press cases.
+Edges turn one page, the middle opens Reading settings without turning, and a
+long press must not turn. `?max` uses 225% text. Verify all cases at 667×375 and
+1024×768 with normal, reduced-motion and maximum text, plus 390×844 at maximum.
+In the real app, use Aa to change the slider, close with Done/Escape, reload and
+resume the book, and verify both the size and passage. Illustration taps must
+still open their viewer; maximum-size choices must remain scrollable.

@@ -24,11 +24,19 @@ export function Fixture() {
   const [generation, reset] = useState(0);
   const [result, setResult] = useState('Not run');
   const [running, setRunning] = useState(false);
+  const [textScale, setTextScale] = useState(() => {
+    const query = new URLSearchParams(location.search);
+    return query.has('max') ? 2.25 : query.has('large') ? 1.28 : 1;
+  });
   async function run(kind) {
     setRunning(true);
     setResult('Running');
     reset((n) => n + 1);
     await frame(); await frame();
+    if (kind === 'left edge tap') {
+      document.querySelector('.reader-footer-next button').click();
+      await settled();
+    }
     const viewport = document.querySelector('.reader-viewport');
     // Synthetic events have no OS pointer to capture. Model capture ownership,
     // while letting React and the document receive actual DOM PointerEvents.
@@ -37,17 +45,20 @@ export function Fixture() {
     viewport.hasPointerCapture = (id) => captured.has(id);
     viewport.releasePointerCapture = (id) => captured.delete(id);
     const rect = viewport.getBoundingClientRect();
-    const start = rect.left + rect.width * .85;
-    const end = rect.left + rect.width * .25;
+    const tap = kind.includes('tap') || kind === 'long press';
+    const start = rect.left + rect.width * (kind === 'left edge tap' ? .15 : kind === 'middle tap' ? .5 : .85);
+    const end = tap ? start : rect.left + rect.width * .25;
     const y = rect.top + 40;
     function pointer(target, type, x, extra = {}) {
-      target.dispatchEvent(new PointerEvent(type, { bubbles: true, cancelable: true, pointerType: 'touch', pointerId: 11, isPrimary: true, button: 0, clientX: x, clientY: y, ...extra }));
+      const event = new PointerEvent(type, { bubbles: true, cancelable: true, pointerType: 'touch', pointerId: 11, isPrimary: true, button: 0, clientX: x, clientY: y, ...extra });
+      if (extra.testTime !== undefined) Object.defineProperty(event, 'timeStamp', { value: extra.testTime });
+      target.dispatchEvent(event);
     }
     const child = viewport.querySelector('.story-paragraph');
     const captureTransfer = kind === 'touch capture transfer';
-    const origin = captureTransfer ? child : viewport;
-    pointer(origin, 'pointerdown', start);
-    pointer(origin, 'pointermove', kind === 'vertical scroll' ? start - 3 : end,
+    const origin = captureTransfer || tap ? child : viewport;
+    pointer(origin, 'pointerdown', start, kind === 'long press' ? { testTime: 1000 } : {});
+    if (!tap) pointer(origin, 'pointermove', kind === 'vertical scroll' ? start - 3 : end,
       kind === 'vertical scroll' ? { clientY: y + 50 } : {});
     // Touch implicitly captures the initial text element. Once the reader
     // explicitly captures the drag, the old child's loss bubbles to it.
@@ -66,14 +77,18 @@ export function Fixture() {
         remove();
       };
     }
-    pointer(viewport, 'pointerup', end);
+    pointer(viewport, 'pointerup', end, kind === 'long press' ? { testTime: 1800 } : {});
     await settled();
     const status = document.querySelector('.page-status').textContent;
-    const completes = kind === 'completed swipe' || kind === 'animation handoff' || captureTransfer;
+    const completes = kind === 'completed swipe' || kind === 'animation handoff' || kind === 'right edge tap' || captureTransfer;
     const expected = completes ? '2 / ' : '1 / ';
     const clean = !viewport.hasAttribute('data-dragging') && !document.querySelector('.page-turn-overlay') && captured.size === 0;
     const coherent = kind !== 'animation handoff' || !overlay || exposedStatus?.startsWith(expected);
-    const passed = status.startsWith(expected) && clean && coherent;
+    const settings = document.querySelector('.reading-settings');
+    const settingsCorrect = kind === 'middle tap' ? Boolean(settings?.open) : !settings;
+    if (settings) settings.querySelector('.reading-settings__header button').click();
+    await frame();
+    const passed = status.startsWith(expected) && clean && coherent && settingsCorrect;
     // A cancelled gesture must not leave the regular Next button locked.
     if (passed && !completes) {
       document.querySelector('.reader-footer-next button').click();
@@ -84,9 +99,9 @@ export function Fixture() {
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
-    <BookReader key={generation} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{}} largeText={new URLSearchParams(location.search).has('large')} onHome={()=>{}} onChoose={()=>{}} onToggleTextSize={()=>{}} />
+    <BookReader key={generation} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{}} />
   </>;
 }
 createRoot(document.getElementById('root')).render(<StrictMode><Fixture /></StrictMode>);

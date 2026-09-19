@@ -155,3 +155,21 @@ select that iPhone as the destination with the existing team and automatic
 signing, then build/run. Keep the bundle identifier unchanged and install over
 the existing app to retain its local bookmarks. Do not uninstall as an update
 step. Development signing must remain valid for the app to keep launching.
+
+## Reading controls
+
+- Swipe left/right to turn the paper; a short drag returns to the current page.
+- Tap the left/right side of the text area to go back/forward. Tap the middle or
+  Aa to open Reading settings. Page turns stop at passage boundaries; choices
+  remain explicit actions.
+- Choose one of seven text sizes, from 100% to 225%, using the slider or A−/A+.
+  Each book retains its size. Older larger-text bookmarks map to the 128% setting.
+  Reflow preserves the reading anchor, and authored choice labels scale too.
+- Long presses, illustration controls, vertical scrolling and multi-touch keep
+  their existing purpose. When zoomed in, the reader yields horizontal panning
+  to the browser; page gestures resume after returning to normal zoom.
+
+These controls use the bundled reader. Native Dynamic Type integration, a full
+physical VoiceOver audit, and optional iPhone haptics remain follow-up work.
+Reduce Motion is already respected. The iPhone leaf fades once it crosses the
+binding, and its shadows disappear with it to avoid the reported edge sliver.

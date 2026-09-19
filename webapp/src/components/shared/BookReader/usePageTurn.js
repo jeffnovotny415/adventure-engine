@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useRef } from 'react';
 import { flushSync } from 'react-dom';
-import { createPageTurn, shouldCompleteSwipe, swipeProgress } from './pageTurn';
+import { createPageTurn, pageTapAction, shouldCompleteSwipe, swipeProgress } from './pageTurn';
 
 function release(gesture) {
   if (gesture?.element.hasPointerCapture(gesture.id)) gesture.element.releasePointerCapture(gesture.id);
 }
 
-export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChange }) {
+export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChange, onOpenSettings }) {
   const turnRef = useRef(null);
   const gestureRef = useRef(null);
   const suppressClickRef = useRef(false);
@@ -60,12 +60,12 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
   function onPointerDown(event) {
     if (!event.isPrimary) { cancelTurn(); return; }
     suppressClickRef.current = false;
-    if (turnRef.current || event.button !== 0 || event.target.closest('button, a, input, dialog')) return;
+    if (turnRef.current || (window.visualViewport?.scale ?? 1) > 1.05 || event.button !== 0 || event.target.closest('button, a, input, dialog')) return;
     const bounds = event.currentTarget.getBoundingClientRect();
     gestureRef.current = {
       id: event.pointerId, element: event.currentTarget, bounds,
       startX: event.clientX, startY: event.clientY, lastX: event.clientX,
-      lastTime: event.timeStamp, velocity: 0, started: false,
+      startTime: event.timeStamp, lastTime: event.timeStamp, velocity: 0, started: false,
     };
   }
   function onPointerMove(event) {
@@ -111,7 +111,19 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
     gestureRef.current = null;
     release(gesture);
     gesture.element.removeAttribute('data-dragging');
-    if (!gesture.started) return;
+    if (!gesture.started) {
+      // Long presses, selection, scrolling and pinches are reading actions,
+      // not taps. Native image/button taps never enter this gesture path.
+      if (event.timeStamp - gesture.startTime > 300 ||
+          Math.hypot(event.clientX - gesture.startX, event.clientY - gesture.startY) >= 10 ||
+          window.getSelection()?.isCollapsed === false) return;
+      const action = pageTapAction(event.clientX - gesture.bounds.left, gesture.bounds.width);
+      if (action === 'previous') turnPage(page - 1);
+      if (action === 'next') turnPage(page + 1);
+      if (action === 'settings') onOpenSettings?.();
+      suppressClickRef.current = Boolean(action);
+      return;
+    }
     const distance = Math.max(0, (event.clientX - gesture.startX) * gesture.direction);
     const velocity = event.timeStamp - gesture.lastTime < 100 ? gesture.velocity : 0;
     turnRef.current?.update(swipeProgress(distance, gesture.grabDistance),

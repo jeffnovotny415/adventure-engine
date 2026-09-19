@@ -362,3 +362,32 @@ gesture checks pass across the same phone/tablet/portrait and text/motion matrix
 alongside 84 Node tests, lint, diagnostics, production and signed device builds.
 Bundle/signature checks pass and protected content is unchanged. No story text
 or animation artwork was altered.
+
+## September 19 reading comfort and familiar gestures
+
+Jeff requested familiar e-reader gestures, adjustable font size, and more natural
+page motion, then reported a transient binding-edge line on forward/back turns.
+Added left/right text-area taps for page navigation and middle/Aa access to a
+focused reading-settings dialog. Seven text sizes (100–225%) persist per book;
+legacy larger-text saves remain supported. Choices scale alongside the prose,
+with reading anchors retained through reflow. Zoomed-in gestures yield to native
+panning, and long presses, vertical movement, second fingers and illustration
+buttons remain separate from page taps.
+
+The phone's leaf fades after crossing the binding, and its shadows fade with it;
+resting shadows have zero opacity. The tablet retains a visible reverse leaf.
+Motion remains brief and reduced-motion aware, with the prior capture-handoff
+and synchronized React/animation cleanup fixes preserved.
+
+Validation: 88 Node tests pass (including size persistence, malformed values,
+failed-save retry and leaf endpoints); 91 browser gesture cases pass across
+667×375 and 1024×768 normal/reduced-motion/225% modes, plus 390×844 at 225%.
+Verified saved 128% migration, 225% after reload, the same visible text anchor
+after resizing/rotation, maximum-size choice layout, and illustration viewer
+open/Actual size/close. No authored file was edited. Physical confirmation of
+the edge-line correction remains for Jeff's phone. Recommended future native
+work: Dynamic Type, physical VoiceOver checks and optional subtle haptics; none
+of those features is claimed as part of this reader update.
+The final signed Release build passed bundle and signature verification and was
+installed over Jeff's existing iPhone app; device tools confirmed launch. All 15
+protected story/draft/public files match f7a5d4e byte-for-byte.

@@ -11,6 +11,7 @@ import { SaveRecoveryScreen } from './components/screens/SaveRecoveryScreen/Save
 import { getScene, getSceneDisplayText, getAvailableChoices, isEnding } from './engine/sceneEngine';
 import { getStoryIndex, getStory } from './utils/storyData';
 import { themeKeyForStory, SHELL_THEME } from './utils/themeKey';
+import { readingTextScale } from './state/readingPreferences';
 
 const SCREENS = {
   HOME: 'home',
@@ -35,8 +36,8 @@ export default function App() {
   const [screen, setScreen] = useState(() => needsSaveRecovery(savedResult) ? SCREENS.SAVE_RECOVERY : SCREENS.HOME);
   const [pendingStoryId, setPendingStoryId] = useState(null);
   const [devTestState, setDevTestState] = useState(null);
-  const [previewLargeText, setPreviewLargeText] = useState(false);
-  const largeText = devTestState ? previewLargeText : Boolean(save?.uiPrefs.largeText);
+  const [previewTextScale, setPreviewTextScale] = useState(1);
+  const textScale = devTestState ? previewTextScale : readingTextScale(save?.uiPrefs);
 
   useEffect(() => {
     if (screen !== SCREENS.HOME) return;
@@ -129,9 +130,9 @@ export default function App() {
     goHome();
   }
 
-  function toggleTextSize() {
-    if (devTestState) setPreviewLargeText((current) => !current);
-    else updateReading({ uiPrefs: { largeText: !largeText } });
+  function changeTextScale(scale) {
+    if (devTestState) setPreviewTextScale(scale);
+    else updateReading({ uiPrefs: { textScale: scale, largeText: scale >= 1.28 } });
   }
 
   function handleDeveloperMode() {
@@ -209,8 +210,8 @@ export default function App() {
             choices={choices}
             onChoose={handleChoose}
             onHome={goHome}
-            largeText={largeText}
-            onToggleTextSize={toggleTextSize}
+            textScale={textScale}
+            onTextScaleChange={changeTextScale}
             initialReadingPosition={activeSave.readingPosition}
             onReadingPositionChange={devTestState ? undefined : (readingPosition) => updateReading({ readingPosition })}
             testing={Boolean(devTestState)}
@@ -229,8 +230,8 @@ export default function App() {
             image={displayText.image}
             onRestart={handleRestart}
             onHome={handleNewStory}
-            largeText={largeText}
-            onToggleTextSize={toggleTextSize}
+            textScale={textScale}
+            onTextScaleChange={changeTextScale}
             testing={Boolean(devTestState)}
           />
         </div>

@@ -1,3 +1,5 @@
+import { TEXT_SCALES } from './readingPreferences.js';
+
 export const SAVE_SCHEMA_VERSION = 1;
 
 export function createEmptySave() {
@@ -46,6 +48,7 @@ export function migrateSave(raw, stories) {
       (Object.hasOwn(raw.uiPrefs, 'hideButtonsWhileReading') &&
         typeof raw.uiPrefs.hideButtonsWhileReading !== 'boolean'))) return invalid('malformed');
   if (raw.uiPrefs && Object.hasOwn(raw.uiPrefs, 'largeText') && typeof raw.uiPrefs.largeText !== 'boolean') return invalid('malformed');
+  if (raw.uiPrefs && Object.hasOwn(raw.uiPrefs, 'textScale') && !TEXT_SCALES.includes(raw.uiPrefs.textScale)) return invalid('malformed');
   if (raw.readingPosition != null && (!isRecord(raw.readingPosition) ||
       !Number.isSafeInteger(raw.readingPosition.paragraph) || raw.readingPosition.paragraph < 0 ||
       !Number.isSafeInteger(raw.readingPosition.offset) || raw.readingPosition.offset < 0)) return invalid('malformed');
@@ -64,7 +67,8 @@ export function migrateSave(raw, stories) {
       flags: { ...raw.flags },
       inventory: [...(raw.inventory ?? [])],
       uiPrefs: { hideButtonsWhileReading: raw.uiPrefs?.hideButtonsWhileReading ?? false,
-        ...(Object.hasOwn(raw.uiPrefs ?? {}, 'largeText') ? { largeText: raw.uiPrefs.largeText } : {}) },
+        ...(Object.hasOwn(raw.uiPrefs ?? {}, 'largeText') ? { largeText: raw.uiPrefs.largeText } : {}),
+        ...(Object.hasOwn(raw.uiPrefs ?? {}, 'textScale') ? { textScale: raw.uiPrefs.textScale } : {}) },
     },
   };
 }

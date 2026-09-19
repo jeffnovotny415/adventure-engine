@@ -4,10 +4,11 @@ import { StoryTextPanel } from '../StoryTextPanel/StoryTextPanel';
 import { usePageTurn } from './usePageTurn';
 import { ChoiceButton } from '../ChoiceButton/ChoiceButton';
 import { captureReadingAnchor, pageForReadingAnchor } from './readingPosition';
+import { ReadingSettings } from './ReadingSettings';
 
 // Real columns preserve every paragraph and adapt to the device and text size.
 export function BookReader({ storyTitle, title, intro, body, image, choices, onChoose,
-  onHome, ending = false, onRestart, largeText, onToggleTextSize, testing = false,
+  onHome, ending = false, onRestart, textScale = 1, onTextScaleChange, testing = false,
   initialReadingPosition = null, onReadingPositionChange }) {
   const { getText } = useContent();
   const viewportRef = useRef(null);
@@ -23,14 +24,27 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   const [page, setPage] = useState(0);
   const [layout, setLayout] = useState({ count: 1, step: 0 });
   const [choosing, setChoosing] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [zoomed, setZoomed] = useState(() => (window.visualViewport?.scale ?? 1) > 1.05);
   const { turnPage, cancelTurn, gestureHandlers } = usePageTurn({
     viewportRef, columnsRef, page, layout,
+    onOpenSettings: () => setSettingsOpen(true),
     onPageChange: (target) => {
       if (target === 0 || target === layout.count - 1) footerRef.current?.focus({ preventScroll: true });
       captureAnchorRef.current = true;
       setPage(target);
     },
   });
+
+  useEffect(() => {
+    const viewport = window.visualViewport;
+    function resized() {
+      setZoomed((viewport?.scale ?? 1) > 1.05);
+      cancelTurn();
+    }
+    viewport?.addEventListener('resize', resized);
+    return () => viewport?.removeEventListener('resize', resized);
+  }, [cancelTurn]);
 
   useLayoutEffect(() => {
     if (choosing) return;
@@ -62,7 +76,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       observer.disconnect();
       images.forEach((img) => img.removeEventListener('load', measure));
     };
-  }, [choosing, largeText, title, intro, body, image, cancelTurn]);
+  }, [choosing, textScale, title, intro, body, image, cancelTurn]);
 
   useLayoutEffect(() => {
     const viewport = viewportRef.current;
@@ -92,14 +106,14 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     .replace('{current}', String(page + 1)).replace('{total}', String(layout.count));
 
   return (
-    <main className="reader-layout" data-large-text={largeText}>
+    <main className="reader-layout" style={{ '--reading-scale': textScale }}>
       <nav className="reader-nav" aria-label={getText('reader.navigation')}>
         <button type="button" className="text-button" onClick={onHome}>
           <span aria-hidden="true">← </span>{getText('reader.bookshelf')}
         </button>
         <span className="reader-nav-title">{testing ? getText('reader.test_preview') : storyTitle}</span>
         <button type="button" className="text-size-button" aria-label={getText('reader.text_size')}
-          aria-pressed={largeText} onClick={onToggleTextSize}>{getText('reader.text_size_symbol')}</button>
+          aria-haspopup="dialog" onClick={() => { cancelTurn(); setSettingsOpen(true); }}>{getText('reader.text_size_symbol')}</button>
       </nav>
       <article className={`paper-book${choosing ? ' paper-book--choices' : ''}`} aria-label={title}>
         {choosing ? (
@@ -117,7 +131,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
           </section>
         ) : (
           <>
-            <div className="reader-viewport" ref={viewportRef} {...gestureHandlers}>
+            <div className="reader-viewport" data-zoomed={zoomed} ref={viewportRef} {...gestureHandlers}>
               <div className="reader-columns" ref={columnsRef} style={{ transform: `translateX(${-page * layout.step}px)` }}>
                 <StoryTextPanel {...{ storyTitle, title, intro, body, image, headingRef }} />
               </div>
@@ -153,6 +167,9 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
           </>
         )}
       </article>
+      {settingsOpen && <ReadingSettings textScale={textScale}
+        onChange={(scale) => { cancelTurn(); onTextScaleChange?.(scale); }}
+        onClose={() => setSettingsOpen(false)} />}
     </main>
   );
 }
