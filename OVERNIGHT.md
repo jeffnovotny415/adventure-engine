@@ -978,3 +978,11 @@ phone lock. Oliver’s iPad remained paired but installation failed twice: wirel
 tunnel timeout, then device-resource allocation failure. Asked Jeff to unlock
 both and cable-connect iPad; its installation remains outstanding. Neither app
 was uninstalled and no stored app data was cleared.
+
+### iPad installation completed
+
+After Jeff unlocked Oliver’s iPad, the retry installed the verified Release
+bundle successfully (com.jeffnovotny.pathsofwonder). All 101 bundled web assets
+still match the production build. Jeff requested installation only, so the app
+was not launched. Both requested devices now have the authored story update;
+no uninstall or app-data clearing was performed.

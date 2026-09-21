@@ -31,8 +31,8 @@ verification and all 101 packaged web assets pass. Browser preview checks cover
 all eight large-text spreads of scene_058, its choices and the transition to
 scene_059 without writing preview progress to user saves.
 
-Device status: installed over the existing iPhone app successfully. Launch was
-blocked because the phone is locked. Oliver’s iPad installation could not complete:
-the wireless tunnel timed out, then a retry failed to allocate a device resource.
-Jeff has been asked to unlock both devices and preferably cable-connect the iPad.
-No uninstall was performed on either device.
+Device status: installed over the existing app successfully on both Jeff’s
+iPhone and Oliver’s iPad. The iPad retry succeeded after Jeff unlocked it.
+Jeff requested installation only, so no iPad launch was attempted. The earlier
+iPhone launch check was blocked by its lock screen. No uninstall or app-data
+clearing was performed on either device.
