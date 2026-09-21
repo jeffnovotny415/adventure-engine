@@ -777,3 +777,11 @@ at tablet landscape size. Confirmed RGBA transparency and no phone overflow.
 All 47 tracked protected content/public/Python/draft files and existing artwork
 images match the preceding commit byte-for-byte. No application bundle changes;
 chapter placement remains pending.
+
+## September 21 Captain Azul mouth refinement
+
+Replaced drawing 8's dark oval mouth with a closed mouth line, subtle corners and
+blue lower-lip contour. Retained the approved outfit and character design. Saved
+as revision-4 with the exact built-in editing prompt; gallery/detail links updated.
+Visually verified on warm paper and checked transparent alpha. All 49 protected
+story/public/Python/draft and previous artwork files remain byte-identical.

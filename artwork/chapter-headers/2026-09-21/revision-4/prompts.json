@@ -1,0 +1,11 @@
+{
+  "mode": "Built-in image_gen editing",
+  "prompt": "Use case: precise-object-edit. Edit ONLY Captain Azul's mouth in the supplied approved full-body book illustration. Replace the black vertical oval directly below his large grey nose with a recognizable CLOSED horizontal mouth: a fine gently curved dark mouth line, subtle corners, a small natural lower-lip contour in deeper blue, surrounded by blue skin on a softly rounded blue chin. Calm, approachable, restrained expression, tiny hint of a smile. No open cavity, black oval, beard, goatee, protruding tongue, large grin, teeth or human pink lips. Keep the broad grey nose, eyes, wide blue-and-gold ears, head proportions, body, pose, blue hands, grey one-piece jumpsuit with every zipper/patch, boots, framing, dimensions and pencil/ink crosshatching unchanged. Make this a very localized mouth edit, do not redesign the character. Preserve genuine transparent alpha background; no background, halo, paper rectangle, shadow, labels or text. Full figure must remain completely in frame.",
+  "source": "revision-3/blue-long-eared-character.png",
+  "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-435cf4e2-6698-4f50-950c-df7c3ef08669.png",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "sha256": "403089cad68c6d3d6f1168246f6e35091835593b8f56900d2a04a3322f1b0919"
+}
