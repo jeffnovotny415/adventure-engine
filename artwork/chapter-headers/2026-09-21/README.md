@@ -44,3 +44,9 @@ The comparison gallery was reviewed on tablet and phone sizes; all 18 images loa
 and the phone layout has no horizontal overflow. Source photo hashes match the
 attachments. The 21 existing protected project files remain byte-for-byte
 unchanged from the pre-settings/artwork baseline `d906bde`.
+
+## Seven concept
+
+Drawing 10 adds Seven, the Space Walker synthoid, using the approved Pip and Azul
+artwork as style references. The new concept, source notes and built-in generation
+prompt are in seven/. The original nine drawings remain unchanged.

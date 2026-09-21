@@ -1,0 +1,20 @@
+{
+  "mode": "Built-in image_gen using two style references",
+  "prompt": "Use case: illustration-story. Create a NEW full-body character illustration: Seven, the synthoid rescue-ship officer from Space Walker. The two supplied images are STYLE AND CREW CLOTHING REFERENCES ONLY: Captain Azul and Pip. Do not reproduce either alien, do not merge their faces, do not edit their designs. Draw Seven alone as a distinct third crewmate in exactly their refined pen-and-ink, colored-pencil, dense crosshatched illustrated-book visual language. Canonical facts: he is fully metal from head to toe, humanoid, moves fluidly, exceptionally strong but precise, calm observant literal-minded and quietly protective, his eyes scan heat/heartbeats/metals; all three wear loose-fitting grey jumpsuits with zippers down the middle and patches everywhere. Visual interpretation for unspecified details: adult humanoid build with sturdy but graceful proportions, softly squared rounded metal head, brushed pewter/silver metal face plates with subtle fine joins at temples and jaw, a modest sculpted metal nose, two attentive lens-like eyes with tiny muted amber irises and no projected beams, a clearly defined closed horizontal mouth with neutral gentle corners (not a black hole, grille or big grin). Exposed metal neck with elegant mechanical articulation. Natural relaxed three-quarter standing pose, head turned slightly toward the reader, both arms down with relaxed clearly visible articulated metal hands, each anatomically coherent with four fingers and one thumb. Convey lifelike fluid engineering rather than a boxy toy robot. Grey one-piece practical fabric jumpsuit with centered zipper, collar, loose folds, many plain sewn grey patches at chest/sleeves/knees matching the crew references; simple worn utility boots. No rank insignia, numbered badges, slogans or logos: do not render '7' or any lettering. Both arms intact, an introductory portrait before later story damage. Polished family adventure book illustration: approachable and capable, not a childlike toy, threatening war robot, superhero or photorealistic android. No hair, giant ears, eye stalks, weapon, armor suit, glowing core, scanner overlay, cape, props, labels, callouts or extra characters. Isolated entire figure head to soles, portrait composition, comfortable transparent margins. Genuinely transparent alpha background; no paper rectangle, scenery, glow, halo or ground shadow. Match the reference artworks' line weights and hatching, with restrained grey metallic values clearly distinguished from soft grey fabric.",
+  "styleReferences": [
+    "revision-4/blue-long-eared-character.png",
+    "revision-6/yellow-spiky-character.png"
+  ],
+  "storyReferences": [
+    "scene_006",
+    "scene_008",
+    "scene_013",
+    "scene_032"
+  ],
+  "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-9800fc34-d24c-4e00-8535-cdbbf0ad87c2.png",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "sha256": "1b57517df3ceec365a6e39bd2b7c3757a7cbb9721f19162de96de8b876d78205"
+}

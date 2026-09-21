@@ -805,3 +805,16 @@ golden hair. Saved revision-6 and its built-in editing prompt; current gallery
 and detail view use the cleaned PNG. Visually checked the target area and phone
 warm-paper rendering, and verified alpha transparency. All 51 protected content
 and previous artwork files remain byte-identical. No authored text changed.
+
+## September 21 Seven synthoid illustration
+
+Created a new Seven character concept at Jeff's request, using approved Pip and
+Captain Azul as style/clothing references. Based on the authored metal body,
+fluid movement, scanning eyes and patched grey crew jumpsuit; depicted with both
+arms intact. Pewter finish, amber eyes and face-plate design are visual choices,
+explicitly distinguished from authored facts in seven/README.md. Saved the PNG,
+full built-in generation prompt and references in the artwork collection's seven/
+folder. Added Drawing 10 and its full-size viewer/download link. Visually reviewed
+transparent warm-paper rendering at phone size. All 52 existing protected content
+and artwork files remain byte-identical. No shipped app or story changes; chapter
+placement remains unassigned.
