@@ -1,0 +1,39 @@
+{
+  "mode": "Built-in image_gen editing",
+  "storyReference": "webapp/src/data/stories/space_walker.json",
+  "scenes": [
+    "scene_006",
+    "scene_007",
+    "scene_008",
+    "scene_029"
+  ],
+  "outfitQuote": "loose-fitting grey jumpsuits with zippers down the middle and patches everywhere",
+  "assets": [
+    {
+      "number": 7,
+      "filename": "yellow-spiky-character.png",
+      "character": "Pip, the pilot",
+      "prompt": "Use case: precise-object-edit. Update ONLY the clothing of this approved full-body book character illustration to match its authored story. Preserve the existing character's face, expression, colors, silhouette of head and hair/ears, body proportions, hands, pose, pen-and-ink crosshatching and refined illustrated-book style. Canonical outfit from Space Walker scene_006: 'loose-fitting grey jumpsuits with zippers down the middle and patches everywhere.' Make a visibly ONE-PIECE practical grey crew jumpsuit, relaxed fit, a clear central front zipper from collar down torso, natural fabric folds and numerous sewn fabric patches across chest, shoulders, sleeves, thighs and knees. Use subdued grey patches with a little muted stitching; patch designs are not specified so keep them simple textile shapes, no readable writing, invented insignia, flags, rank bars or logos. Rescue-ship crew workwear, not military dress uniform, armor or superhero costume. Keep the existing unobtrusive footwear. Transparent background with true alpha, no scenery, paper rectangle, halo, shadow, title, labels or annotation text. Full figure completely in frame with safe margins. Keep everything except the outfit unchanged. This is Pip, the shorter pilot with wild golden-yellow hair and two long eye stalks. Keep both eye stalks, yellow hair, dark rounded nose, current grin, hands-on-hips pose and current humanoid anatomy unchanged. Her grey torso/legs currently appear like a bodysuit or bare form: replace that surface with the loose patched one-piece jumpsuit. No belly emblem showing through clothing. Exposed hands stay their original charcoal-grey color.",
+      "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-b141eca4-00a9-4ac4-839c-dc601511b285.png",
+      "source": "revision-2/yellow-spiky-character.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "1be8163f34fc797690de1bcd336202a413021d122038ed16882e35214f1f59c2"
+    },
+    {
+      "number": 8,
+      "filename": "blue-long-eared-character.png",
+      "character": "Captain Azul",
+      "prompt": "Use case: precise-object-edit. Update ONLY the clothing of this approved full-body book character illustration to match its authored story. Preserve the existing character's face, expression, colors, silhouette of head and hair/ears, body proportions, hands, pose, pen-and-ink crosshatching and refined illustrated-book style. Canonical outfit from Space Walker scene_006: 'loose-fitting grey jumpsuits with zippers down the middle and patches everywhere.' Make a visibly ONE-PIECE practical grey crew jumpsuit, relaxed fit, a clear central front zipper from collar down torso, natural fabric folds and numerous sewn fabric patches across chest, shoulders, sleeves, thighs and knees. Use subdued grey patches with a little muted stitching; patch designs are not specified so keep them simple textile shapes, no readable writing, invented insignia, flags, rank bars or logos. Rescue-ship crew workwear, not military dress uniform, armor or superhero costume. Keep the existing unobtrusive footwear. Transparent background with true alpha, no scenery, paper rectangle, halo, shadow, title, labels or annotation text. Full figure completely in frame with safe margins. Keep everything except the outfit unchanged. This is Captain Azul, the tall blue captain with very wide blue ears with golden inner surfaces, broad grey oval nose, small dark chin/mouth detail and blue hands. Preserve his current relaxed standing pose and features exactly. Replace the existing separate grey tunic and trousers with the same ONE-PIECE loose grey zipped-and-patched crew jumpsuit worn by the pilot. No tunic hem across hips, no captain hat, epaulettes, medals or special captain coat.",
+      "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-67a97cce-f19d-4941-b0c6-06d2110df08e.png",
+      "source": "revision-2/blue-long-eared-character.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "b48623251dc621161454b794f36d8ce3fb4f28eb47e9d4f57a12bf2913dd83de"
+    }
+  ]
+}

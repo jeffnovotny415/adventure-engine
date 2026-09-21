@@ -762,3 +762,18 @@ reviewed the artwork and callouts; exercised phone/tablet layouts, rotation and
 zoom controls. All 39 existing protected story/public/Python/draft files, source
 photos and first-pass illustrations remain byte-for-byte unchanged. No shipped
 application code or content changed. Chapter assignments remain pending.
+
+## September 21 Space Walker crew outfits
+
+Updated only drawings 7 and 8 with built-in image editing. Confirmed from scenes
+006–008 that 7 is Pip, the pilot, and 8 is Captain Azul. Both now wear the loose
+one-piece grey jumpsuits, central zippers and many sewn patches described in
+scene 006 (and repeated in scene 029). No invented rank insignia or uniform text.
+Revision 3 contains the transparent PNGs, full prompts, hashes and source notes;
+the current gallery and detail links use them. All other approved art is intact.
+
+Visually checked both on warm paper, including a phone detail view and the pair
+at tablet landscape size. Confirmed RGBA transparency and no phone overflow.
+All 47 tracked protected content/public/Python/draft files and existing artwork
+images match the preceding commit byte-for-byte. No application bundle changes;
+chapter placement remains pending.

@@ -17,6 +17,13 @@ the edits. These are artistic cleanups, not exact tracings.
 source/output SHA-256 hashes, and generation source paths. The descriptive file
 labels are not newly assigned story or character names.
 
+## Canonical crew outfits
+
+Drawing 7 (Pip, the pilot) and drawing 8 (Captain Azul) now use the grey, centrally
+zipped, patched crew jumpsuits described in Space Walker. The two updated PNGs,
+exact editing prompts and source notes are preserved in revision-3/. All other
+approved artwork remains unchanged.
+
 ## Placement
 
 Chapter assignments are deliberately unassigned. Jeff needs to identify the book
