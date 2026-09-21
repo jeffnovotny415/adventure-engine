@@ -19,7 +19,7 @@ labels are not newly assigned story or character names.
 
 ## Canonical crew outfits
 
-Drawing 7 (Pip, the pilot) and drawing 8 (Captain Azul) now use the grey, centrally
+Drawing 7 (Percy, the pilot) and drawing 8 (Captain Aster) now use the grey, centrally
 zipped, patched crew jumpsuits described in Space Walker. The two updated PNGs,
 exact editing prompts and source notes are preserved in revision-3/. All other
 approved artwork remains unchanged.
@@ -45,8 +45,15 @@ and the phone layout has no horizontal overflow. Source photo hashes match the
 attachments. The 21 existing protected project files remain byte-for-byte
 unchanged from the pre-settings/artwork baseline `d906bde`.
 
-## Seven concept
+## Trace concept
 
-Drawing 10 adds Seven, the Space Walker synthoid, using the approved Pip and Azul
+Drawing 10 adds Trace, the Space Walker synthoid, using the approved Percy and Aster
 artwork as style references. The new concept, source notes and built-in generation
 prompt are in seven/. The original nine drawings remain unchanged.
+
+## Current character names
+
+Jeff selected Percy (formerly Pip), Captain Aster (formerly Captain Azul), and
+Trace (formerly Seven). Gallery labels use these names. Historical generation
+prompts, filenames and revision notes retain their original names for provenance.
+See character-names.json for the mapping.

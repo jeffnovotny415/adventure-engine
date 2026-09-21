@@ -841,3 +841,32 @@ Verified every local link and scene anchor. Rendered prose and entry variations
 match the original strings exactly; all 21 protected live/public/Python/draft
 files remain byte-identical. Phone and tablet layouts have no horizontal overflow;
 verified navigation from a name to its original story scene. No renames applied.
+
+## September 21 approved Space Walker names
+
+Applied Jeff’s explicit name selections: Captain Azul → Captain Aster, Pip →
+Percy, Seven → Trace, Skipper Bel → Captain Thyme, Tock → Ratchet, Keeper Moss →
+Keeper Cobble, and Zib → Zenta. Dr. Wren remains unchanged. Updated current
+artwork labels and the complete name-reference export/ZIP, with a durable
+old-to-new mapping. Historical artwork prompts, filenames and drafts are intact.
+
+Ran story-import preflight against unchanged live sources before replacement.
+It reported 72 edited scenes, eight unchanged, none added or removed. Accepted
+three title flags as the specifically authorized names: scene_025 Trace Tells
+It, scene_039 Trace Across, scene_050 Keeper Cobble. Incoming/reviewed/live hash:
+e6d211658cf057d48a44fbfc5e486c730d7acb7ef2cc4bc4d4346118841c9a17.
+
+Recursive verification confirms every string differs only by the prescribed
+name substitutions, including possessives and uppercase calls. All JSON keys,
+scene IDs, choices/routes, flags and internal entry-intro keys remain unchanged
+(including moss). Ordinary character-offset bookmarks may shift with longer names;
+no saves were cleared or migrated. All 54 other tracked story/draft/Python/image
+files are byte-identical to the previous commit.
+
+Full npm check passes: lint, 107 tests, story diagnostics (zero errors/warnings;
+all 221 scenes and eight endings reachable) and production build. Existing large
+bundle warning remains. Exported prose/entry variations match live sources exactly;
+all local links and scene anchors are valid. Reference preview verified at
+667×375 landscape phone, 1024×768 tablet and 390×844 portrait phone with no
+horizontal overflow; followed a character link to its renamed passage. No app
+layout or native installation changes were made.

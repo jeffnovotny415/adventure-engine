@@ -3,10 +3,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Character",
-    "current_name": "Captain Azul",
+    "current_name": "Captain Aster",
     "role": "Tall blue captain with wide ears; crew artwork 8.",
     "aliases": [
-      "Azul"
+      "Aster"
     ],
     "note": "",
     "replacement": "",
@@ -50,10 +50,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Character",
-    "current_name": "Pip",
+    "current_name": "Percy",
     "role": "Yellow-haired pilot with two antennae-eyes; crew artwork 7.",
     "aliases": [
-      "Pip"
+      "Percy"
     ],
     "note": "",
     "replacement": "",
@@ -229,10 +229,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Character",
-    "current_name": "Seven",
+    "current_name": "Trace",
     "role": "Metal synthoid officer; crew artwork 10.",
     "aliases": [
-      "Seven"
+      "Trace"
     ],
     "note": "",
     "replacement": "",
@@ -295,7 +295,7 @@
       },
       {
         "id": "scene_025",
-        "title": "Seven Tells It"
+        "title": "Trace Tells It"
       },
       {
         "id": "scene_026",
@@ -339,7 +339,7 @@
       },
       {
         "id": "scene_039",
-        "title": "Seven Across"
+        "title": "Trace Across"
       },
       {
         "id": "scene_040",
@@ -383,7 +383,7 @@
       },
       {
         "id": "scene_050",
-        "title": "Keeper Moss"
+        "title": "Keeper Cobble"
       },
       {
         "id": "scene_051",
@@ -496,11 +496,11 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Character",
-    "current_name": "Skipper Bel",
+    "current_name": "Captain Thyme",
     "role": "Captain of the Marigold.",
     "aliases": [
-      "Skipper Bel",
-      "Bel"
+      "Captain Thyme",
+      "Thyme"
     ],
     "note": "",
     "replacement": "",
@@ -532,10 +532,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Character",
-    "current_name": "Tock",
+    "current_name": "Ratchet",
     "role": "The Marigold’s young engineer.",
     "aliases": [
-      "Tock"
+      "Ratchet"
     ],
     "note": "",
     "replacement": "",
@@ -642,18 +642,18 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Character",
-    "current_name": "Keeper Moss",
+    "current_name": "Keeper Cobble",
     "role": "Elderly keeper of the Long Memory archive.",
     "aliases": [
-      "Keeper Moss",
-      "Moss"
+      "Keeper Cobble",
+      "Cobble"
     ],
     "note": "",
     "replacement": "",
     "scenes": [
       {
         "id": "scene_050",
-        "title": "Keeper Moss"
+        "title": "Keeper Cobble"
       },
       {
         "id": "scene_051",
@@ -682,10 +682,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Character",
-    "current_name": "Zib",
-    "role": "Pip’s cousin, later running a fried-dough stand on Haven.",
+    "current_name": "Zenta",
+    "role": "Percy’s cousin, later running a fried-dough stand on Haven.",
     "aliases": [
-      "Zib"
+      "Zenta"
     ],
     "note": "",
     "replacement": "",
@@ -731,7 +731,7 @@
       },
       {
         "id": "scene_025",
-        "title": "Seven Tells It"
+        "title": "Trace Tells It"
       },
       {
         "id": "scene_028",
@@ -761,7 +761,7 @@
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
     "current_name": "Tansy",
-    "role": "Lost home world of Marigold survivors, including Tock.",
+    "role": "Lost home world of Marigold survivors, including Ratchet.",
     "aliases": [
       "Tansy"
     ],
@@ -792,7 +792,7 @@
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
     "current_name": "Lumen",
-    "role": "Pip’s lost home world.",
+    "role": "Percy’s lost home world.",
     "aliases": [
       "Lumen"
     ],
@@ -819,7 +819,7 @@
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
     "current_name": "Indra",
-    "role": "Captain Azul’s lost home world.",
+    "role": "Captain Aster’s lost home world.",
     "aliases": [
       "Indra"
     ],
@@ -863,7 +863,7 @@
       },
       {
         "id": "scene_050",
-        "title": "Keeper Moss"
+        "title": "Keeper Cobble"
       },
       {
         "id": "scene_054",
@@ -1003,7 +1003,7 @@
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
     "current_name": "Long Memory",
-    "role": "Archive ship carrying Keeper Moss, seeds and recorded stories.",
+    "role": "Archive ship carrying Keeper Cobble, seeds and recorded stories.",
     "aliases": [
       "Long Memory"
     ],
@@ -1101,7 +1101,7 @@
       },
       {
         "id": "scene_025",
-        "title": "Seven Tells It"
+        "title": "Trace Tells It"
       },
       {
         "id": "scene_026",
@@ -3332,7 +3332,7 @@
       },
       {
         "id": "scene_025",
-        "title": "Seven Tells It"
+        "title": "Trace Tells It"
       },
       {
         "id": "scene_029",
