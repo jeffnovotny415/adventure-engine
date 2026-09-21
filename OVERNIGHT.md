@@ -894,3 +894,27 @@ passes (lint, 107 tests, all 221 scenes/eight endings reachable with no graph
 errors/warnings, production build). Existing large-bundle warning remains.
 Export prose/entry variations, links, anchors, hashes and ZIP verified; browser
 reference shows all new setting names. No layout or native installation changes.
+
+## September 21 approved Summoned Mage names
+
+Applied Jeff’s explicit choices: Bram → Bernard, Tilly → Gilly, Biscuit → Honey,
+Gus Tumblewick → Kent Trailway, Pim → Lark, Pom → Velion, Barnaby → Gordo,
+Gertrude → Trudy, and The Warm Kettle → The Fancy Spoon. Short references use
+Kent and the Spoon; uppercase signage and possessives are preserved. Ordinary
+lowercase honey references and the existing teapot-shaped sign description are
+unchanged. Refreshed the complete name reference, CSV, snapshot and ZIP; added a
+Summoned Mage mapping document for the writing workflow.
+
+Preflight ran against unchanged live sources: 43 edited scenes, 28 unchanged,
+none added/removed. Accepted the explicitly authorized name-only headings
+scene_036 The Fancy Spoon and scene_037 A Table at the Spoon. Reviewed/live hash:
+2d548ac07ece2602e93d9d30bb5c602ad3fd18f4beb2f6c1b1e49df8a6437729.
+
+Recursive comparison proves exact name substitutions only; all internal keys,
+scene IDs, routes, flags and remaining wording are unchanged. All 54 other
+protected story/draft/Python/image files remain byte-identical. Character-offset
+bookmarks may shift with name lengths; no saves were cleared or migrated.
+Full check passes (lint, 107 tests, graph diagnostics with no errors/warnings,
+production build); existing bundle-size warning remains. Export prose/entry
+variations, links, anchors, hashes and ZIP verified. Reloaded browser reference
+and confirmed every updated name. No layout or device installation changes.

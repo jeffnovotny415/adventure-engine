@@ -1324,11 +1324,11 @@
       },
       {
         "id": "scene_036",
-        "title": "The Warm Kettle"
+        "title": "The Fancy Spoon"
       },
       {
         "id": "scene_037",
-        "title": "A Table at the Kettle"
+        "title": "A Table at the Spoon"
       },
       {
         "id": "scene_038",
@@ -1453,10 +1453,10 @@
     "story_id": "summoned_mage",
     "story": "The Summoned Mage",
     "kind": "Character",
-    "current_name": "Bram",
-    "role": "Bear-folk baker at the Warm Kettle.",
+    "current_name": "Bernard",
+    "role": "Bear-folk baker at the Fancy Spoon.",
     "aliases": [
-      "Bram"
+      "Bernard"
     ],
     "note": "",
     "replacement": "",
@@ -1467,11 +1467,11 @@
       },
       {
         "id": "scene_036",
-        "title": "The Warm Kettle"
+        "title": "The Fancy Spoon"
       },
       {
         "id": "scene_037",
-        "title": "A Table at the Kettle"
+        "title": "A Table at the Spoon"
       },
       {
         "id": "scene_039",
@@ -1588,10 +1588,10 @@
     "story_id": "summoned_mage",
     "story": "The Summoned Mage",
     "kind": "Character",
-    "current_name": "Tilly",
+    "current_name": "Gilly",
     "role": "Fox-folk mechanic with goggles and wrenches.",
     "aliases": [
-      "Tilly"
+      "Gilly"
     ],
     "note": "",
     "replacement": "",
@@ -1602,11 +1602,11 @@
       },
       {
         "id": "scene_036",
-        "title": "The Warm Kettle"
+        "title": "The Fancy Spoon"
       },
       {
         "id": "scene_037",
-        "title": "A Table at the Kettle"
+        "title": "A Table at the Spoon"
       },
       {
         "id": "scene_038",
@@ -1711,17 +1711,17 @@
     "story_id": "summoned_mage",
     "story": "The Summoned Mage",
     "kind": "Character",
-    "current_name": "Biscuit",
+    "current_name": "Honey",
     "role": "Puffkin companion who steals honey buns.",
     "aliases": [
-      "Biscuit"
+      "Honey"
     ],
     "note": "",
     "replacement": "",
     "scenes": [
       {
         "id": "scene_037",
-        "title": "A Table at the Kettle"
+        "title": "A Table at the Spoon"
       },
       {
         "id": "scene_038",
@@ -1802,11 +1802,11 @@
     "story_id": "summoned_mage",
     "story": "The Summoned Mage",
     "kind": "Character",
-    "current_name": "Gus Tumblewick",
+    "current_name": "Kent Trailway",
     "role": "Raccoon-folk bandit carrying a pitchfork.",
     "aliases": [
-      "Gus",
-      "Tumblewick"
+      "Kent",
+      "Trailway"
     ],
     "note": "",
     "replacement": "",
@@ -1846,10 +1846,10 @@
     "story_id": "summoned_mage",
     "story": "The Summoned Mage",
     "kind": "Character",
-    "current_name": "Pim",
+    "current_name": "Lark",
     "role": "One of the three raccoon-folk bandits.",
     "aliases": [
-      "Pim"
+      "Lark"
     ],
     "note": "",
     "replacement": "",
@@ -1877,10 +1877,10 @@
     "story_id": "summoned_mage",
     "story": "The Summoned Mage",
     "kind": "Character",
-    "current_name": "Pom",
+    "current_name": "Velion",
     "role": "The smallest raccoon-folk bandit, carrying a soup ladle.",
     "aliases": [
-      "Pom"
+      "Velion"
     ],
     "note": "",
     "replacement": "",
@@ -1908,10 +1908,10 @@
     "story_id": "summoned_mage",
     "story": "The Summoned Mage",
     "kind": "Character",
-    "current_name": "Barnaby",
+    "current_name": "Gordo",
     "role": "Goat-folk peddler stranded in a tree.",
     "aliases": [
-      "Barnaby"
+      "Gordo"
     ],
     "note": "",
     "replacement": "",
@@ -1939,10 +1939,10 @@
     "story_id": "summoned_mage",
     "story": "The Summoned Mage",
     "kind": "Character",
-    "current_name": "Gertrude",
-    "role": "Name Barnaby gives the largest tusker.",
+    "current_name": "Trudy",
+    "role": "Name Gordo gives the largest tusker.",
     "aliases": [
-      "Gertrude"
+      "Trudy"
     ],
     "note": "",
     "replacement": "",
@@ -1992,7 +1992,7 @@
       },
       {
         "id": "scene_037",
-        "title": "A Table at the Kettle"
+        "title": "A Table at the Spoon"
       },
       {
         "id": "scene_041",
@@ -2158,22 +2158,22 @@
     "story_id": "summoned_mage",
     "story": "The Summoned Mage",
     "kind": "Place, ship or entity",
-    "current_name": "The Warm Kettle",
-    "role": "Bram’s warm gathering place and bakery.",
+    "current_name": "The Fancy Spoon",
+    "role": "Bernard’s warm gathering place and bakery.",
     "aliases": [
-      "Warm Kettle",
-      "Kettle"
+      "Fancy Spoon",
+      "Spoon"
     ],
     "note": "",
     "replacement": "",
     "scenes": [
       {
         "id": "scene_036",
-        "title": "The Warm Kettle"
+        "title": "The Fancy Spoon"
       },
       {
         "id": "scene_037",
-        "title": "A Table at the Kettle"
+        "title": "A Table at the Spoon"
       },
       {
         "id": "scene_038",
