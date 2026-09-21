@@ -1,0 +1,11 @@
+{
+  "mode": "Built-in image_gen editing",
+  "prompt": "Use case: precise-object-edit. Refine ONLY the face of Seven in this supplied full-body approved-style synthoid illustration. User asks for much more robotic eyes and NO NOSE. Replace the two humanlike eyeballs completely with two recessed mechanical optical sensor assemblies: circular metallic lens housings, concentric machined rings, dark smoked-glass optics with tiny subdued amber central sensor points and segmented aperture detail. NO white sclera, biological iris, wet eyeball, eyelashes, human eyelids or painted human eyebrows. Remove existing eyebrows. The sensors should be clearly engineered robot cameras, not human eyes inside metal sockets; keep them approachable and observant, no angry expression or strong glow. Completely remove the sculpted human nose, nose bridge, nostrils and nose-tip shadow: between eyes and mouth is a smooth gently curved continuous brushed-metal faceplate, no nose-shaped seam, vent or replacement protrusion. Preserve the small closed mouth line and calm friendly bearing. Keep the overall head shape, existing side panels/ear assembly, metal finish, neck, full body, pose, hands, entire patched grey one-piece jumpsuit, zipper, boots, composition and ink-and-pencil crosshatching unchanged. Transparent alpha background, full figure in frame; no scenery, text, halo or shadow. This is a precise face-only edit, not a new robot design.",
+  "source": "seven/seven-synthoid.png",
+  "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-190cd5eb-eec2-48aa-bbf2-2fbe1ce25f65.png",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "sha256": "fe1d0075104d0b919f9ef15728b7e9edff424beb89cb166d85cb2e5470faa76c"
+}

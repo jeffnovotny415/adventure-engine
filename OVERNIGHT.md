@@ -818,3 +818,12 @@ folder. Added Drawing 10 and its full-size viewer/download link. Visually review
 transparent warm-paper rendering at phone size. All 52 existing protected content
 and artwork files remain byte-identical. No shipped app or story changes; chapter
 placement remains unassigned.
+
+## September 21 Seven robotic face refinement
+
+Applied Jeff's follow-up: mechanical optical sensor eyes without human sclera,
+irises or eyebrows, and no nose. Retained the closed mouth, body and crew outfit.
+Saved seven-synthoid-v2.png and its exact built-in editing prompt; gallery and
+viewer use v2, while the first concept is preserved. Verified transparent alpha
+and warm-paper face rendering. All 53 protected content and prior artwork files
+remain byte-identical.

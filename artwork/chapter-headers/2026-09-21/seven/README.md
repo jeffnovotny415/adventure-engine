@@ -11,3 +11,10 @@ and precise fingers inform the articulated hands. Depicted before later damage.
 Pewter finish, amber lens eyes and face-plate design are visual interpretations,
 not additional authored facts. No story text changed. Chapter placement remains
 unassigned; the asset is outside the shipped app bundle.
+
+## Face refinement
+
+Current file: seven-synthoid-v2.png. At Jeff’s request, replaced the humanlike
+eyes with recessed mechanical lenses and removed the nose and eyebrows.
+The original concept is retained. Exact built-in editing prompt and hash are
+in face-refinement-prompt.json.
