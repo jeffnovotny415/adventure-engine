@@ -80,7 +80,7 @@
       },
       {
         "id": "scene_012",
-        "title": "The Marigold"
+        "title": "The Genesis"
       },
       {
         "id": "scene_016",
@@ -120,7 +120,7 @@
       },
       {
         "id": "scene_037",
-        "title": "Frost Station"
+        "title": "Frost station"
       },
       {
         "id": "scene_038",
@@ -140,11 +140,11 @@
       },
       {
         "id": "scene_046",
-        "title": "Haven"
+        "title": "Harbor"
       },
       {
         "id": "scene_047",
-        "title": "The Long Memory"
+        "title": "The Stasis"
       },
       {
         "id": "scene_054",
@@ -259,7 +259,7 @@
       },
       {
         "id": "scene_012",
-        "title": "The Marigold"
+        "title": "The Genesis"
       },
       {
         "id": "scene_013",
@@ -331,7 +331,7 @@
       },
       {
         "id": "scene_037",
-        "title": "Frost Station"
+        "title": "Frost station"
       },
       {
         "id": "scene_038",
@@ -367,11 +367,11 @@
       },
       {
         "id": "scene_046",
-        "title": "Haven"
+        "title": "Harbor"
       },
       {
         "id": "scene_047",
-        "title": "The Long Memory"
+        "title": "The Stasis"
       },
       {
         "id": "scene_048",
@@ -497,7 +497,7 @@
     "story": "The Space Walker",
     "kind": "Character",
     "current_name": "Captain Thyme",
-    "role": "Captain of the Marigold.",
+    "role": "Captain of the Genesis.",
     "aliases": [
       "Captain Thyme",
       "Thyme"
@@ -533,7 +533,7 @@
     "story": "The Space Walker",
     "kind": "Character",
     "current_name": "Ratchet",
-    "role": "The Marigold’s young engineer.",
+    "role": "The Genesis’s young engineer.",
     "aliases": [
       "Ratchet"
     ],
@@ -589,7 +589,7 @@
       },
       {
         "id": "scene_046",
-        "title": "Haven"
+        "title": "Harbor"
       },
       {
         "id": "scene_057",
@@ -643,7 +643,7 @@
     "story": "The Space Walker",
     "kind": "Character",
     "current_name": "Keeper Cobble",
-    "role": "Elderly keeper of the Long Memory archive.",
+    "role": "Elderly keeper of the Stasis archive.",
     "aliases": [
       "Keeper Cobble",
       "Cobble"
@@ -683,7 +683,7 @@
     "story": "The Space Walker",
     "kind": "Character",
     "current_name": "Zenta",
-    "role": "Percy’s cousin, later running a fried-dough stand on Haven.",
+    "role": "Percy’s cousin, later running a fried-dough stand on Harbor.",
     "aliases": [
       "Zenta"
     ],
@@ -760,10 +760,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
-    "current_name": "Tansy",
-    "role": "Lost home world of Marigold survivors, including Ratchet.",
+    "current_name": "Trellis",
+    "role": "Lost home world of Genesis survivors, including Ratchet.",
     "aliases": [
-      "Tansy"
+      "Trellis"
     ],
     "note": "",
     "replacement": "",
@@ -778,7 +778,7 @@
       },
       {
         "id": "scene_046",
-        "title": "Haven"
+        "title": "Harbor"
       },
       {
         "id": "scene_076",
@@ -791,10 +791,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
-    "current_name": "Lumen",
+    "current_name": "Loop",
     "role": "Percy’s lost home world.",
     "aliases": [
-      "Lumen"
+      "Loop"
     ],
     "note": "",
     "replacement": "",
@@ -804,8 +804,16 @@
         "title": "The Observation Deck"
       },
       {
+        "id": "scene_035",
+        "title": "Flight Lessons"
+      },
+      {
+        "id": "scene_037",
+        "title": "Frost station"
+      },
+      {
         "id": "scene_046",
-        "title": "Haven"
+        "title": "Harbor"
       },
       {
         "id": "scene_076",
@@ -818,10 +826,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
-    "current_name": "Indra",
+    "current_name": "Azure",
     "role": "Captain Aster’s lost home world.",
     "aliases": [
-      "Indra"
+      "Azure"
     ],
     "note": "",
     "replacement": "",
@@ -841,17 +849,17 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
-    "current_name": "Quill",
+    "current_name": "Atlantean",
     "role": "Lost world preserved by the archive ship.",
     "aliases": [
-      "Quill"
+      "Atlantean"
     ],
     "note": "",
     "replacement": "",
     "scenes": [
       {
         "id": "scene_047",
-        "title": "The Long Memory"
+        "title": "The Stasis"
       },
       {
         "id": "scene_048",
@@ -876,10 +884,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
-    "current_name": "Haven",
+    "current_name": "Harbor",
     "role": "Refuge world for rescued survivors.",
     "aliases": [
-      "Haven"
+      "Harbor"
     ],
     "note": "",
     "replacement": "",
@@ -890,7 +898,7 @@
       },
       {
         "id": "scene_046",
-        "title": "Haven"
+        "title": "Harbor"
       },
       {
         "id": "scene_057",
@@ -931,10 +939,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
-    "current_name": "Marigold",
+    "current_name": "Genesis",
     "role": "Passenger transport rescued from a debris field.",
     "aliases": [
-      "Marigold"
+      "Genesis"
     ],
     "note": "",
     "replacement": "",
@@ -953,7 +961,7 @@
       },
       {
         "id": "scene_012",
-        "title": "The Marigold"
+        "title": "The Genesis"
       },
       {
         "id": "scene_013",
@@ -989,7 +997,7 @@
       },
       {
         "id": "scene_046",
-        "title": "Haven"
+        "title": "Harbor"
       },
       {
         "id": "scene_078",
@@ -1002,17 +1010,17 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
-    "current_name": "Long Memory",
+    "current_name": "The Stasis",
     "role": "Archive ship carrying Keeper Cobble, seeds and recorded stories.",
     "aliases": [
-      "Long Memory"
+      "Stasis"
     ],
     "note": "",
     "replacement": "",
     "scenes": [
       {
         "id": "scene_047",
-        "title": "The Long Memory"
+        "title": "The Stasis"
       },
       {
         "id": "scene_052",
@@ -1033,17 +1041,17 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
-    "current_name": "Frost Station",
+    "current_name": "Frost station",
     "role": "Research base on an ice moon.",
     "aliases": [
-      "Frost Station"
+      "Frost station"
     ],
     "note": "",
     "replacement": "",
     "scenes": [
       {
         "id": "scene_037",
-        "title": "Frost Station"
+        "title": "Frost station"
       },
       {
         "id": "scene_045",
@@ -1056,10 +1064,10 @@
     "story_id": "space_walker",
     "story": "The Space Walker",
     "kind": "Place, ship or entity",
-    "current_name": "Lifeline Fleet",
+    "current_name": "Rescue Corps",
     "role": "The rescue fleet.",
     "aliases": [
-      "Lifeline Fleet"
+      "Rescue Corps"
     ],
     "note": "",
     "replacement": "",
@@ -1109,7 +1117,7 @@
       },
       {
         "id": "scene_037",
-        "title": "Frost Station"
+        "title": "Frost station"
       },
       {
         "id": "scene_045",
@@ -1117,11 +1125,11 @@
       },
       {
         "id": "scene_046",
-        "title": "Haven"
+        "title": "Harbor"
       },
       {
         "id": "scene_047",
-        "title": "The Long Memory"
+        "title": "The Stasis"
       },
       {
         "id": "scene_064",
@@ -3316,7 +3324,7 @@
       },
       {
         "id": "scene_012",
-        "title": "The Marigold"
+        "title": "The Genesis"
       },
       {
         "id": "scene_019",
@@ -3340,7 +3348,7 @@
       },
       {
         "id": "scene_037",
-        "title": "Frost Station"
+        "title": "Frost station"
       },
       {
         "id": "scene_040",

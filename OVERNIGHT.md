@@ -870,3 +870,27 @@ all local links and scene anchors are valid. Reference preview verified at
 667×375 landscape phone, 1024×768 tablet and 390×844 portrait phone with no
 horizontal overflow; followed a character link to its renamed passage. No app
 layout or native installation changes were made.
+
+## September 21 approved Space Walker world and ship names
+
+Applied Jeff’s second naming batch: Tansy → Trellis, Lumen → Loop, Indra → Azure,
+Quill → Atlantean, Haven → Harbor, Marigold → Genesis, Long Memory → The Stasis,
+Frost Station → Frost station, and Lifeline Fleet → Rescue Corps. World-Eater
+remains unchanged. Harbor is capitalized as a proper place name; the Stasis
+retains the existing sentence article without duplicating it. Refreshed name
+reference, source snapshots, CSV, mapping document and offline ZIP.
+
+Preflight ran before live replacement: 33 edited scenes, 47 unchanged, none
+added/removed. Its four title flags (scene_012 The Genesis, scene_037 Frost
+station, scene_046 Harbor, scene_047 The Stasis) are the expressly requested
+name edits, not reused IDs. Reviewed/live SHA-256:
+27dface1f61bbc8411dd216e05f7a7bdc82e9d48b68b9be9c3548ef990cbcf2e.
+
+Recursive comparison proves only exact name substitutions; JSON keys, IDs,
+routes, flags and remaining text are unchanged. All 54 other protected
+story/draft/Python/image files remain byte-identical. Character-offset bookmarks
+may shift with new name lengths; no saves were cleared or migrated. Full check
+passes (lint, 107 tests, all 221 scenes/eight endings reachable with no graph
+errors/warnings, production build). Existing large-bundle warning remains.
+Export prose/entry variations, links, anchors, hashes and ZIP verified; browser
+reference shows all new setting names. No layout or native installation changes.
