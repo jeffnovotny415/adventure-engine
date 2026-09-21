@@ -1,0 +1,11 @@
+{
+  "mode": "Built-in image_gen editing",
+  "prompt": "Use case: precise-object-edit. Make ONE tiny localized cleanup to this approved full-body character illustration. Remove the stray pale cream triangular ear-like shape outlined in black that sticks up immediately above and to the RIGHT of the character's large dark nose (around x620 y490 in the 1024x1536 image). This triangle is unwanted; replace the entire triangular shape AND its black triangular outline with continuous golden-yellow hair strands that seamlessly join the surrounding hair. Keep the smooth existing face/nose contour below it. Do not add any ears or other replacement feature. Every other part is to remain unchanged: eyes and eye stalks, their independent gaze, hair silhouette and strand detail elsewhere, nose, closed smile, face, body proportions, pose, hands, patched grey jumpsuit, zipper, boots, composition and ink/pencil texture. Preserve full figure framing and genuine transparent alpha background. No background, halo, paper rectangle, text or labels. This is removal of a small artifact only, not a redesign.",
+  "source": "revision-5/yellow-spiky-character.png",
+  "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-70a38f2a-c69d-46c9-be53-3fd9d3973cbe.png",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "sha256": "388f4d147dcd9325578088a7eae914779b92b63719db5b0a0ceb04f941d3e09c"
+}

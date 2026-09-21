@@ -797,3 +797,11 @@ No invented equipment or insignia. Saved revision-5 with exact built-in editing
 prompt and updated gallery/detail links. Checked phone warm-paper rendering and
 alpha transparency. All 50 existing protected content and artwork files remain
 byte-identical; Captain Azul and all other approved images are unchanged.
+
+## September 21 Pip triangle cleanup
+
+Removed the stray cream triangle above Pip's nose, replacing it with continuous
+golden hair. Saved revision-6 and its built-in editing prompt; current gallery
+and detail view use the cleaned PNG. Visually checked the target area and phone
+warm-paper rendering, and verified alpha transparency. All 51 protected content
+and previous artwork files remain byte-identical. No authored text changed.
