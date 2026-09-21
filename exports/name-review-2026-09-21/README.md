@@ -1,6 +1,6 @@
 # Name review
 
-Open index.html for the complete reference, or current-names.md for the Markdown list. The CSV contains a blank replacement
+Open index.html for the complete reference, or current-names.md for the old-to-new name list in Markdown. The CSV contains a blank replacement
 column. Linked HTML story snapshots preserve the source wording, including scene
 titles, entry variations and choices. Snapshot taken September 21, 2026.
 
