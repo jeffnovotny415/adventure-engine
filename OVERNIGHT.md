@@ -631,3 +631,7 @@ Installed successfully over Jeff's existing iPhone app without clearing data.
 Oliver's iPad installation could not establish its device connection; pending
 until reachable. Story-specific choice-page ornament options are separate
 conversation previews, not applied to production in this batch.
+
+Shipped navigation changes in fb294ed on origin/main. Retrying Oliver's iPad
+reached the device, but iOS reported it locked and refused to mount the developer
+disk image. Unlocking the iPad is required before the installation can finish.
