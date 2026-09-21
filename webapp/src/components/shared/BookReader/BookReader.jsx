@@ -8,12 +8,14 @@ import { ReadingSettings } from './ReadingSettings';
 import { DEFAULT_NATIVE_READING, DEFAULT_READING_STYLE } from '../../../state/readingPreferences';
 import { pageTurnFeedback } from '../../../state/nativeReading';
 import { DecisionContext } from './DecisionContext';
+import { PassageBookmarks } from './PassageBookmarks';
 
 // Real columns preserve every paragraph and adapt to the device and text size.
 export function BookReader({ storyTitle, title, intro, body, image, choices, onChoose,
   onHome, ending = false, onRestart, textScale = 1, onTextScaleChange, testing = false,
   initialReadingPosition = null, onReadingPositionChange, nativeReading = DEFAULT_NATIVE_READING,
-  pageHaptics = false, onPageHapticsChange, readingStyle = DEFAULT_READING_STYLE, onReadingStyleChange }) {
+  pageHaptics = false, onPageHapticsChange, readingStyle = DEFAULT_READING_STYLE, onReadingStyleChange,
+  storyId, sceneId, passageStorage }) {
   const { getText } = useContent();
   const mainRef = useRef(null);
   const controlsButtonRef = useRef(null);
@@ -28,12 +30,13 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   const captureAnchorRef = useRef(false);
   const wasChoosingRef = useRef(false);
   const [page, setPage] = useState(0);
-  const [layout, setLayout] = useState({ count: 1, step: 0 });
+  const [layout, setLayout] = useState({ count: 1, step: 0, columns: 1 });
   const [choosing, setChoosing] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [controlsVisible, setControlsVisible] = useState(true);
+  const [bookmarkPassage, setBookmarkPassage] = useState(null);
   const continuous = nativeReading.voiceOver;
-  const controlsShown = controlsVisible || readingStyle.alwaysShowControls || continuous || choosing || settingsOpen;
+  const controlsShown = controlsVisible || readingStyle.alwaysShowControls || continuous || choosing || settingsOpen || Boolean(bookmarkPassage);
   function toggleControls() {
     if (readingStyle.alwaysShowControls || continuous || choosing) return;
     setControlsVisible(current => !current);
@@ -75,7 +78,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
         columns.style.columnWidth = 'auto';
         const top = readingAnchorTop(readingAnchorRef.current, columns);
         if (top !== null) window.scrollBy({ top: top - 12, behavior: 'instant' });
-        setLayout({ count: 1, step: 0 });
+        setLayout({ count: 1, step: 0, columns: 1 });
         setPage(0);
         return;
       }
@@ -87,7 +90,8 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       columns.style.columnWidth = `${(width - gap * (visibleColumns - 1)) / visibleColumns}px`;
       const step = width + gap;
       const count = Math.max(1, Math.ceil((columns.scrollWidth + gap - 1) / step));
-      setLayout((current) => current.count === count && current.step === step ? current : { count, step });
+      setLayout((current) => current.count === count && current.step === step && current.columns === visibleColumns
+        ? current : { count, step, columns: visibleColumns });
       setPage(pageForReadingAnchor(readingAnchorRef.current, columns, step, count));
     }
     const observer = new ResizeObserver(measure);
@@ -157,8 +161,17 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     wasChoosingRef.current = choosing;
   }, [choosing, continuous]);
   const lastPage = continuous || page === layout.count - 1;
-  const pageLabel = getText('reader.page_status')
+  const pageLabel = getText(layout.columns === 2 ? 'reader.spread_status' : 'reader.page_status')
     .replace('{current}', String(page + 1)).replace('{total}', String(layout.count));
+
+  function openBookmarks() {
+    saveScrollRef.current();
+    cancelTurn();
+    const position = viewportRef.current ? captureReadingAnchor(viewportRef.current, columnsRef.current, continuous) : readingAnchorRef.current;
+    setBookmarkPassage({ id: crypto.randomUUID(), createdAt: Date.now(), storyId, sceneId,
+      storyTitle, title, intro: intro ?? null, body: body ?? '', image: image ?? null,
+      position: position ?? { paragraph: 0, offset: 0 } });
+  }
 
   return (
     <main ref={mainRef} className={`reader-layout${continuous ? ' reader-layout--continuous' : ''}`}
@@ -172,6 +185,10 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
           <span aria-hidden="true">← </span>{getText('reader.bookshelf')}
         </button>
         <span className="reader-nav-title">{testing ? getText('reader.test_preview') : storyTitle}</span>
+        {storyId && <button type="button" className="text-size-button bookmark-button" aria-label={getText('passages.title')}
+          aria-haspopup="dialog" onClick={openBookmarks}>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z" /></svg>
+        </button>}
         <button type="button" className="text-size-button" aria-label={getText('reader.text_size')}
           aria-haspopup="dialog" onClick={() => { cancelTurn(); setSettingsOpen(true); }}>{getText('reader.text_size_symbol')}</button>
       </nav>
@@ -212,8 +229,11 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
                   </button>
                 )}
               </span>
-              {!continuous && <span className="page-status reader-page-control" aria-hidden={!controlsShown} aria-live="polite" aria-atomic="true"
-                aria-label={getText('reader.page_spoken').replace('{current}', String(page + 1)).replace('{total}', String(layout.count))}>{pageLabel}</span>}
+              {!continuous && <span className="page-status reader-page-control" data-page={page + 1} data-total={layout.count}
+                aria-hidden={!controlsShown} aria-live="polite" aria-atomic="true"
+                aria-label={`${pageLabel} ${getText('reader.in_scene')}`}>
+                <span>{pageLabel}</span><span className="scene-progress-label">{getText('reader.in_scene')}</span>
+              </span>}
               <span className="reader-footer-next">
                 {!lastPage ? (
                   <button type="button" className="text-button reader-page-control" inert={!controlsShown} onClick={() => turnPage(page + 1)}>
@@ -244,6 +264,8 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
         pageHaptics={pageHaptics} onPageHapticsChange={onPageHapticsChange}
         onChange={(scale) => { cancelTurn(); onTextScaleChange?.(scale); }}
         onClose={() => setSettingsOpen(false)} />}
+      {bookmarkPassage && <PassageBookmarks currentPassage={bookmarkPassage} storage={passageStorage}
+        portalTarget={mainRef.current} onClose={() => setBookmarkPassage(null)} />}
     </main>
   );
 }

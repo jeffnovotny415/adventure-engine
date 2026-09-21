@@ -505,3 +505,41 @@ bookmarks, and selectable page movement. The author-preview report discussed
 alongside these is a possible next task, not part of this batch.
 The signed update was installed over Jeff's existing iPhone app without
 uninstalling it; Apple's device tools confirmed successful installation.
+
+## September 20 scene progress and favorite passages
+
+Implemented the approved items 3/4: explicit scene-relative Page/Spread counts
+and a separate saved-passage collection, available from the reader's bookmark
+icon and from the bookshelf. Counts say "in this scene" and use Spread only
+when the layout actually displays facing pages. Continuous VoiceOver reading
+keeps its existing unpaginated presentation.
+
+A favorite stores the exact rendered scene snapshot (including its entry intro,
+hero/world substitutions and illustration) and the current character anchor.
+Opening it shows a scrollable copy with no story choices; it never navigates the
+adventure or changes its flags, inventory, or reading position. Back and Done
+remain visible while scrolling. Favorites use a separate versioned storage key,
+survive adventure completion/restart, and provide Remove/Undo and failed-write
+retry. Mutations read the latest collection and reject malformed/future data
+without overwriting it. The existing image viewer works within a saved passage.
+All interface copy is in ui_copy.json.
+
+Validation: 98 Node tests, lint, diagnostics and production build pass; diagnostics
+retain the nine known authored-content warnings. The 102-case browser matrix
+covers phone 667x375, iPad 1024x768, portrait 390x844, reduced motion and 225% book
+text. Additional checks cover maximum system plus book sizes, continuous-reading
+bookmarks, focus restoration, failed-save retry, Remove/Undo, exact snapshot text,
+unchanged live position, and final-page choices on all three layouts. Corrected
+the existing settings test selector to distinguish Aa from the new bookmark
+button. Real-book checks confirm reload persistence, bookshelf access, rotation,
+and illustration enlargement/Actual size/return. Temporary preview favorites
+were removed with the app's recoverable Remove action. All 15 protected story,
+draft, Python and public files remain byte-identical to f7a5d4e. Signed Release
+build, 101-asset compiled-bundle verification and strict signature checks pass.
+Physical VoiceOver/touch feel still needs Jeff's hands-on confirmation.
+
+Remaining approved reading idea: selectable page movement. An author-preview
+report remains a possible separate task; unfinished story routes belong to
+Jeff's writing work and have not been edited.
+The update installed successfully over the existing iPhone app, preserving its
+local data. No uninstall was performed.

@@ -1,13 +1,17 @@
+import { useRef, useState } from 'react';
 import { useContent } from '../../../hooks/useContent';
 import { BookSpine } from '../../shared/BookSpine/BookSpine';
 import { AppHeader } from '../../shared/AppHeader/AppHeader';
+import { PassageBookmarks } from '../../shared/BookReader/PassageBookmarks';
 
 export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onDeveloperMode }) {
   const { getText } = useContent();
+  const [passagesOpen, setPassagesOpen] = useState(false);
+  const mainRef = useRef(null);
   return (
     <>
       <AppHeader />
-      <main className="library-layout">
+      <main className="library-layout" ref={mainRef}>
         <section className="library-intro">
           <p className="eyebrow">{getText('home.eyebrow')}</p>
           <h1>{getText('home.welcome_heading')}</h1>
@@ -25,6 +29,7 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
               </button>
             </section>
           ))}
+          <button type="button" className="text-button" aria-haspopup="dialog" onClick={() => setPassagesOpen(true)}>{getText('passages.title')}</button>
         </section>
         <section className="library-books" aria-label={getText('home.choose_adventure_heading')}>
           <h2 className="shelf-label">{getText('home.choose_adventure_heading')}</h2>
@@ -35,6 +40,7 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
           </div>
           <p className="library-caption">{getText('home.shelf_caption')}</p>
         </section>
+        {passagesOpen && <PassageBookmarks portalTarget={mainRef.current} onClose={() => setPassagesOpen(false)} />}
       </main>
       <footer className="library-footer">
         <button type="button" className="text-button small" onClick={onDeveloperMode}>

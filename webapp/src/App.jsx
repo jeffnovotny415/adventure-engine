@@ -217,6 +217,8 @@ export default function App() {
       {screen === SCREENS.STORY && scene && !isEnding(scene) && (
         <div className="story-shell" data-theme={activeThemeKey}>
           <StoryScreen
+            storyId={activeStoryId}
+            sceneId={activeSave.currentSceneId}
             key={`${activeStoryId}:${activeSave.currentSceneId}:${activeSave.currentEntryIntro ?? ''}`}
             storyTitle={activeStory.title}
             title={displayText.title}
@@ -243,6 +245,8 @@ export default function App() {
       {screen === SCREENS.END && scene && (
         <div className="story-shell" data-theme={activeThemeKey}>
           <EndScreen
+            storyId={activeStoryId}
+            sceneId={activeSave.currentSceneId}
             key={`${activeStoryId}:${activeSave.currentSceneId}:${activeSave.currentEntryIntro ?? ''}`}
             storyTitle={activeStory.title}
             title={displayText.title}

@@ -46,7 +46,7 @@
     "page_haptics": "Gentle page-turn vibration",
     "voiceover_help": "VoiceOver reads the passage continuously. Use your usual VoiceOver gestures to read and navigate, then choose what happens next below the passage.",
     "page_spoken": "Page {current} of {total}",
-    "page_status": "{current} / {total}",
+    "page_status": "Page {current} of {total}",
     "back_to_passage": "Back to the passage",
     "test_preview": "Author preview",
     "readingFont_label": "Typeface",
@@ -63,7 +63,9 @@
     "bold_text": "Bold text",
     "always_show_controls": "Always show controls",
     "show_controls": "Show controls",
-    "hide_controls": "Hide controls"
+    "hide_controls": "Hide controls",
+    "spread_status": "Spread {current} of {total}",
+    "in_scene": "in this scene"
   },
   "end": {
     "heading": "The End",
@@ -111,5 +113,26 @@
     "save_changed": "Saved progress changed in another window. We left that bookmark untouched. Return to the bookshelf to load it.",
     "navigation_failed": "We couldn’t open the next page. Your saved place is unchanged. Return to the bookshelf to resume.",
     "retry": "Try again"
+  },
+  "passages": {
+    "title": "Saved passages",
+    "saved_passage": "Saved passage",
+    "help": "Keep favorite moments to read again. Your adventure keeps its own place.",
+    "read_only": "This is a saved passage. Your adventure and choices stay where you left them.",
+    "back": "Back to saved passages",
+    "add": "Bookmark this passage",
+    "saved": "Passage bookmarked",
+    "added": "Passage saved.",
+    "removed": "Passage removed.",
+    "restored": "Passage restored.",
+    "undo": "Undo removal",
+    "remove": "Remove",
+    "empty": "No saved passages yet. Use the bookmark button while reading to save a favorite moment.",
+    "errors": {
+      "unavailable": "Saved passages are unavailable right now. Your adventure is unaffected. Try again.",
+      "invalid": "This collection could not be read. It has been left untouched.",
+      "conflict": "Saved passages changed in another window. Try again to use the latest collection.",
+      "write_failed": "This change could not be saved. Your previous passages are unchanged. Try again."
+    }
   }
 }

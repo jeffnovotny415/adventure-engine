@@ -20,6 +20,15 @@ const systemScale = new URLSearchParams(location.search).has('system') ? 53 / 17
 document.documentElement.style.fontSize = `${systemScale * 100}%`;
 const body = Array.from({ length: 80 }, (_, index) => `Reader layout test line ${index + 1}.`).join('\n');
 const frame = () => new Promise(requestAnimationFrame);
+function pageStatus() {
+  const status = document.querySelector('.page-status');
+  return status ? `${status.dataset.page} / ${status.dataset.total}` : '';
+}
+function clickTest(selector) {
+  const target = document.querySelector(selector);
+  if (!target) throw Error(`Missing ${selector}`);
+  target.click();
+}
 async function settled() {
   const deadline = performance.now() + 2500;
   do { await frame(); } while (document.querySelector('.page-turn-overlay') && performance.now() < deadline);
@@ -30,6 +39,11 @@ export function Fixture() {
   const [haptics, setHaptics] = useState(false);
   const [readingStyle, setReadingStyle] = useState(DEFAULT_READING_STYLE);
   const anchor = useRef(null);
+  const writes = useRef(0);
+  const passageStorage = useRef({ values: new Map(), fail: false,
+    getItem(key) { return this.values.get(key) ?? null; },
+    setItem(key, value) { if (this.fail) throw Error('quota'); this.values.set(key, value); },
+  });
   const chosen = useRef(0);
   const [generation, reset] = useState(0);
   const [result, setResult] = useState('Not run');
@@ -43,6 +57,47 @@ export function Fixture() {
     setResult('Running');
     reset((n) => n + 1);
     await frame(); await frame();
+    await settled();
+    if (kind === 'scene progress') {
+      const label = document.querySelector('.page-status');
+      const spread = getComputedStyle(document.querySelector('.reader-columns')).columnCount === '2';
+      const total = label.dataset.total;
+      const initial = label.querySelector('span').textContent === `${spread ? 'Spread' : 'Page'} 1 of ${total}` &&
+        label.getAttribute('aria-label').endsWith('in this scene');
+      document.querySelector('.reader-footer-next button').click(); await settled();
+      const advanced = label.querySelector('span').textContent === `${spread ? 'Spread' : 'Page'} 2 of ${total}`;
+      setResult(`${initial && advanced ? 'PASS' : 'FAIL'}: scene progress; correct unit ${initial}; advances ${advanced}`);
+      setRunning(false); return;
+    }
+    if (kind === 'saved passages') {
+      try {
+        const storage = passageStorage.current; storage.values.clear(); storage.fail = true;
+        clickTest('.reader-footer-next button'); await settled();
+        document.querySelector('.bookmark-button').focus(); clickTest('.bookmark-button'); await frame(); await frame();
+        clickTest('.passage-bookmarks .path-button'); await frame(); await frame();
+        const failed = !!document.querySelector('.passage-bookmarks [role="alert"]') && storage.values.size === 0;
+        storage.fail = false; clickTest('.passage-bookmarks [role="alert"] button'); await frame(); await frame();
+        const saved = document.querySelectorAll('.passage-bookmarks__list li').length === 1;
+        clickTest('.passage-bookmarks__done'); await frame(); await frame();
+        const focus = document.activeElement === document.querySelector('.bookmark-button');
+        clickTest('.reader-footer-next button'); await settled();
+        const status = pageStatus(), before = JSON.stringify(anchor.current), writesBefore = writes.current;
+        clickTest('.bookmark-button'); await frame(); await frame();
+        clickTest('.passage-bookmarks__open'); await frame(); await frame(); await frame(); await frame();
+        const detail = document.querySelector('.saved-passage');
+        const exactText = [...detail.querySelectorAll('.story-paragraph')].map(p => p.textContent).join('\n') === body;
+        const noChoices = !document.querySelector('.passage-bookmarks .choice-button') && !document.querySelector('.passage-bookmarks .path-button');
+        clickTest('.passage-bookmarks__back'); await frame(); await frame();
+        clickTest('.passage-bookmarks__list li > .text-button'); await frame(); await frame();
+        const removed = document.querySelectorAll('.passage-bookmarks__list li').length === 0;
+        clickTest('.passage-bookmarks .reading-settings__body > .text-button'); await frame(); await frame();
+        const undo = document.querySelectorAll('.passage-bookmarks__list li').length === 1;
+        clickTest('.passage-bookmarks__done'); await frame(); await frame();
+        const untouched = status === pageStatus() && before === JSON.stringify(anchor.current) && writesBefore === writes.current;
+        setResult(`${failed && saved && focus && exactText && noChoices && removed && undo && untouched ? 'PASS' : 'FAIL'}: saved passages; retry ${failed && saved}; focus ${focus}; exact text ${exactText}; read-only ${noChoices}; undo ${removed && undo}; live place ${untouched}`);
+      } catch (error) { setResult(`FAIL: saved passages; ${error.message}`); }
+      setRunning(false); return;
+    }
     if (kind === 'reading comfort') {
       const main = document.querySelector('.reader-layout');
       const viewport = document.querySelector('.reader-viewport');
@@ -55,12 +110,12 @@ export function Fixture() {
       const hidden = main.dataset.controlsShown === 'false' && document.querySelector('.reader-nav').inert &&
         viewport.getBoundingClientRect().top === bounds.top && viewport.getBoundingClientRect().height === bounds.height;
       document.querySelector('.reader-controls-toggle').click(); await frame();
-      document.querySelector('.text-size-button').click(); await frame();
+      document.querySelector('.text-size-button:not(.bookmark-button)').click(); await frame();
       let reflow = true;
       for (const value of ['serif', 'spacious', 'sans', 'relaxed']) {
         document.querySelector(`.reading-settings input[value='${value}']`).click();
         await frame(); await frame(); await document.fonts.ready; await frame();
-        const [current,total] = document.querySelector('.page-status').textContent.split('/').map(Number);
+        const [current,total] = pageStatus().split('/').map(Number);
         const step = viewport.clientWidth + parseFloat(getComputedStyle(columns).columnGap);
         reflow &&= current - 1 === pageForReadingAnchor(before, columns, step, total);
       }
@@ -90,7 +145,7 @@ export function Fixture() {
         await settled();
       }
       await frame(); await frame();
-      const lastStatus = document.querySelector('.page-status').textContent;
+      const lastStatus = pageStatus();
       const [current,total] = lastStatus.split('/').map(Number);
       document.querySelector('.reader-controls-toggle')?.click();
       await frame();
@@ -114,7 +169,7 @@ export function Fixture() {
       const readable = button?.querySelector('.choice-label').textContent === 'Choose this test path' && button.scrollWidth <= button.clientWidth+1;
       document.querySelector('.decision-page > button').click();
       await frame(); await frame();
-      const restored = document.querySelector('.page-status').textContent === lastStatus;
+      const restored = pageStatus() === lastStatus;
       document.querySelector('.path-button')?.click();
       await frame();
       const before = chosen.current;
@@ -145,6 +200,16 @@ export function Fixture() {
       await frame(); await frame();
       const resumed = captureReadingAnchor(document.querySelector('.reader-viewport'),document.querySelector('.reader-columns'),true);
       const preserved = saved?.paragraph === resumed?.paragraph;
+      clickTest('.bookmark-button'); await frame(); await frame();
+      // A continuous reader must save its scrolled position, and closing the
+      // collection must not scroll or navigate the underlying adventure.
+      clickTest('.passage-bookmarks .path-button'); await frame(); await frame();
+      const latest = JSON.parse([...passageStorage.current.values.values()][0]).items[0];
+      const marked = latest.position.paragraph === saved.paragraph && latest.body === body;
+      clickTest('.passage-bookmarks__done'); await frame(); await frame();
+      const afterBookmark = captureReadingAnchor(document.querySelector('.reader-viewport'),document.querySelector('.reader-columns'),true);
+      const bookmarkStable = marked && afterBookmark.paragraph === saved.paragraph;
+
       document.querySelector('.reader-footer-next button').click();
       await frame();
       const decision = document.querySelector('.decision-page h1');
@@ -152,7 +217,7 @@ export function Fixture() {
       document.querySelector('.decision-page > button').click();
       await frame(); await frame();
       const returned = captureReadingAnchor(document.querySelector('.reader-viewport'),document.querySelector('.reader-columns'),true);
-      setResult(`${restored && continuous && ordered && preserved && choices && returned?.paragraph === saved?.paragraph ? 'PASS' : 'FAIL'}: continuous reading; restored ${restored}; layout ${continuous}; ordered ${ordered}; saved ${JSON.stringify(saved)}; resumed ${JSON.stringify(resumed)}; choices ${choices}; returned ${JSON.stringify(returned)}`);
+      setResult(`${restored && continuous && ordered && preserved && bookmarkStable && choices && returned?.paragraph === saved?.paragraph ? 'PASS' : 'FAIL'}: continuous reading; bookmark ${bookmarkStable}; restored ${restored}; layout ${continuous}; ordered ${ordered}; saved ${JSON.stringify(saved)}; resumed ${JSON.stringify(resumed)}; choices ${choices}; returned ${JSON.stringify(returned)}`);
       setRunning(false);
       return;
     }
@@ -196,13 +261,13 @@ export function Fixture() {
     if (kind === 'animation handoff' && overlay) {
       const remove = overlay.remove.bind(overlay);
       overlay.remove = () => {
-        exposedStatus = document.querySelector('.page-status').textContent;
+        exposedStatus = pageStatus();
         remove();
       };
     }
     pointer(viewport, 'pointerup', end, kind === 'long press' ? { testTime: 1800 } : {});
     await settled();
-    const status = document.querySelector('.page-status').textContent;
+    const status = pageStatus();
     const completes = kind === 'completed swipe' || kind === 'animation handoff' || kind === 'right edge tap' || captureTransfer;
     const expected = completes ? '2 / ' : '1 / ';
     const clean = !viewport.hasAttribute('data-dragging') && !document.querySelector('.page-turn-overlay') && captured.size === 0;
@@ -218,14 +283,14 @@ export function Fixture() {
       document.querySelector('.reader-footer-next button').click();
       await settled();
     }
-    const reusable = completes || document.querySelector('.page-status').textContent.startsWith('2 / ');
+    const reusable = completes || pageStatus().startsWith('2 / ');
     setResult(`${passed && reusable ? 'PASS' : 'FAIL'}: ${kind}; after gesture ${status}; cleaned up ${clean}; next usable ${reusable}${kind === 'animation handoff' ? `; page exposed at cleanup ${exposedStatus ?? 'no animation'}` : ''}`);
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page','reading comfort'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page','reading comfort','saved passages','scene progress'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
-    <BookReader key={generation} readingStyle={readingStyle} onReadingStyleChange={patch => setReadingStyle(current => ({...current,...patch}))} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{fixture:{text:'Choose this test path'}}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{ chosen.current += 1; }} />
+    <BookReader storyId="fixture" sceneId="scene" passageStorage={passageStorage.current} key={generation} readingStyle={readingStyle} onReadingStyleChange={patch => setReadingStyle(current => ({...current,...patch}))} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { writes.current += 1; anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{fixture:{text:'Choose this test path'}}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{ chosen.current += 1; }} />
   </>;
 }
 createRoot(document.getElementById('root')).render(<StrictMode><Fixture /></StrictMode>);

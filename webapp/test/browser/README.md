@@ -61,3 +61,16 @@ keeps navigation visible. It also verifies unchanged passage text and no
 horizontal overflow. Run before continuous reading, including `?max&system`.
 In the actual app, check center tap twice, the Show controls button, Tab from
 hidden controls, setting persistence after reload, and the illustration viewer.
+
+**scene progress** verifies that the count is scoped to this scene, uses Page
+for a single page and Spread for facing pages, and advances with Next.
+**saved passages** uses separate in-memory storage to check a failed write and
+retry, focus return, exact saved text, read-only reopening, Remove/Undo, and
+unchanged live reading position. The continuous-reading case also bookmarks a
+scrolled paragraph and verifies that closing the collection retains it.
+Run these at phone/tablet/portrait sizes, including `?max&system&reduced`.
+In the real app, bookmark a passage, reload, reopen it from the bookshelf, and
+confirm Resume still opens the live adventure. Test the illustration viewer
+inside a saved passage. Back to saved passages and Done must stay visible while
+scrolling the saved text. The fixture reads page counts from DOM data attributes
+so its assertions do not depend on the presentation label.
