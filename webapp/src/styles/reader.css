@@ -108,17 +108,22 @@
 .path-button:active { background: var(--color-accent-1); color: var(--color-panel); }
 .path-button:focus-visible, .choice-button:focus-visible { outline: 3px solid var(--color-accent-1); outline-offset: 4px; }
 .decision-page { padding: 28px 35px 30px; width: 100%; }
-.decision-page > .story-name { text-align: center; overflow-wrap: anywhere; margin: 0 0 12px; }
-.decision-ornament { display: flex; align-items: center; justify-content: center; gap: 14px; color: var(--color-accent-1); font-size: 24px; }
-.decision-ornament::before, .decision-ornament::after { content: ''; width: 52px; height: 1px; background: var(--color-border); }
-.decision-page h1 { text-align: center; font-family: var(--font-display); font-weight: 400; margin: 12px 0 28px; overflow-wrap: anywhere; }
-.choice-list { display: flex; flex-direction: column; gap: 18px; margin-bottom: 20px; }
-.choice-button { position: relative; grid-template-columns: 1.6em minmax(0,1fr) 1em; align-items: center; gap: 14px; min-height: 76px; padding: 22px 20px; border: 1px solid var(--color-accent-1); border-radius: 2px; background: color-mix(in srgb, var(--color-accent-1) 3%, var(--color-panel)); line-height: 1.6; }
-.choice-button::before { content: ''; position: absolute; inset: 5px; pointer-events: none; border: 1px solid color-mix(in srgb, var(--color-accent-1) 32%, transparent); clip-path: polygon(0 0, 18px 0, 18px 1px, calc(100% - 18px) 1px, calc(100% - 18px) 0, 100% 0, 100% 18px, calc(100% - 1px) 18px, calc(100% - 1px) calc(100% - 18px), 100% calc(100% - 18px), 100% 100%, calc(100% - 18px) 100%, calc(100% - 18px) calc(100% - 1px), 18px calc(100% - 1px), 18px 100%, 0 100%, 0 calc(100% - 18px), 1px calc(100% - 18px), 1px 18px, 0 18px); }
-.choice-number { font-size: 1em; }
-.choice-arrow { font-size: 1em; }
+/* A chapter heading marks the change from reading to choosing. */
+.decision-heading { text-align: center; margin-bottom: 24px; }
+.decision-scene { color: var(--color-text-secondary); font-size: .85rem; line-height: 1.5; overflow-wrap: anywhere; margin: 0; }
+.decision-ornament { display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--color-accent-1); pointer-events: none; }
+.decision-ornament svg { flex: 0 0 48px; }
+.decision-ornament::before, .decision-ornament::after { content: ''; width: 52px; height: 4px; border-block: 1px solid var(--color-border); }
+.decision-ornament--space::before, .decision-ornament--space::after { height: 1px; border: 0; background: var(--color-border); }
+.decision-ornament--mechanical::before, .decision-ornament--mechanical::after { height: 5px; border-top-style: dashed; }
+.decision-page h1 { text-align: center; font-family: var(--font-display); font-weight: 400; margin: 8px 0; overflow-wrap: anywhere; }
+.choice-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+.choice-button { position: relative; grid-template-columns: 24px minmax(0,1fr) 20px; align-items: center; gap: 14px; min-height: 64px; padding: 18px 20px; border: 1px solid color-mix(in srgb, var(--color-border) 65%, transparent); border-inline-start: 3px solid var(--color-accent-1); border-radius: 2px; background: color-mix(in srgb, var(--color-panel) 96%, var(--color-text-primary)); line-height: 1.6; }
+.choice-number { font-size: min(.8em, 16px); }
+.choice-arrow { font-size: 20px; }
 .choice-button:hover { background: color-mix(in srgb, var(--color-accent-1) 8%, var(--color-panel)); }
 .choice-button:active { background: color-mix(in srgb, var(--color-accent-1) 16%, var(--color-panel)); }
+.decision-page > .text-button { display: flex; width: fit-content; max-width: 100%; margin-inline: auto; }
 .decision-context { display: none; min-width: 0; }
 .decision-context__viewport { overflow: hidden; height: clamp(240px, calc(100dvh - 178px - env(safe-area-inset-top) - env(safe-area-inset-bottom)), 780px); }
 .decision-context__columns { column-count: 1; }
@@ -129,16 +134,18 @@
 }
 @media (max-width: 480px) {
   .decision-page { padding-inline: 23px; }
-  .choice-button { grid-template-columns: 1.4em minmax(0,1fr); padding: 20px 16px; gap: 10px; }
-  .choice-arrow { display: none; }
+  .choice-button { grid-template-columns: 20px minmax(0,1fr) 18px; padding: 16px 12px; gap: 10px; }
   .reader-footer:has(.path-button) { grid-template-columns: 1fr auto; }
   .reader-footer:has(.path-button) .reader-footer-next { grid-column: 1 / -1; justify-self: stretch; }
   .path-button { width: 100%; }
 }
 @media (orientation: landscape) and (max-height: 500px) {
-  .decision-page { padding-top: 20px; }
-  .decision-page h1 { margin-bottom: 20px; }
-  .choice-button { padding-block: 18px; }
+  .decision-page { padding-block: 14px 12px; }
+  .decision-heading { margin-bottom: 14px; }
+  .decision-ornament svg { height: 30px; }
+  .decision-page h1 { margin-bottom: 6px; }
+  .choice-list { margin-bottom: 12px; }
+  .choice-button { min-height: 56px; padding-block: 12px; }
 }
 
 /* Controls keep their layout space so a center tap never moves the passage. */

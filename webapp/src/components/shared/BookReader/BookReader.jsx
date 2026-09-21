@@ -8,6 +8,7 @@ import { ReadingSettings } from './ReadingSettings';
 import { DEFAULT_NATIVE_READING, DEFAULT_READING_STYLE } from '../../../state/readingPreferences';
 import { pageTurnFeedback } from '../../../state/nativeReading';
 import { DecisionContext } from './DecisionContext';
+import { DecisionOrnament } from './DecisionOrnament';
 import { PassageBookmarks } from './PassageBookmarks';
 
 // Real columns preserve every paragraph and adapt to the device and text size.
@@ -207,9 +208,11 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
           <div {...(continuous ? {} : gestureHandlers)} data-zoomed={zoomed} className={`decision-spread${!continuous && textScale * nativeReading.textScale <= 1.5 ? ' decision-spread--facing' : ''}`}>
           {!continuous && <DecisionContext {...{ storyTitle, title, intro, body, image, textScale, readingStyle }} systemScale={nativeReading.textScale} />}
           <section className="decision-page">
-            <p className="eyebrow story-name">{title}</p>
-            <span className="decision-ornament" aria-hidden="true">◇</span>
-            <h1 ref={decisionRef} tabIndex={-1}>{getText('story.choose_prompt')}</h1>
+            <header className="decision-heading">
+              <DecisionOrnament storyId={storyId} />
+              <h1 ref={decisionRef} tabIndex={-1}>{getText('story.choose_prompt')}</h1>
+              <p className="decision-scene">{title}</p>
+            </header>
             <div className="choice-list">
               {Object.entries(choices).map(([id, choice], index) => (
                 <ChoiceButton key={id} number={index + 1} label={choice.text} onClick={() => onChoose(choice)} />

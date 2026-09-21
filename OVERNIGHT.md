@@ -635,3 +635,35 @@ conversation previews, not applied to production in this batch.
 Shipped navigation changes in fb294ed on origin/main. Retrying Oliver's iPad
 reached the device, but iOS reported it locked and refused to mount the developer
 disk image. Unlocking the iPad is required before the installation can finish.
+
+## September 21 approved chapter-heading choices design
+
+Applied Jeff's selected chapter-heading treatment to the live reader: centered
+"Choose your path" interface heading, unchanged scene title beneath, and spacious
+choice rows with a quiet ink stripe. Removed the previous inner bookplate border.
+Decorative marks vary by book: an engraved fantasy seal for The Summoned Mage,
+orbital marks for The Space Walker, and a mechanical badge for The Can Opener.
+These vectors are presentation-only and hidden from assistive technology. All
+choice labels, authored titles and story text retain their original wording.
+
+The layout preserves scene context on facing-page iPads and allows vertical
+scrolling on short phones and at larger text sizes. Compact landscape spacing
+keeps a two-choice page and its Back action visible at 667x375 at default size.
+Decorative counters/arrows stay compact as the actual choice text grows, avoiding
+narrow text columns when system and book size settings are combined. Warm, clear
+and night palettes and existing reading-font preferences remain supported.
+
+Verification: 98 tests, lint, story diagnostics (zero warnings/errors), production
+build, signed Release build, 101-asset bundle verification and strict signature
+verification pass. Browser regression checks verify choice focus, activation,
+back navigation and ghost-click prevention at 667x375, 568x320, 1024x768 and
+390x844. Reviewed each real-book emblem, facing pages, rotation, night mode,
+225% text, maximum system/book text, continuous reading, and an authored route
+from Building The Can Opener to Rush to the Crash. All 21 tracked story, draft,
+Python and public files remain byte-for-byte unchanged from 4322c7f. Existing
+production chunk-size advisory remains; no authored content or gesture logic
+was changed in this presentation batch.
+
+Installed successfully over the existing iPhone app, preserving its saved data.
+Oliver's iPad remains locked; iOS refused the developer image mount, so that
+installation is pending an unlock.
