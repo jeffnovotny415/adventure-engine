@@ -57,3 +57,17 @@ test('the single-page leaf clears the binding edge and all resting shadows disap
     assert.equal(leafAppearance(1, spread).boxShadow, '0 0 0px rgba(51, 41, 31, 0)');
   }
 });
+
+test('instant movement avoids animation setup and Reduced Motion overrides animated movement', async () => {
+  const { createPageTurn } = await import('../src/components/shared/BookReader/pageTurn.js');
+  const untouched = new Proxy({}, { get() { throw Error('Instant must not inspect the visual page'); } });
+  assert.equal(createPageTurn(untouched, untouched, { animated: false }), null);
+  const previous = globalThis.window;
+  try {
+    globalThis.window = { matchMedia: query => ({ matches: query === '(prefers-reduced-motion: reduce)' }) };
+    assert.equal(createPageTurn({ animate() {} }, {}, { animated: true }), null);
+  } finally {
+    if (previous === undefined) delete globalThis.window;
+    else globalThis.window = previous;
+  }
+});

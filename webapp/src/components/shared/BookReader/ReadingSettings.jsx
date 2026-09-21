@@ -66,6 +66,8 @@ export function ReadingSettings({ textScale, onChange, onClose, nativeReading,
       </label>
       <Options name="lineSpacing" value={readingStyle.lineSpacing} onChange={onReadingStyleChange} getText={getText} />
       <Options name="pageAppearance" value={readingStyle.pageAppearance} onChange={onReadingStyleChange} getText={getText} />
+      <Options name="pageMovement" value={readingStyle.pageMovement} onChange={onReadingStyleChange} getText={getText} />
+      <p className="small">{getText('reader.pageMovement_help')}</p>
       <p className="reading-settings__preview" style={{ fontSize: `${textScale}rem` }}>{getText('reader.size_preview')}</p>
       <label className="reading-settings__toggle">
         <span>{getText('reader.always_show_controls')}</span>

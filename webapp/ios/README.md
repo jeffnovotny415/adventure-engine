@@ -159,9 +159,13 @@ step. Development signing must remain valid for the app to keep launching.
 ## Reading controls
 
 - Swipe left/right to turn the paper; a short drag returns to the current page.
-- Tap the left/right side of the text area to go back/forward. Tap the middle or
-  Aa to open Reading settings. Page turns stop at passage boundaries; choices
-  remain explicit actions.
+- Tap the left/right side of the paper to go back/forward. Tap the middle to
+  show/hide controls; Aa opens Reading settings. Forward navigation after the
+  final prose page opens choices; selecting a choice remains an explicit action.
+- Aa → Page movement offers Animated (default) or Instant, saved per book.
+  Instant retains taps and swipes, committing completed swipes on release without
+  a turning leaf. Short/cancelled swipes stay on the current page. Reduce Motion
+  takes precedence and disables animation even when Animated is selected.
 - Choose one of seven text sizes, from 100% to 225%, using the slider or A−/A+.
   Each book retains its size. Older larger-text bookmarks map to the 128% setting.
   Reflow preserves the reading anchor, and authored choice labels scale too.

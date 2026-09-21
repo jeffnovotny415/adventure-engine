@@ -6,7 +6,7 @@ function release(gesture) {
   if (gesture?.element.hasPointerCapture(gesture.id)) gesture.element.releasePointerCapture(gesture.id);
 }
 
-export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChange, onToggleControls, onForwardBoundary }) {
+export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChange, onToggleControls, onForwardBoundary, animated = true }) {
   const turnRef = useRef(null);
   const gestureRef = useRef(null);
   const suppressClickRef = useRef(0);
@@ -72,7 +72,7 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
     if (turnRef.current || gestureRef.current || target < 0 || target > current.layout.count) return;
     if (target === current.layout.count) { current.onForwardBoundary?.(); return; }
     turnRef.current = createPageTurn(viewportRef.current, columnsRef.current,
-      { from: current.page, to: target, step: current.layout.step });
+      { from: current.page, to: target, step: current.layout.step, animated });
     finish(target, true);
   }
   function onPointerDown(event) {
@@ -118,7 +118,7 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
       gesture.element.setAttribute('data-dragging', 'true');
       suppressClickRef.current = performance.now() + 600;
       turnRef.current = target === current.layout.count ? null : createPageTurn(viewportRef.current, columnsRef.current,
-        { from: current.page, to: target, step: current.layout.step, grabY: (event.clientY - gesture.bounds.top) / gesture.bounds.height });
+        { from: current.page, to: target, step: current.layout.step, animated, grabY: (event.clientY - gesture.bounds.top) / gesture.bounds.height });
     }
     const elapsed = event.timeStamp - gesture.lastTime;
     if (elapsed > 0) gesture.velocity = (event.clientX - gesture.lastX) * gesture.direction / elapsed;

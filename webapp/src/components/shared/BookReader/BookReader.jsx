@@ -48,6 +48,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   const [zoomed, setZoomed] = useState(() => (window.visualViewport?.scale ?? 1) > 1.05);
   const { turnPage, cancelTurn, gestureHandlers, clickGuard } = usePageTurn({
     viewportRef, columnsRef, page: choosing ? 1 : page, layout: choosing ? { count: 2, step: 0 } : layout,
+    animated: readingStyle.pageMovement !== 'instant',
     onForwardBoundary: !choosing && !ending ? openChoices : undefined,
     onToggleControls: toggleControls,
     onPageChange: (target) => {

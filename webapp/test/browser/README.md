@@ -9,6 +9,13 @@ a completed swipe reaches page 2. Repeat with `?reduced` to exercise the JavaScr
 reduced-motion path without changing system preferences. The fixture uses no
 story data or saved progress and is excluded from the production entry bundle.
 
+The **page movement** case selects Instant in Aa, checks immediate Next and a
+completed swipe without an overlay, rejects a short swipe, then switches back
+to Animated and checks Previous. Run normally and with `?reduced` to verify the
+system preference takes precedence. Repeat at short-phone and maximum text sizes.
+Use `?instant` to run gesture cancellation and final-page choices checks without
+animation. Reload between cases to reset fixture-only settings.
+
 The touch capture transfer case starts on a paragraph and bubbles its
 lostpointercapture event after the viewport takes capture. This reproduces the
 implicit-to-explicit capture handoff used by touch browsers. It must complete

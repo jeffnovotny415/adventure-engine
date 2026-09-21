@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "test": "node --test",
     "check:stories": "node scripts/check-stories.js",
+    "check:import": "node scripts/check-story-import.js",
     "check": "npm run lint && npm test && npm run check:stories && npm run build",
     "ios:sync": "npm run build && cap sync ios",
     "ios:open": "cap open ios",

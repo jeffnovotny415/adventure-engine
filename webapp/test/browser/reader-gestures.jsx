@@ -37,7 +37,9 @@ async function settled() {
 export function Fixture() {
   const [voiceOver, setVoiceOver] = useState(false);
   const [haptics, setHaptics] = useState(false);
-  const [readingStyle, setReadingStyle] = useState(DEFAULT_READING_STYLE);
+  const [readingStyle, setReadingStyle] = useState(() => ({ ...DEFAULT_READING_STYLE,
+    pageMovement: new URLSearchParams(location.search).has('instant') ? 'instant' : 'animated',
+  }));
   const anchor = useRef(null);
   const writes = useRef(0);
   const passageStorage = useRef({ values: new Map(), fail: false,
@@ -114,6 +116,40 @@ export function Fixture() {
           setResult(`${pageStatus().startsWith(expected) ? 'PASS' : 'FAIL'}: ${kind}; ${pageStatus()}`);
         }
       } catch (error) { setResult(`FAIL: ${kind}; ${error.message}`); }
+      setRunning(false); return;
+    }
+    if (kind === 'page movement') {
+      clickTest('.text-size-button:not(.bookmark-button)'); await frame();
+      clickTest('.reading-settings input[value="instant"]'); await frame();
+      clickTest('.reading-settings__header button'); await frame();
+      const originalText = document.querySelector('.reader-columns').textContent;
+      clickTest('.reader-footer-next button'); await frame();
+      let instant = pageStatus().startsWith('2 / ') && !document.querySelector('.page-turn-overlay');
+      const viewport = document.querySelector('.reader-viewport'), captured = new Set();
+      viewport.setPointerCapture = id => captured.add(id);
+      viewport.hasPointerCapture = id => captured.has(id);
+      viewport.releasePointerCapture = id => captured.delete(id);
+      const r = viewport.getBoundingClientRect(), start = r.right - 30, y = r.top + 30;
+      const pointer = (type, x) => viewport.dispatchEvent(new PointerEvent(type, {bubbles:true,cancelable:true,
+        pointerType:'touch',pointerId:94,isPrimary:true,button:0,clientX:x,clientY:y}));
+      pointer('pointerdown', start); pointer('pointermove', start - 15); pointer('pointerup', start - 15);
+      await frame();
+      const cancelled = pageStatus().startsWith('2 / ') && !document.querySelector('.page-turn-overlay');
+      pointer('pointerdown', start); pointer('pointermove', r.left + 30);
+      instant &&= !document.querySelector('.page-turn-overlay');
+      pointer('pointerup', r.left + 30); await frame();
+      instant &&= pageStatus().startsWith('3 / ') && !document.querySelector('.page-turn-overlay');
+      clickTest('.text-size-button:not(.bookmark-button)'); await frame();
+      const retained = document.querySelector('.reading-settings input[value="instant"]').checked;
+      clickTest('.reading-settings input[value="animated"]'); await frame();
+      clickTest('.reading-settings__header button'); await frame();
+      clickTest('.reader-footer-previous button'); await frame();
+      const overlay = !!document.querySelector('.page-turn-overlay');
+      const motionCorrect = overlay !== window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      await settled();
+      const returned = pageStatus().startsWith('2 / ');
+      const unchanged = document.querySelector('.reader-columns').textContent === originalText;
+      setResult(`${instant && cancelled && retained && motionCorrect && returned && unchanged ? 'PASS' : 'FAIL'}: page movement; instant ${instant}; short swipe ${cancelled}; retained ${retained}; animated/reduced ${motionCorrect}; returned ${returned}; text ${unchanged}`);
       setRunning(false); return;
     }
     if (kind === 'scene progress') {
@@ -344,7 +380,7 @@ export function Fixture() {
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page','reading comfort','saved passages','scene progress','paper margin tap','diagonal start swipe','tap during turn','last page swipe','last page tap'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page','reading comfort','saved passages','scene progress','paper margin tap','diagonal start swipe','tap during turn','last page swipe','last page tap','page movement'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
     <BookReader storyId="fixture" sceneId="scene" passageStorage={passageStorage.current} key={generation} readingStyle={readingStyle} onReadingStyleChange={patch => setReadingStyle(current => ({...current,...patch}))} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { writes.current += 1; anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{fixture:{text:'Choose this test path'}}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{ chosen.current += 1; }} />
   </>;

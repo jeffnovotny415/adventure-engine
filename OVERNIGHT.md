@@ -667,3 +667,40 @@ was changed in this presentation batch.
 Installed successfully over the existing iPhone app, preserving its saved data.
 Oliver's iPad remains locked; iOS refused the developer image mount, so that
 installation is pending an unlock.
+
+## September 21 page movement preference and import compatibility preflight
+
+Completed the approved docket items 2 and 4. Aa now offers Animated (the existing
+default) or Instant page movement, saved with each book's reading preferences.
+Instant keeps taps and swipes, including short-swipe cancellation, but omits the
+temporary animation layer. Reduce Motion still overrides Animated. Choices remain
+immediate in both modes. Invalid preferences and failed writes use the existing
+validation/recovery path; legacy saves retain animated movement by default.
+
+Added `npm run check:import -- <incoming JSON or extracted directory>` as a
+read-only comparison against the current live stories before future replacement.
+It reports added, edited and removed IDs; changed titles as possible ID reuse;
+exact passages found under other IDs; changed start/ending behavior; removed intro
+keys; and existing structural diagnostics. JSON output includes both manifests
+with SHA-256 hashes. Exit codes distinguish ready, review required and invalid.
+It never copies content, changes saves, or invents ID migrations. Same-title
+rewrites and edited paragraph anchors still require human judgment. Instructions
+are in webapp/STORY_IMPORTS.md and the project import rule. The separate author
+review report (docket item 3) was declined and is not part of the backlog.
+
+Verification: all 105 tests, lint, story diagnostics (zero warnings/errors) and
+production build pass. Comparing current stories to themselves is clean; comparing
+the earlier Space Walker revision at 99df62d to current content identifies the
+actual changed identities (35 added scenes, 34 edited scenes, 63 review flags).
+Browser movement checks pass at 667x375, 1024x768, 568x320 with 225% book text and
+reduced motion, and 390x844 with maximum system/book text. Checked settings layout
+and rotation, instant cancellation/multitouch, phone tap/swipe choices transitions,
+iPad swipe choices/return, and accidental selection prevention. Synthetic browser
+pointers verify routing; physical iOS gesture feel remains a hands-on check.
+All 21 tracked story/draft/Python/public files are byte-for-byte unchanged from
+6de8d3f. Signed Release build, 101-asset bundle verification and strict signature
+verification pass. The existing production chunk-size advisory remains.
+
+Installed over Jeff's existing iPhone app without clearing data. Oliver's iPad
+again reported locked and refused the developer image mount; its update remains
+pending an unlock.

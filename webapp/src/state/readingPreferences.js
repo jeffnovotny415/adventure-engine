@@ -3,10 +3,11 @@ export const READING_OPTIONS = Object.freeze({
   readingFont: ['sans', 'serif'],
   lineSpacing: ['standard', 'relaxed', 'spacious'],
   pageAppearance: ['warm', 'clear', 'night'],
+  pageMovement: ['animated', 'instant'],
 });
 export const DEFAULT_READING_STYLE = Object.freeze({
   readingFont: 'sans', boldText: false, lineSpacing: 'standard',
-  pageAppearance: 'warm', alwaysShowControls: false,
+  pageAppearance: 'warm', pageMovement: 'animated', alwaysShowControls: false,
 });
 
 export function readingStyle(preferences) {

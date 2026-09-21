@@ -27,6 +27,10 @@
 - Verify that story files remain unchanged after presentation work. Treat
   `webapp/src/data/stories/` as the live story source; preserve the Python stories
   and drafts as well. Keep interface labels separate in `ui_copy.json`.
+- Before future story imports, run `npm run check:import -- <incoming JSON or
+  extracted directory>` from `webapp/` against the still-unchanged live sources.
+  Follow `webapp/STORY_IMPORTS.md`: review identity warnings before replacement,
+  preserve the reviewed bytes, and never silently remap scene IDs or saved data.
 
 ## Approved visual direction
 

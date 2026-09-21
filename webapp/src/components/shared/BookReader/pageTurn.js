@@ -31,8 +31,8 @@ export function leafAppearance(progress, spread) {
 // Temporary, inert copies keep the real text and accessible reading order
 // intact. The destination sits underneath, so an unfinished drag can return
 // to the original page without changing the reader's state.
-export function createPageTurn(viewport, columns, { from, to, step, grabY = .65 }) {
-  if (!viewport || !columns || !viewport.animate ||
+export function createPageTurn(viewport, columns, { from, to, step, grabY = .65, animated = true }) {
+  if (!animated || !viewport || !columns || !viewport.animate ||
       window.matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
 
   const width = viewport.clientWidth;

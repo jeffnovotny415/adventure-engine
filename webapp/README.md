@@ -114,3 +114,10 @@ The browser build has no service worker, so its cold offline launch is not
 guaranteed. The iOS build bundles stories, fonts, scripts, and illustrations for
 launch without a development server. Neither build uses an AI service or
 backend. These commands do not upload or publish the app.
+
+## Updating story drafts safely
+
+Before replacing live JSON, run `npm run check:import -- <incoming.json|extracted-directory>`.
+This read-only preflight flags possible scene-ID reuse and bookmark compatibility
+risks. See [the import workflow](STORY_IMPORTS.md) for exit codes, exact-byte
+verification and review limits. It does not rewrite stories or migrate saves.

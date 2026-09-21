@@ -126,7 +126,7 @@ test('reading comfort preferences preserve legacy defaults and survive per-book 
   assert.deepEqual(readingStyle(migrateSave(legacy(), stories).save.uiPrefs), DEFAULT_READING_STYLE);
   const storage = fixture(), session = createGameSession(stories, storage);
   start(session, 'a'); start(session, 'b'); session.continueGame('a');
-  const style = { readingFont: 'serif', boldText: true, lineSpacing: 'spacious', pageAppearance: 'night', alwaysShowControls: true };
+  const style = { readingFont: 'serif', boldText: true, lineSpacing: 'spacious', pageAppearance: 'night', pageMovement: 'instant', alwaysShowControls: true };
   session.updateReading({ readingPosition: { paragraph: 9, offset: 20 }, uiPrefs: { ...style, textScale: 1.75 } });
   const restored = createGameSession(stories, storage).continueGame('a').save;
   assert.deepEqual(readingStyle(restored.uiPrefs), style);
@@ -141,17 +141,18 @@ test('invalid comfort preferences and failed writes leave the saved adventure un
   const storage = fixture(), session = createGameSession(stories, storage);
   start(session, 'a'); const before = storage.getItem();
   for (const uiPrefs of [{ readingFont: 'missing' }, { lineSpacing: 2 }, { pageAppearance: null },
-    { boldText: 'false' }, { alwaysShowControls: 1 }]) {
+    { boldText: 'false' }, { alwaysShowControls: 1 }, { pageMovement: 'scroll' }, { pageMovement: false }]) {
     assert.equal(session.updateReading({ uiPrefs }).status, 'ignored');
     assert.equal(storage.getItem(), before);
   }
   storage.fail = true;
-  assert.equal(session.updateReading({ uiPrefs: { pageAppearance: 'clear', boldText: true } }).status, 'write_failed');
+  assert.equal(session.updateReading({ uiPrefs: { pageAppearance: 'clear', boldText: true, pageMovement: 'instant' } }).status, 'write_failed');
   assert.equal(storage.getItem(), before);
   assert.deepEqual(readingStyle(session.getSnapshot().save.uiPrefs), DEFAULT_READING_STYLE);
   storage.fail = false; session.retryPersistence();
   const restored = loadSave(stories, storage).save;
   assert.equal(restored.uiPrefs.pageAppearance, 'clear');
   assert.equal(restored.uiPrefs.boldText, true);
+  assert.equal(restored.uiPrefs.pageMovement, 'instant');
   assert.equal(restored.currentSceneId, 'start');
 });
