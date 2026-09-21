@@ -827,3 +827,17 @@ Saved seven-synthoid-v2.png and its exact built-in editing prompt; gallery and
 viewer use v2, while the first concept is preserved. Verified transparent alpha
 and warm-paper face rendering. All 53 protected content and prior artwork files
 remain byte-identical.
+
+## September 21 provisional-name reference
+
+Created exports/name-review-2026-09-21 with 58 review entries across the three
+live stories, including 21 named characters, named places/ships/gadgets and five
+reader-name placeholders. All names are provisional; artwork approval does not
+finalize them. Each row has a role summary and links to matching scenes. Included
+a blank replacement-name CSV and complete read-only HTML story snapshots, plus
+an offline ZIP. Generic roles and species terms are outside this name list.
+
+Verified every local link and scene anchor. Rendered prose and entry variations
+match the original strings exactly; all 21 protected live/public/Python/draft
+files remain byte-identical. Phone and tablet layouts have no horizontal overflow;
+verified navigation from a name to its original story scene. No renames applied.

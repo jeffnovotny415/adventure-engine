@@ -1,0 +1,3577 @@
+[
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Character",
+    "current_name": "Captain Azul",
+    "role": "Tall blue captain with wide ears; crew artwork 8.",
+    "aliases": [
+      "Azul"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_007",
+        "title": "How Did You Know?"
+      },
+      {
+        "id": "scene_008",
+        "title": "Scanned?"
+      },
+      {
+        "id": "scene_009",
+        "title": "Cut Short"
+      },
+      {
+        "id": "scene_019",
+        "title": "At the Airlock"
+      },
+      {
+        "id": "scene_020",
+        "title": "Thirty-Eight"
+      },
+      {
+        "id": "scene_023",
+        "title": "Everyone Aboard"
+      },
+      {
+        "id": "scene_029",
+        "title": "Permission to Come Aboard"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      }
+    ],
+    "story_link": "space_walker.html#scene_007"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Character",
+    "current_name": "Pip",
+    "role": "Yellow-haired pilot with two antennae-eyes; crew artwork 7.",
+    "aliases": [
+      "Pip"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_007",
+        "title": "How Did You Know?"
+      },
+      {
+        "id": "scene_008",
+        "title": "Scanned?"
+      },
+      {
+        "id": "scene_009",
+        "title": "Cut Short"
+      },
+      {
+        "id": "scene_010",
+        "title": "Put Me to Work"
+      },
+      {
+        "id": "scene_011",
+        "title": "Watch and Learn"
+      },
+      {
+        "id": "scene_012",
+        "title": "The Marigold"
+      },
+      {
+        "id": "scene_016",
+        "title": "Threading the Needle"
+      },
+      {
+        "id": "scene_017",
+        "title": "I Love Tight"
+      },
+      {
+        "id": "scene_018",
+        "title": "Eleven Seconds"
+      },
+      {
+        "id": "scene_023",
+        "title": "Everyone Aboard"
+      },
+      {
+        "id": "scene_027",
+        "title": "The Observation Deck"
+      },
+      {
+        "id": "scene_029",
+        "title": "Permission to Come Aboard"
+      },
+      {
+        "id": "scene_031",
+        "title": "The Galley"
+      },
+      {
+        "id": "scene_034",
+        "title": "The Shuttle Bay"
+      },
+      {
+        "id": "scene_035",
+        "title": "Flight Lessons"
+      },
+      {
+        "id": "scene_037",
+        "title": "Frost Station"
+      },
+      {
+        "id": "scene_038",
+        "title": "On the Ice"
+      },
+      {
+        "id": "scene_042",
+        "title": "Eyes in the Sky"
+      },
+      {
+        "id": "scene_043",
+        "title": "Thin Ice"
+      },
+      {
+        "id": "scene_045",
+        "title": "Off the Ice"
+      },
+      {
+        "id": "scene_046",
+        "title": "Haven"
+      },
+      {
+        "id": "scene_047",
+        "title": "The Long Memory"
+      },
+      {
+        "id": "scene_054",
+        "title": "What Was Saved"
+      },
+      {
+        "id": "scene_055",
+        "title": "The List"
+      },
+      {
+        "id": "scene_056",
+        "title": "Why He Started"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Convoy"
+      },
+      {
+        "id": "scene_058",
+        "title": "Tow Line"
+      },
+      {
+        "id": "scene_059",
+        "title": "The Red Pedal"
+      },
+      {
+        "id": "scene_060",
+        "title": "Catch"
+      },
+      {
+        "id": "scene_061",
+        "title": "Power Transfer"
+      },
+      {
+        "id": "scene_062",
+        "title": "Hold On to Something"
+      },
+      {
+        "id": "scene_064",
+        "title": "Twelve for Twelve"
+      },
+      {
+        "id": "scene_065",
+        "title": "The Plan"
+      },
+      {
+        "id": "scene_070",
+        "title": "The Sting"
+      },
+      {
+        "id": "scene_071",
+        "title": "A Snack"
+      },
+      {
+        "id": "scene_072",
+        "title": "The Long Way Around"
+      },
+      {
+        "id": "scene_073",
+        "title": "No Bait"
+      },
+      {
+        "id": "scene_076",
+        "title": "The Shot"
+      },
+      {
+        "id": "scene_077",
+        "title": "Stung"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      },
+      {
+        "id": "scene_079",
+        "title": "The First Face"
+      }
+    ],
+    "story_link": "space_walker.html#scene_007"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Character",
+    "current_name": "Seven",
+    "role": "Metal synthoid officer; crew artwork 10.",
+    "aliases": [
+      "Seven"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_007",
+        "title": "How Did You Know?"
+      },
+      {
+        "id": "scene_008",
+        "title": "Scanned?"
+      },
+      {
+        "id": "scene_009",
+        "title": "Cut Short"
+      },
+      {
+        "id": "scene_010",
+        "title": "Put Me to Work"
+      },
+      {
+        "id": "scene_011",
+        "title": "Watch and Learn"
+      },
+      {
+        "id": "scene_012",
+        "title": "The Marigold"
+      },
+      {
+        "id": "scene_013",
+        "title": "The Shuttle Run"
+      },
+      {
+        "id": "scene_014",
+        "title": "A Farm Thing"
+      },
+      {
+        "id": "scene_015",
+        "title": "Snap"
+      },
+      {
+        "id": "scene_018",
+        "title": "Eleven Seconds"
+      },
+      {
+        "id": "scene_020",
+        "title": "Thirty-Eight"
+      },
+      {
+        "id": "scene_021",
+        "title": "Belts"
+      },
+      {
+        "id": "scene_022",
+        "title": "The Low Point"
+      },
+      {
+        "id": "scene_023",
+        "title": "Everyone Aboard"
+      },
+      {
+        "id": "scene_025",
+        "title": "Seven Tells It"
+      },
+      {
+        "id": "scene_026",
+        "title": "The Truth"
+      },
+      {
+        "id": "scene_028",
+        "title": "What It Is"
+      },
+      {
+        "id": "scene_029",
+        "title": "Permission to Come Aboard"
+      },
+      {
+        "id": "scene_030",
+        "title": "First Day"
+      },
+      {
+        "id": "scene_031",
+        "title": "The Galley"
+      },
+      {
+        "id": "scene_032",
+        "title": "The Engine Room"
+      },
+      {
+        "id": "scene_034",
+        "title": "The Shuttle Bay"
+      },
+      {
+        "id": "scene_036",
+        "title": "Systems Lessons"
+      },
+      {
+        "id": "scene_037",
+        "title": "Frost Station"
+      },
+      {
+        "id": "scene_038",
+        "title": "On the Ice"
+      },
+      {
+        "id": "scene_039",
+        "title": "Seven Across"
+      },
+      {
+        "id": "scene_040",
+        "title": "Hand Over Hand"
+      },
+      {
+        "id": "scene_041",
+        "title": "Hold the Line"
+      },
+      {
+        "id": "scene_042",
+        "title": "Eyes in the Sky"
+      },
+      {
+        "id": "scene_043",
+        "title": "Thin Ice"
+      },
+      {
+        "id": "scene_044",
+        "title": "The Long Way"
+      },
+      {
+        "id": "scene_045",
+        "title": "Off the Ice"
+      },
+      {
+        "id": "scene_046",
+        "title": "Haven"
+      },
+      {
+        "id": "scene_047",
+        "title": "The Long Memory"
+      },
+      {
+        "id": "scene_048",
+        "title": "The Hall of Voices"
+      },
+      {
+        "id": "scene_049",
+        "title": "The Seed Vault"
+      },
+      {
+        "id": "scene_050",
+        "title": "Keeper Moss"
+      },
+      {
+        "id": "scene_051",
+        "title": "One Tenth of One Percent"
+      },
+      {
+        "id": "scene_052",
+        "title": "One More"
+      },
+      {
+        "id": "scene_053",
+        "title": "Leave Now"
+      },
+      {
+        "id": "scene_054",
+        "title": "What Was Saved"
+      },
+      {
+        "id": "scene_055",
+        "title": "The List"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Convoy"
+      },
+      {
+        "id": "scene_058",
+        "title": "Tow Line"
+      },
+      {
+        "id": "scene_059",
+        "title": "The Red Pedal"
+      },
+      {
+        "id": "scene_060",
+        "title": "Catch"
+      },
+      {
+        "id": "scene_061",
+        "title": "Power Transfer"
+      },
+      {
+        "id": "scene_063",
+        "title": "You Said Right Now"
+      },
+      {
+        "id": "scene_064",
+        "title": "Twelve for Twelve"
+      },
+      {
+        "id": "scene_065",
+        "title": "The Plan"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Lure"
+      },
+      {
+        "id": "scene_067",
+        "title": "Past the Red Line"
+      },
+      {
+        "id": "scene_068",
+        "title": "Too Close"
+      },
+      {
+        "id": "scene_069",
+        "title": "Jaws"
+      },
+      {
+        "id": "scene_070",
+        "title": "The Sting"
+      },
+      {
+        "id": "scene_073",
+        "title": "No Bait"
+      },
+      {
+        "id": "scene_074",
+        "title": "Both at Once"
+      },
+      {
+        "id": "scene_075",
+        "title": "The Bait"
+      },
+      {
+        "id": "scene_076",
+        "title": "The Shot"
+      },
+      {
+        "id": "scene_077",
+        "title": "Stung"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      },
+      {
+        "id": "scene_079",
+        "title": "The First Face"
+      },
+      {
+        "id": "scene_080",
+        "title": "The Space Walker"
+      }
+    ],
+    "story_link": "space_walker.html#scene_007"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Character",
+    "current_name": "Skipper Bel",
+    "role": "Captain of the Marigold.",
+    "aliases": [
+      "Skipper Bel",
+      "Bel"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_020",
+        "title": "Thirty-Eight"
+      },
+      {
+        "id": "scene_021",
+        "title": "Belts"
+      },
+      {
+        "id": "scene_022",
+        "title": "The Low Point"
+      },
+      {
+        "id": "scene_023",
+        "title": "Everyone Aboard"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      }
+    ],
+    "story_link": "space_walker.html#scene_020"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Character",
+    "current_name": "Tock",
+    "role": "The Marigold’s young engineer.",
+    "aliases": [
+      "Tock"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_020",
+        "title": "Thirty-Eight"
+      },
+      {
+        "id": "scene_021",
+        "title": "Belts"
+      },
+      {
+        "id": "scene_022",
+        "title": "The Low Point"
+      },
+      {
+        "id": "scene_023",
+        "title": "Everyone Aboard"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      }
+    ],
+    "story_link": "space_walker.html#scene_020"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Character",
+    "current_name": "Dr. Wren",
+    "role": "Scientist rescued from the ice moon; studies the World-Eater.",
+    "aliases": [
+      "Wren"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_041",
+        "title": "Hold the Line"
+      },
+      {
+        "id": "scene_044",
+        "title": "The Long Way"
+      },
+      {
+        "id": "scene_045",
+        "title": "Off the Ice"
+      },
+      {
+        "id": "scene_046",
+        "title": "Haven"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Convoy"
+      },
+      {
+        "id": "scene_064",
+        "title": "Twelve for Twelve"
+      },
+      {
+        "id": "scene_065",
+        "title": "The Plan"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Lure"
+      },
+      {
+        "id": "scene_069",
+        "title": "Jaws"
+      },
+      {
+        "id": "scene_070",
+        "title": "The Sting"
+      },
+      {
+        "id": "scene_071",
+        "title": "A Snack"
+      },
+      {
+        "id": "scene_072",
+        "title": "The Long Way Around"
+      },
+      {
+        "id": "scene_073",
+        "title": "No Bait"
+      },
+      {
+        "id": "scene_074",
+        "title": "Both at Once"
+      },
+      {
+        "id": "scene_077",
+        "title": "Stung"
+      }
+    ],
+    "story_link": "space_walker.html#scene_041"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Character",
+    "current_name": "Keeper Moss",
+    "role": "Elderly keeper of the Long Memory archive.",
+    "aliases": [
+      "Keeper Moss",
+      "Moss"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_050",
+        "title": "Keeper Moss"
+      },
+      {
+        "id": "scene_051",
+        "title": "One Tenth of One Percent"
+      },
+      {
+        "id": "scene_053",
+        "title": "Leave Now"
+      },
+      {
+        "id": "scene_054",
+        "title": "What Was Saved"
+      },
+      {
+        "id": "scene_055",
+        "title": "The List"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      }
+    ],
+    "story_link": "space_walker.html#scene_050"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Character",
+    "current_name": "Zib",
+    "role": "Pip’s cousin, later running a fried-dough stand on Haven.",
+    "aliases": [
+      "Zib"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_027",
+        "title": "The Observation Deck"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      }
+    ],
+    "story_link": "space_walker.html#scene_027"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Solaris",
+    "role": "The protagonist’s home world.",
+    "aliases": [
+      "Solaris"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_006",
+        "title": "The Bridge"
+      },
+      {
+        "id": "scene_007",
+        "title": "How Did You Know?"
+      },
+      {
+        "id": "scene_008",
+        "title": "Scanned?"
+      },
+      {
+        "id": "scene_024",
+        "title": "The Captain Tells It"
+      },
+      {
+        "id": "scene_025",
+        "title": "Seven Tells It"
+      },
+      {
+        "id": "scene_028",
+        "title": "What It Is"
+      },
+      {
+        "id": "scene_055",
+        "title": "The List"
+      },
+      {
+        "id": "scene_076",
+        "title": "The Shot"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      },
+      {
+        "id": "scene_079",
+        "title": "The First Face"
+      }
+    ],
+    "story_link": "space_walker.html#scene_006"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Tansy",
+    "role": "Lost home world of Marigold survivors, including Tock.",
+    "aliases": [
+      "Tansy"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_022",
+        "title": "The Low Point"
+      },
+      {
+        "id": "scene_023",
+        "title": "Everyone Aboard"
+      },
+      {
+        "id": "scene_046",
+        "title": "Haven"
+      },
+      {
+        "id": "scene_076",
+        "title": "The Shot"
+      }
+    ],
+    "story_link": "space_walker.html#scene_022"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Lumen",
+    "role": "Pip’s lost home world.",
+    "aliases": [
+      "Lumen"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_027",
+        "title": "The Observation Deck"
+      },
+      {
+        "id": "scene_046",
+        "title": "Haven"
+      },
+      {
+        "id": "scene_076",
+        "title": "The Shot"
+      }
+    ],
+    "story_link": "space_walker.html#scene_027"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Indra",
+    "role": "Captain Azul’s lost home world.",
+    "aliases": [
+      "Indra"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_056",
+        "title": "Why He Started"
+      },
+      {
+        "id": "scene_076",
+        "title": "The Shot"
+      }
+    ],
+    "story_link": "space_walker.html#scene_056"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Quill",
+    "role": "Lost world preserved by the archive ship.",
+    "aliases": [
+      "Quill"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_047",
+        "title": "The Long Memory"
+      },
+      {
+        "id": "scene_048",
+        "title": "The Hall of Voices"
+      },
+      {
+        "id": "scene_049",
+        "title": "The Seed Vault"
+      },
+      {
+        "id": "scene_050",
+        "title": "Keeper Moss"
+      },
+      {
+        "id": "scene_054",
+        "title": "What Was Saved"
+      }
+    ],
+    "story_link": "space_walker.html#scene_047"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Haven",
+    "role": "Refuge world for rescued survivors.",
+    "aliases": [
+      "Haven"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_045",
+        "title": "Off the Ice"
+      },
+      {
+        "id": "scene_046",
+        "title": "Haven"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Convoy"
+      },
+      {
+        "id": "scene_064",
+        "title": "Twelve for Twelve"
+      },
+      {
+        "id": "scene_065",
+        "title": "The Plan"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Lure"
+      },
+      {
+        "id": "scene_069",
+        "title": "Jaws"
+      },
+      {
+        "id": "scene_077",
+        "title": "Stung"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      },
+      {
+        "id": "scene_079",
+        "title": "The First Face"
+      }
+    ],
+    "story_link": "space_walker.html#scene_045"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Marigold",
+    "role": "Passenger transport rescued from a debris field.",
+    "aliases": [
+      "Marigold"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_009",
+        "title": "Cut Short"
+      },
+      {
+        "id": "scene_010",
+        "title": "Put Me to Work"
+      },
+      {
+        "id": "scene_011",
+        "title": "Watch and Learn"
+      },
+      {
+        "id": "scene_012",
+        "title": "The Marigold"
+      },
+      {
+        "id": "scene_013",
+        "title": "The Shuttle Run"
+      },
+      {
+        "id": "scene_017",
+        "title": "I Love Tight"
+      },
+      {
+        "id": "scene_018",
+        "title": "Eleven Seconds"
+      },
+      {
+        "id": "scene_020",
+        "title": "Thirty-Eight"
+      },
+      {
+        "id": "scene_021",
+        "title": "Belts"
+      },
+      {
+        "id": "scene_022",
+        "title": "The Low Point"
+      },
+      {
+        "id": "scene_023",
+        "title": "Everyone Aboard"
+      },
+      {
+        "id": "scene_029",
+        "title": "Permission to Come Aboard"
+      },
+      {
+        "id": "scene_046",
+        "title": "Haven"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      }
+    ],
+    "story_link": "space_walker.html#scene_009"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Long Memory",
+    "role": "Archive ship carrying Keeper Moss, seeds and recorded stories.",
+    "aliases": [
+      "Long Memory"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_047",
+        "title": "The Long Memory"
+      },
+      {
+        "id": "scene_052",
+        "title": "One More"
+      },
+      {
+        "id": "scene_053",
+        "title": "Leave Now"
+      },
+      {
+        "id": "scene_054",
+        "title": "What Was Saved"
+      }
+    ],
+    "story_link": "space_walker.html#scene_047"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Frost Station",
+    "role": "Research base on an ice moon.",
+    "aliases": [
+      "Frost Station"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_037",
+        "title": "Frost Station"
+      },
+      {
+        "id": "scene_045",
+        "title": "Off the Ice"
+      }
+    ],
+    "story_link": "space_walker.html#scene_037"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "Lifeline Fleet",
+    "role": "The rescue fleet.",
+    "aliases": [
+      "Lifeline Fleet"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_009",
+        "title": "Cut Short"
+      },
+      {
+        "id": "scene_020",
+        "title": "Thirty-Eight"
+      },
+      {
+        "id": "scene_029",
+        "title": "Permission to Come Aboard"
+      },
+      {
+        "id": "scene_056",
+        "title": "Why He Started"
+      }
+    ],
+    "story_link": "space_walker.html#scene_009"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Place, ship or entity",
+    "current_name": "World-Eater",
+    "role": "Planet-consuming entity; a descriptive name rather than a personal name.",
+    "aliases": [
+      "World-Eater"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_024",
+        "title": "The Captain Tells It"
+      },
+      {
+        "id": "scene_025",
+        "title": "Seven Tells It"
+      },
+      {
+        "id": "scene_026",
+        "title": "The Truth"
+      },
+      {
+        "id": "scene_037",
+        "title": "Frost Station"
+      },
+      {
+        "id": "scene_045",
+        "title": "Off the Ice"
+      },
+      {
+        "id": "scene_046",
+        "title": "Haven"
+      },
+      {
+        "id": "scene_047",
+        "title": "The Long Memory"
+      },
+      {
+        "id": "scene_064",
+        "title": "Twelve for Twelve"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Lure"
+      },
+      {
+        "id": "scene_067",
+        "title": "Past the Red Line"
+      },
+      {
+        "id": "scene_068",
+        "title": "Too Close"
+      },
+      {
+        "id": "scene_069",
+        "title": "Jaws"
+      },
+      {
+        "id": "scene_071",
+        "title": "A Snack"
+      },
+      {
+        "id": "scene_072",
+        "title": "The Long Way Around"
+      },
+      {
+        "id": "scene_073",
+        "title": "No Bait"
+      },
+      {
+        "id": "scene_074",
+        "title": "Both at Once"
+      },
+      {
+        "id": "scene_076",
+        "title": "The Shot"
+      },
+      {
+        "id": "scene_077",
+        "title": "Stung"
+      }
+    ],
+    "story_link": "space_walker.html#scene_024"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Character",
+    "current_name": "Elliana",
+    "role": "Purple-haired summoner and companion.",
+    "aliases": [
+      "Elliana"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_001",
+        "title": "Opening"
+      },
+      {
+        "id": "scene_003",
+        "title": "The Barrier"
+      },
+      {
+        "id": "scene_004",
+        "title": "The Candle Flame"
+      },
+      {
+        "id": "scene_005",
+        "title": "Elliana Explains"
+      },
+      {
+        "id": "scene_006",
+        "title": "What Help Is Needed"
+      },
+      {
+        "id": "scene_007",
+        "title": "Why You"
+      },
+      {
+        "id": "scene_008",
+        "title": "Going Home"
+      },
+      {
+        "id": "scene_010",
+        "title": "Am I a Mage"
+      },
+      {
+        "id": "scene_011",
+        "title": "Choose Your Element"
+      },
+      {
+        "id": "scene_012",
+        "title": "Fire Spell Happens"
+      },
+      {
+        "id": "scene_013",
+        "title": "Lightning Spell Happens"
+      },
+      {
+        "id": "scene_014",
+        "title": "Stone Bullet Spell Happens"
+      },
+      {
+        "id": "scene_015",
+        "title": "The Spell Lands"
+      },
+      {
+        "id": "scene_016",
+        "title": "The Door"
+      },
+      {
+        "id": "scene_017",
+        "title": "The Hole"
+      },
+      {
+        "id": "scene_018",
+        "title": "Teleport Away"
+      },
+      {
+        "id": "scene_019",
+        "title": "Trail to Town"
+      },
+      {
+        "id": "scene_020",
+        "title": "Attack Bandits"
+      },
+      {
+        "id": "scene_021",
+        "title": "Try to Escape"
+      },
+      {
+        "id": "scene_022",
+        "title": "Leave It to Elliana"
+      },
+      {
+        "id": "scene_023",
+        "title": "Mountains"
+      },
+      {
+        "id": "scene_024",
+        "title": "Check Rock Slide"
+      },
+      {
+        "id": "scene_025",
+        "title": "Forest"
+      },
+      {
+        "id": "scene_026",
+        "title": "Look for Yelling Person"
+      },
+      {
+        "id": "scene_027",
+        "title": "Run From Animals"
+      },
+      {
+        "id": "scene_028",
+        "title": "Teleport Back"
+      },
+      {
+        "id": "scene_029",
+        "title": "Helping the Peddler"
+      },
+      {
+        "id": "scene_030",
+        "title": "Flash and Bang"
+      },
+      {
+        "id": "scene_031",
+        "title": "Warm and Calm"
+      },
+      {
+        "id": "scene_032",
+        "title": "Stand Your Ground"
+      },
+      {
+        "id": "scene_033",
+        "title": "Bandits Dealt With"
+      },
+      {
+        "id": "scene_034",
+        "title": "Willowmere"
+      },
+      {
+        "id": "scene_035",
+        "title": "The Fountain Square"
+      },
+      {
+        "id": "scene_036",
+        "title": "The Warm Kettle"
+      },
+      {
+        "id": "scene_037",
+        "title": "A Table at the Kettle"
+      },
+      {
+        "id": "scene_038",
+        "title": "Small Fixes"
+      },
+      {
+        "id": "scene_039",
+        "title": "The Seals"
+      },
+      {
+        "id": "scene_040",
+        "title": "The First Syphon"
+      },
+      {
+        "id": "scene_041",
+        "title": "Following the Light"
+      },
+      {
+        "id": "scene_042",
+        "title": "Feeding Time"
+      },
+      {
+        "id": "scene_043",
+        "title": "Packing Up"
+      },
+      {
+        "id": "scene_046",
+        "title": "Campfire"
+      },
+      {
+        "id": "scene_047",
+        "title": "One Hundred and Twelve"
+      },
+      {
+        "id": "scene_048",
+        "title": "The Breathing Trick"
+      },
+      {
+        "id": "scene_049",
+        "title": "Small Magic"
+      },
+      {
+        "id": "scene_050",
+        "title": "Night Visitors"
+      },
+      {
+        "id": "scene_054",
+        "title": "The Hollow Hills"
+      },
+      {
+        "id": "scene_055",
+        "title": "The Broken Door"
+      },
+      {
+        "id": "scene_056",
+        "title": "The Crack"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Source"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Shepherd’s Plan"
+      },
+      {
+        "id": "scene_059",
+        "title": "The Battle Plan"
+      },
+      {
+        "id": "scene_060",
+        "title": "The Lure"
+      },
+      {
+        "id": "scene_061",
+        "title": "The Shepherds"
+      },
+      {
+        "id": "scene_062",
+        "title": "Through the Circle"
+      },
+      {
+        "id": "scene_063",
+        "title": "The Battle of the Circle"
+      },
+      {
+        "id": "scene_064",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_065",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_068",
+        "title": "Home Again"
+      },
+      {
+        "id": "scene_069",
+        "title": "The Mage of Willowmere"
+      },
+      {
+        "id": "scene_070",
+        "title": "Home Again"
+      },
+      {
+        "id": "scene_071",
+        "title": "The Keeper of the Seal"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_001"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Character",
+    "current_name": "Bram",
+    "role": "Bear-folk baker at the Warm Kettle.",
+    "aliases": [
+      "Bram"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_035",
+        "title": "The Fountain Square"
+      },
+      {
+        "id": "scene_036",
+        "title": "The Warm Kettle"
+      },
+      {
+        "id": "scene_037",
+        "title": "A Table at the Kettle"
+      },
+      {
+        "id": "scene_039",
+        "title": "The Seals"
+      },
+      {
+        "id": "scene_041",
+        "title": "Following the Light"
+      },
+      {
+        "id": "scene_043",
+        "title": "Packing Up"
+      },
+      {
+        "id": "scene_044",
+        "title": "The River Road"
+      },
+      {
+        "id": "scene_046",
+        "title": "Campfire"
+      },
+      {
+        "id": "scene_047",
+        "title": "One Hundred and Twelve"
+      },
+      {
+        "id": "scene_048",
+        "title": "The Breathing Trick"
+      },
+      {
+        "id": "scene_049",
+        "title": "Small Magic"
+      },
+      {
+        "id": "scene_050",
+        "title": "Night Visitors"
+      },
+      {
+        "id": "scene_052",
+        "title": "Scatter"
+      },
+      {
+        "id": "scene_054",
+        "title": "The Hollow Hills"
+      },
+      {
+        "id": "scene_055",
+        "title": "The Broken Door"
+      },
+      {
+        "id": "scene_056",
+        "title": "The Crack"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Source"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Shepherd’s Plan"
+      },
+      {
+        "id": "scene_059",
+        "title": "The Battle Plan"
+      },
+      {
+        "id": "scene_061",
+        "title": "The Shepherds"
+      },
+      {
+        "id": "scene_062",
+        "title": "Through the Circle"
+      },
+      {
+        "id": "scene_063",
+        "title": "The Battle of the Circle"
+      },
+      {
+        "id": "scene_064",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_065",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_068",
+        "title": "Home Again"
+      },
+      {
+        "id": "scene_069",
+        "title": "The Mage of Willowmere"
+      },
+      {
+        "id": "scene_070",
+        "title": "Home Again"
+      },
+      {
+        "id": "scene_071",
+        "title": "The Keeper of the Seal"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_035"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Character",
+    "current_name": "Tilly",
+    "role": "Fox-folk mechanic with goggles and wrenches.",
+    "aliases": [
+      "Tilly"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_035",
+        "title": "The Fountain Square"
+      },
+      {
+        "id": "scene_036",
+        "title": "The Warm Kettle"
+      },
+      {
+        "id": "scene_037",
+        "title": "A Table at the Kettle"
+      },
+      {
+        "id": "scene_038",
+        "title": "Small Fixes"
+      },
+      {
+        "id": "scene_039",
+        "title": "The Seals"
+      },
+      {
+        "id": "scene_041",
+        "title": "Following the Light"
+      },
+      {
+        "id": "scene_042",
+        "title": "Feeding Time"
+      },
+      {
+        "id": "scene_043",
+        "title": "Packing Up"
+      },
+      {
+        "id": "scene_044",
+        "title": "The River Road"
+      },
+      {
+        "id": "scene_045",
+        "title": "The Old Forest"
+      },
+      {
+        "id": "scene_046",
+        "title": "Campfire"
+      },
+      {
+        "id": "scene_048",
+        "title": "The Breathing Trick"
+      },
+      {
+        "id": "scene_049",
+        "title": "Small Magic"
+      },
+      {
+        "id": "scene_052",
+        "title": "Scatter"
+      },
+      {
+        "id": "scene_054",
+        "title": "The Hollow Hills"
+      },
+      {
+        "id": "scene_056",
+        "title": "The Crack"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Source"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Shepherd’s Plan"
+      },
+      {
+        "id": "scene_059",
+        "title": "The Battle Plan"
+      },
+      {
+        "id": "scene_061",
+        "title": "The Shepherds"
+      },
+      {
+        "id": "scene_063",
+        "title": "The Battle of the Circle"
+      },
+      {
+        "id": "scene_064",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_065",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_068",
+        "title": "Home Again"
+      },
+      {
+        "id": "scene_069",
+        "title": "The Mage of Willowmere"
+      },
+      {
+        "id": "scene_070",
+        "title": "Home Again"
+      },
+      {
+        "id": "scene_071",
+        "title": "The Keeper of the Seal"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_035"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Character",
+    "current_name": "Biscuit",
+    "role": "Puffkin companion who steals honey buns.",
+    "aliases": [
+      "Biscuit"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_037",
+        "title": "A Table at the Kettle"
+      },
+      {
+        "id": "scene_038",
+        "title": "Small Fixes"
+      },
+      {
+        "id": "scene_040",
+        "title": "The First Syphon"
+      },
+      {
+        "id": "scene_043",
+        "title": "Packing Up"
+      },
+      {
+        "id": "scene_046",
+        "title": "Campfire"
+      },
+      {
+        "id": "scene_049",
+        "title": "Small Magic"
+      },
+      {
+        "id": "scene_050",
+        "title": "Night Visitors"
+      },
+      {
+        "id": "scene_053",
+        "title": "Hide Your Light"
+      },
+      {
+        "id": "scene_056",
+        "title": "The Crack"
+      },
+      {
+        "id": "scene_061",
+        "title": "The Shepherds"
+      },
+      {
+        "id": "scene_063",
+        "title": "The Battle of the Circle"
+      },
+      {
+        "id": "scene_064",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_065",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_068",
+        "title": "Home Again"
+      },
+      {
+        "id": "scene_069",
+        "title": "The Mage of Willowmere"
+      },
+      {
+        "id": "scene_070",
+        "title": "Home Again"
+      },
+      {
+        "id": "scene_071",
+        "title": "The Keeper of the Seal"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_037"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Character",
+    "current_name": "Gus Tumblewick",
+    "role": "Raccoon-folk bandit carrying a pitchfork.",
+    "aliases": [
+      "Gus",
+      "Tumblewick"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_019",
+        "title": "Trail to Town"
+      },
+      {
+        "id": "scene_021",
+        "title": "Try to Escape"
+      },
+      {
+        "id": "scene_022",
+        "title": "Leave It to Elliana"
+      },
+      {
+        "id": "scene_033",
+        "title": "Bandits Dealt With"
+      },
+      {
+        "id": "scene_063",
+        "title": "The Battle of the Circle"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_019"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Character",
+    "current_name": "Pim",
+    "role": "One of the three raccoon-folk bandits.",
+    "aliases": [
+      "Pim"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_022",
+        "title": "Leave It to Elliana"
+      },
+      {
+        "id": "scene_033",
+        "title": "Bandits Dealt With"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_022"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Character",
+    "current_name": "Pom",
+    "role": "The smallest raccoon-folk bandit, carrying a soup ladle.",
+    "aliases": [
+      "Pom"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_022",
+        "title": "Leave It to Elliana"
+      },
+      {
+        "id": "scene_033",
+        "title": "Bandits Dealt With"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_022"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Character",
+    "current_name": "Barnaby",
+    "role": "Goat-folk peddler stranded in a tree.",
+    "aliases": [
+      "Barnaby"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_026",
+        "title": "Look for Yelling Person"
+      },
+      {
+        "id": "scene_029",
+        "title": "Helping the Peddler"
+      },
+      {
+        "id": "scene_030",
+        "title": "Flash and Bang"
+      },
+      {
+        "id": "scene_031",
+        "title": "Warm and Calm"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_026"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Character",
+    "current_name": "Gertrude",
+    "role": "Name Barnaby gives the largest tusker.",
+    "aliases": [
+      "Gertrude"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_029",
+        "title": "Helping the Peddler"
+      },
+      {
+        "id": "scene_030",
+        "title": "Flash and Bang"
+      },
+      {
+        "id": "scene_031",
+        "title": "Warm and Calm"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_029"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Place, ship or entity",
+    "current_name": "Willowmere",
+    "role": "Town affected by the fading magic.",
+    "aliases": [
+      "Willowmere"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_023",
+        "title": "Mountains"
+      },
+      {
+        "id": "scene_030",
+        "title": "Flash and Bang"
+      },
+      {
+        "id": "scene_031",
+        "title": "Warm and Calm"
+      },
+      {
+        "id": "scene_034",
+        "title": "Willowmere"
+      },
+      {
+        "id": "scene_037",
+        "title": "A Table at the Kettle"
+      },
+      {
+        "id": "scene_041",
+        "title": "Following the Light"
+      },
+      {
+        "id": "scene_045",
+        "title": "The Old Forest"
+      },
+      {
+        "id": "scene_056",
+        "title": "The Crack"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Source"
+      },
+      {
+        "id": "scene_064",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_065",
+        "title": "Closing the Circle"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_069",
+        "title": "The Mage of Willowmere"
+      },
+      {
+        "id": "scene_071",
+        "title": "The Keeper of the Seal"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_023"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Place, ship or entity",
+    "current_name": "Silverwind",
+    "role": "River through the valley.",
+    "aliases": [
+      "Silverwind"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_023",
+        "title": "Mountains"
+      },
+      {
+        "id": "scene_044",
+        "title": "The River Road"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_023"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Place, ship or entity",
+    "current_name": "Lower Furrow",
+    "role": "Farming area where growing-charms have failed.",
+    "aliases": [
+      "Lower Furrow"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_022",
+        "title": "Leave It to Elliana"
+      },
+      {
+        "id": "scene_023",
+        "title": "Mountains"
+      },
+      {
+        "id": "scene_033",
+        "title": "Bandits Dealt With"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_022"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Place, ship or entity",
+    "current_name": "Hollow Hills",
+    "role": "Hills associated with the fading magic.",
+    "aliases": [
+      "Hollow Hills"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_022",
+        "title": "Leave It to Elliana"
+      },
+      {
+        "id": "scene_023",
+        "title": "Mountains"
+      },
+      {
+        "id": "scene_033",
+        "title": "Bandits Dealt With"
+      },
+      {
+        "id": "scene_039",
+        "title": "The Seals"
+      },
+      {
+        "id": "scene_041",
+        "title": "Following the Light"
+      },
+      {
+        "id": "scene_043",
+        "title": "Packing Up"
+      },
+      {
+        "id": "scene_047",
+        "title": "One Hundred and Twelve"
+      },
+      {
+        "id": "scene_052",
+        "title": "Scatter"
+      },
+      {
+        "id": "scene_054",
+        "title": "The Hollow Hills"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_071",
+        "title": "The Keeper of the Seal"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_022"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Place, ship or entity",
+    "current_name": "The Warm Kettle",
+    "role": "Bram’s warm gathering place and bakery.",
+    "aliases": [
+      "Warm Kettle",
+      "Kettle"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_036",
+        "title": "The Warm Kettle"
+      },
+      {
+        "id": "scene_037",
+        "title": "A Table at the Kettle"
+      },
+      {
+        "id": "scene_038",
+        "title": "Small Fixes"
+      },
+      {
+        "id": "scene_043",
+        "title": "Packing Up"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_036"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Character",
+    "current_name": "Droider",
+    "role": "The inventor’s computer companion; later made portable.",
+    "aliases": [
+      "Droider"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_001",
+        "title": "Getting Home"
+      },
+      {
+        "id": "scene_002",
+        "title": "Rush Outside"
+      },
+      {
+        "id": "scene_003",
+        "title": "Security Cameras"
+      },
+      {
+        "id": "scene_004",
+        "title": "Focused Work"
+      },
+      {
+        "id": "scene_005",
+        "title": "Building The Can Opener"
+      },
+      {
+        "id": "scene_006",
+        "title": "Rush to the Crash"
+      },
+      {
+        "id": "scene_008",
+        "title": "The Axe Blade"
+      },
+      {
+        "id": "scene_009",
+        "title": "The Hammer"
+      },
+      {
+        "id": "scene_010",
+        "title": "Jump onto the Bot"
+      },
+      {
+        "id": "scene_011",
+        "title": "Grab the Shield Prototype"
+      },
+      {
+        "id": "scene_012",
+        "title": "Check on Droider"
+      },
+      {
+        "id": "scene_013",
+        "title": "Survey the Destroyed Bot"
+      },
+      {
+        "id": "scene_014",
+        "title": "Shield Up, Charge!"
+      },
+      {
+        "id": "scene_015",
+        "title": "Hold the Line"
+      },
+      {
+        "id": "scene_016",
+        "title": "Work on the Shield"
+      },
+      {
+        "id": "scene_018",
+        "title": "Prototype Fails"
+      },
+      {
+        "id": "scene_019",
+        "title": "Close Call"
+      },
+      {
+        "id": "scene_020",
+        "title": "Talking It Through"
+      },
+      {
+        "id": "scene_022",
+        "title": "The Wrist Wrock-It"
+      },
+      {
+        "id": "scene_023",
+        "title": "Target Practice"
+      },
+      {
+        "id": "scene_025",
+        "title": "Wrong Tool"
+      },
+      {
+        "id": "scene_027",
+        "title": "Two Tools, One Win"
+      },
+      {
+        "id": "scene_029",
+        "title": "A Shield Held Together with Tape"
+      },
+      {
+        "id": "scene_030",
+        "title": "Cornered"
+      },
+      {
+        "id": "scene_032",
+        "title": "Droider’s Idea"
+      },
+      {
+        "id": "scene_033",
+        "title": "Shield Cover Me"
+      },
+      {
+        "id": "scene_035",
+        "title": "The Same Fingerprints"
+      },
+      {
+        "id": "scene_036",
+        "title": "Pinned Down"
+      },
+      {
+        "id": "scene_039",
+        "title": "First Real Loss"
+      },
+      {
+        "id": "scene_040",
+        "title": "Two Ideas"
+      },
+      {
+        "id": "scene_041",
+        "title": "Miniaturizing Droider"
+      },
+      {
+        "id": "scene_042",
+        "title": "A New Perspective"
+      },
+      {
+        "id": "scene_043",
+        "title": "First Field Test"
+      },
+      {
+        "id": "scene_044",
+        "title": "Magnet Boot Testing"
+      },
+      {
+        "id": "scene_046",
+        "title": "Rematch"
+      },
+      {
+        "id": "scene_048",
+        "title": "Rooftop Run"
+      },
+      {
+        "id": "scene_049",
+        "title": "Full Loadout"
+      },
+      {
+        "id": "scene_050",
+        "title": "Rooftop Route"
+      },
+      {
+        "id": "scene_051",
+        "title": "Following the Trail"
+      },
+      {
+        "id": "scene_052",
+        "title": "Triangulation"
+      },
+      {
+        "id": "scene_054",
+        "title": "Drone Spotted"
+      },
+      {
+        "id": "scene_055",
+        "title": "Past the Checkpoint"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Man in the Shiny Suit"
+      },
+      {
+        "id": "scene_059",
+        "title": "Gearing Up"
+      },
+      {
+        "id": "scene_062",
+        "title": "Almost Not Enough"
+      },
+      {
+        "id": "scene_065",
+        "title": "Charging the Discharge"
+      },
+      {
+        "id": "scene_067",
+        "title": "Police Arrive"
+      },
+      {
+        "id": "scene_068",
+        "title": "Neighborhood Safe"
+      },
+      {
+        "id": "scene_069",
+        "title": "Back to the Bench"
+      },
+      {
+        "id": "scene_070",
+        "title": "The Fixer"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_001"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Character",
+    "current_name": "Mrs. Ruiz",
+    "role": "Owner of the corner market.",
+    "aliases": [
+      "Ruiz"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_007",
+        "title": "Rooftop View"
+      },
+      {
+        "id": "scene_013",
+        "title": "Survey the Destroyed Bot"
+      },
+      {
+        "id": "scene_017",
+        "title": "Scrap Run"
+      },
+      {
+        "id": "scene_022",
+        "title": "The Wrist Wrock-It"
+      },
+      {
+        "id": "scene_024",
+        "title": "Load-Bot in the Loading Zone"
+      },
+      {
+        "id": "scene_027",
+        "title": "Two Tools, One Win"
+      },
+      {
+        "id": "scene_028",
+        "title": "The Shopkeeper"
+      },
+      {
+        "id": "scene_029",
+        "title": "A Shield Held Together with Tape"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Scheme Confirmed"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Man in the Shiny Suit"
+      },
+      {
+        "id": "scene_068",
+        "title": "Neighborhood Safe"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_007"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Character",
+    "current_name": "Mr. Kim",
+    "role": "Neighbor who feeds pigeons at the bench.",
+    "aliases": [
+      "Kim"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_039",
+        "title": "First Real Loss"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_039"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Character",
+    "current_name": "Maximilian Grabbs",
+    "role": "Developer behind the robot sabotage.",
+    "aliases": [
+      "Maximilian",
+      "Grabbs"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_051",
+        "title": "Following the Trail"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Scheme Confirmed"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Man in the Shiny Suit"
+      },
+      {
+        "id": "scene_064",
+        "title": "Confrontation"
+      },
+      {
+        "id": "scene_065",
+        "title": "Charging the Discharge"
+      },
+      {
+        "id": "scene_066",
+        "title": "Precision"
+      },
+      {
+        "id": "scene_067",
+        "title": "Police Arrive"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_051"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Grabbs Grand Developments",
+    "role": "Grabbs’s property-development business.",
+    "aliases": [
+      "Grabbs Grand Developments"
+    ],
+    "note": "Keep this coordinated with the character surname and related business names.",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_051",
+        "title": "Following the Trail"
+      },
+      {
+        "id": "scene_053",
+        "title": "A Destination"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Man in the Shiny Suit"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_051"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Grabbs Grand Plaza",
+    "role": "Grabbs’s planned redevelopment.",
+    "aliases": [
+      "Grabbs Grand Plaza"
+    ],
+    "note": "Keep this coordinated with the character surname and related business names.",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_057",
+        "title": "The Scheme Confirmed"
+      },
+      {
+        "id": "scene_064",
+        "title": "Confrontation"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_057"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Main Street",
+    "role": "Street near the bank encounter.",
+    "aliases": [
+      "Main Street"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_036",
+        "title": "Pinned Down"
+      },
+      {
+        "id": "scene_045",
+        "title": "The Stompers"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_036"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Elm Street",
+    "role": "Street targeted by robot attacks.",
+    "aliases": [
+      "Elm Street"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_055",
+        "title": "Past the Checkpoint"
+      },
+      {
+        "id": "scene_066",
+        "title": "Precision"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_055"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "The Can Opener",
+    "role": "The inventor’s upgraded wrench; also the story title.",
+    "aliases": [
+      "Can Opener"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_005",
+        "title": "Building The Can Opener"
+      },
+      {
+        "id": "scene_006",
+        "title": "Rush to the Crash"
+      },
+      {
+        "id": "scene_008",
+        "title": "The Axe Blade"
+      },
+      {
+        "id": "scene_009",
+        "title": "The Hammer"
+      },
+      {
+        "id": "scene_010",
+        "title": "Jump onto the Bot"
+      },
+      {
+        "id": "scene_011",
+        "title": "Grab the Shield Prototype"
+      },
+      {
+        "id": "scene_014",
+        "title": "Shield Up, Charge!"
+      },
+      {
+        "id": "scene_019",
+        "title": "Close Call"
+      },
+      {
+        "id": "scene_024",
+        "title": "Load-Bot in the Loading Zone"
+      },
+      {
+        "id": "scene_025",
+        "title": "Wrong Tool"
+      },
+      {
+        "id": "scene_026",
+        "title": "Heavier Than Expected"
+      },
+      {
+        "id": "scene_027",
+        "title": "Two Tools, One Win"
+      },
+      {
+        "id": "scene_029",
+        "title": "A Shield Held Together with Tape"
+      },
+      {
+        "id": "scene_033",
+        "title": "Shield Cover Me"
+      },
+      {
+        "id": "scene_036",
+        "title": "Pinned Down"
+      },
+      {
+        "id": "scene_047",
+        "title": "Up the Wall"
+      },
+      {
+        "id": "scene_049",
+        "title": "Full Loadout"
+      },
+      {
+        "id": "scene_056",
+        "title": "The Side Window"
+      },
+      {
+        "id": "scene_059",
+        "title": "Gearing Up"
+      },
+      {
+        "id": "scene_063",
+        "title": "Breaking Through"
+      },
+      {
+        "id": "scene_064",
+        "title": "Confrontation"
+      },
+      {
+        "id": "scene_065",
+        "title": "Charging the Discharge"
+      },
+      {
+        "id": "scene_066",
+        "title": "Precision"
+      },
+      {
+        "id": "scene_068",
+        "title": "Neighborhood Safe"
+      },
+      {
+        "id": "scene_069",
+        "title": "Back to the Bench"
+      },
+      {
+        "id": "scene_070",
+        "title": "The Fixer"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_005"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "The Wrist Wrock-It",
+    "role": "Wrist-mounted rock launcher.",
+    "aliases": [
+      "Wrist Wrock-It"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_022",
+        "title": "The Wrist Wrock-It"
+      },
+      {
+        "id": "scene_024",
+        "title": "Load-Bot in the Loading Zone"
+      },
+      {
+        "id": "scene_025",
+        "title": "Wrong Tool"
+      },
+      {
+        "id": "scene_027",
+        "title": "Two Tools, One Win"
+      },
+      {
+        "id": "scene_029",
+        "title": "A Shield Held Together with Tape"
+      },
+      {
+        "id": "scene_036",
+        "title": "Pinned Down"
+      },
+      {
+        "id": "scene_049",
+        "title": "Full Loadout"
+      },
+      {
+        "id": "scene_059",
+        "title": "Gearing Up"
+      },
+      {
+        "id": "scene_062",
+        "title": "Almost Not Enough"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_022"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Shield Cover Me",
+    "role": "Protective shield device.",
+    "aliases": [
+      "Shield Cover Me"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_033",
+        "title": "Shield Cover Me"
+      },
+      {
+        "id": "scene_034",
+        "title": "Reinforce"
+      },
+      {
+        "id": "scene_036",
+        "title": "Pinned Down"
+      },
+      {
+        "id": "scene_048",
+        "title": "Rooftop Run"
+      },
+      {
+        "id": "scene_049",
+        "title": "Full Loadout"
+      },
+      {
+        "id": "scene_059",
+        "title": "Gearing Up"
+      },
+      {
+        "id": "scene_061",
+        "title": "Over the Roof"
+      },
+      {
+        "id": "scene_062",
+        "title": "Almost Not Enough"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_033"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "The Stompers",
+    "role": "Powered boots.",
+    "aliases": [
+      "Stompers"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_045",
+        "title": "The Stompers"
+      },
+      {
+        "id": "scene_046",
+        "title": "Rematch"
+      },
+      {
+        "id": "scene_048",
+        "title": "Rooftop Run"
+      },
+      {
+        "id": "scene_049",
+        "title": "Full Loadout"
+      },
+      {
+        "id": "scene_050",
+        "title": "Rooftop Route"
+      },
+      {
+        "id": "scene_054",
+        "title": "Drone Spotted"
+      },
+      {
+        "id": "scene_059",
+        "title": "Gearing Up"
+      },
+      {
+        "id": "scene_062",
+        "title": "Almost Not Enough"
+      },
+      {
+        "id": "scene_063",
+        "title": "Breaking Through"
+      },
+      {
+        "id": "scene_067",
+        "title": "Police Arrive"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_045"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Droider Portable",
+    "role": "Portable form/name of Droider.",
+    "aliases": [
+      "Droider Portable"
+    ],
+    "note": "Same character as Droider; coordinate both labels.",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_041",
+        "title": "Miniaturizing Droider"
+      },
+      {
+        "id": "scene_049",
+        "title": "Full Loadout"
+      },
+      {
+        "id": "scene_059",
+        "title": "Gearing Up"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_041"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "The Yoink",
+    "role": "Proposed grappling-hook invention.",
+    "aliases": [
+      "Yoink"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_069",
+        "title": "Back to the Bench"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_069"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Project Un-Can",
+    "role": "Plan to repair and rehabilitate the robots.",
+    "aliases": [
+      "Project Un-Can"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_070",
+        "title": "The Fixer"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_070"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "The Neighborhood Improver 3000",
+    "role": "Grabbs’s robot-virus machine.",
+    "aliases": [
+      "Neighborhood Improver 3000"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_064",
+        "title": "Confrontation"
+      },
+      {
+        "id": "scene_066",
+        "title": "Precision"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_064"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Construction Bot",
+    "role": "Robot type, not a named individual.",
+    "aliases": [
+      "Construction Bot"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_006",
+        "title": "Rush to the Crash"
+      },
+      {
+        "id": "scene_007",
+        "title": "Rooftop View"
+      },
+      {
+        "id": "scene_008",
+        "title": "The Axe Blade"
+      },
+      {
+        "id": "scene_009",
+        "title": "The Hammer"
+      },
+      {
+        "id": "scene_010",
+        "title": "Jump onto the Bot"
+      },
+      {
+        "id": "scene_011",
+        "title": "Grab the Shield Prototype"
+      },
+      {
+        "id": "scene_013",
+        "title": "Survey the Destroyed Bot"
+      },
+      {
+        "id": "scene_014",
+        "title": "Shield Up, Charge!"
+      },
+      {
+        "id": "scene_026",
+        "title": "Heavier Than Expected"
+      },
+      {
+        "id": "scene_035",
+        "title": "The Same Fingerprints"
+      },
+      {
+        "id": "scene_052",
+        "title": "Triangulation"
+      },
+      {
+        "id": "scene_060",
+        "title": "The Front Gate"
+      },
+      {
+        "id": "scene_062",
+        "title": "Almost Not Enough"
+      },
+      {
+        "id": "scene_068",
+        "title": "Neighborhood Safe"
+      },
+      {
+        "id": "scene_070",
+        "title": "The Fixer"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_006"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Load-Bot",
+    "role": "Robot type, not a named individual.",
+    "aliases": [
+      "Load-Bot"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_017",
+        "title": "Scrap Run"
+      },
+      {
+        "id": "scene_019",
+        "title": "Close Call"
+      },
+      {
+        "id": "scene_022",
+        "title": "The Wrist Wrock-It"
+      },
+      {
+        "id": "scene_024",
+        "title": "Load-Bot in the Loading Zone"
+      },
+      {
+        "id": "scene_025",
+        "title": "Wrong Tool"
+      },
+      {
+        "id": "scene_026",
+        "title": "Heavier Than Expected"
+      },
+      {
+        "id": "scene_027",
+        "title": "Two Tools, One Win"
+      },
+      {
+        "id": "scene_044",
+        "title": "Magnet Boot Testing"
+      },
+      {
+        "id": "scene_052",
+        "title": "Triangulation"
+      },
+      {
+        "id": "scene_055",
+        "title": "Past the Checkpoint"
+      },
+      {
+        "id": "scene_060",
+        "title": "The Front Gate"
+      },
+      {
+        "id": "scene_062",
+        "title": "Almost Not Enough"
+      },
+      {
+        "id": "scene_063",
+        "title": "Breaking Through"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_017"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Close Range Security Bot",
+    "role": "Short-range security robot type.",
+    "aliases": [
+      "Close Range Security Bot",
+      "Close Range Bot",
+      "Close Range"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_029",
+        "title": "A Shield Held Together with Tape"
+      },
+      {
+        "id": "scene_061",
+        "title": "Over the Roof"
+      },
+      {
+        "id": "scene_062",
+        "title": "Almost Not Enough"
+      },
+      {
+        "id": "scene_063",
+        "title": "Breaking Through"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_029"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Place, gadget or robot type",
+    "current_name": "Long Range Security Bot",
+    "role": "Long-range security robot type.",
+    "aliases": [
+      "Long Range Security Bot",
+      "Long Range Bot",
+      "Long Range"
+    ],
+    "note": "",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_036",
+        "title": "Pinned Down"
+      },
+      {
+        "id": "scene_046",
+        "title": "Rematch"
+      },
+      {
+        "id": "scene_049",
+        "title": "Full Loadout"
+      },
+      {
+        "id": "scene_061",
+        "title": "Over the Roof"
+      },
+      {
+        "id": "scene_062",
+        "title": "Almost Not Enough"
+      },
+      {
+        "id": "scene_063",
+        "title": "Breaking Through"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_036"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Reader-chosen name",
+    "current_name": "{world_name}",
+    "role": "The reader names the starship; this is a runtime placeholder.",
+    "aliases": [
+      "{world_name}"
+    ],
+    "note": "Keep the placeholder token intact. This is not a fixed draft name.",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_007",
+        "title": "How Did You Know?"
+      },
+      {
+        "id": "scene_008",
+        "title": "Scanned?"
+      },
+      {
+        "id": "scene_014",
+        "title": "A Farm Thing"
+      },
+      {
+        "id": "scene_015",
+        "title": "Snap"
+      },
+      {
+        "id": "scene_016",
+        "title": "Threading the Needle"
+      },
+      {
+        "id": "scene_018",
+        "title": "Eleven Seconds"
+      },
+      {
+        "id": "scene_020",
+        "title": "Thirty-Eight"
+      },
+      {
+        "id": "scene_023",
+        "title": "Everyone Aboard"
+      },
+      {
+        "id": "scene_035",
+        "title": "Flight Lessons"
+      },
+      {
+        "id": "scene_042",
+        "title": "Eyes in the Sky"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Convoy"
+      },
+      {
+        "id": "scene_058",
+        "title": "Tow Line"
+      },
+      {
+        "id": "scene_059",
+        "title": "The Red Pedal"
+      },
+      {
+        "id": "scene_060",
+        "title": "Catch"
+      },
+      {
+        "id": "scene_061",
+        "title": "Power Transfer"
+      },
+      {
+        "id": "scene_062",
+        "title": "Hold On to Something"
+      },
+      {
+        "id": "scene_077",
+        "title": "Stung"
+      },
+      {
+        "id": "scene_079",
+        "title": "The First Face"
+      },
+      {
+        "id": "scene_080",
+        "title": "The Space Walker"
+      }
+    ],
+    "story_link": "space_walker.html#scene_007"
+  },
+  {
+    "story_id": "space_walker",
+    "story": "The Space Walker",
+    "kind": "Reader-chosen name",
+    "current_name": "{hero_name}",
+    "role": "The reader’s protagonist name.",
+    "aliases": [
+      "{hero_name}"
+    ],
+    "note": "Keep the placeholder token intact. This is not a fixed draft name.",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_001",
+        "title": "The Portal"
+      },
+      {
+        "id": "scene_002",
+        "title": "Path 1 - Robot"
+      },
+      {
+        "id": "scene_005",
+        "title": "Robot (reached after Shuttle Bay)"
+      },
+      {
+        "id": "scene_009",
+        "title": "Cut Short"
+      },
+      {
+        "id": "scene_012",
+        "title": "The Marigold"
+      },
+      {
+        "id": "scene_019",
+        "title": "At the Airlock"
+      },
+      {
+        "id": "scene_022",
+        "title": "The Low Point"
+      },
+      {
+        "id": "scene_024",
+        "title": "The Captain Tells It"
+      },
+      {
+        "id": "scene_025",
+        "title": "Seven Tells It"
+      },
+      {
+        "id": "scene_029",
+        "title": "Permission to Come Aboard"
+      },
+      {
+        "id": "scene_037",
+        "title": "Frost Station"
+      },
+      {
+        "id": "scene_040",
+        "title": "Hand Over Hand"
+      },
+      {
+        "id": "scene_044",
+        "title": "The Long Way"
+      },
+      {
+        "id": "scene_054",
+        "title": "What Was Saved"
+      },
+      {
+        "id": "scene_056",
+        "title": "Why He Started"
+      },
+      {
+        "id": "scene_062",
+        "title": "Hold On to Something"
+      },
+      {
+        "id": "scene_065",
+        "title": "The Plan"
+      },
+      {
+        "id": "scene_068",
+        "title": "Too Close"
+      },
+      {
+        "id": "scene_069",
+        "title": "Jaws"
+      },
+      {
+        "id": "scene_074",
+        "title": "Both at Once"
+      },
+      {
+        "id": "scene_075",
+        "title": "The Bait"
+      },
+      {
+        "id": "scene_076",
+        "title": "The Shot"
+      },
+      {
+        "id": "scene_078",
+        "title": "The Wall of Names"
+      },
+      {
+        "id": "scene_079",
+        "title": "The First Face"
+      },
+      {
+        "id": "scene_080",
+        "title": "The Space Walker"
+      }
+    ],
+    "story_link": "space_walker.html#scene_001"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Reader-chosen name",
+    "current_name": "{world_name}",
+    "role": "The reader names the magical world; this is a runtime placeholder.",
+    "aliases": [
+      "{world_name}"
+    ],
+    "note": "Keep the placeholder token intact. This is not a fixed draft name.",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_011",
+        "title": "Choose Your Element"
+      },
+      {
+        "id": "scene_015",
+        "title": "The Spell Lands"
+      },
+      {
+        "id": "scene_017",
+        "title": "The Hole"
+      },
+      {
+        "id": "scene_023",
+        "title": "Mountains"
+      },
+      {
+        "id": "scene_044",
+        "title": "The River Road"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Shepherd’s Plan"
+      },
+      {
+        "id": "scene_059",
+        "title": "The Battle Plan"
+      },
+      {
+        "id": "scene_063",
+        "title": "The Battle of the Circle"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_069",
+        "title": "The Mage of Willowmere"
+      },
+      {
+        "id": "scene_071",
+        "title": "The Keeper of the Seal"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_011"
+  },
+  {
+    "story_id": "summoned_mage",
+    "story": "The Summoned Mage",
+    "kind": "Reader-chosen name",
+    "current_name": "{hero_name}",
+    "role": "The reader’s protagonist name.",
+    "aliases": [
+      "{hero_name}"
+    ],
+    "note": "Keep the placeholder token intact. This is not a fixed draft name.",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_010",
+        "title": "Am I a Mage"
+      },
+      {
+        "id": "scene_016",
+        "title": "The Door"
+      },
+      {
+        "id": "scene_018",
+        "title": "Teleport Away"
+      },
+      {
+        "id": "scene_020",
+        "title": "Attack Bandits"
+      },
+      {
+        "id": "scene_031",
+        "title": "Warm and Calm"
+      },
+      {
+        "id": "scene_032",
+        "title": "Stand Your Ground"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Shepherd’s Plan"
+      },
+      {
+        "id": "scene_066",
+        "title": "The Festival of Lights"
+      },
+      {
+        "id": "scene_067",
+        "title": "The Festival of Lights"
+      }
+    ],
+    "story_link": "summoned_mage.html#scene_010"
+  },
+  {
+    "story_id": "the_can_opener",
+    "story": "The Can Opener",
+    "kind": "Reader-chosen name",
+    "current_name": "{world_name}",
+    "role": "The reader names the neighborhood; this is a runtime placeholder.",
+    "aliases": [
+      "{world_name}"
+    ],
+    "note": "Keep the placeholder token intact. This is not a fixed draft name.",
+    "replacement": "",
+    "scenes": [
+      {
+        "id": "scene_001",
+        "title": "Getting Home"
+      },
+      {
+        "id": "scene_007",
+        "title": "Rooftop View"
+      },
+      {
+        "id": "scene_017",
+        "title": "Scrap Run"
+      },
+      {
+        "id": "scene_028",
+        "title": "The Shopkeeper"
+      },
+      {
+        "id": "scene_037",
+        "title": "Drains Fast"
+      },
+      {
+        "id": "scene_049",
+        "title": "Full Loadout"
+      },
+      {
+        "id": "scene_052",
+        "title": "Triangulation"
+      },
+      {
+        "id": "scene_057",
+        "title": "The Scheme Confirmed"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Man in the Shiny Suit"
+      },
+      {
+        "id": "scene_066",
+        "title": "Precision"
+      },
+      {
+        "id": "scene_068",
+        "title": "Neighborhood Safe"
+      }
+    ],
+    "story_link": "the_can_opener.html#scene_001"
+  }
+]
