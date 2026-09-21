@@ -574,3 +574,24 @@ Browser preview checks cover landscape iPhone 667x375, iPad 1024x768, portrait
 an imported Space Walker scene, a Mage ending, and the Can Opener's new route
 from Rush to the Crash through the supplied axe choice to The Axe Blade. The
 existing adventure bookmark remained available throughout author-preview checks.
+
+## September 20 expanded Space Walker import
+
+Imported only Space Walker from Jeff's `files (6).zip`. The live JSON and new
+Markdown reference in `drafts/2026-09-20-space-walker-expanded/` exactly match the
+archive bytes; the folder's import report records source hashes and save-position
+limitations. No editorial changes were made. All other tracked stories, drafts,
+Python sources and public assets remain unchanged. Space Walker now has 80 scenes,
+113 choices and two endings. All are reachable, with no structural warnings.
+Several scene IDs now identify different passages; no saved data was cleared or
+remapped. An old Space Walker resume location can therefore show a different
+passage, while favorite-passage snapshots retain their original content.
+
+Validation: 98 tests, lint, production build, signed Release build, 101-asset
+bundle verification and strict signature verification pass. Exercised all 113
+choices, both ending cleanups, and name substitutions through real game sessions.
+Verified supplied Markdown titles/passages/intros/choices against JSON. Preview
+checks cover landscape phone 667x375, iPad 1024x768, portrait 390x844, 225% text,
+rotation and the new route from The Long Memory to The Hall of Voices. No layout
+or engine code changed. Both Jeff's iPhone and Oliver's iPad are paired, have
+Developer Mode enabled, and are included in the build's provisioning profile.

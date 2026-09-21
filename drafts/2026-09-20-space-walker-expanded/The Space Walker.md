@@ -1,0 +1,3613 @@
+# The Space Walker
+
+Story ID: space_walker
+
+Start scene: scene_001
+
+## Description
+
+A sci-fi space adventure that starts aboard a mysterious starship.
+
+## Setup prompt
+
+What would you like to name the starship? 
+
+---
+
+## scene_001 — The Portal
+
+### Passage
+
+You adjust the goggles on your head for the 5th time. Ok, this is your first portal but you’ve got this. Just jump through, {hero_name}. Just a little step.
+Finally, you steel up your courage, pull down your goggles and jump.
+You land with a loud clank on a hard metal floor. As you look around, you notice your surroundings are not what you expected. Cold metal everywhere and large panes of glass, not the sandy desert filled with ruins your research suggested. 
+You spin around and get a really good view out the windows. “Are those stars…where the heck did I end up...is this a spaceship?” you say as you look out at the vastness of space and stars.
+You turn around and notice your portal has closed, leaving you stranded here. That shouldn’t have happened, you think to yourself. I guess I need to figure out where I am and how to get home.
+You are in a long hallway that leads in both directions. 
+Where do you go?
+
+### Choices
+
+#### Choice 1
+
+Head towards the left
+
+```json
+{
+  "next_scene": "scene_002"
+}
+```
+
+#### Choice 2
+
+Head towards the right
+
+```json
+{
+  "next_scene": "scene_003"
+}
+```
+
+---
+
+## scene_002 — Path 1 - Robot
+
+### Passage
+
+As you start walking down the hallway to the left, you start to hear the noise of something shuffling around. You stop for a second to listen closer for voices, but after a few seconds you hear nothing. You steel yourself and push forward, coming into a big room with a lot of very high tech machinery. As you look around, you notice something is shuffling towards you. You look closer and inspect it…it’s a robot! You excitedly wave at it, “Hi, I’m {hero_name}, Can you tell me where I am? I am honestly really confused.”
+The robot keeps shuffling forwards towards you, completely ignoring you while looking right past you. 
+“Ummm, hello? Can you not see me or…” you say.
+As it gets close to you, it makes a quick adjustment and walks right around you, like you aren’t even there.
+“Ok then, guess I will keep looking around haha.” you say with a chuckle as the robot completely ignores you.
+You look around the room one more time and decide it looks an awful lot like an engine room. You grab a piece of paper from your notebook and do a quick sketch of the layout of the ship you have seen so far, just in case. Then you start following the hallway again.
+You come to a big door with a sign above it that reads THE BRIDGE, and you stop and think to yourself. Ok, well I can either go in here or keep exploring this hallway.
+
+### Choices
+
+#### Choice 1
+
+Go into THE BRIDGE
+
+```json
+{
+  "next_scene": "scene_006"
+}
+```
+
+#### Choice 2
+
+Keep exploring the hallway
+
+```json
+{
+  "next_scene": "scene_004"
+}
+```
+
+---
+
+## scene_003 — Path 2 - Shuttle Bay
+
+### Passage
+
+You start walking down the hallway to the right, looking out the windows at the stars. As you walk forward, you see the hallway opening into a very large room. At the center, you see something that stops you in your tracks. A small ship…a shuttle. You walk up to it to get a closer look and take out your camera to take pictures. No one at home is going to believe this.
+You open the door to the craft and take a closer look inside. You see 2 seats up front with flight controls and screens you can’t really understand. In the back, there are 2 benches along the walls and what look like blasters of some sort. Amazing!
+A part of you wants to do nothing but pore over this discovery, but you decide you need to keep moving, try to find someone to help you understand where you are. As you exit the shuttle you look up and notice a huge door that must open so you can fly the shuttle out…wait, if there is a shuttle here, how big is the ship I’m on now?
+After one more passing glance back at the shuttle, you decide to keep walking down the hallway, eventually coming to a door that reads THE BRIDGE.
+What do you do?
+
+### Choices
+
+#### Choice 1
+
+Go through the door
+
+```json
+{
+  "next_scene": "scene_006"
+}
+```
+
+#### Choice 2
+
+Keep walking down the hallway
+
+```json
+{
+  "next_scene": "scene_005"
+}
+```
+
+---
+
+## scene_004 — Shuttle Bay (reached after Robot)
+
+### Passage
+
+You start walking down the hallway to the right, looking out the windows at the stars. As you walk forward, you see the hallway opening into a very large room. At the center, you see something that stops you in your tracks. A small ship…a shuttle. You walk up to it to get a closer look and take out your camera to take pictures. No one at home is going to believe this.
+You open the door to the craft and take a closer look inside. You see 2 seats up front with flight controls and screens you can’t really understand. In the back, there are 2 benches along the walls and what look like blasters of some sort. Amazing!
+A part of you wants to do nothing but pore over this discovery, but you decide you need to keep moving, try to find someone to help you understand where you are. As you exit the shuttle you look up and notice a huge door that must open so you can fly the shuttle out…wait, if there is a shuttle here, how big is the ship I’m on now?
+After one more passing glance back at the shuttle, you decide it’s time to actually go check out The Bridge.
+
+### Choices
+
+#### Choice 1
+
+Go into the Bridge
+
+```json
+{
+  "next_scene": "scene_006"
+}
+```
+
+---
+
+## scene_005 — Robot (reached after Shuttle Bay)
+
+### Passage
+
+As you start walking down the hallway to the left, you start to hear the noise of something shuffling around. You stop for a second to listen closer for voices, but after a few seconds you hear nothing. You steel yourself and push forward, coming into a big room with a lot of very high tech machinery. As you look around, you notice something is shuffling towards you. You look closer and inspect it…it’s a robot! You excitedly wave at it, “Hi, I’m {hero_name}, Can you tell me where I am? I am honestly really confused.”
+The robot keeps shuffling forwards towards you, completely ignoring you while looking right past you. 
+“Ummm, hello? Can you not see me or…” you say.
+As it gets close to you, it makes a quick adjustment and walks right around you, like you aren’t even there.
+“Ok then, guess I will keep looking around haha.” you say with a chuckle as the robot completely ignores you.
+You look around the room one more time and decide it looks an awful lot like an engine room. You grab a piece of paper from your notebook and do a quick sketch of the layout of the ship you have seen so far, just in case. 
+After you tuck the book back into your satchel, you stand up and notice the other path leads you back to where you started. Looks like it’s time to check out The Bridge
+
+### Choices
+
+#### Choice 1
+
+Go back to the bridge and go inside
+
+```json
+{
+  "next_scene": "scene_006"
+}
+```
+
+---
+
+## scene_006 — The Bridge
+
+### Passage
+
+You press the button on the side of the door and walk through. You immediately find the people you have been looking for since you got here, and boy do they look different than you expected.
+The one in the middle of the room is tall, really tall, with a large nose, far apart eyes, and wide ears, kind of like a kaola. Did I mention they are blue? Next, you see another alien seated at what looks like flight controls. They seem on the shorter side, with wild yellow hair, and their eyes are two long antennae, swaying above their hair. The last one you notice looks like a robot, but slightly more animated. Fully metal from head to toe, its movement is fluid, and you see it clock you the minute you walk in the room. All of them are dressed the same, in loose-fitting grey jumpsuits with zippers down the middle and patches everywhere.
+“I was wondering how long it would take you to get here,” says the taller one. “But the more important question is, how did you get on my ship?”
+You put your hands up and say, “Hi, umm, I am not sure how come, but I walked through this portal on my world and ended up here. It was supposed to take me somewhere else, though. I promise I’m not dangerous. I was honestly hoping you could help me figure out why I’m here.”
+The robot moves closer and says, “Captain. I’ve scanned them. They have no weapons, and while their heart rate is elevated, they appear to be telling the truth. It looks like it has happened again.”
+The one with the wild yellow hair sighs. ”Another planet, huh?”
+You look at them all and then directly at the Captain. “What do they mean, another planet? Did something happen to Solaris?”
+The Captain looks up from his data pad. “Solaris, you say? Well, that’s a few jumps away, but we should start at the beginning.”
+
+### Choices
+
+#### Choice 1
+
+Ask about how they knew you were here
+
+```json
+{
+  "next_scene": "scene_007"
+}
+```
+
+#### Choice 2
+
+Ask about how they scanned you
+
+```json
+{
+  "next_scene": "scene_008"
+}
+```
+
+---
+
+## scene_007 — How Did You Know?
+
+### Passage
+
+“I’m curious: how did you know I was even here? You said you were waiting for me; how?”
+
+The Captain’s wide ears twitch, which you are starting to think is how he smiles.
+
+“Nothing comes aboard the {world_name} without us knowing. The sensors picked up a burst of portal energy in the port hallway, and then one very loud clank.”
+
+“That was my landing,” you admit.
+
+“After that, Seven tracked you through the ship.” He nods at the metal crewmate.
+
+“You stopped to look out of every window you passed,” Seven says. “There are nineteen windows on that deck. They all show the same stars.”
+
+Your face goes warm. “They were really good stars.”
+
+The one with the yellow hair snorts. “I’m Pip. I fly this thing. And for what it’s worth, I still look out the windows too.”
+
+“Someone who stops to admire the view is lost, not dangerous,” the Captain says. “That is when I decided to wait for you here. I am Captain Azul. Now, you asked about Solaris.”
+
+### Choices
+
+#### Choice 1
+
+“Yes. Please. What happened to Solaris?”
+
+```json
+{
+  "next_scene": "scene_009",
+  "entry_intro": "asked_how"
+}
+```
+
+---
+
+## scene_008 — Scanned?
+
+### Passage
+
+“Hold on, you scanned me? With what?”
+
+“With my eyes,” the metal one says.
+
+You wait for more. There is no more.
+
+“He means it,” says the one with the yellow hair, and both of her antennae-eyes swivel toward you. “Seven sees heat, heartbeats, metal, all of it. He can tell what you had for breakfast. I’m Pip, by the way. I fly this thing.”
+
+“You had eggs,” Seven says. “You are also carrying forty feet of rope, a compass, a canteen, two notebooks, a camera, sunscreen, a folding shovel, and four sandwiches.”
+
+“I was told there would be a desert,” you say.
+
+“There is no desert here.”
+
+“I’m getting that.”
+
+The tall one’s wide ears twitch, which you are starting to think is how he smiles. “Seven is a synthoid. The first of his kind, and the finest officer on this ship. I am Captain Azul, and this is the {world_name}. Now, you asked about Solaris.”
+
+### Choices
+
+#### Choice 1
+
+“Yes. Please. What happened to Solaris?”
+
+```json
+{
+  "next_scene": "scene_009",
+  "entry_intro": "asked_scan"
+}
+```
+
+---
+
+## scene_009 — Cut Short
+
+### Entry intro: asked_how
+
+Captain Azul sets down his data pad, and his ears stop twitching.
+
+### Entry intro: asked_scan
+
+Captain Azul sets down his data pad. Whatever was funny a moment ago is gone from his face.
+
+### Passage
+
+“We should start at the beginning,” he says. “This ship belongs to the Lifeline Fleet. We are not soldiers, and we are not explorers. We are a rescue ship. We go where people need help, and lately, {hero_name}, a great many people have needed help, because—”
+
+WHOOP. WHOOP. WHOOP.
+
+Red lights flash across the bridge. Pip spins her chair back to the flight controls so fast that her hair takes a second to catch up.
+
+“Distress call, Captain! Passenger transport, the Marigold. They’ve drifted into a debris field, their engines are dead, and they’re spinning. Forty people on board.”
+
+“How long do they have?” the Captain asks.
+
+“Hull breach in twenty-two minutes,” Seven says. “Twenty-one.”
+
+The Captain looks at you. It is the look of someone who wants to finish a very important sentence and cannot.
+
+“I am sorry. You deserve answers, and you will have them. But not while forty people are spinning in the dark. Pip, take us in.”
+
+The stars outside the window stretch into lines.
+
+You came through that portal looking for adventure. It looks like it found you first.
+
+### Choices
+
+#### Choice 1
+
+Ask how you can help
+
+```json
+{
+  "next_scene": "scene_010"
+}
+```
+
+#### Choice 2
+
+Stay out of the way and watch closely
+
+```json
+{
+  "next_scene": "scene_011"
+}
+```
+
+---
+
+## scene_010 — Put Me to Work
+
+### Passage
+
+“Captain, I want to help. What can I do?”
+
+Pip glances back at you. Seven glances at you. The Captain does not glance. He looks at you for a long moment, the way your teachers did right before a pop quiz.
+
+“Can you follow instructions the first time they are given?”
+
+“Yes, sir.”
+
+“Can you tell me when you do not understand something, instead of pretending that you do?”
+
+That one is harder. You think about the portal, and the desert that was supposed to be on the other side.
+
+“I’m working on that one, sir.”
+
+His ears twitch. “An honest answer. That is worth more than a yes.”
+
+The ship drops out of its jump, and the window fills with tumbling rock and twisted metal. In the middle of it all is a fat orange ship, turning slowly end over end, with its lights flickering.
+
+The Marigold.
+
+### Choices
+
+#### Choice 1
+
+See what needs doing
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "volunteered"
+}
+```
+
+---
+
+## scene_011 — Watch and Learn
+
+### Passage
+
+You press yourself against the back wall of the bridge, pull out your notebook, and watch.
+
+It is what you do. It is how you figured out the portal schedules back home when nobody would teach you. You watch, you write it down, and you find the pattern.
+
+The ship drops out of its jump, and the window fills with tumbling rock and twisted metal. In the middle of it all is a fat orange ship, turning slowly end over end, with its lights flickering.
+
+The Marigold.
+
+Pip’s hands fly over the controls. Seven reads out numbers. The Captain gives orders in a calm, low voice.
+
+And you notice something. The debris looks like chaos, but it is not. The big chunks are circling, slowly, like leaves going around a drain. Every few seconds, a gap opens up on the left side, in the same place, and then closes again.
+
+You sketch it quickly, and you count. Eleven seconds. Eleven seconds. Eleven seconds.
+
+“Um. Captain?” You hold up the notebook. “It’s not random. There’s a gap, and it keeps coming back.”
+
+Everyone turns to look at you.
+
+### Choices
+
+#### Choice 1
+
+See what needs doing
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "noticed"
+}
+```
+
+---
+
+## scene_012 — The Marigold
+
+### Entry intro: volunteered
+
+“Here is where we stand,” the Captain says.
+
+### Entry intro: noticed
+
+Seven looks at your sketch for exactly one second. “They are correct, Captain. Eleven-second cycle. I had not finished calculating it.” The Captain’s ears twitch. “It seems we have a fourth set of eyes. Here is where we stand.”
+
+### Passage
+
+“The Marigold’s docking clamp is jammed shut, so we cannot link up with her the usual way. She is spinning, so we cannot simply fly alongside. And the debris is closing in.”
+
+He points, and three parts of the big screen light up.
+
+“Seven will take the shuttle across and free that clamp by hand. Pip will hold us steady inside the debris field, which is a little like threading a needle during an earthquake. I will be at the airlock to bring forty frightened people aboard.”
+
+He turns to you.
+
+“Every one of those jobs could use another pair of hands. I will not order you, {hero_name}. You are a guest on my ship. But if you meant what you said...”
+
+You tighten the strap on your goggles.
+
+This is nothing like the desert ruins. It is so much better.
+
+### Choices
+
+#### Choice 1
+
+Go with Seven in the shuttle
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+#### Choice 2
+
+Help Pip chart a path through the debris
+
+```json
+{
+  "next_scene": "scene_016"
+}
+```
+
+#### Choice 3
+
+Go with the Captain to the airlock
+
+```json
+{
+  "next_scene": "scene_019"
+}
+```
+
+---
+
+## scene_013 — The Shuttle Run
+
+### Passage
+
+The shuttle is a small, stubby ship with two seats up front and two benches in the back, and you cannot believe that you get to ride in it.
+
+Seven takes the pilot’s seat. You strap into the other one. On the back wall, a row of things that look like blasters sits in a rack.
+
+“Stun rifles,” Seven says, without turning around. “They immobilize. They do not harm. You will not need one.”
+
+“I wasn’t going to touch them.”
+
+“I know. I am saying it so that you stop looking at them.”
+
+The shuttle drops out of the bay and weaves through the tumbling rock. Seven matches the Marigold’s spin so perfectly that the orange ship seems to hold still while the stars whirl around it.
+
+You both climb out onto the hull, with your boots clamped to the metal. You try very hard not to think about that.
+
+The clamp is a mess. A chunk of rock has bent it, and the release lever is wedged tight.
+
+Seven pulls on it. His metal fingers leave dents in the lever. It does not move.
+
+“I can apply more force,” he says. “But I calculate that the lever may snap before it turns.”
+
+You look at the bent clamp. You have seen this before. It is a stuck gate latch, just a lot bigger, and a lot more in space.
+
+### Choices
+
+#### Choice 1
+
+Dig out your folding shovel and try something
+
+```json
+{
+  "next_scene": "scene_014"
+}
+```
+
+#### Choice 2
+
+Tell Seven to pull harder. There is no time to be clever
+
+```json
+{
+  "next_scene": "scene_015"
+}
+```
+
+---
+
+## scene_014 — A Farm Thing
+
+### Passage
+
+You dig in your satchel and pull out the folding shovel. You packed it for digging in desert ruins.
+
+“You don’t pull on it,” you tell Seven. “It’s stuck because the bent part is pinching it. You get something under the bent part and lift, and then the lever turns easy. Hold this end.”
+
+Seven holds that end. You wedge the blade of the shovel under the twisted metal, and the two of you lean on the handle together.
+
+For a second, nothing happens. Then there is a clunk that you feel through your boots.
+
+Seven reaches over and turns the lever with two fingers.
+
+“That was not in my calculations,” he says.
+
+“It’s a farm thing. Our gate sticks every winter.”
+
+“I will add ‘farm thing’ to my calculations.”
+
+The clamp swings open. Below you, the {world_name} slides in close, and the two ships lock together with a boom.
+
+### Choices
+
+#### Choice 1
+
+Get back aboard
+
+```json
+{
+  "next_scene": "scene_020",
+  "entry_intro": "shuttle"
+}
+```
+
+---
+
+## scene_015 — Snap
+
+### Passage
+
+“Pull harder! We don’t have time!”
+
+Seven pulls harder.
+
+The lever snaps off in his hand.
+
+The two of you look at it. There is a very small stub left sticking out of the clamp, and it is about as long as your thumb.
+
+“I did calculate that,” Seven says.
+
+“I know. I’m sorry. That was my fault.” You can tell the Captain later that you did not understand something and pretended that you did. Right now, there are forty people under your feet.
+
+You dig in your satchel and pull out the folding shovel.
+
+“Okay. It’s stuck because the bent part is pinching it. If we lift the bent part, the stub should turn. Can you grip something that small?”
+
+“I can grip something much smaller than that.”
+
+You wedge the blade of the shovel under the twisted metal, and you hang your whole weight on the handle. Seven pinches the stub between two fingers and turns it, slowly.
+
+Clunk.
+
+It cost you three minutes that you did not have. But the clamp swings open, and below you the {world_name} slides in close, and the two ships lock together with a boom.
+
+### Choices
+
+#### Choice 1
+
+Get back aboard
+
+```json
+{
+  "next_scene": "scene_020",
+  "entry_intro": "shuttle"
+}
+```
+
+---
+
+## scene_016 — Threading the Needle
+
+### Passage
+
+You slide into the seat next to Pip. It is too big for you, and there are roughly nine hundred buttons.
+
+“Don’t touch anything,” Pip says. “Just tell me what you see. Your gap. Where and when?”
+
+You open your notebook on your knee. The debris circles outside the window, and you count under your breath.
+
+“Left side, low. Opens in four. Three. Two. One. Now!”
+
+Pip shoves the controls forward. The {world_name} slides through a space that did not exist a second ago, and a rock the size of a house tumbles silently past the window behind you.
+
+“Ha! Again!”
+
+You call them. She flies them. One gap, then the next, then the next. Her antennae-eyes are pointed in two different directions, watching two screens at once, and her hands never stop moving. You have never seen anybody so good at anything.
+
+Then you see the last one, and your stomach sinks.
+
+“Big rock coming, straight ahead. The gap on the left isn’t going to open in time. There’s a little one, up high on the right. But it’s tight. It’s really tight.”
+
+“How tight?”
+
+You hold your fingers a small distance apart.
+
+“Or we could hold here,” you say. “The big gap comes back around in eleven seconds. It’s safe. But it’s eleven more seconds that they’re spinning.”
+
+“You’re the one with the map,” Pip says. “Call it.”
+
+### Choices
+
+#### Choice 1
+
+Call the tight gap
+
+```json
+{
+  "next_scene": "scene_017"
+}
+```
+
+#### Choice 2
+
+Wait for the safe one
+
+```json
+{
+  "next_scene": "scene_018"
+}
+```
+
+---
+
+## scene_017 — I Love Tight
+
+### Passage
+
+“Tight one. High right. Go, go, GO!”
+
+“Oh, I LOVE tight,” Pip says, and she rolls the whole ship over on its side.
+
+Everything that is not strapped down slides across the bridge. The Captain does not slide. He just leans.
+
+Rock fills the window on both sides. You could read the writing on it, if rocks had writing. Something scrapes along the bottom of the ship with a long, slow screech that you feel in your teeth.
+
+And then you are through, and right there in front of you is the Marigold, close enough that you can see faces in the windows.
+
+Pip lets out a whoop, and holds out her hand to you, palm up. You are not sure what that means here, so you shake it.
+
+“We’ll work on that,” she says.
+
+“Pip,” says the Captain mildly. “You have removed some of my paint.”
+
+“It was old paint, Captain.”
+
+### Choices
+
+#### Choice 1
+
+Run down to the airlock
+
+```json
+{
+  "next_scene": "scene_020",
+  "entry_intro": "nav"
+}
+```
+
+---
+
+## scene_018 — Eleven Seconds
+
+### Passage
+
+“Hold here. Wait for the big one.”
+
+Pip’s hands twitch on the controls. You can tell that she hates it. But she holds.
+
+Eleven seconds is a long time. You count every one of them. On the screen, the Marigold keeps on tumbling, end over end, with its lights flickering.
+
+Nine. Ten.
+
+A rock that nobody saw, no bigger than a suitcase, comes spinning out of the dark and cracks against the side of the ship. Red lights flash. The whole bridge jumps sideways.
+
+“Shields are holding,” Seven says. “Mostly.”
+
+Eleven.
+
+“NOW! Left side, low!”
+
+Pip shoves the controls forward, and the {world_name} sails through a gap as wide as a barn door, with room to spare on every side. Right there in front of you is the Marigold, close enough that you can see faces in the windows.
+
+“Safe and slow,” Pip says, blowing the hair out of her face. “It’s not how I’d have done it. But we’ve still got all of our paint.” She holds out her hand to you, palm up. You are not sure what that means here, so you shake it.
+
+“We’ll work on that,” she says.
+
+### Choices
+
+#### Choice 1
+
+Run down to the airlock
+
+```json
+{
+  "next_scene": "scene_020",
+  "entry_intro": "nav"
+}
+```
+
+---
+
+## scene_019 — At the Airlock
+
+### Passage
+
+The airlock is a bare metal room with a big round door. You and Captain Azul stand in front of it, listening to clangs and thumps from the other side.
+
+“They have been spinning in the dark for an hour,” the Captain says. “They will be frightened. Some will be sick. We need them to move quickly, and frightened people do not move quickly.”
+
+The door rolls open.
+
+He was right. Forty people come stumbling through, dizzy and pale and all talking at once. There are furry ones, and scaly ones, and a family of four who seem to be mostly made of elbows. Nobody knows where to go.
+
+The Captain is very tall, and very blue, and at this moment he is not helping.
+
+So you climb up on a supply crate.
+
+“HI! I’m {hero_name}! I’m new here too! Everybody who can walk, follow the green line on the floor! If you feel sick, sit down by this wall and I’ll bring you water!”
+
+And they do. Maybe because you are small, and you obviously do not belong here either.
+
+You pass around your canteen. You tear your four sandwiches into pieces, and they go further than you would think. One little kid with big gray ears will not stop crying, so you give her your compass to hold. The needle spins in lazy circles out here, and she watches it, hiccuping, until she forgets to be scared.
+
+The Captain, who has been counting heads at the door, looks down at you. “You have done this before.”
+
+“No, sir. I just know what it’s like to land somewhere and not know where you are. It happened to me this morning.”
+
+### Choices
+
+#### Choice 1
+
+Help the last few through
+
+```json
+{
+  "next_scene": "scene_020",
+  "entry_intro": "airlock"
+}
+```
+
+---
+
+## scene_020 — Thirty-Eight
+
+### Entry intro: shuttle
+
+By the time you and Seven are back on board the {world_name}, the passengers are pouring in through the airlock. The Captain is counting them as they come.
+
+### Entry intro: nav
+
+With the {world_name} holding steady right beside her, the Marigold finally links up. By the time you get down to the airlock, the passengers are pouring through. The Captain is counting them as they come.
+
+### Entry intro: airlock
+
+The last few stragglers step through the big round door. The Captain is counting them as they come.
+
+### Passage
+
+“Thirty-seven. Thirty-eight.”
+
+He waits. Nobody else comes through.
+
+“Thirty-eight life signs aboard,” Seven says. “Two remain on the Marigold. They are in her engine room, and they are not moving toward the airlock.”
+
+The comm crackles.
+
+“This is Skipper Bel of the Marigold.” It is a rough, tired voice. “Whoever you are, thank you. Now close that door and get my passengers clear. My engineer and I are holding the coolant valve shut by hand. While we hold it, she’s got nine minutes. If we let go, she’s got about two. It’s not enough time to get to you. We’ve done the math.”
+
+Behind her, a much smaller voice says, “We did it twice.”
+
+“That’s Tock. He’s a good engineer. Tell my passengers that we... well. Tell them something nice.”
+
+The Captain’s hands close into fists behind his back.
+
+“Skipper Bel,” he says. “This is Captain Azul, of the Lifeline Fleet. We do not leave people. Hold that valve.”
+
+He turns around. He looks at Seven, and then he looks at you. Nine minutes.
+
+### Choices
+
+#### Choice 1
+
+Go aboard with Seven and find another way to hold that valve
+
+```json
+{
+  "next_scene": "scene_021"
+}
+```
+
+#### Choice 2
+
+Get on the comm and help them find a way out
+
+```json
+{
+  "next_scene": "scene_022"
+}
+```
+
+---
+
+## scene_021 — Belts
+
+### Passage
+
+You and Seven run through the Marigold. It is like running through a house that somebody is slowly rolling down a hill. The floor turns into the wall, and then into the ceiling.
+
+You find them in the engine room. Skipper Bel is tall and gray and feathery. Tock is small and round and furry, and only comes up to her knee. They are both hanging on to a big red wheel, and the wheel is fighting them.
+
+“I told you to LEAVE!” Bel shouts.
+
+“I can hold the valve,” Seven says. “I am considerably stronger than both of you.”
+
+“And then who holds it while YOU run?”
+
+Nobody has an answer for that. You look at the wheel. You look at the fat pipe that runs along the wall right beside it. You look down at your own belt.
+
+“Everybody take off your belts,” you say.
+
+“Excuse me?” says Skipper Bel.
+
+Four belts, buckled end to end, make one long strap. Seven hauls the wheel shut as tight as it will go, and you lash it to the pipe, round and round, and pull the last buckle tight.
+
+Seven lets go. The strap creaks. The wheel trembles.
+
+It holds.
+
+“It will last for one minute and forty seconds,” Seven says.
+
+“Then RUN!”
+
+And that is how you come to be sprinting through a tumbling spaceship next to a synthoid, a bird, and a very small engineer, with every one of you holding your pants up with one hand.
+
+### Choices
+
+#### Choice 1
+
+Dive through the airlock
+
+```json
+{
+  "next_scene": "scene_023",
+  "entry_intro": "aboard"
+}
+```
+
+---
+
+## scene_022 — The Low Point
+
+### Passage
+
+You grab the comm. “Skipper Bel? My name’s {hero_name}. I’m new. Can you tell me what the valve is doing? Is it pushing on you the same amount all the time?”
+
+“What kind of a question is that?”
+
+“No,” says the smaller voice. “It’s not the same. It comes and goes. Hard, then not so hard.”
+
+Your heart jumps. “Tock? How long between the hard parts?”
+
+There is a pause. “I count... eleven. About eleven seconds.”
+
+It is the spin. It is the same eleven seconds as everything else out here. Every time the Marigold turns over, the pressure rises, and then it falls.
+
+You flip open your notebook and draw it, fast. A wave, up and down. “Seven, if they crank it shut at the very bottom of the wave, as tight as it’ll go, how long before it works itself loose?”
+
+Seven looks at your drawing for exactly one second.
+
+“Forty seconds. Possibly forty-five.”
+
+“Is that enough time to get to the airlock?”
+
+“Not at a walk,” says Skipper Bel. You can hear that she has started to believe it. “But Tock, you were the fastest kid on Tansy, weren’t you?”
+
+“I was the second fastest,” says Tock. “I’ll carry the wrench.”
+
+You count them down to the bottom of the wave. Three. Two. One. “NOW! Crank it and GO!”
+
+You hear grunting, and metal squealing, and then nothing but the sound of feet. You stand at the airlock and count to forty, and it is the longest forty of your whole life.
+
+### Choices
+
+#### Choice 1
+
+Watch the door
+
+```json
+{
+  "next_scene": "scene_023",
+  "entry_intro": "comms"
+}
+```
+
+---
+
+## scene_023 — Everyone Aboard
+
+### Entry intro: aboard
+
+The four of you dive through the airlock in a heap. The big round door slams shut behind you. Thirty-nine. Forty. Everybody finds their belts.
+
+### Entry intro: comms
+
+At thirty-six, a tall gray shape comes flying through the airlock with a small furry one tucked under her arm, and the big round door slams shut behind them. Thirty-nine. Forty.
+
+### Passage
+
+The {world_name} pulls away. From a safe distance, you watch the empty Marigold drift into the rocks and crumple like a paper cup.
+
+Forty people watch it with you. Nobody is on board. Nobody is hurt. Skipper Bel stands at the window until there is nothing left to see, and Tock holds on to her leg.
+
+Afterward, the cargo bay is full of blankets and hot drinks and tired voices. Captain Azul walks through it, stopping to talk with every single person. When he gets to you, he rests one big blue hand on your shoulder, just for a second, and then moves on.
+
+It feels better than any treasure you were hoping to find.
+
+You are handing out blankets when someone tugs on your sleeve. It is a small kid with big gray ears.
+
+“Are you new?” she asks. “You look new.”
+
+“Pretty new.”
+
+“We’re from Tansy. It’s gone now.” She says it the way you might say that it is raining. “Did yours get eaten too?”
+
+You stand very still.
+
+“Did my what get eaten?”
+
+“Your planet.”
+
+Across the bay, the Captain has turned around. So has Seven. They heard.
+
+Another planet, huh? That is what Pip said, back on the bridge.
+
+### Choices
+
+#### Choice 1
+
+Go straight to the Captain
+
+```json
+{
+  "next_scene": "scene_024"
+}
+```
+
+#### Choice 2
+
+Ask Seven. He will not soften it.
+
+```json
+{
+  "next_scene": "scene_025"
+}
+```
+
+---
+
+## scene_024 — The Captain Tells It
+
+### Passage
+
+The Captain takes you to a small room with a big window, and he waits until you sit down.
+
+“I was cut off before. I will not be cut off now.” He folds his long hands together. “There is something out there, {hero_name}. It is as large as a world, and it is hungry. It drifts between the stars, and when it finds a living planet, it feeds. It does not hate. It does not plan. It only eats. We call it the World-Eater.”
+
+Your mouth has gone dry. “And Solaris?”
+
+“Your portal closed behind you. You said that should not have happened, and you are right. A portal has two ends. It closes when one end is no longer there.”
+
+He does not look away from you. You will remember that later.
+
+“Solaris is gone. I am so very sorry.”
+
+You look out the window. Stars. Just stars, in every direction.
+
+“But hear the rest,” he says, “because it matters. When the World-Eater comes, a world’s portals do not simply close. They burst open first. All of them, all at once, everywhere. People fall through. They are scattered across the stars, alone and lost and alive.”
+
+He leans forward.
+
+“You were not the only one who came through a portal today. You were only the first one we found. That is what this ship is for.”
+
+### Choices
+
+#### Choice 1
+
+Let it sink in
+
+```json
+{
+  "next_scene": "scene_026",
+  "entry_intro": "from_captain"
+}
+```
+
+---
+
+## scene_025 — Seven Tells It
+
+### Passage
+
+You find Seven by the cargo bay door, standing perfectly still.
+
+“Seven. What happened to Solaris? I want the real answer.”
+
+“I have only real answers,” he says. “There is an entity. It is approximately the size of a planet, and it consumes planets. We call it the World-Eater. Solaris stopped transmitting four hours and twelve minutes ago. Your portal closed because its other end no longer exists.”
+
+You thought you wanted it straight. It turns out that straight is very hard to hold.
+
+You sit down on a crate. Seven does not pat your shoulder, or tell you it will be okay. He does something else. He sits down on the crate next to you, which you have never seen him do, and he stays.
+
+“There is more data, and it is relevant,” he says after a while. “When the World-Eater approaches, every portal on a world opens at once. People fall through. We have recovered survivors from eleven lost worlds this way. I keep the list. It has four thousand, two hundred and six names.”
+
+He turns his head toward you.
+
+“Today I added forty. I also added yours. I do not feel sorrow, {hero_name}. But ‘I am sorry’ is what is said, and I have considered it, and I choose to say it. I am sorry.”
+
+You wipe your eyes with the back of your hand.
+
+Somehow, it helps.
+
+### Choices
+
+#### Choice 1
+
+Let it sink in
+
+```json
+{
+  "next_scene": "scene_026",
+  "entry_intro": "from_seven"
+}
+```
+
+---
+
+## scene_026 — The Truth
+
+### Entry intro: from_captain
+
+The Captain stays in his chair and says nothing else. He lets you have the quiet.
+
+### Entry intro: from_seven
+
+Seven stays where he is, right beside you, and says nothing else.
+
+### Passage
+
+You think about home.
+
+Your room, with the maps on the wall. The market on Fifth-day. The portal yard, where you used to press your face against the fence and watch the real delvers come and go, and promise yourself that it would be you one day.
+
+Your family.
+
+They were all near portals. The whole town was built around the portal yard. If every portal burst open at once...
+
+They could be anywhere.
+
+They could be anywhere. It is the worst thought you have ever had, and it is also, somehow, the best one. Anywhere is a place. Anywhere can be found.
+
+You jumped through that portal because you wanted to find something amazing out here.
+
+Now you know what it is that you are looking for.
+
+### Choices
+
+#### Choice 1
+
+Take a minute alone
+
+```json
+{
+  "next_scene": "scene_027"
+}
+```
+
+#### Choice 2
+
+Ask what the World-Eater actually is
+
+```json
+{
+  "next_scene": "scene_028"
+}
+```
+
+---
+
+## scene_027 — The Observation Deck
+
+### Passage
+
+You find a quiet room at the top of the ship where the whole ceiling is a window.
+
+You lie on your back on the floor and look at more stars than you knew there were.
+
+After a while the door slides open, and someone lies down on the floor next to you. Yellow hair spreads out across the deck.
+
+“Lumen,” Pip says. “That was mine. Two suns, pink oceans. The best fried dough in the galaxy. I was nine. I fell through a portal in my kitchen and landed in a cargo hold full of extremely surprised chickens.”
+
+You laugh. You did not expect to, and it comes out wobbly.
+
+“The Captain found me three days later. I’ve been on this ship ever since.” One of her antennae-eyes turns to look at you while the other keeps watching the stars. “I’m not going to tell you it stops hurting. But I’ll tell you what I figured out. You can sit still and be sad, or you can be sad and go get people. The second one’s better. You’re sad either way, but there’s fried dough sometimes.”
+
+You lie there a while longer.
+
+“Did you ever find anybody? From Lumen?”
+
+“Sixty-two so far,” Pip says, and she grins up at the stars. “My cousin Zib was number thirty. I’m still looking. That’s the whole point.”
+
+### Choices
+
+#### Choice 1
+
+Go find the Captain
+
+```json
+{
+  "next_scene": "scene_029",
+  "entry_intro": "from_deck"
+}
+```
+
+---
+
+## scene_028 — What It Is
+
+### Passage
+
+“Show me,” you say. “I want to know what it is.”
+
+Seven brings up an image on the wall. At first you think it is a picture of nothing, just a patch of space with no stars in it.
+
+Then you realize the patch has a shape. And the shape has an edge. And the little bright dot next to it, for scale, is a planet.
+
+“We know very little,” Seven says. “It does not answer signals. It does not seem to notice ships, the way you would not notice a gnat. It is not a machine. It may be alive. It is drawn to portal energy, the way some animals are drawn to the smell of food. Worlds with many portals are found first.”
+
+Worlds like Solaris, where there is a whole job called delver.
+
+“Has anybody ever stopped it?”
+
+“No.”
+
+“Has anybody ever hurt it?”
+
+“No.”
+
+“Has anybody ever tried?”
+
+Seven is quiet for a moment, which for him is a very long time.
+
+“That is a better question. Not successfully. Most who see it are busy running, and they are correct to run.”
+
+You look at the hole in the stars for a long time. You find that you are not as scared of it as you thought you would be.
+
+Mostly, you are angry.
+
+### Choices
+
+#### Choice 1
+
+Go find the Captain
+
+```json
+{
+  "next_scene": "scene_029",
+  "entry_intro": "from_records"
+}
+```
+
+---
+
+## scene_029 — Permission to Come Aboard
+
+### Entry intro: from_deck
+
+You walk back to the bridge with your shoulders straighter than when you left it.
+
+### Entry intro: from_records
+
+You walk back to the bridge with your jaw set.
+
+### Passage
+
+Captain Azul is standing at the big window with his hands behind his back.
+
+“Captain. I want to join your crew.”
+
+He turns around. “{hero_name}. You have had the worst day of your life. It is not the day to make—”
+
+“I can’t go home. There’s no home to go to. My family could be anywhere out here, and you’re the ones who go looking. And I’m good at this, sir. I was good at it today.” You take a breath. “I jumped through that portal without thinking. I know that. I’m thinking now. I want to help.”
+
+The bridge is very quiet.
+
+“The passengers of the Marigold were calmer with them in the room,” Seven says. “I do not know why. It is in my report.”
+
+“And I like them,” says Pip. “That’s not a technical reason. I just do.”
+
+The Captain’s ears twitch. Then they twitch again. Then he walks to a locker on the back wall, takes something out, and holds it out to you.
+
+It is a gray jumpsuit, with a zipper down the middle and patches everywhere.
+
+“Welcome to the Lifeline Fleet, Crewmate {hero_name}.”
+
+You put it on right there, over your clothes. Did I mention it is about three sizes too big? It is about three sizes too big. You have to roll the sleeves four times.
+
+You have never been prouder of anything in your life.
+
+“You have a great deal to learn,” the Captain says, “and not much time to learn it.”
+
+### Choices
+
+#### Choice 1
+
+Start your first day
+
+```json
+{
+  "next_scene": "scene_030"
+}
+```
+
+---
+
+## scene_030 — First Day
+
+### Passage
+
+Your first day as a member of the crew begins with getting lost.
+
+You were given directions to your bunk. You are fairly sure that you followed them. You are standing in a closet full of mops.
+
+“You are in a closet,” says Seven’s voice, from a little speaker in the ceiling.
+
+“I know that.”
+
+“Turn around. Left, then left again, then up the ladder. Training begins in the shuttle bay in three hours. Until then, the Captain says that the ship is yours to explore. He also says to please stop drawing on the walls.”
+
+You look at the little arrow you just drew next to the closet door, with MOPS written under it.
+
+“It’s a map,” you say. “It’s a very small map.”
+
+“I will tell him that it is a very small map.”
+
+Three hours, and a whole starship. You tuck your pencil behind your ear.
+
+### Choices
+
+#### Choice 1
+
+Follow the smell of cooking to the galley
+
+```json
+{
+  "next_scene": "scene_031"
+}
+```
+
+#### Choice 2
+
+Go back to the engine room and look at it properly
+
+```json
+{
+  "next_scene": "scene_032"
+}
+```
+
+#### Choice 3
+
+Find your bunk and unpack your satchel
+
+```json
+{
+  "next_scene": "scene_033"
+}
+```
+
+---
+
+## scene_031 — The Galley
+
+### Passage
+
+The galley is a small, warm room with one table, and Pip is in the middle of it, cooking. One antenna-eye is watching a pot of noodles. The other one is watching a second pot of noodles.
+
+“There’s a food printer,” she says, pointing at a box on the wall with her spoon. “It makes two things. One is noodles. The other one is beige.”
+
+“Beige what?”
+
+“Just beige. Seven says it has everything a body needs. I say it tastes like a wet blanket. So I cook.”
+
+She hands you a knife and a pile of something purple and knobbly, and you chop. It is a little like home. You are the one who does the chopping there, too.
+
+You stop chopping for a second. Pip does not say anything. She just bumps you with her hip and hands you another purple thing.
+
+“House rules,” she says. “The cook doesn’t wash up. Whoever is newest does the dishes. I have been the newest person on this ship for eleven YEARS.” She points her spoon at you, and she grins all the way up to her antennae. “I have been waiting for you for a very long time.”
+
+You eat noodles. You wash a truly amazing number of dishes. It is the most normal you have felt since you jumped through the portal.
+
+### Choices
+
+#### Choice 1
+
+Go and look at the engine room
+
+```json
+{
+  "next_scene": "scene_032"
+}
+```
+
+#### Choice 2
+
+Go and find your bunk
+
+```json
+{
+  "next_scene": "scene_033"
+}
+```
+
+#### Choice 3
+
+Head down to the shuttle bay for training
+
+```json
+{
+  "next_scene": "scene_034"
+}
+```
+
+---
+
+## scene_032 — The Engine Room
+
+### Passage
+
+You find the engine room on the second try. There is a lot less getting lost involved when you are not also panicking.
+
+In the middle of the room is a tall glass column, full of slow blue light. It pulses. Bright, dim. Bright, dim. You can feel it through the floor.
+
+“The power core,” says Seven. He is standing next to it with his hands behind his back, exactly the way the Captain stands. “It is sometimes called the heart of the ship. That is not accurate. But I understand why it is said.”
+
+The little maintenance robot shuffles past with its oil can. You say hello. It walks around you.
+
+“Seven? Do you sleep?”
+
+“No. For four hours each night, I have no duties. I spend them in here.”
+
+“Why in here? It’s the loudest room on the ship.”
+
+“Yes.” He watches the blue light rise and fall. “I find that I prefer it. It is never silent in here. I was kept in a very silent room, before the Captain found me.” He tilts his head. “I do not know why I prefer things. I have no feelings about it. I have only observed that every night, this is where I stand.”
+
+You sit down on the floor beside him with your notebook, and for a while you both just watch the light. You draw it. Bright, dim. Bright, dim.
+
+He is right. It is nice in here.
+
+### Choices
+
+#### Choice 1
+
+Go and find your bunk
+
+```json
+{
+  "next_scene": "scene_033"
+}
+```
+
+#### Choice 2
+
+Head down to the shuttle bay for training
+
+```json
+{
+  "next_scene": "scene_034"
+}
+```
+
+---
+
+## scene_033 — Your Bunk
+
+### Passage
+
+Your bunk is a bed set into the wall, with a curtain, a shelf, and a small round window that is full of stars. It is about the size of a cupboard. You love it right away.
+
+You unpack your satchel onto the blanket, one thing at a time.
+
+A compass, which does not know which way is north any more, because there is no north. A folding shovel. Forty feet of rope. A canteen. A tube of sunscreen, the extra strong kind. A hat with a flap at the back, to keep the desert sun off your neck.
+
+And your notes. There are two whole notebooks of them, all about the ruins that were supposed to be on the other side of that portal. There are maps that you copied out of library books, and lists, and a drawing of yourself holding up some treasure, which you would like it noted that you did when you were much younger. It was last month.
+
+There is a knock on the wall. It is the Captain, with a spare blanket under his arm. He looks at everything laid out on the bed, and he picks up the sunscreen.
+
+“You were very well prepared,” he says, “for somewhere else entirely.”
+
+“Yes, sir.”
+
+“Keep all of it.” He puts the sunscreen back down, quite carefully, next to the hat. “In my experience, the universe is large enough that everything comes in useful in the end. Even the rope.”
+
+You pin your best map of the ruins to the wall beside your pillow. Next to it, you pin a fresh, blank page.
+
+### Choices
+
+#### Choice 1
+
+Head down to the shuttle bay for training
+
+```json
+{
+  "next_scene": "scene_034"
+}
+```
+
+---
+
+## scene_034 — The Shuttle Bay
+
+### Passage
+
+You get to the shuttle bay with four whole minutes to spare, and you find your two teachers in the middle of an argument.
+
+“Flying first,” Pip is saying. “Obviously. What use is a crewmate who can’t fly the shuttle?”
+
+“Systems first,” says Seven. “What use is a crewmate who can fly the shuttle, and does not know what any of the lights mean?”
+
+“You learn what the lights mean when they turn red!”
+
+“That is precisely the approach I am hoping to avoid.”
+
+They both notice you standing there. They both point at you at the same time.
+
+“You choose,” says Pip.
+
+“Choose correctly,” says Seven.
+
+Over by the wall, the little shuttle sits waiting, with its hatch open. Next to it is a big gray box with a seat inside, which you suppose is the simulator. On the other side of the bay, a hatch in the floor leads down to the engine room.
+
+You will need to learn all of it sooner or later. But there is only time to get really good at one thing before the next call comes.
+
+### Choices
+
+#### Choice 1
+
+Learn to fly with Pip
+
+```json
+{
+  "next_scene": "scene_035"
+}
+```
+
+#### Choice 2
+
+Learn the ship’s systems with Seven
+
+```json
+{
+  "next_scene": "scene_036"
+}
+```
+
+---
+
+## scene_035 — Flight Lessons
+
+### Passage
+
+Pip puts you in the pilot’s seat of the shuttle simulator and straps you in.
+
+“Okay. Left stick goes up and down. Right stick goes side to side. That pedal is go. That pedal is stop. Don’t touch the red one.”
+
+“What does the red one do?”
+
+“Nobody knows. Nobody’s ever touched it. Go!”
+
+You crash into an asteroid in four seconds.
+
+You crash into a moon in nine seconds.
+
+You crash into the {world_name} itself, which Pip says is a new record, because the ship is behind you when you start.
+
+But you keep your notebook open on your knee, and after every crash you write down what happened. By the end of the week, you can fly a wobbly loop around a space station. By the end of the second week, the loop is not wobbly.
+
+“You fly like you’re reading a map,” Pip tells you. “Like you’ve already worked out where everything is going to be.”
+
+“Is that bad?”
+
+“It’s weird. I fly like I’m dancing.” She ruffles your hair. “It’s good to have one of each.”
+
+You still get lost on the way to the bathroom most mornings. But you are learning.
+
+### Choices
+
+#### Choice 1
+
+Answer the call
+
+```json
+{
+  "next_scene": "scene_037",
+  "entry_intro": "flight"
+}
+```
+
+---
+
+## scene_036 — Systems Lessons
+
+### Passage
+
+Seven teaches the way he does everything else: completely.
+
+You learn the scanners, which can spot a heartbeat through a mile of rock. You learn the comms, the airlocks, and the shields. You learn where the ship’s power goes and how to send it somewhere else. You fill a notebook and a half.
+
+Seven never says “good job.” He says “correct.” You start to live for “correct.”
+
+Most of your lessons are in the engine room, where the maintenance robot shuffles back and forth, oiling things. You say good morning to it every day. It walks around you every day.
+
+“It cannot hear you,” Seven says on the ninth day.
+
+“I know. But you said you’re the first synthoid who can really talk with people. So you’re the first. That means there were a whole lot of ones before you that couldn’t.” You shrug. “It seems rude not to say hi to your family.”
+
+Seven stops in the middle of what he is doing.
+
+He looks at the little robot as it shuffles past. He looks at it for a long time.
+
+“Good morning,” he says to it.
+
+It walks around him.
+
+“As expected,” Seven says, and goes back to work.
+
+But he says it again the next day. And the day after that.
+
+### Choices
+
+#### Choice 1
+
+Answer the call
+
+```json
+{
+  "next_scene": "scene_037",
+  "entry_intro": "systems"
+}
+```
+
+---
+
+## scene_037 — Frost Station
+
+### Entry intro: flight
+
+You are in the middle of your best loop yet when the simulator screen goes red.
+
+### Entry intro: systems
+
+You are re-routing power to the forward shields, for practice, when the engine room lights go red.
+
+### Passage
+
+WHOOP. WHOOP. WHOOP.
+
+You run for the bridge. You only make one wrong turn.
+
+“Frost Station,” Pip reads out. “It’s a research base on an ice moon. Eight scientists. The ice under the base is breaking up, and their own ship is already at the bottom of a crevasse.”
+
+“Why is the ice breaking?” the Captain asks.
+
+Seven puts a map up on the screen. There is the moon. And there, a long way off but closer than you would like, is a patch of sky with no stars in it.
+
+“The World-Eater is passing through this system,” Seven says. “It will not come near the moon, but it is large enough that its pull is felt from here. The moon is flexing, and the ice is cracking.”
+
+It is the first time you have seen it on a live screen. It does not look like anything. That is the worst part.
+
+“Eight people,” says the Captain. “Pip, get us into orbit. Seven, take the shuttle down. Crewmate {hero_name}?”
+
+You look down at your jumpsuit, with the sleeves rolled four times.
+
+“Ready, Captain.”
+
+### Choices
+
+#### Choice 1
+
+Go down to the ice with Seven
+
+```json
+{
+  "next_scene": "scene_038"
+}
+```
+
+#### Choice 2
+
+Guide the rescue from orbit with Pip
+
+```json
+{
+  "next_scene": "scene_042"
+}
+```
+
+---
+
+## scene_038 — On the Ice
+
+### Passage
+
+The shuttle sets down on a flat, white plain under a black sky. The cold gets in through your suit anyway. Every few seconds the ground groans under your boots, like something very large turning over in its sleep.
+
+The base is two hundred steps away. Between you and it, a crack has opened in the ice. It is as wide as a street, and you cannot see the bottom.
+
+Eight people in orange suits are standing on the far side, waving.
+
+“The crevasse is widening,” Seven says. “I can jump it. They cannot. I can carry one at a time, which will take too long. I cannot land the shuttle on that side, because the ice there will not hold it.”
+
+You look at the crack. You look at the eight scientists.
+
+Then, very slowly, you look down at your satchel.
+
+You have been carrying forty feet of rope since the moment you left home. Pip teases you about it. You have carried it onto a spaceship, through a debris field, and into orbit around an ice moon, because a good delver is always prepared.
+
+“Seven,” you say. “How far can you throw?”
+
+### Choices
+
+#### Choice 1
+
+Rig a rope line across the crevasse
+
+```json
+{
+  "next_scene": "scene_039",
+  "entry_intro": "rope"
+}
+```
+
+#### Choice 2
+
+Hook your rope to the shuttle’s tow cable to make it longer
+
+```json
+{
+  "next_scene": "scene_039",
+  "entry_intro": "tow_cable"
+}
+```
+
+---
+
+## scene_039 — Seven Across
+
+### Entry intro: rope
+
+Seven throws the rope across on the first try. The scientists anchor their end to a steel post, and you hammer your end into the ice with the back of the folding shovel.
+
+### Entry intro: tow_cable
+
+Your rope on its own is a little short. But knotted to the end of the shuttle’s tow cable, it reaches with room to spare. Seven throws it across on the first try, and the scientists anchor their end to a steel post.
+
+### Passage
+
+They come across one at a time, clipped to the line, hand over hand, with nothing underneath them but blue shadows. Every time the ice groans, everybody stops breathing.
+
+One. Two. Three. You grab each of them as they reach the edge, and you haul them up. Four. Five. Six. Seven.
+
+The eighth is an older woman. She clips on. She gets one hand onto the rope. Then she looks back over her shoulder at the base, and she says a word that your translator does not translate.
+
+She unclips herself, and she runs back toward the buildings.
+
+“DR. WREN!” the other scientists all shout. “LEAVE IT!”
+
+“Two years!” she shouts back, without slowing down. “I am NOT leaving it!”
+
+A crack opens up on the far side, with a sound like a gunshot. It runs between the base and the rope.
+
+“She has approximately four minutes,” Seven says.
+
+### Choices
+
+#### Choice 1
+
+Go across the rope yourself and get her
+
+```json
+{
+  "next_scene": "scene_040"
+}
+```
+
+#### Choice 2
+
+Send Seven across, and hold the line for him
+
+```json
+{
+  "next_scene": "scene_041"
+}
+```
+
+---
+
+## scene_040 — Hand Over Hand
+
+### Passage
+
+You clip on before you can think about it.
+
+“{hero_name},” Seven says.
+
+“You’re heavier than I am, and that ice over there is cracking. I’ll be quick!”
+
+You go out over the edge. It turns out that not thinking about it only works for about the first three feet.
+
+After that, it is just you and the rope. One hand, and then the other. You do not look down. You look at your hands, and you think that a real delver has probably done this a hundred times, and then you think that a real delver would have had some training.
+
+You get across. You run. You find her in a laboratory, shoving little glowing crystals into a silver case with both hands.
+
+“Two years!” she says, when she sees you. “We know more about that thing than anybody alive, and it is all right here, and if you try to stop me, I will bite you!”
+
+“I’m not stopping you! I’m HELPING! Which ones?”
+
+She blinks at you. Then she points, and the two of you scoop crystals together until the case will not close, and you sit on it until it does.
+
+You run back with the case swinging between you. The floor is tilting. She clips on, and you clip on behind her, with the case hanging from your belt and banging against your knees.
+
+You are halfway across when the far edge of the crevasse falls away behind you. The rope goes slack, and then it snaps tight, and you swing in hard against the near wall. Eight pairs of hands pull you up over the top.
+
+### Choices
+
+#### Choice 1
+
+Get everybody into the shuttle
+
+```json
+{
+  "next_scene": "scene_045"
+}
+```
+
+---
+
+## scene_041 — Hold the Line
+
+### Passage
+
+“Go,” you tell Seven. “You’re faster. I’ll hold the line for you.”
+
+Seven does not bother with the rope. He takes three steps back, he runs, and he jumps the whole crevasse. He lands on the far side in a spray of snow, and then he is gone between the buildings.
+
+That is when your end of the rope starts to move.
+
+The spike that you hammered into the ice is sliding. The ice all around it is cracking like a plate. If it pulls out, then there is no way back across, for anybody.
+
+You grab the rope. You wrap it twice around your waist, and you sit down in the snow with your boots braced against a ridge of ice, and you lean back as hard as you can. It drags you forward anyway, an inch at a time.
+
+Then somebody sits down behind you, and wraps their arms around your middle. Then somebody else, behind them. It is all seven of the scientists, one behind another, in a row, like the world’s coldest game of tug-of-war.
+
+The rope stops moving.
+
+“Is this what your job is normally like?” the one behind you asks, through chattering teeth.
+
+“I don’t know,” you say. “It’s my third week.”
+
+Seven comes out of the base at a run. He is carrying Dr. Wren over his shoulder. Dr. Wren is carrying a silver case, and yelling at him to be careful with it. He does not slow down for the crevasse. He jumps.
+
+He lands beside you just as the far edge crumbles away into the dark.
+
+### Choices
+
+#### Choice 1
+
+Get everybody into the shuttle
+
+```json
+{
+  "next_scene": "scene_045"
+}
+```
+
+---
+
+## scene_042 — Eyes in the Sky
+
+### Passage
+
+You take the scanner station, the way Seven taught you. Pip holds the {world_name} right above the base, and the Captain himself takes the shuttle down with Seven.
+
+On your screen, the moon’s surface is a sheet of cold blue. The cracks show up as thin black lines, and they are growing. Eight little orange dots are clustered at the base. Those are heartbeats.
+
+“Captain, the big crack is between you and them. Go around to the north. The ice is thickest there. I’m sending you a path.”
+
+“Received. Well done.”
+
+Seven of the dots climb into the shuttle. You count them again, because you always count twice.
+
+Seven. There should be eight.
+
+Your stomach drops. You sweep the scanner outward, slowly, the way you were taught, and there it is. One orange dot, all by itself, half a mile out on the ice, and not moving. The cracks are creeping toward it from two sides.
+
+“Captain! One of them isn’t with the others. Half a mile east. You won’t see them from the ground. There’s a ridge in the way.”
+
+“Can you talk me in?”
+
+You pull your notebook closer, and you start drawing the cracks as fast as they grow. There are two ways to get there. One is straight across the flat. It is quick, but the ice there is thin, and getting thinner. The other goes the long way around, along the ridge, where the ice is as solid as rock. It is safe, and it is four minutes slower.
+
+The orange dot is flickering.
+
+### Choices
+
+#### Choice 1
+
+Send them straight across the thin ice
+
+```json
+{
+  "next_scene": "scene_043"
+}
+```
+
+#### Choice 2
+
+Send them the long way, along the ridge
+
+```json
+{
+  "next_scene": "scene_044"
+}
+```
+
+---
+
+## scene_043 — Thin Ice
+
+### Passage
+
+“Straight across, Captain. It’s thin. You’ll have to keep moving. Don’t stop for anything until I tell you.”
+
+“Understood.”
+
+The shuttle skims out over the flat, so low that it throws up a tail of snow. On your screen, new black lines open up underneath it, and they chase it across the ice like something alive.
+
+“Left. More left. There’s a good patch coming up. It’s about as big as a front yard. That’s all there is. Now, now, NOW, set down!”
+
+“Down,” says the Captain.
+
+“You’ve got maybe thirty seconds before that patch goes.”
+
+Through the shuttle’s camera you watch Seven jump out before the skids have even settled. The lost scientist is an older woman, sitting on a silver case, too cold to stand up. He picks her up, case and all.
+
+“Twenty seconds. Fifteen. Captain, GO!”
+
+The shuttle lifts. A heartbeat later, the patch of ice that it was sitting on tips up on its end like a sinking ship, and slides down into the dark.
+
+Nobody says anything on the comm for a moment.
+
+“That was closer than I prefer,” the Captain says at last. His voice is perfectly calm. You notice that Pip has both hands over her mouth.
+
+“Yes, sir. Sorry, sir.”
+
+“Do not be sorry. You were right about the thirty seconds. Eight aboard. We are coming home.”
+
+### Choices
+
+#### Choice 1
+
+Meet them in the shuttle bay
+
+```json
+{
+  "next_scene": "scene_045"
+}
+```
+
+---
+
+## scene_044 — The Long Way
+
+### Passage
+
+“Take the ridge, Captain. It’s slower, but it’ll hold you. I’ll find you the quickest line along it.”
+
+“Understood.”
+
+Four minutes. The orange dot is flickering, and its heartbeat is slowing down, the way a heartbeat does when somebody is getting too cold and too sleepy.
+
+You cannot make the shuttle go any faster. But there is one other thing that you can do.
+
+You find the channel for the scientist’s suit radio, and you open it.
+
+“Hello? Can you hear me? My name’s {hero_name}. Who’s this?”
+
+For a long moment there is nothing but hissing. Then an older woman’s voice says, very slowly, “Wren. Dr. Wren. I’m... sitting down. Just for a minute.”
+
+“Okay. But you can’t go to sleep. What are you doing all the way out there?”
+
+“My instruments. Went back for them. Two years of readings.”
+
+“Readings of what? Tell me about them. I really want to know. I write everything down too.”
+
+So she tells you. It is slow and mumbled at first, and then it gets quicker, because it turns out that Dr. Wren cannot help herself once she gets started. She is in the middle of a sentence about portal energy when the shuttle’s lights sweep over her, and Seven lifts her up, silver case and all.
+
+“Eight aboard,” the Captain says. “We are coming home. And {hero_name}? She is asking me to tell you that she had not finished.”
+
+### Choices
+
+#### Choice 1
+
+Meet them in the shuttle bay
+
+```json
+{
+  "next_scene": "scene_045"
+}
+```
+
+---
+
+## scene_045 — Off the Ice
+
+### Passage
+
+Eight scientists. Eight out of eight.
+
+Back on board, wrapped up in three blankets, the older woman will not let go of her silver case. She insists on speaking to the whole crew before she has even stopped shivering.
+
+“I’m Dr. Wren. And I wasn’t out there for fun,” she says. “We’ve been watching that thing from Frost Station for two years. We know more about the World-Eater than anybody alive, and all of it is in here.”
+
+She opens the case. It is full of glowing data crystals.
+
+“First. It follows portal energy, the way a hound follows a scent. Second. When it feeds, it opens. There’s a kind of mouth, and the inside isn’t armored the way the outside is.”
+
+She looks around the bridge at all of you.
+
+“And third. I’ve charted its path. I know where it’s going next, Captain. It’s going to Haven.”
+
+Pip’s antennae droop. Even Seven goes still.
+
+“What’s Haven?” you ask.
+
+### Choices
+
+#### Choice 1
+
+Hear the answer
+
+```json
+{
+  "next_scene": "scene_046"
+}
+```
+
+---
+
+## scene_046 — Haven
+
+### Passage
+
+“Haven is where we take them,” the Captain says.
+
+It is late, and the five of you are in the galley, around a table that is too small, eating something Pip cooked that is mostly noodles. Dr. Wren has two bowls.
+
+“Everyone we rescue. The Marigold’s passengers. The people of Tansy, and Lumen, and eleven other worlds. Haven is a quiet planet with no portals at all. We chose it for that. It was supposed to be the one place the World-Eater would never look.”
+
+“Four thousand, two hundred and fourteen people,” Seven says.
+
+“It isn’t looking for Haven,” says Dr. Wren, with her mouth full. “It’s just on the way to somewhere else, and Haven’s in the road. Nineteen days.”
+
+Nobody says anything for a while. Pip pushes noodles around her bowl.
+
+You look around the table. A tall blue captain. A pilot with eyes on stalks. A person made of metal. A scientist who went back out onto breaking ice for a box of crystals. And you, in a jumpsuit three sizes too big.
+
+Three weeks ago you did not know any of them.
+
+It occurs to you that if your family walked in right now, you would want them to meet these people first.
+
+### Choices
+
+#### Choice 1
+
+Finish your noodles
+
+```json
+{
+  "next_scene": "scene_047"
+}
+```
+
+---
+
+## scene_047 — The Long Memory
+
+### Passage
+
+You are still sitting there when Seven lifts his head.
+
+“Captain. I am receiving a signal. It is not a distress call.” He pauses. “It is a song.”
+
+He puts it on the speaker. It is a slow, creaky voice, singing something that sounds like a lullaby. When it gets to the end, it starts over again from the beginning.
+
+“It is coming from a ship called the Long Memory,” Seven says. “She is in the records. She is an archive ship, from a world named Quill.”
+
+“Quill was lost sixty years ago,” says the Captain.
+
+“Yes. There is one life sign on board. And the ship is drifting toward the edge of the World-Eater’s wake.”
+
+It takes half a day to reach her. The Long Memory is enormous, and very old, and she has no windows at all. Her engines went cold a long time ago. She is turning slowly in the dark with every one of her running lights still burning, and the little song going round and round.
+
+“She’s beautiful,” Pip says softly.
+
+“She is also breaking up,” says Seven. “The wake is pulling her apart at the seams. I estimate one hour.”
+
+You and Seven take the shuttle across. There are two ways in. One is the main hatch, up near the front. The other is a cargo door at the back, which has already been torn half open.
+
+### Choices
+
+#### Choice 1
+
+Dock at the main hatch
+
+```json
+{
+  "next_scene": "scene_048"
+}
+```
+
+#### Choice 2
+
+Go in through the broken cargo door
+
+```json
+{
+  "next_scene": "scene_049"
+}
+```
+
+---
+
+## scene_048 — The Hall of Voices
+
+### Passage
+
+The main hatch opens onto a hallway so long that you cannot see the other end.
+
+Both walls are shelves, from the floor to a ceiling that is lost in the shadows, and every shelf is filled with crystals. They are the size of your thumb, and each one glows in a slightly different color. There must be millions of them.
+
+You walk past the first shelf, and somebody whispers in your ear.
+
+You nearly jump out of your boots. But there is nobody there. You lean in toward the crystals, and you hear it again. It is a voice, very faint, telling a story. The next crystal along has a different voice. That one is singing. The one after that is laughing, and trying to get to the end of a joke.
+
+“They are recordings,” says Seven. “These are stories. These are songs. This whole shelf is recipes. Every crystal holds one person from Quill, telling one thing that they did not want to be forgotten.”
+
+You walk down the hall with a whole world whispering around you. You find that you are walking on tiptoe.
+
+At the far end is a round door. The creaky voice is coming from the other side of it, still singing.
+
+### Choices
+
+#### Choice 1
+
+Open the door
+
+```json
+{
+  "next_scene": "scene_050",
+  "entry_intro": "from_hall"
+}
+```
+
+---
+
+## scene_049 — The Seed Vault
+
+### Passage
+
+You squeeze in through the broken cargo door, and into the cold.
+
+You are in a hold the size of a sports field. It is filled with row after row of tall metal cabinets, and each cabinet is made up of hundreds of little drawers. Everything is furry with frost. Your breath comes out in clouds.
+
+Every drawer has a label, in tiny, careful handwriting. You wipe the frost off one, and your translator reads it out for you. “Moonmelon. Sweet. Grows best on a south wall.”
+
+You slide the drawer open. It is full of seeds.
+
+“Every plant that grew on Quill,” says Seven. He is walking along the row, reading as he goes. “Every tree. Every grain. Every flower. There are over nine hundred thousand kinds.”
+
+It is a whole planet’s worth of gardens, in a freezer, waiting for someone to find them some dirt.
+
+Somewhere above you, the ship lets out a long groan, and a little shower of frost sifts down.
+
+At the far end of the hold there is a round door. The creaky voice is coming from the other side of it, still singing.
+
+### Choices
+
+#### Choice 1
+
+Open the door
+
+```json
+{
+  "next_scene": "scene_050",
+  "entry_intro": "from_cargo"
+}
+```
+
+---
+
+## scene_050 — Keeper Moss
+
+### Entry intro: from_hall
+
+The door opens onto a hold the size of a sports field, filled with frosty metal cabinets. Seven wipes off a label and reads it. They are seeds. There is a drawer here for every plant that ever grew on Quill.
+
+### Entry intro: from_cargo
+
+The door opens onto a hallway so long that you cannot see the end of it. Both walls are shelves, and every shelf is filled with little glowing crystals that whisper as you go by. They are recordings, Seven says. Each one is a person from Quill, telling a story that they did not want to be forgotten.
+
+### Passage
+
+In between the seeds and the stories, in a small round room with one lamp, somebody is sitting in an armchair.
+
+They are very large, and very old, and very wrinkled, with a great domed shell on their back and a blanket over their knees. They have a crystal in one hand, and they are singing along with it, to an open drawer of seeds.
+
+They finish the verse before they look up. They do not seem surprised to see you.
+
+“Ah,” they say. It takes a long time. “Visitors. I am... Keeper Moss. Do forgive me for not... getting up. I have been reading... to the seeds. They grow better... if they have heard... the stories. I am nearly sure of it.”
+
+“For sixty years?” you say. “All by yourself?”
+
+“Is it... sixty? Goodness.”
+
+“Keeper Moss,” says Seven, “this ship will break apart in forty-one minutes. You must come with us.”
+
+“Oh, yes. I know. I felt her... going.” The Keeper nods slowly. “I will come. When the archive... is loaded.”
+
+“Which part of it?” you ask.
+
+Keeper Moss blinks at you, as if the question does not make any sense.
+
+“All of it, dear.”
+
+You look at Seven. The shuttle has two seats and two benches.
+
+“The shuttle will hold one tenth of one percent of this archive,” he says. “If we are careful. If we are quick.”
+
+### Choices
+
+#### Choice 1
+
+Fill the shuttle with seeds
+
+```json
+{
+  "next_scene": "scene_051",
+  "entry_intro": "seeds"
+}
+```
+
+#### Choice 2
+
+Fill the shuttle with stories
+
+```json
+{
+  "next_scene": "scene_051",
+  "entry_intro": "stories"
+}
+```
+
+#### Choice 3
+
+Ask Keeper Moss to choose
+
+```json
+{
+  "next_scene": "scene_051",
+  "entry_intro": "moss"
+}
+```
+
+---
+
+## scene_051 — One Tenth of One Percent
+
+### Entry intro: seeds
+
+“The seeds,” you say. “Stories can be told again by somebody. Once a plant is gone, it’s gone.” Keeper Moss shuts their eyes, and then they nod. You and Seven run up and down the frozen rows, pulling out drawers, while the Keeper calls out after you which ones matter the most. They all matter the most.
+
+### Entry intro: stories
+
+“The stories,” you say. “A seed is a seed. But those are people.” Keeper Moss shuts their eyes, and then they nod. You and Seven run up and down the whispering hall, sweeping crystals into crates by the armful. Every one of them is somebody’s voice, and you are leaving a thousand behind for each one you take.
+
+### Entry intro: moss
+
+“You choose,” you say. “It’s your archive. I don’t have the right.” Keeper Moss looks at you for a long moment. “No,” they say. “No one does. That is the... trouble with it.” In the end, they walk slowly along the shelves and the cabinets, touching one thing here and one thing there, and you and Seven pack up whatever they touch. It is a little of both, and it is not nearly enough of either.
+
+### Passage
+
+It takes thirty minutes. When you are finished, the shuttle is filled up to the roof. Keeper Moss is wedged into the back on top of it all, with their knees up around their ears.
+
+You stand in the hatchway and look back down the hall.
+
+It does not look as if you have taken anything. The shelves go on, and on, and on, glowing, and whispering.
+
+“Ten minutes,” says Seven. “We should leave now. That would be the safe margin.”
+
+“The shuttle’s fast. I could run one more crate out here. One more! There’s room on my lap!”
+
+“Nine minutes and fifty seconds.”
+
+You look at all those lights.
+
+### Choices
+
+#### Choice 1
+
+One more trip
+
+```json
+{
+  "next_scene": "scene_052"
+}
+```
+
+#### Choice 2
+
+Leave now
+
+```json
+{
+  "next_scene": "scene_053"
+}
+```
+
+---
+
+## scene_052 — One More
+
+### Passage
+
+“ONE more!”
+
+You grab an empty crate, and you run.
+
+You fill it. You are fast, and you are careful, and you are on your way back with the crate hugged against your chest when the floor of the Long Memory splits open between your feet.
+
+The air goes screaming out past you, into space. The crate is torn out of your arms. You watch it tumble off end over end into the dark, with everything inside spilling out of it like a handful of glitter.
+
+You are going to follow it out. Your boots come up off the floor.
+
+A metal hand closes around the back of your jumpsuit.
+
+Seven drags you down the hall against the wind, throws you in through the hatch, and slams it shut. He flies the shuttle out through a gap that is closing as you go through. There is a horrible crunch along one side. In the back, a whole stack of what you saved breaks loose, and smashes against the wall.
+
+Nobody says anything, all the way home.
+
+The Captain is waiting for you in the shuttle bay. He looks at the long scrape down the side of the shuttle. He looks at the broken things on the floor. He looks at you.
+
+You would really like it if he would yell.
+
+“Are you hurt?” is all he says.
+
+“No, sir.”
+
+“Good.” He puts his hand on your shoulder, and he leaves it there. “Then come with me. I want you to see what you did save.”
+
+### Choices
+
+#### Choice 1
+
+Go with him
+
+```json
+{
+  "next_scene": "scene_054",
+  "entry_intro": "greedy"
+}
+```
+
+---
+
+## scene_053 — Leave Now
+
+### Passage
+
+You stand there for one more second.
+
+Then you step backward into the shuttle, and you pull the hatch closed yourself.
+
+“That was the correct decision,” says Seven.
+
+“Then why does it feel so rotten?”
+
+“I do not know. I am told that they often do.”
+
+He flies you out, slowly and carefully, with room to spare. Behind you, Keeper Moss has turned all the way around in their seat, so that they can see out of the little back window.
+
+You turn around and watch it with them. You think that somebody should.
+
+The Long Memory goes quietly. Her seams open up, one by one. Her running lights go out in rows. And then, for just a moment, a great cloud of tiny colored sparks comes spilling out of her side, millions of them, and spreads out across the dark, like a second set of stars. Then the wake takes them, and they are gone.
+
+“Sixty years,” says Keeper Moss, very quietly. “I read to them... every day.”
+
+You do not know what to say. There is not anything to say. You reach back between the crates, and you find one big, wrinkled hand, and you hold on to it for the whole way home.
+
+### Choices
+
+#### Choice 1
+
+Go home
+
+```json
+{
+  "next_scene": "scene_054",
+  "entry_intro": "left"
+}
+```
+
+---
+
+## scene_054 — What Was Saved
+
+### Entry intro: greedy
+
+The Captain walks you down to the cargo bay.
+
+### Entry intro: left
+
+That evening, the Captain finds you in the cargo bay.
+
+### Passage
+
+What you saved from the Long Memory fits into one corner of it. Keeper Moss is sitting in the middle, in an armchair that Pip found for them somewhere, going slowly through every piece, one at a time.
+
+“We failed,” you say.
+
+“Did we?” says the Captain.
+
+“There were millions, sir. We saved a few crates. A whole world’s worth of remembering, and it’s gone, and I was standing right there.”
+
+The Captain does not answer for a while.
+
+“When I started doing this, I kept a count of everyone that I did not reach in time,” he says. “It very nearly finished me. You cannot carry that number, {hero_name}. No one can. It only ever gets larger.”
+
+He nods toward the corner.
+
+“So I learned to count the other way. Yesterday, there was nothing left of Quill, anywhere at all. Today there is one Keeper, and there are those crates. That is not everything. It is a very long way from nothing.”
+
+Over in the armchair, Keeper Moss has picked something up, and is holding it to the light.
+
+“Ah,” they say. “This one. I am so glad... that it was this one.”
+
+And they begin, very slowly, to tell the story to the rest.
+
+You stay and listen until the end. Then you go to find somebody to talk to, because tonight you do not feel like being by yourself.
+
+### Choices
+
+#### Choice 1
+
+Find Seven, and ask him about his list of names
+
+```json
+{
+  "next_scene": "scene_055"
+}
+```
+
+#### Choice 2
+
+Find the Captain again, and ask him why he started all this
+
+```json
+{
+  "next_scene": "scene_056"
+}
+```
+
+---
+
+## scene_055 — The List
+
+### Passage
+
+You find Seven at his station. There are names scrolling slowly up his screen.
+
+“Is that the list?”
+
+“Yes. Four thousand, two hundred and fifteen found. I added Keeper Moss this evening.” He touches the screen, and a second list appears next to the first. It is much, much longer. “And these are the ones reported missing who have not been found yet. I review both lists every night.”
+
+“Why every night? You don’t forget things.”
+
+“No. I do not.” He watches the names go by. “The Captain remembers them because he grieves. Pip remembers them because she hopes. I cannot do either. So I have decided that I will be the one who remembers them exactly. Every name, spelled correctly. Someone should.”
+
+You read over his shoulder for a while.
+
+“Seven? Can you search the long one? For Solaris?”
+
+“I already have. I search it every night for you. There are three hundred and nine names from Solaris on the missing list so far, and more each day, as the reports come in.”
+
+Your heart thumps. “Is my family—”
+
+“I do not know your family’s names. You have not told me.”
+
+So you tell him. He types each one carefully, and he asks you how to spell them.
+
+They are not on the found list. Not yet.
+
+But they are written down now, exactly, by someone who will check every single night.
+
+### Choices
+
+#### Choice 1
+
+Get some sleep. The call could come any time.
+
+```json
+{
+  "next_scene": "scene_057",
+  "entry_intro": "from_seven"
+}
+```
+
+---
+
+## scene_056 — Why He Started
+
+### Passage
+
+You find the Captain on the observation deck, looking up through the ceiling.
+
+“Sir? Can I ask why you started all this?”
+
+He is quiet for so long that you think he will not answer.
+
+“My world was called Indra. It was the first one. There was no Lifeline Fleet then. Nobody knew what was coming, or what the open portals meant. I was the captain of a cargo ship. I hauled grain.”
+
+He folds his hands behind his back.
+
+“I was three days away when it happened. I came home to a hole in the sky. And I thought, well. I have a ship. It is empty. And there are people out there falling through doors into the dark.”
+
+He looks down at you.
+
+“I did not find my family, {hero_name}. I want to be honest with you about that. It has been a long time, and I have not. But I found Pip in a hold full of chickens. I found a laboratory that was about to switch off the first synthoid who could really think, because they were frightened of him. I found four thousand people.”
+
+His ears twitch, just a little.
+
+“I went looking for my family, and along the way I seem to have built another one. I did not plan it. I would not trade it.”
+
+You stand next to him, and you both look up.
+
+“I’m still going to look for mine,” you say.
+
+“Good,” says the Captain. “So am I.”
+
+### Choices
+
+#### Choice 1
+
+Get some sleep. The call could come any time.
+
+```json
+{
+  "next_scene": "scene_057",
+  "entry_intro": "from_captain"
+}
+```
+
+---
+
+## scene_057 — The Convoy
+
+### Entry intro: from_seven
+
+You fall asleep thinking about names, spelled correctly.
+
+### Entry intro: from_captain
+
+You fall asleep thinking about a grain ship with an empty hold.
+
+### Passage
+
+WHOOP. WHOOP. WHOOP.
+
+This time, you do not make a single wrong turn.
+
+“It’s the Haven evacuation,” Pip says. Her voice is tight. “They started moving people out, just in case. Twelve ships. They’ve gone dead in space, all twelve of them. Engines, lights, everything.”
+
+“Cause?” says the Captain.
+
+“They passed too close behind it,” Dr. Wren says, leaning over Seven’s shoulder. “It leaves a wake. A sort of cold spot. It drains the power out of anything that drifts in.”
+
+The {world_name} drops out of its jump, and you see it with your own eyes for the first time.
+
+It fills half the window. There is no screen in the way, and no dot for scale. It is an ocean of darkness with the stars just stopping at its edge, and it is moving away from you, slowly, like a whale that has not noticed the minnows. Twelve small ships hang helpless in the dark behind it.
+
+Your knees do not feel good. You hold on to the back of Pip’s chair.
+
+“Crewmate,” the Captain says quietly. “Look at the twelve ships. Not at it. At them. That is the job.”
+
+You look at the twelve ships.
+
+Your knees feel better.
+
+### Choices
+
+#### Choice 1
+
+Take the shuttle and tow them out, one by one
+
+```json
+{
+  "next_scene": "scene_058"
+}
+```
+
+#### Choice 2
+
+Run to the engine room and send the ships our power
+
+```json
+{
+  "next_scene": "scene_061"
+}
+```
+
+---
+
+## scene_058 — Tow Line
+
+### Passage
+
+You fly. Seven works the tow cable.
+
+Nobody argues about it. Pip has to hold the big ship steady at the edge of the wake, and Seven is the only one strong enough to work the tow cable by hand. That leaves the pilot’s seat, and you.
+
+“Do not think about it,” you tell yourself, out loud.
+
+“Thinking is generally useful,” Seven says.
+
+“Not right now!”
+
+You dip the shuttle into the cold spot. The lights dim, the engine coughs, and you can feel the power draining away, like water going out of a bath. You have maybe ninety seconds each time before the shuttle goes dead too.
+
+Seven fires the cable. It catches. You pull.
+
+One ship out. Back in. Two ships. Three.
+
+You fly it like you are reading a map. In, hook, out. By the ninth ship, your hands have stopped shaking. By the eleventh, you are flying better than you have ever flown in your life.
+
+On the twelfth, the engine dies.
+
+The shuttle goes dark. You are drifting, with the last ship hooked on behind you, and the wake is pulling you both backward.
+
+“Pip!” you shout into the comm. “We’re dead in the water!”
+
+“I see you! Hang on, I can come in and grab you!”
+
+“That would place the {world_name} inside the wake,” says Seven. “There is another option. There is a red pedal under your left foot.”
+
+You look down. There is a red pedal under your left foot. It has a little cover over it, and the cover says DO NOT.
+
+### Choices
+
+#### Choice 1
+
+Stomp on the red pedal
+
+```json
+{
+  "next_scene": "scene_059"
+}
+```
+
+#### Choice 2
+
+Tell Pip to come and get you
+
+```json
+{
+  "next_scene": "scene_060"
+}
+```
+
+---
+
+## scene_059 — The Red Pedal
+
+### Passage
+
+“What does it DO?”
+
+“I installed it myself. It is an emergency booster. It has its own power, which the wake cannot drain. Pip does not know that it exists, because if she did, she would use it every day.”
+
+You flip up the little cover, and you stomp on the red pedal.
+
+The shuttle leaps forward as if something has kicked it. You are squashed flat into your seat, and your cheeks try to slide around to the back of your head. Behind you, the tow cable snaps tight, and the twelfth ship comes along with you, whether it wants to or not.
+
+You come shooting out of the wake like a cork out of a bottle, and you go straight past the {world_name} before you can work out how to slow down.
+
+“WHAT was THAT?” Pip yells over the comm. “Did that shuttle just... Seven! Is there a BUTTON? Have you had a button this WHOLE TIME?”
+
+“It is a pedal,” says Seven.
+
+“I want one! I want one on EVERYTHING!”
+
+“This,” Seven says to you quietly, “is precisely the conversation that I had hoped to avoid.”
+
+### Choices
+
+#### Choice 1
+
+Count the ships
+
+```json
+{
+  "next_scene": "scene_064"
+}
+```
+
+---
+
+## scene_060 — Catch
+
+### Passage
+
+“Pip! Come and get us!”
+
+“Oh, I thought you’d never ask.”
+
+The {world_name} tips over on her nose and dives into the wake.
+
+You watch her lights go dim as she comes. Pip is not slowing down. She is coming in much too fast, because she knows that her engines will have died by the time she gets here, and she is planning to do the last part without them.
+
+“Bay doors!” she shouts. “Captain, NOW!”
+
+The shuttle bay doors slide open at the front of the ship, like a big square mouth.
+
+She scoops you up.
+
+The shuttle goes in through the doors, bounces twice, and skids the whole length of the bay in a shower of sparks. Behind you, the tow cable pulls tight, and the twelfth ship is dragged along in the {world_name}’s shadow. The big ship’s engines cough, and catch, and roar, and she swings up and out of the cold, with every light on board flickering.
+
+You sit there in the dark shuttle for a moment, and you wait for your heart to climb back down out of your throat.
+
+“That was the most reckless piece of flying that I have ever recorded,” says Seven.
+
+“I KNOW!” Pip yells happily over the comm. “Wasn’t it GREAT?”
+
+“For the record,” says Seven, “there was also a pedal.”
+
+“There was a WHAT?”
+
+### Choices
+
+#### Choice 1
+
+Count the ships
+
+```json
+{
+  "next_scene": "scene_064"
+}
+```
+
+---
+
+## scene_061 — Power Transfer
+
+### Passage
+
+You run for the engine room. You know every step of the way now.
+
+Seven’s lessons come back to you all at once. Where the ship’s power goes. How to send it somewhere else.
+
+“Captain, I can beam our power out to them! Enough to get their engines started again. But I have to pull it from somewhere. We’ll lose lights, heat, and shields.”
+
+“Do it.”
+
+You pull the big levers, one after another. The engine room goes dark, except for the blue glow of the power core. The {world_name} is pouring her own energy out across space, into twelve dead ships.
+
+The little maintenance robot shuffles up beside you in the gloom. For one wild second, you think that it has come to help.
+
+It oils the lever next to your hand, and it shuffles away.
+
+“Good talk,” you tell it.
+
+On your screen, one of the twelve ships flickers, and its engines light. Then another. Then four at once.
+
+“Ten. Eleven,” Pip calls over the comm. “Number twelve’s not catching! She needs more, and we’re out of time!”
+
+You have given them everything. Lights, heat, shields.
+
+Well. Not quite everything. There is one big system left on the panel in front of you, and nobody ever thinks of it as power, because nobody ever thinks of it at all.
+
+And there is one other power source on board that is not part of the ship. It is sitting down in the shuttle bay.
+
+### Choices
+
+#### Choice 1
+
+Send them the gravity
+
+```json
+{
+  "next_scene": "scene_062"
+}
+```
+
+#### Choice 2
+
+Call Seven, and ask him for the shuttle’s power core
+
+```json
+{
+  "next_scene": "scene_063"
+}
+```
+
+---
+
+## scene_062 — Hold On to Something
+
+### Passage
+
+“Sorry, everybody,” you say into the comm. “Hold on to something.”
+
+“Hold on to WHAT? Why?” says Pip.
+
+You send them the gravity.
+
+Everything on the {world_name} that is not tied down floats gently up into the air. That includes you. It includes the maintenance robot, which carries right on oiling a lever that is now some distance below it. From the noise on the comm, it also includes Pip’s lunch.
+
+“I have NOODLES in my EYES!” Pip shouts. “I have a LOT of eyes!”
+
+On your screen, the twelfth ship flickers. It flickers again.
+
+Its engines roar to life.
+
+You hang there in the middle of the dark engine room, slowly turning upside down, and you laugh until you get the hiccups.
+
+“Crewmate {hero_name},” says the Captain’s voice. He sounds as if he is speaking from quite close to the ceiling. “That was well done. At your earliest convenience, I would very much like to be put down.”
+
+### Choices
+
+#### Choice 1
+
+Put the gravity back, and count the ships
+
+```json
+{
+  "next_scene": "scene_064"
+}
+```
+
+---
+
+## scene_063 — You Said Right Now
+
+### Passage
+
+“Seven! I need the power core out of the shuttle! I need it in the engine room! I need it right now!”
+
+“On my way.”
+
+The shuttle bay is at the far end of the ship. It is three decks down, and a long run for anybody. You start counting, because you cannot help it.
+
+You have gotten as far as eleven when the engine room door slides open.
+
+Seven is standing in the doorway, with the shuttle’s power core under one arm. It is the size of a barrel. He is not out of breath, because he does not have any breath. There is a little scorch mark on the floor behind him where he stopped.
+
+“You said right now,” he says.
+
+You plug it in together. Your hands are shaking, and his are not, so he does all the small connections. You throw the lever.
+
+On your screen, the twelfth ship flickers. It flickers again. Its engines roar to life.
+
+You slide down the wall until you are sitting on the floor. After a moment, Seven sits down next to you, with his back against the wall and his legs straight out in front of him, exactly the way yours are.
+
+“The shuttle cannot fly without that core,” he says. “It will take me a full day to put it back.”
+
+“Was it worth it?”
+
+“There are two hundred and six people on that ship,” says Seven. “That is a strange question.”
+
+### Choices
+
+#### Choice 1
+
+Put the lights back on, and count the ships
+
+```json
+{
+  "next_scene": "scene_064"
+}
+```
+
+---
+
+## scene_064 — Twelve for Twelve
+
+### Passage
+
+Twelve ships. All twelve, with their engines running, limping away from the wake.
+
+Nobody cheers. Everybody on the bridge is looking at the big window.
+
+The World-Eater is turning.
+
+It is slow, the way a storm is slow. But the great dark shape is swinging around, and the edge of it is rippling.
+
+“It noticed,” Dr. Wren whispers. “All that power, moving around right behind it. We rang the dinner bell.”
+
+“It is not turning toward us,” Seven says. “It is correcting its course. It will now reach Haven in four days. Not nineteen.”
+
+“The evacuation needs two weeks,” Pip says. “At least.”
+
+The Captain stands at the window with his hands behind his back for a long moment.
+
+“Then we cannot outrun it, and we cannot get them out in time.” He turns around. “For all the years that I have done this, we have run from that thing. Today we stop running. I do not know how to fight something the size of a world. I am open to ideas.”
+
+The bridge is silent.
+
+You look down at your satchel.
+
+At the very bottom, under the rope and the sunscreen, wrapped up in a sock, is the one thing you brought that a real delver would bring. You have not taken it out since you got here, because it reminds you of home.
+
+“Captain,” you say. “I think I have one.”
+
+### Choices
+
+#### Choice 1
+
+Show them
+
+```json
+{
+  "next_scene": "scene_065"
+}
+```
+
+---
+
+## scene_065 — The Plan
+
+### Passage
+
+You unwrap the sock and set it on the table. It is a brass disc about the size of your palm, with a crystal in the middle.
+
+“It’s a portal key. It’s how delvers open portals, and hold them open. I, um. I borrowed it. From the portal yard.” You clear your throat. “I was going to give it back.”
+
+Dr. Wren picks it up with both hands, as if it is made of glass. “This gives off portal energy. Pure portal energy. That’s what it hunts by.”
+
+“It’s tiny,” Pip says.
+
+“Not if we feed the ship’s power through it,” you say. It comes out in a rush, because you can see the whole thing in your head, like a map. “It follows portal energy, like a hound. So we can lead it. And when it feeds, it opens up, and the inside isn’t armored. That’s what you said. So we can sting it. It’s never been hurt. Not once, ever. What does an animal do the first time it gets stung?”
+
+“It leaves,” says the Captain softly. “It learns that this place hurts, and it leaves.”
+
+“We cannot kill it,” Seven says.
+
+“We don’t have to,” you say. “We just have to make it go somewhere else.”
+
+The Captain looks at the brass key for a long moment.
+
+“There are two ways to use this. We can put the key in the shuttle and lure the creature away from Haven. Or we can wire the key into the ship’s main emitter and sting it head on. {hero_name}, it is your key, and your plan. Where do we begin?”
+
+### Choices
+
+#### Choice 1
+
+Lure it away with the shuttle
+
+```json
+{
+  "next_scene": "scene_066"
+}
+```
+
+#### Choice 2
+
+Sting it with the ship
+
+```json
+{
+  "next_scene": "scene_070"
+}
+```
+
+---
+
+## scene_066 — The Lure
+
+### Passage
+
+You and Seven take the shuttle out alone, with the portal key wired into the dashboard with about a mile of Dr. Wren’s cable.
+
+Haven hangs behind you. It is small and green, and it has four thousand people on it.
+
+Ahead of you, there are no stars at all.
+
+“Activating,” Seven says.
+
+The key begins to glow, and then to sing, a high, clear note that you can feel in your teeth. It sounds exactly like the portal yard back home.
+
+The World-Eater stops.
+
+Then, slowly, the whole vast darkness swings around toward you. Toward one little shuttle the size of a bus.
+
+“It’s working! Go, go, go!”
+
+You fly. You lead it away from Haven, out toward empty space, and it follows you, like the world’s largest and worst dog.
+
+For about ten minutes, it is the best plan that anybody has ever had.
+
+Then the darkness in your mirrors starts to fall behind. It is slowing down. The edge of it ripples, and begins to turn, slowly, back the other way.
+
+“It is losing interest,” says Seven. “The key is one small scent in a very large sky. And Haven is still exactly where it was going.”
+
+“No, no, no. Come on. Here, boy!”
+
+There is a dial on the key’s cable. Dr. Wren marked a red line on it, and beside the line she wrote NO FURTHER, and underlined it twice.
+
+### Choices
+
+#### Choice 1
+
+Turn the key up past the red line
+
+```json
+{
+  "next_scene": "scene_067"
+}
+```
+
+#### Choice 2
+
+Fly back in close, where it can’t ignore you
+
+```json
+{
+  "next_scene": "scene_068"
+}
+```
+
+---
+
+## scene_067 — Past the Red Line
+
+### Passage
+
+You turn the dial past the red line.
+
+The key’s song climbs higher, and higher, until it is less like a note and more like a drill. The crystal blazes white. The whole cockpit is lit up like a lightning flash that does not end.
+
+Out in the dark, the World-Eater stops turning away.
+
+It comes around faster this time. A lot faster.
+
+“That has its attention,” says Seven.
+
+There is a tiny sound from the dashboard. Tink.
+
+You look down. There is a crack running across the crystal in the middle of the key. It is as thin as a hair.
+
+“Oh, no. No, no, no.” You spin the dial back down below the line. The light fades. The crack stays where it is.
+
+It is the only portal key for a thousand light years, and you have just cracked it.
+
+“It is still singing,” says Seven. “It will hold. I would not do that a second time.”
+
+You do not have to. The World-Eater has made up its mind. The darkness is rushing up behind you, and it is filling the back window, and it is getting bigger faster than you can fly.
+
+### Choices
+
+#### Choice 1
+
+Fly!
+
+```json
+{
+  "next_scene": "scene_069",
+  "entry_intro": "bright"
+}
+```
+
+---
+
+## scene_068 — Too Close
+
+### Passage
+
+You swing the shuttle around, and you fly straight back at it.
+
+“{hero_name},” says Seven. “I would like to point out the direction in which we are now traveling.”
+
+“I know! If it can’t smell us from out there, then we get closer!”
+
+You get closer. You get so close that there is no sky left, only a wall. You skim along the side of the World-Eater with the key singing at the top of its voice.
+
+Up close, it is not smooth. It is rough, and ridged, and pitted, like the bark of a tree, or the hide of something very old. It goes on forever in every direction. There are craters in it that are bigger than the town where you grew up.
+
+It is alive. You knew that already. But you had not really known it until now.
+
+The hide underneath you twitches.
+
+It is the way a horse’s skin twitches when a fly lands on it.
+
+“That has its attention,” says Seven.
+
+The wall begins to move. You haul back on the sticks and you run, and the whole enormous darkness peels away from its path and comes after you. It is faster than it ever looked from far away. It is getting bigger faster than you can fly.
+
+### Choices
+
+#### Choice 1
+
+Fly!
+
+```json
+{
+  "next_scene": "scene_069",
+  "entry_intro": "close"
+}
+```
+
+---
+
+## scene_069 — Jaws
+
+### Entry intro: bright
+
+With the cracked key still singing on the dashboard, you push the engines as hard as they will go.
+
+### Entry intro: close
+
+With that endless hide still sliding past your side window, you push the engines as hard as they will go.
+
+### Passage
+
+It is not enough. The darkness fills the back window. It fills the side windows too. And then the edges of it begin to fold outward, like the petals of a flower opening up, a flower as wide as a continent. Down inside, there is a dim red glow, like coals.
+
+“It is opening,” says Seven. “It intends to feed. On us. I would like to suggest that we do not let it.”
+
+You are staring into the mirror. You cannot help it. Dr. Wren was right. The inside is nothing like the outside. It is soft, and it is glowing, and it is wide open.
+
+“Seven. Look at it. If the ship were here right now, with something to shoot...”
+
+“The ship is not here. We are here. Please turn the key off.”
+
+“We’re at the wrong end of the plan!”
+
+“{hero_name}. The key.”
+
+You slap the switch. The singing stops, as if it has been cut off with a knife.
+
+Behind you, the great mouth hangs open for one long, terrible second. Then the World-Eater slows. It has lost the scent. The petals fold shut, and the red glow disappears, and the vast shape swings slowly back around toward Haven, as if you were never there.
+
+You do not breathe until you are most of the way home.
+
+“Well,” you say at last. Your voice comes out very high. “We learned something.”
+
+“We did,” says Seven. “I would prefer to have read it in a book.”
+
+### Choices
+
+#### Choice 1
+
+Get back to the ship
+
+```json
+{
+  "next_scene": "scene_074",
+  "entry_intro": "lure"
+}
+```
+
+---
+
+## scene_070 — The Sting
+
+### Passage
+
+It takes Seven and Dr. Wren six hours to wire the portal key into the ship’s main emitter. That is the big dish at the front, which is normally used for clearing space rocks out of the way. The stun rifles from the shuttle’s rack get taken apart for their power cells. Nobody has ever needed them for anything else.
+
+“One shot,” Dr. Wren says. “The key won’t survive a second one. And it has to go inside. If it hits the outside, it’ll just be a snack.”
+
+Pip flies you straight at it.
+
+It gets bigger, and bigger, and then it stops getting bigger, because it is already everything. You are a gnat flying at a mountain.
+
+Up close, it is not smooth. It is rough and ridged, like the bark of a tree, or the hide of something very old. There are craters in it that are bigger than the town where you grew up.
+
+“So,” says Pip. “Where’s the mouth?”
+
+Everybody looks at Dr. Wren.
+
+“It was at the front,” she says. “Last time.”
+
+“Which end is the front?”
+
+Dr. Wren opens her mouth, and then she closes it again.
+
+The darkness slides past the window, endless and uninterested. You have one shot, and nothing to shoot it at.
+
+### Choices
+
+#### Choice 1
+
+Fire a tiny test pulse to get its attention
+
+```json
+{
+  "next_scene": "scene_071"
+}
+```
+
+#### Choice 2
+
+Fly around it and look for the mouth
+
+```json
+{
+  "next_scene": "scene_072"
+}
+```
+
+---
+
+## scene_071 — A Snack
+
+### Passage
+
+“What if we knock?” you say. “Not the real shot. Just a tiny bit, the least that we can send. To make it turn around and look at us.”
+
+Dr. Wren chews her lip. “One percent. Not one speck more.”
+
+You take the firing station. You turn the dial all the way down. You press the button.
+
+A thin little thread of white light hops from the front of the ship, and touches the World-Eater’s hide.
+
+The hide ripples outward from the spot, like a pond when you drop a pebble in. For a moment, a small fold opens in it. It is no bigger than the ship. There is a red glow deep down inside.
+
+The little thread of light goes in. The fold closes over it.
+
+And that is all. The World-Eater does not turn around. It does not slow down. It has just been handed a crumb, and it has eaten the crumb, and it has not even looked to see where the crumb came from.
+
+“That was a mouth!” says Pip. “That was a tiny mouth!”
+
+“It can open anywhere,” Dr. Wren breathes. She is scribbling notes on her own sleeve. “It doesn’t HAVE a mouth. It makes one, wherever the food is. But a crumb only gets you a crumb-sized mouth. For the real shot to get all the way in, we’d need it to open wide. It would have to be really hungry. It would have to be chasing something.”
+
+### Choices
+
+#### Choice 1
+
+Think about that
+
+```json
+{
+  "next_scene": "scene_073",
+  "entry_intro": "pulse"
+}
+```
+
+---
+
+## scene_072 — The Long Way Around
+
+### Passage
+
+“Then we go and look for it,” says the Captain. “Pip. Take us around.”
+
+It takes four hours to fly around the World-Eater one time.
+
+You spend them at the scanner station, mapping it, because somebody ought to, and maps are what you do. You fill nine pages. You draw ridges as long as mountain ranges, and craters like dried-up seas, and great slow wrinkles that open and close as it moves.
+
+You do not find a mouth. You do not find a front, either, or a back. It is the same all over, like a potato.
+
+“I don’t understand it,” says Dr. Wren. “We watched it feed. It opened up like a flower. It was enormous. It can’t just be GONE.”
+
+You look down at your nine pages, and you think about flowers.
+
+“Maybe it isn’t gone,” you say slowly. “Maybe it isn’t there yet. A flower’s not open all the time. It only opens up when there’s some sun.” You tap your pencil on the page. “What if it doesn’t HAVE a mouth? What if it makes one, when there’s something to eat, wherever the food happens to be?”
+
+Dr. Wren stares at you. Then she snatches your notebook out of your hands and starts flipping through it.
+
+“It would have to be hungry,” she mutters. “It would have to be chasing something.”
+
+### Choices
+
+#### Choice 1
+
+Think about that
+
+```json
+{
+  "next_scene": "scene_073",
+  "entry_intro": "search"
+}
+```
+
+---
+
+## scene_073 — No Bait
+
+### Entry intro: pulse
+
+Nobody on the bridge says anything for a while.
+
+### Entry intro: search
+
+Dr. Wren slowly hands your notebook back to you. The bridge goes quiet.
+
+### Passage
+
+“The key’s wired into the dish now,” you say, working it through out loud. “So it can’t smell the key until we fire it. And we can’t fire it until it has opened up. And it won’t open up until it smells something.”
+
+“That is a circle,” says Seven.
+
+“We’ve built a stinger,” says Pip, and she slumps back in her chair. “We forgot the bait.”
+
+Outside the window, the hide of the World-Eater goes sliding by. It does not know that you are here. It has never once needed to know that anybody was here.
+
+Four thousand people. Four days. One shot, which you cannot use.
+
+You stare at the lights on Pip’s console, because you cannot stand to look out of the window any more. One of them is a little green light, and it is labeled SHUTTLE BAY.
+
+You look at it for quite a long time.
+
+The shuttle is small, and it is fast. And anything with an engine in it can be made to make a great deal of noise.
+
+Your stomach turns over slowly. You know what the rest of the plan is, and you do not like it.
+
+### Choices
+
+#### Choice 1
+
+Tell them the rest of the plan
+
+```json
+{
+  "next_scene": "scene_074",
+  "entry_intro": "sting"
+}
+```
+
+---
+
+## scene_074 — Both at Once
+
+### Entry intro: lure
+
+You run all the way from the shuttle bay to the bridge. “It opens up when it hunts!” you tell them, before you have even got your breath back. “It was wide open, right behind us! We have to sting it while it’s chasing something!”
+
+### Entry intro: sting
+
+“It needs bait,” you say. “The shuttle. If the shuttle puts out enough portal energy, it’ll chase it, and it’ll open up. And then the ship stings it.”
+
+### Passage
+
+There is a short, terrible silence.
+
+“The key cannot be in two places,” the Captain says.
+
+“It doesn’t have to be,” Dr. Wren cuts in. “The shuttle’s engine core will put out something close enough, if you overload it. It’ll smell like a portal for a few minutes. Then it’ll burn out.”
+
+So this is the plan. The shuttle runs, screaming portal energy, and gets the World-Eater to open its mouth. The ship comes in from the side and fires the key’s one shot down its throat. If the shuttle is too slow, it gets swallowed. If the ship misses, there is no second try.
+
+Two jobs. Flying the bait needs someone who can hold a line with their hands steady while the largest thing in the universe comes up behind them. Firing the shot needs someone who can watch a moving target and find the pattern, and call the one right moment.
+
+You have spent three weeks learning to be both of those people.
+
+“Crewmate {hero_name},” the Captain says. “I have never asked anyone so young to do something like this, and I would not ask now if I had any other choice. Where do you want to be?”
+
+### Choices
+
+#### Choice 1
+
+Fly the shuttle with Seven
+
+```json
+{
+  "next_scene": "scene_075"
+}
+```
+
+#### Choice 2
+
+Take the firing station on the bridge
+
+```json
+{
+  "next_scene": "scene_076"
+}
+```
+
+---
+
+## scene_075 — The Bait
+
+### Passage
+
+Seven overloads the engine core. The whole shuttle starts to hum the portal note. You take the sticks.
+
+“I will handle the power,” he says. “You fly. Do not think about it.”
+
+“You said thinking is useful.”
+
+“I have revised my position.”
+
+It comes.
+
+You have never flown like this. You are not reading a map, because there is no map. There is only the darkness rising behind you, and the edges of it folding open, wider than a continent. Inside it is a dim red glow, like coals.
+
+“Hold the line,” the Captain’s voice says. “Ten more seconds. We are almost in position.”
+
+The shuttle is shaking itself apart. A panel bursts. Sparks rain down on your side of the cockpit, and before you can even flinch, Seven has put his arm across you. It takes the whole shower. When he pulls it back, the metal is black and the fingers are not moving.
+
+“Your arm!”
+
+“It is an arm. I have another. I do not feel fear, {hero_name}. But I have calculated that you do, and you are flying anyway. Hold the handle. Five more seconds.”
+
+You hold the handle.
+
+The red glow fills every mirror.
+
+“NOW!” the Captain roars. “Break left! PIP, FIRE!”
+
+You break left, harder than you have ever turned, and something bright goes past you the other way.
+
+### Choices
+
+#### Choice 1
+
+Look back
+
+```json
+{
+  "next_scene": "scene_077",
+  "entry_intro": "flew"
+}
+```
+
+---
+
+## scene_076 — The Shot
+
+### Passage
+
+You take the firing station. It is one screen, one crosshair, and one button. Your notebook is open on your knee.
+
+Out in the dark, Seven is flying the shuttle alone, with its engine core screaming portal energy, and the World-Eater is rising up behind him like a wave.
+
+“It’s opening!” Pip shouts. “There it is!”
+
+The edges of the darkness fold outward. Inside is a dim red glow, like coals. But the mouth is not still. It ripples, and flexes, and pulses.
+
+One shot.
+
+“Crewmate,” the Captain says. “Any time.”
+
+“Not yet.”
+
+You watch. You count. You write it down, the way you always do. Wide, narrow, narrow, wide. Wide, narrow, narrow, wide. It is breathing. Every fourth beat, the glow in the center is brightest, and there is a clear path all the way in.
+
+“The shuttle’s coming apart,” Pip says. “{hero_name}, he can’t hold it!”
+
+“I have lost the use of one arm,” Seven’s voice says calmly over the comm. “I have another. Please take the time you need. I would prefer that you did not miss.”
+
+Wide. Narrow. Narrow.
+
+You think of Solaris. You think of Tansy, and Lumen, and Indra. You think of all those names, spelled correctly.
+
+“Seven, break left. Now.”
+
+Wide.
+
+You press the button.
+
+### Choices
+
+#### Choice 1
+
+Watch it fly
+
+```json
+{
+  "next_scene": "scene_077",
+  "entry_intro": "fired"
+}
+```
+
+---
+
+## scene_077 — Stung
+
+### Entry intro: flew
+
+In the mirror, you watch the shot go in.
+
+### Entry intro: fired
+
+The portal key’s one and only shot leaps from the front of the ship, passes the fleeing shuttle by a hair, and goes in.
+
+### Passage
+
+It is a single thread of brilliant white light, carrying every bit of power the {world_name} has. It slides straight down the middle, into the red glow, and vanishes.
+
+For a moment, nothing happens.
+
+Then the World-Eater shudders.
+
+You do not hear it. There is no sound in space. But you feel it, in your ribs, in the deck, in the air, a vast, low note of something that has never once been hurt, discovering what it is like. A crack of white light runs across the darkness from one side to the other, like lightning across a night sky.
+
+The mouth slams shut.
+
+And the World-Eater turns away. Away from the shuttle, away from the ship, away from the little green planet with four thousand people on it. It is faster than you have ever seen it move. The starless patch shrinks, and shrinks, until it is a smudge, and then it is a speck.
+
+Then it is only stars.
+
+The bridge of the {world_name} erupts. Pip is screaming and hugging Dr. Wren. Dr. Wren is crying on her crystals.
+
+“It is not dead,” Seven says, over the noise.
+
+“No,” says the Captain. “It is wounded, and it is frightened, and it is still out there. But it has learned today that some doors bite back.” His voice cracks a little. “And it learned it from us.”
+
+Far below, the lights of Haven are twinkling.
+
+### Choices
+
+#### Choice 1
+
+Go down to Haven
+
+```json
+{
+  "next_scene": "scene_078"
+}
+```
+
+---
+
+## scene_078 — The Wall of Names
+
+### Passage
+
+Haven smells like cut grass and cooking. You had forgotten that planets have smells.
+
+Four thousand people come out to meet the ship. You get hugged by more strangers than you can count. The kid with the big gray ears from the Marigold runs up and hugs you around the knees.
+
+Skipper Bel is here, and so is Tock, who has grown a whole inch. Keeper Moss has been given a little round house with a garden, and there are green shoots coming up in it that nobody on Haven has ever seen before. Seven’s arm is already being rebuilt, and he is already supervising. Pip finds a fried dough stand run by her cousin Zib, and she does not come back for an hour.
+
+In the middle of the town, there is a long white wall covered in names. Thousands and thousands of them, with the name of a lost world above each group. It is Seven’s list, carved where everyone can see it. People leave flowers along the bottom.
+
+At the very end, there is a fresh, empty stretch of wall. While you stand there, a woman with a chisel carves a new heading into it.
+
+SOLARIS.
+
+And underneath it, she begins to carve names. There are six already. They are six people who fell through portals just like you did, and were picked up by other ships, and brought here.
+
+You read them three times. You do not know any of them.
+
+But there are six. Yesterday there were none. And there is a lot of empty wall.
+
+Captain Azul comes to stand beside you.
+
+“More will come,” he says. “They always do. Some will be brought here. Some are still out there, waiting for a ship. You have earned the right to choose, {hero_name}. You can stay here on Haven and be the first face every Solarian sees when they arrive. Or you can come with us, and go and find them.”
+
+### Choices
+
+#### Choice 1
+
+Stay on Haven and wait by the wall
+
+```json
+{
+  "next_scene": "scene_079"
+}
+```
+
+#### Choice 2
+
+Stay with the crew and keep searching
+
+```json
+{
+  "next_scene": "scene_080"
+}
+```
+
+---
+
+## scene_079 — The First Face
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
+“I think I need to be here,” you say. “When they come through those gates, lost and scared, I want somebody from home to be standing there. I know what that’s worth.”
+
+The Captain nods slowly. “I thought you might. It is a good choice.”
+
+“Can I keep the jumpsuit?”
+
+“I would be insulted if you did not. You are still crew. You are simply stationed on the ground.”
+
+The {world_name} lifts off three days later. Pip cries and pretends she is not. Seven shakes your hand with his new arm, because he has learned that you are a hand-shaker.
+
+“I will continue to search the list for your family every night,” he says. “When I find them, you will be the first to know. I have said when. I considered the word carefully.”
+
+You watch the ship until it is one more star.
+
+Then you get to work. You build a little welcome station by the gates, with blankets, and water, and sandwiches. A lot of sandwiches. You pin a map of Haven to the wall, drawn by hand.
+
+Every ship that lands, you are there, in a gray jumpsuit that is a little less too big every month.
+
+“Hi,” you say, to every lost and frightened face. “I’m {hero_name}. I’m from Solaris. You’re safe. Let me show you the wall.”
+
+Out there in the dark, something huge and wounded is still drifting between the stars.
+
+But the wall is getting longer, and you check the new names every single morning.
+
+One day, you know, you are going to recognize one.
+
+The End.
+
+### Choices
+
+---
+
+## scene_080 — The Space Walker
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
+“I can’t wait by a wall,” you say. “I’m not built for it. If my family’s out there, they’re waiting for a ship. I want to be on the ship.”
+
+The Captain’s ears twitch. Both of them, twice.
+
+“I was hoping you would say that. I have already told the quartermaster to find you a jumpsuit that fits.”
+
+“No thanks,” you say, and you roll your sleeves one more time. “I’ll grow into this one.”
+
+The {world_name} lifts off three days later, with a rebuilt shuttle, a repaired synthoid, a pilot full of fried dough, and a scientist who has decided that she is not going back to an ice moon. And you.
+
+You carve your family’s names on the wall yourself before you go, under MISSING. Seven checks the spelling.
+
+On your first night back in space, you lie on the floor of the observation deck with your notebook. You are drawing a map. It has every lost world on it, and every place a survivor has ever been found. There is a pattern in there somewhere. There always is.
+
+“It is still out there,” Seven says from the doorway. “It will heal. It will come back.”
+
+“I know,” you say, without looking up. “And when it does, it’s going to find out we’ve been practicing.”
+
+WHOOP. WHOOP. WHOOP.
+
+You grab your satchel. Rope, compass, notebook, sandwiches. A good delver is always prepared.
+
+“Crewmate {hero_name} to the bridge,” says the Captain’s voice.
+
+You are already running. You do not make a single wrong turn.
+
+The End.
+
+### Choices
