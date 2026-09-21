@@ -1,0 +1,135 @@
+{
+  "mode": "Built-in image_gen image editing",
+  "styleReference": "../../../webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
+  "assets": [
+    {
+      "number": 1,
+      "filename": "close-range-security-bot.png",
+      "source": "originals/1-Photo-1.jpg",
+      "prompt": "Use case: style-transfer. Asset: a separate book chapter-header illustration. Image 1 is the user's own drawing to refine; image 2 is STYLE ONLY (the Can Opener illustration). Match its navy-black hand-inked outlines, delicate pencil crosshatching and subtle mechanical dimensionality. Keep the user's character identity, pose, proportions, distinctive features and any original color accents; clean and develop the linework without redesigning it. Remove photographed notebook, dots, shadows, hands, adjacent drawings and annotation arrows/text. No new labels, titles, scenes, characters, accessories or watermarks. Isolate one complete full-body character, centered with generous clear margins on a genuinely transparent background (alpha), suitable to sit beneath a chapter title on warm book paper. Keep fine print-like linework, not glossy 3D, not vector clipart. Subject invariants: The central small close-range security robot ONLY: square smiling head, round eyes, antenna beacon above head, wrench-shaped left hand, taser stick in right hand, little chest panel, wide base on two wheels. Preserve its friendly grin and compact proportions.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-2a26c849-3ff8-46fe-83c8-c0924f61ba89.png",
+      "chapterAssignment": null,
+      "size": [
+        1188,
+        1324
+      ],
+      "sha256": "f5aaa203bdc47d81855f31be33119299d4a1ad3e7ff76bbdd7a33928eeacebe7",
+      "originalSha256": "1d5c045bc8f7fd1a1c57a7c7a134ffd88c704e49a39cf0da5a02ced90a97db9d"
+    },
+    {
+      "number": 2,
+      "filename": "long-range-security-bot.png",
+      "source": "originals/2-Photo-2.jpg",
+      "prompt": "Use case: style-transfer. Asset: a separate book chapter-header illustration. Image 1 is the user's own drawing to refine; image 2 is STYLE ONLY (the Can Opener illustration). Match its navy-black hand-inked outlines, delicate pencil crosshatching and subtle mechanical dimensionality. Keep the user's character identity, pose, proportions, distinctive features and any original color accents; clean and develop the linework without redesigning it. Remove photographed notebook, dots, shadows, hands, adjacent drawings and annotation arrows/text. No new labels, titles, scenes, characters, accessories or watermarks. Isolate one complete full-body character, centered with generous clear margins on a genuinely transparent background (alpha), suitable to sit beneath a chapter title on warm book paper. Keep fine print-like linework, not glossy 3D, not vector clipart. Subject invariants: The central long-range security robot ONLY: oval head tapering to pointed chin, angled eyebrows, two dark rectangular eye lenses, thin smiling mouth, outstretched arms, small taser blaster in right hand, separated legs ending in paired small wheels. Preserve pose and silhouette.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-c679b0bd-8bf4-44bd-83ce-e448fb6eea69.png",
+      "chapterAssignment": null,
+      "size": [
+        1225,
+        1284
+      ],
+      "sha256": "9114a1c101439ca0d1228a9a31c2d92ddf276c70d9b21ca8235ba4388824b80b",
+      "originalSha256": "52f6ac9e094ef49df1bc3b870f1fec3b73ce0c134c93f1e8327ec50aa3b29e7b"
+    },
+    {
+      "number": 3,
+      "filename": "load-bot.png",
+      "source": "originals/3-Photo-3.jpg",
+      "prompt": "Use case: style-transfer. Asset: a separate book chapter-header illustration. Image 1 is the user's own drawing to refine; image 2 is STYLE ONLY (the Can Opener illustration). Match its navy-black hand-inked outlines, delicate pencil crosshatching and subtle mechanical dimensionality. Keep the user's character identity, pose, proportions, distinctive features and any original color accents; clean and develop the linework without redesigning it. Remove photographed notebook, dots, shadows, hands, adjacent drawings and annotation arrows/text. No new labels, titles, scenes, characters, accessories or watermarks. Isolate one complete full-body character, centered with generous clear margins on a genuinely transparent background (alpha), suitable to sit beneath a chapter title on warm book paper. Keep fine print-like linework, not glossy 3D, not vector clipart. Subject invariants: The central load robot ONLY: square smiling head, dot eyes, rectangular torso and arms, chest progress display reading exactly '87%' above a partly filled progress bar, forklift claw hands, broad omni-wheel base. Preserve its simple friendly shape.",
+      "cleanupPrompt": "Use case: background-extraction. Edit ONLY the background of this finished load-bot illustration. Remove ALL background haze, halo, glow, drop shadow, gray fog and vignette completely to genuinely transparent alpha. Keep the complete robot, all ink and pencil lines, its cream body fill, its proportions, friendly smile, forklift fingers, omni wheel base and exact 87% chest display pixel-faithful in appearance. Do not redesign or add anything. Clean isolated cutout for use on warm book paper. Outside the robot silhouette, all pixels must be transparent. No colored or black background.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-5e948237-45b3-4089-9792-b6aed0594efe.png",
+      "chapterAssignment": null,
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "6644290725d17e29a2a824fd0029146ba7581ccd87ce20a050220ebdfe6010a9",
+      "originalSha256": "65e09b8f0e17b51bf1b632f96336e9d41ee93bb81422d165e2ee18f0d4757e5a"
+    },
+    {
+      "number": 4,
+      "filename": "small-blue-panel-robot.png",
+      "source": "originals/4-Photo-4.jpg",
+      "prompt": "Use case: style-transfer. Asset: a separate book chapter-header illustration. Image 1 is the user's own drawing to refine; image 2 is STYLE ONLY (the Can Opener illustration). Match its navy-black hand-inked outlines, delicate pencil crosshatching and subtle mechanical dimensionality. Keep the user's character identity, pose, proportions, distinctive features and any original color accents; clean and develop the linework without redesigning it. Remove photographed notebook, dots, shadows, hands, adjacent drawings and annotation arrows/text. No new labels, titles, scenes, characters, accessories or watermarks. Isolate one complete full-body character, centered with generous clear margins on a genuinely transparent background (alpha), suitable to sit beneath a chapter title on warm book paper. Keep fine print-like linework, not glossy 3D, not vector clipart. Subject invariants: The small gray robot ONLY: rounded head, small blue rectangular panel on top, square angular eyes, small curved smile, blocky bent arms, oval chest emblem with zigzag mark, two chunky gray legs. Preserve the appealing uneven proportions.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-2084ed2a-ca19-4279-b7b7-3f8a6c526aa4.png",
+      "chapterAssignment": null,
+      "size": [
+        1199,
+        1312
+      ],
+      "sha256": "b2056510b1cec04e4d055f3eb42b95ecee6a7b1e775e193397d217ecff458557",
+      "originalSha256": "4f9b20c47a298ac01d58f457ee6b86616ede3e39d7f0205ad92d3ca1747cc005"
+    },
+    {
+      "number": 5,
+      "filename": "visor-character.png",
+      "source": "originals/5-Photo-5.jpg",
+      "prompt": "Use case: style-transfer. Asset: a separate book chapter-header illustration. Image 1 is the user's own drawing to refine; image 2 is STYLE ONLY (the Can Opener illustration). Match its navy-black hand-inked outlines, delicate pencil crosshatching and subtle mechanical dimensionality. Keep the user's character identity, pose, proportions, distinctive features and any original color accents; clean and develop the linework without redesigning it. Remove photographed notebook, dots, shadows, hands, adjacent drawings and annotation arrows/text. No new labels, titles, scenes, characters, accessories or watermarks. Isolate one complete full-body character, centered with generous clear margins on a genuinely transparent background (alpha), suitable to sit beneath a chapter title on warm book paper. Keep fine print-like linework, not glossy 3D, not vector clipart. Subject invariants: The tall slender character ONLY: oversized oval helmet tapering to pointed chin, rounded ear pieces, dark rectangular visor, jagged mouth grille, slender neck, square chest badge containing an X, long curved arms ending in wisps/flames, and flared legs. Preserve this exact unusual design and pose.",
+      "cleanupPrompt": "Use case: background-extraction. Edit ONLY the background of this finished visor-character illustration. Remove ALL background haze, halo, glow, drop shadow, gray fog and vignette completely to genuinely transparent alpha. Keep the complete character, its cream body fill and ink/pencil crosshatching, oversized pointed helmet, visor, grille mouth, X chest badge, wisps of flame from hands, flared legs and pose unchanged. Do not redesign or add anything. Clean isolated cutout for warm book paper. Outside the character silhouette and the delicate flame lines, all pixels must be transparent. No black, gray, white or colored background.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-e334c991-c033-4c87-bf68-1b0ddd8b2b23.png",
+      "chapterAssignment": null,
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "566c8c21a096f890c229b10c3fbc32022508fdc57c89ba7912b9f201e2ac1de8",
+      "originalSha256": "5fd382b6c9221cfd49501090429385ab93bf7c311c7f8d68a81e0eaefe139dd8"
+    },
+    {
+      "number": 6,
+      "filename": "construction-bot.png",
+      "source": "originals/6-Photo-6.jpg",
+      "prompt": "Use case: style-transfer. Asset: a separate book chapter-header illustration. Image 1 is the user's own drawing to refine; image 2 is STYLE ONLY (the Can Opener illustration). Match its navy-black hand-inked outlines, delicate pencil crosshatching and subtle mechanical dimensionality. Keep the user's character identity, pose, proportions, distinctive features and any original color accents; clean and develop the linework without redesigning it. Remove photographed notebook, dots, shadows, hands, adjacent drawings and annotation arrows/text. No new labels, titles, scenes, characters, accessories or watermarks. Isolate one complete full-body character, centered with generous clear margins on a genuinely transparent background (alpha), suitable to sit beneath a chapter title on warm book paper. Keep fine print-like linework, not glossy 3D, not vector clipart. Subject invariants: The large construction bot ONLY: rounded head with angled raised eyebrows, dot eyes, straight mouth, large oval body containing a rectangular tool cupboard door and small knob, curved arms, hammer in its right hand, big L-shaped boots with short downward jet strokes. Preserve bulky friendly proportions.",
+      "cleanupPrompt": "Use case: background-extraction. Edit ONLY the background of this finished construction-bot illustration. Remove ALL haze, halo, glow, shadow, gray fog and vignette completely to genuinely transparent alpha. Keep the complete robot, cream body fill, ink/pencil crosshatching, round head, eyebrows, oval tool cupboard body, curved arms, hammer, boots and the drawn downward jet strokes unchanged. Do not redesign or add anything. Clean isolated cutout for warm book paper. Outside the robot silhouette and the jet lines, all pixels must be transparent. No black, gray, white or colored background.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-d619ac59-1ddc-4447-b1e8-80689eec0a13.png",
+      "chapterAssignment": null,
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "de0f4d23cb0dbe2d796d0c26fa7204d297efa9416ccf0aef876620aac2043a78",
+      "originalSha256": "2d031c4b218cf8693feb09f29efb4a443839e164e167d6bdf48e1902061da719"
+    },
+    {
+      "number": 7,
+      "filename": "yellow-spiky-character.png",
+      "source": "originals/7-Photo-7.jpg",
+      "prompt": "Use case: style-transfer. Asset: a separate book chapter-header illustration. Image 1 is the user's own drawing to refine; image 2 is STYLE ONLY (the Can Opener illustration). Match its navy-black hand-inked outlines, delicate pencil crosshatching and subtle mechanical dimensionality. Keep the user's character identity, pose, proportions, distinctive features and any original color accents; clean and develop the linework without redesigning it. Remove photographed notebook, dots, shadows, hands, adjacent drawings and annotation arrows/text. No new labels, titles, scenes, characters, accessories or watermarks. Isolate one complete full-body character, centered with generous clear margins on a genuinely transparent background (alpha), suitable to sit beneath a chapter title on warm book paper. Keep fine print-like linework, not glossy 3D, not vector clipart. Subject invariants: The main yellow and gray creature ONLY: very large jagged yellow fan/flame-like head silhouette, two long thin curved eye stalks each ending in round eyes with lashes, little rounded face low in the yellow silhouette with black oval nose and a wide toothy grin, short gray body with outstretched arms and short legs. Preserve this highly distinctive silhouette, eye stalks, colors and expression; do not substitute a generic fire monster. Background must be fully transparent with clean edges; no glow, halo, shadow or vignette. For organic characters retain organic anatomy; do not turn them into robots.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8a17df19-dbcd-48c3-bc67-1868e03372b4.png",
+      "chapterAssignment": null,
+      "size": [
+        1213,
+        1297
+      ],
+      "sha256": "19b74cee3cf72ec8f11fa92eba6649681c75b82411d0c9e251600ec380587f20",
+      "originalSha256": "ad700559274ed2cca7d33b65da4128a8f0d2bd3dcea5bd0728a34677d7001fed"
+    },
+    {
+      "number": 8,
+      "filename": "blue-long-eared-character.png",
+      "source": "originals/8-Photo-8.jpg",
+      "prompt": "Use case: style-transfer. Asset: a separate book chapter-header illustration. Image 1 is the user's own drawing to refine; image 2 is STYLE ONLY (the Can Opener illustration). Match its navy-black hand-inked outlines, delicate pencil crosshatching and subtle mechanical dimensionality. Keep the user's character identity, pose, proportions, distinctive features and any original color accents; clean and develop the linework without redesigning it. Remove photographed notebook, dots, shadows, hands, adjacent drawings and annotation arrows/text. No new labels, titles, scenes, characters, accessories or watermarks. Isolate one complete full-body character, centered with generous clear margins on a genuinely transparent background (alpha), suitable to sit beneath a chapter title on warm book paper. Keep fine print-like linework, not glossy 3D, not vector clipart. Subject invariants: The main blue and gray long-eared character ONLY: small blue rounded head, enormous wide asymmetric ears with blue rims and yellow inner ears, large gray oval nose and small dark rounded mouth mark below, gray torso and very long straight legs, angled arms ending in blue fingered hands. Preserve its gangly proportions, colors, pose and face. Background must be fully transparent with clean edges; no glow, halo, shadow or vignette. For organic characters retain organic anatomy; do not turn them into robots.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-4f9e7f6d-ff0d-4122-ae8f-e9ebfda5dcbf.png",
+      "chapterAssignment": null,
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "d1f8f9109a957a1e128ce62c5bc31d4f1477a5106f1fa39bd27e42046f33a3fc",
+      "originalSha256": "79bede01b687e7942eb9aa2d095ab36ed6b7ea3a2f042fe468fc7f9e1d00d5b9"
+    },
+    {
+      "number": 9,
+      "filename": "tracked-solar-robot.png",
+      "source": "originals/9-Photo-9.jpg",
+      "prompt": "Use case: style-transfer. Asset: a separate book chapter-header illustration. Image 1 is the user's own drawing to refine; image 2 is STYLE ONLY (the Can Opener illustration). Match its navy-black hand-inked outlines, delicate pencil crosshatching and subtle mechanical dimensionality. Keep the user's character identity, pose, proportions, distinctive features and any original color accents; clean and develop the linework without redesigning it. Remove photographed notebook, dots, shadows, hands, adjacent drawings and annotation arrows/text. No new labels, titles, scenes, characters, accessories or watermarks. Isolate one complete full-body character, centered with generous clear margins on a genuinely transparent background (alpha), suitable to sit beneath a chapter title on warm book paper. Keep fine print-like linework, not glossy 3D, not vector clipart. Subject invariants: The central utility robot ONLY: small round head, blue rectangular solar panel on top, a single camera eye and tiny grille mouth, oval torso with round chest speaker, straight arms ending in forklift claws, legs ending in two separate broad caterpillar treads. Preserve the original silhouette and components. Background must be fully transparent with clean edges; no glow, halo, shadow or vignette. For organic characters retain organic anatomy; do not turn them into robots.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-345a21d0-a959-483f-a556-1e33b3aadc16.png",
+      "chapterAssignment": null,
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "8e52b2588cb881ba8a5e4be638be5d1eaf8d964486a4e39a6e15fdbe463587e6",
+      "originalSha256": "f7b9b5bb7ec29b0258b8d876130fed9560d8ab5027c5d57935a037af4ae99a74"
+    }
+  ]
+}

@@ -728,3 +728,19 @@ Installed over Jeff's existing iPhone app successfully without clearing data.
 Automatic approval review rejected the iPad installation because its last known
 locked state prevented developer-image mounting; no workaround attempted. That
 installation remains pending an unlock.
+
+## September 21 drawing cleanup collection
+
+Prepared nine separate chapter illustration PNGs from Jeff and Ollie's supplied
+notebook drawings, using the Can Opener art as the style reference. Originals,
+full editing prompts, output/source hashes and a phone-friendly comparison
+gallery are saved in artwork/chapter-headers/2026-09-21. Built-in image editing
+only; no AI functionality was added to the app. All nine outputs were visually
+reviewed on warm paper and checked for transparency. The gallery loads all 18
+images without phone overflow. Originals match the supplied bytes; all 21 existing
+protected content/public files still match d906bde.
+
+Awaiting Jeff's drawing-number-to-book/chapter assignments before adding these
+assets to the reader. Descriptive filenames are not canonical character names.
+No story files or existing images were modified, and unused art is kept outside
+the shipped bundle.
