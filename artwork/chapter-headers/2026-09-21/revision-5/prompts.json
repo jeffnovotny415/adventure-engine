@@ -1,0 +1,18 @@
+{
+  "mode": "Built-in image_gen editing",
+  "prompt": "Use case: precise-object-edit. Refine the supplied approved full-body illustration of Pip, a short adult alien rescue-ship pilot from Space Walker. This is the edit target; preserve her distinctive identity and the approved ink-and-colored-pencil book-art style. Make three restrained refinements: (1) replace the rigid tooth-grid grin with an expressive natural CLOSED smile, gently asymmetric confident warmth, distinct mouth corners and a subtle lower lip/chin contour in her existing pale facial color; no teeth grid, huge black cavity, tongue, pink lipstick or dog muzzle redesign. Keep the existing rounded dark nose and pale face shape. (2) Her two long flexible antennae are her eyes: keep exactly two eyes at their tips with the same shapes, stalk positions and anatomy, but aim one pupil toward the viewer and the other slightly off to the side, communicating her canonical ability to watch two things at once. No extra eyes on her face. (3) Preserve the wild golden-yellow hair silhouette and volume but make the large geometric spikes read more as actual tousled hair using finer individual strands and small overlapping wisps, retaining the source's recognizable sweeping shape. Everything else stays: short humanoid adult proportions, hands-on-hips pose, grey hands, relaxed one-piece grey jumpsuit with central zipper and numerous stitched patches, original shoes, palette, full-body composition and crosshatched drawing texture. The authored outfit is already correct; no invented badges, pilot goggles, headset, weapons, text, labels or extra accessories. Genuine transparent alpha background; no background, halo, scenery or paper rectangle. Entire character, both eye stalks and feet fully in frame. Refined professional storybook art with personality, not a new character or a new pose.",
+  "source": "revision-3/yellow-spiky-character.png",
+  "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-73f3915a-1ecc-4492-8e37-ac66cf0f1de8.png",
+  "storyReferences": [
+    "scene_006",
+    "scene_008",
+    "scene_016",
+    "scene_027"
+  ],
+  "notes": "Existing outfit matches authored description. Refined closed smile and hair strands; independent pupil gaze reflects the text. No equipment or insignia added.",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "sha256": "c39f3229738cfc4e59117ee63315d1dcdb98c7069e44a4e4ac28c7675334c159"
+}

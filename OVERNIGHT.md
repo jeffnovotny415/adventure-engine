@@ -785,3 +785,15 @@ blue lower-lip contour. Retained the approved outfit and character design. Saved
 as revision-4 with the exact built-in editing prompt; gallery/detail links updated.
 Visually verified on warm paper and checked transparent alpha. All 49 protected
 story/public/Python/draft and previous artwork files remain byte-identical.
+
+## September 21 Pip character refinement
+
+Reviewed drawing 7 against Space Walker's descriptions and actions in scenes
+006, 008, 016 and 027. Existing short build, two eye stalks, yellow hair and crew
+jumpsuit already match. Replaced the rigid tooth-grid grin with an expressive
+closed smile, refined the hair into strands/wisps, and aimed the pupils in
+different directions to reflect her ability to watch two things at once.
+No invented equipment or insignia. Saved revision-5 with exact built-in editing
+prompt and updated gallery/detail links. Checked phone warm-paper rendering and
+alpha transparency. All 50 existing protected content and artwork files remain
+byte-identical; Captain Azul and all other approved images are unchanged.
