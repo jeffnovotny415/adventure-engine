@@ -2198,10 +2198,10 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Character",
-    "current_name": "Droider",
+    "current_name": "Asher",
     "role": "The inventor’s computer companion; later made portable.",
     "aliases": [
-      "Droider"
+      "Asher"
     ],
     "note": "",
     "replacement": "",
@@ -2248,7 +2248,7 @@
       },
       {
         "id": "scene_012",
-        "title": "Check on Droider"
+        "title": "Check on Asher"
       },
       {
         "id": "scene_013",
@@ -2304,7 +2304,7 @@
       },
       {
         "id": "scene_032",
-        "title": "Droider’s Idea"
+        "title": "Asher’s Idea"
       },
       {
         "id": "scene_033",
@@ -2328,7 +2328,7 @@
       },
       {
         "id": "scene_041",
-        "title": "Miniaturizing Droider"
+        "title": "Miniaturizing Asher"
       },
       {
         "id": "scene_042",
@@ -2472,10 +2472,10 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Character",
-    "current_name": "Mr. Kim",
+    "current_name": "Mr. Lin",
     "role": "Neighbor who feeds pigeons at the bench.",
     "aliases": [
-      "Kim"
+      "Lin"
     ],
     "note": "",
     "replacement": "",
@@ -2491,11 +2491,11 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Character",
-    "current_name": "Maximilian Grabbs",
+    "current_name": "Max Grabs",
     "role": "Developer behind the robot sabotage.",
     "aliases": [
-      "Maximilian",
-      "Grabbs"
+      "Max",
+      "Grabs"
     ],
     "note": "",
     "replacement": "",
@@ -2535,10 +2535,10 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Place, gadget or robot type",
-    "current_name": "Grabbs Grand Developments",
-    "role": "Grabbs’s property-development business.",
+    "current_name": "Grabs Awesome Structures",
+    "role": "Grabs’s property-development business.",
     "aliases": [
-      "Grabbs Grand Developments"
+      "Grabs Awesome Structures"
     ],
     "note": "Keep this coordinated with the character surname and related business names.",
     "replacement": "",
@@ -2562,10 +2562,10 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Place, gadget or robot type",
-    "current_name": "Grabbs Grand Plaza",
-    "role": "Grabbs’s planned redevelopment.",
+    "current_name": "Grabs Grand Plaza",
+    "role": "Grabs’s planned redevelopment.",
     "aliases": [
-      "Grabbs Grand Plaza"
+      "Grabs Grand Plaza"
     ],
     "note": "Keep this coordinated with the character surname and related business names.",
     "replacement": "",
@@ -2903,17 +2903,17 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Place, gadget or robot type",
-    "current_name": "Droider Portable",
-    "role": "Portable form/name of Droider.",
+    "current_name": "Asher Portable",
+    "role": "Portable form/name of Asher.",
     "aliases": [
-      "Droider Portable"
+      "Asher Portable"
     ],
-    "note": "Same character as Droider; coordinate both labels.",
+    "note": "Same character as Asher; coordinate both labels.",
     "replacement": "",
     "scenes": [
       {
         "id": "scene_041",
-        "title": "Miniaturizing Droider"
+        "title": "Miniaturizing Asher"
       },
       {
         "id": "scene_049",
@@ -2930,10 +2930,10 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Place, gadget or robot type",
-    "current_name": "The Yoink",
+    "current_name": "The Puller Thingie",
     "role": "Proposed grappling-hook invention.",
     "aliases": [
-      "Yoink"
+      "Puller Thingie"
     ],
     "note": "",
     "replacement": "",
@@ -2949,10 +2949,10 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Place, gadget or robot type",
-    "current_name": "Project Un-Can",
+    "current_name": "Project Fix em",
     "role": "Plan to repair and rehabilitate the robots.",
     "aliases": [
-      "Project Un-Can"
+      "Project Fix em"
     ],
     "note": "",
     "replacement": "",
@@ -2968,10 +2968,10 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Place, gadget or robot type",
-    "current_name": "The Neighborhood Improver 3000",
-    "role": "Grabbs’s robot-virus machine.",
+    "current_name": "The Robot Improver 3.0",
+    "role": "Grabs’s robot-virus machine.",
     "aliases": [
-      "Neighborhood Improver 3000"
+      "Robot Improver 3.0"
     ],
     "note": "",
     "replacement": "",

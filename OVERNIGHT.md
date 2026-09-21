@@ -918,3 +918,31 @@ Full check passes (lint, 107 tests, graph diagnostics with no errors/warnings,
 production build); existing bundle-size warning remains. Export prose/entry
 variations, links, anchors, hashes and ZIP verified. Reloaded browser reference
 and confirmed every updated name. No layout or device installation changes.
+
+## September 21 approved Can Opener names
+
+Applied Jeff’s names: Droider → Asher (including Asher Portable), Mr. Kim →
+Mr. Lin, Maximilian Grabbs → Max Grabs, Project Un-Can → Project Fix em,
+The Neighborhood Improver 3000 → The Robot Improver 3.0, and The Yoink → The
+Puller Thingie. Jeff selected Grabs Awesome Structures (GAS) for the company;
+full company references and uppercase signs now use that name. Grabs Grand
+Plaza follows the approved surname change. Ordinary lowercase grabs and all
+other wording remain unchanged. Refreshed the complete reference, CSV, source
+snapshot and ZIP and added the Can Opener naming-decision document.
+
+Two preflights ran before their respective live replacements. The first covered
+54 scenes with 16 unchanged, accepting only the expressly authorized Asher
+headings in scenes 012, 032 and 041 (reviewed hash
+f4bc4df2857301225c4718e492f44de87553c8f6f78c7c6b8da419c80f00236a).
+The company selection then changed three scenes with a ready preflight and no
+review flags. Final reviewed/live SHA-256:
+5fd395814eba8c2460a3233cb1b70a66b2b7fc6529f022a309a5b5d21f80b1d2.
+
+Recursive baseline comparison proves exact prescribed names only. All IDs,
+JSON keys, routes, flags, and internal droider/droider_first entry keys remain
+unchanged; 54 other protected story/draft/Python/image files are byte-identical.
+Character-offset bookmarks may shift with name lengths; no saves were cleared
+or migrated. Final full check passes: lint, 107 tests, graph diagnostics without
+errors/warnings, production build (existing bundle-size warning remains).
+Export prose/entry variations, links, anchors, hashes and ZIP verified, and
+browser reference displays all new names. No layout or device install changes.

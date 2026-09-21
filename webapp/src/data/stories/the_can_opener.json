@@ -8,7 +8,7 @@
   "scenes": {
     "scene_001": {
       "title": "Getting Home",
-      "text": "\nThe garage door opens, and there you stand in front of your tools.\n\nHome.\n\nAfter walking through the wreckage of {world_name}, it feels good to be back in the garage.\n\nYou unsling your backpack, toss it onto the table, and unzip it.\n\n“Got some good stuff today,” you say.\n\n“That is great, sir. What did you get?”\n\nThe voice comes from your computer: your trusty AI assistant and friend, Droider.\n\n“Well, Droider, I got some storage drives, scrap metal I can melt down for other uses, a few chips, and the real win here…”\n\nYou reach into your bag and hold up a glowing power core.\n\n“One of the robot’s power cores.”\n\n“Now those sound like real wins, sir,” Droider says. “Can you hook up the drives to me so I can analyze the data?”\n\n“You got it, bud.”\n\nYou walk over to Droider, unsling the trusty monkey wrench you always carry on your belt, and set it on the desk beside you. Then you connect the storage drives.\n\n“Check these against the others we’ve found before,” you say. “See if they still have that same strange code attached.”\n\nJust as you finish the sentence, you hear a commotion outside.\n\nWhat do you do next?\n",
+      "text": "\nThe garage door opens, and there you stand in front of your tools.\n\nHome.\n\nAfter walking through the wreckage of {world_name}, it feels good to be back in the garage.\n\nYou unsling your backpack, toss it onto the table, and unzip it.\n\n“Got some good stuff today,” you say.\n\n“That is great, sir. What did you get?”\n\nThe voice comes from your computer: your trusty AI assistant and friend, Asher.\n\n“Well, Asher, I got some storage drives, scrap metal I can melt down for other uses, a few chips, and the real win here…”\n\nYou reach into your bag and hold up a glowing power core.\n\n“One of the robot’s power cores.”\n\n“Now those sound like real wins, sir,” Asher says. “Can you hook up the drives to me so I can analyze the data?”\n\n“You got it, bud.”\n\nYou walk over to Asher, unsling the trusty monkey wrench you always carry on your belt, and set it on the desk beside you. Then you connect the storage drives.\n\n“Check these against the others we’ve found before,” you say. “See if they still have that same strange code attached.”\n\nJust as you finish the sentence, you hear a commotion outside.\n\nWhat do you do next?\n",
       "choices": {
         "1": {
           "text": "Rush outside to see what is going on",
@@ -26,7 +26,7 @@
     },
     "scene_002": {
       "title": "Rush Outside",
-      "text": "\nYou rush to open the garage door, hearing something scraping around outside your home.\n\n“Be careful, sir,” Droider says. “It sounds like another bot.”\n\nAs you get outside, you see what is causing the problem.\n\nA bot is going haywire, spinning in all directions and smashing into anything nearby.\n\nYou reach down for your wrench, but realize you took it off your belt.\n\n“Dang it. First thing next time.”\n\nYou look around and notice a few landscaping rocks in the yard.\n\nNot ideal, but it will have to work.\n\nThe bot has already done so much damage to itself that it looks like it is on its last legs. If you can hit its central eye, you might be able to disable it.\n\nYou grab a rock, aim carefully, and throw.\n\nDirect hit.\n\nThe red eye light flickers.\n\nYou throw a second rock, knocking the robot over. Its eye light goes dark.\n\nYou approach slowly, making sure it will not reboot.\n\nLooks like you got it.\n\nA fully assembled robot this close to home?\n\nJackpot.\n\nYou run inside, grab your hand truck, and haul the robot into the garage.\n\nOnce it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Droider.\n\n“Hey, Droider. Run diagnostics on this guy. It might be the best data we’ll ever get.”\n\n“Understood, sir,” Droider replies.\n\nYou start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.\n\n“Droider, how long until the diagnostic is done?”\n\n“About twelve hours, sir. This bot has a lot of data to crawl through.”\n\n“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”\n",
+      "text": "\nYou rush to open the garage door, hearing something scraping around outside your home.\n\n“Be careful, sir,” Asher says. “It sounds like another bot.”\n\nAs you get outside, you see what is causing the problem.\n\nA bot is going haywire, spinning in all directions and smashing into anything nearby.\n\nYou reach down for your wrench, but realize you took it off your belt.\n\n“Dang it. First thing next time.”\n\nYou look around and notice a few landscaping rocks in the yard.\n\nNot ideal, but it will have to work.\n\nThe bot has already done so much damage to itself that it looks like it is on its last legs. If you can hit its central eye, you might be able to disable it.\n\nYou grab a rock, aim carefully, and throw.\n\nDirect hit.\n\nThe red eye light flickers.\n\nYou throw a second rock, knocking the robot over. Its eye light goes dark.\n\nYou approach slowly, making sure it will not reboot.\n\nLooks like you got it.\n\nA fully assembled robot this close to home?\n\nJackpot.\n\nYou run inside, grab your hand truck, and haul the robot into the garage.\n\nOnce it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Asher.\n\n“Hey, Asher. Run diagnostics on this guy. It might be the best data we’ll ever get.”\n\n“Understood, sir,” Asher replies.\n\nYou start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.\n\n“Asher, how long until the diagnostic is done?”\n\n“About twelve hours, sir. This bot has a lot of data to crawl through.”\n\n“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”\n",
       "choices": {
         "1": {
           "text": "Grab some copper wire first",
@@ -47,7 +47,7 @@
     },
     "scene_003": {
       "title": "Security Cameras",
-      "text": "\nYou run over to your security station and check the cameras.\n\nOutside, a bot is going haywire, spinning in all directions and smashing into anything nearby.\n\nYou reach down for your wrench and realize you took it off your belt.\n\nLuckily, it is sitting right there on the table.\n\nYou grab it and head outside.\n\nThat is when you see the bot spinning away from you, completely out of control and destroying everything in its path.\n\nSo you do what any kid would do.\n\nYou rush it with your wrench overhead.\n\nAs you get close, you swing down with all your might and smash the dome of the bot, stopping it dead in its tracks.\n\nYou give it a little kick to make sure it is out.\n\nLooks like you got it.\n\nA fully assembled robot this close to home?\n\nJackpot.\n\nYou run inside, grab your hand truck, and haul the robot into the garage.\n\nOnce it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Droider.\n\n“Hey, Droider. Run diagnostics on this guy. It might be the best data we’ll ever get.”\n\n“Understood, sir,” Droider replies.\n\nYou start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.\n\n“Droider, how long until the diagnostic is done?”\n\n“About twelve hours, sir. This bot has a lot of data to crawl through.”\n\n“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”\n",
+      "text": "\nYou run over to your security station and check the cameras.\n\nOutside, a bot is going haywire, spinning in all directions and smashing into anything nearby.\n\nYou reach down for your wrench and realize you took it off your belt.\n\nLuckily, it is sitting right there on the table.\n\nYou grab it and head outside.\n\nThat is when you see the bot spinning away from you, completely out of control and destroying everything in its path.\n\nSo you do what any kid would do.\n\nYou rush it with your wrench overhead.\n\nAs you get close, you swing down with all your might and smash the dome of the bot, stopping it dead in its tracks.\n\nYou give it a little kick to make sure it is out.\n\nLooks like you got it.\n\nA fully assembled robot this close to home?\n\nJackpot.\n\nYou run inside, grab your hand truck, and haul the robot into the garage.\n\nOnce it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Asher.\n\n“Hey, Asher. Run diagnostics on this guy. It might be the best data we’ll ever get.”\n\n“Understood, sir,” Asher replies.\n\nYou start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.\n\n“Asher, how long until the diagnostic is done?”\n\n“About twelve hours, sir. This bot has a lot of data to crawl through.”\n\n“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”\n",
       "choices": {
         "1": {
           "text": "Grab some copper wire first",
@@ -68,7 +68,7 @@
     },
     "scene_004": {
       "title": "Focused Work",
-      "text": "\nYou are so focused on your work that you completely ignore the noise outside.\n\nThen something smashes into the garage door.\n\nThat wakes you up.\n\n“Oh man. What’s happening, Droider? What hit the door?”\n\n“Well, sir,” Droider says, “it appears to be a bot outside. You should grab your wrench and stop it before it destroys our lab.”\n\nYou quickly grab your wrench off the table and open the door.\n\nThat is when you see it.\n\nA bot is spinning away from you, completely haywire and destroying everything in its path.\n\nSo you do what any kid would do.\n\nYou rush it with your wrench.\n\nAs you get close, you swing with all your might and smash the dome of the bot, stopping it dead in its tracks.\n\nYou give it a little kick to make sure it is out.\n\nLooks like you got it.\n\nA fully assembled robot this close to home?\n\nJackpot.\n\nYou run inside, grab your hand truck, and haul the robot into the garage.\n\nOnce it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Droider.\n\n“Hey, Droider. Run diagnostics on this guy. It might be the best data we’ll ever get.”\n\n“Understood, sir,” Droider replies.\n\nYou start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.\n\n“Droider, how long until the diagnostic is done?”\n\n“About twelve hours, sir. This bot has a lot of data to crawl through.”\n\n“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”\n",
+      "text": "\nYou are so focused on your work that you completely ignore the noise outside.\n\nThen something smashes into the garage door.\n\nThat wakes you up.\n\n“Oh man. What’s happening, Asher? What hit the door?”\n\n“Well, sir,” Asher says, “it appears to be a bot outside. You should grab your wrench and stop it before it destroys our lab.”\n\nYou quickly grab your wrench off the table and open the door.\n\nThat is when you see it.\n\nA bot is spinning away from you, completely haywire and destroying everything in its path.\n\nSo you do what any kid would do.\n\nYou rush it with your wrench.\n\nAs you get close, you swing with all your might and smash the dome of the bot, stopping it dead in its tracks.\n\nYou give it a little kick to make sure it is out.\n\nLooks like you got it.\n\nA fully assembled robot this close to home?\n\nJackpot.\n\nYou run inside, grab your hand truck, and haul the robot into the garage.\n\nOnce it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Asher.\n\n“Hey, Asher. Run diagnostics on this guy. It might be the best data we’ll ever get.”\n\n“Understood, sir,” Asher replies.\n\nYou start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.\n\n“Asher, how long until the diagnostic is done?”\n\n“About twelve hours, sir. This bot has a lot of data to crawl through.”\n\n“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”\n",
       "choices": {
         "1": {
           "text": "Grab some copper wire first",
@@ -98,7 +98,7 @@
         "grinder_work": "\nYou power up the grinder and toss on your goggles.\n\nTime to make some adjustments.\n",
         "power_core": "\nYou pick up the power core. It is still glowing with a dull blue light.\n\nThis is going to be perfect for what you have planned.\n"
       },
-      "text": "\nPiece by piece, the invention comes together.\n\nA heavy monkey wrench body.\n\nA prybar end.\n\nA reinforced hammer face.\n\nCopper coils under silicone insulation.\n\nA salvaged power core.\n\nA hidden cutter built into the jaws.\n\nYou twist the handle.\n\nFor one second, nothing happens.\n\nThen the coils glow.\n\nThe wrench head shifts with a sharp mechanical click, and a crackling energy edge snaps into place across the front like an axe made of lightning.\n\nYou stare at it.\n\n“It works,” you whisper.\n\nThen you think about what to call it.\n\nAfter a long moment, you nod proudly.\n\n“The Can Opener.”\n\nA beat passes.\n\n“I mean, robots are basically cans with legs, right, Droider?”\n\nOutside, something crashes in the street.\n\nYou grab The Can Opener and run.\n",
+      "text": "\nPiece by piece, the invention comes together.\n\nA heavy monkey wrench body.\n\nA prybar end.\n\nA reinforced hammer face.\n\nCopper coils under silicone insulation.\n\nA salvaged power core.\n\nA hidden cutter built into the jaws.\n\nYou twist the handle.\n\nFor one second, nothing happens.\n\nThen the coils glow.\n\nThe wrench head shifts with a sharp mechanical click, and a crackling energy edge snaps into place across the front like an axe made of lightning.\n\nYou stare at it.\n\n“It works,” you whisper.\n\nThen you think about what to call it.\n\nAfter a long moment, you nod proudly.\n\n“The Can Opener.”\n\nA beat passes.\n\n“I mean, robots are basically cans with legs, right, Asher?”\n\nOutside, something crashes in the street.\n\nYou grab The Can Opener and run.\n",
       "choices": {
         "1": {
           "text": "Rush straight toward the crash",
@@ -112,7 +112,7 @@
     },
     "scene_006": {
       "title": "Rush to the Crash",
-      "text": "\nYou run into the street and see a corrupted robot smashing into parked cars, streetlights, and storefront shutters.\n\nIt is a Construction Bot. Big, square, and yellow, with a scoop for one arm and a jackhammer for the other. It is supposed to fix roads. Right now it is un-fixing one.\n\nIts eye light flickers red, then blue, then red again, like it is arguing with itself.\n\nThe Can Opener feels heavy in your hands.\n\nThe robot turns.\n\nYou have one chance to act.\n\n“Sir,” Droider calls from the garage speakers, “may I suggest doing something?”\n\n“Working on it!”\n",
+      "text": "\nYou run into the street and see a corrupted robot smashing into parked cars, streetlights, and storefront shutters.\n\nIt is a Construction Bot. Big, square, and yellow, with a scoop for one arm and a jackhammer for the other. It is supposed to fix roads. Right now it is un-fixing one.\n\nIts eye light flickers red, then blue, then red again, like it is arguing with itself.\n\nThe Can Opener feels heavy in your hands.\n\nThe robot turns.\n\nYou have one chance to act.\n\n“Sir,” Asher calls from the garage speakers, “may I suggest doing something?”\n\n“Working on it!”\n",
       "choices": {
         "1": {
           "text": "Twist the handle and attack with the energy axe",
@@ -150,10 +150,10 @@
         "from_street": "\nYou twist the handle. The coils glow and the energy edge snaps to life with a crackle.\n",
         "from_roof": "\nYou slide down the ladder, hit the ground running, and twist the handle. The energy edge snaps to life with a crackle.\n"
       },
-      "text": "\nThe Construction Bot swings its scoop arm at you. You duck, and it takes out a mailbox instead.\n\n“Sorry, mailbox!”\n\nYou swing The Can Opener up. The energy edge slices clean through the elbow joint, and the scoop arm clangs to the pavement.\n\nThe bot spins, confused. You see your opening: a panel on its back, right between the shoulders.\n\nOne more swing. The blade cuts the panel wide open, sparks fly, and the robot slowly sinks down onto its treads like it is sitting down for a nap.\n\nIts eye light fades from angry red to a soft blue, then goes dark.\n\nYou stand there breathing hard, holding a glowing wrench-axe in the middle of the street.\n\n“It worked,” you say. “It actually worked!”\n\nThen the blade flickers and shuts off on its own. The handle is hot.\n\n“Sir,” Droider says, “the power draw on that blade is enormous. I would not count on more than a minute at a time.”\n\nGood to know. Would have been better to know a minute ago.\n",
+      "text": "\nThe Construction Bot swings its scoop arm at you. You duck, and it takes out a mailbox instead.\n\n“Sorry, mailbox!”\n\nYou swing The Can Opener up. The energy edge slices clean through the elbow joint, and the scoop arm clangs to the pavement.\n\nThe bot spins, confused. You see your opening: a panel on its back, right between the shoulders.\n\nOne more swing. The blade cuts the panel wide open, sparks fly, and the robot slowly sinks down onto its treads like it is sitting down for a nap.\n\nIts eye light fades from angry red to a soft blue, then goes dark.\n\nYou stand there breathing hard, holding a glowing wrench-axe in the middle of the street.\n\n“It worked,” you say. “It actually worked!”\n\nThen the blade flickers and shuts off on its own. The handle is hot.\n\n“Sir,” Asher says, “the power draw on that blade is enormous. I would not count on more than a minute at a time.”\n\nGood to know. Would have been better to know a minute ago.\n",
       "choices": {
         "1": {
-          "text": "Head inside to check on Droider’s scan",
+          "text": "Head inside to check on Asher’s scan",
           "next_scene": "scene_012",
           "entry_intro": "after_fight"
         },
@@ -165,10 +165,10 @@
     },
     "scene_009": {
       "title": "The Hammer",
-      "text": "\nYou flip The Can Opener around so the reinforced hammer face leads the way.\n\nThe Construction Bot raises its jackhammer arm. You do not wait for it to come down.\n\nWHAM.\n\nYou hit it square in the knee joint. The whole bot wobbles.\n\nWHAM.\n\nThe second swing dents the housing around its treads, and one side locks up. Now it can only drive in circles, which would be funny if it were not also swinging a jackhammer.\n\nYou time it. Circle. Circle. There.\n\nYou bring the hammer down on the power housing behind its head. Something inside goes pop, and the bot rolls to a stop against the curb.\n\nIts eye light fades from angry red to a soft blue, then goes dark.\n\nYour arms feel like noodles.\n\n“Excellent form, sir,” Droider says. “Very little of the street was harmed.”\n\nYou look at the knocked-over streetlight and the flattened mailbox.\n\n“That was the bot, not me.”\n\n“Of course, sir.”\n",
+      "text": "\nYou flip The Can Opener around so the reinforced hammer face leads the way.\n\nThe Construction Bot raises its jackhammer arm. You do not wait for it to come down.\n\nWHAM.\n\nYou hit it square in the knee joint. The whole bot wobbles.\n\nWHAM.\n\nThe second swing dents the housing around its treads, and one side locks up. Now it can only drive in circles, which would be funny if it were not also swinging a jackhammer.\n\nYou time it. Circle. Circle. There.\n\nYou bring the hammer down on the power housing behind its head. Something inside goes pop, and the bot rolls to a stop against the curb.\n\nIts eye light fades from angry red to a soft blue, then goes dark.\n\nYour arms feel like noodles.\n\n“Excellent form, sir,” Asher says. “Very little of the street was harmed.”\n\nYou look at the knocked-over streetlight and the flattened mailbox.\n\n“That was the bot, not me.”\n\n“Of course, sir.”\n",
       "choices": {
         "1": {
-          "text": "Head back inside to check on Droider’s scan",
+          "text": "Head back inside to check on Asher’s scan",
           "next_scene": "scene_012",
           "entry_intro": "after_fight"
         },
@@ -180,14 +180,14 @@
     },
     "scene_010": {
       "title": "Jump onto the Bot",
-      "text": "\nThis is a bad idea. You do it anyway.\n\nYou take three running steps across the garage roof and jump.\n\nYou land on top of the Construction Bot with a clang that rattles your teeth. The bot lurches and starts spinning, trying to shake you off.\n\n“Sir!” Droider shouts from the garage speakers. “That is not a recognized safety procedure!”\n\n“I know!”\n\nYou hang on with one hand and jam the prybar end of The Can Opener under the panel behind its head. You lean on it with everything you have.\n\nThe panel pops off.\n\nInside, you see a nest of wires and one fat cable labeled MAIN POWER. Thank you, whoever labels things.\n\nYou clamp the wrench jaws around it and pull.\n\nThe bot stops spinning. It sinks down onto its treads, and its eye light fades from angry red to a soft blue before going dark.\n\nYou slide off its back and land on shaky legs.\n\nTool first. Weapon second. Just like you planned it.\n\nMostly.\n",
+      "text": "\nThis is a bad idea. You do it anyway.\n\nYou take three running steps across the garage roof and jump.\n\nYou land on top of the Construction Bot with a clang that rattles your teeth. The bot lurches and starts spinning, trying to shake you off.\n\n“Sir!” Asher shouts from the garage speakers. “That is not a recognized safety procedure!”\n\n“I know!”\n\nYou hang on with one hand and jam the prybar end of The Can Opener under the panel behind its head. You lean on it with everything you have.\n\nThe panel pops off.\n\nInside, you see a nest of wires and one fat cable labeled MAIN POWER. Thank you, whoever labels things.\n\nYou clamp the wrench jaws around it and pull.\n\nThe bot stops spinning. It sinks down onto its treads, and its eye light fades from angry red to a soft blue before going dark.\n\nYou slide off its back and land on shaky legs.\n\nTool first. Weapon second. Just like you planned it.\n\nMostly.\n",
       "choices": {
         "1": {
           "text": "Survey the destroyed bot",
           "next_scene": "scene_013"
         },
         "2": {
-          "text": "Head back inside to check on Droider’s scan",
+          "text": "Head back inside to check on Asher’s scan",
           "next_scene": "scene_012",
           "entry_intro": "after_fight"
         }
@@ -195,7 +195,7 @@
     },
     "scene_011": {
       "title": "Grab the Shield Prototype",
-      "text": "\nYou scramble back down the ladder and into the garage.\n\n“Droider, where’s the shield thing?”\n\n“The unfinished energy shield, sir? Under the pizza box. I would like to remind you that it is unfinished.”\n\nYou grab it from the workbench. It is ugly, unstable, and held together with tape, but it might work. It is a flat metal disc with a handle on the back and a power pack wired to the side.\n\nYou run outside with the shield on one arm and The Can Opener in the other hand.\n\nThe Construction Bot sees you and charges, jackhammer arm raised.\n\nYou flip the switch.\n\nThe shield flickers to life just in time, a wobbly circle of blue light about as wide as a trash can lid.\n\nNow what?\n",
+      "text": "\nYou scramble back down the ladder and into the garage.\n\n“Asher, where’s the shield thing?”\n\n“The unfinished energy shield, sir? Under the pizza box. I would like to remind you that it is unfinished.”\n\nYou grab it from the workbench. It is ugly, unstable, and held together with tape, but it might work. It is a flat metal disc with a handle on the back and a power pack wired to the side.\n\nYou run outside with the shield on one arm and The Can Opener in the other hand.\n\nThe Construction Bot sees you and charges, jackhammer arm raised.\n\nYou flip the switch.\n\nThe shield flickers to life just in time, a wobbly circle of blue light about as wide as a trash can lid.\n\nNow what?\n",
       "choices": {
         "1": {
           "text": "Attack, using the shield to get in close",
@@ -208,13 +208,13 @@
       }
     },
     "scene_012": {
-      "title": "Check on Droider",
+      "title": "Check on Asher",
       "entry_intros": {
         "after_fight": "\nYou head back into the garage, still buzzing from the fight, and drop onto your stool.\n",
         "from_survey": "\nYou carry the scratched-up tag inside and set it next to the keyboard.\n",
         "after_defending": "\nYou walk back into the garage with your arm still tingling and the shield tucked under it.\n"
       },
-      "text": "\n“Welcome back, sir,” Droider says. “The deep diagnostic on our first bot still has hours to go. However, I have found something early.”\n\nA wall of code scrolls across the screen. One chunk of it is highlighted in red.\n\n“This is the strange code from the storage drives. It is also inside the bot you brought home. Same code, same spot, every single time.”\n\n“So it’s a glitch that keeps happening?”\n\n“That is the odd part, sir. Glitches are messy. This is tidy. It looks less like something that broke and more like something that was added.”\n\nYou stare at the red block of code.\n\nSomebody did this? On purpose? To robots that were just supposed to fix roads and carry boxes?\n\n“Keep digging,” you say. “I want to know what it does.”\n\n“Understood, sir. In the meantime, may I point out that there will probably be more of them?”\n\nHe is right. You need to be ready.\n",
+      "text": "\n“Welcome back, sir,” Asher says. “The deep diagnostic on our first bot still has hours to go. However, I have found something early.”\n\nA wall of code scrolls across the screen. One chunk of it is highlighted in red.\n\n“This is the strange code from the storage drives. It is also inside the bot you brought home. Same code, same spot, every single time.”\n\n“So it’s a glitch that keeps happening?”\n\n“That is the odd part, sir. Glitches are messy. This is tidy. It looks less like something that broke and more like something that was added.”\n\nYou stare at the red block of code.\n\nSomebody did this? On purpose? To robots that were just supposed to fix roads and carry boxes?\n\n“Keep digging,” you say. “I want to know what it does.”\n\n“Understood, sir. In the meantime, may I point out that there will probably be more of them?”\n\nHe is right. You need to be ready.\n",
       "choices": {
         "1": {
           "text": "Go out and gather scrap from the bot in the street",
@@ -232,7 +232,7 @@
       "text": "\nYou crouch next to the Construction Bot and take a good look.\n\nUp close, it does not look scary. It looks old. The yellow paint is chipped, one tread is patched with a different color, and someone once stuck a smiley face sticker on its chest. The sticker is half peeled off.\n\nThis bot fixed potholes for years. It did not ask to go haywire.\n\n“Sorry, big guy,” you say quietly.\n\nOn its side you find a metal tag where the owner’s name should be. It has been scratched off. Not worn off. Scratched, with a tool, on purpose.\n\nYou pry the tag loose and pocket it.\n\nAcross the street, a curtain moves in the window above Mrs. Ruiz’s market. Somebody saw that whole fight.\n\nYou pull your goggles down over your eyes and turn your face away. You are not doing this to get famous.\n\nTime to get off the street.\n",
       "choices": {
         "1": {
-          "text": "Head inside to check on Droider’s scan",
+          "text": "Head inside to check on Asher’s scan",
           "next_scene": "scene_012",
           "entry_intro": "from_survey"
         },
@@ -245,7 +245,7 @@
     },
     "scene_014": {
       "title": "Shield Up, Charge!",
-      "text": "\nYou tuck in behind the wobbly blue circle and run straight at the bot.\n\nThe jackhammer arm comes down. The shield catches it with a sound like a giant bell, and you feel the hit all the way up to your shoulder.\n\nBut it holds.\n\nYou shove the jackhammer aside, slide in close, and swing the hammer face of The Can Opener into the bot’s knee joint. Then again. The bot tips, catches itself, and tips again.\n\nOne more hit, right behind the head.\n\nThe Construction Bot sinks down onto its treads. Its eye light fades from angry red to soft blue, then goes dark.\n\nYou look at the shield. The blue light fizzles, pops, and dies. A piece of tape slowly peels off and floats to the ground.\n\n“It worked!” you tell Droider. “Once!”\n\n“A proud day, sir.”\n",
+      "text": "\nYou tuck in behind the wobbly blue circle and run straight at the bot.\n\nThe jackhammer arm comes down. The shield catches it with a sound like a giant bell, and you feel the hit all the way up to your shoulder.\n\nBut it holds.\n\nYou shove the jackhammer aside, slide in close, and swing the hammer face of The Can Opener into the bot’s knee joint. Then again. The bot tips, catches itself, and tips again.\n\nOne more hit, right behind the head.\n\nThe Construction Bot sinks down onto its treads. Its eye light fades from angry red to soft blue, then goes dark.\n\nYou look at the shield. The blue light fizzles, pops, and dies. A piece of tape slowly peels off and floats to the ground.\n\n“It worked!” you tell Asher. “Once!”\n\n“A proud day, sir.”\n",
       "choices": {
         "1": {
           "text": "Work on the shield so it lasts longer than one fight",
@@ -260,7 +260,7 @@
     },
     "scene_015": {
       "title": "Hold the Line",
-      "text": "\nYou plant your feet and hold the shield up with both hands.\n\nThe jackhammer arm slams into it. Then the scoop arm. Then the jackhammer again.\n\nEvery hit makes the blue light ripple like a puddle, and every hit pushes you back a step. But the bot is already damaged, and it is burning through its power fast.\n\nSlam. Step. Slam. Step.\n\n“Sir, its power levels are dropping,” Droider says. “Also, so are the shield’s. I am not sure who is going to win this one.”\n\n“Not helping!”\n\nThe bot winds up for one more swing, and then just stops. Its arms lower. Its eye light fades from angry red to soft blue, then goes dark.\n\nYou never even had to hit it.\n\nA second later the shield fizzles out and a piece of tape peels off the side.\n\nYour arms are tingling up to the elbow.\n",
+      "text": "\nYou plant your feet and hold the shield up with both hands.\n\nThe jackhammer arm slams into it. Then the scoop arm. Then the jackhammer again.\n\nEvery hit makes the blue light ripple like a puddle, and every hit pushes you back a step. But the bot is already damaged, and it is burning through its power fast.\n\nSlam. Step. Slam. Step.\n\n“Sir, its power levels are dropping,” Asher says. “Also, so are the shield’s. I am not sure who is going to win this one.”\n\n“Not helping!”\n\nThe bot winds up for one more swing, and then just stops. Its arms lower. Its eye light fades from angry red to soft blue, then goes dark.\n\nYou never even had to hit it.\n\nA second later the shield fizzles out and a piece of tape peels off the side.\n\nYour arms are tingling up to the elbow.\n",
       "choices": {
         "1": {
           "text": "Work on the shield so it can take more hits",
@@ -268,7 +268,7 @@
           "entry_intro": "from_shield_fight"
         },
         "2": {
-          "text": "Head inside to check on Droider’s scan",
+          "text": "Head inside to check on Asher’s scan",
           "next_scene": "scene_012",
           "entry_intro": "after_defending"
         }
@@ -281,7 +281,7 @@
         "from_survey": "\nBack in the garage, you drop the scratched tag on the desk and pull the shield prototype out from under the pizza box. If more bots are coming, you are going to need it.\n",
         "from_shield_fight": "\nYou set the shield on the workbench. It is still warm, and it smells a little like burnt toast.\n"
       },
-      "text": "\nYou spend the next few hours on the shield.\n\nYou swap the tape for actual bolts. Mostly. You rewire the power pack so it stops getting hot, and you add a second emitter so the blue circle is wider than a trash can lid.\n\nYou flip the switch. The shield hums, flickers, holds for ten whole seconds, and shuts off.\n\nBetter. Not good. Better.\n\n“It needs a steadier power source,” you say. “And a way to wear it so I still have both hands.”\n\n“May I offer an observation, sir?” Droider asks.\n\n“Go for it.”\n\n“You have a tool for things that are close to you. You are building a shield for things that hit you. What is your plan for things that are far away?”\n\nYou open your mouth. You close it again.\n\nYou do not have one.\n",
+      "text": "\nYou spend the next few hours on the shield.\n\nYou swap the tape for actual bolts. Mostly. You rewire the power pack so it stops getting hot, and you add a second emitter so the blue circle is wider than a trash can lid.\n\nYou flip the switch. The shield hums, flickers, holds for ten whole seconds, and shuts off.\n\nBetter. Not good. Better.\n\n“It needs a steadier power source,” you say. “And a way to wear it so I still have both hands.”\n\n“May I offer an observation, sir?” Asher asks.\n\n“Go for it.”\n\n“You have a tool for things that are close to you. You are building a shield for things that hit you. What is your plan for things that are far away?”\n\nYou open your mouth. You close it again.\n\nYou do not have one.\n",
       "choices": {
         "1": {
           "text": "Go out and look for parts to build something with range",
@@ -316,10 +316,10 @@
         "from_scrap": "\nYou dump your backpack out on the workbench. Springs, a piston, a steel tube. This could work.\n",
         "from_close_call": "\nYou dump your backpack out on the workbench with hands that are still a little shaky. Springs, a piston, a steel tube. This has to work.\n"
       },
-      "text": "\nThe idea is simple. A launcher that straps to your wrist. You load something into the tube, the spring and piston fire it out, and a small coil wrapped around the barrel gives it an energy charge on the way.\n\nAs for what to load it with, you look out at the yard.\n\nLandscaping rocks. They have not let you down yet.\n\nAn hour later, you strap the prototype to your arm, aim at an empty paint can across the garage, and press the trigger.\n\nPANG.\n\nThe rock goes straight up, punches a hole in the ceiling, and does not come back down.\n\nYou and Droider both look at the hole.\n\n“I have added ‘ceiling’ to the list of things you have defeated, sir.”\n\n“The angle’s wrong. And the spring’s too strong. And maybe the coil is backwards.”\n\n“So just the angle, the spring, and the coil.”\n",
+      "text": "\nThe idea is simple. A launcher that straps to your wrist. You load something into the tube, the spring and piston fire it out, and a small coil wrapped around the barrel gives it an energy charge on the way.\n\nAs for what to load it with, you look out at the yard.\n\nLandscaping rocks. They have not let you down yet.\n\nAn hour later, you strap the prototype to your arm, aim at an empty paint can across the garage, and press the trigger.\n\nPANG.\n\nThe rock goes straight up, punches a hole in the ceiling, and does not come back down.\n\nYou and Asher both look at the hole.\n\n“I have added ‘ceiling’ to the list of things you have defeated, sir.”\n\n“The angle’s wrong. And the spring’s too strong. And maybe the coil is backwards.”\n\n“So just the angle, the spring, and the coil.”\n",
       "choices": {
         "1": {
-          "text": "Talk the design through with Droider",
+          "text": "Talk the design through with Asher",
           "next_scene": "scene_020"
         },
         "2": {
@@ -330,7 +330,7 @@
     },
     "scene_019": {
       "title": "Close Call",
-      "text": "\nYou creep along the fence to get a better look.\n\nThe Load-Bot is slow. Really slow. But when it grabs a crate, the wood creaks in its grip, and when it throws one, the crate explodes into splinters and oranges.\n\nSlow but strong. Got it.\n\nYou take one more step and your foot lands on a rolling orange.\n\nYou do not fall. You do yell “WHOA,” though, which is just as bad.\n\nThe Load-Bot turns. It picks up a crate.\n\n“Run, sir,” Droider’s voice says from your phone. “That is my whole plan. Run.”\n\nYou run. A crate smashes into the fence right behind you. Another one bursts on the pavement where you were standing a second ago.\n\nYou do not stop until you are back in the garage with the door shut.\n\nSo. The Can Opener only works if you are close enough to touch the bot. And you do not want to be anywhere near that thing’s hands.\n\nYou really, really need something with range.\n",
+      "text": "\nYou creep along the fence to get a better look.\n\nThe Load-Bot is slow. Really slow. But when it grabs a crate, the wood creaks in its grip, and when it throws one, the crate explodes into splinters and oranges.\n\nSlow but strong. Got it.\n\nYou take one more step and your foot lands on a rolling orange.\n\nYou do not fall. You do yell “WHOA,” though, which is just as bad.\n\nThe Load-Bot turns. It picks up a crate.\n\n“Run, sir,” Asher’s voice says from your phone. “That is my whole plan. Run.”\n\nYou run. A crate smashes into the fence right behind you. Another one bursts on the pavement where you were standing a second ago.\n\nYou do not stop until you are back in the garage with the door shut.\n\nSo. The Can Opener only works if you are close enough to touch the bot. And you do not want to be anywhere near that thing’s hands.\n\nYou really, really need something with range.\n",
       "choices": {
         "1": {
           "text": "Dump out your backpack and start building",
@@ -341,7 +341,7 @@
     },
     "scene_020": {
       "title": "Talking It Through",
-      "text": "\nYou pull your stool up to the screen, and Droider puts your sketch up next to the prototype.\n\n“Walk me through it, sir. Start where the rock goes in.”\n\nSo you do. And saying it out loud, you hear the problems yourself.\n\nThe barrel is loose, so it tips up when the spring fires. You bolt it to a wrist brace cut from an old shin guard.\n\nThe coil is wired backwards, so it is pushing against the rock instead of with it. You flip it.\n\nAnd the spring does not need to be stronger. It needs to be smoother. You add the piston from the jackhammer arm to even out the push.\n\n“You know,” you say, tightening the last bolt, “you’re pretty good at this.”\n\n“I only asked questions, sir. You did the answering.”\n\n“Yeah, but they were good questions.”\n\n“Thank you, sir. I am adding that to my list as well.”\n",
+      "text": "\nYou pull your stool up to the screen, and Asher puts your sketch up next to the prototype.\n\n“Walk me through it, sir. Start where the rock goes in.”\n\nSo you do. And saying it out loud, you hear the problems yourself.\n\nThe barrel is loose, so it tips up when the spring fires. You bolt it to a wrist brace cut from an old shin guard.\n\nThe coil is wired backwards, so it is pushing against the rock instead of with it. You flip it.\n\nAnd the spring does not need to be stronger. It needs to be smoother. You add the piston from the jackhammer arm to even out the push.\n\n“You know,” you say, tightening the last bolt, “you’re pretty good at this.”\n\n“I only asked questions, sir. You did the answering.”\n\n“Yeah, but they were good questions.”\n\n“Thank you, sir. I am adding that to my list as well.”\n",
       "choices": {
         "1": {
           "text": "Strap it on and try again",
@@ -367,7 +367,7 @@
         "talked": "\nYou strap the rebuilt launcher to your arm. It feels solid this time.\n",
         "more_power": "\nYou pull the launcher out of the wall, rebuild it, and strap it to your arm. It feels solid this time.\n"
       },
-      "text": "\nYou load a rock. You aim at the paint can. You breathe out and press the trigger.\n\nTHWOOM.\n\nThe rock leaves the barrel wrapped in crackling blue light, crosses the garage in a blink, and blasts the paint can clean off the shelf.\n\nYou stare at your wrist.\n\n“YES!”\n\n“Congratulations, sir. What will you call it?”\n\nYou think hard. This one has to be good.\n\n“It’s on my wrist. It fires rocks. And it rocks.” You nod proudly. “The Wrist Wrock-It. With a W.”\n\nDroider is quiet for a moment.\n\n“Where does the W go, sir?”\n\n“In front of ‘rock.’”\n\n“That is not where W’s go, sir.”\n\n“It’s staying.”\n\nYou think about that Load-Bot behind the market, the one throwing crates of oranges at a wall. Mrs. Ruiz needs her loading zone back.\n",
+      "text": "\nYou load a rock. You aim at the paint can. You breathe out and press the trigger.\n\nTHWOOM.\n\nThe rock leaves the barrel wrapped in crackling blue light, crosses the garage in a blink, and blasts the paint can clean off the shelf.\n\nYou stare at your wrist.\n\n“YES!”\n\n“Congratulations, sir. What will you call it?”\n\nYou think hard. This one has to be good.\n\n“It’s on my wrist. It fires rocks. And it rocks.” You nod proudly. “The Wrist Wrock-It. With a W.”\n\nAsher is quiet for a moment.\n\n“Where does the W go, sir?”\n\n“In front of ‘rock.’”\n\n“That is not where W’s go, sir.”\n\n“It’s staying.”\n\nYou think about that Load-Bot behind the market, the one throwing crates of oranges at a wall. Mrs. Ruiz needs her loading zone back.\n",
       "choices": {
         "1": {
           "text": "Test it on some scrap first",
@@ -382,7 +382,7 @@
     },
     "scene_023": {
       "title": "Target Practice",
-      "text": "\nYou line up cans, a busted toaster, and a dented robot arm along the back fence.\n\nTHWOOM. Can, gone.\n\nTHWOOM. Toaster, gone.\n\nTHWOOM. The robot arm spins off the fence and lands in the neighbor’s yard. You will get that later.\n\nYou load a fourth rock and press the trigger.\n\nClick.\n\nNothing. The coil is dark.\n\n“The charge coil is empty, sir,” Droider says. “By my count you get three charged shots. After that it needs about a minute to recharge.”\n\n“And without the charge?”\n\n“Without the charge, you are a child throwing rocks slightly harder than usual.”\n\nThree shots. Then a minute of waiting, which is a very long time when something is throwing crates at you.\n\nYou fill your pockets with rocks anyway. Good to know the limits before they matter.\n",
+      "text": "\nYou line up cans, a busted toaster, and a dented robot arm along the back fence.\n\nTHWOOM. Can, gone.\n\nTHWOOM. Toaster, gone.\n\nTHWOOM. The robot arm spins off the fence and lands in the neighbor’s yard. You will get that later.\n\nYou load a fourth rock and press the trigger.\n\nClick.\n\nNothing. The coil is dark.\n\n“The charge coil is empty, sir,” Asher says. “By my count you get three charged shots. After that it needs about a minute to recharge.”\n\n“And without the charge?”\n\n“Without the charge, you are a child throwing rocks slightly harder than usual.”\n\nThree shots. Then a minute of waiting, which is a very long time when something is throwing crates at you.\n\nYou fill your pockets with rocks anyway. Good to know the limits before they matter.\n",
       "choices": {
         "1": {
           "text": "Head for the loading zone",
@@ -412,7 +412,7 @@
     },
     "scene_025": {
       "title": "Wrong Tool",
-      "text": "\nThe Can Opener has not failed you yet. You twist the handle, the blade crackles to life, and you charge.\n\nThe Load-Bot does not even swing at you. It just reaches out, grabs the wrench end of The Can Opener in one giant hand, and lifts.\n\nYou are still holding on.\n\n“Put me down!”\n\nIt does. By throwing you.\n\nYou sail across the loading zone and land in a pile of empty cardboard boxes. The Can Opener lands next to you a second later.\n\nYou lie there looking at the sky.\n\n“Are you injured, sir?” Droider asks from your phone.\n\n“Just my feelings.”\n\n“The Can Opener is a wonderful tool, sir. For that bot, it is the wrong tool. Its reach is longer than yours.”\n\nYou climb out of the boxes and brush yourself off.\n\nRight. That is why you built the other thing.\n",
+      "text": "\nThe Can Opener has not failed you yet. You twist the handle, the blade crackles to life, and you charge.\n\nThe Load-Bot does not even swing at you. It just reaches out, grabs the wrench end of The Can Opener in one giant hand, and lifts.\n\nYou are still holding on.\n\n“Put me down!”\n\nIt does. By throwing you.\n\nYou sail across the loading zone and land in a pile of empty cardboard boxes. The Can Opener lands next to you a second later.\n\nYou lie there looking at the sky.\n\n“Are you injured, sir?” Asher asks from your phone.\n\n“Just my feelings.”\n\n“The Can Opener is a wonderful tool, sir. For that bot, it is the wrong tool. Its reach is longer than yours.”\n\nYou climb out of the boxes and brush yourself off.\n\nRight. That is why you built the other thing.\n",
       "choices": {
         "1": {
           "text": "Switch to The Wrist Wrock-It",
@@ -437,7 +437,7 @@
     },
     "scene_027": {
       "title": "Two Tools, One Win",
-      "text": "\nYou circle around behind the fallen Load-Bot, staying out of reach of those arms.\n\nThere. A panel on its back.\n\nYou jam the prybar end of The Can Opener under the edge and lean on it. The panel pops. You reach in with the wrench jaws, find the main power cable, and pull.\n\nThe arms stop. The eye light fades from red to soft blue, then goes dark.\n\nYou let out a long breath.\n\nThe Wrist Wrock-It got it down. The Can Opener finished it. Neither one could have done it alone.\n\n“Two tools, one win, sir,” Droider says. “I believe that is what they call a loadout.”\n\nThe dented back door of the market creaks open. Mrs. Ruiz peeks out, holding a broom like a sword. She looks at the bot. She looks at you, with your goggles down and a glowing thing on your wrist.\n\n“Whoever you are,” she calls, “thank you!”\n\nYou freeze. You were hoping nobody would see you.\n",
+      "text": "\nYou circle around behind the fallen Load-Bot, staying out of reach of those arms.\n\nThere. A panel on its back.\n\nYou jam the prybar end of The Can Opener under the edge and lean on it. The panel pops. You reach in with the wrench jaws, find the main power cable, and pull.\n\nThe arms stop. The eye light fades from red to soft blue, then goes dark.\n\nYou let out a long breath.\n\nThe Wrist Wrock-It got it down. The Can Opener finished it. Neither one could have done it alone.\n\n“Two tools, one win, sir,” Asher says. “I believe that is what they call a loadout.”\n\nThe dented back door of the market creaks open. Mrs. Ruiz peeks out, holding a broom like a sword. She looks at the bot. She looks at you, with your goggles down and a glowing thing on your wrist.\n\n“Whoever you are,” she calls, “thank you!”\n\nYou freeze. You were hoping nobody would see you.\n",
       "choices": {
         "1": {
           "text": "Wave and hurry home to build more",
@@ -467,7 +467,7 @@
         "hurried_home": "\nYou give Mrs. Ruiz an awkward wave and jog home before she can ask any questions.\n",
         "from_market": "\nYou finish the juice box on the walk home. Apple. Pretty good.\n"
       },
-      "text": "\nBack in the garage, you open the big door to let some air in and put the shield prototype up on the workbench.\n\nIt is still ugly. It is still unstable. It is still held together with more tape than you would like to admit. You have it half taken apart, with the emitter in one hand and a screwdriver in the other, when Droider speaks up.\n\n“Sir. Something is coming up the driveway.”\n\nYou look up.\n\nIt is smaller than the other bots, and much faster. It is sleek and black, with a flashing light on top and a buzzing stun prod on the end of each arm. The words MALL SECURITY are still stenciled on its side.\n\nA Close Range Security Bot. Its eye light flickers red.\n\nIt rolls into the garage and stops between you and the rest of the room.\n\nThe Can Opener is on the desk on the far side. The Wrist Wrock-It is on the charger next to it. The only thing within reach is a half-built shield.\n",
+      "text": "\nBack in the garage, you open the big door to let some air in and put the shield prototype up on the workbench.\n\nIt is still ugly. It is still unstable. It is still held together with more tape than you would like to admit. You have it half taken apart, with the emitter in one hand and a screwdriver in the other, when Asher speaks up.\n\n“Sir. Something is coming up the driveway.”\n\nYou look up.\n\nIt is smaller than the other bots, and much faster. It is sleek and black, with a flashing light on top and a buzzing stun prod on the end of each arm. The words MALL SECURITY are still stenciled on its side.\n\nA Close Range Security Bot. Its eye light flickers red.\n\nIt rolls into the garage and stops between you and the rest of the room.\n\nThe Can Opener is on the desk on the far side. The Wrist Wrock-It is on the charger next to it. The only thing within reach is a half-built shield.\n",
       "choices": {
         "1": {
           "text": "Dive for The Can Opener",
@@ -478,14 +478,14 @@
           "next_scene": "scene_031"
         },
         "3": {
-          "text": "Yell for Droider to do something",
+          "text": "Yell for Asher to do something",
           "next_scene": "scene_032"
         }
       }
     },
     "scene_030": {
       "title": "Cornered",
-      "text": "\nYou fake left and dive right, sliding across the floor toward the desk.\n\nThe Security Bot is faster. It zips sideways and blocks you, stun prods buzzing. One of them brushes your sleeve, and your whole arm goes tingly and numb, like you slept on it wrong.\n\nYou scramble backward until your back hits the workbench.\n\nCornered.\n\n“Sir, it was built to stop shoplifters,” Droider says. “It is very, very good at getting in the way.”\n\nThe bot rolls closer. Your good hand feels around on the bench behind you and closes on the only thing there.\n\nThe shield. Half built. Emitter hanging by two wires.\n\nYou jam the emitter back into place, hold it there with your thumb, and swing the shield around in front of you.\n",
+      "text": "\nYou fake left and dive right, sliding across the floor toward the desk.\n\nThe Security Bot is faster. It zips sideways and blocks you, stun prods buzzing. One of them brushes your sleeve, and your whole arm goes tingly and numb, like you slept on it wrong.\n\nYou scramble backward until your back hits the workbench.\n\nCornered.\n\n“Sir, it was built to stop shoplifters,” Asher says. “It is very, very good at getting in the way.”\n\nThe bot rolls closer. Your good hand feels around on the bench behind you and closes on the only thing there.\n\nThe shield. Half built. Emitter hanging by two wires.\n\nYou jam the emitter back into place, hold it there with your thumb, and swing the shield around in front of you.\n",
       "choices": {
         "1": {
           "text": "Flip the switch and hope",
@@ -506,8 +506,8 @@
       }
     },
     "scene_032": {
-      "title": "Droider’s Idea",
-      "text": "\n“DROIDER! DO SOMETHING!”\n\n“Doing something, sir.”\n\nEvery light in the garage starts flashing at once. The radio turns on at full volume. The garage door starts going up and down, up and down. The electric pencil sharpener starts up for no reason.\n\nThe Security Bot spins in a circle, trying to look at everything at the same time. It was built to react to alarms, and right now everything is an alarm.\n\nIt buys you three seconds.\n\nYou use them to grab the shield, jam the emitter back into place, and hold it there with your thumb.\n\nThe bot figures out that the pencil sharpener is not a threat. It turns back to you and raises both stun prods.\n",
+      "title": "Asher’s Idea",
+      "text": "\n“ASHER! DO SOMETHING!”\n\n“Doing something, sir.”\n\nEvery light in the garage starts flashing at once. The radio turns on at full volume. The garage door starts going up and down, up and down. The electric pencil sharpener starts up for no reason.\n\nThe Security Bot spins in a circle, trying to look at everything at the same time. It was built to react to alarms, and right now everything is an alarm.\n\nIt buys you three seconds.\n\nYou use them to grab the shield, jam the emitter back into place, and hold it there with your thumb.\n\nThe bot figures out that the pencil sharpener is not a threat. It turns back to you and raises both stun prods.\n",
       "choices": {
         "1": {
           "text": "Flip the switch and hope",
@@ -523,14 +523,14 @@
         "grabbed": "\nYou flip the switch.\n",
         "distracted": "\nWith the radio still blasting, you flip the switch.\n"
       },
-      "text": "\nThe shield flickers.\n\nIt flickers again.\n\nThen a wide circle of blue light snaps open in front of you, just as both stun prods come down.\n\nBZZZZT.\n\nThe prods skid off the light in a shower of sparks. It flickers. It holds.\n\nThe bot hits it again. And again. You push forward behind the shield, one step at a time, but you cannot get around the bot, and you cannot fight with a shield and a thumb.\n\n“DROIDER! SHIELD! COVER ME!”\n\n“Registering device name,” Droider says calmly. “Shield Cover Me. Saved.”\n\n“What? No! That’s not the name! I was asking you to—”\n\n“Too late, sir. It is in the file.”\n\nThe garage lights flash one more time, and the bot glances up. That is all you need. You shove past it, snatch The Can Opener off the desk, and hook the prybar under the panel on its back.\n\nPop. Pull. Done.\n\nThe Security Bot’s light fades from red to soft blue, then goes dark.\n\nYou slide down to the floor with Shield Cover Me in your lap. It fizzles out.\n\nYou have to admit, the name kind of fits.\n",
+      "text": "\nThe shield flickers.\n\nIt flickers again.\n\nThen a wide circle of blue light snaps open in front of you, just as both stun prods come down.\n\nBZZZZT.\n\nThe prods skid off the light in a shower of sparks. It flickers. It holds.\n\nThe bot hits it again. And again. You push forward behind the shield, one step at a time, but you cannot get around the bot, and you cannot fight with a shield and a thumb.\n\n“ASHER! SHIELD! COVER ME!”\n\n“Registering device name,” Asher says calmly. “Shield Cover Me. Saved.”\n\n“What? No! That’s not the name! I was asking you to—”\n\n“Too late, sir. It is in the file.”\n\nThe garage lights flash one more time, and the bot glances up. That is all you need. You shove past it, snatch The Can Opener off the desk, and hook the prybar under the panel on its back.\n\nPop. Pull. Done.\n\nThe Security Bot’s light fades from red to soft blue, then goes dark.\n\nYou slide down to the floor with Shield Cover Me in your lap. It fizzles out.\n\nYou have to admit, the name kind of fits.\n",
       "choices": {
         "1": {
           "text": "Reinforce the shield so you never have to use your thumb again",
           "next_scene": "scene_034"
         },
         "2": {
-          "text": "Ask Droider to compare this bot’s code to the others",
+          "text": "Ask Asher to compare this bot’s code to the others",
           "next_scene": "scene_035"
         }
       }
@@ -548,7 +548,7 @@
     },
     "scene_035": {
       "title": "The Same Fingerprints",
-      "text": "\nYou plug the Security Bot into Droider and wait.\n\nIt does not take long.\n\n“Same code, sir. The same red block, in the same spot, as the Construction Bot and every drive you have brought home. But this one was not broken down in a junk pile. It was running. So I can see something new.”\n\nA line of numbers appears on the screen, ticking upward.\n\n“The code is listening. Several times a second, it checks for something from outside. Instructions, I think. This bot did not wander into our garage, sir. Something told it where to go.”\n\nA cold feeling settles in your stomach.\n\n“Can you tell where it’s coming from?”\n\n“Not from here. The garage walls block too much, and whatever it is, it is faint. I would need to be out there, close to a bot while it is still running.”\n\nYou look at Droider’s big computer tower. It weighs more than you do.\n\n“That’s going to be a problem.”\n\n“Yes, sir. It is.”\n\nYou patch up the shield as best you can before bed, but your mind is somewhere else.\n",
+      "text": "\nYou plug the Security Bot into Asher and wait.\n\nIt does not take long.\n\n“Same code, sir. The same red block, in the same spot, as the Construction Bot and every drive you have brought home. But this one was not broken down in a junk pile. It was running. So I can see something new.”\n\nA line of numbers appears on the screen, ticking upward.\n\n“The code is listening. Several times a second, it checks for something from outside. Instructions, I think. This bot did not wander into our garage, sir. Something told it where to go.”\n\nA cold feeling settles in your stomach.\n\n“Can you tell where it’s coming from?”\n\n“Not from here. The garage walls block too much, and whatever it is, it is faint. I would need to be out there, close to a bot while it is still running.”\n\nYou look at Asher’s big computer tower. It weighs more than you do.\n\n“That’s going to be a problem.”\n\n“Yes, sir. It is.”\n\nYou patch up the shield as best you can before bed, but your mind is somewhere else.\n",
       "choices": {
         "1": {
           "text": "Get some rest. Tomorrow you patrol.",
@@ -563,7 +563,7 @@
         "reinforced": "\nThe next afternoon, you head out with all three inventions for the first time. You feel ready for anything.\n",
         "analyzed": "\nThe next afternoon, you head out with all three inventions for the first time. If something is sending these bots, you want to see where they go.\n"
       },
-      "text": "\nYou are halfway down Main Street when a bright bolt of light zips past your ear and hits the bus stop sign behind you. The sign goes numb. You did not know a sign could do that.\n\nYou dive behind a big blue mailbox.\n\nUp on the roof of the old bank, three stories up, a tall, skinny bot on spider legs is aiming a long barrel down at the street. PERIMETER DEFENSE is stenciled on its side. Its eye light flickers red.\n\nA Long Range Security Bot.\n\nZAP. Another stun bolt hits the mailbox. Your fingers tingle right through the metal.\n\n“Sir, it has the high ground and a clear view of the whole street,” Droider says from your phone. “The Can Opener cannot reach it. I am not sure you can reach it.”\n\nEvery time you peek out, it fires.\n",
+      "text": "\nYou are halfway down Main Street when a bright bolt of light zips past your ear and hits the bus stop sign behind you. The sign goes numb. You did not know a sign could do that.\n\nYou dive behind a big blue mailbox.\n\nUp on the roof of the old bank, three stories up, a tall, skinny bot on spider legs is aiming a long barrel down at the street. PERIMETER DEFENSE is stenciled on its side. Its eye light flickers red.\n\nA Long Range Security Bot.\n\nZAP. Another stun bolt hits the mailbox. Your fingers tingle right through the metal.\n\n“Sir, it has the high ground and a clear view of the whole street,” Asher says from your phone. “The Can Opener cannot reach it. I am not sure you can reach it.”\n\nEvery time you peek out, it fires.\n",
       "choices": {
         "1": {
           "text": "Fire back with The Wrist Wrock-It",
@@ -603,7 +603,7 @@
         "out_of_shots": "\nYou wait for the gap between shots, and you run.\n",
         "shield_out": "\nYou do not wait to see what it does next. You run.\n"
       },
-      "text": "\nStun bolts chase you all the way down the block. One catches your heel, and you run the last stretch with a foot that feels like it belongs to somebody else.\n\nYou duck into an alley and look back.\n\nWith nothing left to aim at, the bot turns on the street itself. It zaps the bus stop. It zaps a parked car until the alarm gives up. It zaps the bench where old Mr. Kim sits to feed the pigeons, again and again, until the bench falls apart.\n\nYou could not stop it. You could not even get close.\n\nBack in the garage, you drop onto your stool and do not say anything for a while.\n\n“Sir?”\n\n“I lost, Droider.”\n\n“You retreated, sir. It is a different thing. Losing is when you do not come back.” He pauses. “Are you planning to come back?”\n\nYou look at the three inventions on the bench. Every one of them worked. Every one of them also ran out.\n\nYou wipe your nose on your sleeve.\n\n“Yeah. I’m coming back.”\n",
+      "text": "\nStun bolts chase you all the way down the block. One catches your heel, and you run the last stretch with a foot that feels like it belongs to somebody else.\n\nYou duck into an alley and look back.\n\nWith nothing left to aim at, the bot turns on the street itself. It zaps the bus stop. It zaps a parked car until the alarm gives up. It zaps the bench where old Mr. Lin sits to feed the pigeons, again and again, until the bench falls apart.\n\nYou could not stop it. You could not even get close.\n\nBack in the garage, you drop onto your stool and do not say anything for a while.\n\n“Sir?”\n\n“I lost, Asher.”\n\n“You retreated, sir. It is a different thing. Losing is when you do not come back.” He pauses. “Are you planning to come back?”\n\nYou look at the three inventions on the bench. Every one of them worked. Every one of them also ran out.\n\nYou wipe your nose on your sleeve.\n\n“Yeah. I’m coming back.”\n",
       "choices": {
         "1": {
           "text": "Figure out what went wrong",
@@ -613,10 +613,10 @@
     },
     "scene_040": {
       "title": "Two Ideas",
-      "text": "\nYou pull out a marker and write on the garage wall, because you ran out of paper a long time ago.\n\nPROBLEM 1: Couldn’t get to it.\n\nThe bot was three stories up. You were stuck on the ground. More firepower would not have fixed that. You need to get to places you cannot get to now.\n\nPROBLEM 2: Couldn’t see it coming.\n\nDroider is the smartest one on the team, and he was stuck in the garage, listening through a phone in your pocket. He could not see the bot. He could not tell you when it was about to fire. And if somebody really did add that code on purpose, the only place he can learn more is out there, next to a bot that is still running.\n\nYou tap the marker against your chin.\n\n“I don’t need a bigger blaster. I need to move better, and I need you with me.”\n\n“I would like that very much, sir. I have never been outside.”\n\nTwo ideas. Boots that can climb, and a Droider you can carry.\n",
+      "text": "\nYou pull out a marker and write on the garage wall, because you ran out of paper a long time ago.\n\nPROBLEM 1: Couldn’t get to it.\n\nThe bot was three stories up. You were stuck on the ground. More firepower would not have fixed that. You need to get to places you cannot get to now.\n\nPROBLEM 2: Couldn’t see it coming.\n\nAsher is the smartest one on the team, and he was stuck in the garage, listening through a phone in your pocket. He could not see the bot. He could not tell you when it was about to fire. And if somebody really did add that code on purpose, the only place he can learn more is out there, next to a bot that is still running.\n\nYou tap the marker against your chin.\n\n“I don’t need a bigger blaster. I need to move better, and I need you with me.”\n\n“I would like that very much, sir. I have never been outside.”\n\nTwo ideas. Boots that can climb, and a Asher you can carry.\n",
       "choices": {
         "1": {
-          "text": "Start with getting Droider into the field",
+          "text": "Start with getting Asher into the field",
           "next_scene": "scene_041",
           "entry_intro": "droider_first"
         },
@@ -628,19 +628,19 @@
       }
     },
     "scene_041": {
-      "title": "Miniaturizing Droider",
+      "title": "Miniaturizing Asher",
       "entry_intros": {
-        "droider_first": "\nDroider first. If he can see what you see, everything else gets easier.\n",
-        "boots_first": "\nYou start sketching boots with magnets in the soles. Ten minutes later, you are stuck.\n\n“I need to calibrate these while I’m wearing them, out on real metal. And you can’t see my feet from in here.”\n\n“I cannot, sir. I can barely see the workbench.”\n\nSo, Droider first.\n"
+        "droider_first": "\nAsher first. If he can see what you see, everything else gets easier.\n",
+        "boots_first": "\nYou start sketching boots with magnets in the soles. Ten minutes later, you are stuck.\n\n“I need to calibrate these while I’m wearing them, out on real metal. And you can’t see my feet from in here.”\n\n“I cannot, sir. I can barely see the workbench.”\n\nSo, Asher first.\n"
       },
-      "text": "\nIt is harder than you expected.\n\nDroider lives in a computer tower the size of a mini fridge. You need him to fit on your face.\n\nYou cannot shrink his whole brain, so you do not try. The big brain stays in the garage. What you build is a way for him to come along: a tiny camera and display in a single lens that clips over your goggles, an earbud so he can talk to you, and a signal booster made from the Security Bot’s antenna.\n\nThe first version melts. The second version works, but only plays polka music. You do not know why, and neither does Droider.\n\nThe third version clicks into place over your right eye. A little blue ring lights up in the corner of your vision.\n\n“Testing,” says a voice in your ear. “Sir, I can see the garage. I can see the workbench. Sir, is that what the back of my tower looks like? It is so dusty.”\n\n“Welcome to the team, Droider Portable.”\n\n“That is simply a description of what I am, sir.”\n\n“Yep. That’s how names work.”\n",
+      "text": "\nIt is harder than you expected.\n\nAsher lives in a computer tower the size of a mini fridge. You need him to fit on your face.\n\nYou cannot shrink his whole brain, so you do not try. The big brain stays in the garage. What you build is a way for him to come along: a tiny camera and display in a single lens that clips over your goggles, an earbud so he can talk to you, and a signal booster made from the Security Bot’s antenna.\n\nThe first version melts. The second version works, but only plays polka music. You do not know why, and neither does Asher.\n\nThe third version clicks into place over your right eye. A little blue ring lights up in the corner of your vision.\n\n“Testing,” says a voice in your ear. “Sir, I can see the garage. I can see the workbench. Sir, is that what the back of my tower looks like? It is so dusty.”\n\n“Welcome to the team, Asher Portable.”\n\n“That is simply a description of what I am, sir.”\n\n“Yep. That’s how names work.”\n",
       "choices": {
         "1": {
           "text": "Test it around the garage first",
           "next_scene": "scene_042"
         },
         "2": {
-          "text": "Take Droider outside",
+          "text": "Take Asher outside",
           "next_scene": "scene_043",
           "entry_intro": "straight_out"
         }
@@ -648,7 +648,7 @@
     },
     "scene_042": {
       "title": "A New Perspective",
-      "text": "\nYou walk slowly around the garage so Droider can get used to it.\n\n“Sir, please turn left. No, my left. No, I suppose we share a left now. How strange.”\n\nYou look at the ceiling.\n\n“That is the hole from the first rock, sir! I have only ever seen it from below and to the side. It is much bigger than I thought.”\n\nYou look down at your shoes.\n\n“Whoa. Sir, is this what being tall feels like?”\n\n“I’m not that tall, Droider.”\n\n“You are much taller than a desk, sir.”\n\nYou jump up and down a few times, just to see what happens.\n\n“Please never do that again.”\n\nYou grin. For the first time since the bank, you feel a little better.\n",
+      "text": "\nYou walk slowly around the garage so Asher can get used to it.\n\n“Sir, please turn left. No, my left. No, I suppose we share a left now. How strange.”\n\nYou look at the ceiling.\n\n“That is the hole from the first rock, sir! I have only ever seen it from below and to the side. It is much bigger than I thought.”\n\nYou look down at your shoes.\n\n“Whoa. Sir, is this what being tall feels like?”\n\n“I’m not that tall, Asher.”\n\n“You are much taller than a desk, sir.”\n\nYou jump up and down a few times, just to see what happens.\n\n“Please never do that again.”\n\nYou grin. For the first time since the bank, you feel a little better.\n",
       "choices": {
         "1": {
           "text": "Okay. Time to take him outside.",
@@ -661,9 +661,9 @@
       "title": "First Field Test",
       "entry_intros": {
         "straight_out": "\nNo point testing in the garage. The whole idea is to get him out of it.\n",
-        "after_garage": "\nDroider has seen the whole garage now, twice. Time for the real thing.\n"
+        "after_garage": "\nAsher has seen the whole garage now, twice. Time for the real thing.\n"
       },
-      "text": "\nYou open the garage door and step out into the evening.\n\nDroider does not say anything for almost a full minute.\n\n“Sir,” he says at last, very quietly. “The sky is so much bigger than the camera made it look.”\n\nYou let him look for a while.\n\nThen the little blue ring in your vision blinks, and a box draws itself around something high above the rooftops.\n\n“Sir. Two o’clock, high. Do you see that?”\n\nYou squint. A tiny blinking light, hanging perfectly still in the sky.\n\n“It’s that drone. I saw it from the roof before.”\n\n“It is not a delivery drone, sir. Those move. This one has been in that exact spot since we came outside. It is watching the neighborhood.”\n\nYou would have walked right under it. You have walked right under it, who knows how many times.\n\n“Good eyes, Droider.”\n\n“They are your eyes, sir. I am only borrowing one.”\n\nThe drone is too high to reach. For now. One more thing to build.\n",
+      "text": "\nYou open the garage door and step out into the evening.\n\nAsher does not say anything for almost a full minute.\n\n“Sir,” he says at last, very quietly. “The sky is so much bigger than the camera made it look.”\n\nYou let him look for a while.\n\nThen the little blue ring in your vision blinks, and a box draws itself around something high above the rooftops.\n\n“Sir. Two o’clock, high. Do you see that?”\n\nYou squint. A tiny blinking light, hanging perfectly still in the sky.\n\n“It’s that drone. I saw it from the roof before.”\n\n“It is not a delivery drone, sir. Those move. This one has been in that exact spot since we came outside. It is watching the neighborhood.”\n\nYou would have walked right under it. You have walked right under it, who knows how many times.\n\n“Good eyes, Asher.”\n\n“They are your eyes, sir. I am only borrowing one.”\n\nThe drone is too high to reach. For now. One more thing to build.\n",
       "choices": {
         "1": {
           "text": "Get to work on the boots",
@@ -673,7 +673,7 @@
     },
     "scene_044": {
       "title": "Magnet Boot Testing",
-      "text": "\nThe idea: powerful electromagnets in the soles of your boots, run off a power core on each ankle. Walk up to a metal wall, switch them on, and keep walking.\n\nYou build them out of your old rain boots, the magnet coils from the Load-Bot’s lifting arms, and a lot of wire. They are heavy and they look ridiculous.\n\n“Okay, Droider. Test one.”\n\nYou switch them on.\n\nCLANG.\n\nYour left foot shoots sideways and sticks to the refrigerator. Your right foot stays stuck to a steel plate on the floor. You are now doing the splits, which is a thing you did not know you could do and would like to stop doing.\n\n“Sir, the magnets appear to be working.”\n\n“Too well! They’re working too well!”\n\nA wrench slides across the workbench and sticks to your left ankle. Then a screwdriver. Then a handful of bolts.\n\n“You are collecting tools at an impressive rate, sir.”\n",
+      "text": "\nThe idea: powerful electromagnets in the soles of your boots, run off a power core on each ankle. Walk up to a metal wall, switch them on, and keep walking.\n\nYou build them out of your old rain boots, the magnet coils from the Load-Bot’s lifting arms, and a lot of wire. They are heavy and they look ridiculous.\n\n“Okay, Asher. Test one.”\n\nYou switch them on.\n\nCLANG.\n\nYour left foot shoots sideways and sticks to the refrigerator. Your right foot stays stuck to a steel plate on the floor. You are now doing the splits, which is a thing you did not know you could do and would like to stop doing.\n\n“Sir, the magnets appear to be working.”\n\n“Too well! They’re working too well!”\n\nA wrench slides across the workbench and sticks to your left ankle. Then a screwdriver. Then a handful of bolts.\n\n“You are collecting tools at an impressive rate, sir.”\n",
       "choices": {
         "1": {
           "text": "Yank your foot free",
@@ -681,7 +681,7 @@
           "entry_intro": "yanked"
         },
         "2": {
-          "text": "Ask Droider to help you cut the power",
+          "text": "Ask Asher to help you cut the power",
           "next_scene": "scene_045",
           "entry_intro": "cut_power"
         }
@@ -703,7 +703,7 @@
     },
     "scene_046": {
       "title": "Rematch",
-      "text": "\nThe Long Range Security Bot is still on the roof of the old bank. The street below is empty. Nobody has dared to walk down it all day.\n\nYou crouch behind the same blue mailbox. This time, you are not alone.\n\n“I have it, sir,” Droider says in your ear. A red box draws itself around the bot in your vision. “It charges for two seconds before each shot. I can see the barrel glow. I will tell you when to move.”\n\nZAP. A bolt hits the mailbox.\n\n“Now, sir. Two seconds. Go!”\n\nYou sprint across the street and flatten yourself against the side of the bank. Three stories of smooth steel siding. Last time, this was the end of the road.\n\nYou look down at The Stompers.\n\nSteel siding.\n\nYou start to grin.\n",
+      "text": "\nThe Long Range Security Bot is still on the roof of the old bank. The street below is empty. Nobody has dared to walk down it all day.\n\nYou crouch behind the same blue mailbox. This time, you are not alone.\n\n“I have it, sir,” Asher says in your ear. A red box draws itself around the bot in your vision. “It charges for two seconds before each shot. I can see the barrel glow. I will tell you when to move.”\n\nZAP. A bolt hits the mailbox.\n\n“Now, sir. Two seconds. Go!”\n\nYou sprint across the street and flatten yourself against the side of the bank. Three stories of smooth steel siding. Last time, this was the end of the road.\n\nYou look down at The Stompers.\n\nSteel siding.\n\nYou start to grin.\n",
       "choices": {
         "1": {
           "text": "Walk straight up the wall and come at it from behind",
@@ -728,7 +728,7 @@
     },
     "scene_048": {
       "title": "Rooftop Run",
-      "text": "\nThere is a steel dumpster in the alley next to the bank. You climb on top, flip The Stompers to repel, and click your heels.\n\nBOING.\n\nYou shoot up past the first floor, grab the fire escape on the building next door, and scramble up to the roof.\n\nNow there is a gap between you and the bank. It is wider than you would like.\n\n“Sir, there is a metal air vent at the edge of this roof,” Droider says. A green box lights it up in your vision. “If you hit it at a run, I will tell you when to click.”\n\nYou back up. You run.\n\n“Now!”\n\nBOING. You fly across the alley with your arms windmilling and land on the bank roof in a heap.\n\nThe bot swings its barrel around toward you. The tip starts to glow.\n\n“Two seconds, sir!”\n\nYou tap your chest. Shield Cover Me snaps open, and the bolt splashes off it. You are already running.\n",
+      "text": "\nThere is a steel dumpster in the alley next to the bank. You climb on top, flip The Stompers to repel, and click your heels.\n\nBOING.\n\nYou shoot up past the first floor, grab the fire escape on the building next door, and scramble up to the roof.\n\nNow there is a gap between you and the bank. It is wider than you would like.\n\n“Sir, there is a metal air vent at the edge of this roof,” Asher says. A green box lights it up in your vision. “If you hit it at a run, I will tell you when to click.”\n\nYou back up. You run.\n\n“Now!”\n\nBOING. You fly across the alley with your arms windmilling and land on the bank roof in a heap.\n\nThe bot swings its barrel around toward you. The tip starts to glow.\n\n“Two seconds, sir!”\n\nYou tap your chest. Shield Cover Me snaps open, and the bolt splashes off it. You are already running.\n",
       "choices": {
         "1": {
           "text": "Finish it",
@@ -743,7 +743,7 @@
         "up_the_wall": "\nThe bot never sees you coming.\n",
         "across_the_roofs": "\nYou cross the roof behind the shield before it can charge another shot.\n"
       },
-      "text": "\nTHWOOM. One charged rock takes out a spider leg, and the bot tips sideways. You slide in under the barrel, hook the prybar under its back panel, and pop it.\n\nPull.\n\nThe Long Range Security Bot folds its legs, lowers its barrel, and goes still. Its eye light fades from red to soft blue.\n\n“Wait, sir. Do not let it go dark yet. Hold it right there.”\n\nYou keep one hand on the cable.\n\n“It is still listening. And from up here, with nothing in the way, I can finally hear what it is listening to.” His voice gets excited, which almost never happens. “Sir, it is a signal. A real one. All of the bots have been getting orders, and I can hear where they come from.”\n\nYou look out over {world_name} from the roof. The Can Opener. The Wrist Wrock-It. Shield Cover Me. Droider Portable. The Stompers. Every single one of them got you here.\n\nThe bot’s light goes dark.\n\n“I lost it, sir. But I know which way it came from, and I know what it sounds like now. We can find it.”\n\nNo more waiting for bots to come to you.\n",
+      "text": "\nTHWOOM. One charged rock takes out a spider leg, and the bot tips sideways. You slide in under the barrel, hook the prybar under its back panel, and pop it.\n\nPull.\n\nThe Long Range Security Bot folds its legs, lowers its barrel, and goes still. Its eye light fades from red to soft blue.\n\n“Wait, sir. Do not let it go dark yet. Hold it right there.”\n\nYou keep one hand on the cable.\n\n“It is still listening. And from up here, with nothing in the way, I can finally hear what it is listening to.” His voice gets excited, which almost never happens. “Sir, it is a signal. A real one. All of the bots have been getting orders, and I can hear where they come from.”\n\nYou look out over {world_name} from the roof. The Can Opener. The Wrist Wrock-It. Shield Cover Me. Asher Portable. The Stompers. Every single one of them got you here.\n\nThe bot’s light goes dark.\n\n“I lost it, sir. But I know which way it came from, and I know what it sounds like now. We can find it.”\n\nNo more waiting for bots to come to you.\n",
       "choices": {
         "1": {
           "text": "Track the blinking drone from the rooftops",
@@ -754,14 +754,14 @@
           "next_scene": "scene_051"
         },
         "3": {
-          "text": "Have Droider work out the location from all the wreckage data",
+          "text": "Have Asher work out the location from all the wreckage data",
           "next_scene": "scene_052"
         }
       }
     },
     "scene_050": {
       "title": "Rooftop Route",
-      "text": "\nThe drone is still up there, blinking away.\n\n“It has to go home to recharge sometime, sir.”\n\nSo you wait. You eat a granola bar on the roof of the bank. The sun starts to go down.\n\nFinally, the drone turns and drifts east.\n\nYou follow it across the rooftops. Stick, walk, click, jump. The Stompers clunk across metal roofs and air vents, and Droider calls out every gap before you get to it. You only almost fall twice.\n\nThe drone leads you to the very edge of the neighborhood, where the houses stop and the old factories begin. It sinks down out of the sky toward one building in particular, and disappears through a hatch in the roof.\n",
+      "text": "\nThe drone is still up there, blinking away.\n\n“It has to go home to recharge sometime, sir.”\n\nSo you wait. You eat a granola bar on the roof of the bank. The sun starts to go down.\n\nFinally, the drone turns and drifts east.\n\nYou follow it across the rooftops. Stick, walk, click, jump. The Stompers clunk across metal roofs and air vents, and Asher calls out every gap before you get to it. You only almost fall twice.\n\nThe drone leads you to the very edge of the neighborhood, where the houses stop and the old factories begin. It sinks down out of the sky toward one building in particular, and disappears through a hatch in the roof.\n",
       "choices": {
         "1": {
           "text": "Get a closer look",
@@ -772,7 +772,7 @@
     },
     "scene_051": {
       "title": "Following the Trail",
-      "text": "\nThose spider legs left scratches all over the pavement, and Droider can pick them out even in the fading light. A thin red line appears in your vision, leading away down the street.\n\nYou follow it backward. Past the bus stop. Past the park. East, toward the edge of the neighborhood.\n\nOn the way, you start to notice the signs.\n\nThere is one in front of the old bakery. One on the empty lot. One on the fence outside a house with a robot-shaped dent in the porch. They are all the same, bright gold with a smiling face on them.\n\nSOLD! ANOTHER FINE PROPERTY RESCUED BY GRABBS GRAND DEVELOPMENTS.\n\n“Sir, I count nine of those signs on this street alone. Every one is next to robot damage.”\n\nYou do not know who Grabbs is. But you are starting to get a very bad feeling about him.\n\nThe trail leaves the houses behind and heads in among the old factories. It ends at the gate of one building in particular.\n",
+      "text": "\nThose spider legs left scratches all over the pavement, and Asher can pick them out even in the fading light. A thin red line appears in your vision, leading away down the street.\n\nYou follow it backward. Past the bus stop. Past the park. East, toward the edge of the neighborhood.\n\nOn the way, you start to notice the signs.\n\nThere is one in front of the old bakery. One on the empty lot. One on the fence outside a house with a robot-shaped dent in the porch. They are all the same, bright gold with a smiling face on them.\n\nSOLD! ANOTHER FINE PROPERTY RESCUED BY GRABS AWESOME STRUCTURES.\n\n“Sir, I count nine of those signs on this street alone. Every one is next to robot damage.”\n\nYou do not know who Grabs is. But you are starting to get a very bad feeling about him.\n\nThe trail leaves the houses behind and heads in among the old factories. It ends at the gate of one building in particular.\n",
       "choices": {
         "1": {
           "text": "Get a closer look",
@@ -783,7 +783,7 @@
     },
     "scene_052": {
       "title": "Triangulation",
-      "text": "\nYou climb down and head back to the garage, where Droider’s big brain can do the heavy lifting.\n\n“I know the direction the signal came from at the bank,” he says. “Now, every bot you have brought home kept a record of how strong the signal was, and where the bot was at the time. If I put them all on a map...”\n\nA map of {world_name} appears on the screen. One by one, circles appear on it. One for the Construction Bot. One for the Load-Bot. One for the Security Bot. A dozen more for all the storage drives you have collected.\n\nThe circles overlap in one small spot at the eastern edge of the neighborhood, out where the old factories are.\n\n“There, sir. I cannot tell you who. But I can tell you where.”\n\nYou take a picture of the map with your phone. Then you remember that Droider is on your face now, and you feel a little silly.\n\nYou head out as the sun goes down. The spot on the map turns out to be one building in particular.\n",
+      "text": "\nYou climb down and head back to the garage, where Asher’s big brain can do the heavy lifting.\n\n“I know the direction the signal came from at the bank,” he says. “Now, every bot you have brought home kept a record of how strong the signal was, and where the bot was at the time. If I put them all on a map...”\n\nA map of {world_name} appears on the screen. One by one, circles appear on it. One for the Construction Bot. One for the Load-Bot. One for the Security Bot. A dozen more for all the storage drives you have collected.\n\nThe circles overlap in one small spot at the eastern edge of the neighborhood, out where the old factories are.\n\n“There, sir. I cannot tell you who. But I can tell you where.”\n\nYou take a picture of the map with your phone. Then you remember that Asher is on your face now, and you feel a little silly.\n\nYou head out as the sun goes down. The spot on the map turns out to be one building in particular.\n",
       "choices": {
         "1": {
           "text": "Get a closer look",
@@ -799,7 +799,7 @@
         "followed_trail": "\nYou duck behind a rusty truck across the street and look.\n",
         "triangulated": "\nYou find a spot behind a rusty truck across the street and look.\n"
       },
-      "text": "\nIt is the old cannery. It has been closed since before you were born. It is supposed to be empty.\n\nIt is not empty.\n\nThere are lights on inside. A brand new fence runs around the whole lot, and a brand new antenna tower sticks up from the roof, humming. Behind the fence, flatbed trucks are parked in a row, and every one of them is stacked with old, broken robots.\n\n“Sir. That antenna. That is where the signal is coming from.”\n\nOn the gate is a big gold sign with a smiling face on it.\n\nGRABBS GRAND DEVELOPMENTS. MAKING YOUR NEIGHBORHOOD MINE! The word “MINE” has been crossed out by hand, and “BETTER” is written above it.\n\nYou stare at it for a long moment.\n\n“He didn’t even get a new sign.”\n\n“It would seem not, sir.”\n",
+      "text": "\nIt is the old cannery. It has been closed since before you were born. It is supposed to be empty.\n\nIt is not empty.\n\nThere are lights on inside. A brand new fence runs around the whole lot, and a brand new antenna tower sticks up from the roof, humming. Behind the fence, flatbed trucks are parked in a row, and every one of them is stacked with old, broken robots.\n\n“Sir. That antenna. That is where the signal is coming from.”\n\nOn the gate is a big gold sign with a smiling face on it.\n\nGRABS AWESOME STRUCTURES. MAKING YOUR NEIGHBORHOOD MINE! The word “MINE” has been crossed out by hand, and “BETTER” is written above it.\n\nYou stare at it for a long moment.\n\n“He didn’t even get a new sign.”\n\n“It would seem not, sir.”\n",
       "choices": {
         "1": {
           "text": "Move in closer",
@@ -809,7 +809,7 @@
     },
     "scene_054": {
       "title": "Drone Spotted",
-      "text": "\nYou are halfway to the fence when Droider hisses in your ear.\n\n“Drone, sir! Coming back around. Hide!”\n\nThere is nowhere to hide. It is an open lot. There is nothing but a metal awning over the loading dock.\n\nA metal awning.\n\nYou run, jump, click your heels, and The Stompers clang onto the underside of the awning. You hang there upside down like a bat, holding your breath, with your backpack dangling under you.\n\nThe drone hums past, right below you. It is close enough that you can see the camera lens turning, and close enough to read the gold letters printed on its side.\n\nPROPERTY OF M. GRABBS. IF FOUND, IT IS STILL MINE.\n\nIt scans the empty lot, sees nothing, and floats up through the hatch in the roof.\n\nYou let out your breath.\n\n“Sir,” Droider whispers, “you have a granola bar wrapper falling out of your pocket.”\n\nYou catch it with two fingers. That was too close.\n\nIt is not just a signal. Somebody is watching the whole neighborhood, and now you know his name.\n",
+      "text": "\nYou are halfway to the fence when Asher hisses in your ear.\n\n“Drone, sir! Coming back around. Hide!”\n\nThere is nowhere to hide. It is an open lot. There is nothing but a metal awning over the loading dock.\n\nA metal awning.\n\nYou run, jump, click your heels, and The Stompers clang onto the underside of the awning. You hang there upside down like a bat, holding your breath, with your backpack dangling under you.\n\nThe drone hums past, right below you. It is close enough that you can see the camera lens turning, and close enough to read the gold letters printed on its side.\n\nPROPERTY OF M. GRABS. IF FOUND, IT IS STILL MINE.\n\nIt scans the empty lot, sees nothing, and floats up through the hatch in the roof.\n\nYou let out your breath.\n\n“Sir,” Asher whispers, “you have a granola bar wrapper falling out of your pocket.”\n\nYou catch it with two fingers. That was too close.\n\nIt is not just a signal. Somebody is watching the whole neighborhood, and now you know his name.\n",
       "choices": {
         "1": {
           "text": "Sneak past the checkpoint at the gate",
@@ -823,7 +823,7 @@
     },
     "scene_055": {
       "title": "Past the Checkpoint",
-      "text": "\nThere is a Load-Bot standing guard at the gate. This one is not haywire. Its eye light is a steady, calm red, and it turns its head slowly from side to side.\n\n“That one is under direct control, sir. Not confused. Working.”\n\nYou watch it. Left. Right. Left. Right. It takes six seconds to turn its head all the way around.\n\n“Count me in, Droider.”\n\n“Three. Two. One. Go.”\n\nYou slip through the gate behind its back and duck between two flatbed trucks. Rows of broken bots lie stacked on either side of you, waiting their turn. Some still have their old stickers on them. HAPPY HELPER. CITY PARKS DEPT. ASK ME FOR DIRECTIONS!\n\nA door opens somewhere, and a loud voice echoes across the lot.\n\n“No, no, NO! I said I wanted MORE robots going haywire on Elm Street, not FEWER! Do I have to do everything myself?”\n\nYou freeze against the truck. Footsteps come closer. Stop. Then go away again.\n\nYou count to ten, and then you slip through the open door.\n",
+      "text": "\nThere is a Load-Bot standing guard at the gate. This one is not haywire. Its eye light is a steady, calm red, and it turns its head slowly from side to side.\n\n“That one is under direct control, sir. Not confused. Working.”\n\nYou watch it. Left. Right. Left. Right. It takes six seconds to turn its head all the way around.\n\n“Count me in, Asher.”\n\n“Three. Two. One. Go.”\n\nYou slip through the gate behind its back and duck between two flatbed trucks. Rows of broken bots lie stacked on either side of you, waiting their turn. Some still have their old stickers on them. HAPPY HELPER. CITY PARKS DEPT. ASK ME FOR DIRECTIONS!\n\nA door opens somewhere, and a loud voice echoes across the lot.\n\n“No, no, NO! I said I wanted MORE robots going haywire on Elm Street, not FEWER! Do I have to do everything myself?”\n\nYou freeze against the truck. Footsteps come closer. Stop. Then go away again.\n\nYou count to ten, and then you slip through the open door.\n",
       "choices": {
         "1": {
           "text": "See what is inside",
@@ -849,7 +849,7 @@
         "through_gate": "\nInside, a set of stairs leads up to an office with a huge desk, a huge chair, and a huge painting of a man in a shiny suit shaking hands with himself. Nobody is home. The computer is unlocked.\n",
         "through_window": "\nYou sit down in the huge chair. Your feet do not touch the floor.\n"
       },
-      "text": "\nIt is all there. He kept a list. He actually kept a list, and he named the file MY SECRET PLAN (SECRET).\n\n“Step one,” you read out loud. “Buy old broken robots, cheap. Step two. Dump robots in the neighborhood. Step three. Upload my special virus so they go bonkers. Step four. Everyone gets scared. Prices go DOWN. Step five. Buy the ENTIRE neighborhood for pocket change. Step six. Knock it all down and build Grabbs Grand Plaza. Step seven. I am RICH. Richer, I mean. I am already rich.”\n\nThere is a map of {world_name} with a gold star on every property he has bought, and a red X on the ones he wants next.\n\nMrs. Ruiz’s market has a red X on it. So does your street.\n\nYour hands are shaking a little, and it is not because you are scared.\n\n“Those bots never did anything wrong,” you say. “The people here never did anything wrong. He’s wrecking all of it so he can get a good deal.”\n\n“I have copied everything, sir. Every file.”\n\nDownstairs, a door slams, and that loud voice starts up again.\n",
+      "text": "\nIt is all there. He kept a list. He actually kept a list, and he named the file MY SECRET PLAN (SECRET).\n\n“Step one,” you read out loud. “Buy old broken robots, cheap. Step two. Dump robots in the neighborhood. Step three. Upload my special virus so they go bonkers. Step four. Everyone gets scared. Prices go DOWN. Step five. Buy the ENTIRE neighborhood for pocket change. Step six. Knock it all down and build Grabs Grand Plaza. Step seven. I am RICH. Richer, I mean. I am already rich.”\n\nThere is a map of {world_name} with a gold star on every property he has bought, and a red X on the ones he wants next.\n\nMrs. Ruiz’s market has a red X on it. So does your street.\n\nYour hands are shaking a little, and it is not because you are scared.\n\n“Those bots never did anything wrong,” you say. “The people here never did anything wrong. He’s wrecking all of it so he can get a good deal.”\n\n“I have copied everything, sir. Every file.”\n\nDownstairs, a door slams, and that loud voice starts up again.\n",
       "choices": {
         "1": {
           "text": "Get out while you can, and make a plan",
@@ -859,7 +859,7 @@
     },
     "scene_058": {
       "title": "The Man in the Shiny Suit",
-      "text": "\nThe next morning, there is a little stage set up in the town square, with gold balloons on it.\n\nYou stand at the back of the crowd with your hood up.\n\nA man bounces up the steps. Shiny suit. Big smile. Too many teeth.\n\n“Hello, hello, HELLO, {world_name}! Maximilian Grabbs, of Grabbs Grand Developments! You know me! You love me!”\n\nNobody claps. He claps for himself.\n\n“I have been hearing about these terrible, awful, no-good robot attacks. Who could be behind them? Nobody knows! It is a mystery! And that is why I, out of the goodness of my heart, am offering to buy every single home and business in this neighborhood. For a very fair price!”\n\nHe reaches for his note cards and drops them. They scatter all over the stage. He picks one up and reads it.\n\n“‘Do not mention the antenna.’ Ha ha! Ignore that! That one’s not for you!”\n\nMrs. Ruiz, near the front, folds her arms.\n\nStanding behind the stage, as still as statues, are two security bots with steady red eyes.\n\n“That is him, sir,” Droider says in your ear.\n\n“Yeah,” you whisper. “That’s him.”\n\nPeople around you are starting to mutter. Some of them look tired enough to say yes.\n\nThis ends tonight.\n",
+      "text": "\nThe next morning, there is a little stage set up in the town square, with gold balloons on it.\n\nYou stand at the back of the crowd with your hood up.\n\nA man bounces up the steps. Shiny suit. Big smile. Too many teeth.\n\n“Hello, hello, HELLO, {world_name}! Max Grabs, of Grabs Awesome Structures! You know me! You love me!”\n\nNobody claps. He claps for himself.\n\n“I have been hearing about these terrible, awful, no-good robot attacks. Who could be behind them? Nobody knows! It is a mystery! And that is why I, out of the goodness of my heart, am offering to buy every single home and business in this neighborhood. For a very fair price!”\n\nHe reaches for his note cards and drops them. They scatter all over the stage. He picks one up and reads it.\n\n“‘Do not mention the antenna.’ Ha ha! Ignore that! That one’s not for you!”\n\nMrs. Ruiz, near the front, folds her arms.\n\nStanding behind the stage, as still as statues, are two security bots with steady red eyes.\n\n“That is him, sir,” Asher says in your ear.\n\n“Yeah,” you whisper. “That’s him.”\n\nPeople around you are starting to mutter. Some of them look tired enough to say yes.\n\nThis ends tonight.\n",
       "choices": {
         "1": {
           "text": "Send the files to the police right now, then gear up",
@@ -876,10 +876,10 @@
     "scene_059": {
       "title": "Gearing Up",
       "entry_intros": {
-        "sent_now": "\nYou send everything from a bench in the square. The list, the map, all of it. Subject line: PLEASE READ THIS ONE. “They will not get to it before tonight, sir,” Droider says. That is fine. You just need them to show up eventually.\n",
-        "timed": "\n“Set a timer, Droider. The second we’re inside that cannery tonight, send every file to the police.” “Done, sir. Subject line?” “PLEASE READ THIS ONE.”\n"
+        "sent_now": "\nYou send everything from a bench in the square. The list, the map, all of it. Subject line: PLEASE READ THIS ONE. “They will not get to it before tonight, sir,” Asher says. That is fine. You just need them to show up eventually.\n",
+        "timed": "\n“Set a timer, Asher. The second we’re inside that cannery tonight, send every file to the police.” “Done, sir. Subject line?” “PLEASE READ THIS ONE.”\n"
       },
-      "text": "\nYou spend the rest of the day getting ready.\n\nYou charge everything. You put a fresh power core in The Can Opener, the very best one you have. You fill your pockets with landscaping rocks.\n\nThen you lay it all out on the workbench and check it twice.\n\nThe Can Opener. For close up.\n\nThe Wrist Wrock-It. Three shots, then a minute.\n\nShield Cover Me. Forty seconds.\n\nThe Stompers. Attract and repel.\n\nDroider Portable. He clicks into place over your eye.\n\n“Sir, may I say something?”\n\n“Always.”\n\n“A few days ago, you had a wrench. I have watched you build every one of these, and I have watched you fall off, get stuck to, and get launched by most of them. I would not go out there with anyone else.”\n\nYou have to clear your throat before you can answer.\n\n“Thanks, bud. Let’s go save the neighborhood.”\n\nYou reach the cannery just after dark.\n",
+      "text": "\nYou spend the rest of the day getting ready.\n\nYou charge everything. You put a fresh power core in The Can Opener, the very best one you have. You fill your pockets with landscaping rocks.\n\nThen you lay it all out on the workbench and check it twice.\n\nThe Can Opener. For close up.\n\nThe Wrist Wrock-It. Three shots, then a minute.\n\nShield Cover Me. Forty seconds.\n\nThe Stompers. Attract and repel.\n\nAsher Portable. He clicks into place over your eye.\n\n“Sir, may I say something?”\n\n“Always.”\n\n“A few days ago, you had a wrench. I have watched you build every one of these, and I have watched you fall off, get stuck to, and get launched by most of them. I would not go out there with anyone else.”\n\nYou have to clear your throat before you can answer.\n\n“Thanks, bud. Let’s go save the neighborhood.”\n\nYou reach the cannery just after dark.\n",
       "choices": {
         "1": {
           "text": "Go in through the front gate",
@@ -913,7 +913,7 @@
     },
     "scene_062": {
       "title": "Almost Not Enough",
-      "text": "\nYou land on the floor of the old cannery, and every light in the building comes on at once.\n\nThe room is huge. At the far end is a machine the size of a school bus, covered in blinking lights, with thick cables running up to the antenna.\n\nStanding between you and the machine is one of every kind of bot. Construction Bot. Load-Bot. Close Range. Long Range. Their eyes are a steady red.\n\n“Oh, come on,” you say.\n\nIt is the hardest fight of your life.\n\nTHWOOM, THWOOM, THWOOM, and The Wrist Wrock-It is empty. Shield Cover Me holds off the Long Range Bot for forty seconds, and then it is gone too. You get the Construction Bot with the axe blade, but the blade flickers out before you can turn around.\n\nYou back up against a steel pillar, breathing hard, holding a wrench.\n\nThree bots left. Nothing charged. Just like the bank, except that this time there is nowhere to run.\n\n“Sir,” Droider says quietly. “You still have your boots. And you still have me.”\n",
+      "text": "\nYou land on the floor of the old cannery, and every light in the building comes on at once.\n\nThe room is huge. At the far end is a machine the size of a school bus, covered in blinking lights, with thick cables running up to the antenna.\n\nStanding between you and the machine is one of every kind of bot. Construction Bot. Load-Bot. Close Range. Long Range. Their eyes are a steady red.\n\n“Oh, come on,” you say.\n\nIt is the hardest fight of your life.\n\nTHWOOM, THWOOM, THWOOM, and The Wrist Wrock-It is empty. Shield Cover Me holds off the Long Range Bot for forty seconds, and then it is gone too. You get the Construction Bot with the axe blade, but the blade flickers out before you can turn around.\n\nYou back up against a steel pillar, breathing hard, holding a wrench.\n\nThree bots left. Nothing charged. Just like the bank, except that this time there is nowhere to run.\n\n“Sir,” Asher says quietly. “You still have your boots. And you still have me.”\n",
       "choices": {
         "1": {
           "text": "Use The Stompers to pull them off balance",
@@ -921,7 +921,7 @@
           "entry_intro": "stompers"
         },
         "2": {
-          "text": "Trust Droider to pick the perfect moment",
+          "text": "Trust Asher to pick the perfect moment",
           "next_scene": "scene_063",
           "entry_intro": "droider"
         }
@@ -943,7 +943,7 @@
     },
     "scene_064": {
       "title": "Confrontation",
-      "text": "\nMaximilian Grabbs is standing on a metal walkway above the big machine. He is wearing a gold bathrobe over his shiny suit, and he is holding a remote control with exactly one button on it.\n\n“So YOU are the little pest who has been breaking my robots! Do you know how much those cost? Almost nothing! But it is the PRINCIPLE!”\n\nHe sweeps his arm out over the machine.\n\n“Behold! The Neighborhood Improver 3000! One signal, and every rusty robot in this dump goes absolutely bananas! Prices go down! I swoop in! Everybody sells! It is the perfect plan, and nobody can prove a thing!”\n\n“You kept a list,” you say. “It was called MY SECRET PLAN.”\n\n“Because it is SECRET! It says so right in the name!”\n\nHe keeps going. He is telling you about the fountain he wants to build in Grabbs Grand Plaza. It will be shaped like him.\n\nWhile he talks, you look past him.\n\nBehind the walkway, at the heart of the machine, is a wall of glowing terminals. The control tower. Every cable in the building runs into it.\n\nYou look down at The Can Opener. The best power core you own is still sitting in it, untouched. You have never dared to let all of it out at once. It would drain the tool completely. Maybe for good.\n\nYou think of every eye light you have watched fade from angry red to soft blue.\n",
+      "text": "\nMax Grabs is standing on a metal walkway above the big machine. He is wearing a gold bathrobe over his shiny suit, and he is holding a remote control with exactly one button on it.\n\n“So YOU are the little pest who has been breaking my robots! Do you know how much those cost? Almost nothing! But it is the PRINCIPLE!”\n\nHe sweeps his arm out over the machine.\n\n“Behold! The Robot Improver 3.0! One signal, and every rusty robot in this dump goes absolutely bananas! Prices go down! I swoop in! Everybody sells! It is the perfect plan, and nobody can prove a thing!”\n\n“You kept a list,” you say. “It was called MY SECRET PLAN.”\n\n“Because it is SECRET! It says so right in the name!”\n\nHe keeps going. He is telling you about the fountain he wants to build in Grabs Grand Plaza. It will be shaped like him.\n\nWhile he talks, you look past him.\n\nBehind the walkway, at the heart of the machine, is a wall of glowing terminals. The control tower. Every cable in the building runs into it.\n\nYou look down at The Can Opener. The best power core you own is still sitting in it, untouched. You have never dared to let all of it out at once. It would drain the tool completely. Maybe for good.\n\nYou think of every eye light you have watched fade from angry red to soft blue.\n",
       "choices": {
         "1": {
           "text": "Let him keep talking while you charge it up",
@@ -960,10 +960,10 @@
     "scene_065": {
       "title": "Charging the Discharge",
       "entry_intros": {
-        "kept_talking": "\n“...and the water will come out of my ears, which I think is very tasteful,” Grabbs is saying.\n",
-        "its_over": "\n“It’s over, Mr. Grabbs,” you say. He laughs so hard that he has to hold on to the railing. “Over? You’re a CHILD! With a WRENCH!”\n"
+        "kept_talking": "\n“...and the water will come out of my ears, which I think is very tasteful,” Grabs is saying.\n",
+        "its_over": "\n“It’s over, Mr. Grabs,” you say. He laughs so hard that he has to hold on to the railing. “Over? You’re a CHILD! With a WRENCH!”\n"
       },
-      "text": "\nYou twist the handle of The Can Opener. Then you keep twisting, past the click, and past the second click that you put there so you would never do this by accident.\n\nThe coils go from blue to white. The wrench head opens wide. Lightning starts to crawl up and down the handle, and every hair on your arms stands up. The whole cannery fills with a rising hum.\n\n“Sir, this will empty the core completely,” Droider says. “The Can Opener will be powerless after this.”\n\n“I know.”\n\nYou raise it.\n\nGrabbs stops laughing. He freezes.\n\n“Wait! You wouldn’t dare!”\n\nYour eyes shift past him, toward the glowing control tower.\n\n“You’re right,” you say. “I wouldn’t.”\n",
+      "text": "\nYou twist the handle of The Can Opener. Then you keep twisting, past the click, and past the second click that you put there so you would never do this by accident.\n\nThe coils go from blue to white. The wrench head opens wide. Lightning starts to crawl up and down the handle, and every hair on your arms stands up. The whole cannery fills with a rising hum.\n\n“Sir, this will empty the core completely,” Asher says. “The Can Opener will be powerless after this.”\n\n“I know.”\n\nYou raise it.\n\nGrabs stops laughing. He freezes.\n\n“Wait! You wouldn’t dare!”\n\nYour eyes shift past him, toward the glowing control tower.\n\n“You’re right,” you say. “I wouldn’t.”\n",
       "choices": {
         "1": {
           "text": "Fire",
@@ -973,7 +973,7 @@
     },
     "scene_066": {
       "title": "Precision",
-      "text": "\nThe blast shoots past Maximilian Grabbs, close enough to ruffle his bathrobe, and hits the control tower dead center.\n\nFor a second, the whole room is as bright as noon.\n\nEvery terminal goes dark at once. The Neighborhood Improver 3000 makes a sound like a very large balloon letting go, and its lights go out row by row.\n\nOn the roof, the antenna stops humming.\n\nAnd all across {world_name}, in alleys and empty lots and the middle of Elm Street, every haywire robot slows down, lowers its arms, and stops. Hundreds of flickering red lights fade to a soft, calm blue.\n\nThe Can Opener is dark in your hands. No glow. No hum. Just a big, heavy wrench again.\n\nGrabbs looks at the smoking machine. He looks at you. His face goes from white, to pink, to purple.\n\n“THAT WAS PRIVATE PROPERTY!”\n\nHe stomps his foot, and a slipper flies off.\n\n“You tried to VAPORIZE me!”\n\n“I was aiming at your computer.”\n\n“THAT’S EVEN WORSE!”\n\nHe throws his remote control on the floor and jumps on it. He pulls off his other slipper and throws that too. It does not go very far.\n\nSomewhere outside, getting closer, you hear sirens.\n",
+      "text": "\nThe blast shoots past Max Grabs, close enough to ruffle his bathrobe, and hits the control tower dead center.\n\nFor a second, the whole room is as bright as noon.\n\nEvery terminal goes dark at once. The Robot Improver 3.0 makes a sound like a very large balloon letting go, and its lights go out row by row.\n\nOn the roof, the antenna stops humming.\n\nAnd all across {world_name}, in alleys and empty lots and the middle of Elm Street, every haywire robot slows down, lowers its arms, and stops. Hundreds of flickering red lights fade to a soft, calm blue.\n\nThe Can Opener is dark in your hands. No glow. No hum. Just a big, heavy wrench again.\n\nGrabs looks at the smoking machine. He looks at you. His face goes from white, to pink, to purple.\n\n“THAT WAS PRIVATE PROPERTY!”\n\nHe stomps his foot, and a slipper flies off.\n\n“You tried to VAPORIZE me!”\n\n“I was aiming at your computer.”\n\n“THAT’S EVEN WORSE!”\n\nHe throws his remote control on the floor and jumps on it. He pulls off his other slipper and throws that too. It does not go very far.\n\nSomewhere outside, getting closer, you hear sirens.\n",
       "choices": {
         "1": {
           "text": "Time to go",
@@ -983,7 +983,7 @@
     },
     "scene_067": {
       "title": "Police Arrive",
-      "text": "\n“Sir, the police have read your email,” Droider says. “All of it. They seem quite upset.”\n\nRed and blue lights sweep across the cannery windows.\n\nGrabbs stops mid-tantrum.\n\n“Police? Oh, wonderful! Officers! OFFICERS! Arrest this child! This is my secret robot virus machine, and that child BROKE it!”\n\nHe hears what he just said. He puts both hands over his mouth.\n\nYou are already moving.\n\nThere is a small window at the back of the cannery, above a stack of old crates. The Stompers have just enough charge left for one good jump.\n\nBOING.\n\nYou catch the windowsill, pull yourself up, and look back one last time. The front doors burst open. Maximilian Grabbs is standing in one slipper and a gold bathrobe, in front of a smoking machine, with his hands up.\n\n“I would like to speak to my lawyer,” he says. “And also my mother.”\n\nYou slip out the back window and drop into the dark before anyone can stop you.\n\nYou are not doing this to get famous.\n",
+      "text": "\n“Sir, the police have read your email,” Asher says. “All of it. They seem quite upset.”\n\nRed and blue lights sweep across the cannery windows.\n\nGrabs stops mid-tantrum.\n\n“Police? Oh, wonderful! Officers! OFFICERS! Arrest this child! This is my secret robot virus machine, and that child BROKE it!”\n\nHe hears what he just said. He puts both hands over his mouth.\n\nYou are already moving.\n\nThere is a small window at the back of the cannery, above a stack of old crates. The Stompers have just enough charge left for one good jump.\n\nBOING.\n\nYou catch the windowsill, pull yourself up, and look back one last time. The front doors burst open. Max Grabs is standing in one slipper and a gold bathrobe, in front of a smoking machine, with his hands up.\n\n“I would like to speak to my lawyer,” he says. “And also my mother.”\n\nYou slip out the back window and drop into the dark before anyone can stop you.\n\nYou are not doing this to get famous.\n",
       "choices": {
         "1": {
           "text": "Head home",
@@ -993,7 +993,7 @@
     },
     "scene_068": {
       "title": "Neighborhood Safe",
-      "text": "\nYou take the long way home.\n\nThe streets of {world_name} are quiet, in a way they have not been for months. It is the good kind of quiet.\n\nThere are robots everywhere, standing right where they stopped, with their eye lights glowing a soft blue. People are coming out onto their porches in their pajamas to look at them. Nobody is running. A little kid walks up to a Construction Bot and pats it on the scoop.\n\nMrs. Ruiz is standing outside her market with her broom. She sees a kid in goggles walk by under the streetlight. She does not say anything. She just taps two fingers to her forehead, like a salute.\n\nYou nod back, and you keep walking.\n\nThe garage door rolls up, and there you stand, in front of your tools.\n\nHome.\n\nYou set The Can Opener down on the workbench. It is dark, scorched, and completely drained. It still has your dad’s initials stamped on the handle.\n\n“It did good,” you say.\n\n“So did you, sir,” says Droider.\n\nYou should sleep. You know you should sleep. But your hands are already itching.\n",
+      "text": "\nYou take the long way home.\n\nThe streets of {world_name} are quiet, in a way they have not been for months. It is the good kind of quiet.\n\nThere are robots everywhere, standing right where they stopped, with their eye lights glowing a soft blue. People are coming out onto their porches in their pajamas to look at them. Nobody is running. A little kid walks up to a Construction Bot and pats it on the scoop.\n\nMrs. Ruiz is standing outside her market with her broom. She sees a kid in goggles walk by under the streetlight. She does not say anything. She just taps two fingers to her forehead, like a salute.\n\nYou nod back, and you keep walking.\n\nThe garage door rolls up, and there you stand, in front of your tools.\n\nHome.\n\nYou set The Can Opener down on the workbench. It is dark, scorched, and completely drained. It still has your dad’s initials stamped on the handle.\n\n“It did good,” you say.\n\n“So did you, sir,” says Asher.\n\nYou should sleep. You know you should sleep. But your hands are already itching.\n",
       "choices": {
         "1": {
           "text": "Start fixing The Can Opener",
@@ -1007,12 +1007,12 @@
     },
     "scene_069": {
       "title": "Back to the Bench",
-      "text": "\nYou pull your stool up to the bench and open up The Can Opener.\n\nThe core is burnt out. Half of the copper coils have melted. It is going to take weeks to fix, and twice as many parts as it took to build.\n\nYou have never been happier to have a project.\n\n“You know, sir, while it is apart, we could make some improvements.”\n\n“I was thinking the same thing.” You pick up a marker and start a new list on the garage wall. “And I’ve got a great idea for a grappling hook. I’m going to call it The Yoink.”\n\n“Of course you are, sir.”\n\nYou work until the sun comes up.\n\nAround dawn, a small light starts blinking in the corner of Droider’s screen.\n\n“Sir? It is probably nothing. But I am picking up a signal. A different one. It is very faint, and it is coming from somewhere across the city.”\n\nYou look at the light. You look at the pile of parts that used to be The Can Opener.\n\nYou grin, and you pick up your screwdriver.\n\n“Then we’d better hurry.”\n\nThe End.\n",
+      "text": "\nYou pull your stool up to the bench and open up The Can Opener.\n\nThe core is burnt out. Half of the copper coils have melted. It is going to take weeks to fix, and twice as many parts as it took to build.\n\nYou have never been happier to have a project.\n\n“You know, sir, while it is apart, we could make some improvements.”\n\n“I was thinking the same thing.” You pick up a marker and start a new list on the garage wall. “And I’ve got a great idea for a grappling hook. I’m going to call it The Puller Thingie.”\n\n“Of course you are, sir.”\n\nYou work until the sun comes up.\n\nAround dawn, a small light starts blinking in the corner of Asher’s screen.\n\n“Sir? It is probably nothing. But I am picking up a signal. A different one. It is very faint, and it is coming from somewhere across the city.”\n\nYou look at the light. You look at the pile of parts that used to be The Can Opener.\n\nYou grin, and you pick up your screwdriver.\n\n“Then we’d better hurry.”\n\nThe End.\n",
       "ending": true
     },
     "scene_070": {
       "title": "The Fixer",
-      "text": "\nYou keep thinking about them. Hundreds of robots, standing out there in the dark with nowhere to go.\n\nThey were thrown away. Then they were used. None of that was their fault.\n\n“Droider. That virus. Now that the signal’s gone, could we clean it out? For good?”\n\n“Sir, I have been hoping you would ask. I already wrote the fix.”\n\nThe next morning, you wheel the first Construction Bot into the garage on your hand truck. It has an old smiley face sticker on its chest, half peeled off. You open its panel, carefully this time. Droider cleans out the red code, line by line. You patch the tread, straighten the scoop, and press the sticker back down flat.\n\nIts eye light comes on. It is a steady, friendly blue.\n\nIt looks at you. Then it rolls out of the garage, down the driveway, and into the street, and it begins, very gently, to fix the pothole it made.\n\nYou watch it work, with a big smile on your face.\n\n“There are a lot more of them out there, sir. This is going to take a while.”\n\n“Good,” you say, and you grab the hand truck. “This neighborhood could use the help. I’m calling it Project Un-Can.”\n\n“...We will work on the name, sir.”\n\nThe Can Opener can wait one more day. It was always a tool first, anyway.\n\nThe End.\n",
+      "text": "\nYou keep thinking about them. Hundreds of robots, standing out there in the dark with nowhere to go.\n\nThey were thrown away. Then they were used. None of that was their fault.\n\n“Asher. That virus. Now that the signal’s gone, could we clean it out? For good?”\n\n“Sir, I have been hoping you would ask. I already wrote the fix.”\n\nThe next morning, you wheel the first Construction Bot into the garage on your hand truck. It has an old smiley face sticker on its chest, half peeled off. You open its panel, carefully this time. Asher cleans out the red code, line by line. You patch the tread, straighten the scoop, and press the sticker back down flat.\n\nIts eye light comes on. It is a steady, friendly blue.\n\nIt looks at you. Then it rolls out of the garage, down the driveway, and into the street, and it begins, very gently, to fix the pothole it made.\n\nYou watch it work, with a big smile on your face.\n\n“There are a lot more of them out there, sir. This is going to take a while.”\n\n“Good,” you say, and you grab the hand truck. “This neighborhood could use the help. I’m calling it Project Fix em.”\n\n“...We will work on the name, sir.”\n\nThe Can Opener can wait one more day. It was always a tool first, anyway.\n\nThe End.\n",
       "ending": true
     }
   }
