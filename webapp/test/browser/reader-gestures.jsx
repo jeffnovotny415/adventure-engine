@@ -4,7 +4,7 @@ import { StrictMode, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { captureReadingAnchor } from '../../src/components/shared/BookReader/readingPosition';
 import { pageForReadingAnchor } from '../../src/components/shared/BookReader/readingPosition';
-import { DEFAULT_READING_STYLE } from '../../src/state/readingPreferences';
+import { DEFAULT_READING_STYLE, READING_PRESETS } from '../../src/state/readingPreferences';
 import { BookReader } from '../../src/components/shared/BookReader/BookReader';
 import '../../src/index.css';
 import '../../src/styles/theme.css';
@@ -28,6 +28,9 @@ function clickTest(selector) {
   const target = document.querySelector(selector);
   if (!target) throw Error(`Missing ${selector}`);
   target.click();
+}
+async function settingsSection(name) {
+  clickTest(`.reading-settings [data-section="${name}"]`); await frame();
 }
 async function settled() {
   const deadline = performance.now() + 2500;
@@ -120,6 +123,7 @@ export function Fixture() {
     }
     if (kind === 'page movement') {
       clickTest('.text-size-button:not(.bookmark-button)'); await frame();
+      await settingsSection('controls');
       clickTest('.reading-settings input[value="instant"]'); await frame();
       clickTest('.reading-settings__header button'); await frame();
       const originalText = document.querySelector('.reader-columns').textContent;
@@ -140,6 +144,7 @@ export function Fixture() {
       pointer('pointerup', r.left + 30); await frame();
       instant &&= pageStatus().startsWith('3 / ') && !document.querySelector('.page-turn-overlay');
       clickTest('.text-size-button:not(.bookmark-button)'); await frame();
+      await settingsSection('controls');
       const retained = document.querySelector('.reading-settings input[value="instant"]').checked;
       clickTest('.reading-settings input[value="animated"]'); await frame();
       clickTest('.reading-settings__header button'); await frame();
@@ -150,6 +155,56 @@ export function Fixture() {
       const returned = pageStatus().startsWith('2 / ');
       const unchanged = document.querySelector('.reader-columns').textContent === originalText;
       setResult(`${instant && cancelled && retained && motionCorrect && returned && unchanged ? 'PASS' : 'FAIL'}: page movement; instant ${instant}; short swipe ${cancelled}; retained ${retained}; animated/reduced ${motionCorrect}; returned ${returned}; text ${unchanged}`);
+      setRunning(false); return;
+    }
+    if (kind === 'settings presets') {
+      try {
+        clickTest('.reader-footer-next button'); await settled();
+        const before = JSON.stringify(anchor.current), columns = document.querySelector('.reader-columns');
+        const originalText = columns.textContent;
+        document.querySelector('.text-size-button:not(.bookmark-button)').focus();
+        clickTest('.text-size-button:not(.bookmark-button)'); await frame();
+        const dialog = document.querySelector('.reading-settings');
+        const slider = dialog.querySelector('input[type="range"]');
+        const initial = document.activeElement === slider && dialog.querySelector('[data-section="text"]').getAttribute('aria-selected') === 'true';
+        const scroller = dialog.querySelector('.reading-settings__body');
+        const usable = scroller.clientHeight >= 88 && scroller.scrollWidth <= scroller.clientWidth + 1 &&
+          dialog.getBoundingClientRect().bottom <= innerHeight &&
+          [...dialog.querySelectorAll('[role="tab"]')].every(tab => tab.clientHeight >= 44 && tab.scrollWidth <= tab.clientWidth + 1);
+        const textTab = dialog.querySelector('[data-section="text"]');
+        textTab.focus(); textTab.dispatchEvent(new KeyboardEvent('keydown', {key:'ArrowRight',bubbles:true})); await frame();
+        let tabs = document.activeElement.dataset.section === 'page' && dialog.querySelector('[role="tabpanel"]:not([hidden])').getAttribute('aria-labelledby') === document.activeElement.id;
+        document.activeElement.dispatchEvent(new KeyboardEvent('keydown', {key:'End',bubbles:true})); await frame();
+        tabs &&= document.activeElement.dataset.section === 'controls';
+        clickTest('.reading-settings input[value="instant"]'); await frame();
+        clickTest('.reading-settings__haptics input'); await frame();
+        await settingsSection('text');
+        let applied = true, anchorStable = true;
+        for (const [name, preset] of Object.entries(READING_PRESETS)) {
+          clickTest(`.reading-settings [data-preset="${name}"]`);
+          await frame(); await frame(); await document.fonts.ready; await frame();
+          const main = document.querySelector('.reader-layout');
+          applied &&= main.style.getPropertyValue('--reading-scale') === String(preset.textScale) &&
+            main.dataset.pageAppearance === preset.pageAppearance && main.dataset.readingFont === preset.readingFont &&
+            main.dataset.readingBold === String(preset.boldText) && main.dataset.readingSpacing === preset.lineSpacing &&
+            dialog.querySelector(`[data-preset="${name}"]`).getAttribute('aria-pressed') === 'true';
+          const [current,total] = pageStatus().split('/').map(Number);
+          const viewport = document.querySelector('.reader-viewport');
+          const step = viewport.clientWidth + parseFloat(getComputedStyle(columns).columnGap);
+          anchorStable &&= JSON.stringify(anchor.current) === before && current - 1 === pageForReadingAnchor(anchor.current, columns, step, total);
+        }
+        clickTest('.reading-settings__toggle input'); await frame();
+        const custom = !dialog.querySelector('[data-preset][aria-pressed="true"]') && dialog.querySelector('.reading-settings__preset-status').textContent.includes('Custom');
+        await settingsSection('controls');
+        const controls = dialog.querySelector('input[value="instant"]').checked && dialog.querySelector('.reading-settings__haptics input').checked;
+        clickTest('.reading-settings__header button'); await frame();
+        const focus = document.activeElement.matches('.text-size-button:not(.bookmark-button)');
+        clickTest('.text-size-button:not(.bookmark-button)'); await frame();
+        const reopen = dialog.isConnected === false && document.querySelector('.reading-settings__preset-status').textContent.includes('Custom');
+        clickTest('.reading-settings__header button'); await frame();
+        const unchanged = columns.textContent === originalText;
+        setResult(`${initial && usable && tabs && applied && anchorStable && custom && controls && focus && reopen && unchanged ? 'PASS' : 'FAIL'}: settings presets; initial ${initial}; usable ${usable}; tabs ${tabs}; applied ${applied}; anchor ${anchorStable}; custom ${custom}; controls ${controls}; focus ${focus}; reopen ${reopen}; text ${unchanged}`);
+      } catch (error) { setResult(`FAIL: settings presets; ${error.message}`); }
       setRunning(false); return;
     }
     if (kind === 'scene progress') {
@@ -215,12 +270,14 @@ export function Fixture() {
       }
       document.querySelector('.reading-settings__toggle input').click(); await frame(); await frame();
       const bold = getComputedStyle(columns.querySelector('.story-paragraph')).fontWeight === '700';
+      await settingsSection('page');
       let palettes = true;
       for (const [value, background, color] of [['night','rgb(38, 36, 32)','rgb(238, 228, 210)'],['clear','rgb(255, 253, 250)','rgb(41, 40, 38)'],['warm','rgb(251, 244, 229)','rgb(51, 41, 31)']]) {
         document.querySelector(`.reading-settings input[value='${value}']`).click(); await frame();
         const dialog = document.querySelector('.reading-settings');
         palettes &&= getComputedStyle(dialog).backgroundColor === background && getComputedStyle(dialog).color === color;
       }
+      await settingsSection('controls');
       const toggles = document.querySelectorAll('.reading-settings__toggle input');
       toggles[1].click(); await frame();
       document.querySelector('.reading-settings__header button').click(); await frame();
@@ -380,9 +437,9 @@ export function Fixture() {
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page','reading comfort','saved passages','scene progress','paper margin tap','diagonal start swipe','tap during turn','last page swipe','last page tap','page movement'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page','reading comfort','saved passages','scene progress','paper margin tap','diagonal start swipe','tap during turn','last page swipe','last page tap','page movement','settings presets'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
-    <BookReader storyId="fixture" sceneId="scene" passageStorage={passageStorage.current} key={generation} readingStyle={readingStyle} onReadingStyleChange={patch => setReadingStyle(current => ({...current,...patch}))} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { writes.current += 1; anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{fixture:{text:'Choose this test path'}}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{ chosen.current += 1; }} />
+    <BookReader storyId="fixture" sceneId="scene" passageStorage={passageStorage.current} key={generation} readingStyle={readingStyle} onReadingStyleChange={patch => { setReadingStyle(current => ({...current,...patch})); if (Object.hasOwn(patch, 'textScale')) setTextScale(patch.textScale); }} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { writes.current += 1; anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{fixture:{text:'Choose this test path'}}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{ chosen.current += 1; }} />
   </>;
 }
 createRoot(document.getElementById('root')).render(<StrictMode><Fixture /></StrictMode>);

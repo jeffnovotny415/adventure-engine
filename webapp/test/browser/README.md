@@ -81,3 +81,11 @@ confirm Resume still opens the live adventure. Test the illustration viewer
 inside a saved passage. Back to saved passages and Done must stay visible while
 scrolling the saved text. The fixture reads page counts from DOM data attributes
 so its assertions do not depend on the presentation label.
+
+**settings presets** checks Text/Page/Controls tab relationships and keyboard
+navigation, initial slider focus, usable scrolling at maximum system text, all
+three appearance presets, unchanged reading anchors and prose, Custom after a
+manual edit, independent movement/haptic preferences, and focus return on Done.
+Run at 667×375, 568×320, 1024×768, 390×844 and 320×568, including
+`?max&system&reduced`. Check rotation with the sheet open. Storage unit tests
+cover atomic writes, reload, failure/retry and isolation between books.

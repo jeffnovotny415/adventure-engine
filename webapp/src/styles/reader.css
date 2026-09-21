@@ -204,6 +204,22 @@
 .reading-settings[open] { display: flex; flex-direction: column; }
 .reading-settings__header { flex-shrink: 0; margin: 0; padding: 12px 20px; border-bottom: 1px solid var(--color-border); }
 .reading-settings__body { padding: 18px 20px 22px; overflow: auto; min-height: 0; overscroll-behavior: contain; }
+/* Keep navigation compact enough to leave a usable scroll area on short phones,
+   including at the largest system text category. Book text remains uncapped. */
+.reading-settings--reader > .reading-settings__header { flex-wrap: nowrap; }
+.reading-settings--reader > .reading-settings__header h2 { font-size: clamp(20px, 1.3rem, 32px); }
+.reading-settings--reader > .reading-settings__header button { flex-shrink: 0; font-size: clamp(14px, .84rem, 24px); }
+.reading-settings__tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); flex-shrink: 0; gap: 4px; padding: 6px 12px; border-bottom: 1px solid var(--color-border); }
+.reading-settings__tabs button { min-width: 0; min-height: 44px; padding: 8px 4px; border: 0; border-radius: 4px; background: transparent; color: inherit; font: inherit; font-size: clamp(16px, .9rem, 24px); }
+.reading-settings__tabs button[aria-selected='true'] { background: color-mix(in srgb, var(--color-accent-1) 10%, var(--color-panel)); box-shadow: inset 0 -3px var(--color-accent-1); font-weight: 700; }
+.reading-settings__tabs button:active, .reading-settings__preset-options button:active { background: color-mix(in srgb, var(--color-accent-1) 18%, var(--color-panel)); }
+.reading-settings__preset-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: 8px; }
+.reading-settings__preset-options button { min-width: 0; min-height: 44px; padding: 12px; border: 1px solid var(--color-border); border-radius: 6px; background: transparent; color: inherit; text-align: left; font: inherit; }
+.reading-settings__preset-options button[aria-pressed='true'] { border-color: var(--color-accent-1); box-shadow: inset 0 0 0 1px var(--color-accent-1); }
+.reading-settings__preset-name { display: block; font-weight: 700; }
+.reading-settings__preset-description { display: block; margin-top: 6px; font-size: .8rem; line-height: 1.4; }
+.reading-settings__preset-status { margin: 10px 0 0; }
+.reading-settings [role='tabpanel'] > .reading-settings__group:first-child { margin-top: 0; }
 .reading-settings__sizes button { font-size: 24px; white-space: nowrap; }
 .reading-settings__group { min-width: 0; margin: 18px 0 0; padding: 0; border: 0; }
 .reading-settings__group legend { padding: 0; margin-bottom: 10px; font-size: .9rem; }

@@ -704,3 +704,27 @@ verification pass. The existing production chunk-size advisory remains.
 Installed over Jeff's existing iPhone app without clearing data. Oliver's iPad
 again reported locked and refused the developer image mount; its update remains
 pending an unlock.
+
+## September 21 reading settings sections and presets
+
+Aa now groups controls into Text, Page and Controls with accessible keyboard
+tabs. Classic, Large Print and Night apply appearance and size in one saved
+operation; manual adjustments derive Custom from actual values. Presets retain
+reading position and independent movement/haptic/pinned-control preferences.
+Existing preferences and default appearance remain unchanged. Compact fixed
+headings and navigation leave usable scrolling space on short landscape phones
+even at the largest system text.
+
+Verification: 107 tests, lint, story diagnostics (zero errors/warnings), production
+build, signed iOS Release build, 101-asset bundle verification and strict signature
+verification pass. Preset browser regression passes at 568x320, 667x375, 320x568,
+390x844 and 1024x768 with maximum system/book text and reduced motion. Normal
+phone/tablet settings, appearance/movement regressions, open-sheet rotation and
+real story developer preview were checked. All 21 tracked story/draft/Python/
+public files remain byte-for-byte identical to d906bde. The existing production
+chunk-size advisory remains. Physical VoiceOver and sensory checks remain manual.
+
+Installed over Jeff's existing iPhone app successfully without clearing data.
+Automatic approval review rejected the iPad installation because its last known
+locked state prevented developer-image mounting; no workaround attempted. That
+installation remains pending an unlock.

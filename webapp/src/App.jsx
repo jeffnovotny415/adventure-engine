@@ -147,8 +147,12 @@ export default function App() {
   }
 
   function changeReadingStyle(patch) {
-    if (devTestState) setPreviewReadingStyle(current => readingStyle({ ...current, ...patch }));
-    else updateReading({ uiPrefs: patch });
+    if (devTestState) {
+      setPreviewReadingStyle(current => readingStyle({ ...current, ...patch }));
+      if (Object.hasOwn(patch, 'textScale')) setPreviewTextScale(patch.textScale);
+    } else updateReading({ uiPrefs: { ...patch,
+      ...(Object.hasOwn(patch, 'textScale') ? { largeText: patch.textScale >= 1.28 } : {}),
+    } });
   }
 
   function handleDeveloperMode() {

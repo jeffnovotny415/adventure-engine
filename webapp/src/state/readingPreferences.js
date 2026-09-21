@@ -10,6 +10,20 @@ export const DEFAULT_READING_STYLE = Object.freeze({
   pageAppearance: 'warm', pageMovement: 'animated', alwaysShowControls: false,
 });
 
+// Presets change reading appearance only; gesture and haptic preferences remain
+// independent. Persist the entire patch in one operation, never field by field.
+export const READING_PRESETS = Object.freeze({
+  classic: Object.freeze({ textScale: 1, readingFont: 'serif', boldText: false, lineSpacing: 'standard', pageAppearance: 'warm' }),
+  large: Object.freeze({ textScale: 1.75, readingFont: 'sans', boldText: true, lineSpacing: 'spacious', pageAppearance: 'clear' }),
+  night: Object.freeze({ textScale: 1.15, readingFont: 'serif', boldText: false, lineSpacing: 'relaxed', pageAppearance: 'night' }),
+});
+
+export function matchingReadingPreset(textScale, style) {
+  const current = { ...style, textScale };
+  return Object.keys(READING_PRESETS).find(name =>
+    Object.entries(READING_PRESETS[name]).every(([key, value]) => current[key] === value)) ?? 'custom';
+}
+
 export function readingStyle(preferences) {
   return Object.fromEntries(Object.entries(DEFAULT_READING_STYLE).map(([key, fallback]) => [key,
     READING_OPTIONS[key] ? (READING_OPTIONS[key].includes(preferences?.[key]) ? preferences[key] : fallback)

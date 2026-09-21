@@ -162,7 +162,7 @@ step. Development signing must remain valid for the app to keep launching.
 - Tap the left/right side of the paper to go back/forward. Tap the middle to
   show/hide controls; Aa opens Reading settings. Forward navigation after the
   final prose page opens choices; selecting a choice remains an explicit action.
-- Aa → Page movement offers Animated (default) or Instant, saved per book.
+- Aa → Controls → Page movement offers Animated (default) or Instant, saved per book.
   Instant retains taps and swipes, committing completed swipes on release without
   a turning leaf. Short/cancelled swipes stay on the current page. Reduce Motion
   takes precedence and disables animation even when Animated is selected.
@@ -173,8 +173,8 @@ step. Development signing must remain valid for the app to keep launching.
   their existing purpose. When zoomed in, the reader yields horizontal panning
   to the browser; page gestures resume after returning to normal zoom.
 
-These controls use the bundled reader. Native Dynamic Type integration, a full
-physical VoiceOver audit, and optional iPhone haptics remain follow-up work.
+These controls use the bundled reader. Dynamic Type and optional iPhone haptics
+are integrated as described below; a full physical VoiceOver audit remains.
 Reduce Motion is already respected. The iPhone leaf fades once it crosses the
 binding, and its shadows disappear with it to avoid the reported edge sliver.
 
@@ -187,10 +187,19 @@ VoiceOver reads a continuous passage instead of offscreen page columns; standard
 VoiceOver gestures are left to iOS. Paragraph/character bookmarks are shared
 between continuous and paginated layouts.
 
-On supported iPhones, **Aa → Gentle page-turn vibration** enables optional soft
+On supported iPhones, **Aa → Controls → Gentle page-turn vibration** enables optional soft
 feedback after completed page turns. It defaults off and is saved per book.
 Unsupported devices hide the setting. No new permissions are requested.
 
 Before release, verify spoken order, headings, illustration controls, choices,
 settings and resumed reading with physical VoiceOver, and check the haptic feel
 on an iPhone. Browser fixtures cover layout/event handling, not sensory feedback.
+
+### Reading settings sections and presets
+
+Aa groups settings into Text, Page, and Controls. Text offers Classic (100%,
+serif, standard spacing, warm), Large Print (175%, bold sans serif, spacious,
+clear), and Night (115%, serif, relaxed, dark). Presets save atomically per book
+and preserve the reading anchor. Manual appearance changes show Custom. Page
+movement, pinned controls and haptics are independent of the presets. Existing
+readers retain their preferences until they choose a preset.

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { createEmptySave, migrateSave } from '../src/state/saveSchema.js';
 import { createGameSession } from '../src/state/gameSession.js';
 import { loadSave, startSavedGame, discardInvalidSave } from '../src/state/storage.js';
-import { readingTextScale, TEXT_SCALES, readingStyle, DEFAULT_READING_STYLE } from '../src/state/readingPreferences.js';
+import { readingTextScale, TEXT_SCALES, readingStyle, DEFAULT_READING_STYLE, READING_PRESETS, matchingReadingPreset } from '../src/state/readingPreferences.js';
 const link = { next_scene:'end' };
 const stories = Object.fromEntries(['a','b','c'].map(id=>[id,{id,scenes:{start:{choices:{1:link}},end:{ending:true}}}]));
 function fixture(initial = null) {
@@ -155,4 +155,42 @@ test('invalid comfort preferences and failed writes leave the saved adventure un
   assert.equal(restored.uiPrefs.boldText, true);
   assert.equal(restored.uiPrefs.pageMovement, 'instant');
   assert.equal(restored.currentSceneId, 'start');
+});
+
+test('presets persist together per book without changing navigation preferences or story state', () => {
+  const storage = fixture(), session = createGameSession(stories, storage);
+  start(session, 'a'); start(session, 'b'); session.continueGame('a');
+  session.updateReading({ readingPosition: { paragraph: 9, offset: 20 },
+    uiPrefs: { pageMovement: 'instant', pageHaptics: true, alwaysShowControls: true } });
+  for (const [name, preset] of Object.entries(READING_PRESETS)) {
+    const before = session.getSnapshot().save;
+    let writes = 0;
+    const write = storage.setItem.bind(storage);
+    storage.setItem = (...args) => { writes++; write(...args); };
+    assert.equal(session.updateReading({ uiPrefs: preset }).status, 'valid');
+    storage.setItem = write;
+    assert.equal(writes, 1);
+    const restored = createGameSession(stories, storage).continueGame('a').save;
+    assert.equal(matchingReadingPreset(readingTextScale(restored.uiPrefs), readingStyle(restored.uiPrefs)), name);
+    for (const key of ['readingPosition', 'currentSceneId', 'heroName', 'worldName', 'flags', 'inventory']) assert.deepEqual(restored[key], before[key]);
+    for (const key of ['pageMovement', 'pageHaptics', 'alwaysShowControls']) assert.equal(restored.uiPrefs[key], before.uiPrefs[key]);
+    assert.deepEqual(readingStyle(loadSave(stories, storage, 'b').save.uiPrefs), DEFAULT_READING_STYLE);
+  }
+  const raw = storage.getItem();
+  storage.fail = true;
+  assert.equal(session.updateReading({ uiPrefs: READING_PRESETS.large }).status, 'write_failed');
+  assert.equal(storage.getItem(), raw);
+  assert.equal(matchingReadingPreset(readingTextScale(session.getSnapshot().save.uiPrefs), readingStyle(session.getSnapshot().save.uiPrefs)), 'night');
+  storage.fail = false; session.retryPersistence();
+  const restored = loadSave(stories, storage).save;
+  assert.equal(matchingReadingPreset(readingTextScale(restored.uiPrefs), readingStyle(restored.uiPrefs)), 'large');
+});
+
+test('preset selection follows actual appearance and becomes custom after individual adjustment', () => {
+  assert.equal(matchingReadingPreset(1, DEFAULT_READING_STYLE), 'custom');
+  for (const [name, preset] of Object.entries(READING_PRESETS)) {
+    assert.equal(matchingReadingPreset(preset.textScale, { ...preset, pageMovement: 'instant' }), name);
+    assert.equal(matchingReadingPreset(preset.textScale, { ...preset, boldText: !preset.boldText }), 'custom');
+    assert.equal(matchingReadingPreset(2.25, preset), 'custom');
+  }
 });
