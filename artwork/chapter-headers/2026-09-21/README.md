@@ -5,7 +5,9 @@ existing Can Opener blueprint as the ink-and-pencil style reference. Built-in
 image generation was used in image-editing mode; no application AI feature was
 added. All source photographs are preserved byte-for-byte in `originals/`.
 
-Open `index.html` for the original/finished comparison gallery. Each illustration
+Open `index.html` for the current revised collection, or `first-pass.html` for
+the original/first-pass comparison gallery. The second pass, its prompts and
+notes are in `revision-2/`; earlier PNGs below remain unchanged. Each illustration
 is an RGBA PNG with transparency, approximately 1,024–1,225 pixels wide and
 1,284–1,536 pixels tall. Tap either image to inspect the full-resolution file.
 The original drawings' silhouettes, expressions and distinctive components guided

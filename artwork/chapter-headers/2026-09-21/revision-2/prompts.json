@@ -1,0 +1,134 @@
+{
+  "mode": "Built-in image_gen edit",
+  "assets": [
+    {
+      "number": 1,
+      "filename": "close-range-security-bot.png",
+      "prompt": "Use case: style-transfer. Revise a chapter illustration for Paths of Wonder. Image 1 is the previous illustration to EDIT; image 2 is the original notebook drawing for character identity and annotation content; image 3 is the Can Opener STYLE reference. User now authorizes artistic interpretation: professional published-book concept illustration, sophisticated confident navy-black pen contours, finely controlled graphite hatching, dimensional form and restrained color, not a literal children's sketch, not crayon scribbling, not cute chibi clipart, not glossy 3D. Preserve recognizable character features and identity. Full figure entirely inside canvas with ample margins. Genuinely transparent background with alpha, no paper rectangle, glow, haze or vignette. When annotations are specified, give the figure enough space and add large readable elegant handwritten navy callouts with thin arrows pointing accurately to the named components, in the spirit of the Can Opener reference. Include ONLY the specified words; no invented names, story text, headings, extra labels or watermark. Preserve the wheeled square-headed close-range security bot, antenna, wrench hand, taser stick, torso and chest panel. Change the wide happy grin to a narrow straight horizontal mouth grille with no upturned corners: calmly vigilant, not angry or cute. Refine mechanical joints and linework subtly, keeping this approved design. Add exactly these callouts: 'Antenna' to the beacon; 'Wrench hand' to the wrench; 'Taser stick' to the baton; 'Wheels' to the wheel base.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-bb0feb71-7b12-43c5-a393-db0815b35a46.png",
+      "size": [
+        1188,
+        1324
+      ],
+      "sha256": "62fb7afa7f8d5a5e072c316ef7c1c13dba226c74a67b38af2cc70d25ca8c4c56",
+      "references": [
+        "../close-range-security-bot.png",
+        "../originals/1-Photo-1.jpg",
+        "../../../../webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+      ]
+    },
+    {
+      "number": 2,
+      "filename": "long-range-security-bot.png",
+      "prompt": "Use case: style-transfer. Revise a chapter illustration for Paths of Wonder. Image 1 is the previous illustration to EDIT; image 2 is the original notebook drawing for character identity and annotation content; image 3 is the Can Opener STYLE reference. User now authorizes artistic interpretation: professional published-book concept illustration, sophisticated confident navy-black pen contours, finely controlled graphite hatching, dimensional form and restrained color, not a literal children's sketch, not crayon scribbling, not cute chibi clipart, not glossy 3D. Preserve recognizable character features and identity. Full figure entirely inside canvas with ample margins. Genuinely transparent background with alpha, no paper rectangle, glow, haze or vignette. When annotations are specified, give the figure enough space and add large readable elegant handwritten navy callouts with thin arrows pointing accurately to the named components, in the spirit of the Can Opener reference. Include ONLY the specified words; no invented names, story text, headings, extra labels or watermark. Preserve the long-range security bot: tapered oval helmet, dark rectangular eyes, outstretched arms with right taser blaster, wheeled feet and mechanical body. Replace curved smile with a FLAT straight short horizontal mouth, zero upward curve. Expression professionally alert and impassive. Refine linework slightly. Add exactly 'Taser blaster' pointing to the handheld weapon and 'Long-range vision & aiming systems' pointing to the eye sensors. Keep latter label legible across 3 lines; no extra labels.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-a4478f1f-319f-46b2-9317-077334375d55.png",
+      "size": [
+        1225,
+        1284
+      ],
+      "sha256": "1dc9199798bc071d104518aaf45fe20bc4cee94706fe335e0c85a5ff4d969c47",
+      "references": [
+        "../long-range-security-bot.png",
+        "../originals/2-Photo-2.jpg",
+        "../../../../webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+      ]
+    },
+    {
+      "number": 3,
+      "filename": "load-bot.png",
+      "prompt": "Use case: style-transfer. Revise a chapter illustration for Paths of Wonder. Image 1 is the previous illustration to EDIT; image 2 is the original notebook drawing for character identity and annotation content; image 3 is the Can Opener STYLE reference. User now authorizes artistic interpretation: professional published-book concept illustration, sophisticated confident navy-black pen contours, finely controlled graphite hatching, dimensional form and restrained color, not a literal children's sketch, not crayon scribbling, not cute chibi clipart, not glossy 3D. Preserve recognizable character features and identity. Full figure entirely inside canvas with ample margins. Genuinely transparent background with alpha, no paper rectangle, glow, haze or vignette. When annotations are specified, give the figure enough space and add large readable elegant handwritten navy callouts with thin arrows pointing accurately to the named components, in the spirit of the Can Opener reference. Include ONLY the specified words; no invented names, story text, headings, extra labels or watermark. Keep the approved load-bot character essentially unchanged, including smiling square head, 87% chest progress bar, forklift hands and omni-wheel base. Add callouts only, matching reference handwriting and arrows: 'Progress bar for jobs' pointing to chest display; 'Forklift hands' pointing to a fork; 'Omni wheels' pointing to wheel base. Internal display must remain exactly '87%'.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-706fe2bb-a979-4473-a387-9155f2d066b9.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "dbd4a144b3b4e6a2dab744994215e45c74a9275d3e3f486473c7353f973df883",
+      "references": [
+        "../load-bot.png",
+        "../originals/3-Photo-3.jpg",
+        "../../../../webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+      ]
+    },
+    {
+      "number": 4,
+      "filename": "small-blue-panel-robot.png",
+      "prompt": "Use case: style-transfer. Revise a chapter illustration for Paths of Wonder. Image 1 is the previous illustration to EDIT; image 2 is the original notebook drawing for character identity and annotation content; image 3 is the Can Opener STYLE reference. User now authorizes artistic interpretation: professional published-book concept illustration, sophisticated confident navy-black pen contours, finely controlled graphite hatching, dimensional form and restrained color, not a literal children's sketch, not crayon scribbling, not cute chibi clipart, not glossy 3D. Preserve recognizable character features and identity. Full figure entirely inside canvas with ample margins. Genuinely transparent background with alpha, no paper rectangle, glow, haze or vignette. When annotations are specified, give the figure enough space and add large readable elegant handwritten navy callouts with thin arrows pointing accurately to the named components, in the spirit of the Can Opener reference. Include ONLY the specified words; no invented names, story text, headings, extra labels or watermark. Develop this small robot into polished professional mechanical concept art, less blocky child drawing. Its blue headpiece is a SOLAR PANEL: a slightly tilted rigid metal-framed photovoltaic panel with a clearly regular grid of dark-blue individual cells, fine busbar lines and believable small mounting brackets. Keep the rounded head, square eye housings, compact gray body, chest oval zigzag emblem, bent arms and chunky feet; refine anatomical/mechanical connections, articulated elbows/knees and coherent volumes. Preserve identity but improve proportions, crisp fine detailed ink hatching rather than rough scribble. Friendly understated expression. Add single callout 'Solar panel' pointing to the head-mounted panel.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-9081d563-c5dc-46fe-a5d6-fd0eba427391.png",
+      "size": [
+        1199,
+        1312
+      ],
+      "sha256": "c874c62663aa97906a5988fc04454bf051f43b6a9cbf96b8fa158a36f1237d1c",
+      "references": [
+        "../small-blue-panel-robot.png",
+        "../originals/4-Photo-4.jpg",
+        "../../../../webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+      ]
+    },
+    {
+      "number": 6,
+      "filename": "construction-bot.png",
+      "prompt": "Use case: style-transfer. Revise a chapter illustration for Paths of Wonder. Image 1 is the previous illustration to EDIT; image 2 is the original notebook drawing for character identity and annotation content; image 3 is the Can Opener STYLE reference. User now authorizes artistic interpretation: professional published-book concept illustration, sophisticated confident navy-black pen contours, finely controlled graphite hatching, dimensional form and restrained color, not a literal children's sketch, not crayon scribbling, not cute chibi clipart, not glossy 3D. Preserve recognizable character features and identity. Full figure entirely inside canvas with ample margins. Genuinely transparent background with alpha, no paper rectangle, glow, haze or vignette. When annotations are specified, give the figure enough space and add large readable elegant handwritten navy callouts with thin arrows pointing accurately to the named components, in the spirit of the Can Opener reference. Include ONLY the specified words; no invented names, story text, headings, extra labels or watermark. The user called this construction bot perfect: preserve the approved round head, expression, oval cupboard torso, side arms, hammer and jet boots; do not redesign. Add exactly 'Holds tools' pointing to the cupboard door and 'Hammer' pointing to the hammer, using elegant handwritten notes and thin arrows. No other labels.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-296c91d4-c34b-4c19-9145-aafb2fc9fca9.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "f1a497b498f8df4db4c9041615e17253c03309d942ff46a9d40cf22fdc393405",
+      "references": [
+        "../construction-bot.png",
+        "../originals/6-Photo-6.jpg",
+        "../../../../webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+      ]
+    },
+    {
+      "number": 7,
+      "filename": "yellow-spiky-character.png",
+      "prompt": "Use case: style-transfer. Revise a chapter illustration for Paths of Wonder. Image 1 is the previous illustration to EDIT; image 2 is the original notebook drawing for character identity and annotation content; image 3 is the Can Opener STYLE reference. User now authorizes artistic interpretation: professional published-book concept illustration, sophisticated confident navy-black pen contours, finely controlled graphite hatching, dimensional form and restrained color, not a literal children's sketch, not crayon scribbling, not cute chibi clipart, not glossy 3D. Preserve recognizable character features and identity. Full figure entirely inside canvas with ample margins. Genuinely transparent background with alpha, no paper rectangle, glow, haze or vignette. When annotations are specified, give the figure enough space and add large readable elegant handwritten navy callouts with thin arrows pointing accurately to the named components, in the spirit of the Can Opener reference. Include ONLY the specified words; no invented names, story text, headings, extra labels or watermark. Reinterpret this yellow-crested alien as a more humanoid, professionally illustrated book character. Use the sketch as inspiration, not an exact tracing. Retain its defining two long curved eye stalks with expressive round eyes, jagged golden-yellow crest/mane, dark rounded nose, confident toothy expression, charcoal-gray body. Give it a clearly articulated humanoid torso, shoulders, two arms with elbows and expressive hands, hips, two longer legs with knees and feet; balanced standing pose and believable volume, approximately five-head-tall body proportions excluding crest. Reduce crest size relative to the body so it no longer overwhelms a tiny blob torso, but retain its distinct yellow silhouette and unusual eye stalks. Refined restrained smile, not an enormous cartoon grin. Fine pen-and-ink book engraving with delicate muted golden washes and precise tonal shading. No added clothes/accessories/weapons or background. No annotation text, because the original has no feature notes.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-23558b99-ff5d-428a-b456-fd19e230b872.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "38301b04ec5aaa7d581519043d78120330eadfccdedc89f77c7859c1e7aae41a",
+      "references": [
+        "../yellow-spiky-character.png",
+        "../originals/7-Photo-7.jpg",
+        "../../../../webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+      ]
+    },
+    {
+      "number": 8,
+      "filename": "blue-long-eared-character.png",
+      "prompt": "Use case: style-transfer. Revise a chapter illustration for Paths of Wonder. Image 1 is the previous illustration to EDIT; image 2 is the original notebook drawing for character identity and annotation content; image 3 is the Can Opener STYLE reference. User now authorizes artistic interpretation: professional published-book concept illustration, sophisticated confident navy-black pen contours, finely controlled graphite hatching, dimensional form and restrained color, not a literal children's sketch, not crayon scribbling, not cute chibi clipart, not glossy 3D. Preserve recognizable character features and identity. Full figure entirely inside canvas with ample margins. Genuinely transparent background with alpha, no paper rectangle, glow, haze or vignette. When annotations are specified, give the figure enough space and add large readable elegant handwritten navy callouts with thin arrows pointing accurately to the named components, in the spirit of the Can Opener reference. Include ONLY the specified words; no invented names, story text, headings, extra labels or watermark. Reinterpret this blue long-eared alien as a more humanoid, professionally illustrated book character, using the sketch as inspiration rather than tracing. Retain blue head and hands, very large swept horizontal ears with golden-yellow inner surfaces, distinctive broad gray oval nose, small dark chin/mouth mark, charcoal-gray clothed body. Give the face more dimensional cheek and brow forms and subtle expressive eyes, restrained calm expression. Give the body believable humanoid shoulders, articulated elbows and wrists, dexterous hands, torso and waist, long legs with discernible knees and grounded feet. Natural relaxed standing pose. Ears remain unusually large but shaped with anatomical folds and clean form. Refine the gray tunic and trousers with believable fabric folds, not rectangular tubes. Use fine precise ink and delicate crosshatching, muted blue and gold washes; sophisticated fantasy/scifi book illustration, not crayon or kids cartoon. No extra gear, props or backdrop; no annotations since original has no feature notes.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-340e055d-e9fc-49d1-b956-a13bb8ca98e1.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "8704c32788eadbd9f68cd6d2eb06713f5e991300c755531287ec29539e3d42f7",
+      "references": [
+        "../blue-long-eared-character.png",
+        "../originals/8-Photo-8.jpg",
+        "../../../../webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+      ]
+    },
+    {
+      "number": 9,
+      "filename": "tracked-solar-robot.png",
+      "prompt": "Use case: style-transfer. Revise a chapter illustration for Paths of Wonder. Image 1 is the previous illustration to EDIT; image 2 is the original notebook drawing for character identity and annotation content; image 3 is the Can Opener STYLE reference. User now authorizes artistic interpretation: professional published-book concept illustration, sophisticated confident navy-black pen contours, finely controlled graphite hatching, dimensional form and restrained color, not a literal children's sketch, not crayon scribbling, not cute chibi clipart, not glossy 3D. Preserve recognizable character features and identity. Full figure entirely inside canvas with ample margins. Genuinely transparent background with alpha, no paper rectangle, glow, haze or vignette. When annotations are specified, give the figure enough space and add large readable elegant handwritten navy callouts with thin arrows pointing accurately to the named components, in the spirit of the Can Opener reference. Include ONLY the specified words; no invented names, story text, headings, extra labels or watermark. The user loves this tracked solar robot: keep its approved design and pose essentially unchanged, including blue solar panel, camera eye, round speaker, forklift claws and separate tracked feet. Add ONLY these handwritten callouts with precise arrows: 'Solar panel (power)' to head panel; 'Camera eye' to lens; 'Speaker' to chest grille; 'Forklift claws' to hand, with '(can lift 200 pounds)' on next lines; 'Treads' to tracked feet. Keep all callouts readable, spaced around the complete robot with ample margins.",
+      "generatedFile": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-4f8e168b-3ca6-4ca2-a2eb-0bcaffc582cd.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "2f96d5f1dbb49b4683734874a7a0cfdd43c2e0cc7039c34443079a2ebb595bb2",
+      "layoutRepairPrompt": "Use case: precise-object-edit. Repair the layout of this annotated robot illustration: the callout text is cut off at the canvas edges. Expand/recompose into a generous LANDSCAPE 3:2 canvas, keeping the full robot smaller and centered, with large clear side margins for all labels. Keep the exact approved tracked solar robot design, colors, pose and fine pen/pencil rendering unchanged. Genuinely transparent background. Render ALL five handwritten navy callouts completely inside the canvas with at least 60 pixels clearance from every edge. Exact text: 'Solar panel (power)' above/right with arrow to blue panel; 'Camera eye' upper/right with arrow to eye; 'Speaker' middle/right with arrow to chest speaker; 'Forklift claws' at middle/left with '(can lift 200 pounds)' underneath on 2-3 lines and arrow to claw; 'Treads' lower/right with arrow to tracks. Avoid crossing figure unnecessarily. The complete text of every annotation must be visible and spelled correctly. No extra text or features. Prioritize broad framing and correct text placement over making the robot fill the canvas.",
+      "references": [
+        "../tracked-solar-robot.png",
+        "../originals/9-Photo-9.jpg",
+        "../../../../webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+      ]
+    }
+  ]
+}

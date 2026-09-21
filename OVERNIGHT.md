@@ -744,3 +744,21 @@ Awaiting Jeff's drawing-number-to-book/chapter assignments before adding these
 assets to the reader. Descriptive filenames are not canonical character names.
 No story files or existing images were modified, and unused art is kept outside
 the shipped bundle.
+
+## September 21 illustration feedback, second pass
+
+Applied Jeff's art direction: straighter mouths on the two security bots, a
+clearly constructed solar panel and refined joints on drawing 4, and more
+humanoid forms on 7 and 8. Restored original equipment notes with handwritten
+arrows on 1, 2, 3, 6 and 9; added the explicitly clarified solar-panel note to 4.
+Drawing 5 is retained unchanged. Approved forms of 3, 6 and 9 were retained while
+adding annotations. Drawing 9 uses a wider composition so no callout is cropped.
+
+Eight new transparent PNGs, full prompts and hashes are in
+artwork/chapter-headers/2026-09-21/revision-2. The existing gallery now displays
+the revised set and links to the preserved originals and first pass. A warm-paper
+detail page supports actual-size inspection, fit and PNG download. Visually
+reviewed the artwork and callouts; exercised phone/tablet layouts, rotation and
+zoom controls. All 39 existing protected story/public/Python/draft files, source
+photos and first-pass illustrations remain byte-for-byte unchanged. No shipped
+application code or content changed. Chapter assignments remain pending.
