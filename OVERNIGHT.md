@@ -543,3 +543,34 @@ report remains a possible separate task; unfinished story routes belong to
 Jeff's writing work and have not been edited.
 The update installed successfully over the existing iPhone app, preserving its
 local data. No uninstall was performed.
+
+## September 20 first complete story draft import
+
+Imported Jeff's supplied `files (5).zip` at his explicit request. The three live
+JSON files are byte-identical to the archive; matching Markdown files are kept
+in `drafts/2026-09-20-first-complete-draft/` with an import report and source hashes.
+No editorial changes, names, substitutions, titles, entry intros, choices, or
+route metadata were added or rewritten. Jeff's editorial pass remains pending.
+The Can Opener now has 70 scenes/110 choices/2 endings; The Space Walker has
+45/60/2; The Summoned Mage has 71/105/4: 186 scenes, 275 choices, 8 endings total.
+
+All scenes and endings are reachable; diagnostics now report zero errors and
+zero warnings. Verified all 569 supplied passage/intro/choice strings and 186
+scene titles against the Markdown, plus exact archive bytes for all six imported
+files. Twelve pre-existing Python, draft and public files are unchanged, including
+the Can Opener illustration. The previous f7a5d4e live-story baseline is superseded
+only by this user-authorized import; use the import manifest hashes for these
+three story files when verifying later presentation work.
+
+All 98 tests, lint, production build, signed iPhone Release build, 101-asset
+bundle verification and strict code-signing verification pass. Exercised all
+275 choice transitions through actual game sessions, all eight ending cleanups,
+name substitution across all 186 scenes, and save validation at all 44 prior
+scene IDs. Existing saves remain readable; some IDs contain revised scenes or
+now continue beyond earlier draft endings. Favorite snapshots remain independent.
+
+Browser preview checks cover landscape iPhone 667x375, iPad 1024x768, portrait
+390x844, 225% reading text, rotation, pagination and ending controls. Confirmed
+an imported Space Walker scene, a Mage ending, and the Can Opener's new route
+from Rush to the Crash through the supplied axe choice to The Axe Blade. The
+existing adventure bookmark remained available throughout author-preview checks.

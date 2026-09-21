@@ -1,0 +1,3507 @@
+# The Can Opener
+
+Story ID: the_can_opener
+
+Start scene: scene_001
+
+## Description
+
+A high-tech neighborhood hero story about a kid inventor, broken robots, and one very badly named tool.
+
+## Setup prompt
+
+What is the name of your neighborhood? 
+
+---
+
+## scene_001 — Getting Home
+
+### Passage
+
+The garage door opens, and there you stand in front of your tools.
+
+Home.
+
+After walking through the wreckage of {world_name}, it feels good to be back in the garage.
+
+You unsling your backpack, toss it onto the table, and unzip it.
+
+“Got some good stuff today,” you say.
+
+“That is great, sir. What did you get?”
+
+The voice comes from your computer: your trusty AI assistant and friend, Droider.
+
+“Well, Droider, I got some storage drives, scrap metal I can melt down for other uses, a few chips, and the real win here…”
+
+You reach into your bag and hold up a glowing power core.
+
+“One of the robot’s power cores.”
+
+“Now those sound like real wins, sir,” Droider says. “Can you hook up the drives to me so I can analyze the data?”
+
+“You got it, bud.”
+
+You walk over to Droider, unsling the trusty monkey wrench you always carry on your belt, and set it on the desk beside you. Then you connect the storage drives.
+
+“Check these against the others we’ve found before,” you say. “See if they still have that same strange code attached.”
+
+Just as you finish the sentence, you hear a commotion outside.
+
+What do you do next?
+
+### Choices
+
+#### Choice 1
+
+Rush outside to see what is going on
+
+```json
+{
+  "next_scene": "scene_002"
+}
+```
+
+#### Choice 2
+
+Check your security cameras to see what is happening outside
+
+```json
+{
+  "next_scene": "scene_003"
+}
+```
+
+#### Choice 3
+
+Ignore it and keep working on the data
+
+```json
+{
+  "next_scene": "scene_004"
+}
+```
+
+---
+
+## scene_002 — Rush Outside
+
+### Passage
+
+You rush to open the garage door, hearing something scraping around outside your home.
+
+“Be careful, sir,” Droider says. “It sounds like another bot.”
+
+As you get outside, you see what is causing the problem.
+
+A bot is going haywire, spinning in all directions and smashing into anything nearby.
+
+You reach down for your wrench, but realize you took it off your belt.
+
+“Dang it. First thing next time.”
+
+You look around and notice a few landscaping rocks in the yard.
+
+Not ideal, but it will have to work.
+
+The bot has already done so much damage to itself that it looks like it is on its last legs. If you can hit its central eye, you might be able to disable it.
+
+You grab a rock, aim carefully, and throw.
+
+Direct hit.
+
+The red eye light flickers.
+
+You throw a second rock, knocking the robot over. Its eye light goes dark.
+
+You approach slowly, making sure it will not reboot.
+
+Looks like you got it.
+
+A fully assembled robot this close to home?
+
+Jackpot.
+
+You run inside, grab your hand truck, and haul the robot into the garage.
+
+Once it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Droider.
+
+“Hey, Droider. Run diagnostics on this guy. It might be the best data we’ll ever get.”
+
+“Understood, sir,” Droider replies.
+
+You start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.
+
+“Droider, how long until the diagnostic is done?”
+
+“About twelve hours, sir. This bot has a lot of data to crawl through.”
+
+“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”
+
+### Choices
+
+#### Choice 1
+
+Grab some copper wire first
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "copper_wire"
+}
+```
+
+#### Choice 2
+
+Pull out your grinder
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "grinder_work"
+}
+```
+
+#### Choice 3
+
+Grab the power core
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "power_core"
+}
+```
+
+---
+
+## scene_003 — Security Cameras
+
+### Passage
+
+You run over to your security station and check the cameras.
+
+Outside, a bot is going haywire, spinning in all directions and smashing into anything nearby.
+
+You reach down for your wrench and realize you took it off your belt.
+
+Luckily, it is sitting right there on the table.
+
+You grab it and head outside.
+
+That is when you see the bot spinning away from you, completely out of control and destroying everything in its path.
+
+So you do what any kid would do.
+
+You rush it with your wrench overhead.
+
+As you get close, you swing down with all your might and smash the dome of the bot, stopping it dead in its tracks.
+
+You give it a little kick to make sure it is out.
+
+Looks like you got it.
+
+A fully assembled robot this close to home?
+
+Jackpot.
+
+You run inside, grab your hand truck, and haul the robot into the garage.
+
+Once it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Droider.
+
+“Hey, Droider. Run diagnostics on this guy. It might be the best data we’ll ever get.”
+
+“Understood, sir,” Droider replies.
+
+You start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.
+
+“Droider, how long until the diagnostic is done?”
+
+“About twelve hours, sir. This bot has a lot of data to crawl through.”
+
+“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”
+
+### Choices
+
+#### Choice 1
+
+Grab some copper wire first
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "copper_wire"
+}
+```
+
+#### Choice 2
+
+Pull out your grinder
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "grinder_work"
+}
+```
+
+#### Choice 3
+
+Grab the power core
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "power_core"
+}
+```
+
+---
+
+## scene_004 — Focused Work
+
+### Passage
+
+You are so focused on your work that you completely ignore the noise outside.
+
+Then something smashes into the garage door.
+
+That wakes you up.
+
+“Oh man. What’s happening, Droider? What hit the door?”
+
+“Well, sir,” Droider says, “it appears to be a bot outside. You should grab your wrench and stop it before it destroys our lab.”
+
+You quickly grab your wrench off the table and open the door.
+
+That is when you see it.
+
+A bot is spinning away from you, completely haywire and destroying everything in its path.
+
+So you do what any kid would do.
+
+You rush it with your wrench.
+
+As you get close, you swing with all your might and smash the dome of the bot, stopping it dead in its tracks.
+
+You give it a little kick to make sure it is out.
+
+Looks like you got it.
+
+A fully assembled robot this close to home?
+
+Jackpot.
+
+You run inside, grab your hand truck, and haul the robot into the garage.
+
+Once it is inside, you grab your wrench and get to work taking it apart. The insides are mostly intact, so you hook some cables directly into Droider.
+
+“Hey, Droider. Run diagnostics on this guy. It might be the best data we’ll ever get.”
+
+“Understood, sir,” Droider replies.
+
+You start prying off the arms and legs, adding them to your parts and scrap pile. You pull out the copper wiring for a project later and toss the extra metal into the collection bin.
+
+“Droider, how long until the diagnostic is done?”
+
+“About twelve hours, sir. This bot has a lot of data to crawl through.”
+
+“Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”
+
+### Choices
+
+#### Choice 1
+
+Grab some copper wire first
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "copper_wire"
+}
+```
+
+#### Choice 2
+
+Pull out your grinder
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "grinder_work"
+}
+```
+
+#### Choice 3
+
+Grab the power core
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "power_core"
+}
+```
+
+---
+
+## scene_005 — Building The Can Opener
+
+### Scene metadata
+
+```json
+{
+  "image": {
+    "src": "/images/stories/the_can_opener/can_opener_blueprint.jpg",
+    "alt": "Blueprint diagram of The Can Opener, labeling the wrench body, hammer face, energy axe blade, power core, insulated copper wire, and pry bar"
+  }
+}
+```
+
+### Entry intro: copper_wire
+
+You uncoil the copper wire and look at the wrench.
+
+You know exactly where this should go.
+
+### Entry intro: grinder_work
+
+You power up the grinder and toss on your goggles.
+
+Time to make some adjustments.
+
+### Entry intro: power_core
+
+You pick up the power core. It is still glowing with a dull blue light.
+
+This is going to be perfect for what you have planned.
+
+### Passage
+
+Piece by piece, the invention comes together.
+
+A heavy monkey wrench body.
+
+A prybar end.
+
+A reinforced hammer face.
+
+Copper coils under silicone insulation.
+
+A salvaged power core.
+
+A hidden cutter built into the jaws.
+
+You twist the handle.
+
+For one second, nothing happens.
+
+Then the coils glow.
+
+The wrench head shifts with a sharp mechanical click, and a crackling energy edge snaps into place across the front like an axe made of lightning.
+
+You stare at it.
+
+“It works,” you whisper.
+
+Then you think about what to call it.
+
+After a long moment, you nod proudly.
+
+“The Can Opener.”
+
+A beat passes.
+
+“I mean, robots are basically cans with legs, right, Droider?”
+
+Outside, something crashes in the street.
+
+You grab The Can Opener and run.
+
+### Choices
+
+#### Choice 1
+
+Rush straight toward the crash
+
+```json
+{
+  "next_scene": "scene_006"
+}
+```
+
+#### Choice 2
+
+Climb to the roof first to see what is happening
+
+```json
+{
+  "next_scene": "scene_007"
+}
+```
+
+---
+
+## scene_006 — Rush to the Crash
+
+### Passage
+
+You run into the street and see a corrupted robot smashing into parked cars, streetlights, and storefront shutters.
+
+It is a Construction Bot. Big, square, and yellow, with a scoop for one arm and a jackhammer for the other. It is supposed to fix roads. Right now it is un-fixing one.
+
+Its eye light flickers red, then blue, then red again, like it is arguing with itself.
+
+The Can Opener feels heavy in your hands.
+
+The robot turns.
+
+You have one chance to act.
+
+“Sir,” Droider calls from the garage speakers, “may I suggest doing something?”
+
+“Working on it!”
+
+### Choices
+
+#### Choice 1
+
+Twist the handle and attack with the energy axe
+
+```json
+{
+  "next_scene": "scene_008",
+  "entry_intro": "from_street"
+}
+```
+
+#### Choice 2
+
+Flip it around and attack with the hammer face
+
+```json
+{
+  "next_scene": "scene_009"
+}
+```
+
+---
+
+## scene_007 — Rooftop View
+
+### Passage
+
+You climb the ladder on the side of the garage and look out over {world_name}.
+
+More than one robot is moving through the streets.
+
+They are not wandering randomly.
+
+They seem to be following a signal.
+
+Then you spot it: a blinking drone hovering high above the block. It just hangs there, watching.
+
+“Weird,” you mutter.
+
+Right below you, a big yellow Construction Bot swings its jackhammer arm into a streetlight. The light topples over with a crunch. The bot is heading straight for Mrs. Ruiz’s corner market.
+
+You need to do something, and fast.
+
+### Choices
+
+#### Choice 1
+
+Jump onto the rampaging bot
+
+```json
+{
+  "next_scene": "scene_010"
+}
+```
+
+#### Choice 2
+
+Power up the axe blade and rush in
+
+```json
+{
+  "next_scene": "scene_008",
+  "entry_intro": "from_roof"
+}
+```
+
+#### Choice 3
+
+Head inside and grab the shield prototype
+
+```json
+{
+  "next_scene": "scene_011"
+}
+```
+
+---
+
+## scene_008 — The Axe Blade
+
+### Entry intro: from_street
+
+You twist the handle. The coils glow and the energy edge snaps to life with a crackle.
+
+### Entry intro: from_roof
+
+You slide down the ladder, hit the ground running, and twist the handle. The energy edge snaps to life with a crackle.
+
+### Passage
+
+The Construction Bot swings its scoop arm at you. You duck, and it takes out a mailbox instead.
+
+“Sorry, mailbox!”
+
+You swing The Can Opener up. The energy edge slices clean through the elbow joint, and the scoop arm clangs to the pavement.
+
+The bot spins, confused. You see your opening: a panel on its back, right between the shoulders.
+
+One more swing. The blade cuts the panel wide open, sparks fly, and the robot slowly sinks down onto its treads like it is sitting down for a nap.
+
+Its eye light fades from angry red to a soft blue, then goes dark.
+
+You stand there breathing hard, holding a glowing wrench-axe in the middle of the street.
+
+“It worked,” you say. “It actually worked!”
+
+Then the blade flickers and shuts off on its own. The handle is hot.
+
+“Sir,” Droider says, “the power draw on that blade is enormous. I would not count on more than a minute at a time.”
+
+Good to know. Would have been better to know a minute ago.
+
+### Choices
+
+#### Choice 1
+
+Head inside to check on Droider’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "after_fight"
+}
+```
+
+#### Choice 2
+
+Survey the destroyed bot
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+---
+
+## scene_009 — The Hammer
+
+### Passage
+
+You flip The Can Opener around so the reinforced hammer face leads the way.
+
+The Construction Bot raises its jackhammer arm. You do not wait for it to come down.
+
+WHAM.
+
+You hit it square in the knee joint. The whole bot wobbles.
+
+WHAM.
+
+The second swing dents the housing around its treads, and one side locks up. Now it can only drive in circles, which would be funny if it were not also swinging a jackhammer.
+
+You time it. Circle. Circle. There.
+
+You bring the hammer down on the power housing behind its head. Something inside goes pop, and the bot rolls to a stop against the curb.
+
+Its eye light fades from angry red to a soft blue, then goes dark.
+
+Your arms feel like noodles.
+
+“Excellent form, sir,” Droider says. “Very little of the street was harmed.”
+
+You look at the knocked-over streetlight and the flattened mailbox.
+
+“That was the bot, not me.”
+
+“Of course, sir.”
+
+### Choices
+
+#### Choice 1
+
+Head back inside to check on Droider’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "after_fight"
+}
+```
+
+#### Choice 2
+
+Survey the destroyed bot
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+---
+
+## scene_010 — Jump onto the Bot
+
+### Passage
+
+This is a bad idea. You do it anyway.
+
+You take three running steps across the garage roof and jump.
+
+You land on top of the Construction Bot with a clang that rattles your teeth. The bot lurches and starts spinning, trying to shake you off.
+
+“Sir!” Droider shouts from the garage speakers. “That is not a recognized safety procedure!”
+
+“I know!”
+
+You hang on with one hand and jam the prybar end of The Can Opener under the panel behind its head. You lean on it with everything you have.
+
+The panel pops off.
+
+Inside, you see a nest of wires and one fat cable labeled MAIN POWER. Thank you, whoever labels things.
+
+You clamp the wrench jaws around it and pull.
+
+The bot stops spinning. It sinks down onto its treads, and its eye light fades from angry red to a soft blue before going dark.
+
+You slide off its back and land on shaky legs.
+
+Tool first. Weapon second. Just like you planned it.
+
+Mostly.
+
+### Choices
+
+#### Choice 1
+
+Survey the destroyed bot
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+#### Choice 2
+
+Head back inside to check on Droider’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "after_fight"
+}
+```
+
+---
+
+## scene_011 — Grab the Shield Prototype
+
+### Passage
+
+You scramble back down the ladder and into the garage.
+
+“Droider, where’s the shield thing?”
+
+“The unfinished energy shield, sir? Under the pizza box. I would like to remind you that it is unfinished.”
+
+You grab it from the workbench. It is ugly, unstable, and held together with tape, but it might work. It is a flat metal disc with a handle on the back and a power pack wired to the side.
+
+You run outside with the shield on one arm and The Can Opener in the other hand.
+
+The Construction Bot sees you and charges, jackhammer arm raised.
+
+You flip the switch.
+
+The shield flickers to life just in time, a wobbly circle of blue light about as wide as a trash can lid.
+
+Now what?
+
+### Choices
+
+#### Choice 1
+
+Attack, using the shield to get in close
+
+```json
+{
+  "next_scene": "scene_014"
+}
+```
+
+#### Choice 2
+
+Defend, and let the bot wear itself out
+
+```json
+{
+  "next_scene": "scene_015"
+}
+```
+
+---
+
+## scene_012 — Check on Droider
+
+### Entry intro: after_fight
+
+You head back into the garage, still buzzing from the fight, and drop onto your stool.
+
+### Entry intro: from_survey
+
+You carry the scratched-up tag inside and set it next to the keyboard.
+
+### Entry intro: after_defending
+
+You walk back into the garage with your arm still tingling and the shield tucked under it.
+
+### Passage
+
+“Welcome back, sir,” Droider says. “The deep diagnostic on our first bot still has hours to go. However, I have found something early.”
+
+A wall of code scrolls across the screen. One chunk of it is highlighted in red.
+
+“This is the strange code from the storage drives. It is also inside the bot you brought home. Same code, same spot, every single time.”
+
+“So it’s a glitch that keeps happening?”
+
+“That is the odd part, sir. Glitches are messy. This is tidy. It looks less like something that broke and more like something that was added.”
+
+You stare at the red block of code.
+
+Somebody did this? On purpose? To robots that were just supposed to fix roads and carry boxes?
+
+“Keep digging,” you say. “I want to know what it does.”
+
+“Understood, sir. In the meantime, may I point out that there will probably be more of them?”
+
+He is right. You need to be ready.
+
+### Choices
+
+#### Choice 1
+
+Go out and gather scrap from the bot in the street
+
+```json
+{
+  "next_scene": "scene_017"
+}
+```
+
+#### Choice 2
+
+Work on the shield prototype
+
+```json
+{
+  "next_scene": "scene_016",
+  "entry_intro": "from_droider"
+}
+```
+
+---
+
+## scene_013 — Survey the Destroyed Bot
+
+### Passage
+
+You crouch next to the Construction Bot and take a good look.
+
+Up close, it does not look scary. It looks old. The yellow paint is chipped, one tread is patched with a different color, and someone once stuck a smiley face sticker on its chest. The sticker is half peeled off.
+
+This bot fixed potholes for years. It did not ask to go haywire.
+
+“Sorry, big guy,” you say quietly.
+
+On its side you find a metal tag where the owner’s name should be. It has been scratched off. Not worn off. Scratched, with a tool, on purpose.
+
+You pry the tag loose and pocket it.
+
+Across the street, a curtain moves in the window above Mrs. Ruiz’s market. Somebody saw that whole fight.
+
+You pull your goggles down over your eyes and turn your face away. You are not doing this to get famous.
+
+Time to get off the street.
+
+### Choices
+
+#### Choice 1
+
+Head inside to check on Droider’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "from_survey"
+}
+```
+
+#### Choice 2
+
+Work on the shield prototype
+
+```json
+{
+  "next_scene": "scene_016",
+  "entry_intro": "from_survey"
+}
+```
+
+---
+
+## scene_014 — Shield Up, Charge!
+
+### Passage
+
+You tuck in behind the wobbly blue circle and run straight at the bot.
+
+The jackhammer arm comes down. The shield catches it with a sound like a giant bell, and you feel the hit all the way up to your shoulder.
+
+But it holds.
+
+You shove the jackhammer aside, slide in close, and swing the hammer face of The Can Opener into the bot’s knee joint. Then again. The bot tips, catches itself, and tips again.
+
+One more hit, right behind the head.
+
+The Construction Bot sinks down onto its treads. Its eye light fades from angry red to soft blue, then goes dark.
+
+You look at the shield. The blue light fizzles, pops, and dies. A piece of tape slowly peels off and floats to the ground.
+
+“It worked!” you tell Droider. “Once!”
+
+“A proud day, sir.”
+
+### Choices
+
+#### Choice 1
+
+Work on the shield so it lasts longer than one fight
+
+```json
+{
+  "next_scene": "scene_016",
+  "entry_intro": "from_shield_fight"
+}
+```
+
+#### Choice 2
+
+Survey the destroyed bot
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+---
+
+## scene_015 — Hold the Line
+
+### Passage
+
+You plant your feet and hold the shield up with both hands.
+
+The jackhammer arm slams into it. Then the scoop arm. Then the jackhammer again.
+
+Every hit makes the blue light ripple like a puddle, and every hit pushes you back a step. But the bot is already damaged, and it is burning through its power fast.
+
+Slam. Step. Slam. Step.
+
+“Sir, its power levels are dropping,” Droider says. “Also, so are the shield’s. I am not sure who is going to win this one.”
+
+“Not helping!”
+
+The bot winds up for one more swing, and then just stops. Its arms lower. Its eye light fades from angry red to soft blue, then goes dark.
+
+You never even had to hit it.
+
+A second later the shield fizzles out and a piece of tape peels off the side.
+
+Your arms are tingling up to the elbow.
+
+### Choices
+
+#### Choice 1
+
+Work on the shield so it can take more hits
+
+```json
+{
+  "next_scene": "scene_016",
+  "entry_intro": "from_shield_fight"
+}
+```
+
+#### Choice 2
+
+Head inside to check on Droider’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "after_defending"
+}
+```
+
+---
+
+## scene_016 — Work on the Shield
+
+### Entry intro: from_droider
+
+“If more bots are coming, I’m going to need more than a wrench,” you say, and you pull the shield prototype out from under the pizza box.
+
+### Entry intro: from_survey
+
+Back in the garage, you drop the scratched tag on the desk and pull the shield prototype out from under the pizza box. If more bots are coming, you are going to need it.
+
+### Entry intro: from_shield_fight
+
+You set the shield on the workbench. It is still warm, and it smells a little like burnt toast.
+
+### Passage
+
+You spend the next few hours on the shield.
+
+You swap the tape for actual bolts. Mostly. You rewire the power pack so it stops getting hot, and you add a second emitter so the blue circle is wider than a trash can lid.
+
+You flip the switch. The shield hums, flickers, holds for ten whole seconds, and shuts off.
+
+Better. Not good. Better.
+
+“It needs a steadier power source,” you say. “And a way to wear it so I still have both hands.”
+
+“May I offer an observation, sir?” Droider asks.
+
+“Go for it.”
+
+“You have a tool for things that are close to you. You are building a shield for things that hit you. What is your plan for things that are far away?”
+
+You open your mouth. You close it again.
+
+You do not have one.
+
+### Choices
+
+#### Choice 1
+
+Go out and look for parts to build something with range
+
+```json
+{
+  "next_scene": "scene_017"
+}
+```
+
+#### Choice 2
+
+Dig through the parts you already have
+
+```json
+{
+  "next_scene": "scene_018",
+  "entry_intro": "from_bench"
+}
+```
+
+---
+
+## scene_017 — Scrap Run
+
+### Passage
+
+You grab your backpack and head out into {world_name}.
+
+The bot in the street gives up some good parts: a handful of heavy springs, a pneumatic piston from the jackhammer arm, and a length of steel tube. You apologize to it again while you work. It seems like the polite thing to do.
+
+You keep going, all the way to the loading zone behind Mrs. Ruiz’s market.
+
+That is where you see it.
+
+A Load-Bot. It is shaped like a refrigerator with arms, built to carry crates off delivery trucks. Right now it is picking up crates of oranges and throwing them at a wall, one after another, like it is mad at the wall.
+
+Its eye light is the same flickering red.
+
+It has not noticed you. Your backpack is already full of exactly the parts you need.
+
+### Choices
+
+#### Choice 1
+
+Sneak home with your parts
+
+```json
+{
+  "next_scene": "scene_018",
+  "entry_intro": "from_scrap"
+}
+```
+
+#### Choice 2
+
+Get a closer look at the Load-Bot first
+
+```json
+{
+  "next_scene": "scene_019"
+}
+```
+
+---
+
+## scene_018 — Prototype Fails
+
+### Entry intro: from_bench
+
+You pull out every bin in the garage and start sorting. Springs. A steel tube. An old bike pump. This could work.
+
+### Entry intro: from_scrap
+
+You dump your backpack out on the workbench. Springs, a piston, a steel tube. This could work.
+
+### Entry intro: from_close_call
+
+You dump your backpack out on the workbench with hands that are still a little shaky. Springs, a piston, a steel tube. This has to work.
+
+### Passage
+
+The idea is simple. A launcher that straps to your wrist. You load something into the tube, the spring and piston fire it out, and a small coil wrapped around the barrel gives it an energy charge on the way.
+
+As for what to load it with, you look out at the yard.
+
+Landscaping rocks. They have not let you down yet.
+
+An hour later, you strap the prototype to your arm, aim at an empty paint can across the garage, and press the trigger.
+
+PANG.
+
+The rock goes straight up, punches a hole in the ceiling, and does not come back down.
+
+You and Droider both look at the hole.
+
+“I have added ‘ceiling’ to the list of things you have defeated, sir.”
+
+“The angle’s wrong. And the spring’s too strong. And maybe the coil is backwards.”
+
+“So just the angle, the spring, and the coil.”
+
+### Choices
+
+#### Choice 1
+
+Talk the design through with Droider
+
+```json
+{
+  "next_scene": "scene_020"
+}
+```
+
+#### Choice 2
+
+Forget talking. Add more power!
+
+```json
+{
+  "next_scene": "scene_021"
+}
+```
+
+---
+
+## scene_019 — Close Call
+
+### Passage
+
+You creep along the fence to get a better look.
+
+The Load-Bot is slow. Really slow. But when it grabs a crate, the wood creaks in its grip, and when it throws one, the crate explodes into splinters and oranges.
+
+Slow but strong. Got it.
+
+You take one more step and your foot lands on a rolling orange.
+
+You do not fall. You do yell “WHOA,” though, which is just as bad.
+
+The Load-Bot turns. It picks up a crate.
+
+“Run, sir,” Droider’s voice says from your phone. “That is my whole plan. Run.”
+
+You run. A crate smashes into the fence right behind you. Another one bursts on the pavement where you were standing a second ago.
+
+You do not stop until you are back in the garage with the door shut.
+
+So. The Can Opener only works if you are close enough to touch the bot. And you do not want to be anywhere near that thing’s hands.
+
+You really, really need something with range.
+
+### Choices
+
+#### Choice 1
+
+Dump out your backpack and start building
+
+```json
+{
+  "next_scene": "scene_018",
+  "entry_intro": "from_close_call"
+}
+```
+
+---
+
+## scene_020 — Talking It Through
+
+### Passage
+
+You pull your stool up to the screen, and Droider puts your sketch up next to the prototype.
+
+“Walk me through it, sir. Start where the rock goes in.”
+
+So you do. And saying it out loud, you hear the problems yourself.
+
+The barrel is loose, so it tips up when the spring fires. You bolt it to a wrist brace cut from an old shin guard.
+
+The coil is wired backwards, so it is pushing against the rock instead of with it. You flip it.
+
+And the spring does not need to be stronger. It needs to be smoother. You add the piston from the jackhammer arm to even out the push.
+
+“You know,” you say, tightening the last bolt, “you’re pretty good at this.”
+
+“I only asked questions, sir. You did the answering.”
+
+“Yeah, but they were good questions.”
+
+“Thank you, sir. I am adding that to my list as well.”
+
+### Choices
+
+#### Choice 1
+
+Strap it on and try again
+
+```json
+{
+  "next_scene": "scene_022",
+  "entry_intro": "talked"
+}
+```
+
+---
+
+## scene_021 — More Power
+
+### Passage
+
+More power fixes everything. Probably.
+
+You double the springs. You add a second coil. You wire the whole thing straight into a spare power cell and skip the part where you test it on low.
+
+“Sir, I would like it noted that I asked you to test it on low.”
+
+“Noted!”
+
+You aim at the paint can and press the trigger.
+
+The rock does not come out of the front. The entire launcher comes off your arm, flies backward across the garage, and sticks in the wall like a dart.
+
+The paint can has not moved.
+
+You stand there with an empty wrist brace and your hair sticking straight up.
+
+“Okay,” you say. “Less power.”
+
+“And perhaps some bolts, sir.”
+
+“And some bolts.”
+
+This time you do it right. You bolt the barrel to the brace. You flip the coil, which turns out to have been in backwards the whole time. You take the extra springs back out and add a piston to smooth the push.
+
+### Choices
+
+#### Choice 1
+
+Strap it on and try again
+
+```json
+{
+  "next_scene": "scene_022",
+  "entry_intro": "more_power"
+}
+```
+
+---
+
+## scene_022 — The Wrist Wrock-It
+
+### Entry intro: talked
+
+You strap the rebuilt launcher to your arm. It feels solid this time.
+
+### Entry intro: more_power
+
+You pull the launcher out of the wall, rebuild it, and strap it to your arm. It feels solid this time.
+
+### Passage
+
+You load a rock. You aim at the paint can. You breathe out and press the trigger.
+
+THWOOM.
+
+The rock leaves the barrel wrapped in crackling blue light, crosses the garage in a blink, and blasts the paint can clean off the shelf.
+
+You stare at your wrist.
+
+“YES!”
+
+“Congratulations, sir. What will you call it?”
+
+You think hard. This one has to be good.
+
+“It’s on my wrist. It fires rocks. And it rocks.” You nod proudly. “The Wrist Wrock-It. With a W.”
+
+Droider is quiet for a moment.
+
+“Where does the W go, sir?”
+
+“In front of ‘rock.’”
+
+“That is not where W’s go, sir.”
+
+“It’s staying.”
+
+You think about that Load-Bot behind the market, the one throwing crates of oranges at a wall. Mrs. Ruiz needs her loading zone back.
+
+### Choices
+
+#### Choice 1
+
+Test it on some scrap first
+
+```json
+{
+  "next_scene": "scene_023"
+}
+```
+
+#### Choice 2
+
+Take it straight into the field
+
+```json
+{
+  "next_scene": "scene_024",
+  "entry_intro": "untested"
+}
+```
+
+---
+
+## scene_023 — Target Practice
+
+### Passage
+
+You line up cans, a busted toaster, and a dented robot arm along the back fence.
+
+THWOOM. Can, gone.
+
+THWOOM. Toaster, gone.
+
+THWOOM. The robot arm spins off the fence and lands in the neighbor’s yard. You will get that later.
+
+You load a fourth rock and press the trigger.
+
+Click.
+
+Nothing. The coil is dark.
+
+“The charge coil is empty, sir,” Droider says. “By my count you get three charged shots. After that it needs about a minute to recharge.”
+
+“And without the charge?”
+
+“Without the charge, you are a child throwing rocks slightly harder than usual.”
+
+Three shots. Then a minute of waiting, which is a very long time when something is throwing crates at you.
+
+You fill your pockets with rocks anyway. Good to know the limits before they matter.
+
+### Choices
+
+#### Choice 1
+
+Head for the loading zone
+
+```json
+{
+  "next_scene": "scene_024",
+  "entry_intro": "practiced"
+}
+```
+
+---
+
+## scene_024 — Load-Bot in the Loading Zone
+
+### Entry intro: untested
+
+No time for testing. You fill your pockets with rocks and go.
+
+### Entry intro: practiced
+
+Three shots, then a minute to recharge. You repeat it to yourself the whole way there.
+
+### Passage
+
+The Load-Bot is still behind Mrs. Ruiz’s market. It has run out of oranges and moved on to watermelons.
+
+SPLAT.
+
+The wall looks like a fruit salad.
+
+You crouch behind a dumpster and watch. It is slow. It is strong. Its arms are as thick as your whole body, and there is a heavy armor plate across its chest.
+
+The back door of the market is dented in. If that bot gets inside, there will not be a market left.
+
+You have The Can Opener on your belt and The Wrist Wrock-It on your arm.
+
+### Choices
+
+#### Choice 1
+
+Charge in with The Can Opener
+
+```json
+{
+  "next_scene": "scene_025"
+}
+```
+
+#### Choice 2
+
+Stay back and open fire with The Wrist Wrock-It
+
+```json
+{
+  "next_scene": "scene_026",
+  "entry_intro": "opened_fire"
+}
+```
+
+---
+
+## scene_025 — Wrong Tool
+
+### Passage
+
+The Can Opener has not failed you yet. You twist the handle, the blade crackles to life, and you charge.
+
+The Load-Bot does not even swing at you. It just reaches out, grabs the wrench end of The Can Opener in one giant hand, and lifts.
+
+You are still holding on.
+
+“Put me down!”
+
+It does. By throwing you.
+
+You sail across the loading zone and land in a pile of empty cardboard boxes. The Can Opener lands next to you a second later.
+
+You lie there looking at the sky.
+
+“Are you injured, sir?” Droider asks from your phone.
+
+“Just my feelings.”
+
+“The Can Opener is a wonderful tool, sir. For that bot, it is the wrong tool. Its reach is longer than yours.”
+
+You climb out of the boxes and brush yourself off.
+
+Right. That is why you built the other thing.
+
+### Choices
+
+#### Choice 1
+
+Switch to The Wrist Wrock-It
+
+```json
+{
+  "next_scene": "scene_026",
+  "entry_intro": "after_throw"
+}
+```
+
+---
+
+## scene_026 — Heavier Than Expected
+
+### Entry intro: opened_fire
+
+You brace your arm on top of the dumpster, take aim at the chest plate, and fire.
+
+### Entry intro: after_throw
+
+You back way up, out of reach of those arms, take aim at the chest plate, and fire.
+
+### Passage
+
+THWOOM.
+
+The rock hits dead center in a burst of blue light. The Load-Bot rocks back on its heels.
+
+Then it rocks forward again and keeps coming.
+
+THWOOM. Another direct hit. Another stumble. There is a dent in the armor now, but that is all.
+
+“Sir, that chest plate is far thicker than the Construction Bot’s. You are not going to punch through it.”
+
+One shot left. You stop looking at where the bot is strong and start looking at where it is not.
+
+The knees. All that weight is sitting on two skinny knee joints.
+
+THWOOM.
+
+The rock smashes into the left knee. The joint buckles, and the Load-Bot drops to the pavement with a boom that sets off a car alarm.
+
+It is down, but it is not out. Its arms are still swinging, and your coil is empty.
+
+But it cannot reach behind itself.
+
+### Choices
+
+#### Choice 1
+
+Run in and finish the job with The Can Opener
+
+```json
+{
+  "next_scene": "scene_027"
+}
+```
+
+---
+
+## scene_027 — Two Tools, One Win
+
+### Passage
+
+You circle around behind the fallen Load-Bot, staying out of reach of those arms.
+
+There. A panel on its back.
+
+You jam the prybar end of The Can Opener under the edge and lean on it. The panel pops. You reach in with the wrench jaws, find the main power cable, and pull.
+
+The arms stop. The eye light fades from red to soft blue, then goes dark.
+
+You let out a long breath.
+
+The Wrist Wrock-It got it down. The Can Opener finished it. Neither one could have done it alone.
+
+“Two tools, one win, sir,” Droider says. “I believe that is what they call a loadout.”
+
+The dented back door of the market creaks open. Mrs. Ruiz peeks out, holding a broom like a sword. She looks at the bot. She looks at you, with your goggles down and a glowing thing on your wrist.
+
+“Whoever you are,” she calls, “thank you!”
+
+You freeze. You were hoping nobody would see you.
+
+### Choices
+
+#### Choice 1
+
+Wave and hurry home to build more
+
+```json
+{
+  "next_scene": "scene_029",
+  "entry_intro": "hurried_home"
+}
+```
+
+#### Choice 2
+
+Go make sure Mrs. Ruiz is okay
+
+```json
+{
+  "next_scene": "scene_028"
+}
+```
+
+---
+
+## scene_028 — The Shopkeeper
+
+### Passage
+
+You keep your goggles on and your voice low, which makes you sound like you have a cold.
+
+“Are you okay, ma’am?”
+
+“I’m fine. My watermelons are not.” Mrs. Ruiz lowers the broom. “That’s the third robot this month. Nobody comes when we call. They say {world_name} isn’t a priority.”
+
+She shakes her head.
+
+“And then that man shows up. Shiny suit, big smile, too many teeth. He says the neighborhood has gone downhill. He says he will buy my store, but for almost nothing, because who else would want it now?”
+
+She snorts.
+
+“I told him I’d think about it. I did think about it. The answer is no.”
+
+A man in a shiny suit, buying up stores for cheap, right after the robots show up. You tuck that away for later.
+
+Mrs. Ruiz ducks inside and comes back with a juice box.
+
+“Heroes need to stay hydrated,” she says, and pushes it into your hand.
+
+You are not sure you are a hero. You take the juice box anyway.
+
+### Choices
+
+#### Choice 1
+
+Head home and get back to work
+
+```json
+{
+  "next_scene": "scene_029",
+  "entry_intro": "from_market"
+}
+```
+
+---
+
+## scene_029 — A Shield Held Together with Tape
+
+### Entry intro: hurried_home
+
+You give Mrs. Ruiz an awkward wave and jog home before she can ask any questions.
+
+### Entry intro: from_market
+
+You finish the juice box on the walk home. Apple. Pretty good.
+
+### Passage
+
+Back in the garage, you open the big door to let some air in and put the shield prototype up on the workbench.
+
+It is still ugly. It is still unstable. It is still held together with more tape than you would like to admit. You have it half taken apart, with the emitter in one hand and a screwdriver in the other, when Droider speaks up.
+
+“Sir. Something is coming up the driveway.”
+
+You look up.
+
+It is smaller than the other bots, and much faster. It is sleek and black, with a flashing light on top and a buzzing stun prod on the end of each arm. The words MALL SECURITY are still stenciled on its side.
+
+A Close Range Security Bot. Its eye light flickers red.
+
+It rolls into the garage and stops between you and the rest of the room.
+
+The Can Opener is on the desk on the far side. The Wrist Wrock-It is on the charger next to it. The only thing within reach is a half-built shield.
+
+### Choices
+
+#### Choice 1
+
+Dive for The Can Opener
+
+```json
+{
+  "next_scene": "scene_030"
+}
+```
+
+#### Choice 2
+
+Grab the half-built shield
+
+```json
+{
+  "next_scene": "scene_031"
+}
+```
+
+#### Choice 3
+
+Yell for Droider to do something
+
+```json
+{
+  "next_scene": "scene_032"
+}
+```
+
+---
+
+## scene_030 — Cornered
+
+### Passage
+
+You fake left and dive right, sliding across the floor toward the desk.
+
+The Security Bot is faster. It zips sideways and blocks you, stun prods buzzing. One of them brushes your sleeve, and your whole arm goes tingly and numb, like you slept on it wrong.
+
+You scramble backward until your back hits the workbench.
+
+Cornered.
+
+“Sir, it was built to stop shoplifters,” Droider says. “It is very, very good at getting in the way.”
+
+The bot rolls closer. Your good hand feels around on the bench behind you and closes on the only thing there.
+
+The shield. Half built. Emitter hanging by two wires.
+
+You jam the emitter back into place, hold it there with your thumb, and swing the shield around in front of you.
+
+### Choices
+
+#### Choice 1
+
+Flip the switch and hope
+
+```json
+{
+  "next_scene": "scene_033",
+  "entry_intro": "cornered"
+}
+```
+
+---
+
+## scene_031 — Improvised Defense
+
+### Passage
+
+No time to be picky.
+
+You jam the emitter back into the shield, hold it in place with your thumb, and grab the handle. The power pack dangles by its wires. A screw rolls off the bench and pings across the floor.
+
+The Security Bot rolls forward, stun prods buzzing.
+
+“Sir, that device is currently in eleven pieces.”
+
+“It’s in ONE piece. I’m holding it together.”
+
+“With your thumb, sir.”
+
+“With my thumb!”
+
+The bot raises both prods.
+
+### Choices
+
+#### Choice 1
+
+Flip the switch and hope
+
+```json
+{
+  "next_scene": "scene_033",
+  "entry_intro": "grabbed"
+}
+```
+
+---
+
+## scene_032 — Droider’s Idea
+
+### Passage
+
+“DROIDER! DO SOMETHING!”
+
+“Doing something, sir.”
+
+Every light in the garage starts flashing at once. The radio turns on at full volume. The garage door starts going up and down, up and down. The electric pencil sharpener starts up for no reason.
+
+The Security Bot spins in a circle, trying to look at everything at the same time. It was built to react to alarms, and right now everything is an alarm.
+
+It buys you three seconds.
+
+You use them to grab the shield, jam the emitter back into place, and hold it there with your thumb.
+
+The bot figures out that the pencil sharpener is not a threat. It turns back to you and raises both stun prods.
+
+### Choices
+
+#### Choice 1
+
+Flip the switch and hope
+
+```json
+{
+  "next_scene": "scene_033",
+  "entry_intro": "distracted"
+}
+```
+
+---
+
+## scene_033 — Shield Cover Me
+
+### Entry intro: cornered
+
+With your back against the workbench and one arm still numb, you flip the switch.
+
+### Entry intro: grabbed
+
+You flip the switch.
+
+### Entry intro: distracted
+
+With the radio still blasting, you flip the switch.
+
+### Passage
+
+The shield flickers.
+
+It flickers again.
+
+Then a wide circle of blue light snaps open in front of you, just as both stun prods come down.
+
+BZZZZT.
+
+The prods skid off the light in a shower of sparks. It flickers. It holds.
+
+The bot hits it again. And again. You push forward behind the shield, one step at a time, but you cannot get around the bot, and you cannot fight with a shield and a thumb.
+
+“DROIDER! SHIELD! COVER ME!”
+
+“Registering device name,” Droider says calmly. “Shield Cover Me. Saved.”
+
+“What? No! That’s not the name! I was asking you to—”
+
+“Too late, sir. It is in the file.”
+
+The garage lights flash one more time, and the bot glances up. That is all you need. You shove past it, snatch The Can Opener off the desk, and hook the prybar under the panel on its back.
+
+Pop. Pull. Done.
+
+The Security Bot’s light fades from red to soft blue, then goes dark.
+
+You slide down to the floor with Shield Cover Me in your lap. It fizzles out.
+
+You have to admit, the name kind of fits.
+
+### Choices
+
+#### Choice 1
+
+Reinforce the shield so you never have to use your thumb again
+
+```json
+{
+  "next_scene": "scene_034"
+}
+```
+
+#### Choice 2
+
+Ask Droider to compare this bot’s code to the others
+
+```json
+{
+  "next_scene": "scene_035"
+}
+```
+
+---
+
+## scene_034 — Reinforce
+
+### Passage
+
+You are done holding things together with your thumb.
+
+You rebuild Shield Cover Me from the ground up. Real bolts. A proper housing for the emitter. A bigger power pack.
+
+And the best part: a harness. Instead of carrying the shield on your arm, you mount the emitter on a chest plate made from the Security Bot’s own armor. Tap the plate, and the blue circle opens up in front of you with both hands free.
+
+You try it. Tap. The shield opens, wide and steady.
+
+You count. Ten seconds. Twenty. Thirty. At forty, it starts to get warm, and you shut it off.
+
+“Forty seconds of cover, sir. A big improvement over one thumb.”
+
+“Shield Cover Me,” you say, trying it out. “I still can’t believe that’s the name.”
+
+“I think it is your best one, sir.”
+
+“You named it!”
+
+“As I said.”
+
+### Choices
+
+#### Choice 1
+
+Get some rest. Tomorrow you patrol.
+
+```json
+{
+  "next_scene": "scene_036",
+  "entry_intro": "reinforced"
+}
+```
+
+---
+
+## scene_035 — The Same Fingerprints
+
+### Passage
+
+You plug the Security Bot into Droider and wait.
+
+It does not take long.
+
+“Same code, sir. The same red block, in the same spot, as the Construction Bot and every drive you have brought home. But this one was not broken down in a junk pile. It was running. So I can see something new.”
+
+A line of numbers appears on the screen, ticking upward.
+
+“The code is listening. Several times a second, it checks for something from outside. Instructions, I think. This bot did not wander into our garage, sir. Something told it where to go.”
+
+A cold feeling settles in your stomach.
+
+“Can you tell where it’s coming from?”
+
+“Not from here. The garage walls block too much, and whatever it is, it is faint. I would need to be out there, close to a bot while it is still running.”
+
+You look at Droider’s big computer tower. It weighs more than you do.
+
+“That’s going to be a problem.”
+
+“Yes, sir. It is.”
+
+You patch up the shield as best you can before bed, but your mind is somewhere else.
+
+### Choices
+
+#### Choice 1
+
+Get some rest. Tomorrow you patrol.
+
+```json
+{
+  "next_scene": "scene_036",
+  "entry_intro": "analyzed"
+}
+```
+
+---
+
+## scene_036 — Pinned Down
+
+### Entry intro: reinforced
+
+The next afternoon, you head out with all three inventions for the first time. You feel ready for anything.
+
+### Entry intro: analyzed
+
+The next afternoon, you head out with all three inventions for the first time. If something is sending these bots, you want to see where they go.
+
+### Passage
+
+You are halfway down Main Street when a bright bolt of light zips past your ear and hits the bus stop sign behind you. The sign goes numb. You did not know a sign could do that.
+
+You dive behind a big blue mailbox.
+
+Up on the roof of the old bank, three stories up, a tall, skinny bot on spider legs is aiming a long barrel down at the street. PERIMETER DEFENSE is stenciled on its side. Its eye light flickers red.
+
+A Long Range Security Bot.
+
+ZAP. Another stun bolt hits the mailbox. Your fingers tingle right through the metal.
+
+“Sir, it has the high ground and a clear view of the whole street,” Droider says from your phone. “The Can Opener cannot reach it. I am not sure you can reach it.”
+
+Every time you peek out, it fires.
+
+### Choices
+
+#### Choice 1
+
+Fire back with The Wrist Wrock-It
+
+```json
+{
+  "next_scene": "scene_037"
+}
+```
+
+#### Choice 2
+
+Put up Shield Cover Me and charge the bank
+
+```json
+{
+  "next_scene": "scene_038"
+}
+```
+
+---
+
+## scene_037 — Drains Fast
+
+### Passage
+
+You lean out, aim high, and fire.
+
+THWOOM. The rock smashes into the edge of the roof, a foot below the bot. Brick dust rains down.
+
+ZAP. You duck back. Too far to aim well, and it shoots faster than you do.
+
+THWOOM. Closer. You clip one of its spider legs, and it wobbles.
+
+THWOOM. It skitters sideways, and your last charged rock sails over the bank and out of sight.
+
+Click.
+
+Empty. One whole minute to recharge.
+
+The bot does not need a minute. ZAP. ZAP. ZAP. The mailbox is starting to smoke.
+
+You have the best rock launcher in {world_name}, and it just is not enough.
+
+### Choices
+
+#### Choice 1
+
+Get out of there
+
+```json
+{
+  "next_scene": "scene_039",
+  "entry_intro": "out_of_shots"
+}
+```
+
+---
+
+## scene_038 — Forty Seconds
+
+### Passage
+
+You tap your chest plate, the blue circle opens in front of you, and you run for the bank.
+
+ZAP. ZAP. ZAP.
+
+Every bolt splashes off the shield. It is working! You make it across the street. You make it to the front steps.
+
+The doors are chained shut.
+
+You run along the wall, looking for a way up. No ladder. No fire escape on this side. Just three stories of smooth steel siding.
+
+The shield is getting warm against your chest. Thirty seconds. Thirty-five.
+
+“Sir, the shield is about to—”
+
+Fzzt. The blue light dies.
+
+You are standing in the open, at the bottom of a wall you cannot climb, with a bot directly above you.
+
+It leans over the edge and looks down at you.
+
+### Choices
+
+#### Choice 1
+
+Get out of there
+
+```json
+{
+  "next_scene": "scene_039",
+  "entry_intro": "shield_out"
+}
+```
+
+---
+
+## scene_039 — First Real Loss
+
+### Entry intro: out_of_shots
+
+You wait for the gap between shots, and you run.
+
+### Entry intro: shield_out
+
+You do not wait to see what it does next. You run.
+
+### Passage
+
+Stun bolts chase you all the way down the block. One catches your heel, and you run the last stretch with a foot that feels like it belongs to somebody else.
+
+You duck into an alley and look back.
+
+With nothing left to aim at, the bot turns on the street itself. It zaps the bus stop. It zaps a parked car until the alarm gives up. It zaps the bench where old Mr. Kim sits to feed the pigeons, again and again, until the bench falls apart.
+
+You could not stop it. You could not even get close.
+
+Back in the garage, you drop onto your stool and do not say anything for a while.
+
+“Sir?”
+
+“I lost, Droider.”
+
+“You retreated, sir. It is a different thing. Losing is when you do not come back.” He pauses. “Are you planning to come back?”
+
+You look at the three inventions on the bench. Every one of them worked. Every one of them also ran out.
+
+You wipe your nose on your sleeve.
+
+“Yeah. I’m coming back.”
+
+### Choices
+
+#### Choice 1
+
+Figure out what went wrong
+
+```json
+{
+  "next_scene": "scene_040"
+}
+```
+
+---
+
+## scene_040 — Two Ideas
+
+### Passage
+
+You pull out a marker and write on the garage wall, because you ran out of paper a long time ago.
+
+PROBLEM 1: Couldn’t get to it.
+
+The bot was three stories up. You were stuck on the ground. More firepower would not have fixed that. You need to get to places you cannot get to now.
+
+PROBLEM 2: Couldn’t see it coming.
+
+Droider is the smartest one on the team, and he was stuck in the garage, listening through a phone in your pocket. He could not see the bot. He could not tell you when it was about to fire. And if somebody really did add that code on purpose, the only place he can learn more is out there, next to a bot that is still running.
+
+You tap the marker against your chin.
+
+“I don’t need a bigger blaster. I need to move better, and I need you with me.”
+
+“I would like that very much, sir. I have never been outside.”
+
+Two ideas. Boots that can climb, and a Droider you can carry.
+
+### Choices
+
+#### Choice 1
+
+Start with getting Droider into the field
+
+```json
+{
+  "next_scene": "scene_041",
+  "entry_intro": "droider_first"
+}
+```
+
+#### Choice 2
+
+Start with the boots
+
+```json
+{
+  "next_scene": "scene_041",
+  "entry_intro": "boots_first"
+}
+```
+
+---
+
+## scene_041 — Miniaturizing Droider
+
+### Entry intro: droider_first
+
+Droider first. If he can see what you see, everything else gets easier.
+
+### Entry intro: boots_first
+
+You start sketching boots with magnets in the soles. Ten minutes later, you are stuck.
+
+“I need to calibrate these while I’m wearing them, out on real metal. And you can’t see my feet from in here.”
+
+“I cannot, sir. I can barely see the workbench.”
+
+So, Droider first.
+
+### Passage
+
+It is harder than you expected.
+
+Droider lives in a computer tower the size of a mini fridge. You need him to fit on your face.
+
+You cannot shrink his whole brain, so you do not try. The big brain stays in the garage. What you build is a way for him to come along: a tiny camera and display in a single lens that clips over your goggles, an earbud so he can talk to you, and a signal booster made from the Security Bot’s antenna.
+
+The first version melts. The second version works, but only plays polka music. You do not know why, and neither does Droider.
+
+The third version clicks into place over your right eye. A little blue ring lights up in the corner of your vision.
+
+“Testing,” says a voice in your ear. “Sir, I can see the garage. I can see the workbench. Sir, is that what the back of my tower looks like? It is so dusty.”
+
+“Welcome to the team, Droider Portable.”
+
+“That is simply a description of what I am, sir.”
+
+“Yep. That’s how names work.”
+
+### Choices
+
+#### Choice 1
+
+Test it around the garage first
+
+```json
+{
+  "next_scene": "scene_042"
+}
+```
+
+#### Choice 2
+
+Take Droider outside
+
+```json
+{
+  "next_scene": "scene_043",
+  "entry_intro": "straight_out"
+}
+```
+
+---
+
+## scene_042 — A New Perspective
+
+### Passage
+
+You walk slowly around the garage so Droider can get used to it.
+
+“Sir, please turn left. No, my left. No, I suppose we share a left now. How strange.”
+
+You look at the ceiling.
+
+“That is the hole from the first rock, sir! I have only ever seen it from below and to the side. It is much bigger than I thought.”
+
+You look down at your shoes.
+
+“Whoa. Sir, is this what being tall feels like?”
+
+“I’m not that tall, Droider.”
+
+“You are much taller than a desk, sir.”
+
+You jump up and down a few times, just to see what happens.
+
+“Please never do that again.”
+
+You grin. For the first time since the bank, you feel a little better.
+
+### Choices
+
+#### Choice 1
+
+Okay. Time to take him outside.
+
+```json
+{
+  "next_scene": "scene_043",
+  "entry_intro": "after_garage"
+}
+```
+
+---
+
+## scene_043 — First Field Test
+
+### Entry intro: straight_out
+
+No point testing in the garage. The whole idea is to get him out of it.
+
+### Entry intro: after_garage
+
+Droider has seen the whole garage now, twice. Time for the real thing.
+
+### Passage
+
+You open the garage door and step out into the evening.
+
+Droider does not say anything for almost a full minute.
+
+“Sir,” he says at last, very quietly. “The sky is so much bigger than the camera made it look.”
+
+You let him look for a while.
+
+Then the little blue ring in your vision blinks, and a box draws itself around something high above the rooftops.
+
+“Sir. Two o’clock, high. Do you see that?”
+
+You squint. A tiny blinking light, hanging perfectly still in the sky.
+
+“It’s that drone. I saw it from the roof before.”
+
+“It is not a delivery drone, sir. Those move. This one has been in that exact spot since we came outside. It is watching the neighborhood.”
+
+You would have walked right under it. You have walked right under it, who knows how many times.
+
+“Good eyes, Droider.”
+
+“They are your eyes, sir. I am only borrowing one.”
+
+The drone is too high to reach. For now. One more thing to build.
+
+### Choices
+
+#### Choice 1
+
+Get to work on the boots
+
+```json
+{
+  "next_scene": "scene_044"
+}
+```
+
+---
+
+## scene_044 — Magnet Boot Testing
+
+### Passage
+
+The idea: powerful electromagnets in the soles of your boots, run off a power core on each ankle. Walk up to a metal wall, switch them on, and keep walking.
+
+You build them out of your old rain boots, the magnet coils from the Load-Bot’s lifting arms, and a lot of wire. They are heavy and they look ridiculous.
+
+“Okay, Droider. Test one.”
+
+You switch them on.
+
+CLANG.
+
+Your left foot shoots sideways and sticks to the refrigerator. Your right foot stays stuck to a steel plate on the floor. You are now doing the splits, which is a thing you did not know you could do and would like to stop doing.
+
+“Sir, the magnets appear to be working.”
+
+“Too well! They’re working too well!”
+
+A wrench slides across the workbench and sticks to your left ankle. Then a screwdriver. Then a handful of bolts.
+
+“You are collecting tools at an impressive rate, sir.”
+
+### Choices
+
+#### Choice 1
+
+Yank your foot free
+
+```json
+{
+  "next_scene": "scene_045",
+  "entry_intro": "yanked"
+}
+```
+
+#### Choice 2
+
+Ask Droider to help you cut the power
+
+```json
+{
+  "next_scene": "scene_045",
+  "entry_intro": "cut_power"
+}
+```
+
+---
+
+## scene_045 — The Stompers
+
+### Entry intro: yanked
+
+You pull as hard as you can. Your foot pops out of the boot, and you fall over in one sock. The boot stays stuck to the fridge.
+
+### Entry intro: cut_power
+
+“The switch on your left ankle, sir. No, the other switch.” You finally find it, and everything stuck to you clatters to the floor at once.
+
+### Passage
+
+Lesson learned. The magnets cannot just be ON. You need control.
+
+You add a dial for strength, so you can stick to a wall without collecting every tool in the room. Then you add a switch you can hit by clicking your heels together, so your hands stay free.
+
+And then, because you are curious, you wire in a way to flip the magnets backward. Instead of pulling toward metal, they push away from it.
+
+You stand on the steel floor plate and click your heels.
+
+BOING.
+
+You shoot four feet straight up, yell, and land on the workbench on your rear end.
+
+You sit there for a second. Then you start laughing.
+
+“Attract and repel,” you say. “Stick to walls. Jump off metal. These are going to change everything.”
+
+“And their name, sir? I am ready.”
+
+You look down at the big, clunky, wonderful boots.
+
+“The Stompers.”
+
+A pause.
+
+“Sir, that is actually a good name.”
+
+“I know! I don’t know what happened!”
+
+You look out the garage door toward Main Street. There is a bot on top of a bank that you owe a visit.
+
+### Choices
+
+#### Choice 1
+
+Go back to the bank
+
+```json
+{
+  "next_scene": "scene_046"
+}
+```
+
+---
+
+## scene_046 — Rematch
+
+### Passage
+
+The Long Range Security Bot is still on the roof of the old bank. The street below is empty. Nobody has dared to walk down it all day.
+
+You crouch behind the same blue mailbox. This time, you are not alone.
+
+“I have it, sir,” Droider says in your ear. A red box draws itself around the bot in your vision. “It charges for two seconds before each shot. I can see the barrel glow. I will tell you when to move.”
+
+ZAP. A bolt hits the mailbox.
+
+“Now, sir. Two seconds. Go!”
+
+You sprint across the street and flatten yourself against the side of the bank. Three stories of smooth steel siding. Last time, this was the end of the road.
+
+You look down at The Stompers.
+
+Steel siding.
+
+You start to grin.
+
+### Choices
+
+#### Choice 1
+
+Walk straight up the wall and come at it from behind
+
+```json
+{
+  "next_scene": "scene_047"
+}
+```
+
+#### Choice 2
+
+Repel-jump to the building next door and come across the rooftops
+
+```json
+{
+  "next_scene": "scene_048"
+}
+```
+
+---
+
+## scene_047 — Up the Wall
+
+### Passage
+
+You turn the dial, put one boot flat against the wall, and hear it clunk into place. Then the other.
+
+You are standing sideways on a building.
+
+“Do not look down, sir.”
+
+You look down.
+
+“Sir.”
+
+“I know, I know!”
+
+Clunk. Clunk. Clunk. You walk up the wall one heavy step at a time, keeping to the corner where the bot cannot lean out far enough to aim at you. It knows you are somewhere. It keeps zapping the mailbox, just in case.
+
+You reach the top and peek over the edge. The bot has its back to you, with all of its spider legs braced against the front of the roof.
+
+You click your heels to let go of the wall, roll onto the roof, and pull The Can Opener off your belt.
+
+### Choices
+
+#### Choice 1
+
+Finish it
+
+```json
+{
+  "next_scene": "scene_049",
+  "entry_intro": "up_the_wall"
+}
+```
+
+---
+
+## scene_048 — Rooftop Run
+
+### Passage
+
+There is a steel dumpster in the alley next to the bank. You climb on top, flip The Stompers to repel, and click your heels.
+
+BOING.
+
+You shoot up past the first floor, grab the fire escape on the building next door, and scramble up to the roof.
+
+Now there is a gap between you and the bank. It is wider than you would like.
+
+“Sir, there is a metal air vent at the edge of this roof,” Droider says. A green box lights it up in your vision. “If you hit it at a run, I will tell you when to click.”
+
+You back up. You run.
+
+“Now!”
+
+BOING. You fly across the alley with your arms windmilling and land on the bank roof in a heap.
+
+The bot swings its barrel around toward you. The tip starts to glow.
+
+“Two seconds, sir!”
+
+You tap your chest. Shield Cover Me snaps open, and the bolt splashes off it. You are already running.
+
+### Choices
+
+#### Choice 1
+
+Finish it
+
+```json
+{
+  "next_scene": "scene_049",
+  "entry_intro": "across_the_roofs"
+}
+```
+
+---
+
+## scene_049 — Full Loadout
+
+### Entry intro: up_the_wall
+
+The bot never sees you coming.
+
+### Entry intro: across_the_roofs
+
+You cross the roof behind the shield before it can charge another shot.
+
+### Passage
+
+THWOOM. One charged rock takes out a spider leg, and the bot tips sideways. You slide in under the barrel, hook the prybar under its back panel, and pop it.
+
+Pull.
+
+The Long Range Security Bot folds its legs, lowers its barrel, and goes still. Its eye light fades from red to soft blue.
+
+“Wait, sir. Do not let it go dark yet. Hold it right there.”
+
+You keep one hand on the cable.
+
+“It is still listening. And from up here, with nothing in the way, I can finally hear what it is listening to.” His voice gets excited, which almost never happens. “Sir, it is a signal. A real one. All of the bots have been getting orders, and I can hear where they come from.”
+
+You look out over {world_name} from the roof. The Can Opener. The Wrist Wrock-It. Shield Cover Me. Droider Portable. The Stompers. Every single one of them got you here.
+
+The bot’s light goes dark.
+
+“I lost it, sir. But I know which way it came from, and I know what it sounds like now. We can find it.”
+
+No more waiting for bots to come to you.
+
+### Choices
+
+#### Choice 1
+
+Track the blinking drone from the rooftops
+
+```json
+{
+  "next_scene": "scene_050"
+}
+```
+
+#### Choice 2
+
+Follow the trail this bot took to get here
+
+```json
+{
+  "next_scene": "scene_051"
+}
+```
+
+#### Choice 3
+
+Have Droider work out the location from all the wreckage data
+
+```json
+{
+  "next_scene": "scene_052"
+}
+```
+
+---
+
+## scene_050 — Rooftop Route
+
+### Passage
+
+The drone is still up there, blinking away.
+
+“It has to go home to recharge sometime, sir.”
+
+So you wait. You eat a granola bar on the roof of the bank. The sun starts to go down.
+
+Finally, the drone turns and drifts east.
+
+You follow it across the rooftops. Stick, walk, click, jump. The Stompers clunk across metal roofs and air vents, and Droider calls out every gap before you get to it. You only almost fall twice.
+
+The drone leads you to the very edge of the neighborhood, where the houses stop and the old factories begin. It sinks down out of the sky toward one building in particular, and disappears through a hatch in the roof.
+
+### Choices
+
+#### Choice 1
+
+Get a closer look
+
+```json
+{
+  "next_scene": "scene_053",
+  "entry_intro": "followed_drone"
+}
+```
+
+---
+
+## scene_051 — Following the Trail
+
+### Passage
+
+Those spider legs left scratches all over the pavement, and Droider can pick them out even in the fading light. A thin red line appears in your vision, leading away down the street.
+
+You follow it backward. Past the bus stop. Past the park. East, toward the edge of the neighborhood.
+
+On the way, you start to notice the signs.
+
+There is one in front of the old bakery. One on the empty lot. One on the fence outside a house with a robot-shaped dent in the porch. They are all the same, bright gold with a smiling face on them.
+
+SOLD! ANOTHER FINE PROPERTY RESCUED BY GRABBS GRAND DEVELOPMENTS.
+
+“Sir, I count nine of those signs on this street alone. Every one is next to robot damage.”
+
+You do not know who Grabbs is. But you are starting to get a very bad feeling about him.
+
+The trail leaves the houses behind and heads in among the old factories. It ends at the gate of one building in particular.
+
+### Choices
+
+#### Choice 1
+
+Get a closer look
+
+```json
+{
+  "next_scene": "scene_053",
+  "entry_intro": "followed_trail"
+}
+```
+
+---
+
+## scene_052 — Triangulation
+
+### Passage
+
+You climb down and head back to the garage, where Droider’s big brain can do the heavy lifting.
+
+“I know the direction the signal came from at the bank,” he says. “Now, every bot you have brought home kept a record of how strong the signal was, and where the bot was at the time. If I put them all on a map...”
+
+A map of {world_name} appears on the screen. One by one, circles appear on it. One for the Construction Bot. One for the Load-Bot. One for the Security Bot. A dozen more for all the storage drives you have collected.
+
+The circles overlap in one small spot at the eastern edge of the neighborhood, out where the old factories are.
+
+“There, sir. I cannot tell you who. But I can tell you where.”
+
+You take a picture of the map with your phone. Then you remember that Droider is on your face now, and you feel a little silly.
+
+You head out as the sun goes down. The spot on the map turns out to be one building in particular.
+
+### Choices
+
+#### Choice 1
+
+Get a closer look
+
+```json
+{
+  "next_scene": "scene_053",
+  "entry_intro": "triangulated"
+}
+```
+
+---
+
+## scene_053 — A Destination
+
+### Entry intro: followed_drone
+
+You creep to the edge of the nearest roof and look down.
+
+### Entry intro: followed_trail
+
+You duck behind a rusty truck across the street and look.
+
+### Entry intro: triangulated
+
+You find a spot behind a rusty truck across the street and look.
+
+### Passage
+
+It is the old cannery. It has been closed since before you were born. It is supposed to be empty.
+
+It is not empty.
+
+There are lights on inside. A brand new fence runs around the whole lot, and a brand new antenna tower sticks up from the roof, humming. Behind the fence, flatbed trucks are parked in a row, and every one of them is stacked with old, broken robots.
+
+“Sir. That antenna. That is where the signal is coming from.”
+
+On the gate is a big gold sign with a smiling face on it.
+
+GRABBS GRAND DEVELOPMENTS. MAKING YOUR NEIGHBORHOOD MINE! The word “MINE” has been crossed out by hand, and “BETTER” is written above it.
+
+You stare at it for a long moment.
+
+“He didn’t even get a new sign.”
+
+“It would seem not, sir.”
+
+### Choices
+
+#### Choice 1
+
+Move in closer
+
+```json
+{
+  "next_scene": "scene_054"
+}
+```
+
+---
+
+## scene_054 — Drone Spotted
+
+### Passage
+
+You are halfway to the fence when Droider hisses in your ear.
+
+“Drone, sir! Coming back around. Hide!”
+
+There is nowhere to hide. It is an open lot. There is nothing but a metal awning over the loading dock.
+
+A metal awning.
+
+You run, jump, click your heels, and The Stompers clang onto the underside of the awning. You hang there upside down like a bat, holding your breath, with your backpack dangling under you.
+
+The drone hums past, right below you. It is close enough that you can see the camera lens turning, and close enough to read the gold letters printed on its side.
+
+PROPERTY OF M. GRABBS. IF FOUND, IT IS STILL MINE.
+
+It scans the empty lot, sees nothing, and floats up through the hatch in the roof.
+
+You let out your breath.
+
+“Sir,” Droider whispers, “you have a granola bar wrapper falling out of your pocket.”
+
+You catch it with two fingers. That was too close.
+
+It is not just a signal. Somebody is watching the whole neighborhood, and now you know his name.
+
+### Choices
+
+#### Choice 1
+
+Sneak past the checkpoint at the gate
+
+```json
+{
+  "next_scene": "scene_055"
+}
+```
+
+#### Choice 2
+
+Look for a quieter way in around the side
+
+```json
+{
+  "next_scene": "scene_056"
+}
+```
+
+---
+
+## scene_055 — Past the Checkpoint
+
+### Passage
+
+There is a Load-Bot standing guard at the gate. This one is not haywire. Its eye light is a steady, calm red, and it turns its head slowly from side to side.
+
+“That one is under direct control, sir. Not confused. Working.”
+
+You watch it. Left. Right. Left. Right. It takes six seconds to turn its head all the way around.
+
+“Count me in, Droider.”
+
+“Three. Two. One. Go.”
+
+You slip through the gate behind its back and duck between two flatbed trucks. Rows of broken bots lie stacked on either side of you, waiting their turn. Some still have their old stickers on them. HAPPY HELPER. CITY PARKS DEPT. ASK ME FOR DIRECTIONS!
+
+A door opens somewhere, and a loud voice echoes across the lot.
+
+“No, no, NO! I said I wanted MORE robots going haywire on Elm Street, not FEWER! Do I have to do everything myself?”
+
+You freeze against the truck. Footsteps come closer. Stop. Then go away again.
+
+You count to ten, and then you slip through the open door.
+
+### Choices
+
+#### Choice 1
+
+See what is inside
+
+```json
+{
+  "next_scene": "scene_057",
+  "entry_intro": "through_gate"
+}
+```
+
+---
+
+## scene_056 — The Side Window
+
+### Passage
+
+You circle around the side of the cannery, keeping to the shadows.
+
+There are no doors on this side. But there is a window on the second floor with a light on, and a steel drainpipe running right up next to it.
+
+Clunk. Clunk. Clunk. Up you go.
+
+You peek in. It is an office. There is a huge desk, a huge chair, and a huge painting of a man in a shiny suit shaking hands with himself. There is nobody inside.
+
+You pry the window open with The Can Opener. Tool first.
+
+You climb in and land on carpet so thick that you sink into it.
+
+“Sir, there is a computer on that desk, and it is unlocked. There is a sticky note on the screen. It says ‘Password: password.’”
+
+“He didn’t even need it. He left himself logged in.”
+
+“This is the man who has been beating us, sir?”
+
+“Let’s not tell anyone.”
+
+### Choices
+
+#### Choice 1
+
+See what he is hiding
+
+```json
+{
+  "next_scene": "scene_057",
+  "entry_intro": "through_window"
+}
+```
+
+---
+
+## scene_057 — The Scheme Confirmed
+
+### Entry intro: through_gate
+
+Inside, a set of stairs leads up to an office with a huge desk, a huge chair, and a huge painting of a man in a shiny suit shaking hands with himself. Nobody is home. The computer is unlocked.
+
+### Entry intro: through_window
+
+You sit down in the huge chair. Your feet do not touch the floor.
+
+### Passage
+
+It is all there. He kept a list. He actually kept a list, and he named the file MY SECRET PLAN (SECRET).
+
+“Step one,” you read out loud. “Buy old broken robots, cheap. Step two. Dump robots in the neighborhood. Step three. Upload my special virus so they go bonkers. Step four. Everyone gets scared. Prices go DOWN. Step five. Buy the ENTIRE neighborhood for pocket change. Step six. Knock it all down and build Grabbs Grand Plaza. Step seven. I am RICH. Richer, I mean. I am already rich.”
+
+There is a map of {world_name} with a gold star on every property he has bought, and a red X on the ones he wants next.
+
+Mrs. Ruiz’s market has a red X on it. So does your street.
+
+Your hands are shaking a little, and it is not because you are scared.
+
+“Those bots never did anything wrong,” you say. “The people here never did anything wrong. He’s wrecking all of it so he can get a good deal.”
+
+“I have copied everything, sir. Every file.”
+
+Downstairs, a door slams, and that loud voice starts up again.
+
+### Choices
+
+#### Choice 1
+
+Get out while you can, and make a plan
+
+```json
+{
+  "next_scene": "scene_058"
+}
+```
+
+---
+
+## scene_058 — The Man in the Shiny Suit
+
+### Passage
+
+The next morning, there is a little stage set up in the town square, with gold balloons on it.
+
+You stand at the back of the crowd with your hood up.
+
+A man bounces up the steps. Shiny suit. Big smile. Too many teeth.
+
+“Hello, hello, HELLO, {world_name}! Maximilian Grabbs, of Grabbs Grand Developments! You know me! You love me!”
+
+Nobody claps. He claps for himself.
+
+“I have been hearing about these terrible, awful, no-good robot attacks. Who could be behind them? Nobody knows! It is a mystery! And that is why I, out of the goodness of my heart, am offering to buy every single home and business in this neighborhood. For a very fair price!”
+
+He reaches for his note cards and drops them. They scatter all over the stage. He picks one up and reads it.
+
+“‘Do not mention the antenna.’ Ha ha! Ignore that! That one’s not for you!”
+
+Mrs. Ruiz, near the front, folds her arms.
+
+Standing behind the stage, as still as statues, are two security bots with steady red eyes.
+
+“That is him, sir,” Droider says in your ear.
+
+“Yeah,” you whisper. “That’s him.”
+
+People around you are starting to mutter. Some of them look tired enough to say yes.
+
+This ends tonight.
+
+### Choices
+
+#### Choice 1
+
+Send the files to the police right now, then gear up
+
+```json
+{
+  "next_scene": "scene_059",
+  "entry_intro": "sent_now"
+}
+```
+
+#### Choice 2
+
+Gear up first, and set the files to send once you are inside
+
+```json
+{
+  "next_scene": "scene_059",
+  "entry_intro": "timed"
+}
+```
+
+---
+
+## scene_059 — Gearing Up
+
+### Entry intro: sent_now
+
+You send everything from a bench in the square. The list, the map, all of it. Subject line: PLEASE READ THIS ONE. “They will not get to it before tonight, sir,” Droider says. That is fine. You just need them to show up eventually.
+
+### Entry intro: timed
+
+“Set a timer, Droider. The second we’re inside that cannery tonight, send every file to the police.” “Done, sir. Subject line?” “PLEASE READ THIS ONE.”
+
+### Passage
+
+You spend the rest of the day getting ready.
+
+You charge everything. You put a fresh power core in The Can Opener, the very best one you have. You fill your pockets with landscaping rocks.
+
+Then you lay it all out on the workbench and check it twice.
+
+The Can Opener. For close up.
+
+The Wrist Wrock-It. Three shots, then a minute.
+
+Shield Cover Me. Forty seconds.
+
+The Stompers. Attract and repel.
+
+Droider Portable. He clicks into place over your eye.
+
+“Sir, may I say something?”
+
+“Always.”
+
+“A few days ago, you had a wrench. I have watched you build every one of these, and I have watched you fall off, get stuck to, and get launched by most of them. I would not go out there with anyone else.”
+
+You have to clear your throat before you can answer.
+
+“Thanks, bud. Let’s go save the neighborhood.”
+
+You reach the cannery just after dark.
+
+### Choices
+
+#### Choice 1
+
+Go in through the front gate
+
+```json
+{
+  "next_scene": "scene_060"
+}
+```
+
+#### Choice 2
+
+Go over the roof with The Stompers
+
+```json
+{
+  "next_scene": "scene_061"
+}
+```
+
+---
+
+## scene_060 — The Front Gate
+
+### Passage
+
+The Load-Bot at the gate sees you this time. You let it.
+
+It stomps toward you. Behind it, a Construction Bot rolls out from between the trucks with its jackhammer raised.
+
+Two at once. You have never fought two at once.
+
+“The Load-Bot is slow, sir. Keep it between you and the other one.”
+
+Smart. You circle, and the Construction Bot cannot get around its big friend to reach you.
+
+THWOOM. Knee. The Load-Bot drops, right in the Construction Bot’s path. The Construction Bot plows straight into it, and the two of them go down in a tangle of arms and treads.
+
+You pop one panel. You pop the other. Pull. Pull.
+
+Both eye lights fade to soft blue.
+
+“Sorry, guys,” you say, and you mean it. “I’ll be back for you.”
+
+The cannery doors are wide open. Inside, something is humming.
+
+### Choices
+
+#### Choice 1
+
+Go inside
+
+```json
+{
+  "next_scene": "scene_062"
+}
+```
+
+---
+
+## scene_061 — Over the Roof
+
+### Passage
+
+Clunk. Clunk. Clunk. You walk up the back wall of the cannery and peek over the edge of the roof.
+
+The antenna tower is right there, humming. But so are its guards. A Long Range Security Bot is perched on top of the tower, and a Close Range Security Bot is rolling in circles around the bottom.
+
+One to pin you down. One to chase you out.
+
+“Two seconds per shot, sir. I will call them.”
+
+“Now!”
+
+You roll onto the roof and tap your chest. Shield Cover Me opens up just as the first bolt arrives. The Close Range Bot zips toward you, prods buzzing.
+
+You click your heels. BOING. You sail right over its head, and the bolt meant for you hits it instead. It spins around twice and sits down, numb.
+
+Pop. Pull. One down.
+
+THWOOM. THWOOM. Two spider legs. The Long Range Bot slides off the tower, and you are waiting for it at the bottom.
+
+Pop. Pull.
+
+Both eye lights fade to soft blue.
+
+“I’ll be back for you guys,” you tell them.
+
+There is a skylight in the roof, and light is pouring up through it.
+
+### Choices
+
+#### Choice 1
+
+Drop inside
+
+```json
+{
+  "next_scene": "scene_062"
+}
+```
+
+---
+
+## scene_062 — Almost Not Enough
+
+### Passage
+
+You land on the floor of the old cannery, and every light in the building comes on at once.
+
+The room is huge. At the far end is a machine the size of a school bus, covered in blinking lights, with thick cables running up to the antenna.
+
+Standing between you and the machine is one of every kind of bot. Construction Bot. Load-Bot. Close Range. Long Range. Their eyes are a steady red.
+
+“Oh, come on,” you say.
+
+It is the hardest fight of your life.
+
+THWOOM, THWOOM, THWOOM, and The Wrist Wrock-It is empty. Shield Cover Me holds off the Long Range Bot for forty seconds, and then it is gone too. You get the Construction Bot with the axe blade, but the blade flickers out before you can turn around.
+
+You back up against a steel pillar, breathing hard, holding a wrench.
+
+Three bots left. Nothing charged. Just like the bank, except that this time there is nowhere to run.
+
+“Sir,” Droider says quietly. “You still have your boots. And you still have me.”
+
+### Choices
+
+#### Choice 1
+
+Use The Stompers to pull them off balance
+
+```json
+{
+  "next_scene": "scene_063",
+  "entry_intro": "stompers"
+}
+```
+
+#### Choice 2
+
+Trust Droider to pick the perfect moment
+
+```json
+{
+  "next_scene": "scene_063",
+  "entry_intro": "droider"
+}
+```
+
+---
+
+## scene_063 — Breaking Through
+
+### Entry intro: stompers
+
+The floor is steel. The bots are steel. You turn the dial on The Stompers all the way to the top, the one setting you have never dared to use, and you flip them to attract. The Close Range Bot’s wheels go out from under it. It slides across the floor toward you, faster and faster. You step aside, and it slams into the Load-Bot’s knees.
+
+### Entry intro: droider
+
+“Do not move, sir. Wait. Wait.” The Long Range Bot’s barrel glows. The Close Range Bot lunges. “NOW. Left!” You dive left. The stun bolt hits the Close Range Bot square in the chest, and it skids, numb and spinning, straight into the Load-Bot’s knees.
+
+### Passage
+
+The Load-Bot topples like a tree, right on top of the Long Range Bot’s spider legs.
+
+It all happens in about three seconds. Then it is very quiet.
+
+You go from one to the next. Pop. Pull. Pop. Pull. Pop. Pull. Three red lights fade to blue.
+
+You lean on The Can Opener and try to remember how breathing works. Everything hurts. Everything is out of power.
+
+But you are standing, and they are not.
+
+From somewhere above you comes the sound of slow clapping.
+
+“Well, well, WELL,” says a loud voice.
+
+### Choices
+
+#### Choice 1
+
+Look up
+
+```json
+{
+  "next_scene": "scene_064"
+}
+```
+
+---
+
+## scene_064 — Confrontation
+
+### Passage
+
+Maximilian Grabbs is standing on a metal walkway above the big machine. He is wearing a gold bathrobe over his shiny suit, and he is holding a remote control with exactly one button on it.
+
+“So YOU are the little pest who has been breaking my robots! Do you know how much those cost? Almost nothing! But it is the PRINCIPLE!”
+
+He sweeps his arm out over the machine.
+
+“Behold! The Neighborhood Improver 3000! One signal, and every rusty robot in this dump goes absolutely bananas! Prices go down! I swoop in! Everybody sells! It is the perfect plan, and nobody can prove a thing!”
+
+“You kept a list,” you say. “It was called MY SECRET PLAN.”
+
+“Because it is SECRET! It says so right in the name!”
+
+He keeps going. He is telling you about the fountain he wants to build in Grabbs Grand Plaza. It will be shaped like him.
+
+While he talks, you look past him.
+
+Behind the walkway, at the heart of the machine, is a wall of glowing terminals. The control tower. Every cable in the building runs into it.
+
+You look down at The Can Opener. The best power core you own is still sitting in it, untouched. You have never dared to let all of it out at once. It would drain the tool completely. Maybe for good.
+
+You think of every eye light you have watched fade from angry red to soft blue.
+
+### Choices
+
+#### Choice 1
+
+Let him keep talking while you charge it up
+
+```json
+{
+  "next_scene": "scene_065",
+  "entry_intro": "kept_talking"
+}
+```
+
+#### Choice 2
+
+Tell him it is over
+
+```json
+{
+  "next_scene": "scene_065",
+  "entry_intro": "its_over"
+}
+```
+
+---
+
+## scene_065 — Charging the Discharge
+
+### Entry intro: kept_talking
+
+“...and the water will come out of my ears, which I think is very tasteful,” Grabbs is saying.
+
+### Entry intro: its_over
+
+“It’s over, Mr. Grabbs,” you say. He laughs so hard that he has to hold on to the railing. “Over? You’re a CHILD! With a WRENCH!”
+
+### Passage
+
+You twist the handle of The Can Opener. Then you keep twisting, past the click, and past the second click that you put there so you would never do this by accident.
+
+The coils go from blue to white. The wrench head opens wide. Lightning starts to crawl up and down the handle, and every hair on your arms stands up. The whole cannery fills with a rising hum.
+
+“Sir, this will empty the core completely,” Droider says. “The Can Opener will be powerless after this.”
+
+“I know.”
+
+You raise it.
+
+Grabbs stops laughing. He freezes.
+
+“Wait! You wouldn’t dare!”
+
+Your eyes shift past him, toward the glowing control tower.
+
+“You’re right,” you say. “I wouldn’t.”
+
+### Choices
+
+#### Choice 1
+
+Fire
+
+```json
+{
+  "next_scene": "scene_066"
+}
+```
+
+---
+
+## scene_066 — Precision
+
+### Passage
+
+The blast shoots past Maximilian Grabbs, close enough to ruffle his bathrobe, and hits the control tower dead center.
+
+For a second, the whole room is as bright as noon.
+
+Every terminal goes dark at once. The Neighborhood Improver 3000 makes a sound like a very large balloon letting go, and its lights go out row by row.
+
+On the roof, the antenna stops humming.
+
+And all across {world_name}, in alleys and empty lots and the middle of Elm Street, every haywire robot slows down, lowers its arms, and stops. Hundreds of flickering red lights fade to a soft, calm blue.
+
+The Can Opener is dark in your hands. No glow. No hum. Just a big, heavy wrench again.
+
+Grabbs looks at the smoking machine. He looks at you. His face goes from white, to pink, to purple.
+
+“THAT WAS PRIVATE PROPERTY!”
+
+He stomps his foot, and a slipper flies off.
+
+“You tried to VAPORIZE me!”
+
+“I was aiming at your computer.”
+
+“THAT’S EVEN WORSE!”
+
+He throws his remote control on the floor and jumps on it. He pulls off his other slipper and throws that too. It does not go very far.
+
+Somewhere outside, getting closer, you hear sirens.
+
+### Choices
+
+#### Choice 1
+
+Time to go
+
+```json
+{
+  "next_scene": "scene_067"
+}
+```
+
+---
+
+## scene_067 — Police Arrive
+
+### Passage
+
+“Sir, the police have read your email,” Droider says. “All of it. They seem quite upset.”
+
+Red and blue lights sweep across the cannery windows.
+
+Grabbs stops mid-tantrum.
+
+“Police? Oh, wonderful! Officers! OFFICERS! Arrest this child! This is my secret robot virus machine, and that child BROKE it!”
+
+He hears what he just said. He puts both hands over his mouth.
+
+You are already moving.
+
+There is a small window at the back of the cannery, above a stack of old crates. The Stompers have just enough charge left for one good jump.
+
+BOING.
+
+You catch the windowsill, pull yourself up, and look back one last time. The front doors burst open. Maximilian Grabbs is standing in one slipper and a gold bathrobe, in front of a smoking machine, with his hands up.
+
+“I would like to speak to my lawyer,” he says. “And also my mother.”
+
+You slip out the back window and drop into the dark before anyone can stop you.
+
+You are not doing this to get famous.
+
+### Choices
+
+#### Choice 1
+
+Head home
+
+```json
+{
+  "next_scene": "scene_068"
+}
+```
+
+---
+
+## scene_068 — Neighborhood Safe
+
+### Passage
+
+You take the long way home.
+
+The streets of {world_name} are quiet, in a way they have not been for months. It is the good kind of quiet.
+
+There are robots everywhere, standing right where they stopped, with their eye lights glowing a soft blue. People are coming out onto their porches in their pajamas to look at them. Nobody is running. A little kid walks up to a Construction Bot and pats it on the scoop.
+
+Mrs. Ruiz is standing outside her market with her broom. She sees a kid in goggles walk by under the streetlight. She does not say anything. She just taps two fingers to her forehead, like a salute.
+
+You nod back, and you keep walking.
+
+The garage door rolls up, and there you stand, in front of your tools.
+
+Home.
+
+You set The Can Opener down on the workbench. It is dark, scorched, and completely drained. It still has your dad’s initials stamped on the handle.
+
+“It did good,” you say.
+
+“So did you, sir,” says Droider.
+
+You should sleep. You know you should sleep. But your hands are already itching.
+
+### Choices
+
+#### Choice 1
+
+Start fixing The Can Opener
+
+```json
+{
+  "next_scene": "scene_069"
+}
+```
+
+#### Choice 2
+
+Think about all those robots out there
+
+```json
+{
+  "next_scene": "scene_070"
+}
+```
+
+---
+
+## scene_069 — Back to the Bench
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
+You pull your stool up to the bench and open up The Can Opener.
+
+The core is burnt out. Half of the copper coils have melted. It is going to take weeks to fix, and twice as many parts as it took to build.
+
+You have never been happier to have a project.
+
+“You know, sir, while it is apart, we could make some improvements.”
+
+“I was thinking the same thing.” You pick up a marker and start a new list on the garage wall. “And I’ve got a great idea for a grappling hook. I’m going to call it The Yoink.”
+
+“Of course you are, sir.”
+
+You work until the sun comes up.
+
+Around dawn, a small light starts blinking in the corner of Droider’s screen.
+
+“Sir? It is probably nothing. But I am picking up a signal. A different one. It is very faint, and it is coming from somewhere across the city.”
+
+You look at the light. You look at the pile of parts that used to be The Can Opener.
+
+You grin, and you pick up your screwdriver.
+
+“Then we’d better hurry.”
+
+The End.
+
+### Choices
+
+---
+
+## scene_070 — The Fixer
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
+You keep thinking about them. Hundreds of robots, standing out there in the dark with nowhere to go.
+
+They were thrown away. Then they were used. None of that was their fault.
+
+“Droider. That virus. Now that the signal’s gone, could we clean it out? For good?”
+
+“Sir, I have been hoping you would ask. I already wrote the fix.”
+
+The next morning, you wheel the first Construction Bot into the garage on your hand truck. It has an old smiley face sticker on its chest, half peeled off. You open its panel, carefully this time. Droider cleans out the red code, line by line. You patch the tread, straighten the scoop, and press the sticker back down flat.
+
+Its eye light comes on. It is a steady, friendly blue.
+
+It looks at you. Then it rolls out of the garage, down the driveway, and into the street, and it begins, very gently, to fix the pothole it made.
+
+You watch it work, with a big smile on your face.
+
+“There are a lot more of them out there, sir. This is going to take a while.”
+
+“Good,” you say, and you grab the hand truck. “This neighborhood could use the help. I’m calling it Project Un-Can.”
+
+“...We will work on the name, sir.”
+
+The Can Opener can wait one more day. It was always a tool first, anyway.
+
+The End.
+
+### Choices

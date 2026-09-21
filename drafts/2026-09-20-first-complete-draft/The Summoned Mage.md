@@ -1,0 +1,3002 @@
+# The Summoned Mage
+
+Story ID: summoned_mage
+
+Start scene: scene_001
+
+## Description
+
+A fantasy adventure about being summoned into a world losing its magic.
+
+## Setup prompt
+
+What would you like to name the magical world? 
+
+---
+
+## scene_001 — Opening
+
+### Passage
+
+You open your eyes and look around you, the darkness breaking way to the barest of light. As your eyes adjust you notice you are seated inside of a small circle with unlit candles all around you. Confused you look up and notice you are not alone, laying on the floor in front of you is a girl about your age splayed out and unmoving. As you slowly move forward she stirs and her eye snap open. “It worked…oh my; it worked.” She looks you in the eyes and says “I can’t believe it worked, you must be so confused. I am Elliana, and I summoned you here to help my world.” You look back at her, mouth dry and heart pounding, unsure whether to speak, run, or simply breathe.
+
+### Choices
+
+#### Choice 1
+
+“You summoned me? What does that even mean, where am I? Why me?”
+
+```json
+{
+  "next_scene": "scene_002"
+}
+```
+
+#### Choice 2
+
+You get up and run, as fast as your legs can handle, which honestly isn’t that fast. You are feeling awful weak
+
+```json
+{
+  "next_scene": "scene_003"
+}
+```
+
+#### Choice 3
+
+You close your eyes and take a deep breath, something you learned from your Dad, it always helped when you were worried
+
+```json
+{
+  "next_scene": "scene_004"
+}
+```
+
+---
+
+## scene_002 — Questions
+
+### Passage
+
+Ok, so you have a lot of questions, that’s fair. Yes, I summoned you and…as she is talking you notice her purple hair and fluffy tail….she has a tail!?!? Then you look closer at her eyes, they are a deep yellow with slits like a cat. As you look around you notice the air around her is glowing a deep blue…”Hello, are you listening?” Breaks you out of your revere at your environment
+
+### Choices
+
+#### Choice 1
+
+[I’m sorry, you say. I drifted there for a second, can you explain this all again?]
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "asked_questions"
+}
+```
+
+---
+
+## scene_003 — The Barrier
+
+### Passage
+
+In a split second you are up and running towards the opening you saw but your legs betray you and you stumble forwards and hit the ground…hard, you look back and Elliana is staring at you with wide eyes. You get back to your feet and try to move again, finding the doorways ahead of you rush forwards as your legs pump, but are greeted with a clear almost glass like barrier. You rebound off the barrier and smash backwards into the ground. Slightly dazed you look back at Elliana.
+
+### Choices
+
+#### Choice 1
+
+Realizing you have no where to go, you head back to Elliana
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "ran_into_barrier"
+}
+```
+
+---
+
+## scene_004 — The Candle Flame
+
+### Passage
+
+As you breath, you picture a flame flickering in the dark, focusing on it makes you feel better, but it also strangely makes you feel a lot warmer. You look down and notice the candles are all alight. But how did that happen, you look up at Elliana.
+
+### Choices
+
+#### Choice 1
+
+Ok, well I hope you are going to explain what is going on here.
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "lit_candles"
+}
+```
+
+---
+
+## scene_005 — Elliana Explains
+
+### Entry intro: asked_questions
+
+        “Yes, of course,” Elliana says quickly. “You must be completely overwhelmed.”
+
+### Entry intro: ran_into_barrier
+
+        “I’m sorry,” Elliana says, rushing toward you. “You’re probably weak from the summoning, but I can’t let you run before we talk about this.”
+
+### Entry intro: lit_candles
+
+        Elliana stares at the candles, her yellow eyes wide. “You lit them,” she whispers. “But how did you do that, its impossible.”
+
+### Passage
+
+Elliana, shakes her head to clear it and starts talking again, “well first things first,” Elliana says. “I summoned you here to help my world. As you can probably tell, things are a little different here.” Her tail flicks nervously. “For one thing, you look different from anyone I have ever met, where is your tail?”
+
+### Choices
+
+#### Choice 1
+
+Ask what kind of help her world needs
+
+```json
+{
+  "next_scene": "scene_006"
+}
+```
+
+#### Choice 2
+
+Ask why she chose you
+
+```json
+{
+  "next_scene": "scene_007"
+}
+```
+
+#### Choice 3
+
+Ask if she can just send you home
+
+```json
+{
+  "next_scene": "scene_008"
+}
+```
+
+---
+
+## scene_006 — What Help Is Needed
+
+### Passage
+
+Elliana takes a deep breath then starts to explain.
+
+“My worlds magic is…dying,” she says. “Not all at once. Slowly. Quietly. And no one knows why.”
+
+### Choices
+
+#### Choice 1
+
+(continue)
+
+```json
+{
+  "next_scene": "scene_009"
+}
+```
+
+---
+
+## scene_007 — Why You
+
+### Passage
+
+“Well, I didn’t choose you exactly,” Elliana says.
+
+She looks embarrassed.
+
+“The spell was supposed to find someone who could help. Someone with a spark for magic strong enough to answer.”
+
+### Choices
+
+#### Choice 1
+
+(continue)
+
+```json
+{
+  "next_scene": "scene_009"
+}
+```
+
+---
+
+## scene_008 — Going Home
+
+### Passage
+
+Elliana’s ears lower. Wait, she can lower her ears…stop getting distracted.
+
+“I understand,” she says softly. “I really do. But sending you home is not as simple as opening the door again.”
+
+“The magic portal brought you here because something answered from your side. To send you back, we may need to find out what that something was.”
+
+### Choices
+
+#### Choice 1
+
+(continue)
+
+```json
+{
+  "next_scene": "scene_009"
+}
+```
+
+---
+
+## scene_009 — The Seers' Prophecy
+
+### Passage
+
+You see, our seers foretold a summoned mage would come and put the world back on track. The problem was, no one knew the ritual. I went and gathered all the stories in the world and tried and tried until finally…finally…well…you!
+
+### Choices
+
+#### Choice 1
+
+Did you say, magic…wait, hold on…does this mean I’m a mage?
+
+```json
+{
+  "next_scene": "scene_010"
+}
+```
+
+---
+
+## scene_010 — Am I a Mage
+
+### Passage
+
+“Did you say, magic…wait, hold on…does this mean I’m a mage?”
+“It does, doesn’t it. If I was the one summoned…does that mean I can use magic?”
+You walk over to Elliana, who is still sitting on the ground in the circle and reach down with your hand out. “I’m {hero_name}, Id love to hear more about this magic.”
+Elliana, reaching out here hand grasps it in hers and lets out a breath she didn’t realize she was holding. “Does this mean you are willing to help?”
+“Yes, I think…it is still a lot to be honest, but if I can’t get home without fixing this issue anyway I may as well jump right into it with you right?” I say as I turn around and fling out my hand like I am going to shoot a fireball.
+
+### Choices
+
+#### Choice 1
+
+See what happens
+
+```json
+{
+  "next_scene": "scene_011"
+}
+```
+
+---
+
+## scene_011 — Choose Your Element
+
+### Passage
+
+Nothing happens.
+
+You stand there with your hand out, feeling a little silly. Elliana lets out a breath and laughs.
+
+“Okay, good. Good! For a second I thought you were really going to do it. Magic doesn’t work by just flinging your hand around. You have to picture what you want, very clearly. Then you breathe in, hold the picture, and let it go when you breathe out.”
+
+Picture it, breathe in, let it go. That is almost exactly what your Dad taught you to do when you were worried.
+
+“Can I try? For real?”
+
+Elliana’s tail flicks back and forth. “Something small. Please. The magic in {world_name} has gotten so thin that you probably won’t get more than a spark, but still. Small.”
+
+“Small,” you promise.
+
+You plant your feet, and you strike what you hope is a very mage-like pose. You close your eyes.
+
+What do you picture?
+
+### Choices
+
+#### Choice 1
+
+Pose and think of Fire
+
+```json
+{
+  "next_scene": "scene_012"
+}
+```
+
+#### Choice 2
+
+Pose and think of Lightning
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+#### Choice 3
+
+Pose and think of Stone
+
+```json
+{
+  "next_scene": "scene_014"
+}
+```
+
+---
+
+## scene_012 — Fire Spell Happens
+
+### Passage
+
+You picture a flame. It is the same one you always picture, a little candle flame flickering in the dark.
+
+You breathe in. The air tastes warm.
+
+Except this time, you do not picture it staying little. You can’t help it. You are about to do MAGIC. The flame in your mind gets bigger, and brighter, and rounder.
+
+You breathe out, and you throw your hand forward.
+
+FWOOOOSH.
+
+A ball of fire the size of a wagon wheel roars out of your palm. It lights up the whole cave bright orange, and it sails right over Elliana’s head. She drops flat on the ground with her ears pinned back.
+
+It hits the far wall.
+
+BOOM.
+
+### Choices
+
+#### Choice 1
+
+Open your eyes
+
+```json
+{
+  "next_scene": "scene_015",
+  "entry_intro": "fire"
+}
+```
+
+---
+
+## scene_013 — Lightning Spell Happens
+
+### Passage
+
+You picture a thunderstorm, the kind you used to watch from the porch with your Dad. You picture that one bright second when the whole sky turns white.
+
+You breathe in. The hair on your arms stands up. Elliana’s tail puffs out to twice its size.
+
+“Um,” she says. “Is it supposed to be doing that? Mine never does that.”
+
+You breathe out, and you throw your hand forward.
+
+CRACK.
+
+A bolt of lightning as thick as your arm leaps from your fingertips. It is so bright that you see it right through your eyelids. It zigzags across the cave, right over Elliana’s head. She drops flat on the ground with her ears pinned back.
+
+It hits the far wall.
+
+BOOM.
+
+### Choices
+
+#### Choice 1
+
+Open your eyes
+
+```json
+{
+  "next_scene": "scene_015",
+  "entry_intro": "lightning"
+}
+```
+
+---
+
+## scene_014 — Stone Bullet Spell Happens
+
+### Passage
+
+You picture a stone. Small, like you promised. It is just a smooth gray pebble, the kind that is good for skipping.
+
+You breathe in. On the floor of the cave, a pebble wobbles and lifts up into the air. It floats in front of your hand, and it starts to spin. Then it spins faster. Then it begins to whistle.
+
+“That’s really good!” Elliana says. “Now just set it back down, nice and—”
+
+You breathe out, and you throw your hand forward.
+
+The pebble is gone. It does not fly away. It is just gone, with a sound like a whip cracking, and Elliana’s purple hair blows straight back as something goes past her ear.
+
+It hits the far wall.
+
+BOOM.
+
+### Choices
+
+#### Choice 1
+
+Open your eyes
+
+```json
+{
+  "next_scene": "scene_015",
+  "entry_intro": "stone"
+}
+```
+
+---
+
+## scene_015 — The Spell Lands
+
+### Entry intro: fire
+
+When the smoke clears, there is a hole in the cave wall big enough to walk through. The edges are glowing cherry red.
+
+### Entry intro: lightning
+
+When the spots in your eyes fade, there is a hole in the cave wall big enough to walk through. The edges are black and smoking, and little sparks are still crawling around them.
+
+### Entry intro: stone
+
+When the dust settles, there is a hole in the cave wall big enough to walk through. It is perfectly round, as if someone pushed a giant finger through the mountain.
+
+### Passage
+
+Sunlight pours in through the hole. You can see sky.
+
+You look at the hole. You look at your hand. You look at the hole again.
+
+“Oh my goodness,” you whisper. “I’m a MAGE.”
+
+Elliana slowly lifts her head up off the floor. One of her ears is inside out.
+
+“That,” she says, “was SMALL?”
+
+“I’m so sorry! Are you okay?”
+
+“I’m fine. I’m better than fine!” She scrambles to her feet, and now she is laughing. “Do you know what the best mage in {world_name} can do right now? She can light a lamp, if she’s had a good breakfast. And you just put a hole in a MOUNTAIN! The seers were right. They were really right!”
+
+She grabs her satchel and points to a wooden door at the back of the cave. You notice that the glassy barrier has disappeared from the doorway.
+
+“Come on. Town is half a day’s walk, and everyone has to meet you.”
+
+You look at the door. You look at the sunny hole you just made. And then you feel something odd, a little tug behind your belly button. It is as if your magic is telling you that you do not need a door or a hole. You could just think about being outside, and then you would be.
+
+### Choices
+
+#### Choice 1
+
+Leave through the door, like a normal person
+
+```json
+{
+  "next_scene": "scene_016"
+}
+```
+
+#### Choice 2
+
+Leave through the hole. You made it, after all
+
+```json
+{
+  "next_scene": "scene_017"
+}
+```
+
+#### Choice 3
+
+Follow that tugging feeling and see what happens
+
+```json
+{
+  "next_scene": "scene_018"
+}
+```
+
+---
+
+## scene_016 — The Door
+
+### Passage
+
+You decide that one hole in a mountain is enough for today. You follow Elliana through the door.
+
+Behind it is a long stairway carved into the rock. On the walls there are little glass globes that look like they should be glowing, but most of them are dark.
+
+“Glow-globes,” Elliana says, tapping one as she goes by. It flickers weakly. “When I was little, these were as bright as day, all the time. Nobody even thought about them. That’s what it is like here, {hero_name}. Magic isn’t only for spells. It’s how everything works.”
+
+At the bottom of the stairs, she pushes open another door, and you step out onto the mountainside.
+
+You forget to breathe for a second.
+
+A green valley spreads out below you, with a silver river running through it. Far off, you can see the rooftops of a town, with thin lines of chimney smoke going up. On your left, a dirt trail winds down the hill toward the town. On your right is the edge of a forest, with the biggest trees you have ever seen.
+
+“The trail is faster,” Elliana says. “The forest is prettier. Well, it used to be.”
+
+### Choices
+
+#### Choice 1
+
+Take the trail to town
+
+```json
+{
+  "next_scene": "scene_019",
+  "entry_intro": "from_door"
+}
+```
+
+#### Choice 2
+
+Head towards the forest
+
+```json
+{
+  "next_scene": "scene_025",
+  "entry_intro": "from_door"
+}
+```
+
+---
+
+## scene_017 — The Hole
+
+### Passage
+
+“I made a door,” you say. “It would be rude not to use it.”
+
+You climb through the hole in the wall. Elliana follows you, grumbling, and holding her tail up so it does not touch the edges.
+
+“The seers never said anything about the summoned mage wrecking my ritual cave,” she mutters. “I swept in here. I swept for two days.”
+
+You come out onto a wide ledge, high up on the side of the mountain, and the wind nearly takes you off your feet.
+
+You can see everything from here. There is a green valley with a silver river, and far off, a town with chimney smoke rising from it.
+
+There are three ways to go. A rocky path leads along the ridge of the mountain, and it would give you the best view of all of {world_name}. Below you, a slope of loose stones leads down to the edge of a forest with enormous trees. And off to the left, you can just see a dirt trail winding down toward the town.
+
+### Choices
+
+#### Choice 1
+
+Walk out onto the mountains
+
+```json
+{
+  "next_scene": "scene_023"
+}
+```
+
+#### Choice 2
+
+Head towards the forest
+
+```json
+{
+  "next_scene": "scene_025",
+  "entry_intro": "from_hole"
+}
+```
+
+#### Choice 3
+
+Go toward the trail
+
+```json
+{
+  "next_scene": "scene_019",
+  "entry_intro": "from_hole"
+}
+```
+
+---
+
+## scene_018 — Teleport Away
+
+### Passage
+
+“Hang on,” you say. “I want to try something.”
+
+“Try what? {hero_name}, try WHAT?”
+
+You close your eyes. You picture being outside. Grass, trees, sky. You breathe in, you hold the picture, and you breathe out.
+
+Pop.
+
+It feels like being pulled through a straw, and then you are sitting in a bush.
+
+You are outside! There is grass, and there are trees. The trees are as wide as houses, and so tall that you cannot see the tops. You are in a forest, and it is very green and very quiet.
+
+You are also by yourself. There is no cave, and no mountain, and no Elliana.
+
+Your head is spinning, and your legs feel like pudding. Whatever you just did, it took a lot out of you.
+
+“Okay,” you say to the bush. “So I should have asked where I was going first.”
+
+### Choices
+
+#### Choice 1
+
+Try to teleport back
+
+```json
+{
+  "next_scene": "scene_028"
+}
+```
+
+#### Choice 2
+
+Explore your surroundings
+
+```json
+{
+  "next_scene": "scene_025",
+  "entry_intro": "from_teleport"
+}
+```
+
+---
+
+## scene_019 — Trail to Town
+
+### Entry intro: from_door
+
+You take the trail. It is a nice walk, and Elliana talks the whole way. She points out birds with four wings, and flowers that close up with a snap when you walk by.
+
+### Entry intro: from_hole
+
+You pick your way down to the trail. It is a nice walk once you are on it, and Elliana has mostly forgiven you for the cave.
+
+### Entry intro: from_mountains
+
+The path down from the ridge is steep, but it meets the trail at the bottom. Your legs are glad to be on flat ground again.
+
+### Entry intro: from_forest
+
+The trees thin out, and the forest path joins a wide dirt trail. Elliana points ahead. “Town’s that way. We’re nearly there.”
+
+### Passage
+
+After a while, you come to a small wooden bridge over a stream.
+
+You are halfway across when three figures jump out from behind the bushes at the far end.
+
+They have long striped tails. They are wearing flour sacks over their heads, with eye holes cut in them, although one of them has his eye holes in the wrong place and keeps having to turn his head sideways. One is holding a pitchfork. One is holding a broom. The smallest one is holding a soup ladle.
+
+“HALT!” shouts the one with the pitchfork. “Your lunch or your life! I mean your money! Your money or your lunch!”
+
+“Your money or your LIFE, Gus,” whispers the one with the broom.
+
+“Why would I want their life? I want their lunch!”
+
+Elliana sighs, and looks over at you.
+
+### Choices
+
+#### Choice 1
+
+Attack the bandits with magic
+
+```json
+{
+  "next_scene": "scene_020"
+}
+```
+
+#### Choice 2
+
+Try to escape
+
+```json
+{
+  "next_scene": "scene_021"
+}
+```
+
+#### Choice 3
+
+Leave it to Elliana
+
+```json
+{
+  "next_scene": "scene_022",
+  "entry_intro": "left_to_her"
+}
+```
+
+---
+
+## scene_020 — Attack Bandits
+
+### Passage
+
+You step in front of Elliana, plant your feet, and raise your hands. It feels pretty great, honestly.
+
+The three bandits take a step back. The smallest one hides behind his ladle.
+
+“{hero_name},” Elliana says quietly. “Remember the mountain. Small. And please, nobody gets hurt. Aim near them, not at them.”
+
+Right. Small. You can do small. Probably.
+
+You breathe in. What do you picture?
+
+### Choices
+
+#### Choice 1
+
+Freeze their feet to the bridge
+
+```json
+{
+  "next_scene": "scene_033",
+  "entry_intro": "freeze"
+}
+```
+
+#### Choice 2
+
+Fire a stone bullet past their ears
+
+```json
+{
+  "next_scene": "scene_033",
+  "entry_intro": "stone"
+}
+```
+
+#### Choice 3
+
+Dazzle them with a beam of light
+
+```json
+{
+  "next_scene": "scene_033",
+  "entry_intro": "light"
+}
+```
+
+---
+
+## scene_021 — Try to Escape
+
+### Passage
+
+“Run!” you shout. You grab Elliana’s hand and race back the way you came.
+
+“After them!” yells Gus. “Wait, I can’t see. Which way did they go?”
+
+“Turn your sack around, Gus!”
+
+You pound back across the bridge. You are feeling good about this plan for about four seconds. Then the summoning catches up with you, and your legs turn to jelly. You slow down. You stop. You put your hands on your knees and wheeze.
+
+The bandits catch up. They are wheezing too. For a moment, all five of you just stand around on the trail, trying to get your breath back.
+
+“Okay,” pants the one with the broom. “Now. Your money. Or your lunch.”
+
+Up close, you notice that their clothes are patched at the knees and the elbows, and that the pitchfork has dirt on it, not the scary kind of anything. They all look awfully thin for bandits.
+
+### Choices
+
+#### Choice 1
+
+Fight
+
+```json
+{
+  "next_scene": "scene_020"
+}
+```
+
+#### Choice 2
+
+Stop, and ask what they actually want
+
+```json
+{
+  "next_scene": "scene_022",
+  "entry_intro": "asked"
+}
+```
+
+---
+
+## scene_022 — Leave It to Elliana
+
+### Entry intro: left_to_her
+
+You step back and give Elliana a little bow. After you.
+
+### Entry intro: asked
+
+“Hang on,” you say, holding up your hands. “What do you actually want? Are you hungry?” The three of them look at each other. Elliana’s eyes go narrow.
+
+### Passage
+
+Elliana marches up to the bandits with her hands on her hips.
+
+“Gus Tumblewick. Is that you under there? I can see your tail. And Pim! And little Pom! Does your mother know you’re out here with her good soup ladle?”
+
+The three bandits droop. One by one, they pull off their flour sacks. Underneath are three raccoon-folk, with black masks of fur around their eyes and very red cheeks.
+
+“Hello, Miss Elliana,” mumbles Gus.
+
+“What are you DOING?”
+
+“The growing-charms gave out,” Gus says to his feet. “All of them, all over Lower Furrow. The fields won’t come up. We’ve got nothing in the cellar, and we thought... well. Travelers have lunches.”
+
+Elliana’s face goes soft. She opens her satchel and hands over everything in it: bread, cheese, and three apples.
+
+“Go home. And tell Lower Furrow that the mage has come.” She points at you, and the three of them stare. “There is going to be help. I promise.”
+
+“Be careful in town after dark, miss,” Pim says, with his mouth full. “The pale things come down from the Hollow Hills at night now. They drift around the lamps. And every morning, there’s a little less magic than there was before.”
+
+### Choices
+
+#### Choice 1
+
+Continue to town
+
+```json
+{
+  "next_scene": "scene_034"
+}
+```
+
+---
+
+## scene_023 — Mountains
+
+### Passage
+
+You take the ridge path, and it is worth it.
+
+From up here, you can see what feels like all of {world_name}. Elliana points things out. There is the river, which is called the Silverwind. There is the town, which is called Willowmere. There are the farms of Lower Furrow.
+
+“It’s beautiful,” you say, and you mean it.
+
+“Look closer,” Elliana says.
+
+You do. Some of the fields are brown when they should be green. There are little floating shapes above the river that are not moving, just bobbing in place. And far off, past the town, there is a line of low hills where the color looks wrong. It is as if somebody has rubbed at that part of the world with an eraser. Everything there is a little gray.
+
+“Those are the Hollow Hills,” Elliana says. “They didn’t used to look like that.”
+
+Before you can ask anything else, you come around a bend and find that the path is blocked. A rock slide has come down across it, and it must have happened recently, because there is still dust in the air.
+
+From somewhere under the rocks, you hear a very small squeak.
+
+### Choices
+
+#### Choice 1
+
+Check the rock slide
+
+```json
+{
+  "next_scene": "scene_024"
+}
+```
+
+#### Choice 2
+
+Make your way down to the trail
+
+```json
+{
+  "next_scene": "scene_019",
+  "entry_intro": "from_mountains"
+}
+```
+
+---
+
+## scene_024 — Check Rock Slide
+
+### Passage
+
+You climb carefully onto the rock pile and follow the squeaking.
+
+You find it wedged in a gap between two big stones. It is a small, round, fuzzy creature about the size of a grapefruit. It has huge dark eyes, a pair of stubby little wings, and a long fluffy tail, and the tail is pinned under a rock.
+
+“Oh!” Elliana gasps. “It’s a puffkin! I haven’t seen one since I was small. They love magic, so they mostly went away when the magic did.”
+
+The rock is too heavy for you to lift, and if you roll it the wrong way, it will squash the poor thing.
+
+So you sit down next to it. You breathe in, and you picture the rock lifting up, slowly and gently, like a bubble. You think to yourself: small. Really small this time.
+
+You breathe out.
+
+The rock wobbles. It rises two inches into the air, and hangs there.
+
+The puffkin shoots out like a cork from a bottle. It zooms twice around your head, bumps its nose against your nose, and lets out a long, happy trill. Then it flies off down the mountain toward the town, leaving a faint trail of sparkles behind it.
+
+You set the rock down without a sound.
+
+“You did small,” Elliana says. She sounds proud.
+
+“I did small!”
+
+### Choices
+
+#### Choice 1
+
+Make your way down to the trail
+
+```json
+{
+  "next_scene": "scene_019",
+  "entry_intro": "from_mountains"
+}
+```
+
+---
+
+## scene_025 — Forest
+
+### Entry intro: from_door
+
+You head for the trees. “We can cut through and pick up the trail on the far side,” Elliana says.
+
+### Entry intro: from_hole
+
+You half climb and half slide down the slope of loose stones, and you land at the edge of the trees with your shoes full of gravel. “We can cut through and pick up the trail on the far side,” Elliana says.
+
+### Entry intro: from_teleport
+
+You climb out of the bush and look around. A few minutes later you hear somebody shouting your name, and Elliana comes crashing through the ferns, completely out of breath. “I saw the flash! From the mountain! You TELEPORTED! Nobody has done that in a hundred years! Please don’t ever do it again!”
+
+### Entry intro: from_teleport_back
+
+Elliana helps you down out of the tree. It takes a while. “I saw the flash from the mountain,” she says. “You TELEPORTED. Twice! Nobody has done that in a hundred years! Please don’t ever do it again!”
+
+### Passage
+
+This forest is like nothing back home. The trees are as wide as houses. Thick moss hangs from every branch, and from the moss comes a faint green glow, like a night-light that is running out of batteries.
+
+“Glow-moss,” Elliana says. “It used to be bright enough to read by. People came here for picnics at midnight.” She touches a dark patch, and frowns. “It gets dimmer every time I come.”
+
+You are about to say something when you hear a voice, somewhere off to your left.
+
+“HELP! Somebody! Shoo! Shoo, you great lumps! HELP!”
+
+At exactly the same moment, from your right, you hear snorting and crashing. Something big is coming through the ferns. It sounds like a lot of somethings, actually, and they are heading your way.
+
+### Choices
+
+#### Choice 1
+
+Look for the yelling person
+
+```json
+{
+  "next_scene": "scene_026"
+}
+```
+
+#### Choice 2
+
+Run from the animals
+
+```json
+{
+  "next_scene": "scene_027"
+}
+```
+
+---
+
+## scene_026 — Look for Yelling Person
+
+### Passage
+
+You run toward the voice.
+
+In a clearing, you find an old goat-folk gentleman with a long white beard, curly horns, and a patched green coat. He is sitting on a tree branch, ten feet off the ground, hugging the trunk.
+
+Underneath him, a wooden cart is lying on its side, and turnips have spilled everywhere. Three enormous animals are snuffling through them. They look like wild boars, except that they are as big as ponies, and they have moss and tiny flowers growing on their backs.
+
+“Tuskers,” Elliana whispers. “They’re gentle, usually. There are ward-stones that keep them up in the high meadows. The wards must have gone out.”
+
+“HELLO!” the old goat calls, waving at you. “Barnaby’s the name! Peddler! I would come down and shake hands, but I’ve grown quite attached to this tree!”
+
+One of the tuskers looks up at you. It has a whole turnip in its mouth. It does not look mean. It does look very, very large.
+
+Barnaby seems safe enough where he is, and the tuskers will surely wander off when the turnips run out.
+
+### Choices
+
+#### Choice 1
+
+See that the stranger is safe, and leave
+
+```json
+{
+  "next_scene": "scene_019",
+  "entry_intro": "from_forest"
+}
+```
+
+#### Choice 2
+
+Help the stranger
+
+```json
+{
+  "next_scene": "scene_029"
+}
+```
+
+---
+
+## scene_027 — Run From Animals
+
+### Passage
+
+You do not wait to find out what is making that noise. You run.
+
+So does Elliana, and she is a lot faster than you are. You remember that she is part cat. Your legs are still wobbly from the summoning, and you keep tripping on roots.
+
+Behind you, the crashing gets louder. You look back over your shoulder.
+
+There are three of them. They look like wild boars, except that they are as big as ponies, and they have moss and little flowers growing on their backs. They are thundering down the path with their eyes rolling.
+
+“Tuskers!” Elliana shouts. “They’re not chasing us! They’re just spooked! The wards must have failed, and they don’t know where they’re supposed to be! But they’ll run us flat all the same!”
+
+You can see daylight up ahead where the trees thin out, and there is a path leading that way. But the tuskers are catching up fast, and you are not sure that you can outrun them.
+
+### Choices
+
+#### Choice 1
+
+Turn around and fight back
+
+```json
+{
+  "next_scene": "scene_032"
+}
+```
+
+#### Choice 2
+
+Follow the trail to town as fast as you can
+
+```json
+{
+  "next_scene": "scene_019",
+  "entry_intro": "from_forest"
+}
+```
+
+---
+
+## scene_028 — Teleport Back
+
+### Passage
+
+You close your eyes. You picture the cave. The candles, the circle, Elliana’s surprised face. You breathe in. You breathe out.
+
+Pop.
+
+You open your eyes.
+
+You are not in the cave. You are in the same forest. You are, in fact, looking down at the very same bush. The difference is that you are now ten feet up in the air, sitting on a tree branch.
+
+Your head spins so hard that you have to hug the trunk. Whatever is inside you that makes the magic go, it feels like a cup that has been poured out. It looks like two teleports in a row is one teleport too many.
+
+“Okay,” you say to the tree. “No more of that today.”
+
+Then, from far away, you hear somebody shouting your name. It is getting closer.
+
+### Choices
+
+#### Choice 1
+
+Shout back, and get down from this tree
+
+```json
+{
+  "next_scene": "scene_025",
+  "entry_intro": "from_teleport_back"
+}
+```
+
+---
+
+## scene_029 — Helping the Peddler
+
+### Passage
+
+“We can’t just leave him up there,” you say.
+
+“Oh, bless you!” Barnaby calls down. “I’ve been up here since breakfast! I’ve named all three of them! The big one is Gertrude!”
+
+Gertrude burps.
+
+Elliana bites her lip. “They’re not dangerous on purpose. But they’re confused and scared, and that makes them jumpy. If they bolt the wrong way, they’ll go right through that cart, and maybe right through us.”
+
+You look at the three great mossy animals, and you think it over.
+
+You could scare them off. A big flash and a bang ought to send them running back up the hill.
+
+Or you could try something else. When you were worried, back in the cave, you pictured the candle flame, and everything went warm and calm. You wonder whether that would work on somebody else. You wonder whether it would work on three somebodies as big as ponies.
+
+### Choices
+
+#### Choice 1
+
+Scare them off with a big flash of magic
+
+```json
+{
+  "next_scene": "scene_030"
+}
+```
+
+#### Choice 2
+
+Try to calm them down instead
+
+```json
+{
+  "next_scene": "scene_031"
+}
+```
+
+---
+
+## scene_030 — Flash and Bang
+
+### Passage
+
+“Cover your ears,” you tell Elliana.
+
+You picture fireworks. You breathe in, you breathe out, and you clap your hands together over your head.
+
+CRACK-BOOM.
+
+A burst of white light fills the clearing, along with a bang like the biggest firecracker in the world. Every bird in the forest takes off at once.
+
+The three tuskers squeal, spin around, and gallop away up the hill, right back the way they came. The ground shakes under your feet.
+
+Barnaby is so surprised that he lets go of his tree. He lands in the pile of turnips with a thump, and sits there blinking.
+
+“Well!” he says. “That’s one way of doing it!”
+
+You help him set his cart upright and gather up whatever Gertrude did not eat. He pumps your hand up and down, and he will not let you leave without a gift. He digs through his cart and presses a little brass lantern into your hands. It is no bigger than an egg.
+
+“A pocket-lantern. Never goes out! Well. It never used to. These days it sulks a bit. But it seems to like you!”
+
+In your hands, the little lantern is glowing bright and steady.
+
+“The trail to Willowmere is just through there,” Barnaby says. “Mind the bridge. Folks have gotten a bit desperate lately.”
+
+### Choices
+
+#### Choice 1
+
+Follow the trail to town
+
+```json
+{
+  "next_scene": "scene_019",
+  "entry_intro": "from_forest"
+}
+```
+
+---
+
+## scene_031 — Warm and Calm
+
+### Passage
+
+You walk into the clearing, slowly, with your hands open.
+
+“{hero_name},” Elliana whispers. “What are you doing?”
+
+“I’m not sure yet.”
+
+You sit down in the turnips, right in the middle of the three tuskers. Gertrude swings her enormous head around and snuffles at your hair.
+
+You close your eyes. You picture the candle flame. It is not big, and it is not bright. It is just warm and steady, the way it feels when your Dad sits with you until a bad dream goes away.
+
+You breathe in, and you breathe out. And this time, you do not throw the feeling. You just let it spread.
+
+A soft, golden warmth rolls out across the clearing, like sunshine coming through a window. The moss on the trees glows a little brighter.
+
+Gertrude sighs a huge sigh. Her eyes stop rolling. She folds up her legs and lies down in the turnips, and the other two flop down beside her. Inside of a minute, all three are snoring.
+
+Barnaby climbs down from his tree with his mouth hanging open.
+
+“Calming magic,” he whispers. “I’ve not seen calming magic work since I was a kid. And I mean a real kid. A baby goat.”
+
+He presses a little brass pocket-lantern into your hands as a thank-you. It glows bright and steady as soon as you touch it.
+
+“The trail to Willowmere is just through there,” he says. “Mind the bridge. Folks have gotten a bit desperate lately.”
+
+### Choices
+
+#### Choice 1
+
+Follow the trail to town
+
+```json
+{
+  "next_scene": "scene_019",
+  "entry_intro": "from_forest"
+}
+```
+
+---
+
+## scene_032 — Stand Your Ground
+
+### Passage
+
+You stop running. You turn around. You plant your feet in the middle of the path.
+
+“{hero_name}, NO!” Elliana yells.
+
+Three tuskers the size of ponies are thundering straight at you. You do not want to hurt them. They are only scared. So you do not aim at them.
+
+You aim at the ground.
+
+You picture the path in front of you bursting upward. You breathe in, you breathe out, and you stomp your foot.
+
+WHUMP.
+
+A wall of dirt and leaves and pebbles explodes up out of the path, ten feet high, right in front of the lead tusker’s nose.
+
+She squeals and swerves. The other two swerve after her. They go crashing off through the ferns, away from the path, and away from you. The sound of them fades off up the hill, back toward the high meadows where they belong.
+
+The dirt rains back down. Most of it lands on you.
+
+Elliana walks back, picking leaves out of her hair. She looks at the hole in the path. She looks at you.
+
+“You are either very brave, or you don’t know any better.”
+
+“Can it be both?”
+
+“I think it’s both.”
+
+### Choices
+
+#### Choice 1
+
+Follow the trail to town
+
+```json
+{
+  "next_scene": "scene_019",
+  "entry_intro": "from_forest"
+}
+```
+
+---
+
+## scene_033 — Bandits Dealt With
+
+### Entry intro: freeze
+
+You picture ice. You breathe out, and you point at the planks under their feet. Frost races across the bridge with a crackling sound, and in a second, all three bandits are frozen to the wood up to their ankles.
+
+### Entry intro: stone
+
+You picture a pebble. You breathe out, and you flick your finger. A stone zips between the bandits with a crack like a whip, and the top half of the pitchfork falls off.
+
+### Entry intro: light
+
+You picture the sun. You breathe out, and you open your hand. A beam of white light blazes out over their heads, so bright that the whole stream lights up. Even through their flour sacks, they have to cover their eyes.
+
+### Passage
+
+“WE GIVE UP!” all three of them shout, at exactly the same time. The smallest one throws his ladle into the stream.
+
+They pull off their flour sacks. Underneath are three raccoon-folk, with black masks of fur around their eyes. They all look rather thin.
+
+“Gus Tumblewick!” Elliana says. “And Pim! And little Pom! What are you DOING?”
+
+“Sorry, Miss Elliana,” Gus mumbles. “It’s the growing-charms. They all gave out, all over Lower Furrow. Nothing will come up. We’ve got nothing left in the cellar. We never robbed anybody before. We’re not very good at it.”
+
+“You’re really not,” you agree. You are starting to feel bad about scaring them.
+
+Elliana gives them everything in her satchel: bread, cheese, and three apples. You fix what you did as well as you can.
+
+“Tell Lower Furrow that the mage has come,” she says. “There is going to be help. I promise.”
+
+“Be careful in town after dark,” Pim says, with his mouth full. “The pale things come down from the Hollow Hills at night now. They drift around the lamps. And every morning, there’s a little less magic than there was before.”
+
+### Choices
+
+#### Choice 1
+
+Continue to town
+
+```json
+{
+  "next_scene": "scene_034"
+}
+```
+
+---
+
+## scene_034 — Willowmere
+
+### Passage
+
+You reach Willowmere as the sun is going down.
+
+It is the coziest place you have ever seen. The houses are round, with mossy roofs and crooked chimneys and round doors painted in every color. There are beastfolk everywhere. You see rabbit ears, and badger stripes, and a family of hedgehogs all holding hands in a line.
+
+But the longer you look, the more you notice things that are not right.
+
+Wooden carts hang in the air along the main street, but none of them are moving. They are tipped at odd angles, and people are unloading them with ladders. There are washing lines strung between the houses, and the clothes on them are slowly turning around and around in the air, as if they were in the middle of washing themselves and got stuck. A long line of people with buckets stretches away toward the middle of town. The street lamps flicker on, and off, and on.
+
+“The drift-carts. The wash-lines. The water, the lamps, the bins,” Elliana says quietly. “All of it runs on magic. It always has. Nobody here even knows how to do it any other way.”
+
+People are starting to stare at you. It is probably because you do not have a tail.
+
+From one direction, you can hear water splashing, and somebody banging on metal and saying words that Elliana pretends not to hear. From the other direction comes the most wonderful smell of baking bread.
+
+### Choices
+
+#### Choice 1
+
+Go to the fountain square
+
+```json
+{
+  "next_scene": "scene_035"
+}
+```
+
+#### Choice 2
+
+Follow the smell of bread
+
+```json
+{
+  "next_scene": "scene_036"
+}
+```
+
+---
+
+## scene_035 — The Fountain Square
+
+### Passage
+
+In the middle of the square is a huge stone fountain, carved in the shape of fish jumping over each other.
+
+“It sings,” Elliana says. “Well, it’s supposed to. And it’s supposed to send fresh water to every house in town.”
+
+Right now, it is making a noise like somebody gargling. Water dribbles out of one fish. The bucket line ends here, where everyone is filling up by hand.
+
+Next to the fountain, a drift-cart is hanging crooked in the air, and a pair of boots is sticking out from underneath it. The banging is coming from there.
+
+“Tilly!” Elliana calls.
+
+A fox-folk girl slides out from under the cart. She has red fur, a big bushy tail, goggles pushed up on her forehead, and a smear of grease on her nose. She has a wrench in each hand.
+
+“Elliana! You’re back! Did it work? Did you—” She sees you. Her eyes go to your face, and then to where your tail is not. She drops a wrench. “NO TAIL! It’s the mage! You got the MAGE!”
+
+Everybody in the bucket line turns around.
+
+Tilly runs over and shakes your hand with both of hers. “I’m Tilly. I fix things. Except I can’t fix THIS, because it isn’t broken! The lift-charm is perfect! It’s just got nothing to run on! It’s like a lamp with no oil!” She kicks the cart. It bobs. “Come on. If the mage is here, Bram has to hear about it. And he’ll feed you.”
+
+### Choices
+
+#### Choice 1
+
+Go with Tilly
+
+```json
+{
+  "next_scene": "scene_037",
+  "entry_intro": "from_fountain"
+}
+```
+
+---
+
+## scene_036 — The Warm Kettle
+
+### Passage
+
+You follow your nose to a round building with a sign shaped like a teapot. THE WARM KETTLE. Yellow light spills out of the windows, and it seems as if half the town is packed inside.
+
+Behind the counter is the biggest person you have ever seen. He is bear-folk, with brown fur and small round ears, and his apron is covered in flour. He is carrying four trays of buns at the same time.
+
+“Elliana!” he booms. “Sit, sit! And who’s this? No tail? Oh. Oh my.” He sets the trays down very carefully. “It worked, then.”
+
+“It worked, Bram.”
+
+Bram comes around the counter, crouches down until his eyes are level with yours, and holds out a honey bun. It is still warm, and it is the best thing you have ever tasted.
+
+“My grandmother’s ovens heated themselves for two hundred years,” he says. “Never once went cold. Three months ago, they did. So now I get up in the middle of the night and chop wood, and I do it the hard way.” He nods at the crowded room. “When the lamps won’t stay lit, folks need someplace warm to go. So the Kettle stays open.”
+
+You can see that his big hands are covered in blisters.
+
+Just then the door bangs open, and a fox-folk girl with goggles on her forehead and a wrench in her hand runs in.
+
+“Bram! Somebody in the bucket line says Elliana’s back with—” She sees you. She drops the wrench. “NO TAIL! It’s the MAGE!”
+
+“That’s Tilly,” Bram tells you. “She fixes things. She’s quiet, as you can see.”
+
+### Choices
+
+#### Choice 1
+
+Sit down with everybody
+
+```json
+{
+  "next_scene": "scene_037",
+  "entry_intro": "from_bakery"
+}
+```
+
+---
+
+## scene_037 — A Table at the Kettle
+
+### Entry intro: from_fountain
+
+Tilly drags you across town to a round building with a sign shaped like a teapot. THE WARM KETTLE. Inside, it is warm and crowded, and behind the counter is the biggest person you have ever seen. He is bear-folk, and his name is Bram, and ten seconds after you come in, he has put a warm honey bun in your hand. His ovens used to heat themselves, Tilly explains. Now he chops wood in the middle of the night, so that the town has a warm place to go.
+
+### Entry intro: from_bakery
+
+Bram clears the big table in the corner, and Tilly pulls up a chair backwards and sits on it.
+
+### Passage
+
+The four of you sit down together. You are about to take a bite of your honey bun when something drops out of the rafters and lands on your head.
+
+It is small, round, and fuzzy. It has stubby little wings, and huge dark eyes, and a long fluffy tail. It leans down over your forehead, looks at you upside down, and trills.
+
+Then it takes the honey bun right out of your hand, and eats it while still sitting on your head.
+
+“That’s Biscuit,” says Bram. “He’s a puffkin. He doesn’t belong to anybody. He turned up a while back, and he steals my buns.” He looks at the way Biscuit is settling down into your hair. “Looks like he belongs to you now. Puffkins can’t stay away from magic, and you’re the most magic thing he’s ever seen.”
+
+Bram brings more buns. While you eat, they tell you all about it. It began about two years ago, and it gets a little worse every night. The elders have started talking about leaving Willowmere altogether, but nobody knows where they would go.
+
+You look around the Kettle, at all the tired people keeping warm, and at Bram’s blistered hands, and at Tilly’s wrench, which cannot fix the one thing that needs fixing.
+
+You did not ask to be brought here. But you are here.
+
+“I’ll help,” you say. “I don’t know how yet. But I’ll help.”
+
+Elliana lets out a long breath, as if she has been holding it for two years.
+
+### Choices
+
+#### Choice 1
+
+Offer to fix something in town right now
+
+```json
+{
+  "next_scene": "scene_038"
+}
+```
+
+#### Choice 2
+
+Ask Elliana what she knows about the cause
+
+```json
+{
+  "next_scene": "scene_039"
+}
+```
+
+---
+
+## scene_038 — Small Fixes
+
+### Passage
+
+“Let me try something,” you say. “Everything here runs on magic, and there isn’t enough to go around. Well, I’ve got plenty. I put a hole in a mountain this morning.”
+
+“They WHAT?” says Tilly.
+
+“Later,” says Elliana.
+
+The whole Kettle empties out into the street to watch. Biscuit rides along on your head. It is fully dark now, and the street lamps are flickering worse than ever.
+
+“Go gently,” Elliana says quietly. “You don’t need to throw it. Think of pouring water into a cup.”
+
+You look around at the dark, stuck, sputtering town. Where do you begin?
+
+### Choices
+
+#### Choice 1
+
+Relight the street lamps
+
+```json
+{
+  "next_scene": "scene_040",
+  "entry_intro": "lanterns"
+}
+```
+
+#### Choice 2
+
+Get the fountain singing again
+
+```json
+{
+  "next_scene": "scene_040",
+  "entry_intro": "fountain"
+}
+```
+
+#### Choice 3
+
+Un-stick the wash-lines
+
+```json
+{
+  "next_scene": "scene_040",
+  "entry_intro": "laundry"
+}
+```
+
+---
+
+## scene_039 — The Seals
+
+### Passage
+
+“Elliana, you said no one knows why the magic is dying. But you must have some idea.”
+
+Elliana takes a fat, worn-out book from her satchel and opens it on the table. Tilly moves the buns out of the way.
+
+“A very long time ago, the old mages found places where the world is thin. Places where other worlds press up close against this one, like two soap bubbles that are touching. Things could leak through. So the mages closed those places up with seals.”
+
+She turns the page. There is a drawing of a great stone door, covered in symbols.
+
+“The seals don’t need anybody to look after them. They run on the magic that is in the air, the same way the lamps and the carts do. That was the clever part.”
+
+“Oh,” says Tilly slowly. “Oh, no. And that was also the not clever part.”
+
+“Right. If the magic in the air gets thin, the seals get weak. If a seal gets weak, something leaks through. And if the thing that leaks through is something that eats magic...”
+
+“Then the magic gets thinner,” you say. “So the seal gets weaker. So more gets through.”
+
+“Round and round,” Bram rumbles. “Like water going down a drain.”
+
+“There is a thin place in the Hollow Hills,” Elliana says. “It’s the closest one to here. My parents were the keepers of that seal.”
+
+### Choices
+
+#### Choice 1
+
+Ask her what came through
+
+```json
+{
+  "next_scene": "scene_040",
+  "entry_intro": "seals"
+}
+```
+
+---
+
+## scene_040 — The First Syphon
+
+### Entry intro: lanterns
+
+You put your hand on the nearest lamp post, and you pour. The lamp blazes up, warm and gold. Then the next one does, and then the next, all the way down the street, like dominoes falling over. The whole town cheers. It lasts for almost a minute. Then the lamp right above you starts to dim, and everybody goes quiet.
+
+### Entry intro: fountain
+
+You put both hands on the rim of the fountain, and you pour. Water leaps up out of every stone fish, and then the fountain starts to sing, a sweet, bubbling sound like a choir of bells. The whole town cheers. It lasts for almost a minute. Then the song turns sour, and the water sinks, and the glow in the stone starts to fade, and everybody goes quiet.
+
+### Entry intro: laundry
+
+You take hold of the nearest wash-line, and you pour. All over town, shirts and socks and bedsheets whirl into life. They scrub themselves, and wring themselves out, and fold themselves up into neat stacks in the air. The whole town cheers. It lasts for almost a minute. Then the line in your hand starts to lose its glow, and the sheets droop, and everybody goes quiet.
+
+### Entry intro: seals
+
+Before she can answer, the lamp on your table starts to dim. So does the one next to it. The whole room goes quiet. “You can see for yourself,” Elliana whispers. “Look. By the window.”
+
+### Passage
+
+It is about as big as a cat, and it is very pale. It is like a moth, and it is also like a jellyfish. It has soft, slow wings, and long ribbons that trail down underneath it, and it has no face at all. It does not make a sound.
+
+It drifts up to the glow. It wraps its ribbons around the light, and it drinks. The light flows into it. The creature glows a little, just for a moment, and whatever it was drinking from goes dark.
+
+On your head, Biscuit puffs up to twice his size, then dives down the back of your shirt.
+
+“A syphon,” Elliana whispers. “That’s what we call them. They come every night.”
+
+You were expecting a monster. This does not look like a monster, and it does not look mean. If anything, it looks hungry.
+
+The syphon turns away from the dead light. It floats off down the street toward the edge of town, and the dark hills beyond.
+
+### Choices
+
+#### Choice 1
+
+Follow it quietly
+
+```json
+{
+  "next_scene": "scene_041"
+}
+```
+
+#### Choice 2
+
+Zap it before it gets away
+
+```json
+{
+  "next_scene": "scene_042"
+}
+```
+
+---
+
+## scene_041 — Following the Light
+
+### Passage
+
+You tiptoe after it. Elliana, Tilly, and Bram tiptoe after you. Bram is not very good at tiptoeing.
+
+The syphon floats down the main street without any hurry at all. It stops for a sip at a window where a glow-globe is flickering. It drifts on, out past the last houses of Willowmere, to the place where the fields begin.
+
+You stop at the fence, and you stare.
+
+The fields are full of them. There are dozens and dozens of pale, glowing shapes, floating slowly over the grass like paper lanterns that somebody has let go. They are drifting in from every direction, from the farms and the river and the town, and they are all going the same way. A long, soft, shining line of them stretches off into the distance, toward the Hollow Hills.
+
+It would be one of the most beautiful things you have ever seen, if you did not know what it meant.
+
+“They come down when it gets dark,” Bram says quietly. “They drink their fill. And at dawn they all go home.”
+
+“Then that’s where we go, too,” you say. “Home. Theirs, I mean.”
+
+Tilly pulls down her goggles. “I’ll pack my tools.”
+
+### Choices
+
+#### Choice 1
+
+Get ready to leave at first light
+
+```json
+{
+  "next_scene": "scene_043"
+}
+```
+
+---
+
+## scene_042 — Feeding Time
+
+### Passage
+
+Oh no, you don’t.
+
+You picture a bright, hot spark. You breathe out, and you throw it.
+
+Your spark streaks down the street and hits the syphon right in the middle.
+
+The syphon swallows it.
+
+It glows much brighter. It swells up to the size of a big dog. If something without a face can look delighted, this one does. It turns around, and it starts to float back toward you. Behind it, out of the dark, five more come floating around the corner, to see where the food is coming from.
+
+“STOP!” Elliana grabs your arm. “You’re FEEDING it! Spells are magic, and magic is what they eat!”
+
+“You could have said so!”
+
+“I didn’t think you were going to THROW something at it!”
+
+The big one is nearly on top of you. You grab a rock off the street. There is no time to breathe, or to picture anything. You just fling it, with a shove of magic behind it to make it go.
+
+The rock goes straight through the syphon. The syphon bursts apart like a dandelion when you blow on it. The pale fluff hangs in the air, swirls around, and slowly comes back together, quite a lot farther off. The syphon shakes itself. Then it drifts away, in no hurry at all, toward the hills. The others follow it.
+
+“Huh,” says Tilly. “So they eat magic. But they don’t much like a thing that has been thrown BY magic.”
+
+That is good to know. You hope that you will not need it.
+
+### Choices
+
+#### Choice 1
+
+Get ready to leave at first light
+
+```json
+{
+  "next_scene": "scene_043"
+}
+```
+
+---
+
+## scene_043 — Packing Up
+
+### Passage
+
+You sleep in the loft above the Warm Kettle, which smells like bread. Biscuit sleeps on your face.
+
+In the morning, you come downstairs and find that everybody has already packed.
+
+“I’m going,” Elliana says. “It’s my ritual, and my mage, and my parents’ seal.”
+
+“I’m going too,” says Tilly. She holds up a brass gadget that looks like a compass. The needle is swinging around, and then it steadies, and points to the hills. “I made a magic-sniffer. It points wherever the magic is flowing to. And if something is wrong out there that a wrench can fix, you’re going to want somebody with a wrench.”
+
+“And I’m going,” says Bram, “because the three of you would forget to eat.” He has a pack on his back that is as big as you are. It smells of cinnamon. His cousin will keep the Kettle warm.
+
+Biscuit trills, and climbs into your hood. That makes five.
+
+You look around at them. There is a cat-folk girl who tried a ritual over and over until it worked, and a fox with a wrench, and a bear with a bag of pastries, and a ball of fluff. Yesterday morning you did not know that any of them existed.
+
+It is two days’ walk to the Hollow Hills, and there are two ways to go.
+
+### Choices
+
+#### Choice 1
+
+Take the river road. It’s longer, but it’s easy going
+
+```json
+{
+  "next_scene": "scene_044"
+}
+```
+
+#### Choice 2
+
+Take the shortcut through the old forest
+
+```json
+{
+  "next_scene": "scene_045"
+}
+```
+
+---
+
+## scene_044 — The River Road
+
+### Passage
+
+The river road follows the Silverwind, and it is easy walking.
+
+Out on the water, big flat boats are sitting still, turning slowly round and round. “Drift-barges,” Tilly says. “They used to float goods up and down the whole valley by themselves. Now everybody has to use poles.” She waves to a badger who is poling a barge full of cabbages. He looks like he is having a terrible day.
+
+Bram walks beside you. He takes one step for every three of yours.
+
+“You asked about my hands,” he says, although you did not. “I’m not complaining about them. When I was little, I asked my grandmother how the ovens stayed hot. She said that a place stays warm as long as there’s somebody in it who cares whether it does. I thought she was talking about magic.”
+
+He looks down at his blisters.
+
+“When the ovens went cold, I worked it out. She wasn’t talking about magic at all. So I picked up the axe.”
+
+You think about that for a good long while.
+
+“Bram? I think your grandmother was the smartest person in {world_name}.”
+
+“She would have liked you,” Bram says. “She’d have said you’re too thin, though.” And he hands you a cinnamon roll.
+
+### Choices
+
+#### Choice 1
+
+Make camp for the night
+
+```json
+{
+  "next_scene": "scene_046",
+  "entry_intro": "river"
+}
+```
+
+---
+
+## scene_045 — The Old Forest
+
+### Passage
+
+The shortcut goes through the oldest part of the forest. The glow-moss here has gone almost completely dark, and you have to watch where you put your feet.
+
+Tilly walks out in front with her magic-sniffer, muttering to herself.
+
+“Can I ask you something?” you say. “Why do you like fixing things so much?”
+
+“Because a broken thing is a puzzle,” she says. “Every single one. Something is loose, or bent, or worn down. You find it, you fix it, and then the thing WORKS again, and somebody is happy. There’s always an answer. That is my favorite thing about broken things.”
+
+She whacks a fern with her wrench.
+
+“That’s why this makes me so angry! I’ve had every charm in Willowmere apart on my bench. There’s nothing loose, and there’s nothing bent. They’re all perfect, and they don’t WORK. It’s a puzzle with no answer, and I HATE it!”
+
+She walks on for a bit, breathing hard.
+
+“Sorry,” she says.
+
+“Don’t be. I think we’re on the way to the answer right now. It’s only that this time, the broken part is at the other end of a very long wire.”
+
+Tilly stops. She pushes her goggles up, and she looks at you.
+
+“Huh,” she says. “I like that. I like that a lot, actually.”
+
+### Choices
+
+#### Choice 1
+
+Make camp for the night
+
+```json
+{
+  "next_scene": "scene_046",
+  "entry_intro": "forest"
+}
+```
+
+---
+
+## scene_046 — Campfire
+
+### Entry intro: river
+
+You make camp on the bank of the river as the stars are coming out.
+
+### Entry intro: forest
+
+You make camp in a clearing as the stars are coming out between the branches.
+
+### Passage
+
+Bram builds a fire the ordinary way, with sticks. Then he brings out a frying pan, and that is the end of anybody worrying about anything for a while.
+
+After supper, the five of you sit around the fire. Tilly is cleaning her tools. Bram is humming. Elliana has her knees pulled up and her tail wrapped around her feet, and she is staring into the flames. Biscuit is lying on his back in your lap, fast asleep, with all four feet sticking up in the air.
+
+You have only known these people for two days. It is strange how it does not feel like that.
+
+It is a good night for talking.
+
+### Choices
+
+#### Choice 1
+
+Ask Elliana why she kept trying the ritual
+
+```json
+{
+  "next_scene": "scene_047"
+}
+```
+
+#### Choice 2
+
+Teach everybody your Dad’s breathing trick
+
+```json
+{
+  "next_scene": "scene_048"
+}
+```
+
+#### Choice 3
+
+Practice some small magic with Biscuit
+
+```json
+{
+  "next_scene": "scene_049"
+}
+```
+
+---
+
+## scene_047 — One Hundred and Twelve
+
+### Passage
+
+“Elliana? How many times did you try the ritual, before it worked?”
+
+“One hundred and twelve,” she says, right away. She does not have to think about it.
+
+Bram stops humming.
+
+“My parents were the keepers of the seal in the Hollow Hills,” she says. “Two years ago they went out to check on it, the same as they did every spring. They came back three days later. And they were...” She stops, and looks for the word. “Faded. They aren’t hurt. They know who I am. But they’re tired all the time, and they’re gray, and neither one of them has been able to light so much as a candle from that day to this. They used to be the best mages in the valley.”
+
+She pokes at the fire with a stick.
+
+“Nobody believed in the old prophecy. They thought I was a silly girl with a pile of storybooks. So I went to the cave by myself. And I drew that circle a hundred and eleven times, and nothing happened.”
+
+“And then?”
+
+“And then I drew it one more time, and I got you.” She laughs, and wipes her nose. “And the first thing you did was blow a hole in my cave.”
+
+You do not really know what to say. So you move over until your shoulder bumps against hers, and you stay like that.
+
+“We’re going to fix it,” you tell her. “That’s a promise.”
+
+### Choices
+
+#### Choice 1
+
+Get some sleep
+
+```json
+{
+  "next_scene": "scene_050"
+}
+```
+
+---
+
+## scene_048 — The Breathing Trick
+
+### Passage
+
+“Can I show you all something? It’s how I do the magic. But it isn’t a magic thing. My Dad taught it to me, for when I’m worried.”
+
+You show them how. You close your eyes, and you picture one small candle flame in the dark. You breathe in slowly, and hold it. You breathe out slowly. The flame does not flicker. You are warm, and you are safe, and you are right here.
+
+They all try it. Tilly is no good at sitting still, and she keeps opening one eye. But after a few minutes, it has gone very quiet around the fire.
+
+“Oh,” Elliana whispers.
+
+You open your eyes. There is a little ball of golden light floating above her hands. It is steady, and bright, and it is not flickering at all.
+
+“I haven’t been able to hold a light steady in over a year,” she says.
+
+Tilly’s wrench is glowing faintly. And Bram reaches out one big finger toward a dead twig, and a tiny flame pops up on the end of it. He stares at it as if it is the most precious thing he has ever seen.
+
+“I thought it had all gone out of me,” he says, in a rough voice. “I thought it had gone out of everybody.”
+
+“It didn’t go anywhere,” you say, as it dawns on you. “It was never gone from inside you. It is only the air that’s thin. You’ve each still got your own.”
+
+That seems like it could be important. You tuck it away for later.
+
+### Choices
+
+#### Choice 1
+
+Get some sleep
+
+```json
+{
+  "next_scene": "scene_050"
+}
+```
+
+---
+
+## scene_049 — Small Magic
+
+### Passage
+
+Everything that you have done so far has been big. It is time to practice doing small.
+
+You picture a tiny light, no bigger than a firefly. You breathe out very, very gently.
+
+A wagon-wheel fireball does not appear, which is an improvement. A spark the size of a pea floats up from your fingertip.
+
+Biscuit’s eyes snap open.
+
+He launches himself out of your lap and chases the spark all around the campfire, trilling at the top of his lungs. He catches it, and eats it. He does a loop in the air. Then he flies back and hovers right in front of your face, waiting for another one.
+
+You make another. And then another. You make them zigzag. You make two at once. You find that you can make one bright, and then you can turn it down dimmer, and dimmer, until it has almost gone out, and then bring it back up again. It is like the knob on a lamp.
+
+Bram and Tilly are laughing so hard at Biscuit that they do not see what you are really doing. But Elliana sees.
+
+“That’s control,” she says quietly. “Do you know that most mages take years to learn how to turn it down? Turning it up is easy. Anybody can shout. It takes practice to whisper.”
+
+You dim your last spark right down to nothing. Biscuit gives you a look of terrible disappointment.
+
+### Choices
+
+#### Choice 1
+
+Get some sleep
+
+```json
+{
+  "next_scene": "scene_050"
+}
+```
+
+---
+
+## scene_050 — Night Visitors
+
+### Passage
+
+You wake up in the middle of the night, because Biscuit is trying to climb inside your ear.
+
+You open your eyes.
+
+The camp is full of syphons.
+
+There are dozens of them, pale and silent, drifting among the trees like lanterns made of paper. They float right over Bram’s fire without taking any interest in it. They float right past the others, who are all asleep.
+
+They are coming toward you.
+
+Of course they are. Elliana said it herself. You are more magic than anything this world has seen in a hundred years. To a syphon, you must look like a bonfire on a dark night.
+
+They form a slow circle around your blanket, and their long ribbons wave gently back and forth. The nearest one is close enough to touch. You can see right through it, to the stars on the other side.
+
+Your heart is pounding. But they are not grabbing at you, and they are not rushing. They are just floating there.
+
+Very slowly, you sit up.
+
+### Choices
+
+#### Choice 1
+
+Stay still, and let one come close
+
+```json
+{
+  "next_scene": "scene_051"
+}
+```
+
+#### Choice 2
+
+Scatter them with wind and stones
+
+```json
+{
+  "next_scene": "scene_052"
+}
+```
+
+#### Choice 3
+
+Dim your spark, and hide
+
+```json
+{
+  "next_scene": "scene_053"
+}
+```
+
+---
+
+## scene_051 — The Touch
+
+### Passage
+
+You hold out your hand, with the palm up, the way you would to a dog you did not know.
+
+The nearest syphon drifts closer. One long, pale ribbon reaches out, and curls softly around your fingers. It is cool, and it tingles, like a foot that has gone to sleep. You feel a little of your magic trickle out of you. It is not much. It is only a sip.
+
+And then, behind your eyes, you see something.
+
+You see a world that is gray. The ground is gray, and the hills are gray. There is a gray sky with no sun in it, and no stars. Nothing is growing there. Nothing is glowing. There is nothing left to eat, anywhere, and there has not been for a very long time. And there are thousands and thousands of pale shapes, drifting over the gray ground, going slower and slower, and growing dim.
+
+And then there is a light! It is a circle on the ground, shining gold, and on the other side of it is warmth, and color, and FOOD. It is a door, and it has been left open.
+
+So they go through. Of course they do. Anybody would.
+
+The ribbon lets go. You gasp, and you are back beside the campfire, with tears running down your face and no idea when they began.
+
+They are not invaders. They are not evil. They are not even really a “they,” with a plan. They are starving animals who found a hole in a fence.
+
+As the sky begins to turn gray, the syphons turn, all together, and drift away to the east.
+
+### Choices
+
+#### Choice 1
+
+Wake the others and follow them
+
+```json
+{
+  "next_scene": "scene_054",
+  "entry_intro": "touched"
+}
+```
+
+---
+
+## scene_052 — Scatter
+
+### Passage
+
+You are not going to sit here and be somebody’s midnight snack.
+
+They eat magic, so a spell would only be a snack for them. But wind is just wind, and a pebble is just a pebble, even when magic is the thing that throws it. So you do not throw a spell. You picture the wind. You picture every pebble, and twig, and pine cone on the ground lifting up into it.
+
+You breathe in, you breathe out, and you sweep your arms out wide.
+
+WHOOSH.
+
+A whirlwind of leaves and grit and pebbles spins outward from where you are sitting, and tears through the ring of syphons. One after another, they burst apart like dandelions, until the air is full of drifting white fluff.
+
+The noise wakes everybody. Bram comes up out of his blankets roaring, with a frying pan in his hand.
+
+The fluff swirls around, and gathers, and comes back together at the edge of the trees, into smaller, dimmer syphons. They hover there a moment. Then they turn, all together, and drift off to the east, without hurrying.
+
+“Everybody okay?” you ask, breathing hard.
+
+Tilly is kneeling on the ground with her sniffer. “Look at this.”
+
+Where the syphons were floating, the grass has gone gray. It is not burnt, and it is not dead. It is just gray, as if all the color has been sipped out of it. It is the same gray as the Hollow Hills.
+
+“The needle’s pointing right after them,” Tilly says. “Come on. They’ll lead us straight there.”
+
+### Choices
+
+#### Choice 1
+
+Follow them
+
+```json
+{
+  "next_scene": "scene_054",
+  "entry_intro": "scattered"
+}
+```
+
+---
+
+## scene_053 — Hide Your Light
+
+### Passage
+
+If you look like a bonfire to them, then you need to stop being a bonfire.
+
+You close your eyes, and you find the flame inside you. You do not picture it getting bigger this time. You picture it getting smaller. It shrinks from a bonfire down to a campfire. From a campfire down to a candle. From a candle down to a single orange ember, tucked deep away, where nobody can see it.
+
+It is the hardest magic you have done so far. Turning it up was easy. Turning it down takes everything you have got.
+
+You open one eye.
+
+The syphons have stopped coming closer. They are drifting this way and that, and their ribbons are waving around, as if they have lost the scent. One of them floats right over your head without even slowing down. To them, you are just a rock now, or a kid asleep in a blanket.
+
+Inside your shirt, Biscuit is holding perfectly still. You are fairly sure that he is dimming himself too.
+
+After a long while, the sky starts to turn gray. The syphons give up. They turn, all together, and drift away to the east in a long, pale line, like geese going south.
+
+You let out your breath, and you let your flame come back up. You are soaked with sweat.
+
+So you can hide from them. That is worth knowing. And what is even more useful is that they have just shown you exactly which way home is.
+
+### Choices
+
+#### Choice 1
+
+Wake the others and follow them
+
+```json
+{
+  "next_scene": "scene_054",
+  "entry_intro": "hid"
+}
+```
+
+---
+
+## scene_054 — The Hollow Hills
+
+### Entry intro: touched
+
+You wake the others, and you tell them what you saw. Nobody says very much after that. You pack up the camp, and you follow the pale line east.
+
+### Entry intro: scattered
+
+You pack up the camp in the gray light, and you follow the pale line east.
+
+### Entry intro: hid
+
+You wake the others, and you tell them what happened. Tilly is furious that she slept through it. You pack up the camp, and you follow the pale line east.
+
+### Passage
+
+By the middle of the day, the color has started to go out of things.
+
+It begins with the grass, which turns from green to a dusty sort of sage, and then to gray. Then it is the trees, and then the stones. There are no birds here. Even the sky looks washed out. Your own shoes look too bright, as if they do not belong.
+
+“I don’t like it here,” Bram says quietly. It is the first time you have ever heard him sound small.
+
+On Tilly’s sniffer, the needle is pulling so hard that the whole thing shakes in her hand.
+
+And then you see it. In the side of the biggest hill there is a cave mouth as tall as a house, with broken stone pillars on either side of it.
+
+“That’s the seal-house,” Elliana says. Her voice is very steady, in the way of somebody who is working hard to keep it that way. “My parents were the keepers here. They came out to check on the seal two years ago. They came home gray, and tired, and neither of them has been able to light so much as a candle since.”
+
+Tilly has been climbing around on the hillside. “There’s a crack up here, too!” she calls down. “It’s narrow, but it goes all the way in. I can feel a draft coming out of it. It’d bring us out up high, I’d bet, where we could have a look at everything before anything has a look at us.”
+
+### Choices
+
+#### Choice 1
+
+Go in through the main entrance
+
+```json
+{
+  "next_scene": "scene_055"
+}
+```
+
+#### Choice 2
+
+Squeeze in through Tilly’s crack
+
+```json
+{
+  "next_scene": "scene_056"
+}
+```
+
+---
+
+## scene_055 — The Broken Door
+
+### Passage
+
+You walk between the broken pillars, and into the hill. The pocket of light from Elliana’s hands is the only color anywhere.
+
+Thirty steps in, you come to the seal.
+
+It was a door, once. It is a huge round slab of stone, twice as tall as Bram, and it is carved all over with symbols, in rings inside of rings. It is like the door in Elliana’s book.
+
+It is cracked right down the middle, and the two halves are leaning apart. There is a gap between them that you could easily walk through. The symbols must have glowed once. Now they are dark.
+
+Elliana lays her hand on the stone.
+
+“It didn’t get smashed,” she says. “See how the edges are all crumbly? Nothing broke it. It just got so weak that it couldn’t hold itself up any more.” She traces one of the carved rings with her finger, and then she frowns. “That’s odd. This isn’t a locking pattern. This part here is a locking pattern. But this ring in the middle is a summoning ring. I know it. I’ve drawn it a hundred and twelve times. Why would anybody put a summoning ring on a seal?”
+
+A slow, pale glow is coming through the gap in the door, from somewhere farther in.
+
+### Choices
+
+#### Choice 1
+
+Go through the gap
+
+```json
+{
+  "next_scene": "scene_057",
+  "entry_intro": "main"
+}
+```
+
+---
+
+## scene_056 — The Crack
+
+### Passage
+
+Tilly goes in first, because it is her crack. Then Elliana. Then you, with Biscuit in your hood.
+
+Then Bram.
+
+“I’m stuck,” says Bram.
+
+“You’re not stuck,” says Tilly. “Breathe out.”
+
+“I did breathe out. This is me with the breath out.”
+
+It takes all three of you pulling on his arms, and one very unhappy minute, and then Bram comes through like a cork out of a bottle, and lands on top of everybody. He checks the pastries first. They are fine.
+
+After that, the crack widens into a tunnel, and the tunnel slopes downward. Up ahead, there is a pale glow.
+
+The tunnel comes out onto a ledge. You crawl to the edge on your stomachs, side by side, and you look over.
+
+You are high up on the wall of an enormous round cavern. It is so big that Willowmere’s whole town square would fit inside it. From up here, you can see all of it.
+
+None of you says a single thing.
+
+### Choices
+
+#### Choice 1
+
+Look down
+
+```json
+{
+  "next_scene": "scene_057",
+  "entry_intro": "side"
+}
+```
+
+---
+
+## scene_057 — The Source
+
+### Entry intro: main
+
+You step through the broken door, and you come out into an enormous round cavern. It is so big that Willowmere’s whole town square would fit inside it.
+
+### Entry intro: side
+
+Carved into the floor of the cavern, far below you, is something that you know right away.
+
+### Passage
+
+It is a summoning circle.
+
+It is exactly like the one you woke up in, with the same rings and the same symbols. But this one is as wide as a pond, and it has been cut deep into the rock, and it is very, very old. And it is glowing. The whole circle shines with a steady golden light.
+
+It is still open.
+
+Syphons are rising up out of it, one after another after another, in a slow, steady stream, like bubbles rising in a glass. There are hundreds of them in the cavern already. They hang in the air up near the ceiling, as thick as fog.
+
+“Somebody tried it before,” Elliana whispers. Her face has gone pale. “A long, long time ago. Somebody else tried to summon help. And it went wrong. It opened up onto the wrong world, an empty one. And they couldn’t close it again. So they built a seal over the top of it, and they didn’t tell anybody, and they hoped.” Her voice shakes. “It’s my circle. It’s the same ritual. What if I had—”
+
+Bram’s big hand comes down on her shoulder.
+
+“You didn’t, though,” he says. “Yours brought us help.”
+
+You look at the circle. You have sat in the middle of one of these. You can feel how it works, the way you can feel a loose tooth. It is a door, and it has been standing open for a thousand years.
+
+“I can close it,” you say. “I know I can. With Elliana’s help.”
+
+“And then what about all of them?” Tilly points up at the pale cloud under the ceiling. “There are hundreds in here, and more out there. If you shut that door, they’re stuck on this side of it. For good. And they’ll just keep on eating.”
+
+She is right. It is not enough just to close the door. First, you have to decide what to do about everything that has already come through it.
+
+### Choices
+
+#### Choice 1
+
+Herd them back home through the circle, then close it
+
+```json
+{
+  "next_scene": "scene_058"
+}
+```
+
+#### Choice 2
+
+Drive them off and destroy them, then close it
+
+```json
+{
+  "next_scene": "scene_059"
+}
+```
+
+---
+
+## scene_058 — The Shepherd’s Plan
+
+### Passage
+
+“We send them home,” you say. “All of them.”
+
+“Home to what?” Tilly asks. “There’s nothing over there. That’s why they left.”
+
+“I know. I’ve got an idea about that part, too. But first, they have to go back through.”
+
+“How?” says Bram. “You can’t exactly whistle for them.”
+
+“Sure I can.” You tap your chest. “They follow magic, and I’m the brightest thing in {world_name}. They would follow me anywhere. So I lead them right up to the edge of the circle, and then...”
+
+“And then they drink you dry, the way they did my mother and father,” Elliana says sharply. “{hero_name}, no. There are hundreds of them.”
+
+Tilly has started pulling things out of her pack. There are four little glass lanterns, the kind with charms inside them, and all of them are dark.
+
+“What if it isn’t only you?” she says. “These charms aren’t broken. They’re only empty. So fill them up, as full as they’ll go. We’ll each carry one. That makes four lights instead of one, and we walk them in like sheep. Nobody gets drunk dry, because no one of us is carrying the whole load.”
+
+It is a good plan. It is a slower one, too, and it puts all of your friends down on the cavern floor, right in the middle of the flock.
+
+### Choices
+
+#### Choice 1
+
+Be the lure yourself
+
+```json
+{
+  "next_scene": "scene_060"
+}
+```
+
+#### Choice 2
+
+Do it together, with the lanterns
+
+```json
+{
+  "next_scene": "scene_061"
+}
+```
+
+---
+
+## scene_059 — The Battle Plan
+
+### Passage
+
+“We can’t send them back to a dead world, and we can’t leave them in this one,” you say. “They’re eating {world_name} alive. People are going hungry because of them. Elliana’s parents...” You do not finish. “We get rid of them. And then we close the door, so that no more ever come.”
+
+Nobody argues with you. Nobody looks happy, either.
+
+“Spells will only feed them,” Elliana says. “Magic is what they eat.”
+
+“But a rock isn’t magic,” says Tilly, “even when magic is what’s throwing it. Look at them. They’re made of fluff. I’ll bet they go to pieces like a dandelion if you hit them. And I’ll bet that if you burst one enough times, it doesn’t come back together at all.”
+
+You look around the cavern. There is no shortage of stone in here. The floor is covered in gravel and rubble.
+
+“I can raise a storm,” you say. “Every loose stone in this cave, all of them at once.”
+
+Bram is looking up at the ceiling. Right over the circle, there is a huge shelf of cracked rock, hanging out over the floor.
+
+“Or you could let us help,” he rumbles. “Tilly finds the weak spots in things, and I’m not small. We bring that whole shelf down. You put a wind behind it, and it all happens at once.”
+
+### Choices
+
+#### Choice 1
+
+Raise the stone storm yourself
+
+```json
+{
+  "next_scene": "scene_063",
+  "entry_intro": "storm"
+}
+```
+
+#### Choice 2
+
+Set the rockslide trap with Bram and Tilly
+
+```json
+{
+  "next_scene": "scene_063",
+  "entry_intro": "trap"
+}
+```
+
+---
+
+## scene_060 — The Lure
+
+### Passage
+
+You walk out onto the cavern floor by yourself.
+
+You stop at the very edge of the circle, with your toes nearly touching the golden light. You close your eyes, and you find the flame inside you.
+
+And you let it blaze. You do not throw it at anything. You just turn it up, brighter than you did for the hole in the mountain, as bright as it will go. You can feel it shining out through your skin.
+
+Every syphon in the cavern turns toward you.
+
+They come down from the ceiling like snow. There are hundreds of them. They pour in all around you, a river of pale wings and trailing ribbons, and each one of them takes a sip as it goes by. One sip is nothing. Hundreds of sips is a whole lot.
+
+Your knees start to shake. The flame is getting lower, and you are getting cold.
+
+Then a hand slides into yours, a warm one, with little claws. Elliana is standing beside you, right in the middle of the river, with her ears flat and her eyes shut tight.
+
+“Breathe,” she says. “In. Hold. Out. I’ve got you. You showed me how.”
+
+You breathe.
+
+And you take one step to the side. The river of syphons flows right past the place where you were standing, toward the only other light there is: the golden glow of the open door. One after another, they tip over the edge of it, and they sink down, and they are gone.
+
+### Choices
+
+#### Choice 1
+
+Hold on until the last one
+
+```json
+{
+  "next_scene": "scene_062",
+  "entry_intro": "alone"
+}
+```
+
+---
+
+## scene_061 — The Shepherds
+
+### Passage
+
+You fill up the four lanterns until they are shining like little suns. It takes a lot out of you, but it is a whole lot less than hundreds of sips would have.
+
+Then the four of you spread out across the floor of the cavern, and you hold your lanterns up high.
+
+The syphons come down from the ceiling like snow.
+
+“Walk slowly,” you call out. “Don’t run. Just walk them in.”
+
+And that is what you do. Bram walks on the left, with a lantern held up in one fist, as steady as a lighthouse. Tilly walks on the right, and talks to the syphons the entire time. “That’s it. This way. No, not over there, you daft thing, THIS way.” Elliana takes the middle, with her tail held high. You come along behind them with the brightest lantern of all, sweeping up the slow ones.
+
+Biscuit is the one who surprises everybody. He zooms out of your hood and tears around the outside of the flock, trilling and glowing, and he nips at the stragglers until they turn around. He is a sheepdog the size of a grapefruit.
+
+It is like herding clouds. But step by step, the big pale flock floats across the cavern to the edge of the circle.
+
+One after the other, the four of you set your lanterns down on the rim, and you step back.
+
+The syphons float right past the little lights, toward the big one. One after another, they tip over the edge of the golden door, and they sink down, and they are gone.
+
+### Choices
+
+#### Choice 1
+
+Watch until the last one
+
+```json
+{
+  "next_scene": "scene_062",
+  "entry_intro": "together"
+}
+```
+
+---
+
+## scene_062 — Through the Circle
+
+### Entry intro: alone
+
+It takes a long time. You are down on your knees by the end of it, and Elliana is the only thing holding you up. But the river gets thinner. And then it is a trickle. And then it is only a few.
+
+### Entry intro: together
+
+It takes a long time. The flock gets thinner. And then it is a trickle. And then it is only a few. Bram has to go and fetch one that got itself stuck behind a rock. He carries it over in his cupped hands, very gently, and tips it in.
+
+### Passage
+
+The last syphon of all stops at the edge of the circle.
+
+It turns around. It floats back over to you, with its ribbons trailing, and it stops right in front of your face. One ribbon reaches out, and touches you on the forehead, very lightly.
+
+You see the gray world again. There is the gray ground, and the gray sky. But this time, all across it, thousands of pale shapes are sinking back down onto the hills. They are home. They are home, and they are still hungry.
+
+It is not enough. You can’t just send them back to starve.
+
+So you do the thing that you have been planning to do ever since you thought of it. You reach deep down inside yourself, and you take a piece of your flame. You do not take a sip’s worth, or a spell’s worth. You take a real piece of it, the kind of piece that you will feel the loss of. You hold it in your cupped hands, where it shines like a small sun.
+
+You do not throw it. You hold it out.
+
+The last syphon takes it, with all of its ribbons, as carefully as you would carry an egg. It does not drink it. It carries it. It floats back to the circle, and down into the gold, with your light held against its chest like a seed.
+
+Behind your eyes, only for a moment, you see one tiny point of color appear on a gray hill, in a gray world.
+
+“Grow,” you whisper.
+
+The cavern is empty now. The air is clear. The door is still standing open.
+
+### Choices
+
+#### Choice 1
+
+Close the circle
+
+```json
+{
+  "next_scene": "scene_064"
+}
+```
+
+---
+
+## scene_063 — The Battle of the Circle
+
+### Entry intro: storm
+
+You walk out into the middle of the cavern by yourself. You spread your arms, and you breathe in, and every loose stone in the cave lifts up off the floor. You breathe out. The storm begins to turn, slowly at first, and then faster, until the whole cavern is howling, and you are standing in the quiet place in the middle of it.
+
+### Entry intro: trap
+
+Tilly climbs up and finds the weak places. Bram gets his shoulder in behind the shelf of rock, and you hear him growl. There is a crack like thunder. As the whole shelf comes down, you throw a gale of wind in behind it, and a thousand tons of broken stone goes sweeping across the cavern like a wave.
+
+### Passage
+
+The syphons burst.
+
+They burst by the dozens, and then by the hundreds, and the air fills up with white fluff until it looks like a blizzard. The fluff swirls around, and tries to come back together, and the stones go through it again. And again. The shapes that form get smaller each time, and dimmer.
+
+You notice that they do not fight back. You had thought that they would. They do not even run away. The ones that are left just keep on drifting toward you, toward the light, the same as they always have, because it is the only thing that they know how to do.
+
+You keep going. You think about Bram’s blistered hands, and Gus’s empty cellar, and Elliana’s mother and father. You keep going until your arms are shaking.
+
+And then there is nothing left to aim at.
+
+The stones rattle down onto the floor, and it goes quiet. A fine, gray dust comes sifting down through the golden light of the circle. It settles over everything. It settles on your shoulders, and in your hair.
+
+In your hood, Biscuit is making a small, sad sound that you have never heard him make before.
+
+“It had to be done,” Tilly says. She says it like she is checking her math.
+
+“It did,” says Bram. He brushes the gray dust off his arm, and then he stands there, looking at his hand.
+
+You won. {world_name} is safe. You are sure that you will feel good about it soon.
+
+The door is still standing open.
+
+### Choices
+
+#### Choice 1
+
+Close the circle
+
+```json
+{
+  "next_scene": "scene_065"
+}
+```
+
+---
+
+## scene_064 — Closing the Circle
+
+### Passage
+
+You and Elliana kneel down together at the edge of the circle, the way she must have knelt in her cave, a hundred and twelve times.
+
+“I know how to open one,” she says. “I’ve never closed one.”
+
+“I’ve never done either,” you say. “But I know how it feels to be inside one. We’ll figure it out.”
+
+You take hold of her hands. You close your eyes.
+
+You picture the candle flame, the same as always. But this time, you picture what comes at the very end of the night, when your Dad thinks that you have gone to sleep. He leans over. He breathes out, softly. And the light goes out, and all that means is that you are safe, and it is time to rest.
+
+You breathe in. Elliana breathes in with you.
+
+You breathe out.
+
+The golden light of the circle folds inward, one ring at a time, from the outside to the middle. The last ring shrinks down to a single bright point. It hangs there for a moment.
+
+Then it goes out.
+
+For one heartbeat, nothing happens.
+
+And then you feel it. It is like the first warm day at the end of a long winter. It rises up out of the ground, and it rolls out of the cavern, and away across the hills. It is magic, coming back in like the tide, now that there is nothing to drink it away.
+
+On the cavern walls, every dark symbol lights up gold.
+
+Bram is laughing. Tilly’s sniffer is spinning around like a top. Biscuit is glowing like a lantern and doing loops up near the ceiling.
+
+When you come out of the cave, the hills have turned green.
+
+### Choices
+
+#### Choice 1
+
+Go home to Willowmere
+
+```json
+{
+  "next_scene": "scene_066"
+}
+```
+
+---
+
+## scene_065 — Closing the Circle
+
+### Passage
+
+You and Elliana kneel down together at the edge of the circle, in the gray dust.
+
+“I know how to open one,” she says quietly. “I’ve never closed one.”
+
+“I’ve never done either. We’ll figure it out.”
+
+You take hold of her hands. You close your eyes.
+
+You picture the candle flame, the same as always. But this time, you picture what comes at the very end of the night, when your Dad thinks that you have gone to sleep. He leans over. He breathes out, softly. And the light goes out.
+
+You breathe in. Elliana breathes in with you.
+
+You breathe out.
+
+The golden light of the circle folds inward, one ring at a time. The last ring shrinks down to a single bright point. It hangs there for a moment. Then it goes out.
+
+And then you feel it. It is like the first warm day at the end of a long winter. It is magic, rolling back in like the tide, now that there is nothing to drink it away. On the cavern walls, every dark symbol lights up gold.
+
+Bram lets out a long breath. Tilly’s sniffer is spinning around like a top. Biscuit creeps up out of your hood and starts, very slowly, to glow.
+
+It worked. It really did work.
+
+On your way out, you stop. You are not sure why you do it. You crouch down, and you scoop up a pinch of the fine gray dust, and you fold it into a page from Elliana’s book, and you put it in your pocket.
+
+When you come out of the cave, the hills have turned green.
+
+### Choices
+
+#### Choice 1
+
+Go home to Willowmere
+
+```json
+{
+  "next_scene": "scene_067"
+}
+```
+
+---
+
+## scene_066 — The Festival of Lights
+
+### Passage
+
+You can hear Willowmere before you can see it.
+
+The fountain is singing. You can hear it from half a mile away, like a whole choir of bells, and underneath that is the sound of a town full of people cheering.
+
+Every street lamp is blazing. Drift-carts go zipping by overhead, and the drivers are whooping. All along the wash-lines, the laundry is doing something that looks a lot like dancing. Gus Tumblewick is there, with Pim and Pom, and they have a wagon piled high with vegetables from Lower Furrow. The growing-charms woke up two days ago, they tell you, and the fields have gone crazy. An old goat-folk peddler is selling turnips, and telling anyone who will listen that he knew you before you were famous, whether or not that is true.
+
+At the Warm Kettle, the ovens lit themselves that morning, all at once, with a whoomp that knocked Bram’s cousin flat. Bram stands in front of them with his eyes wet. Then he puts on his apron and bakes for nine hours without stopping.
+
+On the second night of the party, two cat-folk come walking slowly up the main street. They are thin, and they are leaning on each other. They have purple hair with streaks of silver. And a small golden light is floating over each of their open hands.
+
+Elliana makes a sound that you have never heard from her before, and she runs.
+
+You give them a good long while to themselves.
+
+Later on, she finds you up on the roof of the Kettle, where you are watching the lamps with Biscuit in your lap.
+
+“The magic’s back,” she says, “and that means that I can do it. I can send you home.” She sits down next to you. “Remember how I said that something answered from your side? I worked it out. It was you, {hero_name}. It was only ever you. Your spark was much too big for a world with no magic in it. It was looking for somewhere to go.”
+
+She pulls her knees up to her chin.
+
+“So it’s up to you, the same as it should have been the first time. I’ll draw the circle tonight, if that’s what you want. Or I won’t.”
+
+### Choices
+
+#### Choice 1
+
+Go home
+
+```json
+{
+  "next_scene": "scene_068"
+}
+```
+
+#### Choice 2
+
+Stay in {world_name}
+
+```json
+{
+  "next_scene": "scene_069"
+}
+```
+
+---
+
+## scene_067 — The Festival of Lights
+
+### Passage
+
+You can hear Willowmere before you can see it.
+
+The fountain is singing. You can hear it from half a mile away, like a whole choir of bells, and underneath that is the sound of a town full of people cheering.
+
+Every street lamp is blazing. Drift-carts go zipping by overhead. All along the wash-lines, the laundry is doing something that looks a lot like dancing. Gus Tumblewick is there, with Pim and Pom, and they have a wagon piled high with vegetables from Lower Furrow. The growing-charms woke up two days ago, they tell you. At the Warm Kettle, the ovens lit themselves that morning, all at once, and Bram puts on his apron and bakes for nine hours without stopping.
+
+They carry you around the square on their shoulders. They call you the Mage of the Hollow Hills. A badger makes up a song about the battle, and it has eleven verses, and the syphons get bigger and have more teeth in every one. You smile, and you wave. You do not tell them that the syphons had no teeth.
+
+On the second night of the party, two cat-folk come walking slowly up the main street. They are thin, and they are leaning on each other. A small golden light is floating over each of their open hands. Elliana makes a sound that you have never heard from her before, and she runs.
+
+When you see that, the tight place in your chest lets go a little. It was for this. It was worth something.
+
+Later on, she finds you up on the roof of the Kettle, with Biscuit in your lap. He has not let you out of his sight since the cave.
+
+“I can send you home now,” she says. “That something that answered from your side? It was you, {hero_name}. Your spark was much too big for a world with no magic in it. It was looking for somewhere to go.” She looks at you sideways. “You’ve been quiet.”
+
+“I keep thinking about how they never fought back.”
+
+“I know,” Elliana says. “I do too.” She leans her shoulder against yours. “I’ll draw the circle tonight, if that’s what you want. Or I won’t. It’s up to you.”
+
+### Choices
+
+#### Choice 1
+
+Go home
+
+```json
+{
+  "next_scene": "scene_070"
+}
+```
+
+#### Choice 2
+
+Stay in {world_name}
+
+```json
+{
+  "next_scene": "scene_071"
+}
+```
+
+---
+
+## scene_068 — Home Again
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
+“I have to go home,” you say. “My Dad’s there. He’ll be so worried.”
+
+“I know,” says Elliana. She is smiling, and she is crying, both at once. “I’d think less of you if you didn’t.”
+
+Everyone comes up to the cave to see you off. Tilly has fixed the hole in the wall, and she has put a little brass sign on it. Bram gives you a bag of honey buns that weighs more than you do. Tilly gives you her magic-sniffer. “It won’t point to anything where you’re going,” she says. “Keep it anyway.”
+
+Biscuit will not get out of your hood, and Bram has to lift him out. You kiss him on the top of his fuzzy head. He glows all the way down to his tail.
+
+You sit down in the circle. Elliana lights the candles, with a snap of her fingers, the way that a mage ought to.
+
+“The circle works in both directions,” she says. “I only want you to know that. One hundred and twelve tries is nothing. I’d do it again.”
+
+“You’d better,” you say.
+
+You close your eyes. You breathe in.
+
+You breathe out.
+
+You are in your own bed. It is morning. It smells like toast. Downstairs, your Dad is calling you to breakfast, as if you have only been gone for one night.
+
+You lie there for a minute. Maybe it was a dream.
+
+Then you feel something in your pocket. It is a brass compass with a wobbling needle, and there is one crumb of honey bun stuck to it.
+
+You picture a candle flame. You breathe out, as softly as you can.
+
+On the windowsill, a tiny golden spark floats up into the sunshine.
+
+You grin, and you run downstairs to hug your Dad.
+
+The End.
+
+### Choices
+
+---
+
+## scene_069 — The Mage of Willowmere
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
+You look out over the town. You look at the lamps, and the carts, and the laundry dancing on the lines. You can hear Bram’s big laugh coming up through the roof. You can hear Tilly arguing with somebody about gears.
+
+“Can you send a letter through?” you ask. “A letter, and not me?”
+
+Elliana’s ears go straight up. “I think so. Something small. Yes!”
+
+So you write to your Dad. It takes you four tries. You tell him that you are safe, and that you are needed, and that the breathing trick turned out to be a whole lot more useful than he ever could have guessed. You tell him that you will visit as soon as you and Elliana work out how. You put a honey bun in with it.
+
+The letter disappears from the circle with a pop.
+
+Three days later, there is another pop, and something arrives in the circle. It is a note, in handwriting you know. It says: “I always knew you were magic. Wear a coat. Love, Dad.” There is a coat with it.
+
+You stay.
+
+You and Elliana spend that whole winter walking from one end of {world_name} to the other, mending the old seals properly. Tilly builds you a drift-cart of your own, and it goes a lot faster than it should. Bram names a pastry after you. Biscuit sleeps on your face every night.
+
+And sometimes, when it is late, you close your eyes and you look for a gray world, very far away.
+
+It is not all gray any more. On one hill there is a patch of green, no bigger than a blanket. Pale shapes drift around it in a slow, soft circle. They are not drinking it. They are keeping watch over it.
+
+It is a little bigger every time you look.
+
+The End.
+
+### Choices
+
+---
+
+## scene_070 — Home Again
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
+“I have to go home,” you say. “My Dad’s there. He’ll be so worried.”
+
+“I know,” says Elliana. “I’d think less of you if you didn’t.”
+
+Everyone comes up to the cave to see you off. Tilly has fixed the hole in the wall. Bram gives you a bag of honey buns that weighs more than you do. Biscuit will not get out of your hood, and Bram has to lift him out. You kiss him on the top of his fuzzy head.
+
+“They’re going to put up a statue of you,” Tilly says. “In the square. You’ll have a very heroic chin.”
+
+“Do me a favor,” you say. “If they make a statue, don’t let them put teeth on the syphons.”
+
+Tilly looks at you for a second, and then she nods. “No teeth. I’ll see to it.”
+
+You sit down in the circle. Elliana lights the candles with a snap of her fingers.
+
+“You saved us,” she says. “You saved my mother and father. Whatever else you’re thinking about, think about that too.”
+
+You close your eyes. You breathe in. You breathe out.
+
+You are in your own bed. It is morning, and it smells like toast. Downstairs, your Dad is calling you to breakfast, as if you have only been gone for one night.
+
+In your pocket, there is a folded piece of paper with a pinch of gray dust in it.
+
+You keep it in a jar on your windowsill. You are not sure why. Sometimes you picture a candle flame, and you breathe out, as softly as you can, and a tiny golden spark floats across the room and lands on the jar.
+
+The dust never does anything. You keep on doing it anyway.
+
+You are a mage, and you know now that being strong was the easy part. You lie awake some nights, thinking about what you would do if there were a next time.
+
+Then you go downstairs, and you hug your Dad.
+
+The End.
+
+### Choices
+
+---
+
+## scene_071 — The Keeper of the Seal
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
+“I’m staying,” you say. “There’s something I need to do here.”
+
+You send a letter home to your Dad through the circle, with a honey bun. Three days later, a coat comes back, with a note. “I always knew you were magic. Wear a coat. Love, Dad.”
+
+Willowmere wants to give you a house on the square. You say thank you, and you ask for something else instead.
+
+You move into the old seal-house, out in the Hollow Hills.
+
+Elliana’s mother and father teach you how to be a keeper, now that they are strong enough. They teach you how to read a seal, and how to mend one, and how to listen at a thin place for whatever is on the other side. Elliana comes out every week with books. Tilly comes out to fix your roof, whether it needs fixing or not. Bram sends so much food that you have to give most of it to the tuskers.
+
+The folded paper full of gray dust sits on a shelf above your bed.
+
+Every night, you sit down at the edge of the closed circle, and you do the hardest kind of magic that there is. You turn your flame down to almost nothing, and you whisper with it. And you listen.
+
+A gray world is out there somewhere, on the other side. It is hungry, and it is dimming. You are going to find out if there is a way to help it that does not cost {world_name} everything. It may take years. You have got years.
+
+On your shoulder, Biscuit glows softly in the dark.
+
+One hundred and twelve tries is nothing, Elliana says.
+
+You close your eyes. You breathe in.
+
+Try number one.
+
+The End.
+
+### Choices
