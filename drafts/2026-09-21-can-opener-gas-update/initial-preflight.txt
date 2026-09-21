@@ -1,0 +1,12 @@
+
+> webapp@0.0.0 check:import
+> node scripts/check-story-import.js /tmp/pow-can-md-import/the_can_opener.json
+
+Story import preflight: review_required (read-only)
+the_can_opener: 0 added, 18 edited, 0 removed, 52 unchanged
+REVIEW entry_intros_removed [the_can_opener / scene_016]: Saved entry-intro keys may no longer resolve.
+REVIEW entry_intros_removed [the_can_opener / scene_041]: Saved entry-intro keys may no longer resolve.
+REVIEW entry_intros_removed [the_can_opener / scene_063]: Saved entry-intro keys may no longer resolve.
+Incoming SHA-256 the_can_opener: 29084e62d2075b04a634f7ba15d0e57d457e6a27a7681130659338a828206478
+Read-only comparison. Title changes are possible ID reuse, not proof. Same-title rewrites cannot reliably be distinguished from replacement. Text edits can shift saved paragraph/character positions; flags and route intent require human review. No content or saves are changed.
+Exit 0: no detected review flags; 1: review required; 2: invalid input. This command never imports files.

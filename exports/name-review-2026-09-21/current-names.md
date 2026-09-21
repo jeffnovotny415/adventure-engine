@@ -46,5 +46,5 @@
 | Grabbs Grand Developments | Grabs Awesome Structures (GAS) |
 | Grabbs Grand Plaza | Grabs Grand Plaza |
 | Project Un-Can | Project Fix em |
-| The Neighborhood Improver 3000 | The Robot Improver 3.0 |
+| The Neighborhood Improver 3000 | The Robot Improver 3 |
 | The Yoink | The Puller Thingie |

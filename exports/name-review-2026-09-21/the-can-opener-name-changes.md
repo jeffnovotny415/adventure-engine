@@ -23,3 +23,9 @@ are unchanged to preserve saved routes. No scenes were added or removed.
 Historical drafts retain the previous names. The name-only heading changes
 are Check on Asher (scene_012), Asher’s Idea (scene_032), and Miniaturizing Asher
 (scene_041). Company renaming changed three scenes with no preflight warnings.
+
+## Latest authored revision
+
+Jeff’s subsequent Markdown uses **The Robot Improver 3**, including new dialogue
+about the number. The reference now reflects that wording. He explicitly kept
+**The Puller Thingie** when the Markdown still contained The Yoink.

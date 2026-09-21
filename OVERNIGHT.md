@@ -946,3 +946,35 @@ or migrated. Final full check passes: lint, 107 tests, graph diagnostics without
 errors/warnings, production build (existing bundle-size warning remains).
 Export prose/entry variations, links, anchors, hashes and ZIP verified, and
 browser reference displays all new names. No layout or device install changes.
+
+## September 21 Can Opener authored GAS revision and device update
+
+Imported Jeff’s Markdown into the live Can Opener: 12 edited passages, 58 scenes
+unchanged, 70 scenes/110 choices/two endings retained. Archived the exact supplied
+Markdown and reviewed converted JSON under drafts/2026-09-21-can-opener-gas-update,
+with hashes and both preflight reports. Initial removed-entry-key warnings were
+resolved with Jeff: preserve internal from_droider/droider_first/droider labels
+and their incoming references, and keep The Puller Thingie in scene_069. All
+remaining text is the supplied wording, including GAS jokes and Robot Improver 3.
+Final preflight ready; live/reviewed SHA-256:
+1e2599f8b7034cbe992de7fa9226f1e548ccac3dcee2fe37b14af93e27058539.
+
+Verified 228 passage/intro/choice strings and 70 titles against the attachment;
+all titles, entry-intro strings, choices, metadata, IDs and routes match the
+previous live book. All 54 other pre-existing protected files are byte-identical.
+No saves cleared or migrated; passage-length changes can shift character anchors.
+Updated the name-reference snapshots, Robot Improver label, Mr. Lin reference
+summary, Markdown name list and ZIP. Full check passes: 107 tests, lint, graph,
+production build. Signed Release build, strict codesign and 101 bundled web assets
+verified. Existing large-bundle warning remains.
+
+Previewed expanded scene_058 at 667×375 landscape phone, 1024×768 tablet and
+390×844 portrait, normal/225% text and rotation. Traversed all eight tablet
+spreads at 225%, reached choices and followed the sent_now branch to scene_059.
+Author preview bypassed save writes. No layout or engine changes were needed.
+
+Installed successfully over Jeff’s iPhone app. Launch verification blocked by
+phone lock. Oliver’s iPad remained paired but installation failed twice: wireless
+tunnel timeout, then device-resource allocation failure. Asked Jeff to unlock
+both and cable-connect iPad; its installation remains outstanding. Neither app
+was uninstalled and no stored app data was cleared.

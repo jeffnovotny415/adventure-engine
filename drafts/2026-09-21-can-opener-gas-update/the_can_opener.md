@@ -1,4 +1,23 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Can Opener</title><style>*{box-sizing:border-box}body{margin:0;background:#f4eddf;color:#302b27;font:17px/1.6 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:28px 22px 70px}h1,h2,h3{font-family:Georgia,serif;line-height:1.2}h1{font-size:clamp(30px,5vw,46px)}h2{margin-top:42px}h3{font-size:22px}a{color:#754321;text-underline-offset:3px}nav{display:flex;flex-wrap:wrap;gap:12px 24px}nav a,.action{display:inline-block;padding:10px 0;min-height:44px}article{background:#fffaf0;border:1px solid #d4c5ab;border-radius:8px;padding:20px;margin:18px 0;scroll-margin-top:20px}.muted,small{color:#675e52}.names{width:100%;border-collapse:collapse}.names th,.names td{text-align:left;vertical-align:top;padding:14px 10px;border-bottom:1px solid #d4c5ab}.names th:first-child{width:24%}.names th:last-child{width:30%}summary{cursor:pointer;padding:8px 0;min-height:44px}details a{display:block;padding:7px 0;min-height:40px}.prose{white-space:pre-wrap;font:19px/1.8 Georgia,serif;overflow-wrap:anywhere}code{overflow-wrap:anywhere}.hint{border-left:3px solid #ae8550;padding-left:15px}.source-label{font:14px system-ui;color:#675e52}a:focus-visible,summary:focus-visible{outline:3px solid #754321;outline-offset:3px}@media(max-width:650px){main{padding:20px 14px}.names thead{display:none}.names tr{display:block;padding:14px 0;border-bottom:1px solid #d4c5ab}.names td{display:block;border:0;padding:3px 0}.names td:first-child{font-size:20px}.names td:last-child{margin-top:6px}article{padding:16px}.prose{font-size:18px}}</style><main><nav><a href="index.html#the_can_opener">← Name reference</a><a href="index.html">All stories</a></nav><h1>The Can Opener</h1><p class="muted">Read-only snapshot · September 21, 2026 · All routes included in source order. Wording is unchanged. Contains spoilers.</p><details><summary>Scene contents</summary><a href="#scene_001">scene_001 · Getting Home</a><a href="#scene_002">scene_002 · Rush Outside</a><a href="#scene_003">scene_003 · Security Cameras</a><a href="#scene_004">scene_004 · Focused Work</a><a href="#scene_005">scene_005 · Building The Can Opener</a><a href="#scene_006">scene_006 · Rush to the Crash</a><a href="#scene_007">scene_007 · Rooftop View</a><a href="#scene_008">scene_008 · The Axe Blade</a><a href="#scene_009">scene_009 · The Hammer</a><a href="#scene_010">scene_010 · Jump onto the Bot</a><a href="#scene_011">scene_011 · Grab the Shield Prototype</a><a href="#scene_012">scene_012 · Check on Asher</a><a href="#scene_013">scene_013 · Survey the Destroyed Bot</a><a href="#scene_014">scene_014 · Shield Up, Charge!</a><a href="#scene_015">scene_015 · Hold the Line</a><a href="#scene_016">scene_016 · Work on the Shield</a><a href="#scene_017">scene_017 · Scrap Run</a><a href="#scene_018">scene_018 · Prototype Fails</a><a href="#scene_019">scene_019 · Close Call</a><a href="#scene_020">scene_020 · Talking It Through</a><a href="#scene_021">scene_021 · More Power</a><a href="#scene_022">scene_022 · The Wrist Wrock-It</a><a href="#scene_023">scene_023 · Target Practice</a><a href="#scene_024">scene_024 · Load-Bot in the Loading Zone</a><a href="#scene_025">scene_025 · Wrong Tool</a><a href="#scene_026">scene_026 · Heavier Than Expected</a><a href="#scene_027">scene_027 · Two Tools, One Win</a><a href="#scene_028">scene_028 · The Shopkeeper</a><a href="#scene_029">scene_029 · A Shield Held Together with Tape</a><a href="#scene_030">scene_030 · Cornered</a><a href="#scene_031">scene_031 · Improvised Defense</a><a href="#scene_032">scene_032 · Asher’s Idea</a><a href="#scene_033">scene_033 · Shield Cover Me</a><a href="#scene_034">scene_034 · Reinforce</a><a href="#scene_035">scene_035 · The Same Fingerprints</a><a href="#scene_036">scene_036 · Pinned Down</a><a href="#scene_037">scene_037 · Drains Fast</a><a href="#scene_038">scene_038 · Forty Seconds</a><a href="#scene_039">scene_039 · First Real Loss</a><a href="#scene_040">scene_040 · Two Ideas</a><a href="#scene_041">scene_041 · Miniaturizing Asher</a><a href="#scene_042">scene_042 · A New Perspective</a><a href="#scene_043">scene_043 · First Field Test</a><a href="#scene_044">scene_044 · Magnet Boot Testing</a><a href="#scene_045">scene_045 · The Stompers</a><a href="#scene_046">scene_046 · Rematch</a><a href="#scene_047">scene_047 · Up the Wall</a><a href="#scene_048">scene_048 · Rooftop Run</a><a href="#scene_049">scene_049 · Full Loadout</a><a href="#scene_050">scene_050 · Rooftop Route</a><a href="#scene_051">scene_051 · Following the Trail</a><a href="#scene_052">scene_052 · Triangulation</a><a href="#scene_053">scene_053 · A Destination</a><a href="#scene_054">scene_054 · Drone Spotted</a><a href="#scene_055">scene_055 · Past the Checkpoint</a><a href="#scene_056">scene_056 · The Side Window</a><a href="#scene_057">scene_057 · The Scheme Confirmed</a><a href="#scene_058">scene_058 · The Man in the Shiny Suit</a><a href="#scene_059">scene_059 · Gearing Up</a><a href="#scene_060">scene_060 · The Front Gate</a><a href="#scene_061">scene_061 · Over the Roof</a><a href="#scene_062">scene_062 · Almost Not Enough</a><a href="#scene_063">scene_063 · Breaking Through</a><a href="#scene_064">scene_064 · Confrontation</a><a href="#scene_065">scene_065 · Charging the Discharge</a><a href="#scene_066">scene_066 · Precision</a><a href="#scene_067">scene_067 · Police Arrive</a><a href="#scene_068">scene_068 · Neighborhood Safe</a><a href="#scene_069">scene_069 · Back to the Bench</a><a href="#scene_070">scene_070 · The Fixer</a></details><article id="scene_001"><p class="source-label">scene_001</p><h2>Getting Home</h2><div class="prose">
+# The Can Opener
+
+Story ID: the_can_opener
+
+Start scene: scene_001
+
+## Description
+
+A high-tech neighborhood hero story about a kid inventor, broken robots, and one very badly named tool.
+
+## Setup prompt
+
+What is the name of your neighborhood? 
+
+---
+
+## scene_001 — Getting Home
+
+### Passage
+
 The garage door opens, and there you stand in front of your tools.
 
 Home.
@@ -30,7 +49,45 @@ You walk over to Asher, unsling the trusty monkey wrench you always carry on you
 Just as you finish the sentence, you hear a commotion outside.
 
 What do you do next?
-</div><h3>Choices</h3><ul><li><a href="#scene_002">Rush outside to see what is going on</a></li><li><a href="#scene_003">Check your security cameras to see what is happening outside</a></li><li><a href="#scene_004">Ignore it and keep working on the data</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_002"><p class="source-label">scene_002</p><h2>Rush Outside</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Rush outside to see what is going on
+
+```json
+{
+  "next_scene": "scene_002"
+}
+```
+
+#### Choice 2
+
+Check your security cameras to see what is happening outside
+
+```json
+{
+  "next_scene": "scene_003"
+}
+```
+
+#### Choice 3
+
+Ignore it and keep working on the data
+
+```json
+{
+  "next_scene": "scene_004"
+}
+```
+
+---
+
+## scene_002 — Rush Outside
+
+### Passage
+
 You rush to open the garage door, hearing something scraping around outside your home.
 
 “Be careful, sir,” Asher says. “It sounds like another bot.”
@@ -80,7 +137,48 @@ You start prying off the arms and legs, adding them to your parts and scrap pile
 “About twelve hours, sir. This bot has a lot of data to crawl through.”
 
 “Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”
-</div><h3>Choices</h3><ul><li><a href="#scene_005">Grab some copper wire first</a></li><li><a href="#scene_005">Pull out your grinder</a></li><li><a href="#scene_005">Grab the power core</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_003"><p class="source-label">scene_003</p><h2>Security Cameras</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Grab some copper wire first
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "copper_wire"
+}
+```
+
+#### Choice 2
+
+Pull out your grinder
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "grinder_work"
+}
+```
+
+#### Choice 3
+
+Grab the power core
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "power_core"
+}
+```
+
+---
+
+## scene_003 — Security Cameras
+
+### Passage
+
 You run over to your security station and check the cameras.
 
 Outside, a bot is going haywire, spinning in all directions and smashing into anything nearby.
@@ -122,7 +220,48 @@ You start prying off the arms and legs, adding them to your parts and scrap pile
 “About twelve hours, sir. This bot has a lot of data to crawl through.”
 
 “Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”
-</div><h3>Choices</h3><ul><li><a href="#scene_005">Grab some copper wire first</a></li><li><a href="#scene_005">Pull out your grinder</a></li><li><a href="#scene_005">Grab the power core</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_004"><p class="source-label">scene_004</p><h2>Focused Work</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Grab some copper wire first
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "copper_wire"
+}
+```
+
+#### Choice 2
+
+Pull out your grinder
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "grinder_work"
+}
+```
+
+#### Choice 3
+
+Grab the power core
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "power_core"
+}
+```
+
+---
+
+## scene_004 — Focused Work
+
+### Passage
+
 You are so focused on your work that you completely ignore the noise outside.
 
 Then something smashes into the garage door.
@@ -168,19 +307,77 @@ You start prying off the arms and legs, adding them to your parts and scrap pile
 “About twelve hours, sir. This bot has a lot of data to crawl through.”
 
 “Got it,” you say, looking down at your handy wrench. “Then I guess it’s finally time to upgrade this thing.”
-</div><h3>Choices</h3><ul><li><a href="#scene_005">Grab some copper wire first</a></li><li><a href="#scene_005">Pull out your grinder</a></li><li><a href="#scene_005">Grab the power core</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_005"><p class="source-label">scene_005</p><h2>Building The Can Opener</h2><details><summary>Entry variation: copper_wire</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Grab some copper wire first
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "copper_wire"
+}
+```
+
+#### Choice 2
+
+Pull out your grinder
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "grinder_work"
+}
+```
+
+#### Choice 3
+
+Grab the power core
+
+```json
+{
+  "next_scene": "scene_005",
+  "entry_intro": "power_core"
+}
+```
+
+---
+
+## scene_005 — Building The Can Opener
+
+### Scene metadata
+
+```json
+{
+  "image": {
+    "src": "/images/stories/the_can_opener/can_opener_blueprint.jpg",
+    "alt": "Blueprint diagram of The Can Opener, labeling the wrench body, hammer face, energy axe blade, power core, insulated copper wire, and pry bar"
+  }
+}
+```
+
+### Entry intro: copper_wire
+
 You uncoil the copper wire and look at the wrench.
 
 You know exactly where this should go.
-</div></details><details><summary>Entry variation: grinder_work</summary><div class="prose">
+
+### Entry intro: grinder_work
+
 You power up the grinder and toss on your goggles.
 
 Time to make some adjustments.
-</div></details><details><summary>Entry variation: power_core</summary><div class="prose">
+
+### Entry intro: power_core
+
 You pick up the power core. It is still glowing with a dull blue light.
 
 This is going to be perfect for what you have planned.
-</div></details><div class="prose">
+
+### Passage
+
 Piece by piece, the invention comes together.
 
 A heavy monkey wrench body.
@@ -220,7 +417,35 @@ A beat passes.
 Outside, something crashes in the street.
 
 You grab The Can Opener and run.
-</div><h3>Choices</h3><ul><li><a href="#scene_006">Rush straight toward the crash</a></li><li><a href="#scene_007">Climb to the roof first to see what is happening</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_006"><p class="source-label">scene_006</p><h2>Rush to the Crash</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Rush straight toward the crash
+
+```json
+{
+  "next_scene": "scene_006"
+}
+```
+
+#### Choice 2
+
+Climb to the roof first to see what is happening
+
+```json
+{
+  "next_scene": "scene_007"
+}
+```
+
+---
+
+## scene_006 — Rush to the Crash
+
+### Passage
+
 You run into the street and see a corrupted robot smashing into parked cars, streetlights, and storefront shutters.
 
 It is a Construction Bot. Big, square, and yellow, with a scoop for one arm and a jackhammer for the other. It is supposed to fix roads. Right now it is un-fixing one.
@@ -236,7 +461,36 @@ You have one chance to act.
 “Sir,” Asher calls from the garage speakers, “may I suggest doing something?”
 
 “Working on it!”
-</div><h3>Choices</h3><ul><li><a href="#scene_008">Twist the handle and attack with the energy axe</a></li><li><a href="#scene_009">Flip it around and attack with the hammer face</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_007"><p class="source-label">scene_007</p><h2>Rooftop View</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Twist the handle and attack with the energy axe
+
+```json
+{
+  "next_scene": "scene_008",
+  "entry_intro": "from_street"
+}
+```
+
+#### Choice 2
+
+Flip it around and attack with the hammer face
+
+```json
+{
+  "next_scene": "scene_009"
+}
+```
+
+---
+
+## scene_007 — Rooftop View
+
+### Passage
+
 You climb the ladder on the side of the garage and look out over {world_name}.
 
 More than one robot is moving through the streets.
@@ -252,11 +506,54 @@ Then you spot it: a blinking drone hovering high above the block. It just hangs 
 Right below you, a big yellow Construction Bot swings its jackhammer arm into a streetlight. The light topples over with a crunch. The bot is heading straight for Mrs. Ruiz’s corner market.
 
 You need to do something, and fast.
-</div><h3>Choices</h3><ul><li><a href="#scene_010">Jump onto the rampaging bot</a></li><li><a href="#scene_008">Power up the axe blade and rush in</a></li><li><a href="#scene_011">Head inside and grab the shield prototype</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_008"><p class="source-label">scene_008</p><h2>The Axe Blade</h2><details><summary>Entry variation: from_street</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Jump onto the rampaging bot
+
+```json
+{
+  "next_scene": "scene_010"
+}
+```
+
+#### Choice 2
+
+Power up the axe blade and rush in
+
+```json
+{
+  "next_scene": "scene_008",
+  "entry_intro": "from_roof"
+}
+```
+
+#### Choice 3
+
+Head inside and grab the shield prototype
+
+```json
+{
+  "next_scene": "scene_011"
+}
+```
+
+---
+
+## scene_008 — The Axe Blade
+
+### Entry intro: from_street
+
 You twist the handle. The coils glow and the energy edge snaps to life with a crackle.
-</div></details><details><summary>Entry variation: from_roof</summary><div class="prose">
+
+### Entry intro: from_roof
+
 You slide down the ladder, hit the ground running, and twist the handle. The energy edge snaps to life with a crackle.
-</div></details><div class="prose">
+
+### Passage
+
 The Construction Bot swings its scoop arm at you. You duck, and it takes out a mailbox instead.
 
 “Sorry, mailbox!”
@@ -278,7 +575,36 @@ Then the blade flickers and shuts off on its own. The handle is hot.
 “Sir,” Asher says, “the power draw on that blade is enormous. I would not count on more than a minute at a time.”
 
 Good to know. Would have been better to know a minute ago.
-</div><h3>Choices</h3><ul><li><a href="#scene_012">Head inside to check on Asher’s scan</a></li><li><a href="#scene_013">Survey the destroyed bot</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_009"><p class="source-label">scene_009</p><h2>The Hammer</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Head inside to check on Asher’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "after_fight"
+}
+```
+
+#### Choice 2
+
+Survey the destroyed bot
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+---
+
+## scene_009 — The Hammer
+
+### Passage
+
 You flip The Can Opener around so the reinforced hammer face leads the way.
 
 The Construction Bot raises its jackhammer arm. You do not wait for it to come down.
@@ -306,7 +632,36 @@ You look at the knocked-over streetlight and the flattened mailbox.
 “That was the bot, not me.”
 
 “Of course, sir.”
-</div><h3>Choices</h3><ul><li><a href="#scene_012">Head back inside to check on Asher’s scan</a></li><li><a href="#scene_013">Survey the destroyed bot</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_010"><p class="source-label">scene_010</p><h2>Jump onto the Bot</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Head back inside to check on Asher’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "after_fight"
+}
+```
+
+#### Choice 2
+
+Survey the destroyed bot
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+---
+
+## scene_010 — Jump onto the Bot
+
+### Passage
+
 This is a bad idea. You do it anyway.
 
 You take three running steps across the garage roof and jump.
@@ -332,7 +687,36 @@ You slide off its back and land on shaky legs.
 Tool first. Weapon second. Just like you planned it.
 
 Mostly.
-</div><h3>Choices</h3><ul><li><a href="#scene_013">Survey the destroyed bot</a></li><li><a href="#scene_012">Head back inside to check on Asher’s scan</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_011"><p class="source-label">scene_011</p><h2>Grab the Shield Prototype</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Survey the destroyed bot
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+#### Choice 2
+
+Head back inside to check on Asher’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "after_fight"
+}
+```
+
+---
+
+## scene_011 — Grab the Shield Prototype
+
+### Passage
+
 You scramble back down the ladder and into the garage.
 
 “Asher, where’s the shield thing?”
@@ -350,13 +734,47 @@ You flip the switch.
 The shield flickers to life just in time, a wobbly circle of blue light about as wide as a trash can lid.
 
 Now what?
-</div><h3>Choices</h3><ul><li><a href="#scene_014">Attack, using the shield to get in close</a></li><li><a href="#scene_015">Defend, and let the bot wear itself out</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_012"><p class="source-label">scene_012</p><h2>Check on Asher</h2><details><summary>Entry variation: after_fight</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Attack, using the shield to get in close
+
+```json
+{
+  "next_scene": "scene_014"
+}
+```
+
+#### Choice 2
+
+Defend, and let the bot wear itself out
+
+```json
+{
+  "next_scene": "scene_015"
+}
+```
+
+---
+
+## scene_012 — Check on Asher
+
+### Entry intro: after_fight
+
 You head back into the garage, still buzzing from the fight, and drop onto your stool.
-</div></details><details><summary>Entry variation: from_survey</summary><div class="prose">
+
+### Entry intro: from_survey
+
 You carry the scratched-up tag inside and set it next to the keyboard.
-</div></details><details><summary>Entry variation: after_defending</summary><div class="prose">
+
+### Entry intro: after_defending
+
 You walk back into the garage with your arm still tingling and the shield tucked under it.
-</div></details><div class="prose">
+
+### Passage
+
 “Welcome back, sir,” Asher says. “The deep diagnostic on our first bot still has hours to go. However, I have found something early.”
 
 A wall of code scrolls across the screen. One chunk of it is highlighted in red.
@@ -376,7 +794,36 @@ Somebody did this? On purpose? To robots that were just supposed to fix roads an
 “Understood, sir. In the meantime, may I point out that there will probably be more of them?”
 
 He is right. You need to be ready.
-</div><h3>Choices</h3><ul><li><a href="#scene_017">Go out and gather scrap from the bot in the street</a></li><li><a href="#scene_016">Work on the shield prototype</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_013"><p class="source-label">scene_013</p><h2>Survey the Destroyed Bot</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Go out and gather scrap from the bot in the street
+
+```json
+{
+  "next_scene": "scene_017"
+}
+```
+
+#### Choice 2
+
+Work on the shield prototype
+
+```json
+{
+  "next_scene": "scene_016",
+  "entry_intro": "from_asher"
+}
+```
+
+---
+
+## scene_013 — Survey the Destroyed Bot
+
+### Passage
+
 You crouch next to the Construction Bot and take a good look.
 
 Up close, it does not look scary. It looks old. The yellow paint is chipped, one tread is patched with a different color, and someone once stuck a smiley face sticker on its chest. The sticker is half peeled off.
@@ -394,7 +841,37 @@ Across the street, a curtain moves in the window above Mrs. Ruiz’s market. Som
 You pull your goggles down over your eyes and turn your face away. You are not doing this to get famous.
 
 Time to get off the street.
-</div><h3>Choices</h3><ul><li><a href="#scene_012">Head inside to check on Asher’s scan</a></li><li><a href="#scene_016">Work on the shield prototype</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_014"><p class="source-label">scene_014</p><h2>Shield Up, Charge!</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Head inside to check on Asher’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "from_survey"
+}
+```
+
+#### Choice 2
+
+Work on the shield prototype
+
+```json
+{
+  "next_scene": "scene_016",
+  "entry_intro": "from_survey"
+}
+```
+
+---
+
+## scene_014 — Shield Up, Charge!
+
+### Passage
+
 You tuck in behind the wobbly blue circle and run straight at the bot.
 
 The jackhammer arm comes down. The shield catches it with a sound like a giant bell, and you feel the hit all the way up to your shoulder.
@@ -412,7 +889,36 @@ You look at the shield. The blue light fizzles, pops, and dies. A piece of tape 
 “It worked!” you tell Asher. “Once!”
 
 “A proud day, sir.”
-</div><h3>Choices</h3><ul><li><a href="#scene_016">Work on the shield so it lasts longer than one fight</a></li><li><a href="#scene_013">Survey the destroyed bot</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_015"><p class="source-label">scene_015</p><h2>Hold the Line</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Work on the shield so it lasts longer than one fight
+
+```json
+{
+  "next_scene": "scene_016",
+  "entry_intro": "from_shield_fight"
+}
+```
+
+#### Choice 2
+
+Survey the destroyed bot
+
+```json
+{
+  "next_scene": "scene_013"
+}
+```
+
+---
+
+## scene_015 — Hold the Line
+
+### Passage
+
 You plant your feet and hold the shield up with both hands.
 
 The jackhammer arm slams into it. Then the scoop arm. Then the jackhammer again.
@@ -432,13 +938,49 @@ You never even had to hit it.
 A second later the shield fizzles out and a piece of tape peels off the side.
 
 Your arms are tingling up to the elbow.
-</div><h3>Choices</h3><ul><li><a href="#scene_016">Work on the shield so it can take more hits</a></li><li><a href="#scene_012">Head inside to check on Asher’s scan</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_016"><p class="source-label">scene_016</p><h2>Work on the Shield</h2><details><summary>Entry variation: from_droider</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Work on the shield so it can take more hits
+
+```json
+{
+  "next_scene": "scene_016",
+  "entry_intro": "from_shield_fight"
+}
+```
+
+#### Choice 2
+
+Head inside to check on Asher’s scan
+
+```json
+{
+  "next_scene": "scene_012",
+  "entry_intro": "after_defending"
+}
+```
+
+---
+
+## scene_016 — Work on the Shield
+
+### Entry intro: from_asher
+
 “If more bots are coming, I’m going to need more than a wrench,” you say, and you pull the shield prototype out from under the pizza box.
-</div></details><details><summary>Entry variation: from_survey</summary><div class="prose">
+
+### Entry intro: from_survey
+
 Back in the garage, you drop the scratched tag on the desk and pull the shield prototype out from under the pizza box. If more bots are coming, you are going to need it.
-</div></details><details><summary>Entry variation: from_shield_fight</summary><div class="prose">
+
+### Entry intro: from_shield_fight
+
 You set the shield on the workbench. It is still warm, and it smells a little like burnt toast.
-</div></details><div class="prose">
+
+### Passage
+
 You spend the next few hours on the shield.
 
 You swap the tape for actual bolts. Mostly. You rewire the power pack so it stops getting hot, and you add a second emitter so the blue circle is wider than a trash can lid.
@@ -458,7 +1000,36 @@ Better. Not good. Better.
 You open your mouth. You close it again.
 
 You do not have one.
-</div><h3>Choices</h3><ul><li><a href="#scene_017">Go out and look for parts to build something with range</a></li><li><a href="#scene_018">Dig through the parts you already have</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_017"><p class="source-label">scene_017</p><h2>Scrap Run</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Go out and look for parts to build something with range
+
+```json
+{
+  "next_scene": "scene_017"
+}
+```
+
+#### Choice 2
+
+Dig through the parts you already have
+
+```json
+{
+  "next_scene": "scene_018",
+  "entry_intro": "from_bench"
+}
+```
+
+---
+
+## scene_017 — Scrap Run
+
+### Passage
+
 You grab your backpack and head out into {world_name}.
 
 The bot in the street gives up some good parts: a handful of heavy springs, a pneumatic piston from the jackhammer arm, and a length of steel tube. You apologize to it again while you work. It seems like the polite thing to do.
@@ -472,13 +1043,48 @@ A Load-Bot. It is shaped like a refrigerator with arms, built to carry crates of
 Its eye light is the same flickering red.
 
 It has not noticed you. Your backpack is already full of exactly the parts you need.
-</div><h3>Choices</h3><ul><li><a href="#scene_018">Sneak home with your parts</a></li><li><a href="#scene_019">Get a closer look at the Load-Bot first</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_018"><p class="source-label">scene_018</p><h2>Prototype Fails</h2><details><summary>Entry variation: from_bench</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Sneak home with your parts
+
+```json
+{
+  "next_scene": "scene_018",
+  "entry_intro": "from_scrap"
+}
+```
+
+#### Choice 2
+
+Get a closer look at the Load-Bot first
+
+```json
+{
+  "next_scene": "scene_019"
+}
+```
+
+---
+
+## scene_018 — Prototype Fails
+
+### Entry intro: from_bench
+
 You pull out every bin in the garage and start sorting. Springs. A steel tube. An old bike pump. This could work.
-</div></details><details><summary>Entry variation: from_scrap</summary><div class="prose">
+
+### Entry intro: from_scrap
+
 You dump your backpack out on the workbench. Springs, a piston, a steel tube. This could work.
-</div></details><details><summary>Entry variation: from_close_call</summary><div class="prose">
+
+### Entry intro: from_close_call
+
 You dump your backpack out on the workbench with hands that are still a little shaky. Springs, a piston, a steel tube. This has to work.
-</div></details><div class="prose">
+
+### Passage
+
 The idea is simple. A launcher that straps to your wrist. You load something into the tube, the spring and piston fire it out, and a small coil wrapped around the barrel gives it an energy charge on the way.
 
 As for what to load it with, you look out at the yard.
@@ -498,7 +1104,35 @@ You and Asher both look at the hole.
 “The angle’s wrong. And the spring’s too strong. And maybe the coil is backwards.”
 
 “So just the angle, the spring, and the coil.”
-</div><h3>Choices</h3><ul><li><a href="#scene_020">Talk the design through with Asher</a></li><li><a href="#scene_021">Forget talking. Add more power!</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_019"><p class="source-label">scene_019</p><h2>Close Call</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Talk the design through with Asher
+
+```json
+{
+  "next_scene": "scene_020"
+}
+```
+
+#### Choice 2
+
+Forget talking. Add more power!
+
+```json
+{
+  "next_scene": "scene_021"
+}
+```
+
+---
+
+## scene_019 — Close Call
+
+### Passage
+
 You creep along the fence to get a better look.
 
 The Load-Bot is slow. Really slow. But when it grabs a crate, the wood creaks in its grip, and when it throws one, the crate explodes into splinters and oranges.
@@ -520,7 +1154,26 @@ You do not stop until you are back in the garage with the door shut.
 So. The Can Opener only works if you are close enough to touch the bot. And you do not want to be anywhere near that thing’s hands.
 
 You really, really need something with range.
-</div><h3>Choices</h3><ul><li><a href="#scene_018">Dump out your backpack and start building</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_020"><p class="source-label">scene_020</p><h2>Talking It Through</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Dump out your backpack and start building
+
+```json
+{
+  "next_scene": "scene_018",
+  "entry_intro": "from_close_call"
+}
+```
+
+---
+
+## scene_020 — Talking It Through
+
+### Passage
+
 You pull your stool up to the screen, and Asher puts your sketch up next to the prototype.
 
 “Walk me through it, sir. Start where the rock goes in.”
@@ -540,7 +1193,26 @@ And the spring does not need to be stronger. It needs to be smoother. You add th
 “Yeah, but they were good questions.”
 
 “Thank you, sir. I am adding that to my list as well.”
-</div><h3>Choices</h3><ul><li><a href="#scene_022">Strap it on and try again</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_021"><p class="source-label">scene_021</p><h2>More Power</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Strap it on and try again
+
+```json
+{
+  "next_scene": "scene_022",
+  "entry_intro": "talked"
+}
+```
+
+---
+
+## scene_021 — More Power
+
+### Passage
+
 More power fixes everything. Probably.
 
 You double the springs. You add a second coil. You wire the whole thing straight into a spare power cell and skip the part where you test it on low.
@@ -564,11 +1236,34 @@ You stand there with an empty wrist brace and your hair sticking straight up.
 “And some bolts.”
 
 This time you do it right. You bolt the barrel to the brace. You flip the coil, which turns out to have been in backwards the whole time. You take the extra springs back out and add a piston to smooth the push.
-</div><h3>Choices</h3><ul><li><a href="#scene_022">Strap it on and try again</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_022"><p class="source-label">scene_022</p><h2>The Wrist Wrock-It</h2><details><summary>Entry variation: talked</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Strap it on and try again
+
+```json
+{
+  "next_scene": "scene_022",
+  "entry_intro": "more_power"
+}
+```
+
+---
+
+## scene_022 — The Wrist Wrock-It
+
+### Entry intro: talked
+
 You strap the rebuilt launcher to your arm. It feels solid this time.
-</div></details><details><summary>Entry variation: more_power</summary><div class="prose">
+
+### Entry intro: more_power
+
 You pull the launcher out of the wall, rebuild it, and strap it to your arm. It feels solid this time.
-</div></details><div class="prose">
+
+### Passage
+
 You load a rock. You aim at the paint can. You breathe out and press the trigger.
 
 THWOOM.
@@ -596,7 +1291,36 @@ Asher is quiet for a moment.
 “It’s staying.”
 
 You think about that Load-Bot behind the market, the one throwing crates of oranges at a wall. Mrs. Ruiz needs her loading zone back.
-</div><h3>Choices</h3><ul><li><a href="#scene_023">Test it on some scrap first</a></li><li><a href="#scene_024">Take it straight into the field</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_023"><p class="source-label">scene_023</p><h2>Target Practice</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Test it on some scrap first
+
+```json
+{
+  "next_scene": "scene_023"
+}
+```
+
+#### Choice 2
+
+Take it straight into the field
+
+```json
+{
+  "next_scene": "scene_024",
+  "entry_intro": "untested"
+}
+```
+
+---
+
+## scene_023 — Target Practice
+
+### Passage
+
 You line up cans, a busted toaster, and a dented robot arm along the back fence.
 
 THWOOM. Can, gone.
@@ -620,11 +1344,34 @@ Nothing. The coil is dark.
 Three shots. Then a minute of waiting, which is a very long time when something is throwing crates at you.
 
 You fill your pockets with rocks anyway. Good to know the limits before they matter.
-</div><h3>Choices</h3><ul><li><a href="#scene_024">Head for the loading zone</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_024"><p class="source-label">scene_024</p><h2>Load-Bot in the Loading Zone</h2><details><summary>Entry variation: untested</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Head for the loading zone
+
+```json
+{
+  "next_scene": "scene_024",
+  "entry_intro": "practiced"
+}
+```
+
+---
+
+## scene_024 — Load-Bot in the Loading Zone
+
+### Entry intro: untested
+
 No time for testing. You fill your pockets with rocks and go.
-</div></details><details><summary>Entry variation: practiced</summary><div class="prose">
+
+### Entry intro: practiced
+
 Three shots, then a minute to recharge. You repeat it to yourself the whole way there.
-</div></details><div class="prose">
+
+### Passage
+
 The Load-Bot is still behind Mrs. Ruiz’s market. It has run out of oranges and moved on to watermelons.
 
 SPLAT.
@@ -636,7 +1383,36 @@ You crouch behind a dumpster and watch. It is slow. It is strong. Its arms are a
 The back door of the market is dented in. If that bot gets inside, there will not be a market left.
 
 You have The Can Opener on your belt and The Wrist Wrock-It on your arm.
-</div><h3>Choices</h3><ul><li><a href="#scene_025">Charge in with The Can Opener</a></li><li><a href="#scene_026">Stay back and open fire with The Wrist Wrock-It</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_025"><p class="source-label">scene_025</p><h2>Wrong Tool</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Charge in with The Can Opener
+
+```json
+{
+  "next_scene": "scene_025"
+}
+```
+
+#### Choice 2
+
+Stay back and open fire with The Wrist Wrock-It
+
+```json
+{
+  "next_scene": "scene_026",
+  "entry_intro": "opened_fire"
+}
+```
+
+---
+
+## scene_025 — Wrong Tool
+
+### Passage
+
 The Can Opener has not failed you yet. You twist the handle, the blade crackles to life, and you charge.
 
 The Load-Bot does not even swing at you. It just reaches out, grabs the wrench end of The Can Opener in one giant hand, and lifts.
@@ -660,11 +1436,34 @@ You lie there looking at the sky.
 You climb out of the boxes and brush yourself off.
 
 Right. That is why you built the other thing.
-</div><h3>Choices</h3><ul><li><a href="#scene_026">Switch to The Wrist Wrock-It</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_026"><p class="source-label">scene_026</p><h2>Heavier Than Expected</h2><details><summary>Entry variation: opened_fire</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Switch to The Wrist Wrock-It
+
+```json
+{
+  "next_scene": "scene_026",
+  "entry_intro": "after_throw"
+}
+```
+
+---
+
+## scene_026 — Heavier Than Expected
+
+### Entry intro: opened_fire
+
 You brace your arm on top of the dumpster, take aim at the chest plate, and fire.
-</div></details><details><summary>Entry variation: after_throw</summary><div class="prose">
+
+### Entry intro: after_throw
+
 You back way up, out of reach of those arms, take aim at the chest plate, and fire.
-</div></details><div class="prose">
+
+### Passage
+
 THWOOM.
 
 The rock hits dead center in a burst of blue light. The Load-Bot rocks back on its heels.
@@ -686,7 +1485,25 @@ The rock smashes into the left knee. The joint buckles, and the Load-Bot drops t
 It is down, but it is not out. Its arms are still swinging, and your coil is empty.
 
 But it cannot reach behind itself.
-</div><h3>Choices</h3><ul><li><a href="#scene_027">Run in and finish the job with The Can Opener</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_027"><p class="source-label">scene_027</p><h2>Two Tools, One Win</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Run in and finish the job with The Can Opener
+
+```json
+{
+  "next_scene": "scene_027"
+}
+```
+
+---
+
+## scene_027 — Two Tools, One Win
+
+### Passage
+
 You circle around behind the fallen Load-Bot, staying out of reach of those arms.
 
 There. A panel on its back.
@@ -706,7 +1523,36 @@ The dented back door of the market creaks open. Mrs. Ruiz peeks out, holding a b
 “Whoever you are,” she calls, “thank you!”
 
 You freeze. You were hoping nobody would see you.
-</div><h3>Choices</h3><ul><li><a href="#scene_029">Wave and hurry home to build more</a></li><li><a href="#scene_028">Go make sure Mrs. Ruiz is okay</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_028"><p class="source-label">scene_028</p><h2>The Shopkeeper</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Wave and hurry home to build more
+
+```json
+{
+  "next_scene": "scene_029",
+  "entry_intro": "hurried_home"
+}
+```
+
+#### Choice 2
+
+Go make sure Mrs. Ruiz is okay
+
+```json
+{
+  "next_scene": "scene_028"
+}
+```
+
+---
+
+## scene_028 — The Shopkeeper
+
+### Passage
+
 You keep your goggles on and your voice low, which makes you sound like you have a cold.
 
 “Are you okay, ma’am?”
@@ -728,11 +1574,34 @@ Mrs. Ruiz ducks inside and comes back with a juice box.
 “Heroes need to stay hydrated,” she says, and pushes it into your hand.
 
 You are not sure you are a hero. You take the juice box anyway.
-</div><h3>Choices</h3><ul><li><a href="#scene_029">Head home and get back to work</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_029"><p class="source-label">scene_029</p><h2>A Shield Held Together with Tape</h2><details><summary>Entry variation: hurried_home</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Head home and get back to work
+
+```json
+{
+  "next_scene": "scene_029",
+  "entry_intro": "from_market"
+}
+```
+
+---
+
+## scene_029 — A Shield Held Together with Tape
+
+### Entry intro: hurried_home
+
 You give Mrs. Ruiz an awkward wave and jog home before she can ask any questions.
-</div></details><details><summary>Entry variation: from_market</summary><div class="prose">
+
+### Entry intro: from_market
+
 You finish the juice box on the walk home. Apple. Pretty good.
-</div></details><div class="prose">
+
+### Passage
+
 Back in the garage, you open the big door to let some air in and put the shield prototype up on the workbench.
 
 It is still ugly. It is still unstable. It is still held together with more tape than you would like to admit. You have it half taken apart, with the emitter in one hand and a screwdriver in the other, when Asher speaks up.
@@ -748,7 +1617,45 @@ A Close Range Security Bot. Its eye light flickers red.
 It rolls into the garage and stops between you and the rest of the room.
 
 The Can Opener is on the desk on the far side. The Wrist Wrock-It is on the charger next to it. The only thing within reach is a half-built shield.
-</div><h3>Choices</h3><ul><li><a href="#scene_030">Dive for The Can Opener</a></li><li><a href="#scene_031">Grab the half-built shield</a></li><li><a href="#scene_032">Yell for Asher to do something</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_030"><p class="source-label">scene_030</p><h2>Cornered</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Dive for The Can Opener
+
+```json
+{
+  "next_scene": "scene_030"
+}
+```
+
+#### Choice 2
+
+Grab the half-built shield
+
+```json
+{
+  "next_scene": "scene_031"
+}
+```
+
+#### Choice 3
+
+Yell for Asher to do something
+
+```json
+{
+  "next_scene": "scene_032"
+}
+```
+
+---
+
+## scene_030 — Cornered
+
+### Passage
+
 You fake left and dive right, sliding across the floor toward the desk.
 
 The Security Bot is faster. It zips sideways and blocks you, stun prods buzzing. One of them brushes your sleeve, and your whole arm goes tingly and numb, like you slept on it wrong.
@@ -764,7 +1671,26 @@ The bot rolls closer. Your good hand feels around on the bench behind you and cl
 The shield. Half built. Emitter hanging by two wires.
 
 You jam the emitter back into place, hold it there with your thumb, and swing the shield around in front of you.
-</div><h3>Choices</h3><ul><li><a href="#scene_033">Flip the switch and hope</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_031"><p class="source-label">scene_031</p><h2>Improvised Defense</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Flip the switch and hope
+
+```json
+{
+  "next_scene": "scene_033",
+  "entry_intro": "cornered"
+}
+```
+
+---
+
+## scene_031 — Improvised Defense
+
+### Passage
+
 No time to be picky.
 
 You jam the emitter back into the shield, hold it in place with your thumb, and grab the handle. The power pack dangles by its wires. A screw rolls off the bench and pings across the floor.
@@ -780,7 +1706,26 @@ The Security Bot rolls forward, stun prods buzzing.
 “With my thumb!”
 
 The bot raises both prods.
-</div><h3>Choices</h3><ul><li><a href="#scene_033">Flip the switch and hope</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_032"><p class="source-label">scene_032</p><h2>Asher’s Idea</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Flip the switch and hope
+
+```json
+{
+  "next_scene": "scene_033",
+  "entry_intro": "grabbed"
+}
+```
+
+---
+
+## scene_032 — Asher’s Idea
+
+### Passage
+
 “ASHER! DO SOMETHING!”
 
 “Doing something, sir.”
@@ -794,13 +1739,38 @@ It buys you three seconds.
 You use them to grab the shield, jam the emitter back into place, and hold it there with your thumb.
 
 The bot figures out that the pencil sharpener is not a threat. It turns back to you and raises both stun prods.
-</div><h3>Choices</h3><ul><li><a href="#scene_033">Flip the switch and hope</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_033"><p class="source-label">scene_033</p><h2>Shield Cover Me</h2><details><summary>Entry variation: cornered</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Flip the switch and hope
+
+```json
+{
+  "next_scene": "scene_033",
+  "entry_intro": "distracted"
+}
+```
+
+---
+
+## scene_033 — Shield Cover Me
+
+### Entry intro: cornered
+
 With your back against the workbench and one arm still numb, you flip the switch.
-</div></details><details><summary>Entry variation: grabbed</summary><div class="prose">
+
+### Entry intro: grabbed
+
 You flip the switch.
-</div></details><details><summary>Entry variation: distracted</summary><div class="prose">
+
+### Entry intro: distracted
+
 With the radio still blasting, you flip the switch.
-</div></details><div class="prose">
+
+### Passage
+
 The shield flickers.
 
 It flickers again.
@@ -830,7 +1800,35 @@ The Security Bot’s light fades from red to soft blue, then goes dark.
 You slide down to the floor with Shield Cover Me in your lap. It fizzles out.
 
 You have to admit, the name kind of fits.
-</div><h3>Choices</h3><ul><li><a href="#scene_034">Reinforce the shield so you never have to use your thumb again</a></li><li><a href="#scene_035">Ask Asher to compare this bot’s code to the others</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_034"><p class="source-label">scene_034</p><h2>Reinforce</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Reinforce the shield so you never have to use your thumb again
+
+```json
+{
+  "next_scene": "scene_034"
+}
+```
+
+#### Choice 2
+
+Ask Asher to compare this bot’s code to the others
+
+```json
+{
+  "next_scene": "scene_035"
+}
+```
+
+---
+
+## scene_034 — Reinforce
+
+### Passage
+
 You are done holding things together with your thumb.
 
 You rebuild Shield Cover Me from the ground up. Real bolts. A proper housing for the emitter. A bigger power pack.
@@ -850,7 +1848,26 @@ You count. Ten seconds. Twenty. Thirty. At forty, it starts to get warm, and you
 “You named it!”
 
 “As I said.”
-</div><h3>Choices</h3><ul><li><a href="#scene_036">Get some rest. Tomorrow you patrol.</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_035"><p class="source-label">scene_035</p><h2>The Same Fingerprints</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Get some rest. Tomorrow you patrol.
+
+```json
+{
+  "next_scene": "scene_036",
+  "entry_intro": "reinforced"
+}
+```
+
+---
+
+## scene_035 — The Same Fingerprints
+
+### Passage
+
 You plug the Security Bot into Asher and wait.
 
 It does not take long.
@@ -874,11 +1891,34 @@ You look at Asher’s big computer tower. It weighs more than you do.
 “Yes, sir. It is.”
 
 You patch up the shield as best you can before bed, but your mind is somewhere else.
-</div><h3>Choices</h3><ul><li><a href="#scene_036">Get some rest. Tomorrow you patrol.</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_036"><p class="source-label">scene_036</p><h2>Pinned Down</h2><details><summary>Entry variation: reinforced</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Get some rest. Tomorrow you patrol.
+
+```json
+{
+  "next_scene": "scene_036",
+  "entry_intro": "analyzed"
+}
+```
+
+---
+
+## scene_036 — Pinned Down
+
+### Entry intro: reinforced
+
 The next afternoon, you head out with all three inventions for the first time. You feel ready for anything.
-</div></details><details><summary>Entry variation: analyzed</summary><div class="prose">
+
+### Entry intro: analyzed
+
 The next afternoon, you head out with all three inventions for the first time. If something is sending these bots, you want to see where they go.
-</div></details><div class="prose">
+
+### Passage
+
 Mr. Lin is on his bench at the top of Main Street, where he always is, with a coffee in one hand and nothing in the other.
 
 He looks at The Can Opener on your belt. He looks at the chest plate. He looks at the thing on your arm. Then he looks back at his coffee.
@@ -922,7 +1962,35 @@ ZAP. Another stun bolt hits the mailbox. Your fingers tingle right through the m
 “Sir, it has the high ground and a clear view of the whole street,” Asher says from your phone. “The Can Opener cannot reach it. I am not sure you can reach it.”
 
 Every time you peek out, it fires.
-</div><h3>Choices</h3><ul><li><a href="#scene_037">Fire back with The Wrist Wrock-It</a></li><li><a href="#scene_038">Put up Shield Cover Me and charge the bank</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_037"><p class="source-label">scene_037</p><h2>Drains Fast</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Fire back with The Wrist Wrock-It
+
+```json
+{
+  "next_scene": "scene_037"
+}
+```
+
+#### Choice 2
+
+Put up Shield Cover Me and charge the bank
+
+```json
+{
+  "next_scene": "scene_038"
+}
+```
+
+---
+
+## scene_037 — Drains Fast
+
+### Passage
+
 You lean out, aim high, and fire.
 
 THWOOM. The rock smashes into the edge of the roof, a foot below the bot. Brick dust rains down.
@@ -940,7 +2008,26 @@ Empty. One whole minute to recharge.
 The bot does not need a minute. ZAP. ZAP. ZAP. The mailbox is starting to smoke.
 
 You have the best rock launcher in {world_name}, and it just is not enough.
-</div><h3>Choices</h3><ul><li><a href="#scene_039">Get out of there</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_038"><p class="source-label">scene_038</p><h2>Forty Seconds</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Get out of there
+
+```json
+{
+  "next_scene": "scene_039",
+  "entry_intro": "out_of_shots"
+}
+```
+
+---
+
+## scene_038 — Forty Seconds
+
+### Passage
+
 You tap your chest plate, the blue circle opens in front of you, and you run for the bank.
 
 ZAP. ZAP. ZAP.
@@ -960,11 +2047,34 @@ Fzzt. The blue light dies.
 You are standing in the open, at the bottom of a wall you cannot climb, with a bot directly above you.
 
 It leans over the edge and looks down at you.
-</div><h3>Choices</h3><ul><li><a href="#scene_039">Get out of there</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_039"><p class="source-label">scene_039</p><h2>First Real Loss</h2><details><summary>Entry variation: out_of_shots</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Get out of there
+
+```json
+{
+  "next_scene": "scene_039",
+  "entry_intro": "shield_out"
+}
+```
+
+---
+
+## scene_039 — First Real Loss
+
+### Entry intro: out_of_shots
+
 You wait for the gap between shots, and you run.
-</div></details><details><summary>Entry variation: shield_out</summary><div class="prose">
+
+### Entry intro: shield_out
+
 You do not wait to see what it does next. You run.
-</div></details><div class="prose">
+
+### Passage
+
 Stun bolts chase you all the way down the block. One catches your heel, and you run the last stretch with a foot that feels like it belongs to somebody else.
 
 You duck into an alley and look back.
@@ -986,7 +2096,25 @@ You look at the three inventions on the bench. Every one of them worked. Every o
 You wipe your nose on your sleeve.
 
 “Yeah. I’m coming back.”
-</div><h3>Choices</h3><ul><li><a href="#scene_040">Figure out what went wrong</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_040"><p class="source-label">scene_040</p><h2>Two Ideas</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Figure out what went wrong
+
+```json
+{
+  "next_scene": "scene_040"
+}
+```
+
+---
+
+## scene_040 — Two Ideas
+
+### Passage
+
 You pull out a marker and write on the garage wall, because you ran out of paper a long time ago.
 
 PROBLEM 1: Couldn’t get to it.
@@ -1004,9 +2132,41 @@ You tap the marker against your chin.
 “I would like that very much, sir. I have never been outside.”
 
 Two ideas. Boots that can climb, and a Asher you can carry.
-</div><h3>Choices</h3><ul><li><a href="#scene_041">Start with getting Asher into the field</a></li><li><a href="#scene_041">Start with the boots</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_041"><p class="source-label">scene_041</p><h2>Miniaturizing Asher</h2><details><summary>Entry variation: droider_first</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Start with getting Asher into the field
+
+```json
+{
+  "next_scene": "scene_041",
+  "entry_intro": "asher_first"
+}
+```
+
+#### Choice 2
+
+Start with the boots
+
+```json
+{
+  "next_scene": "scene_041",
+  "entry_intro": "boots_first"
+}
+```
+
+---
+
+## scene_041 — Miniaturizing Asher
+
+### Entry intro: asher_first
+
 Asher first. If he can see what you see, everything else gets easier.
-</div></details><details><summary>Entry variation: boots_first</summary><div class="prose">
+
+### Entry intro: boots_first
+
 You start sketching boots with magnets in the soles. Ten minutes later, you are stuck.
 
 “I need to calibrate these while I’m wearing them, out on real metal. And you can’t see my feet from in here.”
@@ -1014,7 +2174,9 @@ You start sketching boots with magnets in the soles. Ten minutes later, you are 
 “I cannot, sir. I can barely see the workbench.”
 
 So, Asher first.
-</div></details><div class="prose">
+
+### Passage
+
 It is harder than you expected.
 
 Asher lives in a computer tower the size of a mini fridge. You need him to fit on your face.
@@ -1032,7 +2194,36 @@ The third version clicks into place over your right eye. A little blue ring ligh
 “That is simply a description of what I am, sir.”
 
 “Yep. That’s how names work.”
-</div><h3>Choices</h3><ul><li><a href="#scene_042">Test it around the garage first</a></li><li><a href="#scene_043">Take Asher outside</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_042"><p class="source-label">scene_042</p><h2>A New Perspective</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Test it around the garage first
+
+```json
+{
+  "next_scene": "scene_042"
+}
+```
+
+#### Choice 2
+
+Take Asher outside
+
+```json
+{
+  "next_scene": "scene_043",
+  "entry_intro": "straight_out"
+}
+```
+
+---
+
+## scene_042 — A New Perspective
+
+### Passage
+
 You walk slowly around the garage so Asher can get used to it.
 
 “Sir, please turn left. No, my left. No, I suppose we share a left now. How strange.”
@@ -1054,11 +2245,34 @@ You jump up and down a few times, just to see what happens.
 “Please never do that again.”
 
 You grin. For the first time since the bank, you feel a little better.
-</div><h3>Choices</h3><ul><li><a href="#scene_043">Okay. Time to take him outside.</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_043"><p class="source-label">scene_043</p><h2>First Field Test</h2><details><summary>Entry variation: straight_out</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Okay. Time to take him outside.
+
+```json
+{
+  "next_scene": "scene_043",
+  "entry_intro": "after_garage"
+}
+```
+
+---
+
+## scene_043 — First Field Test
+
+### Entry intro: straight_out
+
 No point testing in the garage. The whole idea is to get him out of it.
-</div></details><details><summary>Entry variation: after_garage</summary><div class="prose">
+
+### Entry intro: after_garage
+
 Asher has seen the whole garage now, twice. Time for the real thing.
-</div></details><div class="prose">
+
+### Passage
+
 You open the garage door and step out into the evening.
 
 Asher does not say anything for almost a full minute.
@@ -1084,7 +2298,25 @@ You would have walked right under it. You have walked right under it, who knows 
 “They are your eyes, sir. I am only borrowing one.”
 
 The drone is too high to reach. For now. One more thing to build.
-</div><h3>Choices</h3><ul><li><a href="#scene_044">Get to work on the boots</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_044"><p class="source-label">scene_044</p><h2>Magnet Boot Testing</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Get to work on the boots
+
+```json
+{
+  "next_scene": "scene_044"
+}
+```
+
+---
+
+## scene_044 — Magnet Boot Testing
+
+### Passage
+
 The idea: powerful electromagnets in the soles of your boots, run off a power core on each ankle. Walk up to a metal wall, switch them on, and keep walking.
 
 You build them out of your old rain boots, the magnet coils from the Load-Bot’s lifting arms, and a lot of wire. They are heavy and they look ridiculous.
@@ -1104,11 +2336,45 @@ Your left foot shoots sideways and sticks to the refrigerator. Your right foot s
 A wrench slides across the workbench and sticks to your left ankle. Then a screwdriver. Then a handful of bolts.
 
 “You are collecting tools at an impressive rate, sir.”
-</div><h3>Choices</h3><ul><li><a href="#scene_045">Yank your foot free</a></li><li><a href="#scene_045">Ask Asher to help you cut the power</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_045"><p class="source-label">scene_045</p><h2>The Stompers</h2><details><summary>Entry variation: yanked</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Yank your foot free
+
+```json
+{
+  "next_scene": "scene_045",
+  "entry_intro": "yanked"
+}
+```
+
+#### Choice 2
+
+Ask Asher to help you cut the power
+
+```json
+{
+  "next_scene": "scene_045",
+  "entry_intro": "cut_power"
+}
+```
+
+---
+
+## scene_045 — The Stompers
+
+### Entry intro: yanked
+
 You pull as hard as you can. Your foot pops out of the boot, and you fall over in one sock. The boot stays stuck to the fridge.
-</div></details><details><summary>Entry variation: cut_power</summary><div class="prose">
+
+### Entry intro: cut_power
+
 “The switch on your left ankle, sir. No, the other switch.” You finally find it, and everything stuck to you clatters to the floor at once.
-</div></details><div class="prose">
+
+### Passage
+
 Lesson learned. The magnets cannot just be ON. You need control.
 
 You add a dial for strength, so you can stick to a wall without collecting every tool in the room. Then you add a switch you can hit by clicking your heels together, so your hands stay free.
@@ -1138,7 +2404,25 @@ A pause.
 “I know! I don’t know what happened!”
 
 You look out the garage door toward Main Street. There is a bot on top of a bank that you owe a visit.
-</div><h3>Choices</h3><ul><li><a href="#scene_046">Go back to the bank</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_046"><p class="source-label">scene_046</p><h2>Rematch</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Go back to the bank
+
+```json
+{
+  "next_scene": "scene_046"
+}
+```
+
+---
+
+## scene_046 — Rematch
+
+### Passage
+
 The Long Range Security Bot is still on the roof of the old bank. The street below is empty. Nobody has dared to walk down it all day.
 
 You crouch behind the same blue mailbox. This time, you are not alone.
@@ -1156,7 +2440,35 @@ You look down at The Stompers.
 Steel siding.
 
 You start to grin.
-</div><h3>Choices</h3><ul><li><a href="#scene_047">Walk straight up the wall and come at it from behind</a></li><li><a href="#scene_048">Repel-jump to the building next door and come across the rooftops</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_047"><p class="source-label">scene_047</p><h2>Up the Wall</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Walk straight up the wall and come at it from behind
+
+```json
+{
+  "next_scene": "scene_047"
+}
+```
+
+#### Choice 2
+
+Repel-jump to the building next door and come across the rooftops
+
+```json
+{
+  "next_scene": "scene_048"
+}
+```
+
+---
+
+## scene_047 — Up the Wall
+
+### Passage
+
 You turn the dial, put one boot flat against the wall, and hear it clunk into place. Then the other.
 
 You are standing sideways on a building.
@@ -1174,7 +2486,26 @@ Clunk. Clunk. Clunk. You walk up the wall one heavy step at a time, keeping to t
 You reach the top and peek over the edge. The bot has its back to you, with all of its spider legs braced against the front of the roof.
 
 You click your heels to let go of the wall, roll onto the roof, and pull The Can Opener off your belt.
-</div><h3>Choices</h3><ul><li><a href="#scene_049">Finish it</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_048"><p class="source-label">scene_048</p><h2>Rooftop Run</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Finish it
+
+```json
+{
+  "next_scene": "scene_049",
+  "entry_intro": "up_the_wall"
+}
+```
+
+---
+
+## scene_048 — Rooftop Run
+
+### Passage
+
 There is a steel dumpster in the alley next to the bank. You climb on top, flip The Stompers to repel, and click your heels.
 
 BOING.
@@ -1196,11 +2527,34 @@ The bot swings its barrel around toward you. The tip starts to glow.
 “Two seconds, sir!”
 
 You tap your chest. Shield Cover Me snaps open, and the bolt splashes off it. You are already running.
-</div><h3>Choices</h3><ul><li><a href="#scene_049">Finish it</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_049"><p class="source-label">scene_049</p><h2>Full Loadout</h2><details><summary>Entry variation: up_the_wall</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Finish it
+
+```json
+{
+  "next_scene": "scene_049",
+  "entry_intro": "across_the_roofs"
+}
+```
+
+---
+
+## scene_049 — Full Loadout
+
+### Entry intro: up_the_wall
+
 The bot never sees you coming.
-</div></details><details><summary>Entry variation: across_the_roofs</summary><div class="prose">
+
+### Entry intro: across_the_roofs
+
 You cross the roof behind the shield before it can charge another shot.
-</div></details><div class="prose">
+
+### Passage
+
 THWOOM. One charged rock takes out a spider leg, and the bot tips sideways. You slide in under the barrel, hook the prybar under its back panel, and pop it.
 
 Pull.
@@ -1220,7 +2574,45 @@ The bot’s light goes dark.
 “I lost it, sir. But I know which way it came from, and I know what it sounds like now. We can find it.”
 
 No more waiting for bots to come to you.
-</div><h3>Choices</h3><ul><li><a href="#scene_050">Track the blinking drone from the rooftops</a></li><li><a href="#scene_051">Follow the trail this bot took to get here</a></li><li><a href="#scene_052">Have Asher work out the location from all the wreckage data</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_050"><p class="source-label">scene_050</p><h2>Rooftop Route</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Track the blinking drone from the rooftops
+
+```json
+{
+  "next_scene": "scene_050"
+}
+```
+
+#### Choice 2
+
+Follow the trail this bot took to get here
+
+```json
+{
+  "next_scene": "scene_051"
+}
+```
+
+#### Choice 3
+
+Have Asher work out the location from all the wreckage data
+
+```json
+{
+  "next_scene": "scene_052"
+}
+```
+
+---
+
+## scene_050 — Rooftop Route
+
+### Passage
+
 The drone is still up there, blinking away.
 
 “It has to go home to recharge sometime, sir.”
@@ -1232,7 +2624,26 @@ Finally, the drone turns and drifts east.
 You follow it across the rooftops. Stick, walk, click, jump. The Stompers clunk across metal roofs and air vents, and Asher calls out every gap before you get to it. You only almost fall twice.
 
 The drone leads you to the very edge of the neighborhood, where the houses stop and the old factories begin. It sinks down out of the sky toward one building in particular, and disappears through a hatch in the roof.
-</div><h3>Choices</h3><ul><li><a href="#scene_053">Get a closer look</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_051"><p class="source-label">scene_051</p><h2>Following the Trail</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Get a closer look
+
+```json
+{
+  "next_scene": "scene_053",
+  "entry_intro": "followed_drone"
+}
+```
+
+---
+
+## scene_051 — Following the Trail
+
+### Passage
+
 Those spider legs left scratches all over the pavement, and Asher can pick them out even in the fading light. A thin red line appears in your vision, leading away down the street.
 
 You follow it backward. Past the bus stop. Past the park. East, toward the edge of the neighborhood.
@@ -1248,7 +2659,26 @@ SOLD! ANOTHER FINE PROPERTY RESCUED BY GRABS AWESOME STRUCTURES.
 You do not know who Grabs is. But you are starting to get a very bad feeling about him.
 
 The trail leaves the houses behind and heads in among the old factories. It ends at the gate of one building in particular.
-</div><h3>Choices</h3><ul><li><a href="#scene_053">Get a closer look</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_052"><p class="source-label">scene_052</p><h2>Triangulation</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Get a closer look
+
+```json
+{
+  "next_scene": "scene_053",
+  "entry_intro": "followed_trail"
+}
+```
+
+---
+
+## scene_052 — Triangulation
+
+### Passage
+
 You climb down and head back to the garage, where Asher’s big brain can do the heavy lifting.
 
 “I know the direction the signal came from at the bank,” he says. “Now, every bot you have brought home kept a record of how strong the signal was, and where the bot was at the time. If I put them all on a map...”
@@ -1262,13 +2692,38 @@ The circles overlap in one small spot at the eastern edge of the neighborhood, o
 You take a picture of the map with your phone. Then you remember that Asher is on your face now, and you feel a little silly.
 
 You head out as the sun goes down. The spot on the map turns out to be one building in particular.
-</div><h3>Choices</h3><ul><li><a href="#scene_053">Get a closer look</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_053"><p class="source-label">scene_053</p><h2>A Destination</h2><details><summary>Entry variation: followed_drone</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Get a closer look
+
+```json
+{
+  "next_scene": "scene_053",
+  "entry_intro": "triangulated"
+}
+```
+
+---
+
+## scene_053 — A Destination
+
+### Entry intro: followed_drone
+
 You creep to the edge of the nearest roof and look down.
-</div></details><details><summary>Entry variation: followed_trail</summary><div class="prose">
+
+### Entry intro: followed_trail
+
 You duck behind a rusty truck across the street and look.
-</div></details><details><summary>Entry variation: triangulated</summary><div class="prose">
+
+### Entry intro: triangulated
+
 You find a spot behind a rusty truck across the street and look.
-</div></details><div class="prose">
+
+### Passage
+
 It is the old cannery. It has been closed since before you were born. It is supposed to be empty.
 
 It is not empty.
@@ -1302,7 +2757,25 @@ The trucks. The flyer on Mr. Lin’s bench. The horn that plays a song. It all c
 “Somebody got paid to make that sign.”
 
 “Someone took his money and made that sign, sir. On purpose.”
-</div><h3>Choices</h3><ul><li><a href="#scene_054">Move in closer</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_054"><p class="source-label">scene_054</p><h2>Drone Spotted</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Move in closer
+
+```json
+{
+  "next_scene": "scene_054"
+}
+```
+
+---
+
+## scene_054 — Drone Spotted
+
+### Passage
+
 You are halfway to the fence when Asher hisses in your ear.
 
 “Drone, sir! Coming back around. Hide!”
@@ -1326,7 +2799,35 @@ You let out your breath.
 You catch it with two fingers. That was too close.
 
 It is not just a signal. Somebody is watching the whole neighborhood, and now you know his name.
-</div><h3>Choices</h3><ul><li><a href="#scene_055">Sneak past the checkpoint at the gate</a></li><li><a href="#scene_056">Look for a quieter way in around the side</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_055"><p class="source-label">scene_055</p><h2>Past the Checkpoint</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Sneak past the checkpoint at the gate
+
+```json
+{
+  "next_scene": "scene_055"
+}
+```
+
+#### Choice 2
+
+Look for a quieter way in around the side
+
+```json
+{
+  "next_scene": "scene_056"
+}
+```
+
+---
+
+## scene_055 — Past the Checkpoint
+
+### Passage
+
 There is a Load-Bot standing guard at the gate. This one is not haywire. Its eye light is a steady, calm red, and it turns its head slowly from side to side.
 
 “That one is under direct control, sir. Not confused. Working.”
@@ -1350,7 +2851,26 @@ A tired voice answers. “Sir, you are GAS headquarters.”
 You freeze against the truck. Footsteps come closer. Stop. Then go away again.
 
 You count to ten, and then you slip through the open door.
-</div><h3>Choices</h3><ul><li><a href="#scene_057">See what is inside</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_056"><p class="source-label">scene_056</p><h2>The Side Window</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+See what is inside
+
+```json
+{
+  "next_scene": "scene_057",
+  "entry_intro": "through_gate"
+}
+```
+
+---
+
+## scene_056 — The Side Window
+
+### Passage
+
 You circle around the side of the cannery, keeping to the shadows.
 
 There are no doors on this side. But there is a window on the second floor with a light on, and a steel drainpipe running right up next to it.
@@ -1370,11 +2890,34 @@ You climb in and land on carpet so thick that you sink into it.
 “This is the man who has been beating us, sir?”
 
 “Let’s not tell anyone.”
-</div><h3>Choices</h3><ul><li><a href="#scene_057">See what he is hiding</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_057"><p class="source-label">scene_057</p><h2>The Scheme Confirmed</h2><details><summary>Entry variation: through_gate</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+See what he is hiding
+
+```json
+{
+  "next_scene": "scene_057",
+  "entry_intro": "through_window"
+}
+```
+
+---
+
+## scene_057 — The Scheme Confirmed
+
+### Entry intro: through_gate
+
 Inside, a set of stairs leads up to an office with a huge desk, a huge chair, and a huge painting of a man in a shiny suit shaking hands with himself. Nobody is home. The computer is unlocked.
-</div></details><details><summary>Entry variation: through_window</summary><div class="prose">
+
+### Entry intro: through_window
+
 You sit down in the huge chair. Your feet do not touch the floor.
-</div></details><div class="prose">
+
+### Passage
+
 It is all there. He kept a list. He actually kept a list, and he named the file MY SECRET PLAN (SECRET).
 
 “Step one,” you read out loud. “Buy old broken robots, cheap. Step two. Dump robots in the neighborhood. Step three. Upload my special virus so they go bonkers. Step four. Everyone gets scared. Prices go DOWN. Step five. Buy the ENTIRE neighborhood for pocket change. Step six. Knock it all down and build Grabs Grand Plaza. Step seven. I am RICH. Richer, I mean. I am already rich.”
@@ -1394,7 +2937,25 @@ Your hands are shaking a little, and it is not because you are scared.
 “It would appear so, sir. Please do not make that face.”
 
 Downstairs, a door slams, and that loud voice starts up again.
-</div><h3>Choices</h3><ul><li><a href="#scene_058">Get out while you can, and make a plan</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_058"><p class="source-label">scene_058</p><h2>The Man in the Shiny Suit</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Get out while you can, and make a plan
+
+```json
+{
+  "next_scene": "scene_058"
+}
+```
+
+---
+
+## scene_058 — The Man in the Shiny Suit
+
+### Passage
+
 The next morning, there is a little stage set up in the town square, with gold balloons on it.
 
 You stand at the back of the crowd with your hood up.
@@ -1452,11 +3013,45 @@ On your way out of the square, Mr. Lin passes you without looking over.
 “Leave that to GAS.”
 
 He almost smiles.
-</div><h3>Choices</h3><ul><li><a href="#scene_059">Send the files to the police right now, then gear up</a></li><li><a href="#scene_059">Gear up first, and set the files to send once you are inside</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_059"><p class="source-label">scene_059</p><h2>Gearing Up</h2><details><summary>Entry variation: sent_now</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Send the files to the police right now, then gear up
+
+```json
+{
+  "next_scene": "scene_059",
+  "entry_intro": "sent_now"
+}
+```
+
+#### Choice 2
+
+Gear up first, and set the files to send once you are inside
+
+```json
+{
+  "next_scene": "scene_059",
+  "entry_intro": "timed"
+}
+```
+
+---
+
+## scene_059 — Gearing Up
+
+### Entry intro: sent_now
+
 You send everything from a bench in the square. The list, the map, all of it. Subject line: PLEASE READ THIS ONE. “They will not get to it before tonight, sir,” Asher says. That is fine. You just need them to show up eventually.
-</div></details><details><summary>Entry variation: timed</summary><div class="prose">
+
+### Entry intro: timed
+
 “Set a timer, Asher. The second we’re inside that cannery tonight, send every file to the police.” “Done, sir. Subject line?” “PLEASE READ THIS ONE.”
-</div></details><div class="prose">
+
+### Passage
+
 You spend the rest of the day getting ready.
 
 You charge everything. You put a fresh power core in The Can Opener, the very best one you have. You fill your pockets with landscaping rocks.
@@ -1484,7 +3079,35 @@ You have to clear your throat before you can answer.
 “Thanks, bud. Let’s go save the neighborhood.”
 
 You reach the cannery just after dark.
-</div><h3>Choices</h3><ul><li><a href="#scene_060">Go in through the front gate</a></li><li><a href="#scene_061">Go over the roof with The Stompers</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_060"><p class="source-label">scene_060</p><h2>The Front Gate</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Go in through the front gate
+
+```json
+{
+  "next_scene": "scene_060"
+}
+```
+
+#### Choice 2
+
+Go over the roof with The Stompers
+
+```json
+{
+  "next_scene": "scene_061"
+}
+```
+
+---
+
+## scene_060 — The Front Gate
+
+### Passage
+
 The Load-Bot at the gate sees you this time. You let it.
 
 It stomps toward you. Behind it, a Construction Bot rolls out from between the trucks with its jackhammer raised.
@@ -1504,7 +3127,25 @@ Both eye lights fade to soft blue.
 “Sorry, guys,” you say, and you mean it. “I’ll be back for you.”
 
 The cannery doors are wide open. Inside, something is humming.
-</div><h3>Choices</h3><ul><li><a href="#scene_062">Go inside</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_061"><p class="source-label">scene_061</p><h2>Over the Roof</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Go inside
+
+```json
+{
+  "next_scene": "scene_062"
+}
+```
+
+---
+
+## scene_061 — Over the Roof
+
+### Passage
+
 Clunk. Clunk. Clunk. You walk up the back wall of the cannery and peek over the edge of the roof.
 
 The antenna tower is right there, humming. But so are its guards. A Long Range Security Bot is perched on top of the tower, and a Close Range Security Bot is rolling in circles around the bottom.
@@ -1530,7 +3171,25 @@ Both eye lights fade to soft blue.
 “I’ll be back for you guys,” you tell them.
 
 There is a skylight in the roof, and light is pouring up through it.
-</div><h3>Choices</h3><ul><li><a href="#scene_062">Drop inside</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_062"><p class="source-label">scene_062</p><h2>Almost Not Enough</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Drop inside
+
+```json
+{
+  "next_scene": "scene_062"
+}
+```
+
+---
+
+## scene_062 — Almost Not Enough
+
+### Passage
+
 You land on the floor of the old cannery, and every light in the building comes on at once.
 
 The room is huge. At the far end is a machine the size of a school bus, covered in blinking lights, with thick cables running up to the antenna. GAS is painted on the side of it in gold letters ten feet tall. Of course it is.
@@ -1552,11 +3211,45 @@ You back up against a steel pillar, breathing hard, holding a wrench.
 Three bots left. Nothing charged. Just like the bank, except that this time there is nowhere to run.
 
 “Sir,” Asher says quietly. “You still have your boots. And you still have me.”
-</div><h3>Choices</h3><ul><li><a href="#scene_063">Use The Stompers to pull them off balance</a></li><li><a href="#scene_063">Trust Asher to pick the perfect moment</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_063"><p class="source-label">scene_063</p><h2>Breaking Through</h2><details><summary>Entry variation: stompers</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Use The Stompers to pull them off balance
+
+```json
+{
+  "next_scene": "scene_063",
+  "entry_intro": "stompers"
+}
+```
+
+#### Choice 2
+
+Trust Asher to pick the perfect moment
+
+```json
+{
+  "next_scene": "scene_063",
+  "entry_intro": "asher"
+}
+```
+
+---
+
+## scene_063 — Breaking Through
+
+### Entry intro: stompers
+
 The floor is steel. The bots are steel. You turn the dial on The Stompers all the way to the top, the one setting you have never dared to use, and you flip them to attract. The Close Range Bot’s wheels go out from under it. It slides across the floor toward you, faster and faster. You step aside, and it slams into the Load-Bot’s knees.
-</div></details><details><summary>Entry variation: droider</summary><div class="prose">
+
+### Entry intro: asher
+
 “Do not move, sir. Wait. Wait.” The Long Range Bot’s barrel glows. The Close Range Bot lunges. “NOW. Left!” You dive left. The stun bolt hits the Close Range Bot square in the chest, and it skids, numb and spinning, straight into the Load-Bot’s knees.
-</div></details><div class="prose">
+
+### Passage
+
 The Load-Bot topples like a tree, right on top of the Long Range Bot’s spider legs.
 
 It all happens in about three seconds. Then it is very quiet.
@@ -1570,7 +3263,25 @@ But you are standing, and they are not.
 From somewhere above you comes the sound of slow clapping.
 
 “Well, well, WELL,” says a loud voice.
-</div><h3>Choices</h3><ul><li><a href="#scene_064">Look up</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_064"><p class="source-label">scene_064</p><h2>Confrontation</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Look up
+
+```json
+{
+  "next_scene": "scene_064"
+}
+```
+
+---
+
+## scene_064 — Confrontation
+
+### Passage
+
 Max Grabs is standing on a metal walkway above the big machine. He is wearing a gold bathrobe over his shiny suit, and he is holding a remote control with exactly one button on it.
 
 “So YOU are the little pest who has been breaking my robots! Do you know how much those cost? Almost nothing! But it is the PRINCIPLE!”
@@ -1596,11 +3307,45 @@ Behind the walkway, at the heart of the machine, is a wall of glowing terminals.
 You look down at The Can Opener. The best power core you own is still sitting in it, untouched. You have never dared to let all of it out at once. It would drain the tool completely. Maybe for good.
 
 You think of every eye light you have watched fade from angry red to soft blue.
-</div><h3>Choices</h3><ul><li><a href="#scene_065">Let him keep talking while you charge it up</a></li><li><a href="#scene_065">Tell him it is over</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_065"><p class="source-label">scene_065</p><h2>Charging the Discharge</h2><details><summary>Entry variation: kept_talking</summary><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Let him keep talking while you charge it up
+
+```json
+{
+  "next_scene": "scene_065",
+  "entry_intro": "kept_talking"
+}
+```
+
+#### Choice 2
+
+Tell him it is over
+
+```json
+{
+  "next_scene": "scene_065",
+  "entry_intro": "its_over"
+}
+```
+
+---
+
+## scene_065 — Charging the Discharge
+
+### Entry intro: kept_talking
+
 “...and the water will come out of my ears, which I think is very tasteful,” Grabs is saying.
-</div></details><details><summary>Entry variation: its_over</summary><div class="prose">
+
+### Entry intro: its_over
+
 “It’s over, Mr. Grabs,” you say. He laughs so hard that he has to hold on to the railing. “Over? You’re a CHILD! With a WRENCH!”
-</div></details><div class="prose">
+
+### Passage
+
 You twist the handle of The Can Opener. Then you keep twisting, past the click, and past the second click that you put there so you would never do this by accident.
 
 The coils go from blue to white. The wrench head opens wide. Lightning starts to crawl up and down the handle, and every hair on your arms stands up. The whole cannery fills with a rising hum.
@@ -1618,7 +3363,25 @@ Grabs stops laughing. He freezes.
 Your eyes shift past him, toward the glowing control tower.
 
 “You’re right,” you say. “I wouldn’t.”
-</div><h3>Choices</h3><ul><li><a href="#scene_066">Fire</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_066"><p class="source-label">scene_066</p><h2>Precision</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Fire
+
+```json
+{
+  "next_scene": "scene_066"
+}
+```
+
+---
+
+## scene_066 — Precision
+
+### Passage
+
 The blast shoots past Max Grabs, close enough to ruffle his bathrobe, and hits the control tower dead center.
 
 For a second, the whole room is as bright as noon.
@@ -1654,7 +3417,25 @@ He throws his remote control on the floor and jumps on it. He pulls off his othe
 “It usually is.”
 
 Somewhere outside, getting closer, you hear sirens.
-</div><h3>Choices</h3><ul><li><a href="#scene_067">Time to go</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_067"><p class="source-label">scene_067</p><h2>Police Arrive</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Time to go
+
+```json
+{
+  "next_scene": "scene_067"
+}
+```
+
+---
+
+## scene_067 — Police Arrive
+
+### Passage
+
 “Sir, the police have read your email,” Asher says. “All of it. They seem quite upset.”
 
 Red and blue lights sweep across the cannery windows.
@@ -1688,7 +3469,25 @@ Max, sincerely: “Thank you.”
 You slip out the back window and drop into the dark before anyone can stop you.
 
 You are not doing this to get famous.
-</div><h3>Choices</h3><ul><li><a href="#scene_068">Head home</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_068"><p class="source-label">scene_068</p><h2>Neighborhood Safe</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Head home
+
+```json
+{
+  "next_scene": "scene_068"
+}
+```
+
+---
+
+## scene_068 — Neighborhood Safe
+
+### Passage
+
 You take the long way home.
 
 The streets of {world_name} are quiet, in a way they have not been for months. It is the good kind of quiet.
@@ -1722,7 +3521,43 @@ You set The Can Opener down on the workbench. It is dark, scorched, and complete
 “So did you, sir,” says Asher.
 
 You should sleep. You know you should sleep. But your hands are already itching.
-</div><h3>Choices</h3><ul><li><a href="#scene_069">Start fixing The Can Opener</a></li><li><a href="#scene_070">Think about all those robots out there</a></li></ul><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_069"><p class="source-label">scene_069</p><h2>Back to the Bench</h2><div class="prose">
+
+### Choices
+
+#### Choice 1
+
+Start fixing The Can Opener
+
+```json
+{
+  "next_scene": "scene_069"
+}
+```
+
+#### Choice 2
+
+Think about all those robots out there
+
+```json
+{
+  "next_scene": "scene_070"
+}
+```
+
+---
+
+## scene_069 — Back to the Bench
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
 You pull your stool up to the bench and open up The Can Opener.
 
 The core is burnt out. Half of the copper coils have melted. It is going to take weeks to fix, and twice as many parts as it took to build.
@@ -1731,7 +3566,7 @@ You have never been happier to have a project.
 
 “You know, sir, while it is apart, we could make some improvements.”
 
-“I was thinking the same thing.” You pick up a marker and start a new list on the garage wall. “And I’ve got a great idea for a grappling hook. I’m going to call it The Puller Thingie.”
+“I was thinking the same thing.” You pick up a marker and start a new list on the garage wall. “And I’ve got a great idea for a grappling hook. I’m going to call it The Yoink.”
 
 “Of course you are, sir.”
 
@@ -1748,7 +3583,23 @@ You grin, and you pick up your screwdriver.
 “Then we’d better hurry.”
 
 The End.
-</div><a class="action" href="index.html#the_can_opener">Back to names</a></article><article id="scene_070"><p class="source-label">scene_070</p><h2>The Fixer</h2><div class="prose">
+
+### Choices
+
+---
+
+## scene_070 — The Fixer
+
+### Scene metadata
+
+```json
+{
+  "ending": true
+}
+```
+
+### Passage
+
 You keep thinking about them. Hundreds of robots, standing out there in the dark with nowhere to go.
 
 They were thrown away. Then they were used. None of that was their fault.
@@ -1774,4 +3625,5 @@ You watch it work, with a big smile on your face.
 The Can Opener can wait one more day. It was always a tool first, anyway.
 
 The End.
-</div><a class="action" href="index.html#the_can_opener">Back to names</a></article></main></html>
+
+### Choices

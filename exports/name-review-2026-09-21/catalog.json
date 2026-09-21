@@ -2367,6 +2367,10 @@
         "title": "Triangulation"
       },
       {
+        "id": "scene_053",
+        "title": "A Destination"
+      },
+      {
         "id": "scene_054",
         "title": "Drone Spotted"
       },
@@ -2473,7 +2477,7 @@
     "story": "The Can Opener",
     "kind": "Character",
     "current_name": "Mr. Lin",
-    "role": "Neighbor who feeds pigeons at the bench.",
+    "role": "Neighbor and basketball friend whose bench is destroyed.",
     "aliases": [
       "Lin"
     ],
@@ -2481,11 +2485,27 @@
     "replacement": "",
     "scenes": [
       {
+        "id": "scene_036",
+        "title": "Pinned Down"
+      },
+      {
         "id": "scene_039",
         "title": "First Real Loss"
+      },
+      {
+        "id": "scene_053",
+        "title": "A Destination"
+      },
+      {
+        "id": "scene_058",
+        "title": "The Man in the Shiny Suit"
+      },
+      {
+        "id": "scene_068",
+        "title": "Neighborhood Safe"
       }
     ],
-    "story_link": "the_can_opener.html#scene_039"
+    "story_link": "the_can_opener.html#scene_036"
   },
   {
     "story_id": "the_can_opener",
@@ -2503,6 +2523,10 @@
       {
         "id": "scene_051",
         "title": "Following the Trail"
+      },
+      {
+        "id": "scene_053",
+        "title": "A Destination"
       },
       {
         "id": "scene_057",
@@ -2600,6 +2624,10 @@
       {
         "id": "scene_045",
         "title": "The Stompers"
+      },
+      {
+        "id": "scene_068",
+        "title": "Neighborhood Safe"
       }
     ],
     "story_link": "the_can_opener.html#scene_036"
@@ -2968,10 +2996,10 @@
     "story_id": "the_can_opener",
     "story": "The Can Opener",
     "kind": "Place, gadget or robot type",
-    "current_name": "The Robot Improver 3.0",
+    "current_name": "The Robot Improver 3",
     "role": "Grabs’s robot-virus machine.",
     "aliases": [
-      "Robot Improver 3.0"
+      "Robot Improver 3"
     ],
     "note": "",
     "replacement": "",

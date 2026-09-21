@@ -1,0 +1,9 @@
+
+> webapp@0.0.0 check:import
+> node scripts/check-story-import.js /tmp/pow-can-md-import/the_can_opener.json
+
+Story import preflight: ready (read-only)
+the_can_opener: 0 added, 12 edited, 0 removed, 58 unchanged
+Incoming SHA-256 the_can_opener: 1e2599f8b7034cbe992de7fa9226f1e548ccac3dcee2fe37b14af93e27058539
+Read-only comparison. Title changes are possible ID reuse, not proof. Same-title rewrites cannot reliably be distinguished from replacement. Text edits can shift saved paragraph/character positions; flags and route intent require human review. No content or saves are changed.
+Exit 0: no detected review flags; 1: review required; 2: invalid input. This command never imports files.
