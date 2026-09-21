@@ -27,6 +27,7 @@ export function Fixture() {
   const [voiceOver, setVoiceOver] = useState(false);
   const [haptics, setHaptics] = useState(false);
   const anchor = useRef(null);
+  const chosen = useRef(0);
   const [generation, reset] = useState(0);
   const [result, setResult] = useState('Not run');
   const [running, setRunning] = useState(false);
@@ -39,6 +40,45 @@ export function Fixture() {
     setResult('Running');
     reset((n) => n + 1);
     await frame(); await frame();
+    if (kind === 'decision page') {
+      // Run with ?reduced so long passages reach their final page promptly.
+      let turns = 0;
+      while (document.querySelector('.reader-footer-next button')?.textContent.includes('Next') && turns++ < 400) {
+        document.querySelector('.reader-footer-next button').click();
+        await settled();
+      }
+      await frame(); await frame();
+      const lastStatus = document.querySelector('.page-status').textContent;
+      const [current,total] = lastStatus.split('/').map(Number);
+      const finalPage = current === total && !!document.querySelector('.path-button');
+      document.querySelector('.path-button')?.click();
+      await frame(); await frame();
+      const heading = document.querySelector('.decision-page h1');
+      const focused = document.activeElement === heading;
+      const context = document.querySelector('.decision-context');
+      let contextCorrect = true;
+      if (context && getComputedStyle(context).display !== 'none') {
+        const viewport = context.querySelector('.decision-context__viewport').getBoundingClientRect();
+        const last = context.querySelector('.story-paragraph:last-child');
+        const range = document.createRange();
+        range.setStart(last.firstChild,last.textContent.length-1); range.setEnd(last.firstChild,last.textContent.length);
+        const r = range.getBoundingClientRect();
+        contextCorrect = r.left >= viewport.left-1 && r.right <= viewport.right+1 && context.inert && context.getAttribute('aria-hidden') === 'true';
+      }
+      const button = document.querySelector('.choice-button');
+      const readable = button?.querySelector('.choice-label').textContent === 'Choose this test path' && button.scrollWidth <= button.clientWidth+1;
+      document.querySelector('.decision-page > button').click();
+      await frame(); await frame();
+      const restored = document.querySelector('.page-status').textContent === lastStatus;
+      document.querySelector('.path-button')?.click();
+      await frame();
+      const before = chosen.current;
+      document.querySelector('.choice-button').click();
+      const committed = chosen.current === before+1 && !document.querySelector('.page-turn-overlay');
+      setResult(`${finalPage && focused && contextCorrect && readable && restored && committed ? 'PASS' : 'FAIL'}: decision page; final ${finalPage}; focus ${focused}; context ${contextCorrect}; text ${readable}; restored ${restored}; committed ${committed}`);
+      setRunning(false);
+      return;
+    }
     if (kind === 'continuous reading') {
       document.querySelector('.reader-footer-next button').click();
       await settled();
@@ -137,9 +177,9 @@ export function Fixture() {
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
-    <BookReader key={generation} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{}} />
+    <BookReader key={generation} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{fixture:{text:'Choose this test path'}}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{ chosen.current += 1; }} />
   </>;
 }
 createRoot(document.getElementById('root')).render(<StrictMode><Fixture /></StrictMode>);

@@ -23,7 +23,7 @@
   },
   "story": {
     "ready_prompt": "Press Continue when you're ready to see your choices...",
-    "continue_reading": "I'm ready to choose",
+    "continue_reading": "Choose your path",
     "choose_prompt": "What do you do next?"
   },
   "reader": {

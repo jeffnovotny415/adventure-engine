@@ -425,3 +425,41 @@ was installed over Jeff's existing iPhone app; device tools confirmed launch.
 All 15 protected files remain byte-for-byte identical to f7a5d4e. Physical
 VoiceOver spoken navigation and haptic feel still need hands-on confirmation;
 scripted layout checks and successful installation do not certify those senses.
+
+## September 20 ornamental decision pages
+
+Applied the approved combination of The Forever Labyrinth's printed ornament
+and Deepstash's generous choice spacing. The final-page action now says
+“Choose your path” in UI copy. Equal-weight ink frames, corner details and a
+small heading ornament sit on the existing worn paper. Each complete authored
+choice is one button, with a visible press/focus state and no extra confirmation.
+Opening decisions focuses the heading; returning restores the reading anchor.
+
+On a sufficiently wide landscape tablet, the last printed passage page is
+shown beside the choices. It is an inert visual reference, excluded from the
+accessibility tree; Back to the passage returns to the accessible full passage.
+Phone, portrait, VoiceOver and very large combined text sizes use one decision
+page. Resizing/font/image-load changes remeasure the reference page. Stabilized
+classic scrollbar space after a portrait check found that the taller final-page
+action could otherwise change pagination width and displace the final page.
+
+Validation: 91 Node tests, lint, diagnostics, production build and signed iPhone
+build pass. Browser checks cover 98 gesture/continuous-reading cases and the new
+decision-page regression at phone landscape, tablet landscape and portrait sizes.
+The latter verifies final-page reachability, heading focus, the final character
+in the tablet reference, exact choice text, return position, and one immediate
+choice callback. Actual authored preview checks cover 225% text without clipping,
+rotation, and transition from Getting Home to Focused Work. The visual reference
+is absent from the browser accessibility tree. All 15 protected source files
+remain byte-identical to f7a5d4e. Signed bundle/signature verification passed and
+the phone update installed; automatic launch was denied because the phone was
+locked. Open the installed app normally to inspect it.
+
+Approved reading backlog remains: center-tap controls, expanded Aa typography,
+page appearances, scene-relative progress, separate passage bookmarks, and
+selectable page movement. This batch implements the decision interface.
+
+Also exported the three current live stories for Jeff's writing app: 44 scenes
+and 63 choices, with Markdown/plain-text copies, byte-identical original JSON,
+entry-intro variants, routing metadata, the referenced illustration, and hashes.
+No story text or source files were changed for the export.

@@ -7,6 +7,7 @@ import { captureReadingAnchor, pageForReadingAnchor, readingAnchorTop } from './
 import { ReadingSettings } from './ReadingSettings';
 import { DEFAULT_NATIVE_READING } from '../../../state/readingPreferences';
 import { pageTurnFeedback } from '../../../state/nativeReading';
+import { DecisionContext } from './DecisionContext';
 
 // Real columns preserve every paragraph and adapt to the device and text size.
 export function BookReader({ storyTitle, title, intro, body, image, choices, onChoose,
@@ -136,7 +137,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
 
   useEffect(() => { headingRef.current?.focus({ preventScroll: true }); }, []);
   useEffect(() => {
-    if (choosing) decisionRef.current?.focus({ preventScroll: true });
+    if (choosing) decisionRef.current?.focus();
     else if (continuous) {
       const paragraph = columnsRef.current?.querySelectorAll('.story-paragraph')[readingAnchorRef.current?.paragraph];
       if (paragraph) paragraph.tabIndex = -1;
@@ -160,8 +161,11 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       </nav>
       <article className={`paper-book${choosing ? ' paper-book--choices' : ''}`} aria-label={title}>
         {choosing ? (
+          <div className={`decision-spread${!continuous && textScale * nativeReading.textScale <= 1.5 ? ' decision-spread--facing' : ''}`}>
+          {!continuous && <DecisionContext {...{ storyTitle, title, intro, body, image, textScale }} systemScale={nativeReading.textScale} />}
           <section className="decision-page">
             <p className="eyebrow story-name">{title}</p>
+            <span className="decision-ornament" aria-hidden="true">◇</span>
             <h1 ref={decisionRef} tabIndex={-1}>{getText('story.choose_prompt')}</h1>
             <div className="choice-list">
               {Object.entries(choices).map(([id, choice], index) => (
@@ -172,6 +176,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
               <span aria-hidden="true">← </span>{getText('reader.back_to_passage')}
             </button>
           </section>
+          </div>
         ) : (
           <>
             <div className="reader-viewport" data-zoomed={zoomed} ref={viewportRef} {...(continuous ? {} : gestureHandlers)}>
@@ -195,8 +200,10 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
                     {getText('reader.next')}<span aria-hidden="true"> →</span>
                   </button>
                 ) : !ending ? (
-                  <button type="button" className="primary-button" onClick={() => { saveScrollRef.current(); cancelTurn(); setChoosing(true); }}>
+                  <button type="button" className="path-button" onClick={() => { saveScrollRef.current(); cancelTurn(); setChoosing(true); }}>
+                    <span aria-hidden="true">◇</span>
                     {getText('story.continue_reading')}
+                    <span aria-hidden="true">→</span>
                   </button>
                 ) : <span className="ending-label">{getText('end.heading')}</span>}
               </span>

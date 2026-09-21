@@ -11,6 +11,9 @@ body,
   min-height: 100%;
 }
 
+/* A taller final-page action must not change the width used for pagination. */
+html { scrollbar-gutter: stable; }
+
 body {
   margin: 0;
 }

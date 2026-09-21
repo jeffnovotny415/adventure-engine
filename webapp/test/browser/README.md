@@ -47,3 +47,9 @@ bookmark remounting and returning from choices. Run it last in each fresh page.
 `?system` simulates the largest iOS body text category (53/17), and can combine
 with `&max` to stress the manual book-size maximum. These are development-only
 inputs; they do not change any device preferences or access real saved books.
+
+**decision page** walks to the final page, opens the decisions, verifies heading
+focus and the final character in the inert iPad passage reference, returns to
+the same page, then activates the test choice exactly once. Run it with
+`?reduced` for speed; combine `&max&system` to test extreme text sizes. The longest
+large-text cases can take several seconds because every page is visited.
