@@ -1,4 +1,4 @@
-import { TEXT_SCALES } from './readingPreferences.js';
+import { TEXT_SCALES, READING_OPTIONS, DEFAULT_READING_STYLE } from './readingPreferences.js';
 
 export const SAVE_SCHEMA_VERSION = 1;
 
@@ -50,6 +50,11 @@ export function migrateSave(raw, stories) {
   if (raw.uiPrefs && Object.hasOwn(raw.uiPrefs, 'largeText') && typeof raw.uiPrefs.largeText !== 'boolean') return invalid('malformed');
   if (raw.uiPrefs && Object.hasOwn(raw.uiPrefs, 'textScale') && !TEXT_SCALES.includes(raw.uiPrefs.textScale)) return invalid('malformed');
   if (raw.uiPrefs && Object.hasOwn(raw.uiPrefs, 'pageHaptics') && typeof raw.uiPrefs.pageHaptics !== 'boolean') return invalid('malformed');
+  for (const key of Object.keys(DEFAULT_READING_STYLE)) {
+    if (!Object.hasOwn(raw.uiPrefs ?? {}, key)) continue;
+    if (READING_OPTIONS[key] ? !READING_OPTIONS[key].includes(raw.uiPrefs[key])
+      : typeof raw.uiPrefs[key] !== 'boolean') return invalid('malformed');
+  }
   if (raw.readingPosition != null && (!isRecord(raw.readingPosition) ||
       !Number.isSafeInteger(raw.readingPosition.paragraph) || raw.readingPosition.paragraph < 0 ||
       !Number.isSafeInteger(raw.readingPosition.offset) || raw.readingPosition.offset < 0)) return invalid('malformed');
@@ -70,7 +75,9 @@ export function migrateSave(raw, stories) {
       uiPrefs: { hideButtonsWhileReading: raw.uiPrefs?.hideButtonsWhileReading ?? false,
         ...(Object.hasOwn(raw.uiPrefs ?? {}, 'largeText') ? { largeText: raw.uiPrefs.largeText } : {}),
         ...(Object.hasOwn(raw.uiPrefs ?? {}, 'textScale') ? { textScale: raw.uiPrefs.textScale } : {}),
-        ...(Object.hasOwn(raw.uiPrefs ?? {}, 'pageHaptics') ? { pageHaptics: raw.uiPrefs.pageHaptics } : {}) },
+        ...(Object.hasOwn(raw.uiPrefs ?? {}, 'pageHaptics') ? { pageHaptics: raw.uiPrefs.pageHaptics } : {}),
+        ...Object.fromEntries(Object.keys(DEFAULT_READING_STYLE)
+          .filter(key => Object.hasOwn(raw.uiPrefs ?? {}, key)).map(key => [key, raw.uiPrefs[key]])) },
     },
   };
 }

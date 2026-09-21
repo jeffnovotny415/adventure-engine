@@ -5,7 +5,7 @@ import { usePageTurn } from './usePageTurn';
 import { ChoiceButton } from '../ChoiceButton/ChoiceButton';
 import { captureReadingAnchor, pageForReadingAnchor, readingAnchorTop } from './readingPosition';
 import { ReadingSettings } from './ReadingSettings';
-import { DEFAULT_NATIVE_READING } from '../../../state/readingPreferences';
+import { DEFAULT_NATIVE_READING, DEFAULT_READING_STYLE } from '../../../state/readingPreferences';
 import { pageTurnFeedback } from '../../../state/nativeReading';
 import { DecisionContext } from './DecisionContext';
 
@@ -13,8 +13,10 @@ import { DecisionContext } from './DecisionContext';
 export function BookReader({ storyTitle, title, intro, body, image, choices, onChoose,
   onHome, ending = false, onRestart, textScale = 1, onTextScaleChange, testing = false,
   initialReadingPosition = null, onReadingPositionChange, nativeReading = DEFAULT_NATIVE_READING,
-  pageHaptics = false, onPageHapticsChange }) {
+  pageHaptics = false, onPageHapticsChange, readingStyle = DEFAULT_READING_STYLE, onReadingStyleChange }) {
   const { getText } = useContent();
+  const mainRef = useRef(null);
+  const controlsButtonRef = useRef(null);
   const viewportRef = useRef(null);
   const columnsRef = useRef(null);
   const headingRef = useRef(null);
@@ -29,15 +31,23 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   const [layout, setLayout] = useState({ count: 1, step: 0 });
   const [choosing, setChoosing] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [controlsVisible, setControlsVisible] = useState(true);
   const continuous = nativeReading.voiceOver;
+  const controlsShown = controlsVisible || readingStyle.alwaysShowControls || continuous || choosing || settingsOpen;
+  function toggleControls() {
+    if (readingStyle.alwaysShowControls || continuous || choosing) return;
+    setControlsVisible(current => !current);
+    // Keep focus out of the controls that are about to become inert.
+    controlsButtonRef.current?.focus({ preventScroll: true });
+  }
   const saveScrollRef = useRef(() => {});
   const [zoomed, setZoomed] = useState(() => (window.visualViewport?.scale ?? 1) > 1.05);
   const { turnPage, cancelTurn, gestureHandlers } = usePageTurn({
     viewportRef, columnsRef, page, layout,
-    onOpenSettings: () => setSettingsOpen(true),
+    onToggleControls: toggleControls,
     onPageChange: (target) => {
       if (pageHaptics && nativeReading.hapticsAvailable) void pageTurnFeedback();
-      if (target === 0 || target === layout.count - 1) footerRef.current?.focus({ preventScroll: true });
+      if (controlsShown && (target === 0 || target === layout.count - 1)) footerRef.current?.focus({ preventScroll: true });
       captureAnchorRef.current = true;
       setPage(target);
     },
@@ -91,7 +101,8 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       observer.disconnect();
       images.forEach((img) => img.removeEventListener('load', measure));
     };
-  }, [choosing, continuous, textScale, nativeReading.textScale, title, intro, body, image, cancelTurn]);
+  }, [choosing, continuous, textScale, nativeReading.textScale, readingStyle.readingFont,
+    readingStyle.boldText, readingStyle.lineSpacing, title, intro, body, image, cancelTurn]);
 
   useEffect(() => {
     if (!continuous || choosing) return;
@@ -150,8 +161,13 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     .replace('{current}', String(page + 1)).replace('{total}', String(layout.count));
 
   return (
-    <main className={`reader-layout${continuous ? ' reader-layout--continuous' : ''}`} style={{ '--reading-scale': textScale }}>
-      <nav className="reader-nav" aria-label={getText('reader.navigation')}>
+    <main ref={mainRef} className={`reader-layout${continuous ? ' reader-layout--continuous' : ''}`}
+      data-page-appearance={readingStyle.pageAppearance} data-reading-font={readingStyle.readingFont}
+      data-reading-bold={readingStyle.boldText} data-reading-spacing={readingStyle.lineSpacing}
+      data-controls-shown={controlsShown} style={{ '--reading-scale': textScale }}
+      onKeyDownCapture={(event) => { if (event.key === 'Tab') setControlsVisible(true); }}>
+      <div className="reader-toolbar">
+      <nav className="reader-nav" inert={!controlsShown} aria-label={getText('reader.navigation')}>
         <button type="button" className="text-button" onClick={() => { saveScrollRef.current(); onHome(); }}>
           <span aria-hidden="true">← </span>{getText('reader.bookshelf')}
         </button>
@@ -159,10 +175,14 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
         <button type="button" className="text-size-button" aria-label={getText('reader.text_size')}
           aria-haspopup="dialog" onClick={() => { cancelTurn(); setSettingsOpen(true); }}>{getText('reader.text_size_symbol')}</button>
       </nav>
+      {!readingStyle.alwaysShowControls && !continuous && !choosing && <button type="button"
+        ref={controlsButtonRef} className="reader-controls-toggle text-button" aria-expanded={controlsShown}
+        onClick={toggleControls}>{getText(controlsShown ? 'reader.hide_controls' : 'reader.show_controls')}</button>}
+      </div>
       <article className={`paper-book${choosing ? ' paper-book--choices' : ''}`} aria-label={title}>
         {choosing ? (
           <div className={`decision-spread${!continuous && textScale * nativeReading.textScale <= 1.5 ? ' decision-spread--facing' : ''}`}>
-          {!continuous && <DecisionContext {...{ storyTitle, title, intro, body, image, textScale }} systemScale={nativeReading.textScale} />}
+          {!continuous && <DecisionContext {...{ storyTitle, title, intro, body, image, textScale, readingStyle }} systemScale={nativeReading.textScale} />}
           <section className="decision-page">
             <p className="eyebrow story-name">{title}</p>
             <span className="decision-ornament" aria-hidden="true">◇</span>
@@ -185,18 +205,18 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
               </div>
             </div>
             <footer className="reader-footer" ref={footerRef} tabIndex={-1}>
-              <span className="reader-footer-previous">
+              <span className="reader-footer-previous reader-page-control" inert={!controlsShown}>
                 {!continuous && page > 0 && (
                   <button type="button" className="text-button" onClick={() => turnPage(page - 1)}>
                     <span aria-hidden="true">← </span>{getText('reader.previous')}
                   </button>
                 )}
               </span>
-              {!continuous && <span className="page-status" aria-live="polite" aria-atomic="true"
+              {!continuous && <span className="page-status reader-page-control" aria-hidden={!controlsShown} aria-live="polite" aria-atomic="true"
                 aria-label={getText('reader.page_spoken').replace('{current}', String(page + 1)).replace('{total}', String(layout.count))}>{pageLabel}</span>}
               <span className="reader-footer-next">
                 {!lastPage ? (
-                  <button type="button" className="text-button" onClick={() => turnPage(page + 1)}>
+                  <button type="button" className="text-button reader-page-control" inert={!controlsShown} onClick={() => turnPage(page + 1)}>
                     {getText('reader.next')}<span aria-hidden="true"> →</span>
                   </button>
                 ) : !ending ? (
@@ -219,6 +239,8 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
         )}
       </article>
       {settingsOpen && <ReadingSettings textScale={textScale} nativeReading={nativeReading}
+        portalTarget={mainRef.current} readingStyle={readingStyle}
+        onReadingStyleChange={(patch) => { saveScrollRef.current(); cancelTurn(); onReadingStyleChange?.(patch); }}
         pageHaptics={pageHaptics} onPageHapticsChange={onPageHapticsChange}
         onChange={(scale) => { cancelTurn(); onTextScaleChange?.(scale); }}
         onClose={() => setSettingsOpen(false)} />}

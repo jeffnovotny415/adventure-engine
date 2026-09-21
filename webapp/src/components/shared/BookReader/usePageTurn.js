@@ -6,7 +6,7 @@ function release(gesture) {
   if (gesture?.element.hasPointerCapture(gesture.id)) gesture.element.releasePointerCapture(gesture.id);
 }
 
-export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChange, onOpenSettings }) {
+export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChange, onToggleControls }) {
   const turnRef = useRef(null);
   const gestureRef = useRef(null);
   const suppressClickRef = useRef(false);
@@ -120,7 +120,7 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
       const action = pageTapAction(event.clientX - gesture.bounds.left, gesture.bounds.width);
       if (action === 'previous') turnPage(page - 1);
       if (action === 'next') turnPage(page + 1);
-      if (action === 'settings') onOpenSettings?.();
+      if (action === 'controls') onToggleControls?.();
       suppressClickRef.current = Boolean(action);
       return;
     }

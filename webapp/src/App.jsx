@@ -11,7 +11,7 @@ import { SaveRecoveryScreen } from './components/screens/SaveRecoveryScreen/Save
 import { getScene, getSceneDisplayText, getAvailableChoices, isEnding } from './engine/sceneEngine';
 import { getStoryIndex, getStory } from './utils/storyData';
 import { themeKeyForStory, SHELL_THEME } from './utils/themeKey';
-import { readingTextScale } from './state/readingPreferences';
+import { readingTextScale, readingStyle, DEFAULT_READING_STYLE } from './state/readingPreferences';
 import { useNativeReading } from './hooks/useNativeReading';
 
 const SCREENS = {
@@ -40,6 +40,8 @@ export default function App() {
   const [devTestState, setDevTestState] = useState(null);
   const [previewTextScale, setPreviewTextScale] = useState(1);
   const [previewHaptics, setPreviewHaptics] = useState(false);
+  const [previewReadingStyle, setPreviewReadingStyle] = useState(DEFAULT_READING_STYLE);
+  const bookStyle = devTestState ? previewReadingStyle : readingStyle(save?.uiPrefs);
   const textScale = devTestState ? previewTextScale : readingTextScale(save?.uiPrefs);
   const pageHaptics = devTestState ? previewHaptics : save?.uiPrefs.pageHaptics === true;
 
@@ -144,6 +146,11 @@ export default function App() {
     else updateReading({ uiPrefs: { pageHaptics: enabled } });
   }
 
+  function changeReadingStyle(patch) {
+    if (devTestState) setPreviewReadingStyle(current => readingStyle({ ...current, ...patch }));
+    else updateReading({ uiPrefs: patch });
+  }
+
   function handleDeveloperMode() {
     cancelPersistence();
     setScreen(SCREENS.DEV_TEST);
@@ -220,6 +227,8 @@ export default function App() {
             onChoose={handleChoose}
             onHome={goHome}
             textScale={textScale}
+            readingStyle={bookStyle}
+            onReadingStyleChange={changeReadingStyle}
             nativeReading={nativeReading}
             pageHaptics={pageHaptics}
             onPageHapticsChange={changePageHaptics}
@@ -243,6 +252,8 @@ export default function App() {
             onRestart={handleRestart}
             onHome={handleNewStory}
             textScale={textScale}
+            readingStyle={bookStyle}
+            onReadingStyleChange={changeReadingStyle}
             nativeReading={nativeReading}
             pageHaptics={pageHaptics}
             onPageHapticsChange={changePageHaptics}

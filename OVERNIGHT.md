@@ -463,3 +463,45 @@ Also exported the three current live stories for Jeff's writing app: 44 scenes
 and 63 choices, with Markdown/plain-text copies, byte-identical original JSON,
 entry-intro variants, routing metadata, the referenced illustration, and hashes.
 No story text or source files were changed for the export.
+
+## September 20 reading controls and comfort
+
+Implemented Jeff's approved next batch: center-page taps show/hide reading
+controls, with an explicit Show/Hide controls button and a per-book Always show
+controls setting. Controls start visible, remain visible for VoiceOver and
+choices, and reveal for keyboard navigation. Hidden controls are inert and keep
+their layout space so the passage does not jump; the final Choose your path and
+ending actions remain available. Edge taps, finger-tracked swipes, pinch zoom,
+illustration taps, and reduced motion retain their existing behavior.
+
+Expanded Aa with Sans serif/Serif, bold text, Standard/Relaxed/Spacious line
+spacing, and Warm/Clear/Night paper. Existing sans-serif type and warm paper
+remain defaults. Preferences use the existing validated per-book save/retry
+path; legacy saves keep their prior settings. Font and spacing reflow retain
+character anchors, including the iPad decision reference. The settings dialog
+inherits the reader's palette, keeps Done outside its scrolling body, and uses
+labeled radio groups/switches. All labels live in ui_copy.json. Night paper also
+covers the turning leaf, margins, binding, and save-error notice. Text/accent
+contrast against each paper exceeds 4.5:1.
+
+Validation: 93 Node tests, lint, story diagnostics, production build, signed
+Release iPhone build, compiled-bundle verification (101 matching assets), and
+strict signature verification pass. The 117-case browser matrix covers phone
+667x375, iPad 1024x768, portrait 390x844, normal/reduced motion, 225% book text,
+and combined maximum system/book sizes. Confirmed actual viewport dimensions
+before the final matrix after correcting a preview-tab targeting issue. The
+extreme portrait check exposed footer overflow; wrapping the toolbar/footer and
+removing the dialog's em-based browser width limit resolved it. Repeated all
+controls/comfort cases at normal and maximum system/book sizes after the fix.
+Decision tests additionally verify Choose your path stays visible with hidden
+controls. Real-book checks cover saved font/paper after reload, keyboard reveal,
+center tap twice, iPad rotation, choice typography/reference reflow, portrait
+settings, and illustration Actual size/close. All 15 protected story, draft,
+and public files remain byte-identical to f7a5d4e. Physical touch/VoiceOver feel
+still needs Jeff's hands-on confirmation.
+
+Remaining approved reading ideas: scene-relative progress, separate passage
+bookmarks, and selectable page movement. The author-preview report discussed
+alongside these is a possible next task, not part of this batch.
+The signed update was installed over Jeff's existing iPhone app without
+uninstalling it; Apple's device tools confirmed successful installation.

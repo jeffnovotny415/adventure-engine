@@ -38,7 +38,7 @@ test('a quick flick can complete without a long drag', () => {
 test('tap zones have a quiet middle for reading controls and bounded page edges', () => {
   for (const width of [300, 667, 1024]) {
     assert.equal(pageTapAction(width * .15, width), 'previous');
-    assert.equal(pageTapAction(width * .5, width), 'settings');
+    assert.equal(pageTapAction(width * .5, width), 'controls');
     assert.equal(pageTapAction(width * .85, width), 'next');
     assert.equal(pageTapAction(-1, width), null);
     assert.equal(pageTapAction(width + 1, width), null);

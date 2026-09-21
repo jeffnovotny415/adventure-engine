@@ -34,7 +34,7 @@ Tab should then reach Previous (or the remaining next-page control), with no
 sideways viewport jump. Test larger text and rotation as well.
 
 Reader controls: run the right/left edge taps, middle tap, and long press cases.
-Edges turn one page, the middle opens Reading settings without turning, and a
+Edges turn one page, the middle hides controls without turning, and a
 long press must not turn. `?max` uses 225% text. Verify all cases at 667×375 and
 1024×768 with normal, reduced-motion and maximum text, plus 390×844 at maximum.
 In the real app, use Aa to change the slider, close with Done/Escape, reload and
@@ -53,3 +53,11 @@ focus and the final character in the inert iPad passage reference, returns to
 the same page, then activates the test choice exactly once. Run it with
 `?reduced` for speed; combine `&max&system` to test extreme text sizes. The longest
 large-text cases can take several seconds because every page is visited.
+
+**reading comfort** checks that hiding controls does not shift or resize the
+passage, font/spacing changes retain the character anchor, bold text applies,
+all three paper palettes reach the settings sheet, and Always show controls
+keeps navigation visible. It also verifies unchanged passage text and no
+horizontal overflow. Run before continuous reading, including `?max&system`.
+In the actual app, check center tap twice, the Show controls button, Tab from
+hidden controls, setting persistence after reload, and the illustration viewer.

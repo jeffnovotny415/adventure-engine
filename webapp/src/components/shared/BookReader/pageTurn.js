@@ -14,7 +14,7 @@ export function pageTapAction(x, width) {
   if (width <= 0 || x < 0 || x > width) return null;
   if (x < width * .28) return 'previous';
   if (x > width * .72) return 'next';
-  return 'settings';
+  return 'controls';
 }
 
 export function leafAppearance(progress, spread) {

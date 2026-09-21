@@ -3,6 +3,8 @@
 import { StrictMode, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { captureReadingAnchor } from '../../src/components/shared/BookReader/readingPosition';
+import { pageForReadingAnchor } from '../../src/components/shared/BookReader/readingPosition';
+import { DEFAULT_READING_STYLE } from '../../src/state/readingPreferences';
 import { BookReader } from '../../src/components/shared/BookReader/BookReader';
 import '../../src/index.css';
 import '../../src/styles/theme.css';
@@ -26,6 +28,7 @@ async function settled() {
 export function Fixture() {
   const [voiceOver, setVoiceOver] = useState(false);
   const [haptics, setHaptics] = useState(false);
+  const [readingStyle, setReadingStyle] = useState(DEFAULT_READING_STYLE);
   const anchor = useRef(null);
   const chosen = useRef(0);
   const [generation, reset] = useState(0);
@@ -40,6 +43,45 @@ export function Fixture() {
     setResult('Running');
     reset((n) => n + 1);
     await frame(); await frame();
+    if (kind === 'reading comfort') {
+      const main = document.querySelector('.reader-layout');
+      const viewport = document.querySelector('.reader-viewport');
+      const columns = document.querySelector('.reader-columns');
+      const originalText = columns.textContent;
+      document.querySelector('.reader-footer-next button').click(); await settled();
+      const before = anchor.current;
+      const bounds = viewport.getBoundingClientRect();
+      document.querySelector('.reader-controls-toggle').click(); await frame();
+      const hidden = main.dataset.controlsShown === 'false' && document.querySelector('.reader-nav').inert &&
+        viewport.getBoundingClientRect().top === bounds.top && viewport.getBoundingClientRect().height === bounds.height;
+      document.querySelector('.reader-controls-toggle').click(); await frame();
+      document.querySelector('.text-size-button').click(); await frame();
+      let reflow = true;
+      for (const value of ['serif', 'spacious', 'sans', 'relaxed']) {
+        document.querySelector(`.reading-settings input[value='${value}']`).click();
+        await frame(); await frame(); await document.fonts.ready; await frame();
+        const [current,total] = document.querySelector('.page-status').textContent.split('/').map(Number);
+        const step = viewport.clientWidth + parseFloat(getComputedStyle(columns).columnGap);
+        reflow &&= current - 1 === pageForReadingAnchor(before, columns, step, total);
+      }
+      document.querySelector('.reading-settings__toggle input').click(); await frame(); await frame();
+      const bold = getComputedStyle(columns.querySelector('.story-paragraph')).fontWeight === '700';
+      let palettes = true;
+      for (const [value, background, color] of [['night','rgb(38, 36, 32)','rgb(238, 228, 210)'],['clear','rgb(255, 253, 250)','rgb(41, 40, 38)'],['warm','rgb(251, 244, 229)','rgb(51, 41, 31)']]) {
+        document.querySelector(`.reading-settings input[value='${value}']`).click(); await frame();
+        const dialog = document.querySelector('.reading-settings');
+        palettes &&= getComputedStyle(dialog).backgroundColor === background && getComputedStyle(dialog).color === color;
+      }
+      const toggles = document.querySelectorAll('.reading-settings__toggle input');
+      toggles[1].click(); await frame();
+      document.querySelector('.reading-settings__header button').click(); await frame();
+      const pinned = main.dataset.controlsShown === 'true' && !document.querySelector('.reader-controls-toggle');
+      const unchanged = columns.textContent === originalText;
+      const overflow = document.documentElement.scrollWidth > innerWidth + 1;
+      setReadingStyle(DEFAULT_READING_STYLE);
+      setResult(`${hidden && reflow && bold && palettes && pinned && unchanged && !overflow ? 'PASS' : 'FAIL'}: reading comfort; steady controls ${hidden}; anchor ${reflow}; bold ${bold}; palettes ${palettes}; pinned ${pinned}; text ${unchanged}; overflow ${overflow}`);
+      setRunning(false); return;
+    }
     if (kind === 'decision page') {
       // Run with ?reduced so long passages reach their final page promptly.
       let turns = 0;
@@ -50,7 +92,10 @@ export function Fixture() {
       await frame(); await frame();
       const lastStatus = document.querySelector('.page-status').textContent;
       const [current,total] = lastStatus.split('/').map(Number);
-      const finalPage = current === total && !!document.querySelector('.path-button');
+      document.querySelector('.reader-controls-toggle')?.click();
+      await frame();
+      const path = document.querySelector('.path-button');
+      const finalPage = current === total && !!path && getComputedStyle(path).visibility === 'visible';
       document.querySelector('.path-button')?.click();
       await frame(); await frame();
       const heading = document.querySelector('.decision-page h1');
@@ -163,7 +208,8 @@ export function Fixture() {
     const clean = !viewport.hasAttribute('data-dragging') && !document.querySelector('.page-turn-overlay') && captured.size === 0;
     const coherent = kind !== 'animation handoff' || !overlay || exposedStatus?.startsWith(expected);
     const settings = document.querySelector('.reading-settings');
-    const settingsCorrect = kind === 'middle tap' ? Boolean(settings?.open) : !settings;
+    const settingsCorrect = !settings && (kind !== 'middle tap' || document.querySelector('.reader-layout').dataset.controlsShown === 'false');
+    if (kind === 'middle tap') { document.querySelector('.reader-controls-toggle').click(); await frame(); }
     if (settings) settings.querySelector('.reading-settings__header button').click();
     await frame();
     const passed = status.startsWith(expected) && clean && coherent && settingsCorrect;
@@ -177,9 +223,9 @@ export function Fixture() {
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page','reading comfort'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
-    <BookReader key={generation} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{fixture:{text:'Choose this test path'}}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{ chosen.current += 1; }} />
+    <BookReader key={generation} readingStyle={readingStyle} onReadingStyleChange={patch => setReadingStyle(current => ({...current,...patch}))} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{fixture:{text:'Choose this test path'}}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{ chosen.current += 1; }} />
   </>;
 }
 createRoot(document.getElementById('root')).render(<StrictMode><Fixture /></StrictMode>);

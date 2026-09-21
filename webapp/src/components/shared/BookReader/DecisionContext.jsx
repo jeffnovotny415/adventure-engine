@@ -30,7 +30,8 @@ export function DecisionContext(props) {
       observer.disconnect();
       images.forEach(image => image.removeEventListener('load', measure));
     };
-  }, [props.textScale, props.systemScale, props.title, props.intro, props.body, props.image]);
+  }, [props.textScale, props.systemScale, props.readingStyle?.readingFont, props.readingStyle?.boldText,
+    props.readingStyle?.lineSpacing, props.title, props.intro, props.body, props.image]);
   return <aside className="decision-context" aria-hidden="true" inert>
     <div className="decision-context__viewport" ref={viewportRef}>
       <div className="reader-columns decision-context__columns" ref={columnsRef}>

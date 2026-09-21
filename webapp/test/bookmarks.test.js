@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { createEmptySave, migrateSave } from '../src/state/saveSchema.js';
 import { createGameSession } from '../src/state/gameSession.js';
 import { loadSave, startSavedGame, discardInvalidSave } from '../src/state/storage.js';
-import { readingTextScale, TEXT_SCALES } from '../src/state/readingPreferences.js';
+import { readingTextScale, TEXT_SCALES, readingStyle, DEFAULT_READING_STYLE } from '../src/state/readingPreferences.js';
 const link = { next_scene:'end' };
 const stories = Object.fromEntries(['a','b','c'].map(id=>[id,{id,scenes:{start:{choices:{1:link}},end:{ending:true}}}]));
 function fixture(initial = null) {
@@ -120,4 +120,38 @@ test('page haptics are opt-in, per-book, and recover from failed preference writ
   assert.notEqual(loadSave(stories,storage,'b').save.uiPrefs.pageHaptics,true);
   session.updateReading({uiPrefs:{pageHaptics:false}});
   assert.equal(loadSave(stories,storage,'a').save.uiPrefs.pageHaptics,false);
+});
+
+test('reading comfort preferences preserve legacy defaults and survive per-book reloads', () => {
+  assert.deepEqual(readingStyle(migrateSave(legacy(), stories).save.uiPrefs), DEFAULT_READING_STYLE);
+  const storage = fixture(), session = createGameSession(stories, storage);
+  start(session, 'a'); start(session, 'b'); session.continueGame('a');
+  const style = { readingFont: 'serif', boldText: true, lineSpacing: 'spacious', pageAppearance: 'night', alwaysShowControls: true };
+  session.updateReading({ readingPosition: { paragraph: 9, offset: 20 }, uiPrefs: { ...style, textScale: 1.75 } });
+  const restored = createGameSession(stories, storage).continueGame('a').save;
+  assert.deepEqual(readingStyle(restored.uiPrefs), style);
+  assert.equal(readingTextScale(restored.uiPrefs), 1.75);
+  assert.deepEqual(restored.readingPosition, { paragraph: 9, offset: 20 });
+  assert.deepEqual(readingStyle(loadSave(stories, storage, 'b').save.uiPrefs), DEFAULT_READING_STYLE);
+  session.applyChoice(link);
+  assert.deepEqual(readingStyle(session.getSnapshot().save.uiPrefs), style);
+});
+
+test('invalid comfort preferences and failed writes leave the saved adventure unchanged', () => {
+  const storage = fixture(), session = createGameSession(stories, storage);
+  start(session, 'a'); const before = storage.getItem();
+  for (const uiPrefs of [{ readingFont: 'missing' }, { lineSpacing: 2 }, { pageAppearance: null },
+    { boldText: 'false' }, { alwaysShowControls: 1 }]) {
+    assert.equal(session.updateReading({ uiPrefs }).status, 'ignored');
+    assert.equal(storage.getItem(), before);
+  }
+  storage.fail = true;
+  assert.equal(session.updateReading({ uiPrefs: { pageAppearance: 'clear', boldText: true } }).status, 'write_failed');
+  assert.equal(storage.getItem(), before);
+  assert.deepEqual(readingStyle(session.getSnapshot().save.uiPrefs), DEFAULT_READING_STYLE);
+  storage.fail = false; session.retryPersistence();
+  const restored = loadSave(stories, storage).save;
+  assert.equal(restored.uiPrefs.pageAppearance, 'clear');
+  assert.equal(restored.uiPrefs.boldText, true);
+  assert.equal(restored.currentSceneId, 'start');
 });
