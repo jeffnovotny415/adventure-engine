@@ -595,3 +595,39 @@ checks cover landscape phone 667x375, iPad 1024x768, portrait 390x844, 225% text
 rotation and the new route from The Long Memory to The Hall of Voices. No layout
 or engine code changed. Both Jeff's iPhone and Oliver's iPad are paired, have
 Developer Mode enabled, and are included in the build's provisioning profile.
+
+## September 21 reader touch reliability and choices as the next page
+
+Reproduced five defects before changes: paper-margin taps were ignored; a slightly
+diagonal swipe start cancelled otherwise horizontal turns; touches during the
+settling animation were discarded; and both forward taps and swipes stopped at
+the final prose page instead of reaching choices. Those cases now pass. The
+paper margins participate in navigation, ambiguous initial movement waits for a
+clear axis, and a fresh touch completes a settling turn before handling the next
+input. Native vertical scrolling, pinch zoom, long presses and interactive image
+and button targets retain their exclusions.
+
+Removed the separate Choose your path gate. Next, a forward swipe, or a right-edge
+tap now opens choices after the final prose page; a backward swipe/left-edge tap
+or Back to passage returns to the saved prose position. Choices remain explicit:
+a stable reader-root click guard prevents the revealing touch from selecting a
+newly mounted option. Keyboard/assistive activation and new deliberate touches
+remain available. Ending pages still have no forward choice navigation. A small
+last-page label says choices follow; the regular controls retain their visibility
+setting. Short landscape phones have more room for the footer.
+
+Validation: 98 tests, lint, story graph diagnostics (zero warnings/errors), and
+production build pass. Browser fixture regression checks cover cancellation,
+multitouch/capture handoff, vertical motion, long press, edge/middle taps, animated
+handoff, repeated turns, choices/back navigation, ghost-click protection, saved
+passages and continuous reading. Layout/decision checks pass at 667x375, 568x320,
+1024x768 and 390x844, with 225% book text, maximum system text plus book text,
+reduced motion, and rotation. All 21 tracked story/draft/Python/public files are
+byte-for-byte unchanged from 4fedf0e. Signed Release build, 101-asset bundle check
+and strict signature verification pass. Existing production bundle-size advisory
+remains. Physical iOS touch feel still needs hands-on confirmation.
+
+Installed successfully over Jeff's existing iPhone app without clearing data.
+Oliver's iPad installation could not establish its device connection; pending
+until reachable. Story-specific choice-page ornament options are separate
+conversation previews, not applied to production in this batch.

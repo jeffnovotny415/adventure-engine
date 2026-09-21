@@ -39,7 +39,7 @@
     "size_preview": "Find the type and paper that feel comfortable to read.",
     "size_reset": "Default size",
     "settings_done": "Done",
-    "gesture_help": "Swipe left or right to turn a page. Tap the left edge to go back, the right edge to go forward, or the middle to show or hide controls. Tap Aa for reading settings. Pinch to zoom in for a closer look.",
+    "gesture_help": "Swipe left or right to turn a page. Tap the left edge to go back, the right edge to go forward, or the middle to show or hide controls. The choices follow the last page of each scene. Tap Aa for reading settings. Pinch to zoom in for a closer look.",
     "previous": "Previous",
     "next": "Next",
     "system_size_help": "Your iPhone or iPad text-size setting is applied automatically. This control adjusts the book size further.",
@@ -65,7 +65,9 @@
     "show_controls": "Show controls",
     "hide_controls": "Hide controls",
     "spread_status": "Spread {current} of {total}",
-    "in_scene": "in this scene"
+    "in_scene": "in this scene",
+    "choices_next": "Choices on the next page",
+    "next_choices": "Next: choices"
   },
   "end": {
     "heading": "The End",

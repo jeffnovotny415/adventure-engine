@@ -58,6 +58,64 @@ export function Fixture() {
     reset((n) => n + 1);
     await frame(); await frame();
     await settled();
+    if (['paper margin tap', 'diagonal start swipe', 'tap during turn', 'last page swipe', 'last page tap'].includes(kind)) {
+      try {
+        const viewport = document.querySelector('.reader-viewport');
+        const captured = new Set();
+        viewport.setPointerCapture = id => captured.add(id);
+        viewport.hasPointerCapture = id => captured.has(id);
+        viewport.releasePointerCapture = id => captured.delete(id);
+        const rect = viewport.getBoundingClientRect();
+        const paper = document.querySelector('.reader-surface') ?? document.querySelector('.paper-book');
+        const bounds = paper.getBoundingClientRect();
+        const y = rect.top + 40, start = rect.right - 30, end = rect.left + rect.width * .25;
+        const pointer = (target, type, x, dy = 0) => target.dispatchEvent(new PointerEvent(type, {
+          bubbles: true, cancelable: true, pointerType: 'touch', pointerId: 91, isPrimary: true,
+          button: 0, clientX: x, clientY: y + dy,
+        }));
+        if (kind.startsWith('last page')) {
+          let turns = 0;
+          while (Number(document.querySelector('.page-status').dataset.page) < Number(document.querySelector('.page-status').dataset.total) && turns++ < 400) {
+            clickTest('.reader-footer-next button'); await settled();
+          }
+          clickTest('.reader-controls-toggle'); await frame();
+          const livePosition = JSON.stringify(anchor.current), before = chosen.current;
+          pointer(viewport, 'pointerdown', start);
+          if (kind === 'last page swipe') pointer(viewport, 'pointermove', end);
+          pointer(viewport, 'pointerup', kind === 'last page swipe' ? end : start);
+          await settled(); await frame();
+          const heading = document.querySelector('.decision-page h1');
+          const opened = !!heading && document.activeElement === heading;
+          // A synthesized touch click must not pick a newly exposed choice.
+          document.querySelector('.choice-button')?.dispatchEvent(new MouseEvent('click', {bubbles:true,cancelable:true,detail:1}));
+          const untouched = chosen.current === before && JSON.stringify(anchor.current) === livePosition;
+          if (opened && kind === 'last page swipe') {
+            const decision = document.querySelector('.decision-spread');
+            decision.setPointerCapture = id => captured.add(id);
+            decision.hasPointerCapture = id => captured.has(id);
+            decision.releasePointerCapture = id => captured.delete(id);
+            const r = decision.getBoundingClientRect();
+            pointer(decision, 'pointerdown', r.left + 30);
+            pointer(decision, 'pointermove', r.right - 30);
+            pointer(decision, 'pointerup', r.right - 30);
+            await settled();
+          } else if (opened) { clickTest('.decision-page > button'); await frame(); await frame(); }
+          const restored = document.querySelector('.page-status')?.dataset.page === document.querySelector('.page-status')?.dataset.total;
+          setResult(`${opened && untouched && restored ? 'PASS' : 'FAIL'}: ${kind}; opened ${opened}; no selection ${untouched}; restored ${restored}`);
+        } else {
+          if (kind === 'tap during turn') { clickTest('.reader-footer-next button'); await frame(); }
+          const origin = kind === 'paper margin tap' ? paper : viewport;
+          const x = kind === 'paper margin tap' ? bounds.right - 8 : start;
+          pointer(origin, 'pointerdown', x);
+          if (kind === 'diagonal start swipe') { pointer(origin, 'pointermove', start - 11, 10); pointer(origin, 'pointermove', end, 12); }
+          pointer(origin, 'pointerup', kind === 'diagonal start swipe' ? end : x, kind === 'diagonal start swipe' ? 12 : 0);
+          await settled();
+          const expected = kind === 'tap during turn' ? '3 / ' : '2 / ';
+          setResult(`${pageStatus().startsWith(expected) ? 'PASS' : 'FAIL'}: ${kind}; ${pageStatus()}`);
+        }
+      } catch (error) { setResult(`FAIL: ${kind}; ${error.message}`); }
+      setRunning(false); return;
+    }
     if (kind === 'scene progress') {
       const label = document.querySelector('.page-status');
       const spread = getComputedStyle(document.querySelector('.reader-columns')).columnCount === '2';
@@ -140,18 +198,16 @@ export function Fixture() {
     if (kind === 'decision page') {
       // Run with ?reduced so long passages reach their final page promptly.
       let turns = 0;
-      while (document.querySelector('.reader-footer-next button')?.textContent.includes('Next') && turns++ < 400) {
+      while (Number(document.querySelector('.page-status').dataset.page) < Number(document.querySelector('.page-status').dataset.total) && turns++ < 400) {
         document.querySelector('.reader-footer-next button').click();
         await settled();
       }
       await frame(); await frame();
       const lastStatus = pageStatus();
       const [current,total] = lastStatus.split('/').map(Number);
-      document.querySelector('.reader-controls-toggle')?.click();
-      await frame();
-      const path = document.querySelector('.path-button');
+      const path = document.querySelector('.reader-footer-next button');
       const finalPage = current === total && !!path && getComputedStyle(path).visibility === 'visible';
-      document.querySelector('.path-button')?.click();
+      document.querySelector('.reader-footer-next button')?.click();
       await frame(); await frame();
       const heading = document.querySelector('.decision-page h1');
       const focused = document.activeElement === heading;
@@ -170,7 +226,7 @@ export function Fixture() {
       document.querySelector('.decision-page > button').click();
       await frame(); await frame();
       const restored = pageStatus() === lastStatus;
-      document.querySelector('.path-button')?.click();
+      document.querySelector('.reader-footer-next button')?.click();
       await frame();
       const before = chosen.current;
       document.querySelector('.choice-button').click();
@@ -288,7 +344,7 @@ export function Fixture() {
     setRunning(false);
   }
   return <><section style={{padding:12}}><h1>Reader gesture checks</h1><p>Synthetic pointers; no saved progress is accessed.</p>
-    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page','reading comfort','saved passages','scene progress'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
+    {['second pointer outside','second pointer inside','pointer cancellation','capture loss','window blur','vertical scroll','completed swipe','touch capture transfer','animation handoff','right edge tap','left edge tap','middle tap','long press','continuous reading','decision page','reading comfort','saved passages','scene progress','paper margin tap','diagonal start swipe','tap during turn','last page swipe','last page tap'].map((kind)=><button key={kind} style={{margin:4,minHeight:44}} disabled={running} onClick={()=>run(kind)}>{kind}</button>)}
     <output style={{display:'block'}}>{result}</output></section>
     <BookReader storyId="fixture" sceneId="scene" passageStorage={passageStorage.current} key={generation} readingStyle={readingStyle} onReadingStyleChange={patch => setReadingStyle(current => ({...current,...patch}))} nativeReading={{available:true,textScale:systemScale,voiceOver,hapticsAvailable:true}} pageHaptics={haptics} onPageHapticsChange={setHaptics} initialReadingPosition={voiceOver ? anchor.current : null} onReadingPositionChange={value => { writes.current += 1; anchor.current = value; }} storyTitle="Reader fixture" title="Pagination fixture" body={body} choices={{fixture:{text:'Choose this test path'}}} textScale={textScale} onTextScaleChange={setTextScale} onHome={()=>{}} onChoose={()=>{ chosen.current += 1; }} />
   </>;

@@ -248,3 +248,12 @@
 .saved-passage .story-paragraph:focus { outline: none; }
 
 .passage-bookmarks__hidden-heading { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* The paper margins are part of the reading surface, too. */
+.reader-surface, .decision-spread { touch-action: pan-y pinch-zoom; }
+.reader-surface[data-zoomed='true'], .decision-spread[data-zoomed='true'] { touch-action: pan-x pan-y pinch-zoom; }
+.reader-layout--continuous .reader-surface, .reader-layout--continuous .decision-spread { touch-action: auto; }
+.reader-layout[data-choices-next='true'] .scene-progress-label { color: var(--color-accent-1); font-weight: 600; }
+@media (orientation: landscape) and (max-height: 500px) {
+  .reader-viewport { height: max(150px, calc(100dvh - 148px - env(safe-area-inset-top) - env(safe-area-inset-bottom))); }
+}
