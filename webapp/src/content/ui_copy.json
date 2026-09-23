@@ -11,7 +11,17 @@
     "continue_adventure": "Resume",
     "start_new_adventure": "Start New Adventure",
     "developer_test_mode": "Developer Test Mode",
-    "theme_label": "Theme"
+    "theme_label": "Theme",
+    "bookshelf_help": "Open a new adventure or pick up where you left off.",
+    "open_book": "Open book",
+    "bookmark_help": "Tap a bookmark to resume your story.",
+    "bookmark_location": "You left off at",
+    "bookmark_close": "Close",
+    "bookmark_continue": "Continue reading",
+    "bookmark_restart": "Start again",
+    "bookmark_restart_heading": "Start this story again?",
+    "bookmark_restart_help": "This replaces your saved place and choices in this book. Your hero name and reading settings will stay the same.",
+    "bookmark_restart_cancel": "Keep my place"
   },
   "hero_setup": {
     "heading": "This adventure belongs to…",

@@ -2,44 +2,40 @@ import { useRef, useState } from 'react';
 import { useContent } from '../../../hooks/useContent';
 import { BookSpine } from '../../shared/BookSpine/BookSpine';
 import { AppHeader } from '../../shared/AppHeader/AppHeader';
+import { ResumeBookmark } from './ResumeBookmark';
 import { PassageBookmarks } from '../../shared/BookReader/PassageBookmarks';
 
-export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onDeveloperMode }) {
+export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onStartAgain, onDeveloperMode }) {
   const { getText } = useContent();
   const [passagesOpen, setPassagesOpen] = useState(false);
+  const [resumeBookmark, setResumeBookmark] = useState(null);
   const mainRef = useRef(null);
   return (
     <>
-      <AppHeader />
+      <AppHeader className="library-header">
+        <button type="button" className="text-button library-passages" aria-haspopup="dialog"
+          onClick={() => setPassagesOpen(true)}>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z" /></svg>
+          {getText('passages.title')}
+        </button>
+      </AppHeader>
       <main className="library-layout" ref={mainRef}>
         <section className="library-intro">
-          <p className="eyebrow">{getText('home.eyebrow')}</p>
-          <h1>{getText('home.welcome_heading')}</h1>
-          <p className="muted library-tagline">{getText('home.tagline')}</p>
-          {bookmarks.map((bookmark) => (
-            <section key={bookmark.storyId} className="bookmark" aria-label={`${getText('home.bookmark')}: ${bookmark.storyTitle}`}>
-              <span className="bookmark-ribbon" aria-hidden="true" />
-              <div className="bookmark-details">
-                <p className="small muted">{getText('home.bookmark')}</p>
-                <p className="bookmark-title">{bookmark.storyTitle}</p>
-                <p className="small muted">{bookmark.sceneTitle}</p>
-              </div>
-              <button type="button" className="primary-button" aria-label={`${getText('home.continue_adventure')}: ${bookmark.storyTitle}`} onClick={() => onContinue(bookmark.storyId)}>
-                {getText('home.continue_adventure')}
-              </button>
-            </section>
-          ))}
-          <button type="button" className="text-button" aria-haspopup="dialog" onClick={() => setPassagesOpen(true)}>{getText('passages.title')}</button>
+          <h1>{getText('home.choose_adventure_heading')}</h1>
+          <p className="muted library-tagline">{getText(bookmarks.length ? 'home.bookmark_help' : 'home.bookshelf_help')}</p>
         </section>
         <section className="library-books" aria-label={getText('home.choose_adventure_heading')}>
-          <h2 className="shelf-label">{getText('home.choose_adventure_heading')}</h2>
           <div className="book-stack">
-            {Object.values(stories).map((story) => (
-              <BookSpine key={story.id} story={story} onClick={() => onSelectStory(story.id)} />
-            ))}
+            {Object.values(stories).map((story) => {
+              const bookmark = bookmarks.find(saved => saved.storyId === story.id);
+              return <BookSpine key={story.id} story={story} bookmark={bookmark}
+                onClick={() => bookmark ? setResumeBookmark(bookmark) : onSelectStory(story.id)} onBookmark={() => setResumeBookmark(bookmark)} />;
+            })}
           </div>
-          <p className="library-caption">{getText('home.shelf_caption')}</p>
         </section>
+        {resumeBookmark && <ResumeBookmark bookmark={resumeBookmark} onClose={() => setResumeBookmark(null)}
+          onStartAgain={() => { setResumeBookmark(null); onStartAgain(resumeBookmark.storyId); }}
+          onResume={() => { setResumeBookmark(null); onContinue(resumeBookmark.storyId); }} />}
         {passagesOpen && <PassageBookmarks portalTarget={mainRef.current} onClose={() => setPassagesOpen(false)} />}
       </main>
       <footer className="library-footer">

@@ -1,11 +1,6 @@
-.library-layout { display: grid; grid-template-columns: minmax(190px, .75fr) minmax(0, 1.5fr); align-items: center; gap: clamp(28px, 5vw, 64px); max-width: 1080px; margin: auto; padding: clamp(28px, 6vh, 70px) max(40px, env(safe-area-inset-right)) 25px max(40px, env(safe-area-inset-left)); }
-.library-intro h1 { margin: 10px 0 17px; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.16; letter-spacing: -.045em; }
-.library-tagline { font-size: .9rem; line-height: 1.7; }
-.bookmark { margin-top: 30px; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 18px 0; display: grid; grid-template-columns: 22px 1fr; gap: 10px 12px; align-items: start; }
-.bookmark-ribbon { display: block; width: 22px; height: 51px; background: var(--color-accent-1); clip-path: polygon(0 0,100% 0,100% 100%,50% 84%,0 100%); }
-.bookmark-title { margin: 3px 0; font-weight: 500; font-size: .94rem; }
-.bookmark .primary-button { grid-column: 2; justify-self: start; }
-.shelf-label { font-family: var(--font-body) !important; font-size: .79rem; color: var(--color-text-secondary); margin-bottom: 15px; }
+.library-layout { display: grid; grid-template-columns: minmax(190px, .75fr) minmax(0, 1.5fr); align-items: center; gap: clamp(28px, 5vw, 64px); max-width: 1080px; margin: auto; padding: clamp(24px, 5vh, 56px) max(40px, env(safe-area-inset-right)) 25px max(40px, env(safe-area-inset-left)); }
+.library-intro h1 { margin: 0 0 10px; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.16; letter-spacing: -.045em; }
+.library-tagline { margin: 0; font-size: .9rem; line-height: 1.6; }
 .book-stack { isolation: isolate; display: flex; flex-direction: column; padding: 0 5px; }
 .book-bar { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr) 25px; gap: 14px; align-items: center; width: 100%; min-height: 126px; padding: 24px 36px; overflow: hidden; background: #4b291b; border-top: 2px solid #ad88514a; border-bottom: 3px solid #211309; border-radius: 9px 17px 9px 6px; box-shadow: inset 1px 0 1px #edcb8244, inset 0 -6px 8px #1a0e0b80, 0 3px 3px #2c1a1130; text-align: left; transform: translateX(-5px); }
 /* Keep filters on the photo layer, preserving legibility of the gold type. */
@@ -20,30 +15,46 @@
 .book-bar:hover .book-title { color: #ffe7b8; }
 .book-bar:focus-visible { z-index: 3; }
 .book-text { min-width: 0; }
-.book-title { display: block; font-family: var(--font-display); color: #edd3a0; font-size: clamp(1.35rem, 2.5vw, 1.7rem); line-height: 1.2; font-weight: 400; letter-spacing: -.03em; text-shadow: 0 1px 1px #130901; }
-.book-description { display: block; margin-top: 9px; color: #e5ccb0; font-size: .74rem; line-height: 1.5; }
+.book-title { display: block; overflow-wrap: anywhere; font-family: var(--font-display); color: #edd3a0; font-size: clamp(1.35rem, 2.5vw, 1.7rem); line-height: 1.2; font-weight: 400; letter-spacing: -.03em; text-shadow: 0 1px 1px #130901; }
+.book-description { display: block; overflow-wrap: anywhere; margin-top: 9px; color: #e5ccb0; font-size: .74rem; line-height: 1.5; }
 .book-ornament { color: #dcbf82; font-size: 27px; }
-.library-caption { margin-top: 23px; text-align: center; font-family: var(--font-display); font-size: .9rem; color: var(--color-text-secondary); }
 .library-footer { text-align: center; padding: 0 24px max(15px, env(safe-area-inset-bottom)); }
 @media (max-width: 699px) {
-  .library-layout { display: block; padding: 30px max(25px, env(safe-area-inset-right)) 18px max(25px, env(safe-area-inset-left)); }
-  .library-intro { margin-bottom: 28px; }
-  .library-intro h1 { max-width: 12ch; }
-  .bookmark { grid-template-columns: 22px 1fr auto; align-items: center; }
-  .bookmark .primary-button { grid-column: 3; grid-row: 1; }
+  .library-layout { display: block; padding: 20px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); }
+  .library-intro { margin-bottom: 22px; }
+  .library-intro h1 { max-width: none; }
   .book-bar { padding: 22px 28px; }
 }
 @media (orientation: landscape) and (max-height: 500px) {
-  .library-layout { padding-block: 20px 8px; gap: 30px; }
-  .library-intro h1 { font-size: 1.9rem; }
-  .book-bar { min-height: 86px; padding-block: 15px; }
-  .book-bar[data-book='summoned_mage'] { min-height: 96px; }
-  .book-title { font-size: 1.35rem; }
-  .book-description { font-size: .7rem; margin-top: 5px; }
-  .bookmark { margin-top: 17px; padding-block: 12px; }
-  .library-caption { margin-top: 13px; }
+  .library-layout { display: flex; flex-wrap: wrap; padding: 12px max(24px, env(safe-area-inset-right)) 8px max(24px, env(safe-area-inset-left)); gap: 24px; align-items: flex-start; }
+  .library-intro { flex: 1 1 8rem; margin: 0; padding-top: 12px; }
+  .library-books { flex: 3 1 20rem; }
+  .library-intro h1 { font-size: 1.6rem; }
+  .library-tagline { font-size: .8rem; }
+  .book-bar, .book-bar[data-book='summoned_mage'] { min-height: 78px; padding: 13px 26px; }
+  .book-title { font-size: 1.22rem; }
+  .book-description { font-size: .75rem; margin-top: 5px; }
 }
 
+.library-header { padding-block: 10px; gap: 16px; flex-wrap: wrap; }
+.library-passages { gap: 7px; margin-inline-start: auto; flex-shrink: 0; }
+.library-passages svg { flex-shrink: 0; }
+.library-books { min-width: 0; }
+.book-slot { position: relative; }
+.book-bookmark { position: absolute; top: 0; right: 24px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; z-index: 4; display: flex; justify-content: center; align-items: flex-start; }
+.book-saved-ribbon { display: block; width: 22px; height: 36px; background: linear-gradient(90deg, #ae8454, #e1c591 25%, #d4b17c 75%, #ac8152); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%); }
+.book-bookmark:hover .book-saved-ribbon { height: 40px; }
+.book-bookmark:active .book-saved-ribbon { filter: brightness(.78); }
+.app-shell .book-bookmark:focus-visible { outline: 3px solid #fff0ce; outline-offset: 0; border-radius: 3px; }
+.resume-bookmark button { min-width: 44px; }
+.resume-bookmark__body { overflow: auto; min-height: 0; padding: 16px 20px 20px; }
+.resume-bookmark__body p { margin: 0 0 8px; }
+.resume-bookmark__chapter { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.4; }
+.resume-bookmark__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 16px; }
+@media (max-width: 699px) and (orientation: portrait) {
+  .library-intro h1 { font-size: 1.75rem; }
+  .book-bar, .book-bar[data-book='summoned_mage'] { min-height: 120px; }
+}
 /* Individual, matte leather abrasions and narrow creases. */
 .book-scuff { position:absolute; pointer-events:none; background:#967248; opacity:.67; }
 .book-bar[data-book='space_walker'] .book-scuff-a { top:0; left:15%; width:58px; height:7px; clip-path:polygon(0 0,100% 0,92% 23%,77% 28%,80% 60%,68% 42%,51% 83%,45% 44%,29% 71%,17% 31%,0 47%); }

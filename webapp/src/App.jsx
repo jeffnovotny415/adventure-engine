@@ -101,6 +101,13 @@ export default function App() {
     setScreen(SCREENS.HERO_SETUP);
   }
 
+  function handleStartAgain(storyId) {
+    const result = loadSave(storiesWithScenes, undefined, storyId);
+    if (result.status !== 'valid') { showSaveResult(result); return; }
+    showSaveResult(startNewGame(storyId, result.save.heroName, result.save.worldName,
+      storiesWithScenes[storyId].start_scene), SCREENS.STORY);
+  }
+
   function handleHeroSetupSubmit(heroName, worldName) {
     const story = storiesWithScenes[pendingStoryId];
     showSaveResult(startNewGame(pendingStoryId, heroName, worldName, story.start_scene), SCREENS.STORY);
@@ -216,6 +223,7 @@ export default function App() {
           stories={stories}
           bookmarks={bookmarks}
           onContinue={handleContinue}
+          onStartAgain={handleStartAgain}
           onSelectStory={handleSelectStory}
           onDeveloperMode={handleDeveloperMode}
         />
