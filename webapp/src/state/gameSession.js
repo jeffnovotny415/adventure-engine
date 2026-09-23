@@ -1,7 +1,7 @@
 import { createEmptySave, migrateSave } from './saveSchema.js';
 import { clearSave, loadSave, needsSaveRecovery, startSavedGame, writeSave } from './storage.js';
-import { applyChoiceEffects } from '../engine/flagsEngine.js';
-import { getAvailableChoices, resolveChoiceDestination } from '../engine/sceneEngine.js';
+import { advanceChoice, rewindChoice } from './choiceHistory.js';
+import { getAvailableChoices } from '../engine/sceneEngine.js';
 
 // Persistence happens once per action, outside React's render/state updaters.
 // The in-memory scene changes only after its bookmark has been written.
@@ -61,9 +61,18 @@ export function createGameSession(stories, storage) {
       return { status: 'ignored' };
     }
     cancelPersistence();
-    const { nextSceneId, entryIntro } = resolveChoiceDestination(choice);
-    const next = { ...current, currentSceneId: nextSceneId, currentEntryIntro: entryIntro, readingPosition: null,
-      ...applyChoiceEffects(choice, current) };
+    const next = advanceChoice(current, choice);
+    return writeNavigation(next);
+  }
+  function undoChoice(expectedDepth) {
+    const current = snapshot.save;
+    if (!current || current.choiceHistory.length !== expectedDepth) return { status: 'ignored' };
+    const next = rewindChoice(current);
+    if (!next) return { status: 'ignored' };
+    cancelPersistence();
+    return writeNavigation(next);
+  }
+  function writeNavigation(next) {
     const expectedRaw = persistedRaw;
     return attempt(() => {
       if (migrateSave(next, stories).status !== 'valid') {
@@ -99,6 +108,6 @@ export function createGameSession(stories, storage) {
   return {
     getSnapshot: () => snapshot,
     subscribe: (listener) => { listeners.add(listener); return () => listeners.delete(listener); },
-    startNewGame, continueGame, applyChoice, finishGame, updateReading, retryPersistence, cancelPersistence,
+    startNewGame, continueGame, applyChoice, undoChoice, finishGame, updateReading, retryPersistence, cancelPersistence,
   };
 }

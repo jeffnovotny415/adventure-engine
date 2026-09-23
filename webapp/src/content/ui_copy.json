@@ -52,7 +52,7 @@
     "preset_night_description": "115% · Serif · Relaxed · Dark paper",
     "preset_custom": "Custom",
     "preset_current": "Current style: {preset}",
-    "gesture_help": "Swipe left or right to turn a page. Tap the left edge to go back, the right edge to go forward, or the middle to show or hide controls. The choices follow the last page of each scene. Tap Aa for reading settings. Pinch to zoom in for a closer look.",
+    "gesture_help": "Swipe left or right to turn a page. Tap the left edge to go back, the right edge to go forward, or the middle to show or hide controls. The choices follow the last page of each scene. Tap Aa for reading settings. Pinch to zoom in for a closer look. Use Back to choice in the reading controls to undo a story choice.",
     "previous": "Previous",
     "next": "Next",
     "system_size_help": "Your iPhone or iPad text-size setting is applied automatically. This control adjusts the book size further.",
@@ -84,7 +84,8 @@
     "spread_status": "Spread {current} of {total}",
     "in_scene": "in this scene",
     "choices_next": "Choices on the next page",
-    "next_choices": "Next: choices"
+    "next_choices": "Next: choices",
+    "back_to_choice": "Back to choice"
   },
   "end": {
     "heading": "The End",

@@ -280,3 +280,7 @@
 @media (orientation: landscape) and (max-height: 500px) {
   .reader-viewport { height: max(150px, calc(100dvh - 148px - env(safe-area-inset-top) - env(safe-area-inset-bottom))); }
 }
+
+/* Keep the named undo action with the other tools on narrow phone screens. */
+.reader-toolbar .reader-nav:has(.reader-choice-back) { flex-basis: 22rem; }
+.reader-toolbar:has(.reader-choice-back) .reader-controls-toggle { margin-inline-start: auto; }

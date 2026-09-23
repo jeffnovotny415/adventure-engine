@@ -1,3 +1,4 @@
+import { choiceCheckpoint } from './choiceHistory.js';
 import { TEXT_SCALES, READING_OPTIONS, DEFAULT_READING_STYLE } from './readingPreferences.js';
 
 export const SAVE_SCHEMA_VERSION = 1;
@@ -11,6 +12,8 @@ export function createEmptySave() {
     currentSceneId: null,
     currentEntryIntro: null,
     readingPosition: null,
+    choiceHistory: [],
+    atChoices: false,
     flags: {},
     inventory: [],
     uiPrefs: { hideButtonsWhileReading: false },
@@ -59,6 +62,19 @@ export function migrateSave(raw, stories) {
       !Number.isSafeInteger(raw.readingPosition.paragraph) || raw.readingPosition.paragraph < 0 ||
       !Number.isSafeInteger(raw.readingPosition.offset) || raw.readingPosition.offset < 0)) return invalid('malformed');
 
+  if (Object.hasOwn(raw, 'atChoices') && typeof raw.atChoices !== 'boolean') return invalid('malformed');
+  if (Object.hasOwn(raw, 'choiceHistory') && !Array.isArray(raw.choiceHistory)) return invalid('malformed');
+  const choiceHistory = [];
+  for (const checkpoint of raw.choiceHistory ?? []) {
+    if (!isRecord(checkpoint) || !isRecord(checkpoint.flags) || !Array.isArray(checkpoint.inventory) ||
+        Object.hasOwn(checkpoint, 'choiceHistory')) return invalid('malformed');
+    // Validate each flat checkpoint with the same rules as the current scene.
+    const restored = migrateSave({ ...checkpoint, version: SAVE_SCHEMA_VERSION,
+      storyId: raw.storyId, heroName: raw.heroName, worldName: raw.worldName }, stories);
+    if (restored.status !== 'valid') return restored;
+    choiceHistory.push(choiceCheckpoint(restored.save));
+  }
+
   return {
     status: 'valid',
     save: {
@@ -70,6 +86,8 @@ export function migrateSave(raw, stories) {
       currentSceneId: raw.currentSceneId,
       currentEntryIntro: raw.currentEntryIntro ?? null,
       readingPosition: raw.readingPosition ? { paragraph: raw.readingPosition.paragraph, offset: raw.readingPosition.offset } : null,
+      choiceHistory,
+      atChoices: raw.atChoices ?? false,
       flags: { ...raw.flags },
       inventory: [...(raw.inventory ?? [])],
       uiPrefs: { hideButtonsWhileReading: raw.uiPrefs?.hideButtonsWhileReading ?? false,

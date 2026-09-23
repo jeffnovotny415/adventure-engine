@@ -986,3 +986,44 @@ bundle successfully (com.jeffnovotny.pathsofwonder). All 101 bundled web assets
 still match the production build. Jeff requested installation only, so the app
 was not launched. Both requested devices now have the authored story update;
 no uninstall or app-data clearing was performed.
+
+## September 23 — Back to choice and approved artwork download
+
+Added a named **Back to choice** reader control after a story choice, including
+on the active ending screen. It restores the previous scene's entry intro,
+reading position, flags, and inventory, and opens the previous decision with
+heading focus so an accidental selection can be replaced immediately. Repeated
+back actions walk through earlier choices. Preferences and other books remain
+unchanged. Self-loop choices remount the passage correctly. Author preview uses
+the same pure transition helpers without writing real progress.
+
+Choice history and the open-decision state persist as optional v1 save fields;
+existing bookmarks begin with empty history and collect new choices from this
+update onward. No historical route is guessed. Restart clears that book's
+history. Existing ending cleanup remains: undo works while the ending is open,
+but leaving a completed adventure does not create a new completed-book archive.
+Writes remain atomic, with failed undo retry and stale-save conflict protection.
+
+Verification: full check passes (lint, 115 unit tests, graph diagnostics with no
+errors/warnings, production build). Added an isolated browser regression fixture
+for alternate choices, self-loops, ending undo, state restoration, focus and
+reopening. Passed at measured 667×375, 568×320, 1024×768 and 390×844 viewports,
+including 225% text and portrait-to-landscape rotation. The real app also returned
+to its decision after reload/resume and allowed a different branch. Signed iOS
+Release build, strict signature check and all 101 bundled web assets verified.
+The pre-existing bundle-size advisory remains. Compared all 81 pre-existing
+story/draft/Python/artwork files byte-for-byte against HEAD; none changed.
+
+Installed the verified update on Jeff's iPhone after one transient connection
+failure. Did not launch the app, uninstall it, or clear its data. Oliver's iPad
+was unavailable; its installation remains pending until connected.
+
+Exported **only the 11 current approved illustrations**, per Jeff's clarification,
+under exports/artwork-2026-09-23. Names appear in filenames and the reference
+sheet: original bot labels, Percy, Captain Aster, Trace, and The Can Opener.
+Drawings 4, 5 and 9 retain descriptive labels because no character name was
+confirmed. Excludes source photographs, earlier revisions and app graphics.
+The 18.3 MB ZIP contains the full-resolution unchanged images, a labeled HTML
+reference, README and source/checksum manifest. Verified every archive member,
+all image hashes and all 11 gallery images loading. The reproducible exporter and
+reference metadata are tracked; generated duplicate image copies/ZIP are ignored.

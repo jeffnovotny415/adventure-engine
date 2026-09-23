@@ -165,3 +165,128 @@ test('blocked choices cannot mutate the current game', () => {
   assert.equal(session.applyChoice(gated).status, 'ignored');
   assert.equal(storage.writes, 1);
 });
+
+test('back restores the exact pre-choice state and opens choices after reload', () => {
+  const { storage, session } = setup();
+  session.updateReading({ currentEntryIntro: 'from-left', readingPosition: { paragraph: 3, offset: 7 },
+    flags: { earlier: true }, inventory: ['map'], uiPrefs: { textScale: 1.75 } });
+  session.applyChoice(choice);
+  const resumed = createGameSession(stories, storage);
+  resumed.continueGame('book');
+  assert.equal(resumed.getSnapshot().save.choiceHistory.length, 1);
+  assert.equal(resumed.undoChoice(1).status, 'valid');
+  const restored = resumed.getSnapshot().save;
+  assert.equal(restored.currentSceneId, 'start');
+  assert.equal(restored.currentEntryIntro, 'from-left');
+  assert.deepEqual(restored.readingPosition, { paragraph: 3, offset: 7 });
+  assert.deepEqual(restored.flags, { earlier: true });
+  assert.deepEqual(restored.inventory, ['map']);
+  assert.equal(restored.uiPrefs.textScale, 1.75);
+  assert.equal(restored.atChoices, true);
+  assert.deepEqual(restored.choiceHistory, []);
+  assert.equal(resumed.continueGame('book').save.atChoices, true);
+  resumed.updateReading({ atChoices: false });
+  assert.equal(resumed.continueGame('book').save.atChoices, false);
+});
+
+test('back can undo an ending after its bookmark has been cleared', () => {
+  const { storage, session } = setup();
+  session.applyChoice(choice);
+  session.finishGame();
+  assert.equal(storage.getItem(), null);
+  assert.equal(session.undoChoice(1).status, 'valid');
+  assert.equal(session.continueGame('book').save.currentSceneId, 'start');
+});
+
+test('failed back preserves the current scene and full history until retry succeeds', () => {
+  const { storage, session } = setup();
+  session.applyChoice(choice);
+  const before = session.getSnapshot().save, raw = storage.getItem();
+  storage.failWrite = true;
+  assert.equal(session.undoChoice(1).status, 'write_failed');
+  assert.equal(session.getSnapshot().save, before);
+  assert.equal(storage.getItem(), raw);
+  storage.failWrite = false;
+  assert.equal(session.retryPersistence().status, 'valid');
+  assert.equal(session.getSnapshot().save.atChoices, true);
+  assert.equal(session.getSnapshot().save.choiceHistory.length, 0);
+});
+
+test('stale back retry never replaces a newer adventure', () => {
+  const { storage, session } = setup();
+  session.applyChoice(choice);
+  storage.failWrite = true;
+  session.undoChoice(1);
+  storage.failWrite = false;
+  const other = createGameSession(stories, storage);
+  start(other, 'Newer');
+  const raw = storage.getItem();
+  assert.equal(session.retryPersistence().status, 'conflict');
+  assert.equal(storage.getItem(), raw);
+});
+
+test('repeated back taps cannot skip a second choice; loops and removed items rewind correctly', () => {
+  const loop = { next_scene: 'start', removes_item: 'map' };
+  const catalog = { book: { scenes: { start: { choices: { loop, exit: choice } }, end: { ending: true } } } };
+  const storage = storageFixture(), session = createGameSession(catalog, storage);
+  start(session);
+  session.updateReading({ inventory: ['map'] });
+  session.applyChoice(loop);
+  session.applyChoice(choice);
+  assert.equal(session.undoChoice(2).status, 'valid');
+  assert.equal(session.undoChoice(2).status, 'ignored');
+  assert.deepEqual(session.getSnapshot().save.inventory, []);
+  session.updateReading({ uiPrefs: { textScale: 2.25 } });
+  assert.equal(session.undoChoice(1).status, 'valid');
+  assert.deepEqual(session.getSnapshot().save.inventory, ['map']);
+  assert.equal(session.getSnapshot().save.uiPrefs.textScale, 2.25);
+  assert.equal(session.undoChoice(0).status, 'ignored');
+  session.applyChoice(choice);
+  assert.equal(session.getSnapshot().save.atChoices, false);
+  assert.equal(session.getSnapshot().save.choiceHistory.length, 1);
+});
+
+test('restarting clears history, while a legacy bookmark starts collecting history from its saved scene', () => {
+  const { storage, session } = setup();
+  const legacy = { ...session.getSnapshot().save };
+  delete legacy.choiceHistory;
+  delete legacy.atChoices;
+  storage.setItem('', JSON.stringify(legacy));
+  session.continueGame('book');
+  assert.deepEqual(session.getSnapshot().save.choiceHistory, []);
+  assert.equal(session.undoChoice(0).status, 'ignored');
+  session.applyChoice(choice);
+  assert.equal(session.getSnapshot().save.choiceHistory.length, 1);
+  start(session);
+  assert.deepEqual(session.getSnapshot().save.choiceHistory, []);
+  assert.equal(session.getSnapshot().save.atChoices, false);
+});
+
+test('malformed history cannot overwrite a valid bookmark', () => {
+  const { storage, session } = setup();
+  const raw = storage.getItem();
+  const checkpoint = { currentSceneId: 'start', flags: {}, inventory: [] };
+  for (const choiceHistory of [null, {}, [null], [{ ...checkpoint, currentSceneId: 'missing' }],
+    [{ ...checkpoint, flags: { bad: 'true' } }], [{ ...checkpoint, inventory: [1] }],
+    [{ ...checkpoint, choiceHistory: [] }], [{ ...checkpoint, readingPosition: { paragraph: -1, offset: 0 } }]]) {
+    assert.equal(session.updateReading({ choiceHistory }).status, 'ignored');
+    assert.equal(storage.getItem(), raw);
+  }
+  assert.equal(session.updateReading({ atChoices: 'yes' }).status, 'ignored');
+});
+
+test('undo and ending cleanup preserve the history of other books', () => {
+  const catalog = { ...stories, other: { ...stories.book, id: 'other' } };
+  const storage = storageFixture(), session = createGameSession(catalog, storage);
+  start(session);
+  session.applyChoice(choice);
+  session.startNewGame('other', 'Other hero', 'Other world', 'start');
+  session.applyChoice(choice);
+  session.finishGame();
+  session.undoChoice(1);
+  session.continueGame('book');
+  assert.equal(session.getSnapshot().save.choiceHistory.length, 1);
+  session.undoChoice(1);
+  assert.equal(session.continueGame('other').save.heroName, 'Other hero');
+  assert.equal(session.getSnapshot().save.atChoices, true);
+});

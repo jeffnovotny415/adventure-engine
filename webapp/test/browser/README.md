@@ -89,3 +89,18 @@ manual edit, independent movement/haptic preferences, and focus return on Done.
 Run at 667×375, 568×320, 1024×768, 390×844 and 320×568, including
 `?max&system&reduced`. Check rotation with the sheet open. Storage unit tests
 cover atomic writes, reload, failure/retry and isolation between books.
+
+## Back across story choices
+
+Open `test/browser/choice-history.html` and run **Run choice back checks**.
+This uses synthetic scenes and isolated in-memory storage. It verifies a different
+choice after undo, exact flags/inventory restoration, self-loop navigation,
+returning from an ending after bookmark cleanup, focus on the reopened decision,
+return to the passage, persisted choice view, and no horizontal overflow.
+Run at 667×375, 568×320, 1024×768, and 390×844; repeat with `?max` (225% text).
+Rotate while a destination is open, then activate Back to choice and verify the
+choices still fit. In the main app, verify author preview and normal reading
+both expose Back to choice after selecting a branch. Earlier bookmarks collect
+history from the first choice made with this version; they cannot reconstruct
+choices made before history existed. Ending cleanup retains undo for the active
+ending screen; leaving a completed adventure still follows the existing cleanup.

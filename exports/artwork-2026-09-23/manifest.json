@@ -1,0 +1,90 @@
+[
+  {
+    "file": "illustrations/01-close-range-security-bot.png",
+    "source": "artwork/chapter-headers/2026-09-21/revision-2/close-range-security-bot.png",
+    "sha256": "62fb7afa7f8d5a5e072c316ef7c1c13dba226c74a67b38af2cc70d25ca8c4c56",
+    "name": "Close Range Security Bot",
+    "note": "Original sketch label",
+    "drawing": 1
+  },
+  {
+    "file": "illustrations/02-long-range-security-bot.png",
+    "source": "artwork/chapter-headers/2026-09-21/revision-2/long-range-security-bot.png",
+    "sha256": "1dc9199798bc071d104518aaf45fe20bc4cee94706fe335e0c85a5ff4d969c47",
+    "name": "Long Range Security Bot",
+    "note": "Original sketch label",
+    "drawing": 2
+  },
+  {
+    "file": "illustrations/03-load-bot.png",
+    "source": "artwork/chapter-headers/2026-09-21/revision-2/load-bot.png",
+    "sha256": "dbd4a144b3b4e6a2dab744994215e45c74a9275d3e3f486473c7353f973df883",
+    "name": "Load Bot",
+    "note": "Original sketch label",
+    "drawing": 3
+  },
+  {
+    "file": "illustrations/04-solar-panel-robot.png",
+    "source": "artwork/chapter-headers/2026-09-21/revision-2/small-blue-panel-robot.png",
+    "sha256": "c874c62663aa97906a5988fc04454bf051f43b6a9cbf96b8fa158a36f1237d1c",
+    "name": "Solar Panel Robot",
+    "note": "Descriptive label; character name not assigned",
+    "drawing": 4
+  },
+  {
+    "file": "illustrations/05-visor-character.png",
+    "source": "artwork/chapter-headers/2026-09-21/visor-character.png",
+    "sha256": "566c8c21a096f890c229b10c3fbc32022508fdc57c89ba7912b9f201e2ac1de8",
+    "name": "Visor Character",
+    "note": "Descriptive label; character name not assigned",
+    "drawing": 5
+  },
+  {
+    "file": "illustrations/06-construction-bot.png",
+    "source": "artwork/chapter-headers/2026-09-21/revision-2/construction-bot.png",
+    "sha256": "f1a497b498f8df4db4c9041615e17253c03309d942ff46a9d40cf22fdc393405",
+    "name": "Construction Bot",
+    "note": "Original sketch label",
+    "drawing": 6
+  },
+  {
+    "file": "illustrations/07-percy.png",
+    "source": "artwork/chapter-headers/2026-09-21/revision-6/yellow-spiky-character.png",
+    "sha256": "388f4d147dcd9325578088a7eae914779b92b63719db5b0a0ceb04f941d3e09c",
+    "name": "Percy",
+    "note": "Space Walker · Pilot · formerly Pip",
+    "drawing": 7
+  },
+  {
+    "file": "illustrations/08-captain-aster.png",
+    "source": "artwork/chapter-headers/2026-09-21/revision-4/blue-long-eared-character.png",
+    "sha256": "403089cad68c6d3d6f1168246f6e35091835593b8f56900d2a04a3322f1b0919",
+    "name": "Captain Aster",
+    "note": "Space Walker · Captain · formerly Captain Azul",
+    "drawing": 8
+  },
+  {
+    "file": "illustrations/09-tracked-solar-robot.png",
+    "source": "artwork/chapter-headers/2026-09-21/revision-2/tracked-solar-robot.png",
+    "sha256": "2f96d5f1dbb49b4683734874a7a0cfdd43c2e0cc7039c34443079a2ebb595bb2",
+    "name": "Tracked Solar Robot",
+    "note": "Descriptive label; character name not assigned",
+    "drawing": 9
+  },
+  {
+    "file": "illustrations/10-trace.png",
+    "source": "artwork/chapter-headers/2026-09-21/seven/seven-synthoid-v2.png",
+    "sha256": "fe1d0075104d0b919f9ef15728b7e9edff424beb89cb166d85cb2e5470faa76c",
+    "name": "Trace",
+    "note": "Space Walker · Synthoid officer · formerly Seven",
+    "drawing": 10
+  },
+  {
+    "file": "illustrations/11-the-can-opener.jpg",
+    "source": "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
+    "sha256": "2c35391d67207886048d371f159b4aee19ed128516877cd5e14732e52f757fb0",
+    "name": "The Can Opener",
+    "note": "Original book illustration",
+    "drawing": 11
+  }
+]

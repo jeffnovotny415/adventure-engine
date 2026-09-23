@@ -16,7 +16,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   onHome, ending = false, onRestart, textScale = 1, onTextScaleChange, testing = false,
   initialReadingPosition = null, onReadingPositionChange, nativeReading = DEFAULT_NATIVE_READING,
   pageHaptics = false, onPageHapticsChange, readingStyle = DEFAULT_READING_STYLE, onReadingStyleChange,
-  storyId, sceneId, passageStorage }) {
+  storyId, sceneId, passageStorage, onUndoChoice, initialChoosing = false, onChoicesChange }) {
   const { getText } = useContent();
   const mainRef = useRef(null);
   const controlsButtonRef = useRef(null);
@@ -32,7 +32,11 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
   const wasChoosingRef = useRef(false);
   const [page, setPage] = useState(0);
   const [layout, setLayout] = useState({ count: 1, step: 0, columns: 1 });
-  const [choosing, setChoosing] = useState(false);
+  const [choosing, setChoosingState] = useState(initialChoosing);
+  function setChoosing(value) {
+    setChoosingState(value);
+    onChoicesChange?.(value);
+  }
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [controlsVisible, setControlsVisible] = useState(true);
   const [bookmarkPassage, setBookmarkPassage] = useState(null);
@@ -192,6 +196,10 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
         <button type="button" className="text-button" onClick={() => { saveScrollRef.current(); onHome(); }}>
           <span aria-hidden="true">← </span>{getText('reader.bookshelf')}
         </button>
+        {onUndoChoice && <button type="button" className="text-button reader-choice-back"
+          onClick={() => { cancelTurn(); onUndoChoice(); }}>
+          <span aria-hidden="true">↶ </span>{getText('reader.back_to_choice')}
+        </button>}
         <span className="reader-nav-title">{testing ? getText('reader.test_preview') : storyTitle}</span>
         {storyId && <button type="button" className="text-size-button bookmark-button" aria-label={getText('passages.title')}
           aria-haspopup="dialog" onClick={openBookmarks}>

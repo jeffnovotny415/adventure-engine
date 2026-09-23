@@ -12,6 +12,7 @@ import { getScene, getSceneDisplayText, getAvailableChoices, isEnding } from './
 import { getStoryIndex, getStory } from './utils/storyData';
 import { themeKeyForStory, SHELL_THEME } from './utils/themeKey';
 import { readingTextScale, readingStyle, DEFAULT_READING_STYLE } from './state/readingPreferences';
+import { advanceChoice, rewindChoice } from './state/choiceHistory';
 import { useNativeReading } from './hooks/useNativeReading';
 
 const SCREENS = {
@@ -31,7 +32,7 @@ export default function App() {
     [stories]
   );
 
-  const { save, persistenceError, startNewGame, continueGame, applyChoice, finishGame, updateReading, retryPersistence, cancelPersistence } =
+  const { save, persistenceError, startNewGame, continueGame, applyChoice, undoChoice, finishGame, updateReading, retryPersistence, cancelPersistence } =
     useGameState(storiesWithScenes);
 
   const [savedResult, setSavedResult] = useState(() => loadSave(storiesWithScenes));
@@ -112,15 +113,25 @@ export default function App() {
 
   function handleChoose(choice) {
     if (devTestState) {
-      setDevTestState((current) => ({
-        ...current,
-        currentSceneId: choice.next_scene,
-        currentEntryIntro: choice.entry_intro ?? null,
-        flags: choice.sets_flag ? { ...current.flags, [choice.sets_flag]: true } : current.flags,
-      }));
+      setDevTestState(current => advanceChoice(current, choice));
       return;
     }
     applyChoice(choice);
+  }
+
+  function handleUndoChoice() {
+    if (devTestState) {
+      setDevTestState(current => rewindChoice(current) ?? current);
+      setScreen(SCREENS.STORY);
+    } else {
+      const result = undoChoice(activeSave.choiceHistory.length);
+      if (result.status === 'valid') setScreen(SCREENS.STORY);
+    }
+  }
+
+  function changeChoicesView(atChoices) {
+    if (devTestState) setDevTestState(current => ({ ...current, atChoices }));
+    else updateReading({ atChoices });
   }
 
   function handleRestart() {
@@ -223,7 +234,8 @@ export default function App() {
           <StoryScreen
             storyId={activeStoryId}
             sceneId={activeSave.currentSceneId}
-            key={`${activeStoryId}:${activeSave.currentSceneId}:${activeSave.currentEntryIntro ?? ''}`}
+            key={`${activeStoryId}:${activeSave.currentSceneId}:${activeSave.currentEntryIntro ?? ''}:${activeSave.choiceHistory?.length ?? 0}`}
+            onUndoChoice={activeSave.choiceHistory?.length ? handleUndoChoice : undefined}
             storyTitle={activeStory.title}
             title={displayText.title}
             intro={displayText.intro}
@@ -239,6 +251,8 @@ export default function App() {
             pageHaptics={pageHaptics}
             onPageHapticsChange={changePageHaptics}
             onTextScaleChange={changeTextScale}
+            initialChoosing={activeSave.atChoices}
+            onChoicesChange={changeChoicesView}
             initialReadingPosition={activeSave.readingPosition}
             onReadingPositionChange={devTestState ? undefined : (readingPosition) => updateReading({ readingPosition })}
             testing={Boolean(devTestState)}
@@ -251,7 +265,8 @@ export default function App() {
           <EndScreen
             storyId={activeStoryId}
             sceneId={activeSave.currentSceneId}
-            key={`${activeStoryId}:${activeSave.currentSceneId}:${activeSave.currentEntryIntro ?? ''}`}
+            key={`${activeStoryId}:${activeSave.currentSceneId}:${activeSave.currentEntryIntro ?? ''}:${activeSave.choiceHistory?.length ?? 0}`}
+            onUndoChoice={activeSave.choiceHistory?.length ? handleUndoChoice : undefined}
             storyTitle={activeStory.title}
             title={displayText.title}
             intro={displayText.intro}
