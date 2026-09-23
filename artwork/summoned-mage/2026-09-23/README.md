@@ -1,9 +1,10 @@
-# The Summoned Mage — first narrative batch
+# The Summoned Mage — narrative artwork set
 
-Four review drafts generated with the built-in image generation tool on September 23, 2026. These start the requested Mage artwork work; they are not approved replacements or integrated app art.
+Fifteen drawings generated with the built-in image generation tool on September 23, 2026: the four approved first-batch illustrations plus eleven new review drafts. The new work covers Bernard and Gilly, all seven remaining narrative moments from the documented plan, and the Hollow Hills and broken seal. No app integration or story edits in this batch.
 
 - [Parchment review gallery](index.html), with full-resolution PNG downloads.
-- [Exact prompts and correction](prompts.json).
+- [First-batch prompts and correction](prompts.json).
+- [Remaining illustration prompts and references](remaining-prompts.json).
 - [Asset metadata and proposed paragraph anchors](manifest.json).
 
 ## Drawings
@@ -13,7 +14,7 @@ Four review drafts generated with the built-in image generation tool on Septembe
 3. **Willowmere (034):** round mossy homes, stalled drift-carts, suspended laundry and beastfolk.
 4. **Small Magic (049):** Honey chasing the hero's tiny spark beside the campfire. Honey's scale was corrected to fit the grapefruit-sized description.
 
-The proposed hero design is a charcoal-teal hooded cloak, dark full gloves, trousers and boots. All hero views conceal face, hair, skin and ears. Elliana and Honey follow the existing character references. Their visible faces are intentional: the identity constraint applies to the reader's hero.
+The approved hero design is a charcoal-teal hooded cloak, dark full gloves, trousers and boots. All hero views conceal face, hair, skin and ears. Elliana and Honey follow the existing character references. Their visible faces are intentional: the identity constraint applies to the reader's hero.
 
 ## Sources
 
@@ -26,6 +27,21 @@ Document suggestions are reference material, not instructions to modify story co
 
 ## Checks and continuation
 
-All four images were visually reviewed and retain genuine alpha transparency at 1536 × 1024. The selected generated outputs were copied without alteration. The gallery includes text alternatives, mobile viewport sizing, native image enlargement and PNG downloads. Its markup, files and anchors were checked; browser rendering was not inspected.
+All fifteen images were visually reviewed and retain genuine alpha transparency. Narrative images are 1536 × 1024; Bernard and Gilly portraits are 1024 × 1536. The selected generated outputs were copied without alteration. The gallery includes text alternatives, mobile viewport sizing, native image enlargement and PNG downloads. Its markup, files and anchors were checked; browser rendering was not inspected.
 
-Remaining document scenes for a later batch: sleeping tuskers and Gordo (031), the Fancy Spoon group introduction (037), the lamp-drinking syphon (040), the thrown-rock burst (042), the full campfire group (046), Bernard in the crack (056), and the source cavern (057). Establish Bernard and Gilly's character designs before those group scenes. Review this first batch's cloak and narrative treatment before extending the set.
+## Remaining batch completed
+
+- **Bernard (036)** and **Gilly (035)** — character references used in the group scenes.
+- **Warm and Calm (031)** — three sleeping tuskers and Gordo climbing down.
+- **A Table at the Spoon (037)** — Honey steals the bun from the hero's raised hood.
+- **The First Syphon (040)** — a faceless syphon drinking a street lamp's light.
+- **Feeding Time (042)** — the rock scatters the syphon into pale fluff.
+- **Campfire (046)** — four companions and Honey in the pan on the ground, away from the fire.
+- **The Hollow Hills (054)** — drained landscape and seal-house entrance.
+- **The Broken Door (055)** — eroded round seal with dark carvings and a glowing gap.
+- **The Crack (056)** — the companions help pull Bernard free.
+- **The Source (057)** — the great golden circle and rising syphons.
+
+Existing Elliana, Honey, and syphon character drawings remain in `artwork/chapter-headers/2026-09-23-new-sketches/` and were used for continuity. The existing Elliana portrait covers the character introduction planned for scene 005.
+
+The landscape drawings also cover the setting notes: cave, bridge, forest, Willowmere, Fancy Spoon, Hollow Hills, seal and source. No animation work was started. The first four approved PNG files and every protected story/Python/draft file remain byte-for-byte unchanged. All proposed anchors, asset hashes and gallery file links were checked.
