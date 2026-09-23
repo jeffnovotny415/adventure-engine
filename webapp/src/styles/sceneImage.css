@@ -21,8 +21,9 @@
 .image-viewer__canvas:focus-visible, .scene-image__open:focus-visible { outline: 2px solid #713d32; outline-offset: -2px; }
 @media (max-width: 480px) { .image-viewer__toolbar { gap: 6px; } .image-viewer__toolbar h2 { flex-basis: 100%; } .image-viewer__toolbar button { padding-inline: 9px; font-size: .85rem; } }
 /* Printed art, without a thumbnail frame, caption strip, or cropped edges. */
-.scene-image--inline { margin: 10px 0 18px; break-inside: avoid; }
-.scene-image--inline .scene-image__open { display: block; width: 100%; }
-.scene-image--inline .scene-image__img { width: 100%; height: min(340px, var(--reader-art-height, 340px)); max-width: 100%; object-fit: contain; }
-.scene-image--specs .scene-image__img { height: min(440px, var(--reader-art-height, 440px)); }
+.scene-image--inline { --art-height: min(280px, var(--reader-art-height, 280px)); margin: 8px 0 12px; break-inside: avoid; }
+.scene-image--inline .scene-image__open { display: block; width: min(100%, calc(var(--art-height) * var(--art-ratio))); margin-inline: auto; }
+/* Reserve the actual drawing ratio before load, without an empty letterbox.
+   Small printed drawings share the page with prose; the viewer keeps detail. */
+.scene-image--inline .scene-image__img { width: 100%; height: auto; aspect-ratio: var(--art-ratio); max-width: 100%; object-fit: contain; }
 [data-page-appearance='night'] .scene-image__img { mix-blend-mode: normal; }

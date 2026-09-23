@@ -79,10 +79,11 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     let active = true;
     const viewport = viewportRef.current;
     const columns = columnsRef.current;
+    let measuredGeometry;
     function measure() {
       if (!active || !viewport || !columns) return;
-      cancelTurn();
       if (continuous) {
+        cancelTurn();
         columns.style.columnWidth = 'auto';
         const top = readingAnchorTop(readingAnchorRef.current, columns);
         if (top !== null) window.scrollBy({ top: top - 12, behavior: 'instant' });
@@ -92,13 +93,19 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       }
       const gap = parseFloat(getComputedStyle(columns).columnGap) || 0;
       const width = viewport.clientWidth;
-      columns.style.setProperty('--reader-art-height', `${Math.max(64, viewport.clientHeight - 55)}px`);
+      columns.style.setProperty('--reader-art-height', `${Math.max(44, (viewport.clientHeight - 28) * .45)}px`);
       // WebKit needs an explicit width to fragment a single-column passage.
       // Keep the same computed page width for phone pages and tablet spreads.
       const visibleColumns = Number.parseInt(getComputedStyle(columns).columnCount, 10) || 1;
       columns.style.columnWidth = `${(width - gap * (visibleColumns - 1)) / visibleColumns}px`;
       const step = width + gap;
       const count = Math.max(1, Math.ceil((columns.scrollWidth + gap - 1) / step));
+      // Images reserve their aspect ratio before decoding. A late load or an
+      // unchanged ResizeObserver notification must not cancel the user's drag.
+      const geometry = [width, viewport.clientHeight, columns.scrollWidth, visibleColumns, gap].join(':');
+      if (geometry === measuredGeometry) return;
+      measuredGeometry = geometry;
+      cancelTurn();
       setLayout((current) => current.count === count && current.step === step && current.columns === visibleColumns
         ? current : { count, step, columns: visibleColumns });
       setPage(pageForReadingAnchor(readingAnchorRef.current, columns, step, count));
@@ -106,7 +113,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
     const observer = new ResizeObserver(measure);
     observer.observe(viewport);
     measure();
-    document.fonts.ready.then(measure);
+    document.fonts.ready.then(() => { measuredGeometry = undefined; measure(); });
     const images = [...columns.querySelectorAll('img')];
     images.forEach((img) => img.addEventListener('load', measure));
     return () => {

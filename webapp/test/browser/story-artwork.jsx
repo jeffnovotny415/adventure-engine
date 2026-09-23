@@ -16,7 +16,7 @@ export function Fixture() {
   const scene = story.scenes[sceneId];
   const anchor = useRef(null);
   const [scale, setScale] = useState(query.has('large') ? 2.25 : 1);
-  const [style, setStyle] = useState({ ...DEFAULT_READING_STYLE, pageMovement: 'instant', pageAppearance: query.has('night') ? 'night' : 'warm' });
+  const [style, setStyle] = useState({ ...DEFAULT_READING_STYLE, pageMovement: query.has('animated') ? 'animated' : 'instant', pageAppearance: query.has('night') ? 'night' : 'warm' });
   return <BookReader storyId="the_can_opener" sceneId={sceneId} storyTitle={story.title} title={scene.title}
     body={scene.text} image={scene.image} choices={scene.choices ?? {}} onChoose={() => {}}
     onHome={() => {}} onRestart={() => {}} ending={scene.is_ending}

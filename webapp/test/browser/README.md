@@ -126,3 +126,21 @@ Start a horizontal swipe on a drawing: it must turn one page without opening
 the viewer. Aborted swipes must leave the current page and allow the next tap.
 Repeat actual pinch/pan and horizontal swipes on iPhone and iPad before release;
 synthetic PointerEvents do not reproduce iOS touch arbitration.
+
+### Illustration load and spacing regression
+
+Use `&animated` in the artwork fixture to exercise the real page-turn overlay.
+With a developer-installed Playwright and Vite running, run:
+
+```sh
+READER_URL=http://127.0.0.1:5190 node test/browser/check-illustrated-reader.mjs
+```
+
+`PLAYWRIGHT_MODULE` can point to an existing Playwright module; `BROWSER=chromium`
+and optional `BROWSER_EXECUTABLE` select another installed engine. Default is
+WebKit. The runner holds a real image request, releases it during a drag, and
+requires the turn to complete. Before the fix, the image load removed the leaf
+and left the reader on the same page. It also checks illustration proportions
+and reserved height at short phone, landscape phone/tablet and portrait sizes
+with larger text. Browser mouse drags verify event routing; physical iOS touch
+arbitration still needs device testing.

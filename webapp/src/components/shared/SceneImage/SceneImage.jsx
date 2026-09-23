@@ -14,6 +14,7 @@ export function SceneImage({ image, inline = false, afterParagraph }) {
   }
   return (
     <figure className={`scene-image${inline ? ` scene-image--inline scene-image--${image.kind}` : ''}`}
+      style={inline ? { '--art-ratio': image.width / image.height } : undefined}
       data-illustration={inline ? image.id : undefined} data-after-paragraph={afterParagraph}>
       <button ref={triggerRef} type="button" className="scene-image__open"
         aria-label={`${getText('image_viewer.open')}${image.alt ? `: ${image.alt}` : ''}`}
