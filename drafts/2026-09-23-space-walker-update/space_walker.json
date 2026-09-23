@@ -326,7 +326,7 @@
         "1": {
           "text": "Let it sink in",
           "next_scene": "scene_026",
-          "entry_intro": "from_seven"
+          "entry_intro": "from_trace"
         }
       }
     },
@@ -334,7 +334,7 @@
       "title": "The Truth",
       "entry_intros": {
         "from_captain": "\nThe Captain stays in his chair and doesn’t say anything else. He lets you have the quiet.\n",
-        "from_seven": "\nTrace stays right where he is, beside you, and doesn’t say anything else.\n"
+        "from_trace": "\nTrace stays right where he is, beside you, and doesn’t say anything else.\n"
       },
       "text": "\nYou think about home.\n\nYour room, with the maps all over the walls. The market on Fifth-day. The portal yard, where you used to press your face against the fence and watch the real delvers come and go, and promise yourself that one day it would be you.\n\nYour family.\n\nThey were all near portals. The whole town was built around the portal yard. If every portal burst open at once…\n\nThey could be anywhere.\n\nThey could be ANYWHERE. It’s the worst thought you’ve ever had, and somehow it’s also the best one. Anywhere is a place, and anywhere can be found.\n\nYou jumped through that portal because you wanted to find something amazing out here.\n\nNow you know exactly what you’re looking for.\n",
       "choices": {
@@ -663,7 +663,7 @@
         "3": {
           "text": "Ask Keeper Cobble to choose",
           "next_scene": "scene_051",
-          "entry_intro": "moss"
+          "entry_intro": "cobble"
         }
       }
     },
@@ -672,7 +672,7 @@
       "entry_intros": {
         "seeds": "\n“The seeds,” you say. “Stories can be told again by somebody. Once a plant is gone, it’s gone.”\n\nKeeper Cobble shuts their eyes, and then they nod. You and Trace run up and down the frozen rows pulling out drawers while the Keeper calls out after you which ones matter the most. They ALL matter the most.\n",
         "stories": "\n“The stories,” you say. “A seed is a seed. But those are people.”\n\nKeeper Cobble shuts their eyes, and then they nod. You and Trace run up and down the whispering hall, sweeping crystals into crates by the armful. Every one of them is somebody’s voice, and you’re leaving a thousand behind for every one you take.\n",
-        "moss": "\n“You choose,” you say. “It’s your archive. I don’t have the right.”\n\nKeeper Cobble looks at you for a long moment. “No,” they say. “No one does. That is the…trouble with it.” In the end, they walk slowly along the shelves and the cabinets, touching one thing here and one thing there, and you and Trace pack up whatever they touch. It’s a little of both…and not nearly enough of either.\n"
+        "cobble": "\n“You choose,” you say. “It’s your archive. I don’t have the right.”\n\nKeeper Cobble looks at you for a long moment. “No,” they say. “No one does. That is the…trouble with it.” In the end, they walk slowly along the shelves and the cabinets, touching one thing here and one thing there, and you and Trace pack up whatever they touch. It’s a little of both…and not nearly enough of either.\n"
       },
       "text": "\nIt takes thirty minutes. When you’re done, the shuttle is packed right up to the roof, and Keeper Cobble is wedged into the back on top of it all with their knees up around their ears.\n\nYou stand in the hatchway and look back down the hall.\n\nIt doesn’t look like you took anything at all. The shelves go on, and on, and on, glowing and whispering.\n\n“Ten minutes,” says Trace. “We should leave now. That would be the safe margin.”\n\n“The shuttle’s fast. I could run one more crate out here. ONE more! There’s room on my lap!”\n\n“Nine minutes and fifty seconds.”\n\nYou look at all those lights.\n",
       "choices": {
@@ -733,7 +733,7 @@
         "1": {
           "text": "Get some sleep. The call could come any time.",
           "next_scene": "scene_057",
-          "entry_intro": "from_seven"
+          "entry_intro": "from_trace"
         }
       }
     },
@@ -751,7 +751,7 @@
     "scene_057": {
       "title": "The Convoy",
       "entry_intros": {
-        "from_seven": "\nYou fall asleep thinking about names, spelled correctly.\n",
+        "from_trace": "\nYou fall asleep thinking about names, spelled correctly.\n",
         "from_captain": "\nYou fall asleep thinking about a grain ship with an empty hold.\n"
       },
       "text": "\nWHOOP. WHOOP. WHOOP.\n\nThis time you don’t make a single wrong turn.\n\n“It’s the Harbor evacuation,” Percy says, and their voice is tight. “They started moving people out, just in case. Twelve ships. They’ve gone dead in space, all twelve of them. Engines, lights, everything.”\n\n“Cause?” says the Captain.\n\n“They passed too close behind it,” Dr. Wren says, leaning over Trace’s shoulder. “It leaves a wake. A sort of cold spot. It drains the power out of anything that drifts in.”\n\nThe {world_name} drops out of its jump, and you see it with your own eyes for the very first time.\n\nIt fills half the window. There’s no screen in the way, and no dot for scale. It’s an ocean of darkness, with the stars just stopping at its edge, and it’s moving away from you slowly, like a whale that hasn’t noticed the minnows. Twelve small ships hang helpless in the dark behind it.\n\nYour knees do not feel good. You grab on to the back of Percy’s chair.\n\n“Crewmate,” the Captain says quietly. “Look at the twelve ships. Not at it. At them. That is the job.”\n\nYou look at the twelve ships.\n\nYour knees feel better.\n",

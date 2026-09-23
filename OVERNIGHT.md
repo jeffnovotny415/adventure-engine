@@ -1043,3 +1043,18 @@ files remain unchanged. Full check passes (115 tests), plus signed iOS build,
 signature and 101-asset verification. Phone/tablet/portrait, 225% text and rotation
 preview checks passed. Installed on Jeff's iPhone without launching or clearing
 data. Oliver's iPad remains unavailable and awaits installation.
+
+## September 23 — Updated Space Walker draft
+
+Imported files (9).zip: all 80 scenes edited, no scene IDs, titles, routes, images,
+or endings changed. All 307 authored strings match the supplied Markdown. Kept
+existing internal from_seven/moss intro labels and their incoming references per
+Jeff's saved-route preference; visible names remain Trace and Keeper Cobble.
+Final preflight is ready. Original/reviewed bytes, hashes and full verification
+are in drafts/2026-09-23-space-walker-update/README.md. All 93 unrelated protected
+files remain unchanged; no saves were cleared or migrated.
+
+Full check passes (115 tests), phone/tablet/portrait/short-phone preview including
+225% text and rotation, and signed iOS build/signature/101-asset checks. Installed
+on Jeff's iPhone after a transient connection failure, without opening the app.
+Oliver's iPad installation remains pending.

@@ -1,0 +1,12 @@
+
+> webapp@0.0.0 check:import
+> node scripts/check-story-import.js ../drafts/2026-09-23-space-walker-update/space_walker.json
+
+Story import preflight: review_required (read-only)
+space_walker: 0 added, 80 edited, 0 removed, 0 unchanged
+REVIEW entry_intros_removed [space_walker / scene_026]: Saved entry-intro keys may no longer resolve.
+REVIEW entry_intros_removed [space_walker / scene_051]: Saved entry-intro keys may no longer resolve.
+REVIEW entry_intros_removed [space_walker / scene_057]: Saved entry-intro keys may no longer resolve.
+Incoming SHA-256 space_walker: 8989ac41c2fd73296496200969c22564dbda1da158a92d22b10cf603102e0b3c
+Read-only comparison. Title changes are possible ID reuse, not proof. Same-title rewrites cannot reliably be distinguished from replacement. Text edits can shift saved paragraph/character positions; flags and route intent require human review. No content or saves are changed.
+Exit 0: no detected review flags; 1: review required; 2: invalid input. This command never imports files.
