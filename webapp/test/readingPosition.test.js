@@ -70,6 +70,21 @@ test('beginning, absent content, and constrained layouts stay within page bounds
   assert.equal(captureReadingAnchor(empty.viewport, empty.columns), null);
 });
 
+test('an illustration-only page keeps its place through reflow and falls back to text if art is removed', () => {
+  const current = flow([100, 100], 100, { page: 2 });
+  const textQuery = current.columns.querySelectorAll;
+  const art = { dataset: { illustration: 'construction-bot', afterParagraph: '1' },
+    getClientRects: () => [{left:10,right:100,top:0,bottom:80}],
+    getBoundingClientRect: () => ({left:10,right:100,top:0,bottom:80}) };
+  current.columns.querySelectorAll = selector => selector === '[data-illustration]' ? [art] : textQuery();
+  const anchor = captureReadingAnchor(current.viewport, current.columns);
+  assert.deepEqual(anchor, {paragraph:1,offset:0,illustration:'construction-bot'});
+  assert.equal(pageForReadingAnchor(anchor, current.columns,120,3),2);
+  assert.equal(readingAnchorTop(anchor,current.columns),0);
+  current.columns.querySelectorAll = selector => selector === '[data-illustration]' ? [] : textQuery();
+  assert.equal(pageForReadingAnchor(anchor,current.columns,120,3),1);
+});
+
 test('continuous reading captures a character within a long scrolled paragraph', () => {
   const paragraph = {
     textContent: 'x'.repeat(100), firstChild: { nodeType: 3, length: 100 },

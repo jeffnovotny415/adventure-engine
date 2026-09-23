@@ -77,13 +77,15 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
   }
   function onPointerDown(event) {
     if (!event.isPrimary) { cancelTurn(); return; }
-    if ( (window.visualViewport?.scale ?? 1) > 1.05 || event.button !== 0 || event.target.closest('button, a, input, dialog')) return;
+    const illustration = event.target.closest('.scene-image__open');
+    if ( (window.visualViewport?.scale ?? 1) > 1.05 || event.button !== 0 ||
+      (event.target.closest('button, a, input, dialog') && !illustration)) return;
     settlingRef.current?.();
     if (turnRef.current) return;
     const element = viewportRef.current ?? event.currentTarget;
     const bounds = element.getBoundingClientRect();
     gestureRef.current = {
-      id: event.pointerId, element, bounds, tapBounds: event.currentTarget.getBoundingClientRect(),
+      id: event.pointerId, element, bounds, illustration, tapBounds: event.currentTarget.getBoundingClientRect(),
       startX: event.clientX, startY: event.clientY, lastX: event.clientX,
       startTime: event.timeStamp, lastTime: event.timeStamp, velocity: 0, started: false,
     };
@@ -135,6 +137,7 @@ export function usePageTurn({ viewportRef, columnsRef, page, layout, onPageChang
     release(gesture);
     gesture.element.removeAttribute('data-dragging');
     if (!gesture.started) {
+      if (gesture.illustration) return; // Its native click opens the viewer; a drag still turns the page.
       // Long presses, selection, scrolling and pinches are reading actions,
       // not taps. Native image/button taps never enter this gesture path.
       if (event.timeStamp - gesture.startTime > 300 ||

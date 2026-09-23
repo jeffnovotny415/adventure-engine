@@ -133,7 +133,10 @@
     "title": "Illustration",
     "actual_size": "Actual size",
     "fit": "Fit image",
-    "close": "Close"
+    "close": "Close",
+    "zoom_in": "Zoom in",
+    "zoom_out": "Zoom out",
+    "zoom_help": "Pinch to zoom. Drag to explore."
   },
   "runtime_recovery": {
     "heading": "Let’s reopen your book",

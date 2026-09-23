@@ -1,10 +1,10 @@
 import { SceneImage } from '../SceneImage/SceneImage';
+import { Fragment } from 'react';
+import { artworkForPassage, paragraphsOf } from '../../../content/storyArtwork';
 
-function paragraphsOf(text) {
-  return (text ?? '').split('\n').map((line) => line.trim()).filter(Boolean);
-}
-
-export function StoryTextPanel({ storyTitle, title, intro, body, image, headingRef }) {
+export function StoryTextPanel({ storyTitle, storyId, sceneId, title, intro, body, image, headingRef }) {
+  const artwork = artworkForPassage(storyId, sceneId, body);
+  const introCount = paragraphsOf(intro).length;
   return (
     <>
       <div className="scene-heading">
@@ -16,7 +16,11 @@ export function StoryTextPanel({ storyTitle, title, intro, body, image, headingR
         <p className="story-paragraph story-intro" key={`intro-${index}`}>{paragraph}</p>
       ))}
       {paragraphsOf(body).map((paragraph, index) => (
-        <p className="story-paragraph" key={`body-${index}`}>{paragraph}</p>
+        <Fragment key={`body-${index}`}>
+          <p className="story-paragraph">{paragraph}</p>
+          {artwork.filter(item => item.afterParagraph === index).map(item =>
+            <SceneImage key={item.id} image={item} inline afterParagraph={introCount + index} />)}
+        </Fragment>
       ))}
     </>
   );

@@ -13,6 +13,7 @@ export function DecisionContext(props) {
     function measure() {
       if (!active || !viewport.clientWidth) return;
       const width = viewport.clientWidth;
+      columns.style.setProperty('--reader-art-height', `${Math.max(64, viewport.clientHeight - 55)}px`);
       const gap = parseFloat(getComputedStyle(columns).columnGap) || 0;
       columns.style.columnWidth = `${width}px`;
       const step = width + gap;

@@ -7,6 +7,7 @@ function validPassage(value) {
     Number.isFinite(value.createdAt) && value.createdAt >= 0 &&
     value.position && Number.isSafeInteger(value.position.paragraph) && value.position.paragraph >= 0 &&
     Number.isSafeInteger(value.position.offset) && value.position.offset >= 0 &&
+    (value.position.illustration === undefined || (typeof value.position.illustration === 'string' && /^[a-z0-9-]{1,100}$/.test(value.position.illustration))) &&
     (value.image === null || (typeof value.image?.src === 'string' &&
       /^\/images\/stories\/[\w/.-]+$/.test(value.image.src) && !value.image.src.includes('..') &&
       (value.image.alt === undefined || typeof value.image.alt === 'string')));
@@ -27,7 +28,8 @@ export function loadPassages(storage) {
 
 export function samePassage(a, b) {
   return ['storyId', 'sceneId', 'title', 'intro', 'body'].every(key => a[key] === b[key]) &&
-    a.position.paragraph === b.position.paragraph && a.position.offset === b.position.offset;
+    a.position.paragraph === b.position.paragraph && a.position.offset === b.position.offset &&
+    a.position.illustration === b.position.illustration;
 }
 
 function updatePassages(transform, storage) {

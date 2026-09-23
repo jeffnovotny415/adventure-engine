@@ -104,3 +104,25 @@ both expose Back to choice after selecting a branch. Earlier bookmarks collect
 history from the first choice made with this version; they cannot reconstruct
 choices made before history existed. Ending cleanup retains undo for the active
 ending screen; leaving a completed adventure still follows the existing cleanup.
+
+## Printed illustrations and enlarged viewer
+
+Open `test/browser/story-artwork.html?scene=scene_006`. This read-only fixture
+uses the actual book fonts and authored text, with no adventure storage access.
+Other useful scenes: `scene_005` (existing header blueprint plus color reveal),
+`scene_008` (PLOP), `scene_036` (long-range specs), and `scene_066` (Precision).
+Add `&large` for 225% text, `&continuous` for screen-reader flow, or `&night`.
+
+Check 667×375, 568×320, 1024×768, 390×844, and 320×568. Walk every page and
+confirm drawings are complete, never clipped, and every paragraph remains in
+order. On an art-only page, rotate and rotate back; the drawing must remain the
+reading anchor. Tap the drawing: zoom +/- and Fit must work, two-finger pinch
+must follow the midpoint, and one finger must pan enlarged art without turning
+the story. Rotate with the viewer open. Close with X or Escape and check focus
+returns to the drawing without changing the page. Keyboard +/-/0 and arrows
+provide alternatives to gestures.
+
+Start a horizontal swipe on a drawing: it must turn one page without opening
+the viewer. Aborted swipes must leave the current page and allow the next tap.
+Repeat actual pinch/pan and horizontal swipes on iPhone and iPad before release;
+synthetic PointerEvents do not reproduce iOS touch arbitration.

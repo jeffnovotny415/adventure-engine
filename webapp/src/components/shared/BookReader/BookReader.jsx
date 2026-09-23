@@ -92,6 +92,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       }
       const gap = parseFloat(getComputedStyle(columns).columnGap) || 0;
       const width = viewport.clientWidth;
+      columns.style.setProperty('--reader-art-height', `${Math.max(64, viewport.clientHeight - 55)}px`);
       // WebKit needs an explicit width to fragment a single-column passage.
       // Keep the same computed page width for phone pages and tablet spreads.
       const visibleColumns = Number.parseInt(getComputedStyle(columns).columnCount, 10) || 1;
@@ -215,7 +216,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       <article className={`paper-book${choosing ? ' paper-book--choices' : ''}`} aria-label={title}>
         {choosing ? (
           <div {...(continuous ? {} : gestureHandlers)} data-zoomed={zoomed} className={`decision-spread${!continuous && textScale * nativeReading.textScale <= 1.5 ? ' decision-spread--facing' : ''}`}>
-          {!continuous && <DecisionContext {...{ storyTitle, title, intro, body, image, textScale, readingStyle }} systemScale={nativeReading.textScale} />}
+          {!continuous && <DecisionContext {...{ storyId, sceneId, storyTitle, title, intro, body, image, textScale, readingStyle }} systemScale={nativeReading.textScale} />}
           <section className="decision-page">
             <header className="decision-heading">
               <DecisionOrnament storyId={storyId} />
@@ -237,7 +238,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
             <div className="reader-surface" data-zoomed={zoomed} {...(continuous ? {} : gestureHandlers)}>
             <div className="reader-viewport" data-zoomed={zoomed} ref={viewportRef}>
               <div className="reader-columns" ref={columnsRef} style={{ transform: continuous ? 'none' : `translateX(${-page * layout.step}px)` }}>
-                <StoryTextPanel {...{ storyTitle, title, intro, body, image, headingRef }} />
+                <StoryTextPanel {...{ storyId, sceneId, storyTitle, title, intro, body, image, headingRef }} />
               </div>
             </div>
             </div>

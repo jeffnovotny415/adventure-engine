@@ -1,0 +1,234 @@
+{
+  "the_can_opener": [
+    {
+      "id": "01-garage-lab",
+      "sceneId": "scene_001",
+      "after": "The voice comes from your computer: your trusty AI assistant and friend, Asher.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/01-garage-lab.webp",
+      "alt": "A garage workbench filled with tools, salvaged parts, a backpack, and Asher’s computer.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "02-old-sandwich",
+      "sceneId": "scene_008",
+      "after": "The bot spins around, confused, and the cabinet door on its belly flaps open. A screwdriver falls out. Then a tape measure. Then a very old sandwich. That’s when you see your opening: a panel on its back, right between the shoulders.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/02-old-sandwich.webp",
+      "alt": "A moldy sandwich falls from the Construction Bot’s open tool cabinet with a PLOP.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "03-launcher-mishap",
+      "sceneId": "scene_021",
+      "after": "You stand there with an empty wrist brace and your hair sticking straight up.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/03-launcher-mishap.webp",
+      "alt": "A rock launcher is stuck backward in the wall; a gloved wrist has an empty brace.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "04-wheel-pop",
+      "sceneId": "scene_026",
+      "after": "The rock smashes into the front left wheel, and it pops right off its axle. The Load-Bot tips forward, spins in a slow, sad circle, and crashes onto its face with a BOOM that sets off a car alarm.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/04-wheel-pop.webp",
+      "alt": "The smiling Load-Bot loses a wheel beside the market, with a THWOOM.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "05-shield-cover-me",
+      "sceneId": "scene_033",
+      "after": "The stick skids off the light in a shower of sparks. The shield flickers, but it holds! The bot hits it again, and again, and you push forward behind the shield one step at a time. But you can’t get around it, and you can’t exactly fight with a shield and a thumb.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/05-shield-cover-me.webp",
+      "alt": "A gloved thumb holds a loose shield emitter in place as a Security Bot strikes the blue shield.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "06-asher-portable",
+      "sceneId": "scene_041",
+      "after": "“Welcome to the team, Asher Portable.”",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/06-asher-portable.webp",
+      "alt": "Asher Portable: goggles with a clip-on display, camera, earbud, and yellow-bulb signal booster.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "07-magnet-mishap",
+      "sceneId": "scene_044",
+      "after": "A wrench slides across the workbench and sticks to your left ankle. Then a screwdriver. Then a whole handful of bolts.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/07-magnet-mishap.webp",
+      "alt": "Magnet boots stick to the refrigerator and floor plate, with tools clinging to one ankle.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "08-stompers",
+      "sceneId": "scene_045",
+      "after": "“The Stompers.”",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/08-stompers.webp",
+      "alt": "The fully covered hero bounces toward the workbench; the powered-down Can Opener lies flat on the wood.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "09-up-the-wall",
+      "sceneId": "scene_047",
+      "after": "Clunk. Clunk. Clunk. You walk up the wall one heavy step at a time, staying in the corner where the bot can’t lean out far enough to aim at you. It knows you’re out there somewhere, so it keeps zapping the mailbox just in case.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/09-up-the-wall.webp",
+      "alt": "The fully covered hero climbs a steel wall using magnetic boots, with the inactive wrench on their belt.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "10-full-loadout",
+      "sceneId": "scene_049",
+      "after": "You look out over {world_name} from the roof. The Can Opener, The Wrist Wrock-It, Shield Cover Me, Asher Portable, The Stompers…every single one of them got you up here.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/10-full-loadout.webp",
+      "alt": "The fully covered hero rests above the neighborhood with all their inventions and a blue-eyed Security Bot.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "11-old-cannery",
+      "sceneId": "scene_053",
+      "after": "GRABS AWESOME STRUCTURES. MAKING YOUR NEIGHBORHOOD MINE! The word “MINE” has been crossed out by hand, and “BETTER” is written above it. Under that, in gold letters two feet tall: GAS. WE BLOW YOU AWAY!",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/11-old-cannery.webp",
+      "alt": "The fenced cannery has a rooftop antenna, trucks of broken robots, and gold GAS signs.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "12-under-the-awning",
+      "sceneId": "scene_054",
+      "after": "You catch it with two fingers. Way, WAY too close.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/12-under-the-awning.webp",
+      "alt": "The fully covered hero uses magnetic boots beneath an awning as a surveillance drone passes.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "13-max-office",
+      "sceneId": "scene_056",
+      "after": "“Sir, there is a computer on that desk, and it is unlocked. There is a sticky note on the screen. It says ‘Password: password.’”",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/13-max-office.webp",
+      "alt": "Max’s oversized office has a painting of him shaking hands with himself and a password note.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "14-max-on-stage",
+      "sceneId": "scene_058",
+      "after": "Standing behind the stage, still as statues, are two Security Bots with steady red eyes. One of them is giving the crowd a thumbs-up.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/14-max-on-stage.webp",
+      "alt": "Max Grabs grins on a stage with gold balloons, flying note cards, and Security Bots.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "15-bot-pileup",
+      "sceneId": "scene_060",
+      "after": "You pop one panel. You pop the other. Pull. Pull. Both sets of eyes fade to soft blue.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/15-bot-pileup.webp",
+      "alt": "A Load-Bot and Construction Bot are tangled in a heap, their eyes now blue.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "16-precision",
+      "sceneId": "scene_066",
+      "after": "Every terminal goes dark at once. The Robot Improver 3 makes a sound like a very large balloon letting go, and its lights go out row by row. On the roof, the antenna stops humming.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/16-precision.webp",
+      "alt": "The hooded hero fires a broad blue-white energy blast from the glowing tool head past Max toward the control monitors.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "17-neighborhood-safe",
+      "sceneId": "scene_068",
+      "after": "You nod back, and you keep walking.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/17-neighborhood-safe.webp",
+      "alt": "A child pats a peaceful robot, Mrs. Ruiz salutes, and the fully covered hero walks home.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "18-can-opener-active",
+      "sceneId": "scene_005",
+      "after": "The wrench head shifts with a sharp mechanical click, and a crackling energy blade snaps out along the side of the head like an axe made of lightning.",
+      "kind": "scene",
+      "src": "/images/stories/the_can_opener/illustrations/18-can-opener-active.webp",
+      "alt": "The Can Opener in active mode: steel wrench, copper coils, a blue power core, and an energy axe blade.",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "construction-bot",
+      "sceneId": "scene_006",
+      "after": "It’s a Construction Bot. It’s round and white like a giant egg on two stubby legs, with angry eyebrows over its eyes, a cabinet door on its belly where it keeps its tools, and a big hammer in one hand. Little rocket thrusters on its feet let it hop around a job site. It’s supposed to fix roads. Right now it’s un-fixing one.",
+      "kind": "specs",
+      "src": "/images/stories/the_can_opener/illustrations/construction-bot.webp",
+      "alt": "Construction Bot diagram: belly tool cabinet, hammer hand, and rocket-powered feet.",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "construction-bot",
+      "sceneId": "scene_007",
+      "after": "Right below you, a Construction Bot, the round white kind with angry eyebrows and rocket feet, swings its big hammer into a streetlight. The light topples over with a CRUNCH, and the bot starts hopping toward Mrs. Ruiz’s corner market.",
+      "kind": "specs",
+      "src": "/images/stories/the_can_opener/illustrations/construction-bot.webp",
+      "alt": "Construction Bot diagram: belly tool cabinet, hammer hand, and rocket-powered feet.",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "load-bot",
+      "sceneId": "scene_017",
+      "after": "A Load-Bot. It’s built like three big crates stacked on top of each other, with a square head, forklift prongs for hands, and big round rolling wheels instead of feet. There’s a screen on its chest with a little progress bar that says 87%. And painted on its face is a great big smile.",
+      "kind": "specs",
+      "src": "/images/stories/the_can_opener/illustrations/load-bot.webp",
+      "alt": "Load-Bot diagram: job progress bar, forklift hands, and omni wheels.",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "close-range-security-bot",
+      "sceneId": "scene_029",
+      "after": "A Close Range Security Bot. Its round eyes flicker red.",
+      "kind": "specs",
+      "src": "/images/stories/the_can_opener/illustrations/close-range-security-bot.webp",
+      "alt": "Close Range Security Bot diagram: antenna, wrench hand, taser stick, and wheels.",
+      "width": 1188,
+      "height": 1324
+    },
+    {
+      "id": "long-range-security-bot",
+      "sceneId": "scene_036",
+      "after": "A Long Range Security Bot.",
+      "kind": "specs",
+      "src": "/images/stories/the_can_opener/illustrations/long-range-security-bot.webp",
+      "alt": "Long Range Security Bot diagram: long-range vision and aiming system, taser blaster, and wheeled feet.",
+      "width": 1225,
+      "height": 1284
+    }
+  ]
+}

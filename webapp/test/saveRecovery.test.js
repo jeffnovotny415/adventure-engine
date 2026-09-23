@@ -12,6 +12,13 @@ const stories = Object.fromEntries(readdirSync(directory).filter((name) => name.
 }));
 const story = Object.values(stories)[0];
 const validSave = () => ({ ...createEmptySave(), storyId: story.id, currentSceneId: story.start_scene, heroName: 'Test Hero', worldName: 'Test World' });
+test('illustration anchors survive save migration while malformed IDs remain invalid', () => {
+  const readingPosition = { paragraph: 2, offset: 0, illustration: 'construction-bot' };
+  assert.deepEqual(migrateSave({...validSave(),readingPosition}, stories).save.readingPosition,readingPosition);
+  for (const illustration of [123, {}, '../image', '']) {
+    assert.equal(migrateSave({...validSave(),readingPosition:{...readingPosition,illustration}},stories).status,'invalid');
+  }
+});
 function memoryStorage(initial) {
   let raw = initial;
   return {

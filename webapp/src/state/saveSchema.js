@@ -60,7 +60,8 @@ export function migrateSave(raw, stories) {
   }
   if (raw.readingPosition != null && (!isRecord(raw.readingPosition) ||
       !Number.isSafeInteger(raw.readingPosition.paragraph) || raw.readingPosition.paragraph < 0 ||
-      !Number.isSafeInteger(raw.readingPosition.offset) || raw.readingPosition.offset < 0)) return invalid('malformed');
+      !Number.isSafeInteger(raw.readingPosition.offset) || raw.readingPosition.offset < 0 ||
+      (raw.readingPosition.illustration !== undefined && (typeof raw.readingPosition.illustration !== 'string' || !/^[a-z0-9-]{1,100}$/.test(raw.readingPosition.illustration))))) return invalid('malformed');
 
   if (Object.hasOwn(raw, 'atChoices') && typeof raw.atChoices !== 'boolean') return invalid('malformed');
   if (Object.hasOwn(raw, 'choiceHistory') && !Array.isArray(raw.choiceHistory)) return invalid('malformed');
@@ -85,7 +86,8 @@ export function migrateSave(raw, stories) {
       worldName: raw.worldName,
       currentSceneId: raw.currentSceneId,
       currentEntryIntro: raw.currentEntryIntro ?? null,
-      readingPosition: raw.readingPosition ? { paragraph: raw.readingPosition.paragraph, offset: raw.readingPosition.offset } : null,
+      readingPosition: raw.readingPosition ? { paragraph: raw.readingPosition.paragraph, offset: raw.readingPosition.offset,
+        ...(raw.readingPosition.illustration ? { illustration: raw.readingPosition.illustration } : {}) } : null,
       choiceHistory,
       atChoices: raw.atChoices ?? false,
       flags: { ...raw.flags },

@@ -15,6 +15,17 @@ export function captureReadingAnchor(viewport, columns, continuous = false) {
   const paragraphs = [...columns.querySelectorAll('.story-paragraph')];
   const index = paragraphs.findIndex((paragraph) =>
     [...paragraph.getClientRects()].some((rect) => continuous ? rect.bottom > 1 : rect.right > bounds.left + 1 && rect.left < bounds.right - 1));
+  const illustrations = [...columns.querySelectorAll('[data-illustration]')];
+  const illustration = illustrations.find(item => item.dataset?.illustration && [...item.getClientRects()].some(rect =>
+    continuous ? rect.bottom > 1 : rect.right > bounds.left + 1 && rect.left < bounds.right - 1));
+  if (illustration) {
+    const artRect = illustration.getBoundingClientRect();
+    const textRect = index >= 0 ? characterRect(paragraphs[index], 0) : null;
+    if (!textRect || (continuous ? artRect.top < textRect.top
+      : artRect.left < textRect.left - 1 || (Math.abs(artRect.left - textRect.left) < 2 && artRect.top < textRect.top))) {
+      return { paragraph: Number(illustration.dataset.afterParagraph), offset: 0, illustration: illustration.dataset.illustration };
+    }
+  }
   if (index < 0) return null;
   const paragraph = paragraphs[index];
   let low = 0;
@@ -33,6 +44,8 @@ export function captureReadingAnchor(viewport, columns, continuous = false) {
 
 export function readingAnchorTop(anchor, columns) {
   if (!anchor) return null;
+  const art = illustrationForAnchor(anchor, columns);
+  if (art) return art.getBoundingClientRect().top;
   const paragraph = columns.querySelectorAll('.story-paragraph')[anchor.paragraph];
   return (paragraph && characterRect(paragraph, anchor.offset))?.top ?? null;
 }
@@ -40,9 +53,14 @@ export function readingAnchorTop(anchor, columns) {
 export function pageForReadingAnchor(anchor, columns, step, count) {
   if (!anchor || step <= 0) return 0;
   const paragraph = columns.querySelectorAll('.story-paragraph')[anchor.paragraph];
-  const rect = paragraph && characterRect(paragraph, anchor.offset);
+  const rect = illustrationForAnchor(anchor, columns)?.getBoundingClientRect() ?? (paragraph && characterRect(paragraph, anchor.offset));
   if (!rect) return 0;
   // Both rectangles include the old page translation, which cancels out here.
   const position = rect.left - columns.getBoundingClientRect().left;
   return Math.max(0, Math.min(count - 1, Math.floor((position + 1) / step)));
+}
+
+function illustrationForAnchor(anchor, columns) {
+  return anchor.illustration ? [...columns.querySelectorAll('[data-illustration]')]
+    .find(item => item.dataset?.illustration === anchor.illustration) : null;
 }
