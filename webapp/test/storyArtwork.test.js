@@ -3,18 +3,23 @@ import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import artwork from '../src/content/story_artwork.json' with { type: 'json' };
 import story from '../src/data/stories/the_can_opener.json' with { type: 'json' };
+import mage from '../src/data/stories/summoned_mage.json' with { type: 'json' };
 import { artworkForPassage, paragraphsOf } from '../src/content/storyArtwork.js';
 import { boundView, zoomAt } from '../src/components/shared/SceneImage/imageZoom.js';
 
 test('every art placement resolves exactly once against the live authored source and ships its asset', () => {
-  for (const item of artwork.the_can_opener) {
-    const scene = story.scenes[item.sceneId];
-    assert.ok(scene, item.sceneId);
-    const matches = artworkForPassage('the_can_opener', item.sceneId, scene.text).filter(found => found.id === item.id);
-    assert.equal(matches.length, 1, `${item.sceneId}: ${item.id} needs anchor review`);
-    assert.equal(paragraphsOf(scene.text)[matches[0].afterParagraph], item.after);
-    assert.ok(existsSync(new URL(`../public${item.src}`, import.meta.url)), item.src);
-    assert.ok(item.alt && item.width > 0 && item.height > 0);
+  const stories = { the_can_opener: story, summoned_mage: mage };
+  for (const [storyId, placements] of Object.entries(artwork)) {
+    assert.ok(stories[storyId], `Missing live source coverage: ${storyId}`);
+    for (const item of placements) {
+      const scene = stories[storyId].scenes[item.sceneId];
+      assert.ok(scene, item.sceneId);
+      const matches = artworkForPassage(storyId, item.sceneId, scene.text).filter(found => found.id === item.id);
+      assert.equal(matches.length, 1, `${item.sceneId}: ${item.id} needs anchor review`);
+      assert.equal(paragraphsOf(scene.text)[matches[0].afterParagraph], item.after);
+      assert.ok(existsSync(new URL(`../public${item.src}`, import.meta.url)), item.src);
+      assert.ok(item.alt && item.width > 0 && item.height > 0);
+    }
   }
   assert.equal(story.scenes.scene_005.image.src, '/images/stories/the_can_opener/can_opener_blueprint.jpg');
 });

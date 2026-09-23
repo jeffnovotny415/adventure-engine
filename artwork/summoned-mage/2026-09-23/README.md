@@ -1,6 +1,6 @@
 # The Summoned Mage — narrative artwork set
 
-Fifteen drawings generated with the built-in image generation tool on September 23, 2026: the four approved first-batch illustrations plus eleven new review drafts. The new work covers Bernard and Gilly, all seven remaining narrative moments from the documented plan, and the Hollow Hills and broken seal. No app integration or story edits in this batch.
+Fifteen drawings generated with the built-in image generation tool on September 23, 2026: the four first-batch illustrations plus eleven further approved illustrations. The set covers Bernard and Gilly, all seven remaining narrative moments from the documented plan, and the Hollow Hills and broken seal. All fifteen are now integrated through separate presentation metadata; no story text was edited.
 
 - [Parchment review gallery](index.html), with full-resolution PNG downloads.
 - [First-batch prompts and correction](prompts.json).
@@ -45,3 +45,7 @@ All fifteen images were visually reviewed and retain genuine alpha transparency.
 Existing Elliana, Honey, and syphon character drawings remain in `artwork/chapter-headers/2026-09-23-new-sketches/` and were used for continuity. The existing Elliana portrait covers the character introduction planned for scene 005.
 
 The landscape drawings also cover the setting notes: cave, bridge, forest, Willowmere, Fancy Spoon, Hollow Hills, seal and source. No animation work was started. The first four approved PNG files and every protected story/Python/draft file remain byte-for-byte unchanged. All proposed anchors, asset hashes and gallery file links were checked.
+
+## App integration
+
+All fifteen approved drawings are included as full-resolution transparent WebP assets. `webapp/src/content/story_artwork.json` holds their exact paragraph anchors separately from authored story data. The Bernard portrait follows the offered bun; the broken seal follows its actual description, avoiding a visual reveal before the prose. Tap-to-enlarge, pinch zoom and the existing page-swipe behavior are shared with Tech Hero.

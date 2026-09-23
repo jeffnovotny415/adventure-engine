@@ -32,4 +32,4 @@ These rules record Jeff's artwork direction from September 23, 2026.
 - Use the first four drawings in `summoned-mage/2026-09-23/` as the approved narrative treatment: rich pencil texture, fine ink contours, warm fantasy color, expressive named characters and natural worn materials.
 - The reader's hero wears a charcoal-teal cloak with a raised hood, charcoal full gloves, covered trousers and boots; retain the identity concealment rules above. When Honey sits on the hero's head, show him on the raised hood.
 - Honey's body is grapefruit-sized. Keep him smaller than a person's head, including in group scenes.
-- Bernard and Gilly reference portraits accompany the remaining narrative batch; those new assets are review drafts until accepted.
+- Bernard and Gilly reference portraits and the remaining Mage narrative batch were approved. Use their designs consistently in future Mage scenes.

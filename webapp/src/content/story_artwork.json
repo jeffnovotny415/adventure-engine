@@ -230,5 +230,157 @@
       "width": 1225,
       "height": 1284
     }
+  ],
+  "summoned_mage": [
+    {
+      "id": "01-the-spell-lands",
+      "sceneId": "scene_015",
+      "after": "“I’m fine, I’m better than fine!” She scrambles up and now she’s laughing. “Do you know what the best mage in {world_name} can do right now? Light a lamp, if she’s had a good breakfast. And you just put a hole in a MOUNTAIN! The seers were right…they were really right!”",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/01-the-spell-lands.webp",
+      "alt": "The cloaked hero and Elliana react to a smoking hole in the cave wall, with sunlight pouring through.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "02-bridge-bandits",
+      "sceneId": "scene_019",
+      "after": "They’ve got long striped tails and flour sacks over their heads with eye holes cut in them, except one of them cut his eye holes in the wrong spot and has to keep turning his head sideways to see you. One has a pitchfork, one has a broom, and the smallest one is holding…a soup ladle?",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/02-bridge-bandits.webp",
+      "alt": "Three raccoon bandits block the bridge with a pitchfork, broom, and soup ladle while Elliana and the cloaked hero look on.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "03-willowmere",
+      "sceneId": "scene_034",
+      "after": "Washing lines are strung between the houses and the clothes on them are slowly turning round and round in the air, like they got stuck halfway through washing themselves. A long line of people with buckets stretches toward the middle of town, and the street lamps keep flickering on…and off…and on.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/03-willowmere.webp",
+      "alt": "Willowmere at sunset, with moss-roofed round homes, stalled floating carts, and beastfolk using ladders.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "04-honey-and-the-spark",
+      "sceneId": "scene_049",
+      "after": "He launches out of your lap and chases the spark all the way around the campfire, trilling at the top of his lungs, catches it, eats it, does a loop in the air, then zooms back and hovers right in front of your face waiting for another one.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/04-honey-and-the-spark.webp",
+      "alt": "The cloaked hero makes a tiny spark while Honey chases it around the campfire.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "05-bernard",
+      "sceneId": "scene_036",
+      "after": "Bernard comes around the counter, crouches down until his eyes are level with yours, and holds out a honey bun. It’s still warm, and it’s the best thing you’ve ever tasted, no contest.",
+      "kind": "character",
+      "src": "/images/stories/summoned_mage/illustrations/05-bernard.webp",
+      "alt": "Bernard, a friendly brown bear-folk baker, offers a honey bun and carries a black frying pan.",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "06-gilly",
+      "sceneId": "scene_035",
+      "after": "A fox-folk girl slides out from under the cart. She’s got red fur, a big bushy tail, goggles pushed up on her forehead, a smear of grease on her nose, and a wrench in each hand.",
+      "kind": "character",
+      "src": "/images/stories/summoned_mage/illustrations/06-gilly.webp",
+      "alt": "Gilly, a red fox-folk mechanic with goggles and a grease smudge, holds two wrenches.",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "07-warm-and-calm",
+      "sceneId": "scene_031",
+      "after": "Gordo climbs down from his tree with his mouth hanging open.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/07-warm-and-calm.webp",
+      "alt": "The cloaked hero sits among three sleeping, moss-covered tuskers as Gordo climbs down from his tree.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "08-the-first-syphon",
+      "sceneId": "scene_040",
+      "after": "It drifts right up to the glow, wraps its ribbons around the light, and drinks. You can actually see the light flow into it. For a second the creature glows a little, and whatever it was drinking from goes dark.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/08-the-first-syphon.webp",
+      "alt": "A pale, faceless syphon wraps ribbons around a street lantern and draws its light into itself.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "09-the-source",
+      "sceneId": "scene_057",
+      "after": "Syphons are rising up out of it one after another in a slow steady stream, like bubbles in a glass. There are already hundreds of them in here, hanging up near the ceiling as thick as fog.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/09-the-source.webp",
+      "alt": "A huge golden summoning circle glows below a high cavern ledge, with pale syphons rising toward the ceiling.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "10-a-table-at-the-spoon",
+      "sceneId": "scene_037",
+      "after": "“That’s Honey,” Bernard says. “You can probably guess how he got the name. He’s a puffkin, doesn’t belong to anybody, just turned up a while back and started stealing my buns.” He watches Honey settle into your hair like it’s a nest. “Looks like he belongs to you now. Puffkins can’t stay away from magic, and you’re the most magic thing he’s ever seen.”",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/10-a-table-at-the-spoon.webp",
+      "alt": "Honey steals a bun atop the hero’s raised hood while Bernard, Gilly and Elliana gather at the Fancy Spoon table.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "11-feeding-time",
+      "sceneId": "scene_042",
+      "after": "The rock goes straight through the syphon and it bursts apart like a dandelion when you blow on it. The pale fluff hangs in the air, swirls around, and slowly pulls itself back together a good ways farther off. It gives itself a little shake, then drifts away toward the hills like nothing happened, and the others follow it.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/11-feeding-time.webp",
+      "alt": "A thrown rock scatters a syphon into pale dandelion-like fluff while Elliana watches the cloaked hero.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "12-campfire",
+      "sceneId": "scene_046",
+      "after": "Bernard builds a fire the regular way, with sticks. Then he pulls out the frying pan, and that’s the end of anybody worrying about anything for a while. Honey eats four pancakes and then sits in the pan.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/12-campfire.webp",
+      "alt": "Bernard, Gilly, Elliana and the cloaked hero share a campfire while tiny Honey sits in a frying pan on the ground.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "13-the-crack",
+      "sceneId": "scene_056",
+      "after": "It takes all three of you pulling on his arms and one very unhappy minute, and then Bernard pops through like a cork out of a bottle and lands on top of everybody. He checks the pastries first. They’re fine.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/13-the-crack.webp",
+      "alt": "Gilly, Elliana and the cloaked hero help pull Bernard through a narrow crack in the rock.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "14-the-hollow-hills",
+      "sceneId": "scene_054",
+      "after": "And then you see it. In the side of the biggest hill there’s a cave mouth as tall as a house, with broken stone pillars on either side.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/14-the-hollow-hills.webp",
+      "alt": "A washed-out trail leads through the gray Hollow Hills to a tall cave entrance between broken pillars.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "15-the-broken-door",
+      "sceneId": "scene_055",
+      "after": "It used to be a door. It’s a huge round slab of stone twice as tall as Bernard, carved all over with symbols in rings inside of rings, just like the drawing in Elliana’s book. And it’s cracked right down the middle, the two halves leaning apart with a gap between them wide enough to walk through. The symbols must have glowed once, but now they’re dark.",
+      "kind": "scene",
+      "src": "/images/stories/summoned_mage/illustrations/15-the-broken-door.webp",
+      "alt": "A huge round stone seal with concentric carvings leans apart along a crumbly central crack.",
+      "width": 1536,
+      "height": 1024
+    }
   ]
 }

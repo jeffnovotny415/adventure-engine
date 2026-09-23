@@ -31,3 +31,11 @@ scene/layout combinations (including 225% text), complete image visibility,
 viewer pinch and zoom controls, focus restoration, drawing-origin swipes,
 image-only anchors across rotation, and continuous reading. All 41 tracked
 story/Python/draft files matched their pre-change SHA-256 hashes.
+
+## Summoned Mage integration
+
+Fifteen approved Mage drawings are placed at exact live-story paragraphs, including Bernard and Gilly's introductions and thirteen narrative illustrations. The full-resolution WebP copies retain transparency and add about 9.94 MiB to the offline bundle. PNG masters stay unchanged. Bernard's portrait follows his offered bun, and the seal drawing follows the carved-door description. This avoids revealing their visual details early.
+
+Verification: 105 scene/layout combinations across all fifteen placements, landscape/short phone, tablet, portrait and 225% text passed without clipped or missing drawings. WebKit checks passed for the enlarged viewer, zoom, close, reading-anchor restoration across phone/tablet rotation, and animated swipes. The user also confirmed the prior image-load swipe and spacing fix works on their iPhone. Protected authored sources remain byte-for-byte unchanged.
+
+The optional Playwright runner lives in `scripts/check-illustrated-reader.mjs`, outside Node's automatic `test/` discovery. The unit suite remains runnable without a developer browser installation.

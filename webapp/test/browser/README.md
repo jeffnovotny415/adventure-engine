@@ -133,7 +133,7 @@ Use `&animated` in the artwork fixture to exercise the real page-turn overlay.
 With a developer-installed Playwright and Vite running, run:
 
 ```sh
-READER_URL=http://127.0.0.1:5190 node test/browser/check-illustrated-reader.mjs
+READER_URL=http://127.0.0.1:5190 node scripts/check-illustrated-reader.mjs
 ```
 
 `PLAYWRIGHT_MODULE` can point to an existing Playwright module; `BROWSER=chromium`
@@ -144,3 +144,5 @@ and left the reader on the same page. It also checks illustration proportions
 and reserved height at short phone, landscape phone/tablet and portrait sizes
 with larger text. Browser mouse drags verify event routing; physical iOS touch
 arbitration still needs device testing.
+
+Mage integration: use `?story=summoned_mage&scene=scene_037` (Fancy Spoon), `scene_035` (Gilly portrait), or `scene_057` (source cavern). All fifteen Mage placements are covered by the live-source anchor test. The same `&large`, `&animated`, `&night` and `&continuous` flags apply.
