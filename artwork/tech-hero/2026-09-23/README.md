@@ -28,8 +28,10 @@ The documents were read as references. Their suggested app schemas, unlock scree
 - The Load-Bot's market readout matches the live story's 94%.
 - Asher Portable's display is over the wearer's right lens.
 
+- Precision now has a glowing aura around the entire tool head and a broad, surging blue-white energy blast, per Jeff’s revision. All illustrations, including the revised Precision, were approved.
+
 ## Status and verification
 
-These are review assets, not an app deployment. Existing story data, choices, IDs, and installed app artwork are unchanged. The source excerpts shown by the gallery are copied directly from the current story without rewriting.
+These are approved artwork assets, not an app deployment. Existing story data, choices, IDs, and installed app artwork are unchanged. The source excerpts shown by the gallery are copied directly from the current story without rewriting.
 
 All 19 deliverables are original-resolution PNGs with genuine alpha transparency, verified after generation. The final files are copied byte-for-byte from their selected generated outputs. Exact paragraph anchors, gallery file links, and image hashes are checked. The gallery's browser rendering was not automatically inspected because browser policy blocks local file navigation; its source and assets were checked directly.

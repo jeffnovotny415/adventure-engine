@@ -243,7 +243,14 @@
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-0f8d75a8-9a7b-4231-b918-85b7fb5643f7.png"
     ],
-    "edits": []
+    "edits": [
+      {
+        "prompt": "Use case: precise-object-edit. Edit the supplied Paths of Wonder book illustration. Change ONLY the blue energy discharge and its immediate reflected lighting. Envelop the ENTIRE front/head of the Can Opener tool (both wrench jaws, the whole metal head) in a bright rounded blue-white energy aura, like a charged glowing magical staff head. The jaws should be partially obscured inside the luminous sphere rather than a tiny beam exiting a tip. From that head erupt a powerful broad blue-white anime energy wave, inspired by Goku's Kamehameha: thick volumetric surging blast with luminous white core, layered electric-blue flowing edges, turbulent ribbons, streaks and a swelling leading impact at the control monitors. NOT a thin straight laser or narrow pencil beam. Keep the existing direction from lower-left tool to upper-right monitors; pass in FRONT of and safely PAST Max, never hit his body. Preserve his visible face and most of his silhouette. Preserve the rest of the illustration closely: same camera, composition, rear fully hooded hero, charcoal gloves with no skin/hair/face visible, copper coil handle and hand positions, startled Max and his gold outfit and remote, catwalk railings, industrial pipes, giant gold GAS machine and exact GAS lettering. Preserve professional ink outlines, detailed crosshatching and colored-pencil book art. Render energy in the same illustrated medium, vibrant blue/white. No new text or characters. Keep 1536x1024 landscape composition and genuine transparent alpha in existing vignette/background areas; no baked checkerboard, no opaque background.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/16-precision.png"
+        ]
+      }
+    ]
   },
   {
     "id": "17-neighborhood-safe",
