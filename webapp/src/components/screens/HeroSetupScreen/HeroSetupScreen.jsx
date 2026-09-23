@@ -4,6 +4,8 @@ import { AppHeader } from '../../shared/AppHeader/AppHeader';
 
 export function HeroSetupScreen({ story, onSubmit, onBack }) {
   const { getText } = useContent();
+  const worldNamePlaceholder = getText('hero_setup.world_name_placeholders')[story.id]
+    ?? getText('hero_setup.world_name_placeholder');
   const [heroName, setHeroName] = useState('');
   const [worldName, setWorldName] = useState('');
   const canSubmit = heroName.trim().length > 0 && worldName.trim().length > 0;
@@ -31,7 +33,7 @@ export function HeroSetupScreen({ story, onSubmit, onBack }) {
             <label>
               <span>{story.setup_prompt?.trim() || getText('hero_setup.world_name_fallback_label')}</span>
               <input type="text" value={worldName} onChange={(e) => setWorldName(e.target.value)}
-                placeholder={getText('hero_setup.world_name_placeholder')} autoComplete="off" required />
+                placeholder={worldNamePlaceholder} autoComplete="off" required />
             </label>
           </div>
           <button type="submit" disabled={!canSubmit} className="primary-button">{getText('hero_setup.continue_button')}</button>
