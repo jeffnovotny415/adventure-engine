@@ -1,0 +1,597 @@
+[
+  {
+    "id": "01-garage-lab",
+    "name": "The garage lab",
+    "sceneId": "scene_001",
+    "afterParagraph": 7,
+    "kind": "opening",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, warm cream metal, restrained copper and electric blue accents. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the established blueprint for style and tool design; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. A welcoming chapter-opening cutaway vignette of a small home garage workshop, no people. Battered timber workbench, tool pegboard, open scrap backpack, coils and small salvaged drives. Approved Asher cream/copper mini-fridge-sized tower with cyan HUD monitor sits beside bench; ASHER is only screen word. Pizza box tucked at one side, folded hand truck. Simple early workshop, no inventions from later chapters, no wrecked ceiling yet. Cropped garage-door frame and a little floor, not a full-page room. No other lettering. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-23-new-sketches/08-asher.png"
+    ],
+    "status": "review",
+    "file": "01-garage-lab.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-137188c2-e68f-47e4-b3cd-55d0ffc1d8b4.png",
+    "edits": [],
+    "alt": "A garage workbench filled with tools, salvaged parts, a backpack, and Asher’s computer.",
+    "sha256": "84d95ed7380458d48f73ce4f5a75e695f638a6c7e21bddda6286a3decfe56405",
+    "sceneTitle": "Getting Home",
+    "anchorText": "The voice comes from your computer: your trusty AI assistant and friend, Asher.",
+    "followingText": "“Well, Asher, I got some storage drives, scrap metal I can melt down for other uses, a few chips, and the real win here…”",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "02-old-sandwich",
+    "name": "The very old sandwich",
+    "sceneId": "scene_008",
+    "afterParagraph": 4,
+    "kind": "spot",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, warm cream metal, restrained copper and electric blue accents. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the established blueprint for style and tool design; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Small comic action vignette: approved egg-shaped Construction Bot on street, belly tool-cabinet door flung open. A screwdriver, tape measure and an obviously stale sandwich tumble out in that order; sandwich is visual focus with a couple of tiny flies. Its detached mechanical hammer arm clatters on pavement beside it, completely robotic, no gore. Bot confused but same flat-mouth/angry-brow design, no human hero required. Bare patch of pavement only. No text. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/construction-bot.png"
+    ],
+    "status": "review",
+    "file": "02-old-sandwich.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-12590ea1-dab5-4daa-911e-142cca7a5176.png",
+    "edits": [
+      {
+        "prompt": "Edit this illustration only to add the exact hand-lettered sound effect 'PLOP' immediately beside the moldy sandwich near ground level. Navy ink letters, small lively curved motion marks, readable but not dominating. Preserve the entire robot, detached hammer arm, falling tools, sandwich, colors, linework, composition and existing transparency exactly; change nothing else.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-d0191062-051e-4f88-a9ca-25403c838431.png"
+        ]
+      },
+      {
+        "prompt": "Edit ONLY the sound effect beside the moldy sandwich in this book illustration. Make exact 'PLOP' about twice its current size, playful hand-lettered navy ink on a small warm-ivory comic impact puff, with a few curved navy motion marks. It must read clearly on both light and dark page previews; put it beside, not on, the sandwich. Keep exact approved robot, detached hammer, tools, sandwich and colors/composition. Preserve genuine transparent background, no checkerboard or dark background. No other new words.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-901cff2c-67d0-4b8a-b647-2ab9f2673ee7.png"
+        ]
+      }
+    ],
+    "alt": "A moldy sandwich falls from the Construction Bot’s open tool cabinet with a PLOP.",
+    "sha256": "59d99297ba95c0d8d797cf3afe04cfe64a95ee0bc45626f3584e80b12d6e25e7",
+    "sceneTitle": "The Axe Blade",
+    "anchorText": "The bot spins around, confused, and the cabinet door on its belly flaps open. A screwdriver falls out. Then a tape measure. Then a very old sandwich. That’s when you see your opening: a panel on its back, right between the shoulders.",
+    "followingText": "One more swing. The blade cuts the panel wide open, sparks fly, and the bot’s foot thrusters sputter out. It sits down with a big THUNK, like it’s taking a nap.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "03-launcher-mishap",
+    "name": "More power. Probably.",
+    "sceneId": "scene_021",
+    "afterParagraph": 7,
+    "kind": "spot",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, warm cream metal, restrained copper and electric blue accents. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the established blueprint for style and tool design; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Comical workshop aftermath shown as wide vignette. Homemade cylindrical spring-and-copper-coil rock launcher embedded backward in garage wall like a dart, small plaster cracks. Opposite side a paint can untouched on a shelf. In bottom foreground ONLY a raised forearm with an EMPTY leather wrist brace where launcher used to attach, long cuff covering wrist, no head or face. Two loose bolts midair. Emphasize wrong-way experiment, not explosion or injury. No text. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "status": "review",
+    "file": "03-launcher-mishap.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-025100f4-cef9-4620-a33f-69bb9677cf87.png",
+    "edits": [
+      {
+        "prompt": "Correct ONE object in this illustration: replace the wrench/axe stuck in the garage wall with a homemade cylindrical ROCK LAUNCHER. This is NOT the Can Opener wrench. A short gunmetal tube barrel, copper electromagnetic coils, spring and piston housing, two small torn mounting brackets. Its back end embedded in wall like dart, open barrel mouth facing right into room. No wrench jaws, blade, hammer or prybar at all. Preserve the charcoal gloved hand with empty wrist brace, all skin fully covered by sleeve/glove, paint can untouched, workshop composition and professional ink/crosshatched colored-pencil style, genuinely transparent vignette edges. No text.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8782b4fd-cabb-468e-8799-803d583f7137.png"
+        ]
+      }
+    ],
+    "alt": "A rock launcher is stuck backward in the wall; a gloved wrist has an empty brace.",
+    "sha256": "be58d3d4adb9b9b8249a810a16da0001a61c6d206938e710e9aadc8bb6313aca",
+    "sceneTitle": "More Power",
+    "anchorText": "You stand there with an empty wrist brace and your hair sticking straight up.",
+    "followingText": "“Ok,” you say. “Less power.”",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "04-wheel-pop",
+    "name": "THWOOM!",
+    "sceneId": "scene_026",
+    "afterParagraph": 7,
+    "kind": "spot",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, warm cream metal, restrained copper and electric blue accents. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the established blueprint for style and tool design; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Approved Load-Bot with stacked cream crates, unwavering painted smile, heavy forklift prongs and chest progress screen, tipping as its FRONT LEFT wheel flies off the axle from a charged blue rock impact. Show that wheel detached clearly, one short motion arc, comic tilt. Background reduced to market loading-zone dumpster, dented back door and a few watermelon/orange splashes on brick wall, no human hero. Maintain robot design but wheel orientation convincing. Hand-letter exactly 'THWOOM!' once, no other text. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/load-bot.png"
+    ],
+    "status": "review",
+    "file": "04-wheel-pop.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-b114046c-61fa-4c11-bfa9-1861167e81b4.png",
+    "edits": [
+      {
+        "prompt": "Change ONLY the chest readout from '87%' to exact '94%' and adjust blue progress bar to 94 percent. Preserve Load-Bot's painted smile, robot design, detached wheel, THWOOM! text, fruit, loading-zone background, colors, crosshatching and transparency unchanged.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-a8ebdf84-f8c1-4d99-960e-f3f714560a36.png"
+        ]
+      },
+      {
+        "prompt": "Use case: background-extraction. This finished book illustration currently has an unwanted opaque black/dark gradient backdrop. Replace ONLY that external empty backdrop with a genuinely transparent alpha channel. Do not draw checkerboard or another background fill. Keep the actual drawing, floor/building/objects, all lettering, colors, composition and edges intact. Preserve all details: '94%' chest display, THWOOM! lettering, painted robot smile, detached wheel, fruit and wall. No change to subject design or pose. Return transparent PNG.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-e19cac4e-85bc-42ea-a099-3d17ccf1650d.png"
+        ]
+      }
+    ],
+    "alt": "The smiling Load-Bot loses a wheel beside the market, with a THWOOM.",
+    "sha256": "daa9b17013a3d5a6cd7c1b60654a16edefec81acad67bace9748b49ed945afad",
+    "sceneTitle": "Heavier Than Expected",
+    "anchorText": "The rock smashes into the front left wheel, and it pops right off its axle. The Load-Bot tips forward, spins in a slow, sad circle, and crashes onto its face with a BOOM that sets off a car alarm.",
+    "followingText": "It’s down, but it’s not out. Its forklift arms are still flailing, and your coil is empty. But it can’t reach behind itself.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "05-shield-cover-me",
+    "name": "Shield Cover Me",
+    "sceneId": "scene_033",
+    "afterParagraph": 3,
+    "kind": "feature",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, warm cream metal, restrained copper and electric blue accents. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the established blueprint for style and tool design; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Tight action vignette, cropped POV hands and long sleeves covering wrists only, one hand gripping the back handle of a battered round homemade shield frame while its THUMB visibly pins a loose emitter in place. Battery pack hangs by loose wires, tape around housing. A broad translucent electric BLUE energy circle projects from frame. Approved Close Range Security Bot on little wheels strikes the blue shield with a sparking taser stick. Clear strike/sparks and shield still holding; no injury. Small yellow antenna bulb. Exact hand-lettered sound 'BZZZZT!' only. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/close-range-security-bot.png"
+    ],
+    "status": "review",
+    "file": "05-shield-cover-me.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-21bd9b18-07a9-4b88-967d-a46529facaca.png",
+    "edits": [],
+    "alt": "A gloved thumb holds a loose shield emitter in place as a Security Bot strikes the blue shield.",
+    "sha256": "97ab93e8b7026adcad4bacf3269af7e9b2f3c300a2ba5a40bda816fad4fc3ffb",
+    "sceneTitle": "Shield Cover Me",
+    "anchorText": "The stick skids off the light in a shower of sparks. The shield flickers, but it holds! The bot hits it again, and again, and you push forward behind the shield one step at a time. But you can’t get around it, and you can’t exactly fight with a shield and a thumb.",
+    "followingText": "“ASHER! SHIELD! COVER ME!”",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "06-asher-portable",
+    "name": "Asher Portable",
+    "sceneId": "scene_041",
+    "afterParagraph": 6,
+    "kind": "opening",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, warm cream metal, restrained copper and electric blue accents. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the established blueprint for style and tool design; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Technical invention plate of work goggles laid on bench, nobody wearing them. Small camera and transparent clip-on display over the wearer's RIGHT lens, showing one little blue HUD ring; thin cable to one earbud. Salvaged antenna with yellow bulb is connected signal booster. Copper contacts, improvised clips, tiny screws, refined believable construction. Sparse neat handwritten labels with precise arrows exactly 'Asher Portable', 'Clip-on display', 'Earbud', 'Signal booster'. Lens and earbud visually distinct. Isolated gear portrait composed horizontally. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/close-range-security-bot.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-23-new-sketches/08-asher.png"
+    ],
+    "status": "review",
+    "file": "06-asher-portable.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8013e285-3215-467d-a98b-44042d46c906.png",
+    "edits": [
+      {
+        "prompt": "Precise edit: the display must attach over the WEARER'S RIGHT goggle lens, which is the lens on the LEFT side of this front-facing illustration. Move the small clip-on HUD display and its camera from image-right lens to image-left lens. Other lens clear. Relocate the 'Clip-on display' arrow to point to the moved display, retain all exact labels, earbud, yellow-bulb signal booster box, colors, professional ink/pencil construction, object sizes and transparent background. No person.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-4ecedcbc-9a4a-472e-8197-60cbfe61951e.png"
+        ]
+      }
+    ],
+    "alt": "Asher Portable: goggles with a clip-on display, camera, earbud, and yellow-bulb signal booster.",
+    "sha256": "3f6d6dcdd2dbc4b88719558d781a036edb3db9e41b8e2479a79bf75119c9d82a",
+    "sceneTitle": "Miniaturizing Asher",
+    "anchorText": "“Welcome to the team, Asher Portable.”",
+    "followingText": "“That is simply a description of what I am, sir.”",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "07-magnet-mishap",
+    "name": "Magnet boot testing",
+    "sceneId": "scene_044",
+    "afterParagraph": 9,
+    "kind": "spot",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, warm cream metal, restrained copper and electric blue accents. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the established blueprint for style and tool design; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Wide humorous vignette of the magnet-boot mishap. Crop the hero entirely above waist so no face/head: trousered legs stretched in awkward splits, LEFT boot sole magnetically stuck to VERTICAL refrigerator door on left, RIGHT boot sole stuck to HORIZONTAL steel plate on floor at right. Anatomically coherent two legs, two feet. Repurposed chunky rain boots with copper electromagnet soles and round blue power cores at ankles. Wrench, screwdriver and bolts stuck to left ankle. No injury. Exact sound 'CLANG!' only. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "status": "review",
+    "file": "07-magnet-mishap.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-199ba4aa-13eb-4485-a7f3-3a6162846200.png",
+    "edits": [],
+    "alt": "Magnet boots stick to the refrigerator and floor plate, with tools clinging to one ankle.",
+    "sha256": "1dc2f52bbe1f647707819454d08119378d249b3acbcf1455480a35af70aa2c4e",
+    "sceneTitle": "Magnet Boot Testing",
+    "anchorText": "A wrench slides across the workbench and sticks to your left ankle. Then a screwdriver. Then a whole handful of bolts.",
+    "followingText": "“You are collecting tools at an impressive rate, sir.”",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "08-stompers",
+    "name": "The Stompers",
+    "sceneId": "scene_045",
+    "afterParagraph": 9,
+    "kind": "feature",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, warm cream metal, restrained copper and electric blue accents. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the established blueprint for style and tool design; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Energetic diagonal upward action: strictly REAR VIEW hooded child inventor in plain charcoal hoodie and trousers, FACE ENTIRELY HIDDEN, propelled from a small steel floor plate toward a low workbench. Two big modified rain boots with copper magnetic soles and blue ankle power cores; body in a funny seated landing pose midair, natural two arms/two legs. A single elegant motion arc from plate to bench, loose pencil lines, no rocket flames because propulsion is magnetic repulsion. Hand-letter 'BOING!' once. No other lettering. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "status": "review",
+    "file": "08-stompers.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-578920fb-010a-42b1-a27c-6847d61cb339.png",
+    "edits": [
+      {
+        "prompt": "Edit only the tool sitting on the workbench: make the real Can Opener's body brushed steel/gunmetal with copper coils, blue UNLIT glass core, and completely remove the curved energy axe blade to left of its jaws. Blade is OFF so NO white, gray, metal or blue axe shape should remain. Only actual wrench jaws, hammer face, core, copper handle and bottom prybar remain. Preserve hero's exact rear-view pose, fully concealed face/hair/skin, charcoal gloves and clothes, blue ankle power cores, boots, BOING! lettering, furniture and transparent vignette.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png"
+        ]
+      },
+      {
+        "prompt": "Precise edit of image 1: the wrench invention currently standing impossibly upright on its prybar end on the workbench MUST instead LIE FLAT on its side ON the wooden tabletop, fully supported by wood with small contact shadow. Lay it diagonally along the bench in perspective, steel jaws and copper-wrapped handle both touching table, no floating/standing/leaning. Use the powered-down reference image 2 for the tool: NO axe blade and no glow. It can be smaller to fit between vise and cans. Preserve the jumping hero's pose, gloves, hood, fully hidden face/skin/hair, BOING! text, boots, table and rest of illustration. Only reposition the tool physically plausibly. Same full-color ink and pencil, transparency.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-defe68d4-0250-42af-a4e4-75e2d4da9ae6.png",
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-cd0bd2c1-de98-428d-8670-ac04af46dfaf.png"
+        ]
+      },
+      {
+        "prompt": "Use case background-extraction. The artwork is approved; remove ONLY the baked-in gray checkerboard pattern behind the drawing and replace it with a genuinely transparent alpha channel. Do not draw any checkerboard, solid fill or vignette halo. Preserve every foreground subject pixel as faithfully as possible: jumping charcoal-hooded/gloved hero, magnetic boots, BOING lettering, motion arc, floor plate, workbench, cans, vise, toolbox, and especially the powered-OFF copper-and-steel wrench LYING FLAT ON THE TABLE. Do not stand up, move, redesign or glow the wrench. No blade. No alteration to pose, color, tool or composition.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-b824e2bc-ae40-4065-91c1-b5ec912ef492.png"
+        ]
+      }
+    ],
+    "alt": "The fully covered hero bounces toward the workbench; the powered-down Can Opener lies flat on the wood.",
+    "sha256": "4c6446767983cfe769852b10fc8eca7d34e87172c8c9c717467f8154dc60db77",
+    "sceneTitle": "The Stompers",
+    "anchorText": "“The Stompers.”",
+    "followingText": "A pause.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "09-up-the-wall",
+    "name": "Up the wall",
+    "sceneId": "scene_047",
+    "afterParagraph": 7,
+    "kind": "spot",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, full-color materials: silver/gunmetal machinery, copper coils, cream painted bot panels, rich blue energy, colored cloth and scenery. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the full-color Can Opener for book style and tool design; copy its object ONLY if this scene describes the Can Opener; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Clever readable perspective comic vignette: faceless hero shown strictly FROM BEHIND in charcoal hoodie, goggles strap, trousers, chunky magnetic rain boots, standing horizontally outward from a vertical steel bank wall, boots attached flat to wall. Gravity evident from hanging jacket hem/tool belt. One hand braced, other held for balance, no face profile. Small blue mailbox and bus-stop post far below, cropped window edges; street depth implies three storeys. Do not rotate the whole scene so it looks like ordinary standing. No text. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png"
+    ],
+    "status": "review",
+    "file": "09-up-the-wall.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-5954e835-6ce2-40a7-9e9c-a1a1ebc81f2b.png",
+    "edits": [
+      {
+        "prompt": "Edit image 1 to correct Can Opener state and position. Hero is climbing, NOT fighting or fixing a vent: remove tool from right hand, make that gloved palm touch steel wall for balance instead, and place the compact powered-OFF wrench secured at hero's hip tool-belt. Use image 2 tool design in small scale, dark steel/copper, no curved axe blade at all, no arcs, no glow, no white replacement blade. Keep both magnetic boots firmly against wall, same hero back view with charcoal hood/gloves all skin and hair hidden, street below and composition. No other changes.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-5e4d54f0-c046-4225-a88f-e11ae3d83748.png",
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-cd0bd2c1-de98-428d-8670-ac04af46dfaf.png"
+        ]
+      },
+      {
+        "prompt": "Use case: background-extraction. This finished book illustration currently has an unwanted opaque black/dark gradient backdrop. Replace ONLY that external empty backdrop with a genuinely transparent alpha channel. Do not draw checkerboard or another background fill. Keep the actual drawing, floor/building/objects, all lettering, colors, composition and edges intact. Preserve all details: charcoal covered hero, two gloved palms against wall, small powered-OFF steel/copper wrench secured at hip with absolutely NO axe blade, two magnetic boots and street below. No change to subject design or pose. Return transparent PNG.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-b80b9db2-600e-4dbf-b02c-062042c6be1b.png"
+        ]
+      }
+    ],
+    "alt": "The fully covered hero climbs a steel wall using magnetic boots, with the inactive wrench on their belt.",
+    "sha256": "7d07e01f614fa2a3db8a3ce473d8729e6980ecb32e022204aa1ab316f312efff",
+    "sceneTitle": "Up the Wall",
+    "anchorText": "Clunk. Clunk. Clunk. You walk up the wall one heavy step at a time, staying in the corner where the bot can’t lean out far enough to aim at you. It knows you’re out there somewhere, so it keeps zapping the mailbox just in case.",
+    "followingText": "You reach the top and peek over the edge. The bot has its back to you, skate wheels locked, leaning out over the front of the roof.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "10-full-loadout",
+    "name": "Full loadout",
+    "sceneId": "scene_049",
+    "afterParagraph": 7,
+    "kind": "feature",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, full-color materials: silver/gunmetal machinery, copper coils, cream painted bot panels, rich blue energy, colored cloth and scenery. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the full-color Can Opener for book style and tool design; copy its object ONLY if this scene describes the Can Opener; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Quiet heroic neighborhood rooftop vignette, hero exclusively REAR VIEW with hood hiding head/face, modest build in charcoal work clothes, not superhero armor. Looking across small neighborhood roofs from bank parapet. Show complete homemade equipment: approved large Can Opener wrench copper coil and dormant blue axe edge on belt, small spring/coil rock launcher on one wrist, repaired compact round shield strapped to back, work-goggle strap with yellow bulb antenna, big rain boots with blue ankle cores and copper magnet soles. At one side approved long-range bot seated inactive with BLUE visor still giving thumbs-up. Sparse rooftops fading into transparent space, no letters. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/long-range-security-bot.png",
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png",
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-4ecedcbc-9a4a-472e-8197-60cbfe61951e.png"
+    ],
+    "status": "review",
+    "file": "10-full-loadout.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-e4486152-16fd-4837-be9f-26371778b82c.png",
+    "edits": [
+      {
+        "prompt": "Correct image 1 while retaining its quiet rooftop composition and entirely concealed rear-view hero. 1) Replace belt tool with image 2 powered-OFF steel and copper wrench: completely remove projecting axe blade, no glow, no blade outline. 2) Small seated robot at left should match image 3's approved Long Range Security Bot: angular long oval face, two rectangular DARK visor panels with soft BLUE lens light, flat straight mouth, thin long limbs, skate feet, still giving thumbs-up. Not happy crescent eyes. 3) Add a small secured cylindrical copper-coil rock-launcher to forearm, and small yellow-bulb signal booster on goggle strap above hood side. Keep charcoal gloves and hood, no visible skin/hair/face, existing shield and magnetic boots, perspective and full-color drawn medium. No typography.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-1f0519a7-f66e-4f12-9ce3-513d1d3e9e4a.png",
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-cd0bd2c1-de98-428d-8670-ac04af46dfaf.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/long-range-security-bot.png"
+        ]
+      },
+      {
+        "prompt": "Use case: background-extraction. This finished book illustration currently has an unwanted opaque black/dark gradient backdrop. Replace ONLY that external empty backdrop with a genuinely transparent alpha channel. Do not draw checkerboard or another background fill. Keep the actual drawing, floor/building/objects, all lettering, colors, composition and edges intact. Preserve all details: hooded gloved rear-view hero, corrected thin long-range bot with rectangular blue visor panels, hip wrench powered OFF with NO axe blade, shield, wrist rock-launcher, yellow bulb antenna, boots, and rooftops. No change to subject design or pose. Return transparent PNG.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f89c96a2-52b0-4828-a71a-39aa0feca040.png"
+        ]
+      }
+    ],
+    "alt": "The fully covered hero rests above the neighborhood with all their inventions and a blue-eyed Security Bot.",
+    "sha256": "755c846dc8cd61a1c6b9ee22ef94716347793d483c5cc53cfd27bbfdf9bb6a86",
+    "sceneTitle": "Full Loadout",
+    "anchorText": "You look out over {world_name} from the roof. The Can Opener, The Wrist Wrock-It, Shield Cover Me, Asher Portable, The Stompers…every single one of them got you up here.",
+    "followingText": "The bot’s visor goes dark.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "11-old-cannery",
+    "name": "The old cannery",
+    "sceneId": "scene_053",
+    "afterParagraph": 6,
+    "kind": "feature",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, full-color materials: silver/gunmetal machinery, copper coils, cream painted bot panels, rich blue energy, colored cloth and scenery. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the full-color Can Opener for book style and tool design; copy its object ONLY if this scene describes the Can Opener; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Atmospheric but readable old red-brick cannery exterior vignette, no hero. New chain-link fence and gated drive, lights inside, tall humming antenna mast on roof, flatbed trucks stacked with broken familiar cream robots. Metal loading awning and steel drainpipe to second-floor office window. Gold sign on gate, clearly lettered ONLY 'GRABS AWESOME STRUCTURES' and a separate large 'GAS'; omit other tiny sign prose rather than invent it. Familiar round Construction and stacked Load bot shapes in truck scrap. Copper/gold details, restrained blue window light, no night sky rectangle. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/construction-bot.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/load-bot.png"
+    ],
+    "status": "review",
+    "file": "11-old-cannery.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-c046e476-d48d-4f3c-8830-4ed24c58780a.png",
+    "edits": [],
+    "alt": "The fenced cannery has a rooftop antenna, trucks of broken robots, and gold GAS signs.",
+    "sha256": "54cd92ec8ab7c9d3524b3fd0cb117e6736fd8e775e116c8b2c4a4b51dfd48c00",
+    "sceneTitle": "A Destination",
+    "anchorText": "GRABS AWESOME STRUCTURES. MAKING YOUR NEIGHBORHOOD MINE! The word “MINE” has been crossed out by hand, and “BETTER” is written above it. Under that, in gold letters two feet tall: GAS. WE BLOW YOU AWAY!",
+    "followingText": "You stare at it for a long moment.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "12-under-the-awning",
+    "name": "Like a bat",
+    "sceneId": "scene_054",
+    "afterParagraph": 11,
+    "kind": "spot",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, full-color materials: silver/gunmetal machinery, copper coils, cream painted bot panels, rich blue energy, colored cloth and scenery. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the full-color Can Opener for book style and tool design; copy its object ONLY if this scene describes the Can Opener; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Wide suspense/comedy vignette: side/back view of hooded child hero hanging UPSIDE DOWN from underside of metal loading-dock awning, both magnetic boot soles firmly attached above, gravity pulls backpack and sleeves down. Keep face fully hidden behind hood/back-of-head, no front or profile. One hand catches a tiny falling granola-bar wrapper with two fingers. Approved four-ducted-fan surveillance drone glides just below, upper/lower cameras visible; same cream/copper-gold design, plaque gold but no microtext required. Hero and drone never touch. Clear separation and recognizable upside-down pose, limited awning supports. No text. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves. CAN OPENER RULE: never show a deployed axe blade for carrying, fixing, climbing or resting. Inactive means NO blade shape whatsoever, no white/metal substitute blade and no electrical arcs; the wrench jaws/hammer/prybar remain. Do not add the tool to scenes where it was not requested. Only scene 066's scripted discharge can emit a white-blue beam aimed at machinery. This is playful fictional magnetic ceiling-walking, like a superhero using gravity boots: the boots mechanically support the fully clothed hero at the awning, comfortable bent knees and alert gloved hands, with no rope, neck contact, injury, distress or self-harm. Keep it lighthearted and physically readable.",
+    "refs": [
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-23-new-sketches/07-surveillance-drone.png",
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png"
+    ],
+    "status": "review",
+    "file": "12-under-the-awning.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-a08336fc-da82-46c2-9092-e450ea90fca5.png",
+    "edits": [],
+    "alt": "The fully covered hero uses magnetic boots beneath an awning as a surveillance drone passes.",
+    "sha256": "c280545851ef32e3781f51b3923599e0524b6476c4809ec600fb3d7a8a5b59a8",
+    "sceneTitle": "Drone Spotted",
+    "anchorText": "You catch it with two fingers. Way, WAY too close.",
+    "followingText": "So it isn’t just a signal. Somebody is watching the whole neighborhood…and now you know his name.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "13-max-office",
+    "name": "An office fit for Max",
+    "sceneId": "scene_056",
+    "afterParagraph": 6,
+    "kind": "feature",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, full-color materials: silver/gunmetal machinery, copper coils, cream painted bot panels, rich blue energy, colored cloth and scenery. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the full-color Can Opener for book style and tool design; copy its object ONLY if this scene describes the Can Opener; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Empty extravagant office viewed through cracked-open window, no actual people in room. Oversized polished desk and absurdly oversized upholstered chair, deep plush carpet, small computer and sticky note reading exactly 'Password: password.' Above desk a huge framed humorous painting of THE SAME Max Grabs shaking hands with HIMSELF: identical broad toothy grin, swept-back dark hair with grey temples, shiny gold suit, round stocky middle-aged body. Painting has two identical men, real room empty. Gold frame, smug silliness, fine ink/pencil, sparse room vignette. No other text. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves. CAN OPENER RULE: never show a deployed axe blade for carrying, fixing, climbing or resting. Inactive means NO blade shape whatsoever, no white/metal substitute blade and no electrical arcs; the wrench jaws/hammer/prybar remain. Do not add the tool to scenes where it was not requested. Only scene 066's scripted discharge can emit a white-blue beam aimed at machinery.",
+    "refs": [
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-0f8d75a8-9a7b-4231-b918-85b7fb5643f7.png"
+    ],
+    "status": "review",
+    "file": "13-max-office.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-e4e577d5-917d-451f-9fcd-0b506ff24fa6.png",
+    "edits": [],
+    "alt": "Max’s oversized office has a painting of him shaking hands with himself and a password note.",
+    "sha256": "5efb2725d452a01d9c1a7b4ab0560cb136b6eb1060dec5a0bfc9c27ee5999416",
+    "sceneTitle": "The Side Window",
+    "anchorText": "“Sir, there is a computer on that desk, and it is unlocked. There is a sticky note on the screen. It says ‘Password: password.’”",
+    "followingText": "“He didn’t even need it. He left himself logged in.”",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "14-max-on-stage",
+    "name": "Max Grabs takes the stage",
+    "sceneId": "scene_058",
+    "afterParagraph": 21,
+    "kind": "feature",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, warm cream metal, restrained copper and electric blue accents. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the established blueprint for style and tool design; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Introduce Max Grabs: stocky middle-aged human man, swept-back dark hair with grey temples, round cheeks, big exaggerated toothy smile, shiny champagne-gold business suit, waistcoat and dark tie. He stands on tiny town-square wooden stage decorated with gold balloons, dropped note cards fluttering around his feet, one in hand. Smug silly enthusiasm. Two approved security robots stand behind, small red eye/visor accents, long-range bot thumbs-up. A few crowd backs only at lower edge, reader hero not singled out. Stage placard exactly 'GAS'. Notes blank except fine illegible strokes. No invented dialogue. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/close-range-security-bot.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/long-range-security-bot.png"
+    ],
+    "status": "review",
+    "file": "14-max-on-stage.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-0f8d75a8-9a7b-4231-b918-85b7fb5643f7.png",
+    "edits": [],
+    "alt": "Max Grabs grins on a stage with gold balloons, flying note cards, and Security Bots.",
+    "sha256": "cf4e07dbd7c57d1276613c0ae9e2d61e3ed9c4e2f241eb384d74d6edf66e91c9",
+    "sceneTitle": "The Man in the Shiny Suit",
+    "anchorText": "Standing behind the stage, still as statues, are two Security Bots with steady red eyes. One of them is giving the crowd a thumbs-up.",
+    "followingText": "“That is him, sir,” Asher says in your ear.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "15-bot-pileup",
+    "name": "Forklifts and rocket feet",
+    "sceneId": "scene_060",
+    "afterParagraph": 7,
+    "kind": "spot",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, full-color materials: silver/gunmetal machinery, copper coils, cream painted bot panels, rich blue energy, colored cloth and scenery. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the full-color Can Opener for book style and tool design; copy its object ONLY if this scene describes the Can Opener; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Broad comic mechanical heap of exactly TWO approved bots: stacked-crate Load-Bot with painted smile and forklift prongs, and egg-shaped Construction Bot with belly tool cabinet, hammer and rocket boots. Tangled from collision on cannery driveway, one detached round wheel rolling away. Both recognisable heads/bodies remain identifiable, eyes soft BLUE, no flames, no damage to organic bodies. A few bolts and curved impact lines, minimal ground. No hero, no text. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves. CAN OPENER RULE: never show a deployed axe blade for carrying, fixing, climbing or resting. Inactive means NO blade shape whatsoever, no white/metal substitute blade and no electrical arcs; the wrench jaws/hammer/prybar remain. Do not add the tool to scenes where it was not requested. Only scene 066's scripted discharge can emit a white-blue beam aimed at machinery.",
+    "refs": [
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/load-bot.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/construction-bot.png"
+    ],
+    "status": "review",
+    "file": "15-bot-pileup.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-6679d298-6d37-42c0-a6e8-e1cc209d227e.png",
+    "edits": [
+      {
+        "prompt": "Correct the TWO robot expressions in this illustration: the box-headed Load-Bot must have its permanent PAINTED SMILE, a simple dark curved mouth, never a round open hole. Restore a small chest progress display on Load-Bot. The egg Construction Bot should have its original straight flat mouth, not a hole. Both keep soft blue eye lights and original shapes. Remove the foreground hero entirely to focus on the comic heap of two tangled bots, replacing occupied area with clean transparent negative space and a little ground. Keep robot pile position, forklift limbs, rocket feet, hammer, rolling wheel, palette, ink/pencil shading, transparent background. No new lettering or people.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-73f84264-f44c-49de-ac83-e504fff011b1.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/load-bot.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/construction-bot.png"
+        ]
+      }
+    ],
+    "alt": "A Load-Bot and Construction Bot are tangled in a heap, their eyes now blue.",
+    "sha256": "d73acf1c80a004f5cd862d1d6908e06b7d8023baa042c6cc298122a02831d9fd",
+    "sceneTitle": "The Front Gate",
+    "anchorText": "You pop one panel. You pop the other. Pull. Pull. Both sets of eyes fade to soft blue.",
+    "followingText": "“Sorry, guys,” you say, and you mean it. “I’ll be back for you.”",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "16-precision",
+    "name": "Precision",
+    "sceneId": "scene_066",
+    "afterParagraph": 3,
+    "kind": "feature",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, full-color materials: silver/gunmetal machinery, copper coils, cream painted bot panels, rich blue energy, colored cloth and scenery. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the full-color Can Opener for book style and tool design; copy its object ONLY if this scene describes the Can Opener; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Wide dramatic precision blast vignette inside cannery: POV only forearms and approved copper-wrapped Can Opener wrench at lower left emitting one narrow WHITE-BLUE beam aimed past Max Grabs on overhead metal walkway into wall of control-terminal screens behind him. Beam clearly MISSES his body with safe gap; his gold bathrobe flutters, shiny suit under robe, slippers, one-button remote in hand. Same stocky middle-aged man swept-back dark hair grey temples, toothy startled face. School-bus-sized retro machine below walkway, big gold 'GAS' on side, steel pillars/skylight lightly suggested. Screens sparking then dark, not a giant fireball. No gore, no other text. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves. CAN OPENER RULE: never show a deployed axe blade for carrying, fixing, climbing or resting. Inactive means NO blade shape whatsoever, no white/metal substitute blade and no electrical arcs; the wrench jaws/hammer/prybar remain. Do not add the tool to scenes where it was not requested. Only scene 066's scripted discharge can emit a white-blue beam aimed at machinery.",
+    "refs": [
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-0f8d75a8-9a7b-4231-b918-85b7fb5643f7.png"
+    ],
+    "status": "review",
+    "file": "16-precision.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-c0731abe-1361-4d15-af02-01a70588cdfb.png",
+    "edits": [],
+    "alt": "A precise blue-white discharge passes Max and strikes the cannery’s control terminals.",
+    "sha256": "6147a648339732cda3f0edddb6cfffed22f2e34f6623e1d702b5fe8bbf8052bc",
+    "sceneTitle": "Precision",
+    "anchorText": "Every terminal goes dark at once. The Robot Improver 3 makes a sound like a very large balloon letting go, and its lights go out row by row. On the roof, the antenna stops humming.",
+    "followingText": "And all across {world_name}, in alleys and empty lots and the middle of Elm Street, every haywire robot slows down, lowers its arms, and stops. Hundreds of flickering red lights fade to a soft, calm blue.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "17-neighborhood-safe",
+    "name": "The good kind of quiet",
+    "sceneId": "scene_068",
+    "afterParagraph": 5,
+    "kind": "feature",
+    "prompt": "Use case: illustration-story. Create ONE original professional book illustration for Paths of Wonder / Tech Hero, The Can Opener. Match the provided approved art: dark navy ink outlines, fine graphite crosshatching, tactile colored-pencil shading, full-color materials: silver/gunmetal machinery, copper coils, cream painted bot panels, rich blue energy, colored cloth and scenery. Same established book style, confident draftsmanship and readable silhouettes, not a tracing, not stick figures, not photorealistic or 3D. Landscape 3:2 standalone vignette, genuinely transparent background and clear breathing room at edges. No black background, checkerboard, paper rectangle, border, atmospheric glow halo, panel grid or watermark. The first reference is the full-color Can Opener for book style and tool design; copy its object ONLY if this scene describes the Can Opener; other references are exact recurring character/object designs. Preserve their recognizable silhouettes. Only add text explicitly specified. The unnamed reader-hero has no visible face, no defined gender: use POV gloved hands, cropped fully clothed limbs or a strictly rear view, hood up where needed. Consistent plain charcoal work hoodie, practical trousers, work goggles, no superhero costume. Do not invent story dialogue, names or initials. Tender night neighborhood street vignette, cropped warm streetlamp and market frontage; no solid sky. Approved egg Construction Bot kneels gently so a small anonymous neighborhood child can pat its round head, bot eye lights calm soft BLUE. In background approved long-range bot gives thumbs-up with blue visor. Mrs Ruiz, practical middle-aged shopkeeper in cardigan and apron, holds broom at market door and offers two-finger salute. Reader-hero in charcoal hoodie and goggles walks away seen STRICTLY FROM BEHIND, face hidden. Quiet porches, a couple of neighbors in pajamas, no text or invented signs. Warm restrained amber light plus soft blue robot eyes. USER REQUIREMENT FOR THE READER-HERO: reveal ZERO skin color and ZERO hair color. No visible face, hair, neck, ears, bare wrists or fingers. Hero always side/back with head turned away and raised charcoal hood completely concealing head; face opening points away or is fully hidden, not a visible shadow face. Charcoal work gloves cover every finger including thumb; long sleeves meet gloves, trousers meet boots. POV hands also gloved. Do not accidentally make gloves skin-toned. Non-hero named adult supporting characters may have visible faces. This overrides earlier wording about hands or sleeves. CAN OPENER RULE: never show a deployed axe blade for carrying, fixing, climbing or resting. Inactive means NO blade shape whatsoever, no white/metal substitute blade and no electrical arcs; the wrench jaws/hammer/prybar remain. Do not add the tool to scenes where it was not requested. Only scene 066's scripted discharge can emit a white-blue beam aimed at machinery.",
+    "refs": [
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-cd0bd2c1-de98-428d-8670-ac04af46dfaf.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/construction-bot.png",
+      "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/long-range-security-bot.png",
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png"
+    ],
+    "status": "review",
+    "file": "17-neighborhood-safe.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-a6a162e6-9c98-41ca-9992-1cfc95bf6547.png",
+    "edits": [
+      {
+        "prompt": "Two small continuity corrections, preserve this warm neighborhood book illustration otherwise. 1) The Can Opener hanging on the hooded hero's hip has been completely drained in the story: keep blade absent, make its circular power-core glass dark unlit navy, REMOVE the bright blue glowing star in that core, NO tool glow/arcs. Steel and copper colors remain. Do NOT darken boots or robots. 2) Mrs Ruiz at the left doorway should touch two fingers of her raised hand to her FOREHEAD in a small salute, rather than making a peace sign; keep broom in other hand. Preserve all characters, faces, covered back-view reader-hero (no hair, face or skin), scene composition, professional full-color pencil/ink art. Background remains genuinely TRANSPARENT alpha, no black fill or checkerboard.",
+        "refs": [
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-051cc40a-6a31-4d45-a424-d991cbb10d92.png"
+        ]
+      }
+    ],
+    "alt": "A child pats a peaceful robot, Mrs. Ruiz salutes, and the fully covered hero walks home.",
+    "sha256": "61b203b849cd4ba46ecb545247e0699bf5dc51e21fa63a9476c1a4ba7843427e",
+    "sceneTitle": "Neighborhood Safe",
+    "anchorText": "You nod back, and you keep walking.",
+    "followingText": "You pass the top of Main Street. Mr. Lin’s bench is still gone. There are four bolts in the sidewalk where it used to be, and nothing else.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "18-can-opener-active",
+    "name": "The Can Opener — active",
+    "kind": "reference",
+    "file": "18-can-opener-active.png",
+    "prompt": "Use case: illustration-story. Create a full-color production reference illustration of THE CAN OPENER invention, exactly matching the silhouette and mechanical arrangement of the supplied approved blueprint, but this is the REAL colored object not white paper or blueprint. Heavy steel monkey-wrench body in dark gunmetal and brushed silver, reinforced hammer face opposite jaws, prybar at bottom, insulated rich copper wire coiled round handle, round glowing blue salvaged power core embedded in steel beneath jaws, hidden energy axe blade snapping from SIDE of wrench head as translucent crackling electric BLUE lightning, not solid white metal. Preserve characteristic asymmetric head, toothed wrench jaws, big disc core, copper spiral. Beautiful professional navy ink, graphite crosshatching and saturated controlled colored-pencil, same book line quality. Isolated tool angled slightly on genuinely transparent background, no black, no paper rectangle, no halo, no labels, no typography, no invented initials, no hands or characters. Portrait 2:3, full object with generous margins. This will establish the object colors in all subsequent story action drawings.",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
+    "sceneId": "scene_005",
+    "afterParagraph": 11,
+    "status": "review",
+    "alt": "The Can Opener in active mode: steel wrench, copper coils, a blue power core, and an energy axe blade.",
+    "sha256": "3be56f0917a2ec5cbfc1cefe0f86522d7d75714da28f7ddd8ff7f009f4fa50ce",
+    "sceneTitle": "Building The Can Opener",
+    "anchorText": "The wrench head shifts with a sharp mechanical click, and a crackling energy blade snaps out along the side of the head like an axe made of lightning.",
+    "followingText": "You stare at it.",
+    "sourceStorySha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "id": "19-can-opener-tool-mode",
+    "name": "The Can Opener — tool mode",
+    "kind": "reference",
+    "file": "19-can-opener-tool-mode.png",
+    "prompt": "Use case precise-object-edit. Same full-color Can Opener, but powered-down tool mode. Completely REMOVE the entire curved axe blade to LEFT of wrench jaws, all its jagged inner edge, all blue electricity arcs. This blade is energy, not steel, so there must be NO blade-shaped remnant or outline there when off. Keep real steel monkey-wrench jaws, right hammer face, central round power core (dim unlit blue glass), insulated copper spiral, bottom prybar, mechanical housing and proportions. No glow or sparks anywhere. Keep exactly the professional colored-pencil/ink medium, transparent background, framing. No text.",
+    "refs": [
+      "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-cd0bd2c1-de98-428d-8670-ac04af46dfaf.png",
+    "status": "review",
+    "alt": "The Can Opener in tool mode: steel jaws, copper coils, a dark core, and no deployed blade.",
+    "sha256": "aa8f7e7b9d0943b49854180870c1c3dc6ec67359b2a351329d4e0380dbf1b2f9",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  }
+]

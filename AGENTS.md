@@ -34,6 +34,8 @@
 
 ## Approved visual direction
 
+- For illustration work, follow `artwork/ART_DIRECTION.md`, including fully concealed reader-hero identity and the Can Opener's active/inactive tool rules.
+
 - Classic leather-bound books, visibly worn through repeated reading. Keep the
   books flat and touching, with distinct wear patterns for each book.
 - Use matte scuffs, creases, and chipped edges; avoid glowing wear patches.
