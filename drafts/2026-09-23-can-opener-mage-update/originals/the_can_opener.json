@@ -223,7 +223,7 @@
         "2": {
           "text": "Work on the shield prototype",
           "next_scene": "scene_016",
-          "entry_intro": "from_droider"
+          "entry_intro": "from_asher"
         }
       }
     },
@@ -277,7 +277,7 @@
     "scene_016": {
       "title": "Work on the Shield",
       "entry_intros": {
-        "from_droider": "\n“If more bots are coming, I’m gonna need more than a wrench,” you say, and you pull the shield prototype out from under the pizza box.\n",
+        "from_asher": "\n“If more bots are coming, I’m gonna need more than a wrench,” you say, and you pull the shield prototype out from under the pizza box.\n",
         "from_survey": "\nBack in the garage, you drop the scratched tag on the desk and dig the shield prototype out from under the pizza box. If more bots are coming, you’re gonna need it.\n",
         "from_shield_fight": "\nYou set the shield on the workbench. It’s still warm, and it smells a little like burnt toast.\n"
       },
@@ -618,7 +618,7 @@
         "1": {
           "text": "Start with getting Asher into the field",
           "next_scene": "scene_041",
-          "entry_intro": "droider_first"
+          "entry_intro": "asher_first"
         },
         "2": {
           "text": "Start with the boots",
@@ -630,7 +630,7 @@
     "scene_041": {
       "title": "Miniaturizing Asher",
       "entry_intros": {
-        "droider_first": "\nAsher first. If he can see what you see, everything else gets easier.\n",
+        "asher_first": "\nAsher first. If he can see what you see, everything else gets easier.\n",
         "boots_first": "\nYou start sketching boots with magnets in the soles, and ten minutes later you’re totally stuck.\n\n“I need to calibrate these while I’m wearing them, out on real metal. And you can’t see my feet from in here.”\n\n“I cannot, sir. I can barely see the workbench.”\n\nSo…Asher first.\n"
       },
       "text": "\nIt’s way harder than you expected.\n\nAsher lives in a computer tower the size of a mini fridge, and you need him to fit on your face. You can’t shrink his whole brain, so you don’t even try. The big brain stays in the garage. What you build is a way for him to come along: a tiny camera and display in a single lens that clips over your goggles, an earbud so he can talk to you, and a signal booster made from the Security Bot’s antenna. Yellow bulb and all.\n\nThe first version melts. The second version works, but it only plays polka music. You don’t know why, and neither does Asher.\n\nThe third version clicks into place over your right eye, and a little blue ring lights up in the corner of your vision.\n\n“Testing,” says a voice in your ear. “Sir, I can see the garage. I can see the workbench. Sir…is that what the back of my tower looks like? It is SO dusty.”\n\n“Welcome to the team, Asher Portable.”\n\n“That is simply a description of what I am, sir.”\n\n“Yep. That’s how names work.”\n",
@@ -923,7 +923,7 @@
         "2": {
           "text": "Trust Asher to pick the perfect moment",
           "next_scene": "scene_063",
-          "entry_intro": "droider"
+          "entry_intro": "asher"
         }
       }
     },
@@ -931,7 +931,7 @@
       "title": "Breaking Through",
       "entry_intros": {
         "stompers": "\nThe floor is steel. The bots are steel. You turn the dial on The Stompers all the way up, to the one setting you’ve never dared to use, and flip them to attract. The Close Range Bot’s little wheels go right out from under it, and it slides across the floor toward you, faster and faster. You step aside at the last second, and it slams right into the Load-Bot’s wheels.\n",
-        "droider": "\n“Do not move, sir. Wait. Wait.” The Long Range Bot’s blaster glows, and the Close Range Bot lunges. “NOW. Left!” You dive left. The stun bolt hits the Close Range Bot square in the chest, and it skids, numb and spinning, right into the Load-Bot’s wheels.\n"
+        "asher": "\n“Do not move, sir. Wait. Wait.” The Long Range Bot’s blaster glows, and the Close Range Bot lunges. “NOW. Left!” You dive left. The stun bolt hits the Close Range Bot square in the chest, and it skids, numb and spinning, right into the Load-Bot’s wheels.\n"
       },
       "text": "\nThe Load-Bot topples like a tree, right on top of the Long Range Bot.\n\nIt all happens in about three seconds. Then it’s very, very quiet.\n\nYou go from one to the next. Pop, pull. Pop, pull. Pop, pull. Three red lights fade to blue.\n\nYou lean on The Can Opener and try to remember how breathing works. Everything hurts, and everything is out of power…but you’re standing, and they’re not.\n\nFrom somewhere above you comes the sound of slow clapping.\n\n“Well, well, WELL,” says a loud voice.\n",
       "choices": {
@@ -1007,7 +1007,7 @@
     },
     "scene_069": {
       "title": "Back to the Bench",
-      "text": "\nYou pull your stool up to the bench and open up The Can Opener.\n\nThe core is burnt out, and half of the copper coils have melted. It’s going to take weeks to fix, and twice as many parts as it took to build.\n\nYou have never been happier to have a project!\n\n“You know, sir, while it is apart, we could make some improvements.”\n\n“I was thinking the same thing.” You grab a marker and start a new list on the garage wall. “And I’ve got a GREAT idea for a grappling hook. I’m gonna call it The Puller Thingie.”\n\n“Of course you are, sir.”\n\nYou work until the sun comes up.\n\nAround dawn, a small light starts blinking in the corner of Asher’s screen.\n\n“Sir? It is probably nothing. But I am picking up a signal. A different one. It is very faint, and it is coming from somewhere across the city.”\n\nYou look at the light. You look at the pile of parts that used to be The Can Opener.\n\nYou grin, and you pick up your screwdriver.\n\n“Then we’d better hurry.”\n\nThe End.\n",
+      "text": "\nYou pull your stool up to the bench and open up The Can Opener.\n\nThe core is burnt out, and half of the copper coils have melted. It’s going to take weeks to fix, and twice as many parts as it took to build.\n\nYou have never been happier to have a project!\n\n“You know, sir, while it is apart, we could make some improvements.”\n\n“I was thinking the same thing.” You grab a marker and start a new list on the garage wall. “And I’ve got a GREAT idea for a grappling hook. I’m gonna call it The Yoink.”\n\n“Of course you are, sir.”\n\nYou work until the sun comes up.\n\nAround dawn, a small light starts blinking in the corner of Asher’s screen.\n\n“Sir? It is probably nothing. But I am picking up a signal. A different one. It is very faint, and it is coming from somewhere across the city.”\n\nYou look at the light. You look at the pile of parts that used to be The Can Opener.\n\nYou grin, and you pick up your screwdriver.\n\n“Then we’d better hurry.”\n\nThe End.\n",
       "ending": true
     },
     "scene_070": {

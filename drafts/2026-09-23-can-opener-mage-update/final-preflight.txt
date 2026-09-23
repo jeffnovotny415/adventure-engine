@@ -1,0 +1,12 @@
+
+> webapp@0.0.0 check:import
+> node scripts/check-story-import.js ../drafts/2026-09-23-can-opener-mage-update/reviewed
+
+Story import preflight: review_required (read-only)
+summoned_mage: 0 added, 69 edited, 0 removed, 2 unchanged
+REVIEW scene_title_changed [summoned_mage / scene_009]: Possible reused ID or intentional title edit; human review is required. "The Seers' Prophecy" -> "The Seers’ Prophecy"
+the_can_opener: 0 added, 69 edited, 0 removed, 1 unchanged
+Incoming SHA-256 summoned_mage: 830333d8b85e369bd1130504f4972309dbadadbc8491e73a9f31746caac98948
+Incoming SHA-256 the_can_opener: bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444
+Read-only comparison. Title changes are possible ID reuse, not proof. Same-title rewrites cannot reliably be distinguished from replacement. Text edits can shift saved paragraph/character positions; flags and route intent require human review. No content or saves are changed.
+Exit 0: no detected review flags; 1: review required; 2: invalid input. This command never imports files.

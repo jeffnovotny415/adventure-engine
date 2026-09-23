@@ -1027,3 +1027,19 @@ The 18.3 MB ZIP contains the full-resolution unchanged images, a labeled HTML
 reference, README and source/checksum manifest. Verified every archive member,
 all image hashes and all 11 gallery images loading. The reproducible exporter and
 reference metadata are tracked; generated duplicate image copies/ZIP are ignored.
+
+## September 23 — Updated Can Opener and Summoned Mage drafts
+
+Imported Jeff's files (7).zip: 69 edited scenes in each book, with all scene IDs,
+routes, live intro keys, images and endings preserved. Corrected the sole
+The Yoink occurrence to The Puller Thingie. Retained the three existing internal
+Droider intro labels per prior approval; all reader-facing text uses Asher.
+Accepted the supplied curly apostrophe in The Seers’ Prophecy as an editorial
+title change. Original/reviewed files, preflights, hashes, validation and bookmark
+limitations are documented in drafts/2026-09-23-can-opener-mage-update/README.md.
+
+All 581 authored strings match the reviewed Markdown; 80 unrelated protected
+files remain unchanged. Full check passes (115 tests), plus signed iOS build,
+signature and 101-asset verification. Phone/tablet/portrait, 225% text and rotation
+preview checks passed. Installed on Jeff's iPhone without launching or clearing
+data. Oliver's iPad remains unavailable and awaits installation.
