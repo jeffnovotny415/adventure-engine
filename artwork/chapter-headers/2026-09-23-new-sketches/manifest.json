@@ -1,0 +1,193 @@
+[
+  {
+    "id": "01-genesis",
+    "name": "The Genesis",
+    "story": "space_walker",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Landscape 3:2. Only the TOP ship from sketch: broad, plump elongated passenger vessel, side view with a little three-quarter depth, orange painted hull, stacked cabin windows and long observation window bands, docking clamp on hull toward rear. Add refined seams, worn paint, navigation lamps. Preserve rectangular rounded silhouette; it is a civilian passenger ship, not a warship. Exact handwritten labels: 'The Genesis', 'Windows', 'Docking clamp'. Input image 1 is the author's concept photo; image 2 is approved style/species reference.",
+    "refs": [
+      "sources/IMG_4786.jpg",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-964a5361-f502-4c5c-83e3-74f9a4f7e62b.png",
+    "file": "01-genesis.png",
+    "status": "review",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "02-stasis",
+    "name": "The Stasis",
+    "story": "space_walker",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Landscape 3:2. Only BOTTOM ship in sketch: enormous ancient elongated cylindrical ark with tapered pointed forward end, distinct side engine housing, main hatch near forward end and rear cargo door torn half open. Zero windows anywhere; tiny running lights remain lit, not window rows. Age shown by repaired plates, scuffs and broken rear hatch; silhouette from sketch with believable hull depth. Exact labels: 'The Stasis', 'Engine', 'Main hatch', 'Torn cargo door'. Input image 1 is the author's concept photo; image 2 is approved style/species reference.",
+    "refs": [
+      "sources/IMG_4786.jpg",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-4e24f02f-fe22-4384-9cca-5b3f156a2461.png",
+    "file": "02-stasis.png",
+    "status": "review",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "03-rescue-corps-starship",
+    "name": "Rescue Corps Starship",
+    "story": "space_walker",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Landscape 3:2. Interpret TOP drawing: large rescue starship with a broad rounded rear body, two side engine pods and elongated forward hull. Three-quarter elevated view preserves top-view layout while making it a believable vessel. Integrate notes: windowed observation deck on top, small cabin windows along side, square shuttle-bay doors at front, large forward dish emitter for clearing rocks (turn sketch blasters into this story-accurate emitter), round airlock on side. Muted steel and blue accents. No fixed vessel name: reader names it. Exact labels: 'Rescue Corps', 'Engines', 'Observation deck', 'Main emitter', 'Shuttle bay'. Input image 1 is the author's concept photo; image 2 is approved style/species reference.",
+    "refs": [
+      "sources/IMG_4787.jpg",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-768a4f80-35e1-4db0-a79d-7a00db5fb8d8.png",
+    "file": "03-rescue-corps-starship.png",
+    "status": "review",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "04-shuttle",
+    "name": "Rescue Shuttle",
+    "story": "space_walker",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Landscape 3:2. Only MIDDLE top-view sketch: small stubby bus-sized shuttle, boxy rounded cabin and forward cockpit viewport, external engine pods, roof-mounted compact emitter, practical landing skids, side mirrors and coiled tow cable. Elevated three-quarter perspective, industrial rescue utility, steel with subtle blue accents. Two cockpit seats glimpsed through glass; no figures. Exact handwritten labels: 'Shuttle', 'Engines', 'Viewport', 'Tow cable', 'Landing skids'. Input image 1 is the author's concept photo; image 2 is approved style/species reference.",
+    "refs": [
+      "sources/IMG_4787.jpg",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-ae9c5dff-34d3-44e1-9870-88d495ea480c.png",
+    "file": "04-shuttle.png",
+    "status": "review",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "05-energy-core",
+    "name": "Energy Core",
+    "story": "space_walker",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Portrait 2:3. Only BOTTOM energy-cell sketch: build its three linked round/cylindrical sections into a tall glass power column held in a rugged steel frame, gentle blue light inside, three segmented energy chambers and fine conduits, restrained lightning-bolt motifs. Story engine-room power core, slow contained energy, not explosive. Isolated technical cutaway illustration with convincing transparent glass and base supports, no room scenery. Exact labels: 'Energy core', 'Glass column', 'Power cells'. Input image 1 is the author's concept photo; image 2 is approved style/species reference.",
+    "refs": [
+      "sources/IMG_4787.jpg",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-9d18060d-e765-4599-af8d-2567bfd4ccd1.png",
+    "file": "05-energy-core.png",
+    "status": "review",
+    "size": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "id": "06-zenta",
+    "name": "Zenta",
+    "story": "space_walker",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Portrait 2:3 full body. The photo only provides a written concept: Zenta is an orange version of Percy. Use approved Percy reference for species: expressive eyes at tips of exactly TWO long antenna stalks, shaggy orange hair/fur replacing yellow, large black nose, proper small friendly mouth, no extra eyes or ears, humanoid arms and legs. Zenta is Percy's cousin running a fried-dough stand on Harbor. Give Zenta an everyday rolled-sleeve shirt and practical flour-dusted apron over trousers, holding a small paper tray of fried dough, friendly relaxed stance. No pilot uniform or weapons. Preserve family resemblance while distinct posture. No arrows needed, small handwritten name 'Zenta'. Input image 1 is the author's concept photo; image 2 is approved style/species reference; image 3 is the approved blueprint reference for line quality and lettering.",
+    "refs": [
+      "sources/IMG_4788.jpg",
+      "artwork/chapter-headers/2026-09-21/revision-6/yellow-spiky-character.png",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f2896796-5394-4575-9635-44e5c2bf46e2.png",
+    "file": "06-zenta.png",
+    "status": "review",
+    "size": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "id": "07-surveillance-drone",
+    "name": "Grabs Surveillance Drone",
+    "story": "the_can_opener",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Landscape 3:2. Translate middle drone drawing into finished technical book illustration: rounded central body with FOUR ducted propulsion rotors around it, upper camera modules and lower camera cluster exactly guided by sketch camera arrows. Confident three-quarter hover view with dimension, metallic light-gray panels and subdued gold accents, slightly officious design. Story hull gold lettering exactly 'PROPERTY OF M. GRABS. IF FOUND, IT IS STILL MINE.' on readable side plate. Handwritten labels: 'Surveillance drone', 'Cameras', 'Engines'. No weapon additions. Input image 1 is the author's concept photo; image 2 is approved style/species reference; image 3 is the approved blueprint reference for line quality and lettering.",
+    "refs": [
+      "sources/IMG_4788.jpg",
+      "artwork/chapter-headers/2026-09-21/revision-2/construction-bot.png",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-a3aeeb2b-4568-4baa-9cfd-e1c2b85b77e3.png",
+    "file": "07-surveillance-drone.png",
+    "status": "review",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "08-asher",
+    "name": "Asher",
+    "story": "the_can_opener",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Landscape 3:2. Interpret bottom written concept ASHER computer screen with HUD. A garage inventor's slightly battered mini-fridge-sized computer tower wired to a utilitarian monitor; show fine screws, vents, purposeful cables and a small keyboard. The monitor displays an elegant restrained cyan heads-up interface with waveform, circular schematic and status bars; Asher is a dry formal computer assistant, not a humanoid robot or human face. Refine into same illustrated engineering notebook style as can-opener. Exact title label 'Asher', thin arrow labels 'Computer tower', 'Display'. Only readable monitor text 'ASHER'. No extra fictional story dialogue. Input image 1 is the author's concept photo; image 2 is approved style/species reference.",
+    "refs": [
+      "sources/IMG_4788.jpg",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-4053400a-add5-4027-a218-3c27ea5e5790.png",
+    "file": "08-asher.png",
+    "status": "review",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "09-elliana",
+    "name": "Elliana",
+    "story": "summoned_mage",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Portrait 2:3 full-body. Only TOP cat-folk girl sketch: youthful adventure companion with purple shoulder-length hair, triangular cat ears integrated into hair, fluffy purple tail, warm yellow eyes with vertical slit pupils, subtle feline features and a kind slightly nervous smile. Improve proportion and anatomy into polished whimsical book character, not chibi or anime. Modest practical fantasy tunic, trousers, short cloak or open vest and sturdy boots inspired by sketch's simple jacket, no weapon, no extra human ears. This is Elliana, NOT the reader's unnamed hero. Exact handwritten label 'Elliana'; small arrows 'Cat ears' and 'Fluffy tail'. Input image 1 is the author's concept photo; image 2 is approved style/species reference; image 3 is the approved blueprint reference for line quality and lettering.",
+    "refs": [
+      "sources/IMG_4789.jpg",
+      "artwork/chapter-headers/2026-09-21/revision-6/yellow-spiky-character.png",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-6eb03bb1-0757-4d21-afd6-937603757d07.png",
+    "file": "09-elliana.png",
+    "status": "review",
+    "size": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "id": "10-syphon",
+    "name": "Syphon",
+    "story": "summoned_mage",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Landscape 3:2. Only MIDDLE sketch: cat-sized pale faceless creature combining a moth and jellyfish. Domed translucent milky bell, two broad moth-like wings with delicate vein/spot pattern matching drawn lobes, trailing soft ribbon tentacles. NO face, no eyes, no mouth, no humanoid body. Beautiful and faintly unsettling, not a cartoon smiling monster. Fine ghostly graphite and pale gray-lavender pencil marks; outline visible on warm book page without thick cartoon black fills. Exact handwritten title 'Syphon'. No explanatory paragraphs. Input image 1 is the author's concept photo; image 2 is approved style/species reference.",
+    "refs": [
+      "sources/IMG_4789.jpg",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-b51a90ac-dcd4-499a-9e1a-18820ab6853a.png",
+    "file": "10-syphon.png",
+    "status": "review",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "11-honey",
+    "name": "Honey",
+    "story": "summoned_mage",
+    "prompt": "Use case: illustration-story. Produce ONE finished professional illustrated-book asset, not a contact sheet. Translate the supplied author's rough sketch concept into confident, dimensional, finely drawn artwork; improve anatomy, construction and perspective while preserving its recognisable design. Match the approved references' dark navy-black ink contours, fine graphite crosshatching, delicate colored-pencil accents, tactile drawn surfaces. Refined whimsical adventure-book art, not a crude child's tracing, vector clipart, photorealism or 3D render. Isolated composition, generous clear margins, genuinely transparent background; no black background, glow halo, photographed paper, notebook dots, page border or watermarks. Keep silhouette readable at chapter-header size. Labels where specified should be legible handwritten ink with thin clean arrows to the correct parts, few and well spaced. Reference photo is concept only; do not reproduce hands, page, neighboring drawings or unrelated writing. Portrait 2:3. Only BOTTOM sketch: Honey, a grapefruit-sized puffkin, round fuzzy spherical creature with TWO stubby wings, huge expressive dark eyes, long fluffy curling tail. Small friendly smile, no separate human torso or limbs, keep tiny scale suggested by a few crumbs underneath. Warm honey-cream fur using rich fine pencil strands, subtle golden glow confined within fur (no outer halo), little feathered wings from sketch, cute but professionally rendered with convincing volume, not plush 3D or crude doodle. Exact handwritten name 'Honey' and sparse arrows 'Fuzz', 'Wings', 'Tail'. Input image 1 is the author's concept photo; image 2 is approved style/species reference; image 3 is the approved blueprint reference for line quality and lettering.",
+    "refs": [
+      "sources/IMG_4789.jpg",
+      "artwork/chapter-headers/2026-09-21/revision-6/yellow-spiky-character.png",
+      "webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
+    ],
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-5b4eb224-7dd9-4f16-aeba-c72e01e2ce56.png",
+    "file": "11-honey.png",
+    "status": "review",
+    "size": [
+      1024,
+      1536
+    ]
+  }
+]
