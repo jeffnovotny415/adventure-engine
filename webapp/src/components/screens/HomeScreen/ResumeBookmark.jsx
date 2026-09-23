@@ -31,7 +31,9 @@ export function ResumeBookmark({ bookmark, onClose, onResume, onStartAgain }) {
     onCancel={event => { event.preventDefault(); onClose(); }}>
     <header className="reading-settings__header">
       <h2 id={titleId}>{bookmark.storyTitle}</h2>
-      <button type="button" className="text-button" onClick={onClose}>{getText('home.bookmark_close')}</button>
+      <button type="button" className="text-button resume-bookmark__close" aria-label={getText('home.bookmark_close')} onClick={onClose}>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+      </button>
     </header>
     <div className="resume-bookmark__body">
       {restarting ? <>

@@ -37,6 +37,8 @@
 }
 
 .library-header { padding-block: 10px; gap: 16px; flex-wrap: wrap; }
+.library-header .app-header-brand { min-width: 0; }
+.library-header .app-header-note { display: block; margin-top: 2px; }
 .library-passages { gap: 7px; margin-inline-start: auto; flex-shrink: 0; }
 .library-passages svg { flex-shrink: 0; }
 .library-books { min-width: 0; }
@@ -46,6 +48,7 @@
 .book-bookmark:hover .book-saved-ribbon { height: 40px; }
 .book-bookmark:active .book-saved-ribbon { filter: brightness(.78); }
 .app-shell .book-bookmark:focus-visible { outline: 3px solid #fff0ce; outline-offset: 0; border-radius: 3px; }
+.resume-bookmark__close { flex-shrink: 0; margin-inline-start: auto; }
 .resume-bookmark button { min-width: 44px; }
 .resume-bookmark__body { overflow: auto; min-height: 0; padding: 16px 20px 20px; }
 .resume-bookmark__body p { margin: 0 0 8px; }
