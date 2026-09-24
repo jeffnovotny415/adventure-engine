@@ -382,5 +382,227 @@
       "width": 1536,
       "height": 1024
     }
+  ],
+  "space_walker": [
+    {
+      "id": "01-the-portal",
+      "sceneId": "scene_001",
+      "after": "You spin around and get a really good view out the windows. “Are those stars…where the heck did I end up…is this a spaceship?” you say as you look out at the vastness of space and stars.",
+      "alt": "The fully covered explorer lands in a metal corridor and looks out at the stars through a wide window.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/01-the-portal.webp"
+    },
+    {
+      "id": "02-meet-the-crew",
+      "sceneId": "scene_006",
+      "after": "All of them are dressed the same, in loose-fitting grey jumpsuits with zippers down the middle and patches everywhere.",
+      "alt": "Captain Aster, Percy at the flight controls, and Trace gather on the ship’s bridge in patched gray jumpsuits.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/02-meet-the-crew.webp"
+    },
+    {
+      "id": "03-the-new-crewmate",
+      "sceneId": "scene_029",
+      "after": "You put it on right there, over your clothes. Did I mention it’s about three sizes too big? It’s about three sizes too big. You have to roll the sleeves up four times.",
+      "alt": "The explorer tries on an oversized crew jumpsuit while Captain Aster, Percy, and Trace look on.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/03-the-new-crewmate.webp"
+    },
+    {
+      "id": "04-the-engine-room",
+      "sceneId": "scene_032",
+      "after": "You sit down on the floor beside him with your notebook, and for a while the two of you just watch the light. You draw it. Bright, dim. Bright, dim.",
+      "alt": "The explorer sketches the blue power core beside Trace while a small solar-panel maintenance robot carries an oil can.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/04-the-engine-room.webp"
+    },
+    {
+      "id": "05-everyone-aboard",
+      "sceneId": "scene_023",
+      "after": "Afterward, the cargo bay is full of blankets and hot drinks and tired voices. A tall robot rolls through on a pair of treads with a stack of blankets balanced on its forklift claws. It’s got a solar panel on its head, one big camera eye, and a round speaker in its chest, and every time it hands somebody a blanket, the speaker announces, “CARGO SECURED.” Nobody corrects it.",
+      "alt": "The tracked cargo bot hands a blanket to a young gray-eared passenger among rescued alien families.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/05-everyone-aboard.webp"
+    },
+    {
+      "id": "06-off-the-ice",
+      "sceneId": "scene_045",
+      "after": "She opens the case. It’s full of glowing data crystals.",
+      "alt": "Dr Wren, wrapped in three blankets, opens a silver case of glowing data crystals while Captain Aster listens.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/06-off-the-ice.webp"
+    },
+    {
+      "id": "07-keeper-cobble",
+      "sceneId": "scene_050",
+      "after": "They’re very large, and very old, and very wrinkly, with a great domed shell on their back and a blanket over their knees. They’ve got a crystal in one hand, and they’re singing along with it…to an open drawer of seeds.",
+      "alt": "Keeper Cobble sings with a glowing crystal in hand beside an open seed drawer in their lamplit room.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/07-keeper-cobble.webp"
+    },
+    {
+      "id": "08-i-love-tight",
+      "sceneId": "scene_017",
+      "after": "Rock fills the window on both sides. You could read the writing on it, if rocks had writing. Something scrapes along the bottom of the ship with a long, slow SCREEEECH that you feel in your teeth.",
+      "alt": "The Rescue Corps ship squeezes between jagged space rocks, scraping sparks from its hull.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/08-i-love-tight.webp"
+    },
+    {
+      "id": "09-belts",
+      "sceneId": "scene_021",
+      "after": "And that’s how you end up sprinting through a tumbling spaceship next to a synthoid, a bird, and a very small engineer, with every single one of you holding your pants up with one hand.",
+      "alt": "The explorer, Captain Thyme, Ratchet and Trace run through a tilting corridor while holding up their trousers.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/09-belts.webp"
+    },
+    {
+      "id": "10-one-more",
+      "sceneId": "scene_052",
+      "after": "A metal hand closes around the back of your jumpsuit.",
+      "alt": "Trace grips the back of the explorer’s jumpsuit as a hull breach pulls an archive crate into space.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/10-one-more.webp"
+    },
+    {
+      "id": "11-the-convoy",
+      "sceneId": "scene_057",
+      "after": "It fills half the window. There’s no screen in the way, and no dot for scale. It’s an ocean of darkness, with the stars just stopping at its edge, and it’s moving away from you slowly, like a whale that hasn’t noticed the minnows. Twelve small ships hang helpless in the dark behind it.",
+      "alt": "Twelve stranded convoy ships hang against the World-Eater’s immense starless silhouette as the rescue ship approaches.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/11-the-convoy.webp"
+    },
+    {
+      "id": "12-catch",
+      "sceneId": "scene_060",
+      "after": "The shuttle goes in through the doors, bounces twice, and skids the whole length of the bay in a shower of sparks. The cargo bot rolls out of the way just in time. Behind you, the tow cable pulls tight, and the twelfth ship gets dragged along in the {world_name}’s shadow. The big ship’s engines cough, and catch, and ROAR, and she swings up and out of the cold with every light on board flickering.",
+      "alt": "The shuttle skids across the bay on its landing skids, throwing sparks as the cargo bot moves aside.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/12-catch.webp"
+    },
+    {
+      "id": "13-hold-on-to-something",
+      "sceneId": "scene_062",
+      "after": "“I have NOODLES in my EYES!” Percy shouts. “I have a LOT of eyes!”",
+      "alt": "Percy floats above the pilot’s chair with noodles tangled around their eye stalks while Captain Aster holds a ceiling rail.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/13-hold-on-to-something.webp"
+    },
+    {
+      "id": "14-stung",
+      "sceneId": "scene_077",
+      "after": "You don’t hear it, because there’s no sound in space. But you feel it, in your ribs, in the deck, in the air…a huge, low note from something that has never once been hurt, finding out what it’s like. A crack of white light runs across the darkness from one side to the other, like lightning across a night sky.",
+      "alt": "A thin white beam from the rescue ship strikes the World-Eater’s red opening as a crack of light crosses its surface.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/14-stung.webp"
+    },
+    {
+      "id": "15-the-wall-of-names",
+      "sceneId": "scene_078",
+      "after": "Captain Aster comes to stand beside you.",
+      "alt": "The explorer and Captain Aster stand beside Harbor’s flower-lined memorial wall as an artisan carves beneath SOLARIS.",
+      "width": 1536,
+      "height": 1024,
+      "kind": "scene",
+      "src": "/images/stories/space_walker/illustrations/15-the-wall-of-names.webp"
+    },
+    {
+      "id": "genesis-specs",
+      "sceneId": "scene_010",
+      "after": "The Genesis.",
+      "kind": "specs",
+      "src": "/images/stories/space_walker/illustrations/genesis-specs.webp",
+      "alt": "Annotated diagram of the orange Genesis passenger ship, with passenger windows and docking clamp.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "genesis-specs",
+      "sceneId": "scene_011",
+      "after": "The Genesis.",
+      "kind": "specs",
+      "src": "/images/stories/space_walker/illustrations/genesis-specs.webp",
+      "alt": "Annotated diagram of the orange Genesis passenger ship, with passenger windows and docking clamp.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "stasis-specs",
+      "sceneId": "scene_047",
+      "after": "You and Trace take the shuttle across. There are two ways in. One is the main hatch, up near the front. The other is a cargo door at the back, which has already been torn half open.",
+      "kind": "specs",
+      "src": "/images/stories/space_walker/illustrations/stasis-specs.webp",
+      "alt": "Annotated diagram of the ancient windowless Stasis, showing the engine, main hatch and torn cargo door.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "rescue-corps-starship-specs",
+      "sceneId": "scene_009",
+      "after": "“We should start at the beginning,” he says. “This ship belongs to the Rescue Corps. We are not soldiers, and we are not explorers. We are a rescue ship. We go where people need help, and lately, {hero_name}, a great many people have needed help, because—”",
+      "kind": "specs",
+      "src": "/images/stories/space_walker/illustrations/rescue-corps-starship-specs.webp",
+      "alt": "Annotated diagram of the Rescue Corps ship, with its observation deck, engines, main emitter and shuttle bay.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "shuttle-specs",
+      "sceneId": "scene_003",
+      "after": "You open the door to the craft and take a closer look inside. You see 2 seats up front with flight controls and screens you can’t really understand. In the back, there are 2 benches along the walls and what look like blasters of some sort. Amazing!",
+      "kind": "specs",
+      "src": "/images/stories/space_walker/illustrations/shuttle-specs.webp",
+      "alt": "Annotated diagram of the small shuttle, showing engines, viewport, landing skids and tow cable.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "shuttle-specs",
+      "sceneId": "scene_004",
+      "after": "You open the door to the craft and take a closer look inside. You see 2 seats up front with flight controls and screens you can’t really understand. In the back, there are 2 benches along the walls and what look like blasters of some sort. Amazing!",
+      "kind": "specs",
+      "src": "/images/stories/space_walker/illustrations/shuttle-specs.webp",
+      "alt": "Annotated diagram of the small shuttle, showing engines, viewport, landing skids and tow cable.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "shuttle-specs",
+      "sceneId": "scene_013",
+      "after": "The shuttle is a small, stubby ship with two seats up front and two benches in the back, and you can’t believe you actually get to ride in it.",
+      "kind": "specs",
+      "src": "/images/stories/space_walker/illustrations/shuttle-specs.webp",
+      "alt": "Annotated diagram of the small shuttle, showing engines, viewport, landing skids and tow cable.",
+      "width": 1536,
+      "height": 1024
+    }
   ]
 }

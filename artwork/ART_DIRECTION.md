@@ -40,4 +40,4 @@ These rules record Jeff's artwork direction from September 23, 2026.
 - Keep the hero's hat consistent with `01-the-portal.png`: sand-colored, creased crown, broad brim all around, black goggle strap and goggles, continuous rear neck flap. Do not substitute a baseball cap. The correction in `03-the-new-crewmate.png` follows Jeff's feedback.
 - Before joining the crew, use dark expedition clothes with the canvas pack. After joining, use the oversized patched gray jumpsuit, rolled sleeves over covered wrists, and full gloves. All identity-concealment rules still apply.
 - Keep the approved Aster, Percy, Trace, robot and ship designs. Percy has two eye stalks; Trace has mechanical lens eyes and no nose. Do not transfer Percy's features to Ratchet or use the crew as rescued civilian families.
-- The remaining eleven narrative illustrations are review drafts until accepted.
+- All fifteen narrative illustrations are approved. Dr Wren is normal human scale beside the much taller Captain Aster; use the corrected `06-off-the-ice.png` as the reference.

@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 import { BookReader } from '../../src/components/shared/BookReader/BookReader';
 import techHero from '../../src/data/stories/the_can_opener.json';
 import mage from '../../src/data/stories/summoned_mage.json';
+import spaceWalker from '../../src/data/stories/space_walker.json';
 import { DEFAULT_READING_STYLE } from '../../src/state/readingPreferences';
 import '../../src/styles/fonts.css';
 import '../../src/index.css';
@@ -13,8 +14,10 @@ import '../../src/styles/sceneImage.css';
 
 export function Fixture() {
   const query = new URLSearchParams(location.search);
-  const storyId = query.get('story') === 'summoned_mage' ? 'summoned_mage' : 'the_can_opener';
-  const story = storyId === 'summoned_mage' ? mage : techHero;
+  const stories = { the_can_opener: techHero, summoned_mage: mage, space_walker: spaceWalker };
+  const requestedStory = query.get('story');
+  const storyId = Object.hasOwn(stories, requestedStory) ? requestedStory : 'the_can_opener';
+  const story = stories[storyId];
   const sceneId = query.get('scene') || 'scene_006';
   const scene = story.scenes[sceneId];
   const anchor = useRef(null);

@@ -4,11 +4,12 @@ import { existsSync } from 'node:fs';
 import artwork from '../src/content/story_artwork.json' with { type: 'json' };
 import story from '../src/data/stories/the_can_opener.json' with { type: 'json' };
 import mage from '../src/data/stories/summoned_mage.json' with { type: 'json' };
+import spaceWalker from '../src/data/stories/space_walker.json' with { type: 'json' };
 import { artworkForPassage, paragraphsOf } from '../src/content/storyArtwork.js';
 import { boundView, zoomAt } from '../src/components/shared/SceneImage/imageZoom.js';
 
 test('every art placement resolves exactly once against the live authored source and ships its asset', () => {
-  const stories = { the_can_opener: story, summoned_mage: mage };
+  const stories = { the_can_opener: story, summoned_mage: mage, space_walker: spaceWalker };
   for (const [storyId, placements] of Object.entries(artwork)) {
     assert.ok(stories[storyId], `Missing live source coverage: ${storyId}`);
     for (const item of placements) {
