@@ -148,7 +148,7 @@
     ],
     "status": "revised-per-author-request",
     "file": "05-shield-cover-me.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-01ea5d5d-3d7f-4113-a445-d0fda53dacc1.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-435d5e6e-cbb5-42b7-9f91-8cf1644623ad.png",
     "edits": [
       {
         "date": "2026-09-24",
@@ -157,10 +157,18 @@
           "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/05-shield-cover-me.png"
         ],
         "previousSha256": "97ab93e8b7026adcad4bacf3269af7e9b2f3c300a2ba5a40bda816fad4fc3ffb"
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. Correct the handedness of this approved book illustration: the energy shield armband MUST be on the hero's anatomically LEFT forearm, not the right. Re-stage the composition to make this unambiguous: camera behind and to the hero's LEFT shoulder; hooded hero on the RIGHT half of the image facing toward the LEFT; attacking cream wheeled Security Bot on the LEFT facing right. Hero's LEFT shoulder is the near shoulder, clearly connected to the bent LEFT upper arm and raised LEFT forearm in foreground toward center. The LEFT forearm wears the existing silver-gray DUCT-TAPE armband with small glowing BLUE DOT emitters and the wired orange/blue side POWER PACK. LEFT fist raised behind its projected translucent blue energy barrier. The hero's bare-of-equipment RIGHT forearm reaches across from farther shoulder, RIGHT gloved thumb presses loose emitter on LEFT band. Two arms only, anatomically coherent elbow/shoulder connections, do not swap hands independently of arms. Preserve the exact duct-taped equipment design, wholly blue energy shield with NO metal shield disc, robot with square cream head, yellow antenna, wheelbase, wrench hand, sparking baton strike, professional ink crosshatching and colored pencil texture. Keep the yellow 'BZZZZT!' lettering readable normally, never mirrored. This is a handedness correction, not a redesign. All hero skin, face, hair, neck, wrists and fingers remain fully hidden by charcoal hoodie and charcoal full gloves. Landscape 1536x1024, maintain genuine alpha-transparent vignette background for parchment, no opaque dark rectangle or baked checkerboard. Retain all other visual details as closely as possible; orientation change only to establish the shield on the LEFT arm clearly.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/05-shield-cover-me.png"
+        ],
+        "previousSha256": "c6a08820da5ac0b8882bf0b91e1ce118841f8103ddf61b362eaafbad15f22268"
       }
     ],
-    "alt": "A duct-taped armband with glowing blue dots and a wired side power pack projects an energy shield against a Security Bot’s sparking baton.",
-    "sha256": "c6a08820da5ac0b8882bf0b91e1ce118841f8103ddf61b362eaafbad15f22268",
+    "alt": "A duct-taped armband on the hero’s left forearm, with glowing blue dots and a wired side power pack, projects an energy shield against a Security Bot’s sparking baton.",
+    "sha256": "ba3c020a635557709735c43a9862181ba224cc80fd5d94daebcfe9942575c6f9",
     "sceneTitle": "Shield Cover Me",
     "anchorText": "The stick skids off the light in a shower of sparks. The shield flickers, but it holds! The bot hits it again, and again, and you push forward behind the shield one step at a time. But you can’t get around it, and you can’t exactly fight with a shield and a thumb.",
     "followingText": "“ASHER! SHIELD! COVER ME!”",

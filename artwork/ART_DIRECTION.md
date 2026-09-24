@@ -17,7 +17,7 @@ These rules record Jeff's artwork direction from September 23, 2026.
 - Tool mode: the axe blade is completely absent, not replaced by a white or steel blade. Switch it off when repairing, climbing, resting, carrying, or setting the tool down. It is normally active only in robot combat; the scripted finale discharge is a separate illustrated action.
 - A tool on a workbench rests flat against the tabletop. It must not hover or balance upright without physical support.
 - The Wrist Wrock-It is a cylindrical spring/coil rock launcher. Do not substitute the wrench in its experiment scenes.
-- Shield Cover Me is a wrist/forearm armband wrapped in duct tape, with glowing blue dot emitters and a wired power pack attached to the side (Jeff's September 24 revision). It projects a blue energy barrier; there is no physical disc, lid, shield handle or back-mounted shield. In resting scenes the barrier is off, with the armband still worn.
+- Shield Cover Me is worn on the hero’s LEFT wrist/forearm: an armband wrapped in duct tape, with glowing blue dot emitters and a wired power pack attached to the side (Jeff's September 24 revision). It projects a blue energy barrier; there is no physical disc, lid, shield handle or back-mounted shield. In resting scenes the barrier is off, with the armband still worn.
 - The moldy-sandwich drawing includes the sound effect `PLOP` beside the sandwich, per Jeff's request.
 
 ## Book use
