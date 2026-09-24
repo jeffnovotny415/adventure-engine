@@ -14,6 +14,9 @@ import { themeKeyForStory, SHELL_THEME } from './utils/themeKey';
 import { readingTextScale, readingStyle, DEFAULT_READING_STYLE } from './state/readingPreferences';
 import { advanceChoice, rewindChoice } from './state/choiceHistory';
 import { useNativeReading } from './hooks/useNativeReading';
+import { usePurchases } from './hooks/usePurchases';
+import { canReadScene } from './content/previewAccess';
+import { LibraryUnlock } from './components/shared/LibraryUnlock/LibraryUnlock';
 
 const SCREENS = {
   HOME: 'home',
@@ -25,6 +28,8 @@ const SCREENS = {
 };
 
 export default function App() {
+  const purchases = usePurchases();
+  const [unlockRequest, setUnlockRequest] = useState(null);
   const nativeReading = useNativeReading();
   const stories = useMemo(() => getStoryIndex(), []);
   const storiesWithScenes = useMemo(
@@ -64,6 +69,8 @@ export default function App() {
   const activeSave = devTestState ?? save;
 
   const scene = activeStory && activeSave ? getScene(activeStory, activeSave.currentSceneId) : null;
+  const sceneAllowed = canReadScene(activeStoryId, activeSave?.currentSceneId, purchases);
+  const readerBlocked = [SCREENS.STORY, SCREENS.END].includes(screen) && scene && !sceneAllowed;
 
   const displayText = scene
     ? getSceneDisplayText(scene, activeSave.currentEntryIntro, {
@@ -78,6 +85,7 @@ export default function App() {
   const activeThemeKey = activeStoryId ? themeKeyForStory(activeStoryId) : SHELL_THEME;
 
   function goHome() {
+    setUnlockRequest(null);
     cancelPersistence();
     setPendingStoryId(null);
     setDevTestState(null);
@@ -119,6 +127,12 @@ export default function App() {
   }
 
   function handleChoose(choice) {
+    if (!sceneAllowed) return;
+    if (!canReadScene(activeStoryId, choice.next_scene, purchases)) {
+      setUnlockRequest({ choice, storyId: activeStoryId, sceneId: activeSave.currentSceneId,
+        depth: activeSave.choiceHistory?.length ?? 0 });
+      return;
+    }
     if (devTestState) {
       setDevTestState(current => advanceChoice(current, choice));
       return;
@@ -174,11 +188,13 @@ export default function App() {
   }
 
   function handleDeveloperMode() {
+    if (!purchases?.developerMode) return;
     cancelPersistence();
     setScreen(SCREENS.DEV_TEST);
   }
 
   function handleStartTest(storyId, sceneId, entryIntro) {
+    if (!purchases?.developerMode) return;
     setDevTestState({
       storyId,
       heroName: 'Test Hero',
@@ -192,11 +208,24 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (screen === SCREENS.STORY && scene && isEnding(scene)) {
+    if (screen === SCREENS.STORY && scene && sceneAllowed && isEnding(scene)) {
       if (!devTestState) finishGame();
       setScreen(SCREENS.END);
     }
-  }, [screen, scene, devTestState, finishGame]);
+  }, [screen, scene, sceneAllowed, devTestState, finishGame]);
+
+  useEffect(() => {
+    if (!unlockRequest || !canReadScene(unlockRequest.storyId, unlockRequest.choice.next_scene, purchases)) return;
+    // A store approval can arrive after closing the sheet or moving to another book.
+    // Continue only the still-open, unchanged choice; persistence keeps its usual safeguards.
+    if (screen === SCREENS.STORY && activeStoryId === unlockRequest.storyId &&
+        activeSave?.currentSceneId === unlockRequest.sceneId &&
+        (activeSave.choiceHistory?.length ?? 0) === unlockRequest.depth) {
+      if (devTestState) setDevTestState(current => advanceChoice(current, unlockRequest.choice));
+      else applyChoice(unlockRequest.choice);
+    }
+    setUnlockRequest(null);
+  }, [unlockRequest, purchases, screen, activeStoryId, activeSave, devTestState, applyChoice]);
 
   return (
     <div className="app-shell" data-theme={SHELL_THEME}>
@@ -225,7 +254,7 @@ export default function App() {
           onContinue={handleContinue}
           onStartAgain={handleStartAgain}
           onSelectStory={handleSelectStory}
-          onDeveloperMode={handleDeveloperMode}
+          onDeveloperMode={purchases?.developerMode ? handleDeveloperMode : undefined}
         />
       )}
 
@@ -233,11 +262,11 @@ export default function App() {
         <HeroSetupScreen story={storiesWithScenes[pendingStoryId]} onSubmit={handleHeroSetupSubmit} onBack={goHome} />
       )}
 
-      {screen === SCREENS.DEV_TEST && (
+      {screen === SCREENS.DEV_TEST && purchases?.developerMode && (
         <DevTestScreen stories={storiesWithScenes} onStartTest={handleStartTest} onBack={goHome} />
       )}
 
-      {screen === SCREENS.STORY && scene && !isEnding(scene) && (
+      {screen === SCREENS.STORY && scene && sceneAllowed && !isEnding(scene) && (
         <div className="story-shell" data-theme={activeThemeKey}>
           <StoryScreen
             storyId={activeStoryId}
@@ -268,7 +297,7 @@ export default function App() {
         </div>
       )}
 
-      {screen === SCREENS.END && scene && (
+      {screen === SCREENS.END && scene && sceneAllowed && (
         <div className="story-shell" data-theme={activeThemeKey}>
           <EndScreen
             storyId={activeStoryId}
@@ -293,6 +322,7 @@ export default function App() {
           />
         </div>
       )}
+      {(readerBlocked || unlockRequest) && <LibraryUnlock boundary onClose={() => readerBlocked ? goHome() : setUnlockRequest(null)} />}
     </div>
   );
 }

@@ -203,3 +203,13 @@ clear), and Night (115%, serif, relaxed, dark). Presets save atomically per book
 and preserve the reading anchor. Manual appearance changes show Custom. Page
 movement, pinned controls and haptics are independent of the presets. Existing
 readers retain their preferences until they choose a preset.
+
+## Full library purchase
+
+The native StoreKit 2 bridge, free opening boundaries, and development-only author
+access are documented in [PURCHASES.md](../PURCHASES.md). Use the **App** scheme
+for normal device builds and Release archives; use **Purchases** for local fake
+transactions. `npm run ios:test:purchases` runs the StoreKit integration tests.
+The release bundle check rejects the native author override, StoreKit testing
+configuration, and bundled test targets. App Store Connect product setup and a
+successful sandbox purchase/restore run remain required before release.

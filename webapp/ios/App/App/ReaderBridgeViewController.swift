@@ -5,6 +5,7 @@ import Capacitor
 class ReaderBridgeViewController: CAPBridgeViewController {
     override func capacitorDidLoad() {
         bridge?.registerPluginInstance(ReaderAccessibilityPlugin())
+        bridge?.registerPluginInstance(ReaderPurchasesPlugin())
     }
 }
 

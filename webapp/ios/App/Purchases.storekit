@@ -1,0 +1,32 @@
+{
+  "identifier": "02888665-10FA-481E-9BE5-F02211EBC5A9",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "4.99",
+      "familyShareable": true,
+      "internalID": "596A8B69-111D-49F7-B113-66A8B16149BC",
+      "localizations": [
+        {
+          "description": "Every path and ending in The Can Opener, The Summoned Mage, and The Space Walker.",
+          "displayName": "Unlock All Three Books",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.jeffnovotny.pathsofwonder.full_library",
+      "referenceName": "Full Library",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

@@ -4,9 +4,15 @@ import { useContent } from '../../../hooks/useContent';
 import { loadPassages, savePassage, removePassage, samePassage, passageExcerpt, PASSAGES_KEY } from '../../../state/passageBookmarks';
 import { StoryTextPanel } from '../StoryTextPanel/StoryTextPanel';
 import { readingAnchorTop } from './readingPosition';
+import { canReadScene } from '../../../content/previewAccess';
+import { usePurchases } from '../../../hooks/usePurchases';
+import { LibraryUnlock } from '../LibraryUnlock/LibraryUnlock';
 
 export function PassageBookmarks({ currentPassage, onClose, portalTarget, storage }) {
   const { getText } = useContent();
+  const purchases = usePurchases();
+  const [unlockOpen, setUnlockOpen] = useState(false);
+  const canRead = item => !purchases || canReadScene(item.storyId, item.sceneId, purchases);
   const [collection, setCollection] = useState(() => loadPassages(storage));
   const [selected, setSelected] = useState(null);
   const [removed, setRemoved] = useState(null);
@@ -41,7 +47,7 @@ export function PassageBookmarks({ currentPassage, onClose, portalTarget, storag
 
   useLayoutEffect(() => {
     bodyRef.current.scrollTop = 0;
-    if (!selected) { headingRef.current?.focus({ preventScroll: true }); return; }
+    if (!selected || !passageRef.current) { headingRef.current?.focus({ preventScroll: true }); return; }
     let active = true;
     function restore() {
       if (!active) return;
@@ -53,7 +59,7 @@ export function PassageBookmarks({ currentPassage, onClose, portalTarget, storag
     const paragraph = passageRef.current.querySelectorAll('.story-paragraph')[selected.position.paragraph];
     if (paragraph) { paragraph.tabIndex = -1; paragraph.focus({ preventScroll: true }); }
     return () => { active = false; };
-  }, [selected]);
+  }, [selected, purchases?.owned, purchases?.authorAccess]);
 
   function perform(operation, success) {
     const result = operation();
@@ -71,7 +77,10 @@ export function PassageBookmarks({ currentPassage, onClose, portalTarget, storag
     <div ref={bodyRef} className="reading-settings__body">
       {selected ? <>
         <p className="small muted">{getText('passages.read_only')}</p>
-        <section ref={passageRef} className="saved-passage"><StoryTextPanel {...selected} /></section>
+        {canRead(selected) ? <section ref={passageRef} className="saved-passage"><StoryTextPanel {...selected} /></section> : <>
+          <p>{getText('purchase.locked_passage')}</p>
+          <button type="button" className="primary-button" onClick={() => setUnlockOpen(true)}>{getText('purchase.manage')}</button>
+        </>}
       </> : <>
         <p className="muted">{getText('passages.help')}</p>
         {currentPassage && <button type="button" className="path-button" disabled={failed || alreadySaved}
@@ -91,7 +100,7 @@ export function PassageBookmarks({ currentPassage, onClose, portalTarget, storag
             <button type="button" className="passage-bookmarks__open" onClick={() => setSelected(item)}>
               <span className="small muted">{item.storyTitle}</span>
               <span className="passage-bookmarks__title">{item.title}</span>
-              <span className="passage-bookmarks__excerpt">{passageExcerpt(item)}</span>
+              <span className="passage-bookmarks__excerpt">{canRead(item) ? passageExcerpt(item) : getText('purchase.locked_passage')}</span>
             </button>
             <button type="button" className="text-button" disabled={failed} aria-label={`${getText('passages.remove')}: ${item.title}`}
               onClick={() => perform(() => removePassage(item.id, storage), () => { setRemoved(item); setNotice('passages.removed'); })}>{getText('passages.remove')}</button>
@@ -99,5 +108,6 @@ export function PassageBookmarks({ currentPassage, onClose, portalTarget, storag
         </ul>
       </>}
     </div>
+    {unlockOpen && <LibraryUnlock onClose={() => setUnlockOpen(false)} />}
   </dialog>, portalTarget ?? document.body);
 }

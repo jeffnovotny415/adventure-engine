@@ -171,5 +171,41 @@
       "conflict": "Saved passages changed in another window. Try again to use the latest collection.",
       "write_failed": "This change could not be saved. Your previous passages are unchanged. Try again."
     }
+  },
+  "purchase": {
+    "title": "Keep the adventure going",
+    "owned_title": "Your library is unlocked",
+    "close": "Close library unlock",
+    "help": "Enjoy the opening of each book for free. One purchase opens every path and ending in these three adventures.",
+    "boundary_help": "You’ve reached the end of this book’s free opening. Unlock all three adventures to follow your next choice. Your place is saved.",
+    "owned_help": "Every path and ending in these three adventures is yours to read.",
+    "terms": "One purchase. No subscription. Includes future updates to these three books.",
+    "family": "This purchase supports Family Sharing.",
+    "buy": "Unlock all three books",
+    "restore": "Restore purchases",
+    "retry": "Try again",
+    "done": "Done",
+    "keep_reading": "Keep exploring for free",
+    "preview_note": "Free openings in every book.",
+    "manage": "Unlock the library",
+    "manage_owned": "Library unlocked",
+    "author_access": "Author access (development only)",
+    "locked_passage": "Unlock the library to read this saved passage.",
+    "messages": {
+      "checking": "Checking your library…",
+      "purchasing": "Waiting for Apple’s purchase confirmation…",
+      "restoring": "Restoring your purchase…",
+      "access_error": "Your purchase status could not be checked. Try again or restore your purchase. Your bookmark is safe.",
+      "unavailable": "The store is unavailable right now. Try again when you have a connection. You can still read the free openings.",
+      "restricted": "Purchases are restricted on this device. You can still restore an existing purchase and read the free openings.",
+      "ios_only": "Purchases are available in the iPhone and iPad app.",
+      "pending": "Waiting for purchase approval. You can keep reading the free openings; access will update when Apple approves the purchase.",
+      "cancelled": "Purchase cancelled. Your place is unchanged.",
+      "unlocked": "Your library is unlocked.",
+      "nothing_to_restore": "No library purchase was found for this Apple Account.",
+      "purchase_error": "The purchase could not be completed. Please try again. Your place is unchanged.",
+      "restore_error": "Your purchase could not be restored. Check your connection and Apple Account, then try again.",
+      "verification_failed": "Apple’s purchase verification was unsuccessful. Access has not changed. Try restoring your purchase."
+    }
   }
 }

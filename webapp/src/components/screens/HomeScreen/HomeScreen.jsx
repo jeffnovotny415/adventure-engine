@@ -4,12 +4,16 @@ import { BookSpine } from '../../shared/BookSpine/BookSpine';
 import { AppHeader } from '../../shared/AppHeader/AppHeader';
 import { ResumeBookmark } from './ResumeBookmark';
 import { PassageBookmarks } from '../../shared/BookReader/PassageBookmarks';
+import { usePurchases } from '../../../hooks/usePurchases';
+import { LibraryUnlock } from '../../shared/LibraryUnlock/LibraryUnlock';
 
 export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onStartAgain, onDeveloperMode }) {
   const { getText } = useContent();
   const [passagesOpen, setPassagesOpen] = useState(false);
   const [resumeBookmark, setResumeBookmark] = useState(null);
   const mainRef = useRef(null);
+  const purchases = usePurchases();
+  const [unlockOpen, setUnlockOpen] = useState(false);
   return (
     <>
       <AppHeader className="library-header">
@@ -39,10 +43,16 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
         {passagesOpen && <PassageBookmarks portalTarget={mainRef.current} onClose={() => setPassagesOpen(false)} />}
       </main>
       <footer className="library-footer">
-        <button type="button" className="text-button small" onClick={onDeveloperMode}>
+        {purchases && <div className="library-access">
+          {!purchases.owned && <p>{getText('purchase.preview_note')}</p>}
+          <button type="button" className="text-button" onClick={() => setUnlockOpen(true)}>{getText(purchases.owned ? 'purchase.manage_owned' : 'purchase.manage')}</button>
+          {purchases.developerMode && <label><input type="checkbox" checked={purchases.authorAccess} onChange={event => void purchases.setAuthorAccess(event.target.checked)} />{getText('purchase.author_access')}</label>}
+        </div>}
+        {onDeveloperMode && <button type="button" className="text-button small" onClick={onDeveloperMode}>
           {getText('home.developer_test_mode')}
-        </button>
+        </button>}
       </footer>
+      {unlockOpen && <LibraryUnlock onClose={() => setUnlockOpen(false)} />}
     </>
   );
 }

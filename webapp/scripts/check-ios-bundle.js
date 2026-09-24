@@ -25,7 +25,8 @@ async function filesIn(directory) {
 }
 
 try {
-  assert(process.argv.length === 3, 'Usage: node scripts/check-ios-bundle.js <built App.app>');
+  assert(process.argv.length === 3 || (process.argv.length === 4 && process.argv[3] === '--release'),
+    'Usage: node scripts/check-ios-bundle.js <built App.app> [--release]');
   const app = path.resolve(process.argv[2]);
   const config = JSON.parse(await readFile(path.join(app, 'capacitor.config.json'), 'utf8'));
   const source = JSON.parse(await readFile(path.join(root, 'capacitor.config.json'), 'utf8'));
@@ -59,6 +60,14 @@ try {
   }
   for (const file of [info.CFBundleExecutable, 'Assets.car', 'Base.lproj/LaunchScreen.storyboardc']) {
     await stat(path.join(app, file));
+  }
+  if (process.argv[3] === '--release') {
+    const binary = await readFile(path.join(app, info.CFBundleExecutable));
+    assert(!binary.includes(Buffer.from('setAuthorAccess')), 'Release must not expose the native author override');
+    assert(!binary.includes(Buffer.from('developerMode')), 'Release must not advertise developer capabilities');
+    const appFiles = await filesIn(app);
+    assert(!appFiles.some(file => file.endsWith('.storekit') || file.includes('.xctest/')),
+      'Release must not bundle local StoreKit configuration or tests');
   }
   console.log(`iOS bundle verified: ${info.CFBundleIdentifier} ${info.CFBundleShortVersionString} (${info.CFBundleVersion}); ${assets.length} identical web assets, local launch, zoom, iPhone/iPad orientations, icon and launch screen.`);
 } catch (error) {

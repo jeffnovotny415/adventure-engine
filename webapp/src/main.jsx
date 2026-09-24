@@ -8,11 +8,12 @@ import './styles/reader.css'
 import './styles/sceneImage.css'
 import App from './App.jsx'
 import { RuntimeBoundary } from './components/shared/RuntimeBoundary/RuntimeBoundary.jsx'
+import { PurchaseProvider } from './hooks/usePurchases.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RuntimeBoundary>
-      <App />
+      <PurchaseProvider><App /></PurchaseProvider>
     </RuntimeBoundary>
   </StrictMode>,
 )
