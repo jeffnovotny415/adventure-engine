@@ -32,6 +32,10 @@ The documents were read as references. Their suggested app schemas, unlock scree
 
 ## Status and verification
 
+### September 24 shield revision
+
+Jeff replaced the physical shield with a duct-taped armband, glowing blue dots, and a wired side power pack. The built-in image generation tool revised `05-shield-cover-me.png` to show its projected energy barrier and `10-full-loadout.png` to show the same band at rest, removing the back-mounted metal shield. Full edit prompts and prior image hashes are recorded in `prompts.json` / `manifest.json`. The gallery and app WebP assets use these revisions, with updated accessibility descriptions; authored text and placement anchors are unchanged. The records below describe the original batch.
+
 These are approved artwork assets, not an app deployment. Existing story data, choices, IDs, and installed app artwork are unchanged. The source excerpts shown by the gallery are copied directly from the current story without rewriting.
 
 All 19 deliverables are original-resolution PNGs with genuine alpha transparency, verified after generation. The final files are copied byte-for-byte from their selected generated outputs. Exact paragraph anchors, gallery file links, and image hashes are checked. The gallery's browser rendering was not automatically inspected because browser policy blocks local file navigation; its source and assets were checked directly.

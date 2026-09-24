@@ -146,12 +146,21 @@
       "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
       "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/close-range-security-bot.png"
     ],
-    "status": "approved",
+    "status": "revised-per-author-request",
     "file": "05-shield-cover-me.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-21bd9b18-07a9-4b88-967d-a46529facaca.png",
-    "edits": [],
-    "alt": "A gloved thumb holds a loose shield emitter in place as a Security Bot strikes the blue shield.",
-    "sha256": "97ab93e8b7026adcad4bacf3269af7e9b2f3c300a2ba5a40bda816fad4fc3ffb",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-01ea5d5d-3d7f-4113-a445-d0fda53dacc1.png",
+    "edits": [
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. Edit the supplied approved Paths of Wonder book illustration. Preserve the professional fine ink outlines, graphite crosshatching and textured colored-pencil shading, landscape 3:2 composition, hooded hero seen from behind at left, exact cream Security Bot design at right, attacking electric baton and yellow BZZZZT! sound effect. REPLACE the entire physical circular metal shield/trashcan-lid object, its handle, and its attached lid hardware with an improvised WRIST/FOREARM ARMBAND projecting a shield of BLUE ENERGY ONLY. There must be no physical disc, lid, metal rim or shield handle. The hero's raised forearm, covered by charcoal sleeve and full charcoal glove, wears a chunky salvaged armband wrapped in layered wrinkled silver-gray DUCT TAPE. Several small distinct glowing BLUE DOT emitters are embedded in the tape. A compact homemade POWER PACK is strapped to the SIDE of that armband with clearly visible short insulated wires connecting it to the emitters. Show a large translucent cyan-blue energy barrier extending in front of the raised arm, convincingly projected from the glowing dots and enveloping the hero's defensive area; the robot baton strikes that light with yellow/blue sparks. The other gloved hand braces the band with its thumb pressing a small loose emitter, keeping the original defensive beat. Both hands anatomically coherent, wrists fully covered. The band and wired pack must be clearly legible and the focal gear detail. Preserve hero identity concealment completely: zero face, hair, skin, ears or bare fingers. Retain recognizable robot and established artwork feel. Genuine transparent alpha background to blend into warm parchment, with clean vignette edges, no dark opaque backdrop, no checkerboard, no new labels or captions. Keep everything else as close as possible to the source.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/05-shield-cover-me.png"
+        ],
+        "previousSha256": "97ab93e8b7026adcad4bacf3269af7e9b2f3c300a2ba5a40bda816fad4fc3ffb"
+      }
+    ],
+    "alt": "A duct-taped armband with glowing blue dots and a wired side power pack projects an energy shield against a Security Bot’s sparking baton.",
+    "sha256": "c6a08820da5ac0b8882bf0b91e1ce118841f8103ddf61b362eaafbad15f22268",
     "sceneTitle": "Shield Cover Me",
     "anchorText": "The stick skids off the light in a shower of sparks. The shield flickers, but it holds! The bot hits it again, and again, and you push forward behind the shield one step at a time. But you can’t get around it, and you can’t exactly fight with a shield and a thumb.",
     "followingText": "“ASHER! SHIELD! COVER ME!”",
@@ -318,9 +327,9 @@
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png",
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-4ecedcbc-9a4a-472e-8197-60cbfe61951e.png"
     ],
-    "status": "approved",
+    "status": "revised-per-author-request",
     "file": "10-full-loadout.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-e4486152-16fd-4837-be9f-26371778b82c.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-ae3460e1-b3da-4d40-aca2-83f65ffcaeca.png",
     "edits": [
       {
         "prompt": "Correct image 1 while retaining its quiet rooftop composition and entirely concealed rear-view hero. 1) Replace belt tool with image 2 powered-OFF steel and copper wrench: completely remove projecting axe blade, no glow, no blade outline. 2) Small seated robot at left should match image 3's approved Long Range Security Bot: angular long oval face, two rectangular DARK visor panels with soft BLUE lens light, flat straight mouth, thin long limbs, skate feet, still giving thumbs-up. Not happy crescent eyes. 3) Add a small secured cylindrical copper-coil rock-launcher to forearm, and small yellow-bulb signal booster on goggle strap above hood side. Keep charcoal gloves and hood, no visible skin/hair/face, existing shield and magnetic boots, perspective and full-color drawn medium. No typography.",
@@ -335,10 +344,19 @@
         "refs": [
           "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f89c96a2-52b0-4828-a71a-39aa0feca040.png"
         ]
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First image is the edit target: the approved rooftop Full Loadout illustration. Second image is a reference ONLY for the NEW shield armband design. Preserve the first image almost exactly: seated rear-view hooded fully concealed hero, small cream blue-eyed robot giving thumbs-up at left, rooftops and church, boots, copper coil rock launcher on hero's RIGHT forearm at image right, inactive Can Opener wrench on belt with no energy blade, clothing and detailed ink/crosshatched colored-pencil style. Remove the ENTIRE round physical shield from the hero's back and all shield-carrying harness straps; fill naturally with plain wrinkled charcoal hoodie fabric matching the rest of the hoodie. Put the NEW compact shield armband on the hero's LEFT forearm (image lower-left, braced hand on ledge), replacing that wrist's old plain bracer. Match reference 2: overlapping wrinkled silver-gray duct tape, small glowing cyan BLUE DOT emitters, compact side-mounted POWER PACK attached with tape and connected by visible short orange/blue wires. The shield is INACTIVE in this resting scene: only blue dots glow, NO projected force field or energy disc. Do NOT put a physical lid/shield anywhere in picture. Keep BOTH original arm poses, full gloves, no bare wrists/fingers, no skin, face, hair, neck, ears or identifiable gender. Keep launcher on opposite arm and other tools unchanged. Maintain original 1536x1024 composition and genuinely transparent alpha sky/vignette; no opaque background, checkerboard or extra lettering. Small precise continuity edit, not a redesign.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png",
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-01ea5d5d-3d7f-4113-a445-d0fda53dacc1.png"
+        ],
+        "previousSha256": "755c846dc8cd61a1c6b9ee22ef94716347793d483c5cc53cfd27bbfdf9bb6a86"
       }
     ],
-    "alt": "The fully covered hero rests above the neighborhood with all their inventions and a blue-eyed Security Bot.",
-    "sha256": "755c846dc8cd61a1c6b9ee22ef94716347793d483c5cc53cfd27bbfdf9bb6a86",
+    "alt": "The fully covered hero rests on a rooftop with a duct-taped shield armband, other inventions, and a blue-eyed Security Bot.",
+    "sha256": "25724e5dde720f753a29da472e0beb0515b7b0b8634b72cd2905a306cd56440a",
     "sceneTitle": "Full Loadout",
     "anchorText": "You look out over {world_name} from the roof. The Can Opener, The Wrist Wrock-It, Shield Cover Me, Asher Portable, The Stompers…every single one of them got you up here.",
     "followingText": "The bot’s visor goes dark.",

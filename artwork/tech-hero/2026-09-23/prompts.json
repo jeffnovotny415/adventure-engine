@@ -74,7 +74,16 @@
       "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg",
       "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/close-range-security-bot.png"
     ],
-    "edits": []
+    "edits": [
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. Edit the supplied approved Paths of Wonder book illustration. Preserve the professional fine ink outlines, graphite crosshatching and textured colored-pencil shading, landscape 3:2 composition, hooded hero seen from behind at left, exact cream Security Bot design at right, attacking electric baton and yellow BZZZZT! sound effect. REPLACE the entire physical circular metal shield/trashcan-lid object, its handle, and its attached lid hardware with an improvised WRIST/FOREARM ARMBAND projecting a shield of BLUE ENERGY ONLY. There must be no physical disc, lid, metal rim or shield handle. The hero's raised forearm, covered by charcoal sleeve and full charcoal glove, wears a chunky salvaged armband wrapped in layered wrinkled silver-gray DUCT TAPE. Several small distinct glowing BLUE DOT emitters are embedded in the tape. A compact homemade POWER PACK is strapped to the SIDE of that armband with clearly visible short insulated wires connecting it to the emitters. Show a large translucent cyan-blue energy barrier extending in front of the raised arm, convincingly projected from the glowing dots and enveloping the hero's defensive area; the robot baton strikes that light with yellow/blue sparks. The other gloved hand braces the band with its thumb pressing a small loose emitter, keeping the original defensive beat. Both hands anatomically coherent, wrists fully covered. The band and wired pack must be clearly legible and the focal gear detail. Preserve hero identity concealment completely: zero face, hair, skin, ears or bare fingers. Retain recognizable robot and established artwork feel. Genuine transparent alpha background to blend into warm parchment, with clean vignette edges, no dark opaque backdrop, no checkerboard, no new labels or captions. Keep everything else as close as possible to the source.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/05-shield-cover-me.png"
+        ],
+        "previousSha256": "97ab93e8b7026adcad4bacf3269af7e9b2f3c300a2ba5a40bda816fad4fc3ffb"
+      }
+    ]
   },
   {
     "id": "06-asher-portable",
@@ -175,6 +184,15 @@
         "refs": [
           "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f89c96a2-52b0-4828-a71a-39aa0feca040.png"
         ]
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First image is the edit target: the approved rooftop Full Loadout illustration. Second image is a reference ONLY for the NEW shield armband design. Preserve the first image almost exactly: seated rear-view hooded fully concealed hero, small cream blue-eyed robot giving thumbs-up at left, rooftops and church, boots, copper coil rock launcher on hero's RIGHT forearm at image right, inactive Can Opener wrench on belt with no energy blade, clothing and detailed ink/crosshatched colored-pencil style. Remove the ENTIRE round physical shield from the hero's back and all shield-carrying harness straps; fill naturally with plain wrinkled charcoal hoodie fabric matching the rest of the hoodie. Put the NEW compact shield armband on the hero's LEFT forearm (image lower-left, braced hand on ledge), replacing that wrist's old plain bracer. Match reference 2: overlapping wrinkled silver-gray duct tape, small glowing cyan BLUE DOT emitters, compact side-mounted POWER PACK attached with tape and connected by visible short orange/blue wires. The shield is INACTIVE in this resting scene: only blue dots glow, NO projected force field or energy disc. Do NOT put a physical lid/shield anywhere in picture. Keep BOTH original arm poses, full gloves, no bare wrists/fingers, no skin, face, hair, neck, ears or identifiable gender. Keep launcher on opposite arm and other tools unchanged. Maintain original 1536x1024 composition and genuinely transparent alpha sky/vignette; no opaque background, checkerboard or extra lettering. Small precise continuity edit, not a redesign.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png",
+          "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-01ea5d5d-3d7f-4113-a445-d0fda53dacc1.png"
+        ],
+        "previousSha256": "755c846dc8cd61a1c6b9ee22ef94716347793d483c5cc53cfd27bbfdf9bb6a86"
       }
     ]
   },
