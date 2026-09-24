@@ -149,13 +149,22 @@
 }
 
 /* Controls keep their layout space so a center tap never moves the passage. */
-.reader-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; }
-.reader-toolbar .reader-nav { flex: 1 1 12rem; min-width: 0; gap: 12px; }
-.reader-controls-toggle { flex: 0 1 auto; max-width: min(8em, 100%); text-align: center; justify-content: center; overflow-wrap: anywhere; }
+.reader-toolbar { display: flex; align-items: center; gap: 8px; }
+.reader-toolbar .reader-nav { flex: 1; min-width: 0; flex-wrap: nowrap; gap: 8px; }
+.reader-toolbar button { min-width: 44px; min-height: 44px; flex-shrink: 0; justify-content: center; }
+.reader-toolbar .text-button { font-size: clamp(14px, .84rem, 20px); }
+.reader-toolbar .text-size-button { width: 44px; min-width: 44px; padding-inline: 4px; font-size: clamp(16px, 1rem, 24px); }
+.reader-toolbar svg { flex-shrink: 0; }
+.reader-toolbar .reader-nav-title { flex: 1; min-width: 0; font-size: clamp(14px, .9rem, 20px); }
+.reader-controls-toggle { flex: 0 0 44px; }
 .reader-layout[data-controls-shown='false'] .reader-nav,
 .reader-layout[data-controls-shown='false'] .reader-page-control { visibility: hidden; }
 .reader-layout[data-controls-shown='false'] .reader-footer { border-color: transparent; }
-@media (max-width: 700px) { .reader-toolbar .reader-nav-title { display: none; } }
+@media (max-width: 700px) {
+  .reader-toolbar, .reader-toolbar .reader-nav { gap: 6px; }
+  .reader-toolbar .reader-nav-title { display: none; }
+  .reader-toolbar .bookmark-button { margin-inline-start: auto; }
+}
 
 /* Reader-only palettes include the margins, settings, and turning leaf. */
 :root:has(.reader-layout[data-page-appearance='clear']),
@@ -276,11 +285,9 @@
 .reader-surface, .decision-spread { touch-action: pan-y pinch-zoom; }
 .reader-surface[data-zoomed='true'], .decision-spread[data-zoomed='true'] { touch-action: pan-x pan-y pinch-zoom; }
 .reader-layout--continuous .reader-surface, .reader-layout--continuous .decision-spread { touch-action: auto; }
+.reader-footer .reader-choice-back { white-space: normal; max-width: 10em; text-align: start; line-height: 1.3; }
+.reader-layout--continuous .reader-footer { justify-content: space-between; }
 .reader-layout[data-choices-next='true'] .scene-progress-label { color: var(--color-accent-1); font-weight: 600; }
 @media (orientation: landscape) and (max-height: 500px) {
   .reader-viewport { height: max(150px, calc(100dvh - 148px - env(safe-area-inset-top) - env(safe-area-inset-bottom))); }
 }
-
-/* Keep the named undo action with the other tools on narrow phone screens. */
-.reader-toolbar .reader-nav:has(.reader-choice-back) { flex-basis: 22rem; }
-.reader-toolbar:has(.reader-choice-back) .reader-controls-toggle { margin-inline-start: auto; }

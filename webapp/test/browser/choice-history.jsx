@@ -59,6 +59,8 @@ function Fixture() {
       expect(!!document.querySelector('.reader-viewport'), 'Self-loop reopens passage');
       click('.reader-choice-back'); await settle();
       expect(atChoices(), 'Self-loop rewind opens choices');
+      expect(!document.querySelector('.reader-choice-back'), 'Undo is absent on the choices page');
+      click('.decision-page > button'); await settle();
       click('.reader-choice-back'); await settle();
       click('.choice-button'); await settle();
       click('.reader-footer-next button'); await settle();

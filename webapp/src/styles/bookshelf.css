@@ -1,5 +1,5 @@
 .library-layout { display: grid; grid-template-columns: minmax(190px, .75fr) minmax(0, 1.5fr); align-items: center; gap: clamp(28px, 5vw, 64px); max-width: 1080px; margin: auto; padding: clamp(24px, 5vh, 56px) max(40px, env(safe-area-inset-right)) 25px max(40px, env(safe-area-inset-left)); }
-.library-intro h1 { margin: 0 0 10px; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.16; letter-spacing: -.045em; }
+.library-intro h1 { margin: 0 0 10px; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.16; letter-spacing: -.045em; overflow-wrap: anywhere; }
 .library-tagline { margin: 0; font-size: .9rem; line-height: 1.6; }
 .book-stack { isolation: isolate; display: flex; flex-direction: column; padding: 0 5px; }
 .book-bar { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr) 25px; gap: 14px; align-items: center; width: 100%; min-height: 126px; padding: 24px 36px; overflow: hidden; background: #4b291b; border-top: 2px solid #ad88514a; border-bottom: 3px solid #211309; border-radius: 9px 17px 9px 6px; box-shadow: inset 1px 0 1px #edcb8244, inset 0 -6px 8px #1a0e0b80, 0 3px 3px #2c1a1130; text-align: left; transform: translateX(-5px); }

@@ -146,3 +146,22 @@ with larger text. Browser mouse drags verify event routing; physical iOS touch
 arbitration still needs device testing.
 
 Mage integration: use `?story=summoned_mage&scene=scene_037` (Fancy Spoon), `scene_035` (Gilly portrait), or `scene_057` (source cavern). All fifteen Mage placements are covered by the live-source anchor test. The same `&large`, `&animated`, `&night` and `&continuous` flags apply.
+
+### Reader UI and first-page undo
+
+The artwork fixture also supports `&history` (an available undo callback),
+`&choices` (open the decision page), and `&system` (largest simulated system
+text category). It uses in-memory passage bookmarks and the real book themes.
+
+Run `node scripts/check-reader-layout.mjs` with the same `READER_URL`,
+`PLAYWRIGHT_MODULE`, and optional browser configuration as above. Set
+`READER_SCREENSHOTS` to a temporary directory for screenshots. The runner covers
+all three books at 390×844, 320×568, 667×375, 568×320, 1024×768, and 768×1024,
+with default, 225% book text, and largest system text. It checks stable toolbar
+geometry, touch targets, settings tabs, saved-passage sheets, decisions, endings,
+and the illustration viewer at short landscape sizes, including rotation.
+
+Back to choice belongs in Previous's footer slot only on the first page after a
+choice. Later pages show Previous; the decision page has no undo control.
+`choice-history.html` checks actual rewind behavior, including returning from a
+decision to its passage before undoing another choice. No real saves are used.

@@ -201,13 +201,11 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       onKeyDownCapture={(event) => { if (event.key === 'Tab') setControlsVisible(true); }}>
       <div className="reader-toolbar">
       <nav className="reader-nav" inert={!controlsShown} aria-label={getText('reader.navigation')}>
-        <button type="button" className="text-button" onClick={() => { saveScrollRef.current(); onHome(); }}>
-          <span aria-hidden="true">← </span>{getText('reader.bookshelf')}
+        <button type="button" className="text-button reader-bookshelf" aria-label={getText('reader.bookshelf')}
+          title={getText('reader.bookshelf')} onClick={() => { saveScrollRef.current(); onHome(); }}>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="m14 5-7 7 7 7" /></svg>
+          <span className="reader-bookshelf-label">{getText('reader.bookshelf')}</span>
         </button>
-        {onUndoChoice && <button type="button" className="text-button reader-choice-back"
-          onClick={() => { cancelTurn(); onUndoChoice(); }}>
-          <span aria-hidden="true">↶ </span>{getText('reader.back_to_choice')}
-        </button>}
         <span className="reader-nav-title">{testing ? getText('reader.test_preview') : storyTitle}</span>
         {storyId && <button type="button" className="text-size-button bookmark-button" aria-label={getText('passages.title')}
           aria-haspopup="dialog" onClick={openBookmarks}>
@@ -218,7 +216,13 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
       </nav>
       {!readingStyle.alwaysShowControls && !continuous && !choosing && <button type="button"
         ref={controlsButtonRef} className="reader-controls-toggle text-button" aria-expanded={controlsShown}
-        onClick={toggleControls}>{getText(controlsShown ? 'reader.hide_controls' : 'reader.show_controls')}</button>}
+        aria-label={getText(controlsShown ? 'reader.hide_controls' : 'reader.show_controls')}
+        title={getText(controlsShown ? 'reader.hide_controls' : 'reader.show_controls')} onClick={toggleControls}>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+          <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" /><circle cx="12" cy="12" r="3" />
+          {controlsShown && <path d="m3 3 18 18" />}
+        </svg>
+      </button>}
       </div>
       <article className={`paper-book${choosing ? ' paper-book--choices' : ''}`} aria-label={title}>
         {choosing ? (
@@ -251,7 +255,12 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
             </div>
             <footer className="reader-footer" ref={footerRef} tabIndex={-1}>
               <span className="reader-footer-previous reader-page-control" inert={!controlsShown}>
-                {!continuous && page > 0 && (
+                {page === 0 && onUndoChoice ? (
+                  <button type="button" className="text-button reader-choice-back"
+                    onClick={() => { cancelTurn(); onUndoChoice(); }}>
+                    <span aria-hidden="true">← </span><span>{getText('reader.back_to_choice')}</span>
+                  </button>
+                ) : !continuous && page > 0 && (
                   <button type="button" className="text-button" onClick={() => turnPage(page - 1)}>
                     <span aria-hidden="true">← </span>{getText('reader.previous')}
                   </button>
