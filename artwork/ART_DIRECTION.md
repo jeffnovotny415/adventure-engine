@@ -33,3 +33,11 @@ These rules record Jeff's artwork direction from September 23, 2026.
 - The reader's hero wears a charcoal-teal cloak with a raised hood, charcoal full gloves, covered trousers and boots; retain the identity concealment rules above. When Honey sits on the hero's head, show him on the raised hood.
 - Honey's body is grapefruit-sized. Keep him smaller than a person's head, including in group scenes.
 - Bernard and Gilly reference portraits and the remaining Mage narrative batch were approved. Use their designs consistently in future Mage scenes.
+
+## Space Walker — opening set approved September 23, 2026
+
+- Use `space-walker/2026-09-23/` for the approved opening narrative treatment: detailed ink and colored pencil, worn steel, cool blue and warm amber light.
+- Keep the hero's hat consistent with `01-the-portal.png`: sand-colored, creased crown, broad brim all around, black goggle strap and goggles, continuous rear neck flap. Do not substitute a baseball cap. The correction in `03-the-new-crewmate.png` follows Jeff's feedback.
+- Before joining the crew, use dark expedition clothes with the canvas pack. After joining, use the oversized patched gray jumpsuit, rolled sleeves over covered wrists, and full gloves. All identity-concealment rules still apply.
+- Keep the approved Aster, Percy, Trace, robot and ship designs. Percy has two eye stalks; Trace has mechanical lens eyes and no nose. Do not transfer Percy's features to Ratchet or use the crew as rescued civilian families.
+- The remaining eleven narrative illustrations are review drafts until accepted.

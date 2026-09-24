@@ -1,39 +1,49 @@
-# The Space Walker — first narrative batch
+# The Space Walker — narrative artwork
 
-Four review drafts generated on September 23, 2026. Open [the parchment gallery](index.html) to review or download each full-resolution PNG. These images are not yet placed in the app.
+[Open the parchment gallery](index.html). Fifteen illustrations: four approved opening scenes (including the requested hat correction) and eleven new review drafts. All fifteen remain separate from app placement pending the next integration batch.
 
-| Image | Story scene | Suggested placement |
-| --- | --- | --- |
-| The Portal | scene_001 | After paragraph 4 |
-| The Bridge | scene_006 | After paragraph 5 |
-| Permission to Come Aboard | scene_029 | After paragraph 11 |
-| The Engine Room | scene_032 | After paragraph 10 |
+| Image | Scene | After paragraph | Status |
+| --- | --- | --- | --- |
+| The Portal | scene_001 | 4 | approved |
+| The Bridge | scene_006 | 5 | approved |
+| Permission to Come Aboard | scene_029 | 11 | approved |
+| The Engine Room | scene_032 | 10 | approved |
+| Everyone Aboard | scene_023 | 3 | review-draft |
+| Off the Ice | scene_045 | 4 | review-draft |
+| Keeper Cobble | scene_050 | 2 | review-draft |
+| I Love Tight | scene_017 | 4 | review-draft |
+| Belts | scene_021 | 13 | review-draft |
+| One More | scene_052 | 6 | review-draft |
+| The Convoy | scene_057 | 7 | review-draft |
+| Catch | scene_060 | 8 | review-draft |
+| Hold On to Something | scene_062 | 5 | review-draft |
+| Stung | scene_077 | 4 | review-draft |
+| The Wall of Names | scene_078 | 10 | review-draft |
 
-The exact, unchanged story paragraphs and source hashes are recorded in [manifest.json](manifest.json). These are candidate placements, separate from authored story data.
+Exact story titles, unchanged paragraph anchors and source hashes are recorded in [manifest.json](manifest.json). These placement suggestions remain separate from authored story data. The memorial image follows Aster's arrival so it does not reveal his presence early.
 
 ## Direction and references
 
-Professional ink, graphite and colored-pencil illustration; worn steel, blue light and warm amber accents. The existing approved Captain Aster, Percy, Trace, maintenance robot and power-core artwork are the visual references. All four PNGs have real alpha transparency and irregular vignette edges for parchment placement.
+Professional ink, graphite and colored pencil, worn steel, blue light and warm amber accents. Existing approved Captain Aster, Percy, Trace, robot and ship drawings supply design references. Masters retain real alpha transparency for parchment.
 
-The reader’s hero is seen from behind with face, skin and hair concealed. A desert expedition hat with a long neck flap, goggles and gloves interprets the opening expedition setup. Later scenes add the story’s oversized gray patched crew jumpsuit over fully covering clothes. This outfit interpretation is for review; no prose was altered.
+The hero remains seen from behind with face, skin and hair concealed. Use the same broad-brim sand-colored expedition hat with continuous neck flap and goggles throughout. Dark expedition clothes precede the oversized gray patched crew jumpsuit. The requested correction replaces the cap-like hat in Permission to Come Aboard.
 
-Source references:
+Dr Wren, Keeper Cobble, Captain Thyme, Ratchet and the civilian families are new visual interpretations of their live story descriptions, for review. The cargo scene was corrected to show civilians rather than crew lookalikes; Ratchet was corrected to a small round furry engineer without Percy's eye stalks.
+
+Sources:
 
 - [Characters and Artwork document](https://docs.google.com/document/d/1t7yWR8H7jFc8MXHNt0oXk0EtAR79whEP7-iglCyc2JM/edit)
 - [Art Notes document](https://docs.google.com/document/d/1a_uoVK8o-AGaU6zdEkOmG5DQYRl-YIYw1ewXSBu9vDo/edit)
-- The locally cached Markdown exports of those documents, read alongside the live `space_walker.json` story.
+- Cached Markdown exports of those documents, checked against the live `space_walker.json`.
 - [Project art direction](../../ART_DIRECTION.md)
 
-Tool mode: built-in `image_gen` with local reference images. Exact prompts, reference paths and generated source paths are preserved in [prompts.json](prompts.json). Masters were copied byte-for-byte; no postprocessing or animation was applied.
-
-## Remaining document concepts
-
-Cargo-bot blankets (023), Dr Wren and the data crystals (045), Keeper Cobble and the seed vault (050), the World-Eater fleet reveal (057), zero-gravity noodles (062), the final white-light attack (077), and the memorial wall (078). Additional interior moments include the sideways ship (017), tumbling Genesis passengers (021), Trace catching the explorer during decompression (052), and the shuttle evacuation (060).
+Tool mode: built-in `image_gen`, using local references. [prompts.json](prompts.json) records original prompts, corrections, reference paths and final generated paths. Selected PNGs were copied byte-for-byte. Transparency fixes used the image tool; no deterministic image editing or animations were introduced.
 
 ## Verification
 
-- All four original PNG copies match their generated-source SHA-256 hashes.
-- All four contain transparent pixels and retain their original 1536 × 1024 dimensions.
-- Suggested anchors are exact paragraphs from the current live story.
+- All fifteen assets have actual alpha transparency and original 1536 × 1024 dimensions.
+- Final copies match recorded SHA-256 and generated-source bytes.
+- Every placement anchor matches the current live story.
 - All 41 protected story, Python and draft files match the pre-integration baseline.
-- Mage app integration was completed separately in `e6c2e87`; this batch only adds artwork and its review materials.
+- Gallery image/download links resolve locally; viewport settings permit user zoom.
+- No app runtime or reader gesture changes in this artwork batch.
