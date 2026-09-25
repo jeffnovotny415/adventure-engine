@@ -1,0 +1,278 @@
+{
+  "status": "ready",
+  "stories": [
+    {
+      "story": "the_can_opener",
+      "added": [],
+      "removed": [],
+      "edited": [
+        {
+          "scene": "scene_010",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_011",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_012",
+          "fields": [
+            "entry_intros"
+          ]
+        },
+        {
+          "scene": "scene_015",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_016",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_017",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_018",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_028",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_030",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_031",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_032",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_033",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_034",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_035",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_036",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_038",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_039",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_040",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_041",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_042",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_048",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_049",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_054",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_056",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_058",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_059",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_061",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_063",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_064",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_066",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_067",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_068",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_070",
+          "fields": [
+            "text"
+          ]
+        }
+      ],
+      "unchanged": [
+        "scene_001",
+        "scene_002",
+        "scene_003",
+        "scene_004",
+        "scene_005",
+        "scene_006",
+        "scene_007",
+        "scene_008",
+        "scene_009",
+        "scene_013",
+        "scene_014",
+        "scene_019",
+        "scene_020",
+        "scene_021",
+        "scene_022",
+        "scene_023",
+        "scene_024",
+        "scene_025",
+        "scene_026",
+        "scene_027",
+        "scene_029",
+        "scene_037",
+        "scene_043",
+        "scene_044",
+        "scene_045",
+        "scene_046",
+        "scene_047",
+        "scene_050",
+        "scene_051",
+        "scene_052",
+        "scene_053",
+        "scene_055",
+        "scene_057",
+        "scene_060",
+        "scene_062",
+        "scene_065",
+        "scene_069"
+      ],
+      "review": []
+    }
+  ],
+  "diagnostics": [],
+  "limitations": "Read-only comparison. Title changes are possible ID reuse, not proof. Same-title rewrites cannot reliably be distinguished from replacement. Text edits can shift saved paragraph/character positions; flags and route intent require human review. No content or saves are changed.",
+  "files": {
+    "current": [
+      {
+        "story": "space_walker",
+        "file": "/Users/jeff/Developer/AdventureEngine/webapp/src/data/stories/space_walker.json",
+        "sha256": "c5a0c97d75ec2018a741e5222c381604f6369ed954fb226ffc7913dc09f41289"
+      },
+      {
+        "story": "summoned_mage",
+        "file": "/Users/jeff/Developer/AdventureEngine/webapp/src/data/stories/summoned_mage.json",
+        "sha256": "830333d8b85e369bd1130504f4972309dbadadbc8491e73a9f31746caac98948"
+      },
+      {
+        "story": "the_can_opener",
+        "file": "/Users/jeff/Developer/AdventureEngine/webapp/src/data/stories/the_can_opener.json",
+        "sha256": "bc92ebd8800a787df8f0c082b6e9d12747607b87723885e115133eea10539444"
+      }
+    ],
+    "incoming": [
+      {
+        "story": "the_can_opener",
+        "file": "/Users/jeff/Developer/AdventureEngine/drafts/2026-09-24-can-opener-doc-update/reviewed/the_can_opener.json",
+        "sha256": "8500c7514dee4926432fd4519a6d8bb4c60590537dde56738df9497cf63f4c33"
+      }
+    ]
+  }
+}

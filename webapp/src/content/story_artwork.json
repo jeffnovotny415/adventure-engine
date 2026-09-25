@@ -93,7 +93,7 @@
     {
       "id": "10-full-loadout",
       "sceneId": "scene_049",
-      "after": "You look out over {world_name} from the roof. The Can Opener, The Wrist Wrock-It, Shield Cover Me, Asher Portable, The Stompers…every single one of them got you up here.",
+      "after": "You look out over {world_name} from the roof. All of your inventions got you here. It's time to put them to use.",
       "kind": "scene",
       "src": "/images/stories/the_can_opener/illustrations/10-full-loadout.webp",
       "alt": "The fully covered hero rests on a rooftop with a duct-taped shield armband, other inventions, and a blue-eyed Security Bot.",

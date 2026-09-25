@@ -1,0 +1,422 @@
+--- scene_010 text app
++++ scene_010 text doc
+@@ -1,11 +1,11 @@
+ 
+-This is a bad idea. You do it anyway.
++“Ok, you've got this,” you say as you prep yourself.
+ 
+ You take three running steps across the garage roof and jump, and you land right on top of the Construction Bot’s big round head with a CLANG that rattles your teeth. The bot fires its foot thrusters and starts hopping all over the street, trying to shake you off.
+ 
+ “Sir!” Asher shouts from the garage speakers. “That is not a recognized safety procedure!”
+ 
+-“I KNOW!”
++“YOU THINK?!?”
+ 
+ You hang on with one hand, jam the prybar end of The Can Opener under the panel behind its head, and lean on it with everything you’ve got. The panel pops off!
+ 
+--- scene_011 text app
++++ scene_011 text doc
+@@ -5,9 +5,9 @@
+ 
+ “The unfinished energy shield, sir? Under the pizza box. I would like to remind you that it is unfinished.”
+ 
+-You grab it off the workbench. It’s ugly, it’s unstable, and it’s held together with tape, but it might work. It’s a flat metal disc with a handle on the back and a power pack wired to the side.
++You grab it off the workbench. It’s ugly, it’s unstable, and it’s held together with tape, but it might work. It’s an armband, covered in duct tape and glowing blue dots with a power pack wired to the side.
+ 
+-You run outside with the shield on one arm and The Can Opener in the other hand. The Construction Bot spots you and comes hopping over on its rocket feet, hammer raised.
++You strap it around your left forearm and run outside with The Can Opener in your right hand. The Construction Bot spots you and comes hopping over on its rocket feet, hammer raised.
+ 
+ You flip the switch.
+ 
+--- scene_012 entry_intros app
++++ scene_012 entry_intros doc
+@@ -1,5 +1,5 @@
+ {
+   "after_fight": "\nYou head back into the garage, still buzzing from the fight, and drop onto your stool.\n",
+   "from_survey": "\nYou carry the scratched-up tag inside and set it down next to the keyboard.\n",
+-  "after_defending": "\nYou walk back into the garage with your arm still tingling and the shield tucked under it.\n"
++  "after_defending": "\nYou walk back into the garage with your left arm still tingling and the shield’s blue dots fading under the duct tape.\n"
+ }
+--- scene_015 text app
++++ scene_015 text doc
+@@ -1,5 +1,5 @@
+ 
+-You plant your feet and hold the shield up with both hands.
++You plant your feet, raise your left forearm, and brace it with your right hand.
+ 
+ The hammer slams into it. Then a big metal fist. Then the hammer again. Every hit makes the blue light ripple like a puddle and pushes you back a step, but the bot is already beat up and it’s burning through its power fast.
+ 
+--- scene_016 text app
++++ scene_016 text doc
+@@ -1,11 +1,11 @@
+ 
+ You spend the next few hours on the shield. You swap the tape for actual bolts (mostly), rewire the power pack so it stops getting hot, and add a second emitter so the blue circle is wider than a trash can lid.
+ 
+-You flip the switch. The shield hums, flickers, holds for ten whole seconds…and shuts off.
++You strap the armband onto your left forearm and flip the switch. The shield hums, flickers, holds for ten whole seconds…and shuts off.
+ 
+-Better. Not good. But better!
++“Perfect,” you say with a lopsided grin.
+ 
+-“It needs a steadier power source,” you say. “And a way to wear it so I still have both hands.”
++“It needs a steadier power source,” you say.
+ 
+ “May I offer an observation, sir?” Asher asks.
+ 
+--- scene_017 text app
++++ scene_017 text doc
+@@ -7,7 +7,7 @@
+ 
+ A Load-Bot. It’s built like three big crates stacked on top of each other, with a square head, forklift prongs for hands, and big round rolling wheels instead of feet. There’s a screen on its chest with a little progress bar that says 87%. And painted on its face is a great big smile.
+ 
+-It’s picking up crates of oranges and throwing them at a wall, one after another, smiling the whole time. Somehow that’s way creepier than if it was frowning.
++It’s picking up crates of oranges and watermelons and throwing them at a wall, one after another, smiling the whole time.
+ 
+ Its eyes are the same flickering red.
+ 
+--- scene_018 text app
++++ scene_018 text doc
+@@ -15,4 +15,6 @@
+ 
+ “The angle’s wrong. And the spring’s too strong. And maybe the coil is backwards.”
+ 
+-“So just the angle, the spring, and the coil.”
++“So just the angle, the spring, and the coil, sir?”
++
++“Asher, don’t make me unplug you.”
+--- scene_028 text app
++++ scene_028 text doc
+@@ -19,4 +19,4 @@
+ 
+ “Heroes need to stay hydrated,” she says, and pushes it into your hand.
+ 
+-You’re not sure you’re a hero…but you take the juice box anyway.
++You blush as you take a long sip on the juice box.
+--- scene_030 text app
++++ scene_030 text doc
+@@ -9,4 +9,4 @@
+ 
+ The bot rolls closer, antenna bulb blinking away. Your good hand feels around on the bench behind you and closes on the only thing there…the shield. Half built, with the emitter hanging on by two wires.
+ 
+-You jam the emitter back into place, hold it there with your thumb, and swing the shield around in front of you.
++You slide your numb left arm through the strap, jam the emitter back into place with your right thumb, and hold your arm up in front of you.
+--- scene_031 text app
++++ scene_031 text doc
+@@ -1,7 +1,7 @@
+ 
+ No time to be picky.
+ 
+-You jam the emitter back into the shield, hold it in place with your thumb, and grab the handle. The power pack dangles by its wires, and a screw rolls off the bench and pings across the floor.
++You slip the shield’s strap over your left forearm, jam the emitter back into place, and hold it there with your right thumb. The power pack dangles by its wires, and a screw rolls off the bench and pings across the floor.
+ 
+ The Security Bot rolls forward, taser stick sparking.
+ 
+--- scene_032 text app
++++ scene_032 text doc
+@@ -7,6 +7,6 @@
+ 
+ The Security Bot spins in a circle, trying to look at everything at the same time. It was built to react to alarms, and right now EVERYTHING is an alarm.
+ 
+-That buys you three seconds. You use them to grab the shield, jam the emitter back into place, and hold it there with your thumb.
++That buys you three seconds. You slip the shield over your left forearm, jam the emitter back into place, and hold it there with your right thumb.
+ 
+ The bot finally figures out that the pencil sharpener is not a threat. It turns back to you and raises its taser stick.
+--- scene_033 text app
++++ scene_033 text doc
+@@ -17,6 +17,6 @@
+ 
+ The Security Bot’s eyes fade from red to soft blue, then go dark, and the yellow bulb on its antenna finally stops blinking.
+ 
+-You slide down to the floor with Shield Cover Me in your lap, and it fizzles out.
++You slide down to the floor and rest your left arm in your lap. Shield Cover Me fizzles out.
+ 
+ Ok, you have to admit…the name kind of fits.
+--- scene_034 text app
++++ scene_034 text doc
+@@ -1,7 +1,7 @@
+ 
+ You are DONE holding things together with your thumb.
+ 
+-You rebuild Shield Cover Me from the ground up: real bolts, a proper housing for the emitter, and a bigger power pack. And the best part is a harness. Instead of carrying the shield on your arm, you mount the emitter on a chest plate made from the Security Bot’s own armor. Tap the plate, and the blue circle opens up in front of you with both hands free.
++You rebuild Shield Cover Me from the ground up: real bolts, a proper housing for the emitter, and a bigger power pack wired to the side. You cut a curved brace from the Security Bot’s armor and fit it inside the armband, with padding underneath and fresh duct tape over the wiring. The blue dots still glow through the gaps. Now it stays snug on your left forearm without you holding anything together. Tap the switch beside your wrist, and the blue circle opens up in front of your arm.
+ 
+ You try it. Tap! The shield opens up, wide and steady.
+ 
+--- scene_035 text app
++++ scene_035 text doc
+@@ -7,7 +7,7 @@
+ 
+ “The code is listening. Several times a second, it checks for something from outside. Instructions, I think. This bot did not wander into our garage, sir. Something told it where to go.”
+ 
+-A cold feeling settles into your stomach.
++“Something told it where to go? That’s bad, Asher…very bad.”
+ 
+ “Can you tell where it’s coming from?”
+ 
+@@ -19,4 +19,4 @@
+ 
+ “Yes, sir. It is.”
+ 
+-You patch up the shield as best you can before bed, but your mind is somewhere else the whole time.
++Before bed, you bolt the loose emitter into the armband, secure the power pack to its side, and tape the wiring down. You add a switch beside your left wrist so you can turn it on without reaching under the tape. This time the shield holds steady for forty seconds before the pack gets warm. You shut it off, but your mind is still running through everything that happened tonight.
+--- scene_036 text app
++++ scene_036 text doc
+@@ -1,7 +1,7 @@
+ 
+ Mr. Lin is on his bench at the top of Main Street, where he always is, with a coffee in one hand and nothing in the other.
+ 
+-He looks at The Can Opener on your belt. He looks at the chest plate. He looks at the thing on your arm. Then he looks back at his coffee.
++He looks at The Can Opener on your belt. He looks at the duct-taped armband on your left arm. He looks at the launcher on your right. Then he looks back at his coffee.
+ 
+ “Afternoon.”
+ 
+--- scene_038 text app
++++ scene_038 text doc
+@@ -1,5 +1,5 @@
+ 
+-You tap your chest plate, the blue circle opens up in front of you, and you run for the bank.
++You tap the switch on your left armband, the blue circle opens up in front of you, and you run for the bank.
+ 
+ ZAP! ZAP! ZAP!
+ 
+@@ -7,7 +7,7 @@
+ 
+ You run along the wall looking for a way up. No ladder. No fire escape on this side. Just three stories of smooth steel siding.
+ 
+-The shield is getting warm against your chest. Thirty seconds. Thirty-five.
++The shield’s power pack is getting warm against your left forearm. Thirty seconds. Thirty-five.
+ 
+ “Sir, the shield is about to—”
+ 
+--- scene_039 text app
++++ scene_039 text doc
+@@ -11,12 +11,10 @@
+ 
+ “Sir?”
+ 
+-“I lost, Asher.”
+-
+-“You retreated, sir. It is a different thing. Losing is when you do not come back.” He pauses. “Are you planning to come back?”
++“It beat me, Asher. I can’t let that happen again.”
+ 
+ You look at the three inventions on the bench. Every one of them worked, and every one of them ran out.
+ 
+ You wipe your nose on your sleeve.
+ 
+-“Yeah. I’m coming back.”
++“It’s time to get to work.”
+--- scene_040 text app
++++ scene_040 text doc
+@@ -13,6 +13,6 @@
+ 
+ “I don’t need a bigger blaster. I need to move better…and I need you with me.”
+ 
+-“I would like that very much, sir. I have never been outside.”
++“I would like that very much, sir. I have never been outside before.”
+ 
+ Two ideas. Boots that can climb, and an Asher you can carry.
+--- scene_041 text app
++++ scene_041 text doc
+@@ -3,14 +3,16 @@
+ 
+ Asher lives in a computer tower the size of a mini fridge, and you need him to fit on your face. You can’t shrink his whole brain, so you don’t even try. The big brain stays in the garage. What you build is a way for him to come along: a tiny camera and display in a single lens that clips over your goggles, an earbud so he can talk to you, and a signal booster made from the Security Bot’s antenna. Yellow bulb and all.
+ 
+-The first version melts. The second version works, but it only plays polka music. You don’t know why, and neither does Asher.
++The first version melts before you put it on. The second version doesn’t melt, but it only plays weird music. You don’t know why, and neither does Asher.
+ 
+ The third version clicks into place over your right eye, and a little blue ring lights up in the corner of your vision.
+ 
+-“Testing,” says a voice in your ear. “Sir, I can see the garage. I can see the workbench. Sir…is that what the back of my tower looks like? It is SO dusty.”
++“Testing,” says a voice in your ear. “Sir, I can see the garage. I can see the workbench. Sir…is that what the back of my tower looks like? It is uncomfortably dusty.”
+ 
+ “Welcome to the team, Asher Portable.”
+ 
+-“That is simply a description of what I am, sir.”
++“You just added the word portable to my name, sir.”
+ 
+-“Yep. That’s how names work.”
++“Yep. Cool, right?”
++
++“Ummm. Sure, sir, but when we are done, can you dust my tower?”
+--- scene_042 text app
++++ scene_042 text doc
+@@ -19,4 +19,6 @@
+ 
+ “Please never do that again.”
+ 
++“No promises.”
++
+ You grin. For the first time since the bank, you actually feel a little better.
+--- scene_048 text app
++++ scene_048 text doc
+@@ -17,4 +17,4 @@
+ 
+ “Two seconds, sir!”
+ 
+-You tap your chest. Shield Cover Me snaps open, the bolt splashes right off it, and you’re already running.
++You tap the switch on your left armband. Shield Cover Me snaps open, the bolt splashes right off it, and you’re already running.
+--- scene_049 text app
++++ scene_049 text doc
+@@ -11,7 +11,7 @@
+ 
+ “It is still listening. And from up here, with nothing in the way, I can finally hear what it is listening to.” His voice gets excited, which almost never happens. “Sir, it is a signal. A real one. All of the bots have been getting orders, and I can hear where they come from.”
+ 
+-You look out over {world_name} from the roof. The Can Opener, The Wrist Wrock-It, Shield Cover Me, Asher Portable, The Stompers…every single one of them got you up here.
++You look out over {world_name} from the roof. All of your inventions got you here. It's time to put them to use.
+ 
+ The bot’s visor goes dark.
+ 
+--- scene_054 text app
++++ scene_054 text doc
+@@ -1,5 +1,5 @@
+ 
+-You’re halfway to the fence when Asher hisses in your ear.
++You’re halfway to the fence when Asher sounds in your ear.
+ 
+ “Drone, sir! Coming back around. Hide!”
+ 
+--- scene_056 text app
++++ scene_056 text doc
+@@ -7,7 +7,7 @@
+ 
+ You peek in. It’s an office with a huge desk, a huge chair, and a huge painting of a man in a shiny suit shaking hands with himself. Nobody’s inside.
+ 
+-You pry the window open with The Can Opener (tool first!), climb in, and land on carpet so thick you sink into it.
++You pry the window open with The Can Opener using the prybar, climb in, and land on carpet so thick you sink into it.
+ 
+ “Sir, there is a computer on that desk, and it is unlocked. There is a sticky note on the screen. It says ‘Password: password.’”
+ 
+--- scene_058 text app
++++ scene_058 text doc
+@@ -5,7 +5,7 @@
+ 
+ A man bounces up the steps. Shiny suit. Big smile. Too many teeth.
+ 
+-“Hello, hello, HELLO, {world_name}! Max Grabs, of Grabs Awesome Structures! You know me! You love me!”
++“Hello, hello, HELLO, {world_name}! Max Grabs, of GAS! You know me! You love me!”
+ 
+ Nobody claps, so he claps for himself.
+ 
+@@ -13,13 +13,13 @@
+ 
+ He spreads his arms wide.
+ 
+-“GAS is growing! GAS is everywhere! Soon, every building you see will be FULL of GAS!”
++“GAS is growing! GAS is everywhere! Soon, every building you see will be made by GAS!”
+ 
+ A little kid near the front loses it completely. Max points right at him.
+ 
+ “That’s right! Laugh with JOY!”
+ 
+-“GAS never sleeps! GAS never stops! GAS is coming to YOUR street!”
++“GAS lingers! GAS never goes away! GAS is coming to YOUR street!”
+ 
+ Somebody’s dad, quietly: “Not if I close the windows.”
+ 
+@@ -53,6 +53,6 @@
+ 
+ “Don’t blow yourself up, kid.”
+ 
+-“Leave that to GAS.”
++“The only one that is going to blow up is GAS.”
+ 
+-He almost smiles.
++He smiles.
+--- scene_059 text app
++++ scene_059 text doc
+@@ -1,5 +1,5 @@
+ 
+-You spend the rest of the day getting ready. You charge everything, you put a fresh power core in The Can Opener (the very best one you’ve got), and you fill your pockets with landscaping rocks.
++You spend the rest of the day getting ready. You charge everything, put a fresh power core in The Can Opener, and tuck a spare—the very best one you’ve got—into a padded pouch on your belt. Then you fill your pockets with landscaping rocks.
+ 
+ Then you lay it all out on the workbench and check it twice.
+ 
+--- scene_061 text app
++++ scene_061 text doc
+@@ -9,7 +9,7 @@
+ 
+ “Now!”
+ 
+-You roll onto the roof and tap your chest. Shield Cover Me opens up just as the first bolt arrives, and the Close Range Bot zips toward you, taser stick sparking.
++You roll onto the roof and tap the switch on your left armband. Shield Cover Me opens up just as the first bolt arrives, and the Close Range Bot zips toward you, taser stick sparking.
+ 
+ You click your heels. BOING! You sail right over its head, and the bolt that was meant for you hits IT instead. It spins around twice and sits down, numb.
+ 
+--- scene_063 text app
++++ scene_063 text doc
+@@ -5,7 +5,7 @@
+ 
+ You go from one to the next. Pop, pull. Pop, pull. Pop, pull. Three red lights fade to blue.
+ 
+-You lean on The Can Opener and try to remember how breathing works. Everything hurts, and everything is out of power…but you’re standing, and they’re not.
++You lean on The Can Opener and just breathe.
+ 
+ From somewhere above you comes the sound of slow clapping.
+ 
+--- scene_064 text app
++++ scene_064 text doc
+@@ -11,9 +11,9 @@
+ 
+ “There is no 1 and 2! Three sounds BETTER!”
+ 
+-“You kept a list,” you say. “It was called MY SECRET PLAN.”
++“You kept a list,” you say. “It was called MY SECRET PLAN. That's the proof.”
+ 
+-“Because it is SECRET! It says so right in the name!”
++“But it is SECRET! It says so right in the name!”
+ 
+ He keeps going. Now he’s telling you all about the fountain he wants to build in Grabs Grand Plaza. It’s going to be shaped like him.
+ 
+@@ -21,6 +21,6 @@
+ 
+ Behind the walkway, at the heart of the machine, is a wall of glowing terminals. The control tower. Every cable in the building runs into it.
+ 
+-You look down at The Can Opener. The best power core you own is still sitting in it, untouched. You’ve never dared to let all of it out at once. It would drain the tool completely…maybe for good.
++You crouch behind the steel pillar and open The Can Opener’s power housing. The spent core comes out hot. You set it on the floor, pull the spare from the pouch on your belt, and click it into place. A blue glow creeps back into the coils. Your strongest core. Fully charged. You’ve never dared to let all of one out at once. It would drain the tool completely.
+ 
+ You think about every eye light you’ve watched fade from angry red to soft blue.
+--- scene_066 text app
++++ scene_066 text doc
+@@ -1,5 +1,5 @@
+ 
+-The blast shoots right past Max Grabs, close enough to ruffle his bathrobe, and hits the control tower dead center.
++The blast shoots right past Max Grabs, close enough to ruffle his robe, and hits the control tower dead center.
+ 
+ For a second, the whole room is as bright as noon.
+ 
+--- scene_067 text app
++++ scene_067 text doc
+@@ -19,7 +19,7 @@
+ 
+ You catch the windowsill, pull yourself up, and look back one last time. The front doors burst open. Max Grabs is standing there in one slipper and a gold bathrobe, in front of a smoking machine, with his hands up.
+ 
+-“I would like to speak to my lawyer,” he says. “And also my mother.”
++“I would like to speak to my lawyer,” he says. “And also my mommy.”
+ 
+ An officer picks up the folder off the desk. Every page inside is stamped PROPERTY OF GAS. She flips through it and shakes her head.
+ 
+--- scene_068 text app
++++ scene_068 text doc
+@@ -1,7 +1,7 @@
+ 
+ You take the long way home.
+ 
+-The streets of {world_name} are quiet, in a way they haven’t been for months. The good kind of quiet.
++The streets of {world_name} are quiet, in a way they haven’t been for months.
+ 
+ There are robots everywhere, standing right where they stopped, with their eyes glowing a soft blue. People are coming out onto their porches in their pajamas to look at them, and nobody’s running. A little kid walks right up to a Construction Bot and pats it on its big round head. Down the block, a Long Range Security Bot is still giving everybody a thumbs-up, and for the first time, it kind of seems like it means it.
+ 
+--- scene_070 text app
++++ scene_070 text doc
+@@ -15,10 +15,8 @@
+ 
+ “There are a lot more of them out there, sir. This is going to take a while.”
+ 
+-“Good,” you say, and you grab the hand truck. “This neighborhood could use the help. I’m calling it Project Fix em.”
++“Good,” you say, and you grab the hand truck. “This neighborhood could use the help. I’m calling it Project Fix Em.”
+ 
+ “…We will work on the name, sir.”
+ 
+-The Can Opener can wait one more day. It was always a tool first, anyway.
+-
+ The End.
