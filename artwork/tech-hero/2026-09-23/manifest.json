@@ -458,9 +458,9 @@
       "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-23-new-sketches/07-surveillance-drone.png",
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png"
     ],
-    "status": "revised-per-author-request",
+    "status": "approved",
     "file": "12-under-the-awning.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-b1771fe6-87a3-4f9c-b578-1abfec5301a1.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-17df69f6-61fd-4a46-999a-d32310c4231c.png",
     "edits": [
       {
         "date": "2026-09-24",
@@ -479,10 +479,19 @@
           "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
         ],
         "previousSha256": "71d930c7805aaf4ffbc030bc5d6d2cc1e28ec0fb656fde4c91434b3e23f05478"
+      },
+      {
+        "date": "2026-09-25",
+        "prompt": "Use case: precise-object-edit. Input image is the edit target: approved professional colored-pencil/ink book illustration of an upside-down hooded hero reaching for a falling wrapper while a small drone passes farther away. Add ONLY a visible searchlight to make the drone's search direction readable. A single soft pale-AMBER cone begins at the drone's lower forward camera/searchlight assembly and projects diagonally DOWN and RIGHT toward the lower-right edge, AWAY from the hero and wrapper at left. The beam has a narrow physical origin, gently widening translucent warm light, softly feathered pencil-textured edges, subtle grain. Visible enough against warm parchment but restrained, not a bright laser or hard neon videogame triangle. Keep hero AND wrapper completely outside the light cone with a clear gap. The drone lens/searchlight must aim along the cone. If needed for enough beam length, shift ONLY the small drone slightly upward within the far-right quadrant, keeping its small scale and distance from the hero; preserve all other composition. Do not add an illuminated beam aimed upward or left. Keep the existing reach, floating EMPTY orange/silver wrapper beyond fingers, both magnetic boots touching awning, dangling pack, anatomically LEFT shield band with blue dots on reaching arm at image right, RIGHT copper-coil Wrist Wrock-It on arm at image left, goggles strap and Asher yellow attachment. Absolutely no skin/hair/face/eyes revealed on hero; hands fully charcoal-gloved. Shield inactive. Preserve detailed fine ink, graphite crosshatching and colored-pencil texture, 1536x1024 landscape. TRUE ALPHA TRANSPARENCY in empty background and soft semi-transparent beam. No baked black/gray cloudy background, checkerboard, rectangle or extra scenery. No text, arrows, scan outlines, UI, extra drone, changed pose or other redesign.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-25/12-under-the-awning-review.png"
+        ],
+        "previousSha256": "2229ffc32e339cb8fc09b347058ff4176db51cf1c0042625519d826431534642",
+        "note": "Approved reaching-wrapper composition, farther drone and amber search beam. Prior reach revision prompt: ../2026-09-25/drone-revision-prompt.json."
       }
     ],
-    "alt": "The hooded hero hangs by magnetic boots beneath an awning, wearing goggles and a left-arm shield band and right-arm Wrist Wrock-It, as a surveillance drone passes.",
-    "sha256": "2229ffc32e339cb8fc09b347058ff4176db51cf1c0042625519d826431534642",
+    "alt": "The hooded hero reaches for a falling wrapper beneath an awning, outside a distant drone’s amber search beam, wearing the left-arm shield and right-arm Wrist Wrock-It.",
+    "sha256": "556f4c3da28100c57d6acf43ef0571ba150627e885fb3e901d7396aa0e6db004",
     "sceneTitle": "Drone Spotted",
     "anchorText": "You catch it with two fingers. Way, WAY too close.",
     "followingText": "So it isn’t just a signal. Somebody is watching the whole neighborhood…and now you know his name.",
