@@ -148,7 +148,7 @@
     ],
     "status": "revised-per-author-request",
     "file": "05-shield-cover-me.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-435d5e6e-cbb5-42b7-9f91-8cf1644623ad.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-441768c9-3bfe-4b85-ba01-84aa2863707e.png",
     "edits": [
       {
         "date": "2026-09-24",
@@ -165,10 +165,19 @@
           "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/05-shield-cover-me.png"
         ],
         "previousSha256": "c6a08820da5ac0b8882bf0b91e1ce118841f8103ddf61b362eaafbad15f22268"
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. Make ONLY ONE tiny continuity correction to the first supplied illustration: add a plain brown/black WORK GOGGLE STRAP wrapped around the hero's raised charcoal hood at eye level, with the edge of work goggles barely visible on the far/front side if natural. The second image is reference for the strap treatment ONLY; do NOT add its Asher Portable brass box, yellow bulb, electronic display or aerial because those have not been introduced yet in this scene. No face, skin, eyes or hair visible. Keep the already correct shield armband on the hero's LEFT foreground forearm exactly unchanged, along with the right assisting hand, silver duct tape, glowing blue dots, side pack, wires, blue energy barrier, cream robot, exact BZZZZT! text, camera, pose, shadows and composition. No other changes. Preserve the original professional ink/pencil medium, 1536x1024 landscape, and genuine transparent alpha for parchment, no opaque dark rectangle.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/05-shield-cover-me.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "ba3c020a635557709735c43a9862181ba224cc80fd5d94daebcfe9942575c6f9"
       }
     ],
     "alt": "A duct-taped armband on the hero’s left forearm, with glowing blue dots and a wired side power pack, projects an energy shield against a Security Bot’s sparking baton.",
-    "sha256": "ba3c020a635557709735c43a9862181ba224cc80fd5d94daebcfe9942575c6f9",
+    "sha256": "7368760d923c79b21c63d9d76e0002d4ac50826a98388ac4f35e08fb7525468a",
     "sceneTitle": "Shield Cover Me",
     "anchorText": "The stick skids off the light in a shower of sparks. The shield flickers, but it holds! The bot hits it again, and again, and you push forward behind the shield one step at a time. But you can’t get around it, and you can’t exactly fight with a shield and a thumb.",
     "followingText": "“ASHER! SHIELD! COVER ME!”",
@@ -247,9 +256,9 @@
     "refs": [
       "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/can_opener_blueprint.jpg"
     ],
-    "status": "approved",
+    "status": "revised-per-author-request",
     "file": "08-stompers.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-578920fb-010a-42b1-a27c-6847d61cb339.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-5ea19d6a-f46b-4c1c-96b2-60a58294ce21.png",
     "edits": [
       {
         "prompt": "Edit only the tool sitting on the workbench: make the real Can Opener's body brushed steel/gunmetal with copper coils, blue UNLIT glass core, and completely remove the curved energy axe blade to left of its jaws. Blade is OFF so NO white, gray, metal or blue axe shape should remain. Only actual wrench jaws, hammer face, core, copper handle and bottom prybar remain. Preserve hero's exact rear-view pose, fully concealed face/hair/skin, charcoal gloves and clothes, blue ankle power cores, boots, BOING! lettering, furniture and transparent vignette.",
@@ -269,10 +278,28 @@
         "refs": [
           "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-b824e2bc-ae40-4065-91c1-b5ec912ef492.png"
         ]
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First image is the exact edit target; second image is the approved costume/equipment continuity reference. Make ONLY small continuity edits to the target. The hero always wears Shield Cover Me on the anatomically LEFT forearm after building it: overlapping wrinkled silver-gray DUCT TAPE wrapped over the sleeve, several small glowing cyan BLUE DOT emitters, a compact taped-on SIDE POWER PACK connected with short orange/blue wires. Match reference 2, scale to the existing wrist, do not enlarge arm. Shield is INACTIVE here: NO projected energy barrier, disc, rim or back-mounted shield. Goggles must be visibly worn with a brown/black strap around the raised hood; front lenses only if naturally visible from this rear/side camera, never turn the head toward camera or expose face. Use the reference's small brass yellow-bulb Asher Portable attachment on the goggle strap. No extra arms or fingers. All skin/hair/face/neck/fingers remain concealed by hood and full charcoal gloves. Preserve original poses, all other equipment, tools, characters, lettering, lighting, composition and professional ink/crosshatched colored-pencil medium. Preserve original landscape 1536x1024 and true alpha transparency, no opaque background. Target hero is rear view airborne at center. LEFT arm extends DOWN-LEFT from the left shoulder toward the left edge, with splayed gloved fingers. Put band ONLY on this lower-left wrist/forearm; RIGHT arm extends UP-RIGHT and stays unchanged. Add goggle strap around hood. Keep BOING, the blue boot propulsion arc, boots and floor plate exactly; the Can Opener remains lying flat on the table with no energy blade.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/08-stompers.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "4c6446767983cfe769852b10fc8eca7d34e87172c8c9c717467f8154dc60db77"
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First supplied image is the edit target. Second image is the approved Full Loadout reference for the RIGHT-ARM WRIST WROCK-IT. Add that small steel cylindrical rock launcher wrapped with copper coils, mounted lengthwise along the OUTSIDE/TOP of the hero's anatomically RIGHT forearm on a strapped salvaged shin-guard wrist brace. Barrel points toward hand/fingertips. It is worn and inactive, not firing. Match the reference proportions and materials, keep compact so hands can move normally. Keep the current duct-taped glowing blue-dot shield armband on LEFT forearm unchanged, and keep goggles/hood and all other details unchanged. IMPORTANT BACKGROUND CLEANUP: remove ALL gray/black mottled blobs, cloudy halos, checker patterns, compression artifacts and haze in empty space. Render a clean true-alpha cutout with ZERO opacity outside the actual drawn objects and intentional blue energy arcs; retain only the characters, objects, architecture and original art. No opaque dark background, no checkerboard pixels, no shaded background behind characters. Empty sky/background is completely transparent, not gray or black smoke. Original professional fine ink outlines and colored-pencil crosshatching on the drawn subjects. Keep existing camera, pose, scene, text, characters and 1536x1024. Full gloves, covered wrists and hood, no face/skin/hair on hero. No shield barrier added. Do not add other inventions or extra limbs. RIGHT forearm extends UP-RIGHT toward the high splayed hand near upper-right of picture. Add launcher on THAT wrist only. LEFT band already on downward-left arm is correct. Keep BOING! and the blue jump arc. Can Opener lies flat on workbench, energy blade off.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/08-stompers.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "b6b284f618659274cf58d457975a2bc007e2e15494363652b8859fa1018b4249"
       }
     ],
-    "alt": "The fully covered hero bounces toward the workbench; the powered-down Can Opener lies flat on the wood.",
-    "sha256": "4c6446767983cfe769852b10fc8eca7d34e87172c8c9c717467f8154dc60db77",
+    "alt": "The fully covered hero wears goggles and a left-arm shield band and right-arm Wrist Wrock-It while bouncing toward the workbench; the inactive Can Opener lies flat on the wood.",
+    "sha256": "951b43818361fe8eb8499287a1cb0920977266c45d83b55d5edc69454c205ab7",
     "sceneTitle": "The Stompers",
     "anchorText": "“The Stompers.”",
     "followingText": "A pause.",
@@ -293,9 +320,9 @@
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png"
     ],
-    "status": "approved",
+    "status": "revised-per-author-request",
     "file": "09-up-the-wall.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-5954e835-6ce2-40a7-9e9c-a1a1ebc81f2b.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-ccd77f32-4c56-4a6e-8234-7ff9ba77fb5b.png",
     "edits": [
       {
         "prompt": "Edit image 1 to correct Can Opener state and position. Hero is climbing, NOT fighting or fixing a vent: remove tool from right hand, make that gloved palm touch steel wall for balance instead, and place the compact powered-OFF wrench secured at hero's hip tool-belt. Use image 2 tool design in small scale, dark steel/copper, no curved axe blade at all, no arcs, no glow, no white replacement blade. Keep both magnetic boots firmly against wall, same hero back view with charcoal hood/gloves all skin and hair hidden, street below and composition. No other changes.",
@@ -309,10 +336,28 @@
         "refs": [
           "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-b80b9db2-600e-4dbf-b02c-062042c6be1b.png"
         ]
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First image is the exact edit target; second image is the approved costume/equipment continuity reference. Make ONLY small continuity edits to the target. The hero always wears Shield Cover Me on the anatomically LEFT forearm after building it: overlapping wrinkled silver-gray DUCT TAPE wrapped over the sleeve, several small glowing cyan BLUE DOT emitters, a compact taped-on SIDE POWER PACK connected with short orange/blue wires. Match reference 2, scale to the existing wrist, do not enlarge arm. Shield is INACTIVE here: NO projected energy barrier, disc, rim or back-mounted shield. Goggles must be visibly worn with a brown/black strap around the raised hood; front lenses only if naturally visible from this rear/side camera, never turn the head toward camera or expose face. Use the reference's small brass yellow-bulb Asher Portable attachment on the goggle strap. No extra arms or fingers. All skin/hair/face/neck/fingers remain concealed by hood and full charcoal gloves. Preserve original poses, all other equipment, tools, characters, lettering, lighting, composition and professional ink/crosshatched colored-pencil medium. Preserve original landscape 1536x1024 and true alpha transparency, no opaque background. Target hero is rear/side view climbing a building. LEFT arm is the FAR arm whose gloved hand is HIGHER, near the TOP CENTER above/right of the hood. Put band ONLY on that upper wrist, between the raised sleeve and the higher hand. Near large arm across center toward LOWER RIGHT is RIGHT arm and must remain unchanged. Add goggle strap around hood. Keep flat hands in identical locations, steel vent, feet, street, and inactive wrench on belt unchanged.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/09-up-the-wall.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "7d07e01f614fa2a3db8a3ce473d8729e6980ecb32e022204aa1ab316f312efff"
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First supplied image is the edit target. Second image is the approved Full Loadout reference for the RIGHT-ARM WRIST WROCK-IT. Add that small steel cylindrical rock launcher wrapped with copper coils, mounted lengthwise along the OUTSIDE/TOP of the hero's anatomically RIGHT forearm on a strapped salvaged shin-guard wrist brace. Barrel points toward hand/fingertips. It is worn and inactive, not firing. Match the reference proportions and materials, keep compact so hands can move normally. Keep the current duct-taped glowing blue-dot shield armband on LEFT forearm unchanged, and keep goggles/hood and all other details unchanged. IMPORTANT BACKGROUND CLEANUP: remove ALL gray/black mottled blobs, cloudy halos, checker patterns, compression artifacts and haze in empty space. Render a clean true-alpha cutout with ZERO opacity outside the actual drawn objects and intentional blue energy arcs; retain only the characters, objects, architecture and original art. No opaque dark background, no checkerboard pixels, no shaded background behind characters. Empty sky/background is completely transparent, not gray or black smoke. Original professional fine ink outlines and colored-pencil crosshatching on the drawn subjects. Keep existing camera, pose, scene, text, characters and 1536x1024. Full gloves, covered wrists and hood, no face/skin/hair on hero. No shield barrier added. Do not add other inventions or extra limbs. RIGHT arm is NEAR arm extending from center toward the LOWER RIGHT hand on the louvered vent. Add launcher on that large forearm near lower hand. LEFT arm is far upper hand above hood with shield band; don't change it. Keep hands pressed against wall, boots, climbing pose, inactive belt wrench and street.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/09-up-the-wall.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "1321ff2cc075eabf1aa96afc93242411c3358f6bc1738c9aac6f427291570b83"
       }
     ],
-    "alt": "The fully covered hero climbs a steel wall using magnetic boots, with the inactive wrench on their belt.",
-    "sha256": "7d07e01f614fa2a3db8a3ce473d8729e6980ecb32e022204aa1ab316f312efff",
+    "alt": "The hooded hero climbs a steel wall in magnetic boots, wearing goggles and a left-arm shield band and right-arm Wrist Wrock-It, with the inactive wrench on their belt.",
+    "sha256": "31300532f6849a8017b723f04ad71d6b2031c88956b32180526f6c5df31d2e87",
     "sceneTitle": "Up the Wall",
     "anchorText": "Clunk. Clunk. Clunk. You walk up the wall one heavy step at a time, staying in the corner where the bot can’t lean out far enough to aim at you. It knows you’re out there somewhere, so it keeps zapping the mailbox just in case.",
     "followingText": "You reach the top and peek over the edge. The bot has its back to you, skate wheels locked, leaning out over the front of the roof.",
@@ -413,12 +458,31 @@
       "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-23-new-sketches/07-surveillance-drone.png",
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png"
     ],
-    "status": "approved",
+    "status": "revised-per-author-request",
     "file": "12-under-the-awning.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-a08336fc-da82-46c2-9092-e450ea90fca5.png",
-    "edits": [],
-    "alt": "The fully covered hero uses magnetic boots beneath an awning as a surveillance drone passes.",
-    "sha256": "c280545851ef32e3781f51b3923599e0524b6476c4809ec600fb3d7a8a5b59a8",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-b1771fe6-87a3-4f9c-b578-1abfec5301a1.png",
+    "edits": [
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First image is the exact edit target; second image is the approved costume/equipment continuity reference. Make ONLY small continuity edits to the target. The hero always wears Shield Cover Me on the anatomically LEFT forearm after building it: overlapping wrinkled silver-gray DUCT TAPE wrapped over the sleeve, several small glowing cyan BLUE DOT emitters, a compact taped-on SIDE POWER PACK connected with short orange/blue wires. Match reference 2, scale to the existing wrist, do not enlarge arm. Shield is INACTIVE here: NO projected energy barrier, disc, rim or back-mounted shield. Goggles must be visibly worn with a brown/black strap around the raised hood; front lenses only if naturally visible from this rear/side camera, never turn the head toward camera or expose face. Use the reference's small brass yellow-bulb Asher Portable attachment on the goggle strap. No extra arms or fingers. All skin/hair/face/neck/fingers remain concealed by hood and full charcoal gloves. Preserve original poses, all other equipment, tools, characters, lettering, lighting, composition and professional ink/crosshatched colored-pencil medium. Preserve original landscape 1536x1024 and true alpha transparency, no opaque background. Target hero is UPSIDE DOWN beneath an awning, boots attached overhead, backpack dangling, seen from behind. Anatomical LEFT arm is image LOWER-RIGHT: the hand holding the granola wrapper. Put band ONLY on that forearm immediately above that glove; the other extended arm at image far left is RIGHT and remains unchanged. Add the goggle strap around raised hood and small reference Asher Portable unit, respecting upside-down orientation. Keep hanging pose, wrapper, backpack, drone, awning and every boot unchanged.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/12-under-the-awning.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "c280545851ef32e3781f51b3923599e0524b6476c4809ec600fb3d7a8a5b59a8"
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First supplied image is the edit target. Second image is the approved Full Loadout reference for the RIGHT-ARM WRIST WROCK-IT. Add that small steel cylindrical rock launcher wrapped with copper coils, mounted lengthwise along the OUTSIDE/TOP of the hero's anatomically RIGHT forearm on a strapped salvaged shin-guard wrist brace. Barrel points toward hand/fingertips. It is worn and inactive, not firing. Match the reference proportions and materials, keep compact so hands can move normally. Keep the current duct-taped glowing blue-dot shield armband on LEFT forearm unchanged, and keep goggles/hood and all other details unchanged. IMPORTANT BACKGROUND CLEANUP: remove ALL gray/black mottled blobs, cloudy halos, checker patterns, compression artifacts and haze in empty space. Render a clean true-alpha cutout with ZERO opacity outside the actual drawn objects and intentional blue energy arcs; retain only the characters, objects, architecture and original art. No opaque dark background, no checkerboard pixels, no shaded background behind characters. Empty sky/background is completely transparent, not gray or black smoke. Original professional fine ink outlines and colored-pencil crosshatching on the drawn subjects. Keep existing camera, pose, scene, text, characters and 1536x1024. Full gloves, covered wrists and hood, no face/skin/hair on hero. No shield barrier added. Do not add other inventions or extra limbs. Upside-down rear view: RIGHT forearm is at image LEFT, extended to the left open gloved hand. Add compact launcher to THAT wrist only. The LEFT forearm at lower right holding granola already wears correct blue-dot shield band. Keep the hanging pose, drone, wrapper and backpack. Keep goggle strap but rotate its small lamp assembly with the upside-down head (lamp points toward ground, image bottom), not sticking upright contrary to head orientation.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/12-under-the-awning.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "71d930c7805aaf4ffbc030bc5d6d2cc1e28ec0fb656fde4c91434b3e23f05478"
+      }
+    ],
+    "alt": "The hooded hero hangs by magnetic boots beneath an awning, wearing goggles and a left-arm shield band and right-arm Wrist Wrock-It, as a surveillance drone passes.",
+    "sha256": "2229ffc32e339cb8fc09b347058ff4176db51cf1c0042625519d826431534642",
     "sceneTitle": "Drone Spotted",
     "anchorText": "You catch it with two fingers. Way, WAY too close.",
     "followingText": "So it isn’t just a signal. Somebody is watching the whole neighborhood…and now you know his name.",
@@ -528,19 +592,37 @@
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-f4a9d5b4-b8be-4807-944a-91e0614c582b.png",
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-0f8d75a8-9a7b-4231-b918-85b7fb5643f7.png"
     ],
-    "status": "approved",
+    "status": "revised-per-author-request",
     "file": "16-precision.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-eeac39c2-5f54-419a-83a8-1bf709b4a3ed.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-c5c36d1b-2a13-45df-9450-4b9d86aa0ddc.png",
     "edits": [
       {
         "prompt": "Use case: precise-object-edit. Edit the supplied Paths of Wonder book illustration. Change ONLY the blue energy discharge and its immediate reflected lighting. Envelop the ENTIRE front/head of the Can Opener tool (both wrench jaws, the whole metal head) in a bright rounded blue-white energy aura, like a charged glowing magical staff head. The jaws should be partially obscured inside the luminous sphere rather than a tiny beam exiting a tip. From that head erupt a powerful broad blue-white anime energy wave, inspired by Goku's Kamehameha: thick volumetric surging blast with luminous white core, layered electric-blue flowing edges, turbulent ribbons, streaks and a swelling leading impact at the control monitors. NOT a thin straight laser or narrow pencil beam. Keep the existing direction from lower-left tool to upper-right monitors; pass in FRONT of and safely PAST Max, never hit his body. Preserve his visible face and most of his silhouette. Preserve the rest of the illustration closely: same camera, composition, rear fully hooded hero, charcoal gloves with no skin/hair/face visible, copper coil handle and hand positions, startled Max and his gold outfit and remote, catwalk railings, industrial pipes, giant gold GAS machine and exact GAS lettering. Preserve professional ink outlines, detailed crosshatching and colored-pencil book art. Render energy in the same illustrated medium, vibrant blue/white. No new text or characters. Keep 1536x1024 landscape composition and genuine transparent alpha in existing vignette/background areas; no baked checkerboard, no opaque background.",
         "refs": [
           "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/16-precision.png"
         ]
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First image is the exact edit target; second image is the approved costume/equipment continuity reference. Make ONLY small continuity edits to the target. The hero always wears Shield Cover Me on the anatomically LEFT forearm after building it: overlapping wrinkled silver-gray DUCT TAPE wrapped over the sleeve, several small glowing cyan BLUE DOT emitters, a compact taped-on SIDE POWER PACK connected with short orange/blue wires. Match reference 2, scale to the existing wrist, do not enlarge arm. Shield is INACTIVE here: NO projected energy barrier, disc, rim or back-mounted shield. Goggles must be visibly worn with a brown/black strap around the raised hood; front lenses only if naturally visible from this rear/side camera, never turn the head toward camera or expose face. Use the reference's small brass yellow-bulb Asher Portable attachment on the goggle strap. No extra arms or fingers. All skin/hair/face/neck/fingers remain concealed by hood and full charcoal gloves. Preserve original poses, all other equipment, tools, characters, lettering, lighting, composition and professional ink/crosshatched colored-pencil medium. Preserve original landscape 1536x1024 and true alpha transparency, no opaque background. Target is the finale blast. Hero is at LOWER LEFT facing upper right, holding the Can Opener with TWO hands. Anatomical LEFT forearm is FARTHER from camera, extending diagonally FROM LEFT CENTER toward the UPPER gripping hand near the tool's copper coils. Put band on THAT forearm (approximately x350 y770 in a1536x1024 image). Near forearm running up from bottom center to the LOWER handle hand is RIGHT and must remain unchanged. Existing goggle strap/side housing should stay exactly as drawn. Do not replace the goggles with new model. MOST IMPORTANT: leave the large approved swirling blue-white staff-head aura and broad blast ENTIRELY unchanged, with identical path past Max to monitors. No shield barrier here. Preserve Max, GAS lettering, tool and all machinery.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/16-precision.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "a174ec0210fe6d6106fc304c56e374c570663d51473644bb2c13600dccd9fad2"
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First supplied image is the edit target. Second image is the approved Full Loadout reference for the RIGHT-ARM WRIST WROCK-IT. Add that small steel cylindrical rock launcher wrapped with copper coils, mounted lengthwise along the OUTSIDE/TOP of the hero's anatomically RIGHT forearm on a strapped salvaged shin-guard wrist brace. Barrel points toward hand/fingertips. It is worn and inactive, not firing. Match the reference proportions and materials, keep compact so hands can move normally. Keep the current duct-taped glowing blue-dot shield armband on LEFT forearm unchanged, and keep goggles/hood and all other details unchanged. IMPORTANT BACKGROUND CLEANUP: remove ALL gray/black mottled blobs, cloudy halos, checker patterns, compression artifacts and haze in empty space. Render a clean true-alpha cutout with ZERO opacity outside the actual drawn objects and intentional blue energy arcs; retain only the characters, objects, architecture and original art. No opaque dark background, no checkerboard pixels, no shaded background behind characters. Empty sky/background is completely transparent, not gray or black smoke. Original professional fine ink outlines and colored-pencil crosshatching on the drawn subjects. Keep existing camera, pose, scene, text, characters and 1536x1024. Full gloves, covered wrists and hood, no face/skin/hair on hero. No shield barrier added. Do not add other inventions or extra limbs. Hero is bottom-left holding the Can Opener. RIGHT forearm is near arm rising diagonally from BOTTOM CENTER to LOWER handle hand, at about x455 y875; add compact launcher to its outer side only. LEFT forearm extends from left-center to UPPER grip and already has shield band; leave it. Preserve exact broad blue-white discharge, glowing entire tool head, Max, GAS and machinery.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/16-precision.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "a98aae3c9d9e02d98c712472c5d9a04dfe4aa9d2e403508be33e0bf713efd8e0"
       }
     ],
-    "alt": "The hooded hero fires a broad blue-white energy blast from the glowing tool head past Max toward the control monitors.",
-    "sha256": "a174ec0210fe6d6106fc304c56e374c570663d51473644bb2c13600dccd9fad2",
+    "alt": "The hooded hero wears goggles and an inactive left-arm shield band and right-arm Wrist Wrock-It while firing a broad blue-white blast from the Can Opener past Max toward the monitors.",
+    "sha256": "5c77c3cb92ee51bab3324f2bd8e1f59f46cf66ce8f33fa08ad3cf129a6b2eaf5",
     "sceneTitle": "Precision",
     "anchorText": "Every terminal goes dark at once. The Robot Improver 3 makes a sound like a very large balloon letting go, and its lights go out row by row. On the roof, the antenna stops humming.",
     "followingText": "And all across {world_name}, in alleys and empty lots and the middle of Elm Street, every haywire robot slows down, lowers its arms, and stops. Hundreds of flickering red lights fade to a soft, calm blue.",
@@ -563,19 +645,37 @@
       "/Users/jeff/Developer/AdventureEngine/artwork/chapter-headers/2026-09-21/revision-2/long-range-security-bot.png",
       "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-8b00baa2-556e-474a-a94a-ea621a651e4b.png"
     ],
-    "status": "approved",
+    "status": "revised-per-author-request",
     "file": "17-neighborhood-safe.png",
-    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-a6a162e6-9c98-41ca-9992-1cfc95bf6547.png",
+    "generatedPath": "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-5e66235e-09bc-408b-a881-1d1156bdfe27.png",
     "edits": [
       {
         "prompt": "Two small continuity corrections, preserve this warm neighborhood book illustration otherwise. 1) The Can Opener hanging on the hooded hero's hip has been completely drained in the story: keep blade absent, make its circular power-core glass dark unlit navy, REMOVE the bright blue glowing star in that core, NO tool glow/arcs. Steel and copper colors remain. Do NOT darken boots or robots. 2) Mrs Ruiz at the left doorway should touch two fingers of her raised hand to her FOREHEAD in a small salute, rather than making a peace sign; keep broom in other hand. Preserve all characters, faces, covered back-view reader-hero (no hair, face or skin), scene composition, professional full-color pencil/ink art. Background remains genuinely TRANSPARENT alpha, no black fill or checkerboard.",
         "refs": [
           "/Users/jeff/.codex/generated_images/01a0ab4b-6bec-71d3-8dc3-be1b501c1db8/exec-051cc40a-6a31-4d45-a424-d991cbb10d92.png"
         ]
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First image is the exact edit target; second image is the approved costume/equipment continuity reference. Make ONLY small continuity edits to the target. The hero always wears Shield Cover Me on the anatomically LEFT forearm after building it: overlapping wrinkled silver-gray DUCT TAPE wrapped over the sleeve, several small glowing cyan BLUE DOT emitters, a compact taped-on SIDE POWER PACK connected with short orange/blue wires. Match reference 2, scale to the existing wrist, do not enlarge arm. Shield is INACTIVE here: NO projected energy barrier, disc, rim or back-mounted shield. Goggles must be visibly worn with a brown/black strap around the raised hood; front lenses only if naturally visible from this rear/side camera, never turn the head toward camera or expose face. Use the reference's small brass yellow-bulb Asher Portable attachment on the goggle strap. No extra arms or fingers. All skin/hair/face/neck/fingers remain concealed by hood and full charcoal gloves. Preserve original poses, all other equipment, tools, characters, lettering, lighting, composition and professional ink/crosshatched colored-pencil medium. Preserve original landscape 1536x1024 and true alpha transparency, no opaque background. Target hero is walking away in RIGHT half, back to camera. Anatomical LEFT arm hangs DOWN at image x1015 next to the blue-eyed long-range robot; put the band above that LOWER glove. RIGHT arm is waving high at far right and must remain unchanged. Add goggles strap and small Asher Portable attachment on the raised hood. Keep every other character, face, robot, child, shopkeeper, street, inactive dark wrench, boots and night lighting exactly unchanged. Inactive shield, faint blue dots only.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/17-neighborhood-safe.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "61b203b849cd4ba46ecb545247e0699bf5dc51e21fa63a9476c1a4ba7843427e"
+      },
+      {
+        "date": "2026-09-24",
+        "prompt": "Use case: precise-object-edit. First supplied image is the edit target. Second image is the approved Full Loadout reference for the RIGHT-ARM WRIST WROCK-IT. Add that small steel cylindrical rock launcher wrapped with copper coils, mounted lengthwise along the OUTSIDE/TOP of the hero's anatomically RIGHT forearm on a strapped salvaged shin-guard wrist brace. Barrel points toward hand/fingertips. It is worn and inactive, not firing. Match the reference proportions and materials, keep compact so hands can move normally. Keep the current duct-taped glowing blue-dot shield armband on LEFT forearm unchanged, and keep goggles/hood and all other details unchanged. IMPORTANT BACKGROUND CLEANUP: remove ALL gray/black mottled blobs, cloudy halos, checker patterns, compression artifacts and haze in empty space. Render a clean true-alpha cutout with ZERO opacity outside the actual drawn objects and intentional blue energy arcs; retain only the characters, objects, architecture and original art. No opaque dark background, no checkerboard pixels, no shaded background behind characters. Empty sky/background is completely transparent, not gray or black smoke. Original professional fine ink outlines and colored-pencil crosshatching on the drawn subjects. Keep existing camera, pose, scene, text, characters and 1536x1024. Full gloves, covered wrists and hood, no face/skin/hair on hero. No shield barrier added. Do not add other inventions or extra limbs. Rear-view hero on right half walks home waving. RIGHT forearm is the RAISED WAVING arm at upper right near x1350 y275. Add launcher to outer side of that wrist, extending toward fingers but leaving hand free. LEFT arm hanging down already wears correct shield band. Do not change civilians, robots, faces, goggles, street, boots or the dark inactive Can Opener.",
+        "refs": [
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/17-neighborhood-safe.png",
+          "/Users/jeff/Developer/AdventureEngine/artwork/tech-hero/2026-09-23/10-full-loadout.png"
+        ],
+        "previousSha256": "6301d4ff89965a1df240e514d98cbf20126122881c67ec6124b22b37ccfd4902"
       }
     ],
-    "alt": "A child pats a peaceful robot, Mrs. Ruiz salutes, and the fully covered hero walks home.",
-    "sha256": "61b203b849cd4ba46ecb545247e0699bf5dc51e21fa63a9476c1a4ba7843427e",
+    "alt": "A child pats a peaceful robot and Mrs. Ruiz salutes as the hooded hero walks home wearing goggles and a left-arm shield band and right-arm Wrist Wrock-It.",
+    "sha256": "1ec4d5a274830ad8fc5acb4b587fce04ee1924c5446756fdfec6950c9a2dc0d8",
     "sceneTitle": "Neighborhood Safe",
     "anchorText": "You nod back, and you keep walking.",
     "followingText": "You pass the top of Main Street. Mr. Lin’s bench is still gone. There are four bolts in the sidewalk where it used to be, and nothing else.",

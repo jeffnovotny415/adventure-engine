@@ -17,7 +17,9 @@ These rules record Jeff's artwork direction from September 23, 2026.
 - Tool mode: the axe blade is completely absent, not replaced by a white or steel blade. Switch it off when repairing, climbing, resting, carrying, or setting the tool down. It is normally active only in robot combat; the scripted finale discharge is a separate illustrated action.
 - A tool on a workbench rests flat against the tabletop. It must not hover or balance upright without physical support.
 - The Wrist Wrock-It is a cylindrical spring/coil rock launcher. Do not substitute the wrench in its experiment scenes.
+- The Wrist Wrock-It stays strapped to the RIGHT forearm once built unless the story explicitly removes it. Keep it visible whenever that forearm is visible. Story exceptions: the scene 021 mishap leaves an empty brace after the launcher flies off; scene 029 places it on the charger, so it is absent during the subsequent shield encounter in scene 033. Later loadout scenes carry both arm devices.
 - Shield Cover Me is worn on the hero’s LEFT wrist/forearm: an armband wrapped in duct tape, with glowing blue dot emitters and a wired power pack attached to the side (Jeff's September 24 revision). It projects a blue energy barrier; there is no physical disc, lid, shield handle or back-mounted shield. In resting scenes the barrier is off, with the armband still worn.
+- Loadout continuity: once built, the shield armband stays on the left arm in every subsequent hero illustration, even while climbing, testing boots, hiding, using another tool or walking home. Show it whenever that forearm is visible; do not change the camera just to expose hidden equipment. Goggles likewise stay worn over the concealed face/hood, with the strap visible from behind. Add Asher Portable's attachment only after its introduction in scene 041; earlier goggles remain plain.
 - The moldy-sandwich drawing includes the sound effect `PLOP` beside the sandwich, per Jeff's request.
 
 ## Book use
