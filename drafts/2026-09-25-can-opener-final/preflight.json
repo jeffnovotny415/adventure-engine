@@ -1,0 +1,364 @@
+{
+  "status": "ready",
+  "stories": [
+    {
+      "story": "the_can_opener",
+      "added": [],
+      "removed": [],
+      "edited": [
+        {
+          "scene": "scene_002",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_008",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_009",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_010",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_011",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_012",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_013",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_014",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_015",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_016",
+          "fields": [
+            "entry_intros",
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_017",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_018",
+          "fields": [
+            "entry_intros",
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_019",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_021",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_022",
+          "fields": [
+            "entry_intros",
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_023",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_024",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_025",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_026",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_027",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_028",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_029",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_030",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_031",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_032",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_033",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_034",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_035",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_036",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_040",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_042",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_043",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_044",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_045",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_047",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_049",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_051",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_054",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_055",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_056",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_057",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_058",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_059",
+          "fields": [
+            "entry_intros",
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_063",
+          "fields": [
+            "entry_intros",
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_064",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_065",
+          "fields": [
+            "entry_intros",
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_066",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_067",
+          "fields": [
+            "text"
+          ]
+        },
+        {
+          "scene": "scene_068",
+          "fields": [
+            "text"
+          ]
+        }
+      ],
+      "unchanged": [
+        "scene_001",
+        "scene_003",
+        "scene_004",
+        "scene_005",
+        "scene_006",
+        "scene_007",
+        "scene_020",
+        "scene_037",
+        "scene_038",
+        "scene_039",
+        "scene_041",
+        "scene_046",
+        "scene_048",
+        "scene_050",
+        "scene_052",
+        "scene_053",
+        "scene_060",
+        "scene_061",
+        "scene_062",
+        "scene_069",
+        "scene_070"
+      ],
+      "review": []
+    }
+  ],
+  "diagnostics": [],
+  "limitations": "Read-only comparison. Title changes are possible ID reuse, not proof. Same-title rewrites cannot reliably be distinguished from replacement. Text edits can shift saved paragraph/character positions; flags and route intent require human review. No content or saves are changed.",
+  "files": {
+    "current": [
+      {
+        "story": "space_walker",
+        "file": "/Users/jeff/Developer/AdventureEngine/webapp/src/data/stories/space_walker.json",
+        "sha256": "c5a0c97d75ec2018a741e5222c381604f6369ed954fb226ffc7913dc09f41289"
+      },
+      {
+        "story": "summoned_mage",
+        "file": "/Users/jeff/Developer/AdventureEngine/webapp/src/data/stories/summoned_mage.json",
+        "sha256": "830333d8b85e369bd1130504f4972309dbadadbc8491e73a9f31746caac98948"
+      },
+      {
+        "story": "the_can_opener",
+        "file": "/Users/jeff/Developer/AdventureEngine/webapp/src/data/stories/the_can_opener.json",
+        "sha256": "8500c7514dee4926432fd4519a6d8bb4c60590537dde56738df9497cf63f4c33"
+      }
+    ],
+    "incoming": [
+      {
+        "story": "the_can_opener",
+        "file": "/Users/jeff/Developer/AdventureEngine/drafts/2026-09-25-can-opener-final/reviewed/the_can_opener.json",
+        "sha256": "2de0feefa190fd533ce7e6f8560133b7d7481e8e438590c89b79698794a10839"
+      }
+    ]
+  }
+}

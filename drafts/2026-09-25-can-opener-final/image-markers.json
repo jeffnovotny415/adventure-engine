@@ -1,0 +1,146 @@
+[
+  {
+    "sceneId": "scene_001",
+    "label": "Garage lab",
+    "group": "text",
+    "after": "The voice comes from your computer: your trusty AI assistant and friend, Asher."
+  },
+  {
+    "sceneId": "scene_005",
+    "label": "The Can Opener blueprint — chapter header",
+    "group": "text",
+    "after": null
+  },
+  {
+    "sceneId": "scene_005",
+    "label": "The Can Opener activated",
+    "group": "text",
+    "after": "The wrench head shifts with a sharp mechanical click, and a crackling energy blade snaps out along the side of the head like an axe made of lightning."
+  },
+  {
+    "sceneId": "scene_006",
+    "label": "Construction Bot blueprint / specs",
+    "group": "text",
+    "after": "It’s a Construction Bot. It’s round and white like a giant egg on two stubby legs, with angry eyebrows over its eyes, a cabinet door on its belly where it keeps its tools, and a big hammer in one hand. Little rocket thrusters on its feet let it hop around a job site. It’s supposed to fix roads. Right now it’s un-fixing one."
+  },
+  {
+    "sceneId": "scene_007",
+    "label": "Construction Bot blueprint / specs",
+    "group": "text",
+    "after": "Right below you, a Construction Bot, the round white kind with angry eyebrows and rocket feet, swings its big hammer into a streetlight. The light topples over with a CRUNCH, and the bot starts hopping toward Mrs. Ruiz’s corner market."
+  },
+  {
+    "sceneId": "scene_008",
+    "label": "Old sandwich — PLOP",
+    "group": "text",
+    "after": "The bot spins around, confused, and the cabinet door on its belly flaps open from the sudden spin. Out falls a screwdriver, a tape measure, and then a very old sandwich, for some reason. That’s when you see it: a panel on its back, right between the shoulders."
+  },
+  {
+    "sceneId": "scene_017",
+    "label": "Load-Bot blueprint / specs",
+    "group": "text",
+    "after": "A Load-Bot. It’s built like three big crates stacked on top of each other, with a square head, forklift prongs for hands, and big round rolling wheels instead of feet. There’s a screen on its chest with a little progress bar that says 87%. And painted on its face is a great big smile."
+  },
+  {
+    "sceneId": "scene_021",
+    "label": "Launcher mishap",
+    "group": "text",
+    "after": "You stand there with an empty wrist brace and your hair sticking straight up."
+  },
+  {
+    "sceneId": "scene_026",
+    "label": "Wheel pop",
+    "group": "text",
+    "after": "The rock smashes into the front left wheel, and it pops right off its axle. The Load-Bot tips forward, spins in a slow, sad, comical circle, and crashes onto its face with a BOOM that sets off a car alarm."
+  },
+  {
+    "sceneId": "scene_029",
+    "label": "Close Range Security Bot blueprint / specs",
+    "group": "text",
+    "after": "A Close Range Security Bot. Its round eyes flicker red."
+  },
+  {
+    "sceneId": "scene_033",
+    "label": "Shield Cover Me",
+    "group": "text",
+    "after": "The stick skids off the light in a shower of sparks. The shield flickers again, but it holds! The bot hits it over and over, and you push forward behind the shield one step at a time. But you can’t get around it, and you can’t exactly fight with a shield and a thumb."
+  },
+  {
+    "sceneId": "scene_036",
+    "label": "Long Range Security Bot blueprint / specs",
+    "group": "text",
+    "after": "A Long Range Security Bot."
+  },
+  {
+    "sceneId": "scene_041",
+    "label": "Asher Portable",
+    "group": "text",
+    "after": "“Welcome to the team, Asher Portable.”"
+  },
+  {
+    "sceneId": "scene_044",
+    "label": "Magnet mishap",
+    "group": "text",
+    "after": "A wrench slides across the workbench and sticks to your left ankle. Then a screwdriver. Then a whole handful of bolts."
+  },
+  {
+    "sceneId": "scene_045",
+    "label": "The Stompers",
+    "group": "text",
+    "after": "“The Stompers.”"
+  },
+  {
+    "sceneId": "scene_047",
+    "label": "Up the wall",
+    "group": "text",
+    "after": "Clunk. Clunk. Clunk. You walk up the wall one heavy step at a time, staying in the corner where the bot can’t lean out far enough to aim at you. It knows you’re out there somewhere, so it keeps zapping the mailbox just in case."
+  },
+  {
+    "sceneId": "scene_049",
+    "label": "Full loadout",
+    "group": "text",
+    "after": "You look out over {world_name} from the roof. All of your inventions got you here. It’s time to use them to stop whoever is doing this."
+  },
+  {
+    "sceneId": "scene_053",
+    "label": "Old cannery",
+    "group": "text",
+    "after": "GRABS AWESOME STRUCTURES. MAKING YOUR NEIGHBORHOOD MINE! The word “MINE” has been crossed out by hand, and “BETTER” is written above it. Under that, in gold letters two feet tall: GAS. WE BLOW YOU AWAY!"
+  },
+  {
+    "sceneId": "scene_054",
+    "label": "Under the awning",
+    "group": "text",
+    "after": "You catch it with two fingers. Way, WAY too close."
+  },
+  {
+    "sceneId": "scene_056",
+    "label": "Max’s office",
+    "group": "text",
+    "after": "“Sir, there is a computer on that desk, and it is unlocked. There is a sticky note on the screen. It says ‘Password: password.’”"
+  },
+  {
+    "sceneId": "scene_058",
+    "label": "Max on stage",
+    "group": "text",
+    "after": "Standing behind the stage, still as statues, are two Security Bots with steady red eyes. One of them is giving the crowd a thumbs-up."
+  },
+  {
+    "sceneId": "scene_060",
+    "label": "Bot pileup",
+    "group": "text",
+    "after": "You pop one panel. You pop the other. Pull. Pull. Both sets of eyes fade to soft blue."
+  },
+  {
+    "sceneId": "scene_066",
+    "label": "Precision blast",
+    "group": "text",
+    "after": "Every terminal goes dark at once. The Robot Improver 3 makes a sound like a very large balloon letting go, and its lights go out row by row. On the roof, the antenna stops humming."
+  },
+  {
+    "sceneId": "scene_068",
+    "label": "Neighborhood safe",
+    "group": "text",
+    "after": "You nod back, and you keep walking."
+  }
+]

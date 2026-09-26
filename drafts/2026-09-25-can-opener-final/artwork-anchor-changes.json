@@ -1,0 +1,26 @@
+[
+  {
+    "id": "02-old-sandwich",
+    "sceneId": "scene_008",
+    "before": "The bot spins around, confused, and the cabinet door on its belly flaps open. A screwdriver falls out. Then a tape measure. Then a very old sandwich. That’s when you see your opening: a panel on its back, right between the shoulders.",
+    "after": "The bot spins around, confused, and the cabinet door on its belly flaps open from the sudden spin. Out falls a screwdriver, a tape measure, and then a very old sandwich, for some reason. That’s when you see it: a panel on its back, right between the shoulders."
+  },
+  {
+    "id": "04-wheel-pop",
+    "sceneId": "scene_026",
+    "before": "The rock smashes into the front left wheel, and it pops right off its axle. The Load-Bot tips forward, spins in a slow, sad circle, and crashes onto its face with a BOOM that sets off a car alarm.",
+    "after": "The rock smashes into the front left wheel, and it pops right off its axle. The Load-Bot tips forward, spins in a slow, sad, comical circle, and crashes onto its face with a BOOM that sets off a car alarm."
+  },
+  {
+    "id": "05-shield-cover-me",
+    "sceneId": "scene_033",
+    "before": "The stick skids off the light in a shower of sparks. The shield flickers, but it holds! The bot hits it again, and again, and you push forward behind the shield one step at a time. But you can’t get around it, and you can’t exactly fight with a shield and a thumb.",
+    "after": "The stick skids off the light in a shower of sparks. The shield flickers again, but it holds! The bot hits it over and over, and you push forward behind the shield one step at a time. But you can’t get around it, and you can’t exactly fight with a shield and a thumb."
+  },
+  {
+    "id": "10-full-loadout",
+    "sceneId": "scene_049",
+    "before": "You look out over {world_name} from the roof. All of your inventions got you here. It's time to put them to use.",
+    "after": "You look out over {world_name} from the roof. All of your inventions got you here. It’s time to use them to stop whoever is doing this."
+  }
+]
