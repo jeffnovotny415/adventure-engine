@@ -63,12 +63,15 @@
 .text-button{border:0;background:none;color:inherit;min-height:44px;padding:10px 12px;text-decoration:underline;text-underline-offset:5px}
 .path-divider{height:170px;max-width:720px;width:100%;margin:8px auto;overflow:hidden;color:#967044}
 .path-divider svg{display:block;width:100%;height:100%;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
-.trail-line{stroke-width:5;stroke-dasharray:1 13}
+.trail-line{stroke-width:6.5;stroke-dasharray:1 13}
 .trail-reveal{stroke:white;stroke-width:16;stroke-dasharray:1;stroke-dashoffset:0}
-.trail-landmarks{stroke-width:3}
-.trail-landmarks circle{fill:var(--paper)}
-.trail-destination{stroke:#87583e;stroke-width:5}
-.trail-terrain{opacity:.45;stroke-width:2}
+.trail-landmarks{stroke-width:4}
+.trail-landmarks>circle{fill:var(--paper)}
+.trail-destination{stroke:#87583e;stroke-width:6.5}
+.trail-symbol{stroke-width:3.5}
+.trail-robot{stroke:#855231}.trail-robot circle{fill:currentColor;stroke:none}
+.trail-planet{stroke:#456578}
+.trail-magic{stroke:#785276}
 .library{border-top:0;padding-top:30px}
 .living-art{position:relative;isolation:isolate}
 .library-art::after{content:"";position:absolute;left:20%;top:32%;width:8px;height:8px;border-radius:50%;background:#fff6d9;box-shadow:0 0 12px #fff0b8;opacity:0;pointer-events:none}
