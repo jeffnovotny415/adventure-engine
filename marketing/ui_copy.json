@@ -1,0 +1,155 @@
+{
+  "title": "Paths of Wonder: Interactive Adventure Stories for Kids",
+  "description": "Build robot-fighting gadgets, get stranded on a starship, or save a world running out of magic. Three interactive stories where every choice changes what happens next.",
+  "brand": "Paths of Wonder",
+  "nav": [
+    {
+      "label": "The books",
+      "href": "#books"
+    },
+    {
+      "label": "How it works",
+      "href": "#how-it-works"
+    },
+    {
+      "label": "For parents",
+      "href": "#parents"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Interactive adventures for young readers",
+    "heading": "Every story needs a hero.",
+    "emphasis": "This time, it’s you.",
+    "body": "Paths of Wonder is a library of interactive adventures for young readers. Turn scrap into gadgets and fight haywire robots, jump through a portal onto a starship, or get summoned into a world where the magic is fading. At every turn, you choose the path.",
+    "cta": "Explore the books",
+    "note": "Coming to iPhone & iPad",
+    "caption": "A first glimpse of The Space Walker"
+  },
+  "books": [
+    {
+      "title": "The Can Opener",
+      "genre": "Gadgets & robots",
+      "id": "can-opener",
+      "image": "garage.webp",
+      "alt": "A garage workbench full of tools, gadgets, and Asher’s computer.",
+      "description": "The robots in your neighborhood have gone haywire, and nobody knows why. Luckily, you've got a garage full of scrap, your trusty monkey wrench, and Asher, your AI assistant and best friend. Turn junk into gear (a wrist-mounted blaster, magnet boots, a shield you name in the middle of a fight, and one very badly named tool), then follow the signal to whoever's behind it. Hint: he wears a shiny suit, his company is called GAS, and he does not get the joke.",
+      "personalization": "You name the neighborhood.",
+      "quote": "\"That is a great deal of GAS for one street.\" (Asher)"
+    },
+    {
+      "title": "The Space Walker",
+      "genre": "Sci-fi adventure",
+      "id": "space-walker",
+      "image": "portal.webp",
+      "alt": "A fully covered explorer looks out into space from a starship.",
+      "description": "Your very first portal jump was supposed to land you in desert ruins. Instead, you land with a clank on a starship in deep space, and the portal snaps shut behind you. Explore the ship, meet a crew stranger than anything in your research notes, and fly rescue missions across the galaxy while you figure out how to get home.",
+      "personalization": "You name the starship.",
+      "quote": "\"Did I mention they are blue?\""
+    },
+    {
+      "title": "The Summoned Mage",
+      "genre": "Cozy fantasy",
+      "id": "summoned-mage",
+      "image": "mage.webp",
+      "alt": "A cloaked mage and a purple-haired companion beside a magical doorway.",
+      "description": "You wake up inside a ring of candles. The girl across from you has purple hair, cat's eyes, a tail, and some big news: she summoned you to save her world. Here, magic keeps the water running and the lamps lit, and it's slowly disappearing. Travel to a cozy town of beastfolk, make friends worth keeping, and find out what's draining the magic away. Fight, sneak, or find a gentler way through. And when it's over, decide whether you're going home at all.",
+      "personalization": "You name the magical world.",
+      "quote": "\"I made a door. Seems rude not to use it.\""
+    }
+  ],
+  "library": {
+    "eyebrow": "The library",
+    "heading": "Three books. So many possible paths.",
+    "intro": "Gadgets and robots, sci-fi rescue missions, or cozy fantasy. Start wherever you like.",
+    "artLabel": "Explore illustration",
+    "close": "Close illustration",
+    "zoom": "Zoom in",
+    "zoomOut": "Zoom out"
+  },
+  "how": {
+    "eyebrow": "A little imagination. A choice at every turn.",
+    "heading": "Read the story. Make it yours.",
+    "steps": [
+      {
+        "heading": "Pick a book.",
+        "body": "Gadgets and robots, sci-fi rescue missions, or cozy fantasy. Start wherever you like."
+      },
+      {
+        "heading": "Make it yours.",
+        "body": "Name your hero, then name the world: your neighborhood, your starship, your magical land. The story remembers."
+      },
+      {
+        "heading": "Choose your path.",
+        "body": "Rush outside or check the cameras? Go left or right? Ask questions or run? Different choices lead to different scenes and different endings."
+      }
+    ]
+  },
+  "reasons": {
+    "eyebrow": "Worth another read",
+    "heading": "One more choice. One more chapter.",
+    "items": [
+      {
+        "heading": "Real choices, real consequences.",
+        "body": "A different choice means scenes you never saw the first time, so every reread is a new adventure."
+      },
+      {
+        "heading": "Your hero, your world.",
+        "body": "Your names are woven right into the story, so it feels like it was written about you."
+      },
+      {
+        "heading": "Funny on purpose.",
+        "body": "Villains who can’t get their own company name right. Robots who ignore you completely. A captain who is very tall and very blue."
+      },
+      {
+        "heading": "Stories with heart.",
+        "body": "The robots aren’t evil; something is making them sick. The crew looks out for each other. And sometimes the bravest move is the kind one."
+      }
+    ]
+  },
+  "parents": {
+    "eyebrow": "For parents & reading partners",
+    "heading": "Screen time that’s actually reading.",
+    "body": "Paths of Wonder turns reading into something kids ask to do. Every choice asks them to think about what might happen next, and the urge to see \"what if I’d picked the other one?\" keeps them turning pages.",
+    "aside": "Great for reading together.",
+    "asideBody": "Read aloud at bedtime and take turns picking the path."
+  },
+  "faq": {
+    "heading": "A few things you might be wondering.",
+    "items": [
+      {
+        "question": "Can you replay a story?",
+        "answer": "Yes, and you should. Different choices unlock different scenes and endings."
+      },
+      {
+        "question": "What devices is it coming to?",
+        "answer": "Paths of Wonder is being built for iPhone and iPad."
+      },
+      {
+        "question": "When can we try it?",
+        "answer": "Testing is coming first. The target for launch is mid-to-late October 2026, with the final date depending on testing."
+      },
+      {
+        "question": "How much will it cost?",
+        "answer": "Free previews and full-book unlocks are planned. Final pricing and availability will be shared before launch."
+      }
+    ]
+  },
+  "about": {
+    "heading": "Made by one person, on purpose.",
+    "body": "Paths of Wonder is created and built by Jeff, an independent developer who wanted stories where kids aren’t along for the ride. They’re steering it."
+  },
+  "launch": {
+    "eyebrow": "The next chapter",
+    "heading": "Your path starts here.",
+    "body": "Pick a book. Name your hero. Make your first choice.",
+    "status": "Testing opens soon",
+    "detail": "Coming to iPhone & iPad. Targeting mid-to-late October 2026.",
+    "back": "Back to the books"
+  },
+  "footer": {
+    "note": "Interactive stories. A world of your own.",
+    "top": "Back to top",
+    "copyright": "© 2026 Paths of Wonder"
+  },
+  "skip": "Skip to content"
+}

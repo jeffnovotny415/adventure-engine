@@ -1,0 +1,10 @@
+Use case: logo-brand
+Asset type: transparent horizontal brand logo for the Paths of Wonder interactive story app for young readers on iPhone and iPad; website header around 220px wide and larger brand placements.
+Primary request: Create one original, polished, cohesive horizontal logo combining a distinctive open book emblem with a branching path rising through its pages toward a single small star, plus the exact brand name.
+Scene/backdrop: Actual alpha transparency, no background panel.
+Style/medium: Flat ink logo with strong, clean silhouette and a restrained traditional engraved-bookplate feel. Classic literary warmth inspired by repeatedly read leather-bound books, but simple enough to stay legible when small.
+Composition/framing: Open book emblem to the left, elegant readable literary serif wordmark to its right reading 'Paths of Wonder' on one horizontal line. Balanced scale and spacing, snug transparent margins, wide horizontal lockup. Strong serif letterforms and restrained emblem detail for a 220px-wide header.
+Color palette: Dark brown ink #33291f dominant; muted antique gold #987749 path/star accents; small optional oxblood #713d32 book accent. Designed to sit on warm paper #eee5d4 while the background itself remains genuinely transparent.
+Text (verbatim): "Paths of Wonder"
+Constraints: Single cohesive logo, exact readable text, one original logo only. Flat clean artwork, preserve alpha.
+Avoid: Tagline, sheet of variations, scene illustration, characters, extra words, glossy gradients, glow, shadows, photographic texture, mockup, large surrounding empty space.
