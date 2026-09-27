@@ -1,6 +1,7 @@
 // Read-only live-story fixture; never reads or writes adventure saves.
 import { useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { ArtworkReviewContext } from '../../src/components/shared/SceneImage/ArtworkReviewContext';
 import { BookReader } from '../../src/components/shared/BookReader/BookReader';
 import techHero from '../../src/data/stories/the_can_opener.json';
 import mage from '../../src/data/stories/summoned_mage.json';
@@ -30,13 +31,13 @@ export function Fixture() {
   });
   const [scale, setScale] = useState(query.has('large') ? 2.25 : 1);
   const [style, setStyle] = useState({ ...DEFAULT_READING_STYLE, pageMovement: query.has('animated') ? 'animated' : 'instant', pageAppearance: query.has('night') ? 'night' : 'warm' });
-  return <div className="app-shell" data-theme={{ the_can_opener: 'tech-hero', summoned_mage: 'summoned-mage', space_walker: 'space-walker' }[storyId]}><BookReader storyId={storyId} sceneId={sceneId} storyTitle={story.title} title={scene.title}
+  return <ArtworkReviewContext value={query.has('motion')}><div className="app-shell" data-theme={{ the_can_opener: 'tech-hero', summoned_mage: 'summoned-mage', space_walker: 'space-walker' }[storyId]}><BookReader storyId={storyId} sceneId={sceneId} storyTitle={story.title} title={scene.title}
     body={scene.text} image={scene.image} choices={scene.choices ?? {}} onChoose={() => {}}
     onHome={() => {}} onRestart={() => {}} ending={scene.ending}
     onUndoChoice={query.has('history') ? () => {} : undefined} initialChoosing={query.has('choices')}
     passageStorage={passageStorage.current}
     textScale={scale} onTextScaleChange={setScale} readingStyle={style} onReadingStyleChange={patch => setStyle({...style,...patch})}
     nativeReading={{textScale:systemScale,voiceOver:query.has('continuous')}}
-    onReadingPositionChange={value => { anchor.current = value; window.fixtureAnchor = value; }} /></div>;
+    onReadingPositionChange={value => { anchor.current = value; window.fixtureAnchor = value; }} /></div></ArtworkReviewContext>;
 }
 createRoot(document.getElementById('root')).render(<Fixture />);

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "robot-eyes",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/illustrations/construction-bot.webp"
+    ],
+    "prompt": "Create a NEW landscape spot illustration for an illustrated adventure book, based on the reference Construction Bot design. Close-up only of its round off-white egg-shaped HEAD and a little shoulder rim, straight-on symmetrical front view, angry angled eyebrows and flat straight mouth, scuffed white paint, two circular dark navy mechanical eye lenses, unlit. Eyes positioned symmetrically, no damage anywhere, so this close-up can accompany multiple story branches. No tools, no arms, no writing, no arrows. Ink contours and rich colored-pencil crosshatching like reference, professional warm book art. Whole head fully inside frame with generous TRANSPARENT margin, no paper/background. Landscape 1536x1024. The eyes must be dark/unlit; color lighting will be animated later."
+  },
+  {
+    "id": "tool-off",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/illustrations/18-can-opener-active.webp"
+    ],
+    "prompt": "Edit target: this exact Can Opener portrait. Remove ONLY the entire blue energy axe blade and its blue aura on the left side, leaving that area fully transparent. There is NO physical blade or blade-shaped silhouette remaining. Preserve the wrench head, hammer, copper handle coils, prybar and mechanical design in their EXACT SAME pixel positions and framing as original. Dim the circular power core to dark blue glass, leave a faint blue tint. Do not rotate, crop, resize composition or redraw mechanics. This is the inactive frame for a precisely aligned on/off animation. Actual transparent background. Portrait 1024x1536."
+  },
+  {
+    "id": "ceiling-dust",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/illustrations/07-magnet-mishap.webp"
+    ],
+    "prompt": "New wide chapter spot illustration in same rich ink and colored-pencil book style. Interior garage corner viewed upward: small ragged rock-sized hole punched through plaster ceiling near upper middle; broken plaster edges, wood lath, bright daylight beyond. Below on a narrow wooden shelf at lower right sits an entirely undisturbed old paint can. Quiet visual joke, no person, no gun/tool, no text, no sound effect. No particles or smoke yet, animation will add falling plaster dust. Soft irregular vignette fading to real transparency all around, no rectangular frame or background. Landscape 1536x1024."
+  },
+  {
+    "id": "shield-tape",
+    "refs": [
+      "/Users/jeff/Developer/AdventureEngine/webapp/public/images/stories/the_can_opener/illustrations/07-magnet-mishap.webp"
+    ],
+    "prompt": "New landscape close-up book illustration in reference professional ink/colored-pencil style. Show ONLY a LEFT forearm extending horizontally from the right edge toward the left, charcoal sleeve covering all skin and full charcoal glove relaxed fingers at left. On wrist a homemade energy-shield armband covered in overlapping matte gray duct tape, a row of three small blue dot emitters, copper wires to a little side power pack. NOT a physical circular shield. Energy barrier switched off, no luminous disk, faint blue dot lenses only. One SHORT loose gray tape flap hangs from underside of wrist; keep it clearly separated against transparent space so it can be animated. No head, body or right arm. Generous transparent margins, no text or background. Landscape 1536x1024."
+  },
+  {
+    "id": "observation",
+    "ref": "space_walker/illustrations/04-the-engine-room.webp",
+    "prompt": "New landscape transparent vignette looking straight up through the curved observation-deck ceiling window of a worn friendly rescue spaceship. Broad oval glass opening occupies center 80%, dark navy space beyond, tiny static stars, delicate weathered riveted steel rim, restrained amber cabin lights. No people, no ship exterior, no text. Professional fine ink graphite colored-pencil texture matching reference. Center glass region unbusy for slow animated stars."
+  },
+  {
+    "id": "scanner",
+    "ref": "space_walker/illustrations/06-off-the-ice.webp",
+    "prompt": "New landscape transparent book spot illustration of a battered handheld rescue scanner seen face-on. Screen occupies central rectangle x20%-80%, y20%-75%, subdued blue topographic ice map with a tiny shuttle arrow heading right. Screen has no cracks yet. Thick scuffed gray steel casing, amber buttons below. No hands, no people, no words, no surrounding scene. Detailed ink and colored-pencil like reference. Designed to add spreading black crack lines on the screen later."
+  },
+  {
+    "id": "crystals",
+    "ref": "space_walker/illustrations/07-keeper-cobble.webp",
+    "prompt": "New landscape transparent book vignette: intimate close-up of ancient worn shelves filled with thumb-sized memory crystals in countless small niches, rows receding gently into darkness. Five prominent crystals across middle at x25,38,50,63,75 percent, irregular faceted quartz, subdued lilac amber blue sea-green warm rose. No people, no labels. Warm professional crosshatched ink and colored pencil matching reference. Sparse silhouette edges disappear into transparency."
+  },
+  {
+    "id": "transfer",
+    "ref": "space_walker/illustrations/11-the-convoy.webp",
+    "prompt": "New landscape transparent ink/colored-pencil book illustration, a close-up of weathered rescue-ship control console viewed nearly face-on. Large dark navy glass display occupies center 70%. On display exactly TWELVE small simple rescue ship silhouettes/icons in three rows of four, dim and unlit. Small amber cabin indicator lights on steel border. No people, no words, no letters or numerals. Room for blue power links between icons. Handcrafted worn space aesthetic matching reference."
+  },
+  {
+    "id": "candles",
+    "ref": "summoned_mage/illustrations/01-the-spell-lands.webp",
+    "prompt": "New landscape transparent ink graphite colored-pencil fantasy book spot: three short unlit wax candles in simple worn brass holders on ancient flagstones. Wicks centered at x30%,50%,70%, y42%. Wax ivory, warm weathered tones. At feet faint chalk arcs of summoning circle. No people, no flame yet, no text. Soft transparent irregular vignette edges. Match reference illustration style."
+  },
+  {
+    "id": "door-globes",
+    "ref": "summoned_mage/illustrations/15-the-broken-door.webp",
+    "prompt": "New landscape transparent fantasy book spot in exact rich ink colored-pencil reference style: close detail of ancient closed wooden door and two small glass light globes held in worn bronze wall brackets either side. Globes at x30% and70%, y43%, one weak amber glow and other dark. Mossy stone, carved timber, no letters/runes/text, no people or hands. Soft irregular edges to transparency. Designed for later gentle illumination of the right globe."
+  },
+  {
+    "id": "circle",
+    "ref": "summoned_mage/illustrations/09-the-source.webp",
+    "prompt": "New landscape transparent fantasy book vignette, three-quarter overhead view of worn ancient stone floor with five very faint concentric circular engraved rings, perspective ellipses centered x50% y55%, outer ring width70% height45%. Small mossy cracks only, no characters, no symbols/text, no glow yet. Restrained warm ink and colored-pencil shading with transparent irregular perimeter. Rings will be animated gold then shrink later."
+  },
+  {
+    "id": "stung-quiet",
+    "ref": "space_walker/illustrations/14-stung.webp",
+    "prompt": "Edit this exact illustration preserving every pixel position and all ships shapes/composition. REMOVE the thin white beam between ship emitter and World-Eater and REMOVE the brilliant white crack across the World-Eater. Restore dark space/asteroid texture beneath. Keep dull red central glow. This is the quiet frame just before firing. No change elsewhere."
+  },
+  {
+    "id": "honey-background",
+    "ref": "summoned_mage/illustrations/04-honey-and-the-spark.webp",
+    "prompt": "Edit this exact illustration, same canvas and layout. REMOVE ONLY the small golden flying creature Honey on the right and every floating magic spark. Seamlessly fill the small removed region with matching existing background or transparency. Preserve the hooded hero, gloved outstretched hand, campfire and everything else at exactly their original positions. This is the fixed background for a separate moving creature."
+  },
+  {
+    "id": "honey-sprite",
+    "ref": "summoned_mage/illustrations/04-honey-and-the-spark.webp",
+    "prompt": "Extract/repaint ONLY the small golden furry flying creature Honey from the right of the reference, full body and wings/tail. Same design, professional pencil/ink, grapefruit-sized creature. Isolate entirely on transparent alpha, no scene, no spark, no hero, no ground, no words. Creature faces left toward a spark, lively happy expression. Center in a square canvas 1024x1024, ample transparent margin."
+  },
+  {
+    "id": "magnet-background",
+    "ref": "the_can_opener/illustrations/07-magnet-mishap.webp",
+    "prompt": "Edit exact reference. Preserve composition and every position of hero legs and boots/fridge/room. Remove ONLY the loose wrench, screwdriver and loose bolts attached to the LEFT boot at the left side of the image. Reconstruct underlying boot texture. Do not remove any built-in boot mechanical parts. Nothing else changes. No new items."
+  },
+  {
+    "id": "syphon-dark",
+    "ref": "summoned_mage/illustrations/08-the-first-syphon.webp",
+    "prompt": "Turn off lantern light and syphon inner glow. Preserve all shapes, ribbons, exact positions, ink/pencil texture and transparent alpha; glass is dark smoky blue-gray with reflected environment, no opaque blob."
+  }
+]

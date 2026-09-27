@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { useContent } from '../../../hooks/useContent';
 import { ImageViewer } from './ImageViewer';
+import { AnimatedArtwork } from './AnimatedArtwork';
 
 // Printed artwork beneath the title or anchored between authored paragraphs.
 export function SceneImage({ image, inline = false, afterParagraph }) {
@@ -19,7 +20,7 @@ export function SceneImage({ image, inline = false, afterParagraph }) {
       <button ref={triggerRef} type="button" className="scene-image__open"
         aria-label={`${getText('image_viewer.open')}${image.alt ? `: ${image.alt}` : ''}`}
         aria-haspopup="dialog" onClick={() => setOpen(true)}>
-        <img src={image.src} alt={image.alt ?? ''} className="scene-image__img" width={image.width} height={image.height} draggable={false} />
+        {image.motion ? <AnimatedArtwork image={image} paused={open} /> : <img src={image.src} alt={image.alt ?? ''} className="scene-image__img" width={image.width} height={image.height} draggable={false} />}
       </button>
       {open && <ImageViewer image={image} onClose={close} />}
     </figure>

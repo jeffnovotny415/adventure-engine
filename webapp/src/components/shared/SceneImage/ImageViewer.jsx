@@ -3,6 +3,9 @@ import { createPortal } from 'react-dom';
 import { useContent } from '../../../hooks/useContent';
 import { boundView, zoomAt, MAX_IMAGE_ZOOM } from './imageZoom';
 
+import { AnimatedArtwork } from './AnimatedArtwork';
+import { useReducedArtworkMotion } from './useReducedArtworkMotion';
+
 const FIT = { scale: 1, x: 0, y: 0 };
 export function ImageViewer({ image, onClose }) {
   const { getText } = useContent();
@@ -10,6 +13,8 @@ export function ImageViewer({ image, onClose }) {
   const viewRef = useRef(FIT), sizeRef = useRef({ width: 1, height: 1, imageWidth: 1, imageHeight: 1 });
   const points = useRef(new Map()), gesture = useRef(null);
   const [view, setView] = useState(FIT);
+  const [replay, setReplay] = useState(0), [paused, setPaused] = useState(false);
+  const reduced = useReducedArtworkMotion();
   function update(value) { viewRef.current = value; setView(value); }
   useEffect(() => {
     const dialog = dialogRef.current, canvas = canvasRef.current, img = imageRef.current;
@@ -84,12 +89,17 @@ export function ImageViewer({ image, onClose }) {
         <button ref={closeRef} type="button" aria-label={getText('image_viewer.close')} onClick={dismiss}><span aria-hidden="true">×</span></button>
       </header>
       <p className="image-viewer__help">{getText('image_viewer.zoom_help')}</p>
+      {image.motion && <div className="image-viewer__motion-controls">
+        <button type="button" disabled={reduced} onClick={() => { setReplay(value => value + 1); setPaused(false); }}>{getText('image_viewer.replay')}</button>
+        <button type="button" disabled={reduced} onClick={() => setPaused(value => !value)}>{getText(paused ? 'image_viewer.resume_motion' : 'image_viewer.pause_motion')}</button>
+      </div>}
       <div ref={canvasRef} className="image-viewer__canvas" data-zoom={view.scale.toFixed(2)} tabIndex={0}
         aria-label={getText('image_viewer.zoom_help')} onKeyDown={keys}
         onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}
         onDoubleClick={event => update(view.scale > 1 ? FIT : zoomAt(view, 2.5, local(event), local(event), sizeRef.current))}>
-        <img ref={imageRef} src={image.src} alt={image.alt ?? ''} draggable={false}
-          style={{ transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})` }} />
+        <div className="image-viewer__drawing" style={{ transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})` }}>
+          <AnimatedArtwork image={image} imageRef={imageRef} viewer replay={replay} paused={paused} />
+        </div>
       </div>
     </section>
   </dialog>, document.body);

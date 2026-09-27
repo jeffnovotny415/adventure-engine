@@ -1,0 +1,273 @@
+{
+  "enhancements": {
+    "the_can_opener:18-can-opener-active": {
+      "type": "blade",
+      "base": "/images/story-motion/tool-off.webp"
+    },
+    "the_can_opener:07-magnet-mishap": {
+      "type": "magnet",
+      "base": "/images/story-motion/magnet-background.webp"
+    },
+    "space_walker:04-the-engine-room": {
+      "type": "core"
+    },
+    "space_walker:14-stung": {
+      "type": "beam",
+      "base": "/images/story-motion/stung-quiet.webp"
+    },
+    "summoned_mage:01-the-spell-lands": {
+      "type": "rubble"
+    },
+    "summoned_mage:08-the-first-syphon": {
+      "type": "syphon",
+      "base": "/images/story-motion/syphon-dark.webp"
+    },
+    "summoned_mage:04-honey-and-the-spark": {
+      "type": "honey",
+      "base": "/images/story-motion/honey-background.webp",
+      "sprite": "/images/story-motion/honey-sprite.webp"
+    }
+  },
+  "additions": {
+    "the_can_opener": [
+      {
+        "id": "motion-eyes-intro-006",
+        "sceneId": "scene_006",
+        "after": "Its eyes flicker red, then blue, then red again, like it’s arguing with itself.",
+        "kind": "scene",
+        "src": "/images/story-motion/robot-eyes.webp",
+        "alt": "The Construction Bot’s eyes change from red to blue and back to red.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "eyes-intro"
+        }
+      },
+      {
+        "id": "motion-eyes-shutdown-008",
+        "sceneId": "scene_008",
+        "after": "Its eyes fade from angry red to a soft blue, then go dark.",
+        "kind": "scene",
+        "src": "/images/story-motion/robot-eyes.webp",
+        "alt": "The Construction Bot’s eyes soften from red to blue, then go dark.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "eyes-shutdown"
+        }
+      },
+      {
+        "id": "motion-eyes-shutdown-009",
+        "sceneId": "scene_009",
+        "after": "Its eyes fade from angry red to a soft blue, then go dark.",
+        "kind": "scene",
+        "src": "/images/story-motion/robot-eyes.webp",
+        "alt": "The Construction Bot’s eyes soften from red to blue, then go dark.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "eyes-shutdown"
+        }
+      },
+      {
+        "id": "motion-eyes-shutdown-010",
+        "sceneId": "scene_010",
+        "after": "You jam the wrench’s prybar behind the wire and pull with all your strength. The thrusters cut out, the bot falls down with a THUNK, and its eyes fade from angry red to a soft blue before going dark.",
+        "kind": "scene",
+        "src": "/images/story-motion/robot-eyes.webp",
+        "alt": "The Construction Bot’s eyes soften from red to blue, then go dark.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "eyes-shutdown"
+        }
+      },
+      {
+        "id": "motion-eyes-shutdown-014",
+        "sceneId": "scene_014",
+        "after": "You shove the hammer aside, slide in close, and swing the hammer face of The Can Opener into the bot’s knee over and over. The bot tips, catches itself with a little blast from its thrusters, and tips again. One more hit from above, right behind the head, and it sits down with a THUNK. Its eyes fade from angry red to soft blue, then go dark.",
+        "kind": "scene",
+        "src": "/images/story-motion/robot-eyes.webp",
+        "alt": "The Construction Bot’s eyes soften from red to blue, then go dark.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "eyes-shutdown"
+        }
+      },
+      {
+        "id": "motion-eyes-shutdown-015",
+        "sceneId": "scene_015",
+        "after": "The bot winds up for one more swing…and just stops. Its arms lower, its thrusters sputter out, and its eyes fade from angry red to soft blue, then go dark.",
+        "kind": "scene",
+        "src": "/images/story-motion/robot-eyes.webp",
+        "alt": "The Construction Bot’s eyes soften from red to blue, then go dark.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "eyes-shutdown"
+        }
+      },
+      {
+        "id": "motion-ceiling-dust-018",
+        "sceneId": "scene_018",
+        "after": "The rock goes straight UP, punches a hole in the ceiling, and doesn’t come back down.",
+        "kind": "scene",
+        "src": "/images/story-motion/ceiling-dust.webp",
+        "alt": "Plaster dust trickles from the ceiling hole above an untouched paint can.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "ceiling-dust"
+        }
+      },
+      {
+        "id": "motion-shield-014",
+        "sceneId": "scene_014",
+        "after": "You look at the shield. The blue light fizzles, pops, and dies, and a piece of tape slowly peels off and floats to the ground.",
+        "kind": "scene",
+        "src": "/images/story-motion/shield-tape.webp",
+        "alt": "The left-arm shield goes dark and a loose piece of duct tape falls away.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "shield"
+        }
+      },
+      {
+        "id": "motion-shield-015",
+        "sceneId": "scene_015",
+        "after": "A second later the shield fizzles out and a piece of tape peels off the side. Your arms are tingling all the way up to your elbows, but you made it.",
+        "kind": "scene",
+        "src": "/images/story-motion/shield-tape.webp",
+        "alt": "The left-arm shield goes dark and a loose piece of duct tape falls away.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "shield"
+        }
+      },
+      {
+        "id": "motion-charge-065",
+        "sceneId": "scene_065",
+        "after": "The coils go from blue to white. The wrench head opens wide, lightning starts crawling up and down the handle, and every hair on your arms stands straight up. The whole cannery fills with a rising hum.",
+        "kind": "scene",
+        "src": "/images/story-motion/tool-off.webp",
+        "alt": "White-blue energy builds along the Can Opener’s copper coils.",
+        "width": 1024,
+        "height": 1536,
+        "motion": {
+          "type": "charge"
+        }
+      }
+    ],
+    "summoned_mage": [
+      {
+        "id": "motion-candles-004",
+        "sceneId": "scene_004",
+        "after": "You look down and notice the candles are all alight.",
+        "kind": "scene",
+        "src": "/images/story-motion/candles.webp",
+        "alt": "Three candles catch light one after another.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "candles"
+        }
+      },
+      {
+        "id": "motion-globes-016",
+        "sceneId": "scene_016",
+        "after": "You tap one too, and it flares up so bright you both see spots for a second.",
+        "kind": "scene",
+        "src": "/images/story-motion/door-globes.webp",
+        "alt": "A weak glow-globe flickers; its neighbor brightens and settles.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "globes"
+        }
+      },
+      {
+        "id": "motion-circle-064",
+        "sceneId": "scene_064",
+        "after": "The golden light of the circle folds inward one ring at a time, from the outside to the middle, until the last ring shrinks down to one bright point that hangs there for a second…and then goes out.",
+        "kind": "scene",
+        "src": "/images/story-motion/circle.webp",
+        "alt": "Golden rings fold inward to one point of light, then go out.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "circle"
+        }
+      },
+      {
+        "id": "motion-circle-065",
+        "sceneId": "scene_065",
+        "after": "The golden light of the circle folds inward one ring at a time until the last ring shrinks down to a single bright point, hangs there for a second, and goes out.",
+        "kind": "scene",
+        "src": "/images/story-motion/circle.webp",
+        "alt": "Golden rings fold inward to one point of light, then go out.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "circle"
+        }
+      }
+    ],
+    "space_walker": [
+      {
+        "id": "motion-stars-027",
+        "sceneId": "scene_027",
+        "after": "You lie down on your back on the floor and look at more stars than you knew existed.",
+        "kind": "scene",
+        "src": "/images/story-motion/observation.webp",
+        "alt": "Stars drift slowly across the observation deck’s ceiling window.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "stars"
+        }
+      },
+      {
+        "id": "motion-ice-043",
+        "sceneId": "scene_043",
+        "after": "The shuttle skims out over the flat so low it kicks up a tail of snow. On your screen, new black lines open up underneath it and chase it across the ice like something alive.",
+        "kind": "scene",
+        "src": "/images/story-motion/scanner.webp",
+        "alt": "Black fractures spread beneath the shuttle’s route on the ice scanner.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "ice"
+        }
+      },
+      {
+        "id": "motion-crystals-048",
+        "sceneId": "scene_048",
+        "after": "Both walls are shelves, from the floor all the way up to a ceiling lost in the shadows, and every shelf is filled with crystals. They’re about the size of your thumb, and each one glows a slightly different color. There must be millions of them.",
+        "kind": "scene",
+        "src": "/images/story-motion/crystals.webp",
+        "alt": "Rows of memory crystals glow softly in different colors.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "crystals"
+        }
+      },
+      {
+        "id": "motion-transfer-061",
+        "sceneId": "scene_061",
+        "after": "“Ten. Eleven,” Percy calls over the comm. “Number twelve’s not catching! She needs more, and we’re out of time!”",
+        "kind": "scene",
+        "src": "/images/story-motion/transfer.webp",
+        "alt": "Eleven rescue ships regain engine power; the twelfth remains dark.",
+        "width": 1536,
+        "height": 1024,
+        "motion": {
+          "type": "transfer"
+        }
+      }
+    ]
+  }
+}

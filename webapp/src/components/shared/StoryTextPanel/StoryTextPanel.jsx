@@ -1,9 +1,11 @@
 import { SceneImage } from '../SceneImage/SceneImage';
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
+import { ArtworkReviewContext } from '../SceneImage/ArtworkReviewContext';
 import { artworkForPassage, paragraphsOf } from '../../../content/storyArtwork';
 
 export function StoryTextPanel({ storyTitle, storyId, sceneId, title, intro, body, image, headingRef }) {
-  const artwork = artworkForPassage(storyId, sceneId, body);
+  const includeDraftMotion = useContext(ArtworkReviewContext);
+  const artwork = artworkForPassage(storyId, sceneId, body, { includeDraftMotion });
   const introCount = paragraphsOf(intro).length;
   return (
     <>
