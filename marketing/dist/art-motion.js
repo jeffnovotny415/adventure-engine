@@ -75,6 +75,15 @@
           ], { duration: 1900, delay: 400 + i * 650, easing: 'ease-in-out', fill: 'both' });
         }
         schedule();
+      } else if (root.dataset.artwork === 'companion') {
+        animate('.art-companion', [
+          { transform: 'translateY(0) rotate(0deg)' },
+          { transform: 'translateY(2px) rotate(-2deg)', offset: .18 },
+          { transform: 'translateY(-16px) rotate(3deg)', offset: .45 },
+          { transform: 'translateY(0) rotate(-2deg)', offset: .75 },
+          { transform: 'translateY(0) rotate(0deg)' },
+        ], { duration: 1500, delay: 600, easing: 'ease-in-out' });
+        schedule();
       } else {
         animate('.art-map-reveal', [{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }],
           { duration: 3400, easing: 'ease-in-out', fill: 'both' });
@@ -86,9 +95,12 @@
       }
     }
     function refresh() {
-      button.hidden = !ready || preference.matches;
-      button.disabled = document.body.classList.contains('motion-paused');
-      if (ready && (preference.matches || button.disabled)) {
+      const paused = document.body.classList.contains('motion-paused');
+      if (button) {
+        button.hidden = !ready || preference.matches;
+        button.disabled = paused;
+      }
+      if (ready && (preference.matches || paused)) {
         // Static mode shows the completed art and must not later rewind it.
         played = true;
         root.classList.add('artwork-started');
@@ -100,7 +112,7 @@
       }
     }
     controllers.push(refresh);
-    button.addEventListener('click', () => play(true));
+    button?.addEventListener('click', () => play(true));
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(entries => {
         visible = entries[0].isIntersecting && entries[0].intersectionRatio >= .45;
@@ -109,6 +121,8 @@
       observer.observe(root.querySelector('.art-stage'));
     }
     const urls = [...root.querySelectorAll('svg image')].map(image => image.getAttribute('href'));
+    const companion = root.querySelector('img.art-companion');
+    if (companion) urls.push(companion.getAttribute('src'));
     Promise.all([...new Set(urls)].map(loadImage)).then(() => {
       ready = true;
       root.classList.add('artwork-ready');

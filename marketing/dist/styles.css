@@ -139,3 +139,25 @@ body.modal-open{overflow:hidden}
 .art-link{cursor:zoom-in}
 
 .footer .motion-toggle{flex-shrink:0;color:var(--muted)}
+
+/* Original companions carry the illustrated world into the closing sections. */
+.reasons-layout{grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+.companion-tinkerers{max-width:440px;margin:28px auto 0}
+.reason-grid>div{border-top:1px solid #bfae91;padding-top:22px}
+.parents{grid-template-columns:1fr 1fr;gap:64px}
+.parents aside.reading-together{padding:0;border:0;outline:0;background:none;margin:0}
+.companion-readers{max-width:320px;margin:0 auto 14px}
+.companion-readers img{aspect-ratio:2/3}
+.reading-together h3{font-size:1.6rem}
+.reading-together>p{max-width:320px;margin-inline:auto}
+.launch .companion-sprite{width:180px;max-width:55%;margin:-20px auto 20px}
+.launch .companion-sprite a{display:block;margin:0;min-height:0}
+.companion-sprite .art-stage,.companion-sprite img{aspect-ratio:1}
+.art-companion{transform-origin:50% 85%}
+@media(max-width:1000px){.reasons-layout,.parents{gap:36px}}
+@media(max-width:740px){
+ .reasons-layout,.parents{grid-template-columns:1fr}
+ .companion-tinkerers{max-width:360px;margin-top:20px}
+ .companion-readers{max-width:280px}
+ .launch .companion-sprite{width:150px;margin-top:0}
+}

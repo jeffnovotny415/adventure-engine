@@ -196,5 +196,22 @@
     "replayMap": "Unfurl the map again",
     "pause": "Pause animations",
     "resume": "Play animations"
+  },
+  "companions": {
+    "tinkerers": {
+      "image": "companion-tinkerers.webp",
+      "title": "A little help from a friend",
+      "alt": "A silver foxkin tinkerer smiles as a small copper-and-teal robot offers a comically tiny wrench."
+    },
+    "readers": {
+      "image": "companion-reading-bears.webp",
+      "title": "An adventure to share",
+      "alt": "A bearfolk parent in a teal cardigan reads a worn book with an eager cub pointing at the page."
+    },
+    "sprite": {
+      "image": "companion-mint-sprite.webp",
+      "title": "A small spark of curiosity",
+      "alt": "A curious mint-green puff creature with lilac wings, tiny feet, and a curled fluffy tail."
+    }
   }
 }

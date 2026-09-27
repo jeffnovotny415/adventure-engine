@@ -18,7 +18,7 @@ async function setup({ kind = 'mischief', reduced = false, failed = false } = {}
     dataset: { artwork: kind },
     classList: { add: name => classes.add(name) },
     querySelectorAll: () => [{ getAttribute: () => 'asset.webp' }],
-    querySelector: selector => selector === '[data-art-replay]' ? button : {
+    querySelector: selector => selector === '[data-art-replay]' ? (kind === 'companion' ? null : button) : selector === 'img.art-companion' ? null : {
       animate: () => {
         const a = { target: selector, cancelled: false, finished: new Promise(() => {}), cancel() { this.cancelled = true; } };
         animations.push(a);
@@ -115,4 +115,30 @@ test('reduced motion shows the completed map without starting its reveal', async
   const s = await setup({ kind: 'podium', reduced: true });
   assert.equal(s.classes.has('artwork-started'), true);
   assert.equal(s.animations.length, 0);
+});
+
+test('companion hops without a replay button and stops when offscreen', async () => {
+  const s = await setup({ kind: 'companion' });
+  s.view(1);
+  assert.deepEqual(s.animations.map(a => a.target), ['.art-companion']);
+  s.tick();
+  assert.equal(s.animations.length, 2);
+  s.view(0);
+  assert.ok(s.animations.every(a => a.cancelled));
+  assert.equal(s.timers.size, 0);
+});
+for (const stop of ['pause', 'reduce', 'hide']) {
+  test(`companion respects ${stop} without a replay control`, async () => {
+    const s = await setup({ kind: 'companion' });
+    s.view(1);
+    s[stop]();
+    assert.ok(s.animations.every(a => a.cancelled));
+    assert.equal(s.timers.size, 0);
+  });
+}
+test('companion remains still for reduced motion from first load', async () => {
+  const s = await setup({ kind: 'companion', reduced: true });
+  s.view(1);
+  assert.equal(s.animations.length, 0);
+  assert.equal(s.timers.size, 0);
 });
