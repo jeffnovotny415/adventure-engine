@@ -1,0 +1,9 @@
+# Book on a podium revision
+
+Built-in Imagegen edit. Review draft.
+
+Reference: `03-off-the-page-v2.png`
+
+Output: `03-off-the-page-v3.png`
+
+Use case: precise-object-edit. Edit the supplied Paths of Wonder map logo according to the user's specific correction. The lower-left object currently looks like a pile of pages sitting on a tiny sideways book, with an implausible oversized red spine. REPLACE THAT WHOLE LOWER SUPPORT WITH A SMALL WOODEN PODIUM / LECTERN, AND PUT ONE DISTINCT REAL OPEN BOOK ON TOP. Make the separation unmistakable: (1) a compact warm walnut wooden lectern with visible wood grain, sloped rectangular top, a front retaining lip and a short sturdy pedestal/base; (2) a separate modestly thin worn leather-bound book resting on the sloped top, with two facing ivory pages, a clear central gutter, coherent thin covers and page edges. There must be NO large vertical book spine or sideways closed book beneath the pages. The wood podium, not a red leather cover, supports the open book. The open book should read as an ordinary recognizable physical open book, with a gentle shallow V to its facing pages. The illustrated adventure map pours organically out of the book's open pages and curls upward into the existing ribbon. Retain the distinctive flowing map with forked arrows, bootprints, trees, ink blot and curled tip. Preserve exact text "Paths of Wonder" and its existing warm illustrated lettering, overall logo composition, walnut/cream/oxblood/brass palette, hand-inked colored-pencil style. Keep lettering unobscured and give the lectern/book room at lower left, adjusting only enough to fit it naturally. Strongly prioritize clear believable object construction. No additional text, characters, scenery or decorations. Genuine transparent background, clean alpha, no backdrop or surrounding glow, no mockup or watermark.
