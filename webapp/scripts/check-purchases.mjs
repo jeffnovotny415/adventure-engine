@@ -12,11 +12,11 @@ async function fixture(story, extra = '', viewport = sizes[0]) {
   const page = await context.newPage(); page.setDefaultTimeout(8000);
   page.on('pageerror', e => errors.push(e.message));
   await page.goto(`${base}/test/browser/purchases.html?story=${story}${extra}`);
-  await page.locator('.book-bar').first().waitFor();
+  await page.locator('.story-door').first().waitFor();
   return { page, context };
 }
 async function resume(page) {
-  await page.locator('.book-bookmark').click();
+  await page.locator('.story-door[data-resumable="true"]').click();
   await page.getByRole('button', {name:'Continue reading',exact:true}).click();
 }
 async function boundary(page, story) {

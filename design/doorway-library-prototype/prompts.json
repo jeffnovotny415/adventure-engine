@@ -1,0 +1,18 @@
+{
+  "method": "Built-in image_gen",
+  "status": "prototype concept only",
+  "originalPrompts": [
+    {
+      "id": "can-opener",
+      "prompt": "Use case: illustration-story. Create ONE isolated upright arched storybook doorway for an interactive book-selection prototype. Reference image is STYLE REFERENCE: match its rich colored-pencil, fine ink, worn warm parchment arch, chipped painted timber, antique brass details, handmade pop-up-book charm. Render front-facing, nearly orthographic, door open outward to the left about 65 degrees, entire arch and door visible. Portrait composition, doorway fills canvas with small transparent margin. Ground is only a very narrow parchment sill, NO book, NO surrounding room, NO text or labels, NO characters. Actual transparent outside background, artwork inside the doorway is opaque. Similar proportions and baseline for a set of three. Weathered teal wooden door with a brass gear emblem. Through the arch: cozy kid inventor's garage workshop, salvaged mechanical parts and copper wiring on a bench, small blue power core, amber work light, ordinary neighborhood visible beyond. No castles, no invented hero or robot character."
+    },
+    {
+      "id": "space-walker",
+      "prompt": "Use case: illustration-story. Create ONE isolated upright arched storybook doorway for an interactive book-selection prototype. Reference image is STYLE REFERENCE: match its rich colored-pencil, fine ink, worn warm parchment arch, chipped painted timber, antique brass details, handmade pop-up-book charm. Render front-facing, nearly orthographic, door open outward to the left about 65 degrees, entire arch and door visible. Portrait composition, doorway fills canvas with small transparent margin. Ground is only a very narrow parchment sill, NO book, NO surrounding room, NO text or labels, NO characters. Actual transparent outside background, artwork inside the doorway is opaque. Similar proportions and baseline for a set of three. Weathered oxblood-red wooden door with a brass ringed-planet emblem. Through the arch: steel spaceship corridor opening onto a panoramic view of deep blue stars and a ringed planet, worn riveted steel, cool cyan instrument lights and small warm amber lights. No generic cartoon rocket, no characters."
+    },
+    {
+      "id": "summoned-mage",
+      "prompt": "Use case: illustration-story. Create ONE isolated upright arched storybook doorway for an interactive book-selection prototype. Reference image is STYLE REFERENCE: match its rich colored-pencil, fine ink, worn warm parchment arch, chipped painted timber, antique brass details, handmade pop-up-book charm. Render front-facing, nearly orthographic, door open outward to the left about 65 degrees, entire arch and door visible. Portrait composition, doorway fills canvas with small transparent margin. Ground is only a very narrow parchment sill, NO book, NO surrounding room, NO text or labels, NO characters. Actual transparent outside background, artwork inside the doorway is opaque. Similar proportions and baseline for a set of three. Weathered honey-ochre wooden door with an antique brass leaf emblem. Through the arch: a lush enchanted woodland path, mossy roots, large colorful mushrooms, tiny restrained violet magical light, distant stone towers glimpsed through foliage. No characters."
+    }
+  ]
+}

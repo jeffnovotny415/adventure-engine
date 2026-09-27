@@ -21,7 +21,17 @@
     "bookmark_restart": "Start again",
     "bookmark_restart_heading": "Start this story again?",
     "bookmark_restart_help": "This replaces your saved place and choices in this book. Your hero name and reading settings will stay the same.",
-    "bookmark_restart_cancel": "Keep my place"
+    "bookmark_restart_cancel": "Keep my place",
+    "door_heading": "Which door will you open?",
+    "door_help": "Three worlds. Your way through.",
+    "door_saved_help": "Your bookmarks are waiting. Open a door to continue.",
+    "door_begin": "Begin your adventure",
+    "door_open": "Open adventure",
+    "door_genres": {
+      "the_can_opener": "Inventions & mischief",
+      "space_walker": "Stars & strange company",
+      "summoned_mage": "Magic & unexpected friends"
+    }
   },
   "hero_setup": {
     "heading": "This adventure belongs to…",
@@ -42,7 +52,7 @@
   },
   "reader": {
     "navigation": "Reading controls",
-    "bookshelf": "Bookshelf",
+    "bookshelf": "Library",
     "text_size": "Reading settings",
     "text_size_symbol": "Aa",
     "size_label": "Text size",
@@ -140,15 +150,15 @@
   },
   "runtime_recovery": {
     "heading": "Let’s reopen your book",
-    "body": "Something went wrong displaying this screen. Return to the bookshelf to try again.",
-    "preserved": "Returning to the bookshelf will not change or delete your saved progress."
+    "body": "Something went wrong displaying this screen. Return to the library to try again.",
+    "preserved": "Returning to the library will not change or delete your saved progress."
   },
   "persistence": {
     "heading": "Saved progress needs attention",
     "write_failed": "We couldn’t save that action. Your saved progress has not been replaced. Try again when storage is available.",
-    "delete_failed": "You can still read the ending. We couldn’t clear its bookmark, so it may appear again on your bookshelf. Try again when storage is available.",
-    "save_changed": "Saved progress changed in another window. We left that bookmark untouched. Return to the bookshelf to load it.",
-    "navigation_failed": "We couldn’t open the next page. Your saved place is unchanged. Return to the bookshelf to resume.",
+    "delete_failed": "You can still read the ending. We couldn’t clear its bookmark, so it may appear again in your library. Try again when storage is available.",
+    "save_changed": "Saved progress changed in another window. We left that bookmark untouched. Return to the library to load it.",
+    "navigation_failed": "We couldn’t open the next page. Your saved place is unchanged. Return to the library to resume.",
     "retry": "Try again"
   },
   "passages": {

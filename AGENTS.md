@@ -34,6 +34,10 @@
 
 ## Approved visual direction
 
+- The library now uses the approved illustrated doorways on an open parchment
+  book (September 27). Use only the wordmark lettering in the app header, without
+  the adjacent book-stack illustration. Retain the worn-book reading design.
+
 - For illustration work, follow `artwork/ART_DIRECTION.md`, including fully concealed reader-hero identity and the Can Opener's active/inactive tool rules.
 
 - Classic leather-bound books, visibly worn through repeated reading. Keep the

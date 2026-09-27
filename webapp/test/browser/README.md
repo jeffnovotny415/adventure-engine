@@ -165,3 +165,16 @@ Back to choice belongs in Previous's footer slot only on the first page after a
 choice. Later pages show Previous; the decision page has no undo control.
 `choice-history.html` checks actual rewind behavior, including returning from a
 decision to its passage before undoing another choice. No real saves are used.
+
+## Doorway library
+
+Open `test/browser/bookshelf.html` and run **Run bookshelf checks**. The fixture
+uses synthetic bookmarks and never accesses adventure saves. Use `?bookmarks=0`,
+`?bookmarks=2`, and `?bookmarks=3`, plus `&large&long` (200% and long chapter names)
+or `&system` (largest simulated iOS body size). Test 667×375, 568×320, 1024×768,
+390×844, and 320×568. Verify all doors open the right sheet, Begin/Continue route
+correctly, restart requires confirmation, and X/Escape restores door focus.
+Rotate with the sheet open. Large text may scroll vertically but must not overflow
+sideways. In the actual app, verify Begin reaches hero setup, resume retains a
+real saved chapter, Saved passages opens, and library purchase management remains
+available. The wordmark must contain only lettering, with no sliver of book art.

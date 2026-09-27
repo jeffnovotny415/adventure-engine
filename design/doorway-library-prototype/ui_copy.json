@@ -1,0 +1,17 @@
+{
+  "note": "A story to step inside.",
+  "heading": "Which door will you open?",
+  "hint": "Three worlds. Your way through.",
+  "begin": "Begin your adventure",
+  "continue": "Continue reading",
+  "resumeLabel": "Your bookmark is waiting",
+  "restart": "Start again",
+  "restartTitle": "Return to the beginning?",
+  "restartHelp": "In the app, starting again replaces this adventure’s saved progress. This prototype uses pretend bookmarks only.",
+  "restartConfirm": "Start from the beginning",
+  "cancel": "Keep my place",
+  "close": "Close",
+  "back": "Back to the doors",
+  "sample": "Reading preview",
+  "genres": ["Inventions & mischief", "Stars & strange company", "Magic & unexpected friends"]
+}

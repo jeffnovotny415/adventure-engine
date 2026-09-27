@@ -1,21 +1,25 @@
 import { useRef, useState } from 'react';
 import { useContent } from '../../../hooks/useContent';
-import { BookSpine } from '../../shared/BookSpine/BookSpine';
+import { StoryDoor } from './StoryDoor';
+import '../../../styles/doorwayLibrary.css';
 import { AppHeader } from '../../shared/AppHeader/AppHeader';
 import { ResumeBookmark } from './ResumeBookmark';
 import { PassageBookmarks } from '../../shared/BookReader/PassageBookmarks';
 import { usePurchases } from '../../../hooks/usePurchases';
 import { LibraryUnlock } from '../../shared/LibraryUnlock/LibraryUnlock';
 
+const DOOR_ORDER = ['the_can_opener', 'space_walker', 'summoned_mage'];
+
 export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onStartAgain, onDeveloperMode }) {
   const { getText } = useContent();
   const [passagesOpen, setPassagesOpen] = useState(false);
-  const [resumeBookmark, setResumeBookmark] = useState(null);
+  const [selectedStory, setSelectedStory] = useState(null);
+  const selectedBookmark = bookmarks.find(saved => saved.storyId === selectedStory?.id);
   const mainRef = useRef(null);
   const purchases = usePurchases();
   const [unlockOpen, setUnlockOpen] = useState(false);
   return (
-    <>
+    <div className="doorway-library">
       <AppHeader className="library-header">
         <button type="button" className="text-button library-passages" aria-haspopup="dialog"
           onClick={() => setPassagesOpen(true)}>
@@ -23,23 +27,24 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
           {getText('passages.title')}
         </button>
       </AppHeader>
-      <main className="library-layout" ref={mainRef}>
-        <section className="library-intro">
-          <h1>{getText('home.choose_adventure_heading')}</h1>
-          <p className="muted library-tagline">{getText(bookmarks.length ? 'home.bookmark_help' : 'home.bookshelf_help')}</p>
+      <main className="doorway-main" ref={mainRef}>
+        <section className="doorway-invitation">
+          <h1>{getText('home.door_heading')}</h1>
+          <p className="muted library-tagline">{getText(bookmarks.length ? 'home.door_saved_help' : 'home.door_help')}</p>
         </section>
-        <section className="library-books" aria-label={getText('home.choose_adventure_heading')}>
-          <div className="book-stack">
-            {Object.values(stories).map((story) => {
+        <section className="doorway-spread" aria-label={getText('home.door_heading')}>
+          <div className="doorway-grid">
+            {Object.values(stories).sort((a, b) => DOOR_ORDER.indexOf(a.id) - DOOR_ORDER.indexOf(b.id)).map((story) => {
               const bookmark = bookmarks.find(saved => saved.storyId === story.id);
-              return <BookSpine key={story.id} story={story} bookmark={bookmark}
-                onClick={() => bookmark ? setResumeBookmark(bookmark) : onSelectStory(story.id)} onBookmark={() => setResumeBookmark(bookmark)} />;
+              return <StoryDoor key={story.id} story={story} bookmark={bookmark}
+                onClick={() => setSelectedStory(story)} />;
             })}
           </div>
         </section>
-        {resumeBookmark && <ResumeBookmark bookmark={resumeBookmark} onClose={() => setResumeBookmark(null)}
-          onStartAgain={() => { setResumeBookmark(null); onStartAgain(resumeBookmark.storyId); }}
-          onResume={() => { setResumeBookmark(null); onContinue(resumeBookmark.storyId); }} />}
+        {selectedStory && <ResumeBookmark story={selectedStory} bookmark={selectedBookmark} onClose={() => setSelectedStory(null)}
+          onBegin={() => { setSelectedStory(null); onSelectStory(selectedStory.id); }}
+          onStartAgain={() => { setSelectedStory(null); onStartAgain(selectedStory.id); }}
+          onResume={() => { setSelectedStory(null); onContinue(selectedStory.id); }} />}
         {passagesOpen && <PassageBookmarks portalTarget={mainRef.current} onClose={() => setPassagesOpen(false)} />}
       </main>
       <footer className="library-footer">
@@ -53,6 +58,6 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
         </button>}
       </footer>
       {unlockOpen && <LibraryUnlock onClose={() => setUnlockOpen(false)} />}
-    </>
+    </div>
   );
 }
