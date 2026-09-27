@@ -20,8 +20,8 @@
     "eyebrow": "Interactive adventures for young readers",
     "heading": "Every story needs a hero.",
     "emphasis": "This time, it’s you.",
-    "body": "Paths of Wonder is a library of interactive adventures for young readers. Turn scrap into gadgets and fight haywire robots, jump through a portal onto a starship, or get summoned into a world where the magic is fading. At every turn, you choose the path.",
-    "cta": "Explore the books",
+    "body": "Build ingenious gadgets. Get lost among the stars. Step into a world of fading magic. Pick a story, name your hero, and see where your choices take you.",
+    "cta": "Find your first adventure",
     "note": "Coming to iPhone & iPad",
     "caption": "Three worlds. Which door will you open?"
   },
@@ -168,5 +168,31 @@
       "title": "A story becomes an adventure",
       "alt": "An open book rests on a wooden lectern, with a winding map and branching paths pouring from its pages."
     }
+  },
+  "explore": {
+    "prompt": "Choose a door. Find your adventure.",
+    "doorsLabel": "Choose a world",
+    "doorLabels": [
+      "Robots",
+      "Space",
+      "Magic"
+    ],
+    "selectedLabel": "Your next adventure",
+    "readMore": "Explore this book",
+    "peek": "Peek inside",
+    "close": "Close preview",
+    "previous": "Previous page",
+    "next": "Next page",
+    "page": "Page",
+    "of": "of",
+    "previewLabel": "Illustrated book preview",
+    "pageTitles": [
+      "The world",
+      "Make it yours",
+      "A little personality"
+    ],
+    "pause": "Pause animations",
+    "resume": "Play animations",
+    "trailLabel": "Not sure where to start? Follow your curiosity."
   }
 }

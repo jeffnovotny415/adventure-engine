@@ -20,6 +20,26 @@ original image, preserving its exact letterforms while hiding the small emblem. 
 Other horizontal wordmark explorations are retained in the family directory's
 `index.html` for reference.
 
+## Interactive exploration
+
+The three doors and their labels reveal the corresponding book introduction.
+Without JavaScript, they remain ordinary links to the complete book sections.
+Each book also opens a three-spread illustrated preview using the existing
+description, personalization line, and quote. Previews support previous/next
+buttons, arrow keys, single-finger horizontal swipes, Escape, and focus return.
+Phone previews use one column; tablet previews use facing pages when space permits.
+Vertical scrolling and pinch zoom remain available.
+
+Each book section has its own restrained atmosphere: copper grid details for
+robots, blue stars for space, and violet/woodland accents for magic. A branching
+trail draws as it enters view; the eye glints once, illustrations settle into
+place, and the podium responds on hover. No content depends on animation.
+The motion control persists for the session and system reduced-motion preferences
+disable the effects. There is no autoplay or continuous animation loop.
+
+Interface prompts live under `explore` in `ui_copy.json`. The original authored
+story files are not used or modified by this marketing interaction.
+
 ## Edit and preview
 
 All marketing text and UI labels live in `ui_copy.json`. Edit that file, then run:
