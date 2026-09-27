@@ -23,7 +23,7 @@
     "body": "Paths of Wonder is a library of interactive adventures for young readers. Turn scrap into gadgets and fight haywire robots, jump through a portal onto a starship, or get summoned into a world where the magic is fading. At every turn, you choose the path.",
     "cta": "Explore the books",
     "note": "Coming to iPhone & iPad",
-    "caption": "A first glimpse of The Space Walker"
+    "caption": "Three worlds. Which door will you open?"
   },
   "books": [
     {
@@ -151,5 +151,22 @@
     "top": "Back to top",
     "copyright": "© 2026 Paths of Wonder"
   },
-  "skip": "Skip to content"
+  "skip": "Skip to content",
+  "brandArt": {
+    "doorways": {
+      "image": "brand-doorways.webp",
+      "title": "Three doors into adventure",
+      "alt": "An open book with three doors: outer space, a weathered city with a robot, and a magical woodland."
+    },
+    "mischief": {
+      "image": "brand-mischief.webp",
+      "title": "Stories with a little mischief",
+      "alt": "Three worn books with a mechanical eye peeking out, a curled purple tail, and an escaping bookmark."
+    },
+    "podium": {
+      "image": "brand-podium.webp",
+      "title": "A story becomes an adventure",
+      "alt": "An open book rests on a wooden lectern, with a winding map and branching paths pouring from its pages."
+    }
+  }
 }

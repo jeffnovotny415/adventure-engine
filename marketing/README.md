@@ -1,9 +1,21 @@
 # Paths of Wonder marketing site
 
 A standalone static marketing page that uses the reader's typography, colors,
-leather texture, and three existing illustrations. The app and authored story
+leather texture, three existing scene illustrations, and a family of brand artwork. The app and authored story
 sources are unchanged. The public output is `dist/`, with no runtime framework,
 third-party fonts, analytics, signup form, or backend dependency.
+
+## Brand artwork
+
+The doorway book introduces the three worlds in the hero, the peeking-eye book
+stack sits beside the library, and the podium/map accompanies the reading steps.
+Each opens in the existing illustration viewer. The transparent WebP assets in
+`dist/assets/brand-*.webp` are optimized from the original PNGs in
+`../artwork/brand/family-2026-09-27/`. Their prompts and references are saved there.
+Complete illustrated logos remain in `../artwork/brand/concepts-2026-09-26/` for
+marketing use. The three new horizontal wordmarks are review options in the
+family directory's `index.html`; the live header retains the previous approved
+wordmark until a replacement is selected.
 
 ## Edit and preview
 

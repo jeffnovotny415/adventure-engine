@@ -10,3 +10,18 @@
 .brand-logo{width:250px;height:auto;margin-top:-14px;margin-bottom:-7px}.header .wordmark{flex-shrink:0}@media(max-width:740px){.brand-logo{width:210px}}@media(max-width:400px){.brand-logo{width:195px}.header-status{font-size:.875rem}}
 /* Allow enlarged reading text to reflow inside grid and book navigation. */
 .wrap>*{min-width:0}h1,h2,h3,p,a,summary{overflow-wrap:anywhere}.book-spine>span:nth-child(2){min-width:0}.book-spine .volume,.book-spine .ornament{flex-shrink:0}
+
+/* The brand illustrations introduce worlds, personality, and the reading experience. */
+.section-intro>p:not(.eyebrow){margin-top:22px;color:var(--muted)}
+.library-mischief{width:min(290px,100%);margin-top:24px}
+.library-mischief .art-hint{font-size:.8125rem}
+.how-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:center}
+.how-layout .steps{grid-template-columns:1fr;gap:24px;margin-top:32px}
+.how-layout .steps li{display:grid;grid-template-columns:44px 1fr;gap:6px 20px}
+.how-layout .step-number{grid-row:1/3;margin:0;font-size:2rem}
+.how-layout .steps h3{margin:0}
+.how-layout .steps p{grid-column:2}
+.how-art{min-width:0}
+@media(max-width:1000px){.how-layout{gap:36px}}
+@media(max-width:740px){.library-mischief{width:min(270px,80%);margin-inline:auto}.how-layout{grid-template-columns:1fr;gap:28px}.how-art{max-width:420px;width:100%;margin-inline:auto}}
+@media(orientation:landscape) and (max-height:500px){.hero-art .art-hint{display:none}}
