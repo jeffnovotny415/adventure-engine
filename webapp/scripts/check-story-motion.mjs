@@ -7,8 +7,8 @@ try {
  const page=await browser.newPage({viewport:{width:1100,height:820}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(`${base}/test/browser/story-motion.html`);
  await page.locator('article').first().waitFor();
- assert.equal(await page.locator('article').count(),19);
- const eye=page.locator('article[data-type="eyes-shutdown"] .story-art');
+ assert.equal(await page.locator('article').count(),23);
+ const eye=page.locator('article[data-type="eyes-shutdown"] .story-art').first();
  await page.waitForFunction(()=>document.querySelector('article[data-type="eyes-shutdown"] .story-art')?.getAttribute('data-progress') !== null);
  assert.equal(await eye.getAttribute('data-progress'), '0.000','offscreen illustration must not run');
  await eye.scrollIntoViewIfNeeded();await page.waitForTimeout(800);
@@ -35,16 +35,17 @@ try {
  await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(100);assert.equal(await eye.getAttribute('data-progress'),'1.000');
  await eye.locator('..').click();assert.equal(await page.getByRole('button',{name:'Replay',exact:true}).isDisabled(),true);await page.getByRole('button',{name:'Close',exact:true}).click();
  assert.deepEqual(errors,[]);await page.close();
- console.log('PASS: 19 previews; offscreen/background pause, replay, pause, pinch, zoom and live Reduced Motion');
+ console.log('PASS: 23 previews including all robot routes; offscreen/background pause, replay, pause, pinch, zoom and live Reduced Motion');
  const fallback=await browser.newPage();await fallback.route('**/tool-off.webp',route=>route.abort());await fallback.goto(`${base}/test/browser/story-motion.html`);await fallback.waitForTimeout(300);
  assert.equal(await fallback.locator('article[data-type="blade"] .story-art__drawing').count(),0);
  assert.equal(await fallback.locator('article[data-type="blade"] .scene-image__img').evaluate(img=>getComputedStyle(img).opacity),'1');await fallback.close();
  console.log('PASS: failed animation asset retains approved still');
  for(const viewport of [{width:667,height:375},{width:568,height:320},{width:1024,height:768},{width:390,height:844}]) {
   const page=await browser.newPage({viewport});const faults=[];page.on('pageerror',e=>faults.push(e.message));
-  for(const [book,scene] of [['the_can_opener','scene_006'],['the_can_opener','scene_014'],['summoned_mage','scene_049'],['space_walker','scene_061']]) {
-   await page.goto(`${base}/test/browser/story-artwork.html?story=${book}&scene=${scene}&motion&large&animated`);
+  for(const [book,scene] of [['the_can_opener','scene_005'],['the_can_opener','scene_014'],['summoned_mage','scene_049'],['space_walker','scene_061']]) {
+   await page.goto(`${base}/test/browser/story-artwork.html?story=${book}&scene=${scene}&large&animated`);
    await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(200);
+   assert.ok(await page.locator('.story-art[data-motion]').count()>0,'approved animations render without review opt-in');
    const count=await page.locator('.page-status').getAttribute('data-total');
    const ratios=await page.locator('.reader-viewport .scene-image--inline img').evaluateAll(imgs=>imgs.map(img=>{const r=img.getBoundingClientRect();return {ratio:r.width/r.height,expected:Number(img.getAttribute('width'))/Number(img.getAttribute('height')),height:r.height,limit:document.querySelector('.reader-viewport').clientHeight*.46};}));
    for(const r of ratios){assert.ok(Math.abs(r.ratio-r.expected)<.02);assert.ok(r.height<=r.limit+.5);}

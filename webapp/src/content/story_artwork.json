@@ -68,7 +68,11 @@
       "src": "/images/stories/the_can_opener/illustrations/07-magnet-mishap.webp",
       "alt": "Magnet boots stick to the refrigerator and floor plate, with tools clinging to one ankle.",
       "width": 1536,
-      "height": 1024
+      "height": 1024,
+      "motion": {
+        "type": "magnet",
+        "base": "/images/story-motion/magnet-background.webp"
+      }
     },
     {
       "id": "08-stompers",
@@ -178,7 +182,11 @@
       "src": "/images/stories/the_can_opener/illustrations/18-can-opener-active.webp",
       "alt": "The Can Opener in active mode: steel wrench, copper coils, a blue power core, and an energy axe blade.",
       "width": 1024,
-      "height": 1536
+      "height": 1536,
+      "motion": {
+        "type": "blade",
+        "base": "/images/story-motion/tool-off.webp"
+      }
     },
     {
       "id": "construction-bot",
@@ -229,6 +237,58 @@
       "alt": "Long Range Security Bot diagram: long-range vision and aiming system, taser blaster, and wheeled feet.",
       "width": 1225,
       "height": 1284
+    },
+    {
+      "id": "motion-ceiling-dust-018",
+      "sceneId": "scene_018",
+      "after": "The rock goes straight UP, punches a hole in the ceiling, and doesn’t come back down.",
+      "kind": "scene",
+      "src": "/images/story-motion/ceiling-dust.webp",
+      "alt": "Plaster dust trickles from the ceiling hole above an untouched paint can.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "ceiling-dust"
+      }
+    },
+    {
+      "id": "motion-shield-014",
+      "sceneId": "scene_014",
+      "after": "You look at the shield. The blue light fizzles, pops, and dies, and a piece of tape slowly peels off and floats to the ground.",
+      "kind": "scene",
+      "src": "/images/story-motion/shield-tape.webp",
+      "alt": "The left-arm shield goes dark and a loose piece of duct tape falls away.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "shield"
+      }
+    },
+    {
+      "id": "motion-shield-015",
+      "sceneId": "scene_015",
+      "after": "A second later the shield fizzles out and a piece of tape peels off the side. Your arms are tingling all the way up to your elbows, but you made it.",
+      "kind": "scene",
+      "src": "/images/story-motion/shield-tape.webp",
+      "alt": "The left-arm shield goes dark and a loose piece of duct tape falls away.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "shield"
+      }
+    },
+    {
+      "id": "motion-charge-065",
+      "sceneId": "scene_065",
+      "after": "The coils go from blue to white. The wrench head opens wide, lightning starts crawling up and down the handle, and every hair on your arms stands straight up. The whole cannery fills with a rising hum.",
+      "kind": "scene",
+      "src": "/images/story-motion/tool-off.webp",
+      "alt": "White-blue energy builds along the Can Opener’s copper coils.",
+      "width": 1024,
+      "height": 1536,
+      "motion": {
+        "type": "charge"
+      }
     }
   ],
   "summoned_mage": [
@@ -240,7 +300,10 @@
       "src": "/images/stories/summoned_mage/illustrations/01-the-spell-lands.webp",
       "alt": "The cloaked hero and Elliana react to a smoking hole in the cave wall, with sunlight pouring through.",
       "width": 1536,
-      "height": 1024
+      "height": 1024,
+      "motion": {
+        "type": "rubble"
+      }
     },
     {
       "id": "02-bridge-bandits",
@@ -270,7 +333,12 @@
       "src": "/images/stories/summoned_mage/illustrations/04-honey-and-the-spark.webp",
       "alt": "The cloaked hero makes a tiny spark while Honey chases it around the campfire.",
       "width": 1536,
-      "height": 1024
+      "height": 1024,
+      "motion": {
+        "type": "honey",
+        "base": "/images/story-motion/honey-background.webp",
+        "sprite": "/images/story-motion/honey-sprite.webp"
+      }
     },
     {
       "id": "05-bernard",
@@ -310,7 +378,11 @@
       "src": "/images/stories/summoned_mage/illustrations/08-the-first-syphon.webp",
       "alt": "A pale, faceless syphon wraps ribbons around a street lantern and draws its light into itself.",
       "width": 1536,
-      "height": 1024
+      "height": 1024,
+      "motion": {
+        "type": "syphon",
+        "base": "/images/story-motion/syphon-dark.webp"
+      }
     },
     {
       "id": "09-the-source",
@@ -381,6 +453,58 @@
       "alt": "A huge round stone seal with concentric carvings leans apart along a crumbly central crack.",
       "width": 1536,
       "height": 1024
+    },
+    {
+      "id": "motion-candles-004",
+      "sceneId": "scene_004",
+      "after": "You look down and notice the candles are all alight.",
+      "kind": "scene",
+      "src": "/images/story-motion/candles.webp",
+      "alt": "Three candles catch light one after another.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "candles"
+      }
+    },
+    {
+      "id": "motion-globes-016",
+      "sceneId": "scene_016",
+      "after": "You tap one too, and it flares up so bright you both see spots for a second.",
+      "kind": "scene",
+      "src": "/images/story-motion/door-globes.webp",
+      "alt": "A weak glow-globe flickers; its neighbor brightens and settles.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "globes"
+      }
+    },
+    {
+      "id": "motion-circle-064",
+      "sceneId": "scene_064",
+      "after": "The golden light of the circle folds inward one ring at a time, from the outside to the middle, until the last ring shrinks down to one bright point that hangs there for a second…and then goes out.",
+      "kind": "scene",
+      "src": "/images/story-motion/circle.webp",
+      "alt": "Golden rings fold inward to one point of light, then go out.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "circle"
+      }
+    },
+    {
+      "id": "motion-circle-065",
+      "sceneId": "scene_065",
+      "after": "The golden light of the circle folds inward one ring at a time until the last ring shrinks down to a single bright point, hangs there for a second, and goes out.",
+      "kind": "scene",
+      "src": "/images/story-motion/circle.webp",
+      "alt": "Golden rings fold inward to one point of light, then go out.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "circle"
+      }
     }
   ],
   "space_walker": [
@@ -422,7 +546,10 @@
       "width": 1536,
       "height": 1024,
       "kind": "scene",
-      "src": "/images/stories/space_walker/illustrations/04-the-engine-room.webp"
+      "src": "/images/stories/space_walker/illustrations/04-the-engine-room.webp",
+      "motion": {
+        "type": "core"
+      }
     },
     {
       "id": "05-everyone-aboard",
@@ -522,7 +649,11 @@
       "width": 1536,
       "height": 1024,
       "kind": "scene",
-      "src": "/images/stories/space_walker/illustrations/14-stung.webp"
+      "src": "/images/stories/space_walker/illustrations/14-stung.webp",
+      "motion": {
+        "type": "beam",
+        "base": "/images/story-motion/stung-quiet.webp"
+      }
     },
     {
       "id": "15-the-wall-of-names",
@@ -603,6 +734,58 @@
       "alt": "Annotated diagram of the small shuttle, showing engines, viewport, landing skids and tow cable.",
       "width": 1536,
       "height": 1024
+    },
+    {
+      "id": "motion-stars-027",
+      "sceneId": "scene_027",
+      "after": "You lie down on your back on the floor and look at more stars than you knew existed.",
+      "kind": "scene",
+      "src": "/images/story-motion/observation.webp",
+      "alt": "Stars drift slowly across the observation deck’s ceiling window.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "stars"
+      }
+    },
+    {
+      "id": "motion-ice-043",
+      "sceneId": "scene_043",
+      "after": "The shuttle skims out over the flat so low it kicks up a tail of snow. On your screen, new black lines open up underneath it and chase it across the ice like something alive.",
+      "kind": "scene",
+      "src": "/images/story-motion/scanner.webp",
+      "alt": "Black fractures spread beneath the shuttle’s route on the ice scanner.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "ice"
+      }
+    },
+    {
+      "id": "motion-crystals-048",
+      "sceneId": "scene_048",
+      "after": "Both walls are shelves, from the floor all the way up to a ceiling lost in the shadows, and every shelf is filled with crystals. They’re about the size of your thumb, and each one glows a slightly different color. There must be millions of them.",
+      "kind": "scene",
+      "src": "/images/story-motion/crystals.webp",
+      "alt": "Rows of memory crystals glow softly in different colors.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "crystals"
+      }
+    },
+    {
+      "id": "motion-transfer-061",
+      "sceneId": "scene_061",
+      "after": "“Ten. Eleven,” Percy calls over the comm. “Number twelve’s not catching! She needs more, and we’re out of time!”",
+      "kind": "scene",
+      "src": "/images/story-motion/transfer.webp",
+      "alt": "Eleven rescue ships regain engine power; the twelfth remains dark.",
+      "width": 1536,
+      "height": 1024,
+      "motion": {
+        "type": "transfer"
+      }
     }
   ]
 }

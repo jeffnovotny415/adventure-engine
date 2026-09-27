@@ -24,16 +24,30 @@ test('all 19 motion moments resolve to exact live paragraphs, including alternat
   assert.equal(storyArtwork.the_can_opener.filter(i=>i.motion?.type==='eyes-shutdown').length,5);
   assert.equal(storyArtwork.summoned_mage.filter(i=>i.motion?.type==='circle').length,2);
 });
-test('unapproved drawings remain outside the production book',()=>{
+test('approved motion ships by default while robot-eye revisions stay in review',()=>{
+  const liveTypes = new Set();
   for (const [book,story] of Object.entries(stories)) for (const [sceneId,scene] of Object.entries(story.scenes)) {
     const live=artworkForPassage(book,sceneId,scene.text);
-    assert.ok(live.every(item=>!item.motion));
+    assert.ok(live.every(item=>!item.motion?.type.startsWith('eyes-')));
+    live.forEach(item=>{if(item.motion) liveTypes.add(item.motion.type);});
     assert.equal(live.length,original[book].filter(item=>item.sceneId===sceneId).length);
   }
+  assert.equal(liveTypes.size,17);
 });
 test('eye states follow introduction vs defeat; power transfer never lights the twelfth ship',()=>{
   assert.equal(eyeColor(0),'#ee514b');assert.equal(eyeColor(.5),'#65caff');assert.equal(eyeColor(1),'#ee514b');
   assert.equal(eyeColor(1,true),'#101b2d');
   assert.equal(transferCount(0),0);assert.equal(transferCount(1),11);assert.equal(transferCount(2),11);
   assert.ok(MOTION_DURATION<=5000);
+});
+test('robot routes have distinct full-scene artwork and eye positions inside the image',()=>{
+  const robots=storyArtwork.the_can_opener.filter(item=>item.motion?.type.startsWith('eyes-'));
+  assert.equal(robots.length,6);
+  assert.equal(new Set(robots.map(item=>item.src)).size,6);
+  for (const item of robots) {
+    assert.equal(item.motion.eyes.length,2);
+    for (const {x,y,r} of item.motion.eyes) {
+      assert.ok(r>0 && x-r>=0 && x+r<=item.width && y-r>=0 && y+r<=item.height,item.id);
+    }
+  }
 });

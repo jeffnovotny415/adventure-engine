@@ -29,7 +29,7 @@ export function MotionDrawing({ image, progress: p, uid }) {
   let drawing;
   if (type === 'eyes-intro' || type === 'eyes-shutdown') {
     const color = eyeColor(p, type === 'eyes-shutdown');
-    drawing = [525, 1005].map(x => <g key={x}><circle cx={x} cy="469" r="40" fill={color} opacity=".84" />{color !== '#101b2d' && <Glow x={x} y={469} r={75} color={color} opacity={.75} />}<circle cx={x + 19} cy="449" r="8" fill="#edf2ea" opacity=".7" /></g>);
+    drawing = image.motion.eyes.map(({ x, y, r }) => <g key={`${x}-${y}`}><circle cx={x} cy={y} r={r} fill={color} opacity=".84" />{color !== '#101b2d' && <Glow x={x} y={y} r={r * 2.8} color={color} opacity={.75} />}<circle cx={x + r * .3} cy={y - r * .35} r={r * .15} fill="#edf2ea" opacity=".7" /></g>);
   } else if (type === 'blade' || type === 'charge') {
     const t = ease(phase(p, .1, .7));
     drawing = <>
