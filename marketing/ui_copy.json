@@ -113,27 +113,6 @@
     "aside": "Great for reading together.",
     "asideBody": "Read aloud at bedtime and take turns picking the path."
   },
-  "faq": {
-    "heading": "A few things you might be wondering.",
-    "items": [
-      {
-        "question": "Can you replay a story?",
-        "answer": "Yes, and you should. Different choices unlock different scenes and endings."
-      },
-      {
-        "question": "What devices is it coming to?",
-        "answer": "Paths of Wonder is being built for iPhone and iPad."
-      },
-      {
-        "question": "When can we try it?",
-        "answer": "Testing is coming first. The target for launch is mid-to-late October 2026, with the final date depending on testing."
-      },
-      {
-        "question": "How much will it cost?",
-        "answer": "Free previews and full-book unlocks are planned. Final pricing and availability will be shared before launch."
-      }
-    ]
-  },
   "about": {
     "heading": "Made by a Dad, for his kid.",
     "body": "Paths of Wonder is created, written, and built by Jeff, an independent creator who wanted stories where kids aren’t along for the ride. They’re steering it."
@@ -144,7 +123,8 @@
     "status": "Testing opens soon",
     "detail": "Coming to iPhone & iPad. Targeting mid-to-late October 2026.",
     "back": "Back to the books",
-    "highlight": "path"
+    "highlight": "path",
+    "pricing": "Free previews and full-book unlocks are planned. Details before launch."
   },
   "footer": {
     "note": "Interactive stories. A world of your own.",
