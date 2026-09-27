@@ -32,9 +32,9 @@
       "id": "can-opener",
       "image": "garage.webp",
       "alt": "A garage workbench full of tools, gadgets, and Asher’s computer.",
-      "description": "The robots in your neighborhood have gone haywire, and nobody knows why. Luckily, you've got a garage full of scrap, your trusty monkey wrench, and Asher, your AI assistant and best friend. Turn junk into gear (a wrist-mounted blaster, magnet boots, a shield you name in the middle of a fight, and one very badly named tool), then follow the signal to whoever's behind it. Hint: he wears a shiny suit, his company is called GAS, and he does not get the joke.",
+      "description": "The robots in your neighborhood have gone haywire, and nobody knows why. Luckily, you've got a garage full of scrap, your trusty monkey wrench, and Asher, your AI assistant and best friend. Turn junk into gear (a wrist-mounted blaster, magnet boots, a shield you name in the middle of a fight, and one very badly named tool), then follow the signal to whoever's behind it.",
       "personalization": "You name the neighborhood.",
-      "quote": "\"That is a great deal of GAS for one street.\" (Asher)"
+      "quote": "“Sir, I would like it noted that I asked you to test it on low.” — Asher"
     },
     {
       "title": "The Space Walker",
@@ -44,7 +44,7 @@
       "alt": "A fully covered explorer looks out into space from a starship.",
       "description": "Your very first portal jump was supposed to land you in desert ruins. Instead, you land with a clank on a starship in deep space, and the portal snaps shut behind you. Explore the ship, meet a crew stranger than anything in your research notes, and fly rescue missions across the galaxy while you figure out how to get home.",
       "personalization": "You name the starship.",
-      "quote": "\"Did I mention they are blue?\""
+      "quote": "“In my experience, the universe is large enough that everything comes in useful in the end. Even the rope.” — Captain Aster"
     },
     {
       "title": "The Summoned Mage",
