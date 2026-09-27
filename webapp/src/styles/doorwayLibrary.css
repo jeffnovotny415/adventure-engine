@@ -7,7 +7,6 @@
 .doorway-invitation .library-tagline { font: italic 1rem/1.4 Georgia, serif; }
 .doorway-spread { isolation: isolate; position: relative; padding: 10px 24px 26px; border-radius: 30% 30% 5% 5% / 3% 3% 3% 3%; background: linear-gradient(90deg,#eddfc3,#faf3e3 12%,#fbf5e8 47%,#d0bea0 49.8%,#f4ead5 50.4%,#fff8e9 53%,#f6ecd7 92%,#dfceab); box-shadow: 0 2px 0 #bda67c,0 5px 0 #f3e7cd,0 7px 0 #b7a27a,0 10px 0 #e0d1b4,0 14px 0 #5d3c2e,0 17px 0 #956143,0 23px 35px #59401f25; border: 1px solid #cab68b66; }
 .doorway-spread::before { content: ''; position: absolute; inset: 7px 9px 12px; border: 1px solid #b49a6b44; border-radius: inherit; pointer-events: none; z-index: -1; }
-.doorway-spread::after { content: ''; position: absolute; bottom: -27px; left: 49%; width: 22px; height: 35px; background: #8b4737; clip-path: polygon(0 0,100% 0,100% 100%,50% 85%,0 100%); transform: rotate(8deg); z-index: -1; }
 .doorway-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; position: relative; }
 .story-door { --door-accent: #336563; border: 0; background: transparent; padding: 0 0 10px; position: relative; display: flex; flex-direction: column; align-items: center; min-width: 0; min-height: 44px; color: var(--color-text-primary); border-radius: 12px; text-align: center; touch-action: manipulation; }
 .story-door[data-book='space_walker'] { --door-accent: #8d413a; }
@@ -65,7 +64,6 @@
   .story-door__title { grid-column: 2; font-size: 1.55rem; margin: 8px 0; }
   .story-door__action { grid-column: 2; align-self: start; justify-content: start; margin-top: 0; flex-wrap: wrap; }
   .story-door__ribbon { right: 4%; font-size: 14px; padding: 5px 5px 12px; }
-  .doorway-spread::after { left: 88%; }
   .doorway-entry__content { grid-template-columns: 1fr; }
   .doorway-entry__art { height: 150px; }
   .doorway-entry .resume-bookmark__body { padding: 10px 0 0; }
