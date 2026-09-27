@@ -59,6 +59,18 @@ if ('IntersectionObserver' in window) {
     }
   }, { threshold: .12 });
   document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
+  // Wait until most of the trail is on screen; reveal each route through a mask
+  // so the visible ink stays dotted throughout the animation.
+  const trailObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) if (entry.intersectionRatio >= .75) {
+      entry.target.classList.add('arrived');
+      trailObserver.unobserve(entry.target);
+    }
+  }, { threshold: .75 });
+  document.querySelectorAll('[data-trail]').forEach(element => {
+    element.classList.add('trail-ready');
+    trailObserver.observe(element);
+  });
 }
 
 const worldPreview = document.querySelector('#world-preview');

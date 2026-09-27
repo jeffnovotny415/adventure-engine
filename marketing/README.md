@@ -32,7 +32,8 @@ Vertical scrolling and pinch zoom remain available.
 
 Each book section has its own restrained atmosphere: copper grid details for
 robots, blue stars for space, and violet/woodland accents for magic. A branching
-trail draws as it enters view; the eye glints once, illustrations settle into
+dotted map trail with a fork and destination markers draws over 4.8 seconds
+once 75% of it is visible; the eye glints once, illustrations settle into
 place, and the podium responds on hover. No content depends on animation.
 The motion control persists for the session and system reduced-motion preferences
 disable the effects. There is no autoplay or continuous animation loop.

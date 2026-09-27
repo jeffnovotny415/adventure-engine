@@ -7,7 +7,15 @@ const e = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'
 const sectionHeading = (eyebrow, heading) => `<p class="eyebrow">${e(eyebrow)}</p><h2>${e(heading)}</h2>`;
 const art = (b, eager = false) => `<a class="art-link" href="assets/${e(b.image)}" data-art aria-label="${e(c.library.artLabel)}: ${e(b.title)}"><img src="assets/${e(b.image)}" alt="${e(b.alt)}" width="1536" height="1024" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'}><span class="art-hint">${e(c.library.artLabel)} <span aria-hidden="true">＋</span></span></a>`;
 const brandArt = (key, eager = false) => art(c.brandArt[key], eager);
-const trail = () => `<div class="path-divider" data-reveal aria-hidden="true"><svg viewBox="0 0 1000 120" fill="none"><path class="trail-line" pathLength="1" d="M500 0 C500 40 440 35 440 65 S500 75 500 112 M440 65 C340 65 340 95 240 95 M440 65 C610 65 630 35 760 35"/><circle cx="240" cy="95" r="5"/><circle cx="760" cy="35" r="5"/><path d="m493 105 7 8 7-8"/></svg></div>`;
+let trailId = 0;
+const trail = () => {
+  const id = `trail-${++trailId}`;
+  const routes = [
+    'M45 108 C105 140 158 130 169 95 C184 48 241 44 295 77 S367 135 427 126 S513 89 568 113',
+    'M295 77 C348 108 350 43 411 44 S466 65 514 44',
+  ];
+  return `<div class="path-divider" data-trail aria-hidden="true"><svg viewBox="0 0 640 170" fill="none"><defs>${routes.map((d,i)=>`<mask id="${id}-${i}" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="170"><path class="trail-reveal trail-reveal-${i}" d="${d}" pathLength="1"/></mask>`).join('')}</defs>${routes.map((d,i)=>`<path class="trail-line" d="${d}" mask="url(#${id}-${i})"/>`).join('')}<g class="trail-landmarks"><circle cx="34" cy="102" r="7"/><path class="trail-destination" d="m580 106 18 18 m0-18-18 18"/><path d="M525 47V16m0 2c12-7 20 9 33 2v19c-13 7-21-9-33-2"/><path class="trail-terrain" d="m206 130 14-23 14 23m-18-16 4 5 4-5m225-30 12-20 12 20"/></g></svg></div>`;
+};
 const doorBookOrder = [1, 0, 2];
 const doorLink = (i, hotspot = false) => `<a href="#${e(c.books[i].id)}" class="${hotspot ? `door-hotspot door-${i}` : 'door-label'}" data-world="${i}" ${hotspot ? 'tabindex="-1" aria-hidden="true"' : `aria-controls="world-preview"`}><span>${e(c.explore.doorLabels[i])}</span><span aria-hidden="true">↗</span></a>`;
 const doorArt = `<figure class="hero-art door-stage"><div class="door-picture"><img src="assets/${e(c.brandArt.doorways.image)}" width="1536" height="1024" fetchpriority="high" alt="${e(c.brandArt.doorways.alt)}">${doorBookOrder.map(i=>doorLink(i,true)).join('')}</div><figcaption>${e(c.explore.prompt)}</figcaption><nav class="door-labels" aria-label="${e(c.explore.doorsLabel)}">${doorBookOrder.map(i=>doorLink(i)).join('')}</nav></figure>`;
