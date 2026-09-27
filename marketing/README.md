@@ -8,13 +8,15 @@ third-party fonts, analytics, signup form, or backend dependency.
 ## Brand artwork
 
 The doorway book introduces the three worlds in the hero, the peeking-eye book
-stack sits beside the library, and the podium/map accompanies the reading steps.
+stack is the main library artwork beside simple story links, and the podium/map
+accompanies the reading steps. The former leather-style book bars are removed.
 Each opens in the existing illustration viewer. The transparent WebP assets in
 `dist/assets/brand-*.webp` are optimized from the original PNGs in
 `../artwork/brand/family-2026-09-27/`. Their prompts and references are saved there.
 Complete illustrated logos remain in `../artwork/brand/concepts-2026-09-26/` for
-marketing use. The peeking-eye book stack wordmark (option 2) is the selected brand signature
-in the header and footer. The doorway book remains the main hero illustration.
+marketing use. The lettering from wordmark option 2 is the selected brand signature in the
+header and footer. An inline SVG viewport frames only the lettering from the
+original image, preserving its exact letterforms while hiding the small emblem. The doorway book remains the main hero illustration.
 Other horizontal wordmark explorations are retained in the family directory's
 `index.html` for reference.
 
