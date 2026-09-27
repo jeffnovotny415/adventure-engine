@@ -1,5 +1,21 @@
 # Creator robot concept — September 27, 2026
 
+## Matching black-and-green revision
+
+Saved output: `dad-and-ollie-robots-black-green.png`, 1024 × 1536 with alpha transparency. Built-in image edit. The original concept is preserved. Not yet published; repository push permission remains pending after automatic approval review rejected sharing the photo-derived concept.
+
+The user first requested matching blue; that discarded intermediate was then used as the edit target for the requested charcoal-black and green revision.
+
+### Blue intermediate prompt
+
+Use case: precise-object-edit. Edit the supplied father-and-son robot illustration. Change only the paint colors as follows: replace all rusty orange/copper-colored corrosion patches and orange body armor surfaces on the large dad robot with rich deep navy/cobalt blue enamel. Remove the appearance of orange rust on his armor, retaining subtle matte scuffs and pencil shading. Keep his charcoal/gunmetal areas and fine etched geometric forearm patterns, now clearly visible against blue. Also replace the small child's butter-yellow body and face panels with the SAME deep blue enamel so father and son match. Keep the child's green accents and green cap unchanged. Preserve both robots' exact designs, warm expressions, eyes, relative sizes, poses, hands, book, map, backpacks, brown leather, dad's brown cap, tiny brass fasteners and brass joint hardware. The small brass details may stay gold, but no large rusty orange or yellow armor panels should remain. Blue faces must retain readable facial features and warm expressive eyes. Preserve the original professional fine ink, graphite and textured colored-pencil style, composition, full bodies, feet and actual alpha transparent background. Do not redesign, add text, add characters, change scenery, or crop. This is a targeted matching-blue color revision.
+
+### Final black-and-green prompt
+
+Use case: precise-object-edit. Targeted color edit of the supplied father-and-son robot illustration. Replace ALL blue enamel on BOTH robots, including their faces, torsos, arms, thighs, shins and feet, with matte charcoal-black enamel. Black should be richly shaded and readable with subtle graphite-gray highlights and fine scuffs, not flat featureless black. Preserve the smaller robot's existing muted forest-green shoulder caps, elbow/wrist accents, knee caps, boot toe caps, and green-and-cream cap exactly. ADD matching muted forest-green accents to the larger dad robot at the same selected armor locations: shoulder caps, elbow and wrist plates, knee caps and boot toe caps. The majority of both robots stays charcoal-black, with green as restrained matching accents. Keep dad's brown canvas cap unchanged. Preserve warm brass fasteners and round joint hardware, the dark gunmetal jaw guard, fine pale etched geometric forearm patterns, all leather backpacks and straps, book and map. Preserve exact character proportions, affectionate pose, faces, eyes, expressions, hands and complete full-body composition. Preserve the fine ink, graphite crosshatching and colored-pencil rendering with subtle matte wear; do not reintroduce orange rust or blue paint. Keep original actual alpha transparency and soft grounding shadow. No text, no extra characters, no redesign, no crop.
+
+## Original concept
+
 Mode: built-in image generation, new illustration with references. Review concept for the marketing creator section; not canonical story artwork.
 
 References: user-supplied father-and-son photograph (pose, proportions, caps and color cues only) and `../marketing-companions-2026-09-27/tinkerers.png` (rendering style only). The personal photograph is not stored in this repository.
