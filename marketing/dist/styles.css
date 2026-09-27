@@ -142,15 +142,16 @@ body.modal-open{overflow:hidden}
 
 /* Original companions carry the illustrated world into the closing sections. */
 .reasons-layout{grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
-.companion-tinkerers{max-width:440px;margin:28px auto 0}
+.companion-tinkerers{max-width:440px;margin:28px 0 0}
 .reason-grid>div{border-top:1px solid #bfae91;padding-top:22px}
 .parents{grid-template-columns:1fr 1fr;gap:64px}
-.parents aside.reading-together{padding:0;border:0;outline:0;background:none;margin:0}
+.reading-together{margin-top:28px}
 .companion-readers{max-width:320px;margin:0 auto 14px}
 .companion-readers img{aspect-ratio:2/3}
-.reading-together h3{font-size:1.6rem}
-.reading-together>p{max-width:320px;margin-inline:auto}
-.launch .companion-sprite{width:180px;max-width:55%;margin:-20px auto 20px}
+.reading-together h3{font-size:1.6rem;margin-bottom:16px}
+.launch-path{display:inline-block;position:relative;padding-top:170px}
+.launch-path-word{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.14em;text-decoration-color:#c6a477}
+.launch .companion-sprite{display:block;position:absolute;width:180px;left:50%;bottom:calc(1.12em - 8px);transform:translateX(-50%)}
 .launch .companion-sprite a{display:block;margin:0;min-height:0}
 .companion-sprite .art-stage,.companion-sprite img{aspect-ratio:1}
 .art-companion{transform-origin:50% 85%}
@@ -159,5 +160,6 @@ body.modal-open{overflow:hidden}
  .reasons-layout,.parents{grid-template-columns:1fr}
  .companion-tinkerers{max-width:360px;margin-top:20px}
  .companion-readers{max-width:280px}
- .launch .companion-sprite{width:150px;margin-top:0}
+ .launch-path{padding-top:140px}
+ .launch .companion-sprite{width:150px}
 }

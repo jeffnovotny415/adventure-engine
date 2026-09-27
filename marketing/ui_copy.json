@@ -139,12 +139,12 @@
     "body": "Paths of Wonder is created, written, and built by Jeff, an independent creator who wanted stories where kids aren’t along for the ride. They’re steering it."
   },
   "launch": {
-    "eyebrow": "The next chapter",
     "heading": "Your path starts here.",
     "body": "Pick a book. Name your hero. Make your first choice.",
     "status": "Testing opens soon",
     "detail": "Coming to iPhone & iPad. Targeting mid-to-late October 2026.",
-    "back": "Back to the books"
+    "back": "Back to the books",
+    "highlight": "path"
   },
   "footer": {
     "note": "Interactive stories. A world of your own.",
