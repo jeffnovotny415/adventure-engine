@@ -22,6 +22,10 @@
 .how-layout .steps h3{margin:0}
 .how-layout .steps p{grid-column:2}
 .how-art{min-width:0}
+.header .brand-logo{width:290px;margin-block:-12px}
+.footer .brand-logo{width:250px;margin-block:0}
+@media(max-width:740px){.header .brand-logo{width:230px}}
+@media(max-width:400px){.header .brand-logo{width:220px}}
 @media(max-width:1000px){.how-layout{gap:36px}}
 @media(max-width:740px){.library-mischief{width:min(270px,80%);margin-inline:auto}.how-layout{grid-template-columns:1fr;gap:28px}.how-art{max-width:420px;width:100%;margin-inline:auto}}
 @media(orientation:landscape) and (max-height:500px){.hero-art .art-hint{display:none}}

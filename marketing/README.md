@@ -13,9 +13,10 @@ Each opens in the existing illustration viewer. The transparent WebP assets in
 `dist/assets/brand-*.webp` are optimized from the original PNGs in
 `../artwork/brand/family-2026-09-27/`. Their prompts and references are saved there.
 Complete illustrated logos remain in `../artwork/brand/concepts-2026-09-26/` for
-marketing use. The three new horizontal wordmarks are review options in the
-family directory's `index.html`; the live header retains the previous approved
-wordmark until a replacement is selected.
+marketing use. The peeking-eye book stack wordmark (option 2) is the selected brand signature
+in the header and footer. The doorway book remains the main hero illustration.
+Other horizontal wordmark explorations are retained in the family directory's
+`index.html` for reference.
 
 ## Edit and preview
 
