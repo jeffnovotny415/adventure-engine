@@ -28,3 +28,15 @@ The podium stays still; the map has a small settling transform as it emerges.
 
 Website assets: `marketing/dist/assets/brand-eyelid.webp` and
 `marketing/dist/assets/brand-podium-base.webp` (paths relative to repository root).
+
+## Doorway vine base
+
+Generated with the built-in image tool from `../family-2026-09-27/doorways-illustration.png`.
+Saved as `doorways-without-vines.png`; WebP copy at
+`marketing/dist/assets/brand-doorways-base.webp`, encoded with `cwebp -q 90`.
+
+> Use case: precise-object-edit. Animation base edit of the supplied Paths of Wonder doorway-book illustration. Remove ONLY the decorative green climbing vine on the far LEFT outer edge of the red space door (all its green leaves and thin stem from the bottom-left book page up to the single leaf above the top hinge), and the green leafy sprig growing from the page at the BOTTOM RIGHT beside the magic door. Replace those removed plants with the same clean worn parchment underneath. Preserve the gold hinges and ALL other illustration pixels as closely as possible: exact same 1536x1024 canvas, composition, positions, doors, stars, robot, maps, wooden door ornaments, pages, ribbon, texture, colors and perspective. Keep the olive/gold curling vine on the upper-right arch unchanged. No shifting or resizing. Preserve actual transparent background. No new elements or readable text. This is a precisely aligned clean layer to composite with the original foliage.
+
+The original vines reappear through two SVG path masks. Three original stars
+are isolated with tight SVG clips and gently brighten/scale around their own
+centers. No new vector stars or plants replace the illustration.

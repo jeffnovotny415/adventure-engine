@@ -34,16 +34,18 @@
       animations.clear();
     }
     function schedule() {
-      if (root.dataset.artwork !== 'mischief') return;
+      if (root.dataset.artwork === 'podium') return;
       clearTimeout(timer);
       timer = setTimeout(() => {
         if (visible && ready && allowed()) play();
       }, 6500 + Math.random() * 4500);
     }
-    function play() {
+    function play(replay = false) {
       if (!ready || !allowed()) return;
       stop();
+      const firstPlay = !played;
       played = true;
+      root.classList.add('artwork-started');
       if (root.dataset.artwork === 'mischief') {
         animate('.art-eyelid', [
           { transform: 'scaleY(0)', offset: 0 },
@@ -58,6 +60,21 @@
           { transform: 'rotate(0deg)' },
         ], { duration: 2300, easing: 'ease-in-out' });
         schedule();
+      } else if (root.dataset.artwork === 'doorways') {
+        if (firstPlay || replay) {
+          animate('.art-vine-left', [{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }],
+            { duration: 3200, easing: 'ease-in-out', fill: 'both' });
+          animate('.art-vine-right', [{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }],
+            { duration: 2600, delay: 500, easing: 'ease-in-out', fill: 'both' });
+        }
+        for (let i = 0; i < 3; i++) {
+          animate(`.art-star-${i}`, [
+            { opacity: 0, transform: 'scale(1)', filter: 'brightness(1)' },
+            { opacity: 1, transform: 'scale(1.14)', filter: 'brightness(1.65) drop-shadow(0 0 5px #ffe7a2)', offset: .45 },
+            { opacity: 0, transform: 'scale(1)', filter: 'brightness(1)' },
+          ], { duration: 1900, delay: 400 + i * 650, easing: 'ease-in-out', fill: 'both' });
+        }
+        schedule();
       } else {
         animate('.art-map-reveal', [{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }],
           { duration: 3400, easing: 'ease-in-out', fill: 'both' });
@@ -71,6 +88,11 @@
     function refresh() {
       button.hidden = !ready || preference.matches;
       button.disabled = document.body.classList.contains('motion-paused');
+      if (ready && (preference.matches || button.disabled)) {
+        // Static mode shows the completed art and must not later rewind it.
+        played = true;
+        root.classList.add('artwork-started');
+      }
       if (!allowed() || !visible) stop();
       else if (ready) {
         if (!played) play();
@@ -78,7 +100,7 @@
       }
     }
     controllers.push(refresh);
-    button.addEventListener('click', play);
+    button.addEventListener('click', () => play(true));
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(entries => {
         visible = entries[0].isIntersecting && entries[0].intersectionRatio >= .45;
@@ -93,6 +115,7 @@
       refresh();
     }).catch(() => {
       // A missing layer must leave the original illustration usable.
+      root.classList.add('artwork-failed');
       stop();
     });
   }

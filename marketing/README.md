@@ -38,6 +38,13 @@ The motion control persists for the session and system reduced-motion preference
 disable the effects. Recurring motion stops offscreen and when the tab is hidden.
 The map never loops. The previous whole-image lift and eye-glint effects are removed.
 
+The hero doorway book grows its existing green vines once and occasionally
+twinkles three existing stars. “Replay the magic” deliberately replays both.
+The map and vines start on their clean base layers from the first paint, before
+the deferred animation script or image decoding finishes. They become visible
+only when playback starts, or immediately in paused/reduced-motion mode. Failed
+layers restore the original illustration; no-JavaScript visitors see the original.
+
 `dist/art-motion.js` controls the layers defined in `scripts/artwork.mjs`. Original
 images remain the fallback until all layers decode, and remain available in the
 illustration viewer. SVG masks retain the approved artwork pixels for the tail

@@ -122,3 +122,16 @@ body.modal-open{overflow:hidden}
 .art-map-reveal{stroke-dasharray:1;stroke-dashoffset:0}
 .art-replay{display:block;margin:4px auto 0;font-size:.875rem;color:var(--wine);min-height:44px}
 .art-replay:disabled{opacity:.5;cursor:default}
+
+/* Before the first paint, show the clean base rather than the finished reveal. */
+.art-motion-supported [data-artwork]:is([data-artwork="podium"],[data-artwork="doorways"]):not(.artwork-failed) .art-fallback{display:none}
+.art-motion-supported [data-artwork]:is([data-artwork="podium"],[data-artwork="doorways"]):not(.artwork-failed) .art-layers{display:block}
+.art-motion-supported [data-artwork]:not(.artwork-started) :is(.art-map,.art-vines){visibility:hidden}
+.artwork-failed .art-layers{display:none}
+.artwork-failed .art-fallback{display:block}
+.art-vine-reveal{stroke-dasharray:1;stroke-dashoffset:0}
+.art-star{opacity:0;transform-box:view-box}
+.art-star-0{transform-origin:768px 124px}.art-star-1{transform-origin:302px 275px}.art-star-2{transform-origin:463px 369px}
+.art-layers{pointer-events:none}
+@media(prefers-reduced-motion:reduce){.art-motion-supported [data-artwork] :is(.art-map,.art-vines){visibility:visible}}
+.motion-paused [data-artwork] :is(.art-map,.art-vines){visibility:visible}

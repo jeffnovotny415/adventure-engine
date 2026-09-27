@@ -1,4 +1,24 @@
 // Keep the approved pixels; SVG masks isolate only the parts that move.
+export function doorwayArtwork(c, e) {
+  const source = `assets/${e(c.brandArt.doorways.image)}`;
+  const raster = extra => `<image href="${source}" width="1536" height="1024" ${extra || ''}/>`;
+  const stars = [
+    'M768 88L776 112L795 102L783 119L806 124L782 132L795 146L775 137L768 158L762 135L742 147L752 129L730 124L754 119L742 104L761 113Z',
+    'M302 260L307 270L317 274L309 280L309 291L301 285L292 290L294 280L286 274L297 271Z',
+    'M463 350L468 363L480 369L468 374L463 389L458 374L447 369L458 364Z',
+  ];
+  return `<img class="art-fallback" src="${source}" width="1536" height="1024" fetchpriority="high" alt="${e(c.brandArt.doorways.alt)}"><svg class="art-layers" viewBox="0 0 1536 1024" role="img" aria-label="${e(c.brandArt.doorways.alt)}"><defs>
+    <clipPath id="vine-left-cut"><path d="M142 742V684L177 655V609L192 591L186 542L208 493L228 495L240 463V413L239 365L258 335L281 344L291 377L278 416L271 487L260 526L245 560L223 617L239 655L235 688L281 690L282 740Z"/></clipPath>
+    <clipPath id="vine-right-cut"><path d="M1278 748L1273 684L1301 647V549L1335 544L1358 565L1333 608L1379 603L1385 646L1367 679L1390 692L1397 734Z"/></clipPath>
+    <mask id="vine-left-grow" maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><path class="art-vine-reveal art-vine-left" d="M224 820L220 734C170 685 211 659 208 620S240 549 250 510S258 420 264 300" pathLength="1" stroke="white" stroke-width="170" fill="none"/></mask>
+    <mask id="vine-right-grow" maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><path class="art-vine-reveal art-vine-right" d="M1330 810L1329 739Q1341 687 1332 632T1326 490" pathLength="1" stroke="white" stroke-width="150" fill="none"/></mask>
+    ${stars.map((d,i)=>`<clipPath id="star-cut-${i}"><path d="${d}"/></clipPath>`).join('')}
+    </defs><image href="assets/brand-doorways-base.webp" width="1536" height="1024"/>
+    <g class="art-vines"><g mask="url(#vine-left-grow)">${raster('clip-path="url(#vine-left-cut)"')}</g><g mask="url(#vine-right-grow)">${raster('clip-path="url(#vine-right-cut)"')}</g></g>
+    ${stars.map((_,i)=>`<g class="art-star art-star-${i}">${raster(`clip-path="url(#star-cut-${i})"`)}</g>`).join('')}
+    </svg>`;
+}
+
 export function animatedArtwork(key, c, e) {
   const b = c.brandArt[key];
   const source = `assets/${e(b.image)}`;

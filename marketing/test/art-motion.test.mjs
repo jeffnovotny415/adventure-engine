@@ -20,7 +20,7 @@ async function setup({ kind = 'mischief', reduced = false, failed = false } = {}
     querySelectorAll: () => [{ getAttribute: () => 'asset.webp' }],
     querySelector: selector => selector === '[data-art-replay]' ? button : {
       animate: () => {
-        const a = { cancelled: false, finished: new Promise(() => {}), cancel() { this.cancelled = true; } };
+        const a = { target: selector, cancelled: false, finished: new Promise(() => {}), cancel() { this.cancelled = true; } };
         animations.push(a);
         return a;
       },
@@ -45,6 +45,7 @@ async function setup({ kind = 'mischief', reduced = false, failed = false } = {}
     animations, timers, classes, button,
     view: ratio => observed([{ isIntersecting: ratio > 0, intersectionRatio: ratio }]),
     replay: () => events.get('replay')(),
+    tick: () => { const fn = timers.values().next().value; timers.clear(); fn(); },
     pause: () => { paused = true; events.get('artwork-motion-change')(); },
     reduce: () => { media.matches = true; events.get('media')(); },
     hide: () => { document.hidden = true; events.get('visibilitychange')(); },
@@ -81,7 +82,9 @@ test('reduced motion starts with static artwork and no replay control', async ()
 });
 test('map plays once automatically and can be deliberately replayed', async () => {
   const s = await setup({ kind: 'podium' });
+  assert.equal(s.classes.has('artwork-started'), false);
   s.view(1);
+  assert.equal(s.classes.has('artwork-started'), true);
   s.view(0);
   s.view(1);
   assert.equal(s.animations.length, 2);
@@ -94,5 +97,22 @@ test('failed layer keeps the original illustration and hides replay', async () =
   s.view(1);
   assert.equal(s.classes.has('artwork-ready'), false);
   assert.equal(s.button.hidden, true);
+  assert.equal(s.animations.length, 0);
+  assert.equal(s.classes.has('artwork-failed'), true);
+});
+test('hero repeats only twinkles; deliberate replay also regrows vines', async () => {
+  const s = await setup({ kind: 'doorways' });
+  s.view(1);
+  assert.equal(s.animations.filter(a => a.target.startsWith('.art-vine')).length, 2);
+  assert.equal(s.animations.filter(a => a.target.startsWith('.art-star')).length, 3);
+  s.tick();
+  assert.equal(s.animations.filter(a => a.target.startsWith('.art-vine')).length, 2);
+  assert.equal(s.animations.filter(a => a.target.startsWith('.art-star')).length, 6);
+  s.replay();
+  assert.equal(s.animations.filter(a => a.target.startsWith('.art-vine')).length, 4);
+});
+test('reduced motion shows the completed map without starting its reveal', async () => {
+  const s = await setup({ kind: 'podium', reduced: true });
+  assert.equal(s.classes.has('artwork-started'), true);
   assert.equal(s.animations.length, 0);
 });
