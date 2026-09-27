@@ -212,6 +212,11 @@
       "image": "companion-mint-sprite.webp",
       "title": "A small spark of curiosity",
       "alt": "A curious mint-green puff creature with lilac wings, tiny feet, and a curled fluffy tail."
+    },
+    "creators": {
+      "image": "creator-robots-silver.webp",
+      "title": "A dad and his kid, ready for adventure",
+      "alt": "Two robot adventurers in matching silver and green, inspired by Jeff and Ollie, with an arm around a shoulder, a worn book, and a map."
     }
   }
 }

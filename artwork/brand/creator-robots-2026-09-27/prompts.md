@@ -1,8 +1,22 @@
 # Creator robot concept — September 27, 2026
 
+## Final approved silver-and-green version
+
+Background cleanup (built-in image edit) removed unwanted dark corner patches from the first silver revision. Prompt:
+
+Use case: background-extraction. Clean up the supplied approved silver-and-green father-and-son robot illustration. Preserve the two characters EXACTLY: colors, silver faces, green accents, brass hardware, brown/green caps, etched arm, poses, sizes, book, map, backpacks, outlines, pencil texture and expressions. Remove ALL background pixels outside the characters and their held objects, including every black/gray/brown opaque or semiopaque patch in the top corners and around the silhouettes. The output must be a clean true-alpha transparent cutout that can sit on a light cream webpage with absolutely no rectangular patches, dark corners, surrounding glow, or background haze. Keep only the characters and a very subtle small grounding shadow directly beneath their feet if needed. Do not redraw, recolor, redesign, crop or change the characters. Full original canvas composition. Actual transparent background required.
+
+The user approved the lighter silver faces and armor and explicitly requested publication on September 27, 2026. Final source: `dad-and-ollie-robots-silver-cutout.png`. The marketing creator section uses a 700 × 1050 alpha WebP at `marketing/dist/assets/creator-robots-silver.webp`. Earlier versions are retained as concepts only.
+
+Mode: built-in image edit, using the black-and-green concept as the edit target.
+
+### Silver revision prompt
+
+Use case: precise-object-edit. Make only a material/color revision to the supplied father-and-son robot illustration: change BOTH robots' dark charcoal-black body and face panels into much lighter brushed SILVER metal, bright pewter and soft warm silver-gray. The overall impression must be clearly silver, airy and less dark, with realistic matte pencil-textured metal, soft pale highlights and gentle mid-gray shading, not mirror chrome, not white plastic, no dark black armor. Faces silver too, with exactly the same expressive eyes and smiles. Keep all existing muted forest-green accent panels, both caps, brass fasteners/joint rings, leather straps/backpacks, book and parchment map exactly as they are. Preserve the father's etched geometric arm pattern, using darker fine engraved lines against silver so it remains visible. Keep the dark recessed joints and small dark mouth details for contrast. Preserve exact poses, affectionate arm-around-shoulder relationship, proportions, outlines, full bodies/feet, and the hand-drawn ink/graphite/colored-pencil style. Do not alter character designs or expressions, add props or text, or crop. Actual alpha transparency, faint grounding pencil shadow. Replace the dark armor material only; restrained wear, no rust.
+
 ## Matching black-and-green revision
 
-Saved output: `dad-and-ollie-robots-black-green.png`, 1024 × 1536 with alpha transparency. Built-in image edit. The original concept is preserved. Not yet published; repository push permission remains pending after automatic approval review rejected sharing the photo-derived concept.
+Saved output: `dad-and-ollie-robots-black-green.png`, 1024 × 1536 with alpha transparency. Built-in image edit. The original concept is preserved. The user approved this version and explicitly authorized pushing it on September 27, 2026. Used in the marketing creator section; a 700 × 1050 alpha WebP is stored at `marketing/dist/assets/creator-robots-silver.webp`.
 
 The user first requested matching blue; that discarded intermediate was then used as the edit target for the requested charcoal-black and green revision.
 
