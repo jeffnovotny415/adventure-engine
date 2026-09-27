@@ -1,0 +1,17 @@
+First edit prompt:
+
+Use case: precise-object-edit
+Asset type: transparent horizontal Paths of Wonder app logo.
+Input image: edit target, the existing Paths of Wonder logo.
+Primary request: Keep the existing open book, branching gold path, and star emblem unchanged as closely as possible. Change only the wordmark styling and its spacing from the emblem.
+Wordmark: Replace the original ornate fantasy lettering with calm, simple, warm literary serif typography, similar in spirit to restrained Fraunces or clean classic book typography. Use upright roman medium-weight serif for ALL THREE words, including "of"; regular readable letterforms, modest normal capitals P and W, no calligraphic or magical-fantasy flourishes, no exaggerated capitals, no swashes, no italic "of". Text exactly "Paths of Wonder", on one line, with normal clear spaces between all words.
+Spacing: Add obvious breathing room between the right edge of the book emblem and the left edge of P, approximately half the wordmark's cap-height. They must be visibly separated with transparent space, never touching or overlapping.
+Invariants: Preserve the book/path/star emblem's silhouette, composition, proportions, colors, detail and upright orientation as precisely as possible. Preserve the palette of dark brown ink #33291f, muted antique gold #987749, warm cream pages, and oxblood #713d32 book binding. Single cohesive horizontal logo. Preserve genuinely transparent alpha background, no background panel.
+Constraints: Header legibility at small sizes, tidy margins. No tagline, extra words, variations, mockups, gradients, glow, shadows, or new objects.
+
+Final spacing refinement prompt:
+
+Use case: precise-object-edit
+Input image: edit target, revised Paths of Wonder logo.
+Make exactly one adjustment: increase the transparent horizontal gap between the book emblem and the P in "Paths". The minimum horizontal gap measured from the book's furthest right ink edge to the P's left ink edge must be about 110 pixels on this 2172-pixel-wide image (roughly half the height of capital P). The present gap is still too narrow. Keep the wordmark intact; widen the canvas or proportionately scale the complete lockup if needed to fit this clear gap.
+Keep absolutely everything else as close to identical as possible: the open book/path/star emblem, all colors, all serif letter shapes and readable text exactly "Paths of Wonder", word spaces, relative vertical alignment, and actual alpha transparency. Do not revert to italic "of" or change the typography. No new items, no background, no shadow. Horizontal logo only.
