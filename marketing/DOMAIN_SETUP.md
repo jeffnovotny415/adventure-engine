@@ -1,42 +1,48 @@
-# Connecting pathsofwonder.app
+# Paths of Wonder hosting and DNS
 
-The marketing preview is deployed privately at:
-https://paths-of-wonder.onefjeff.chatgpt.site
+Production: **https://pathsofwonder.app**
+Host: **Vercel**, Ravensbreath Lab team, `paths-of-wonder` project.
+Registrar and DNS provider: **Porkbun** (nameservers unchanged).
 
-Primary domain: **pathsofwonder.app**, registered at Porkbun.
-The hosting service has registered this hostname; DNS and TLS verification are
-still pending. This is not yet a public website on the custom domain.
+Vercel project ID: `prj_hoinQlRrwiI9rH7Z5e3I4NG6IVav`.
+GitHub: `jeffnovotny415/adventure-engine`, branch `main`, root `marketing`.
+Production fallback: https://paths-of-wonder.vercel.app
 
-## DNS records supplied by the host
+## Configured records
 
-In Porkbun's DNS editor for `pathsofwonder.app`, add these records. Host values
-below are relative to `pathsofwonder.app`; use the blank/root host field for `@`
-if that is how the editor represents the domain itself.
+These are the Vercel-recommended records applied in Porkbun on September 26,
+2026 (America/New_York). The root configuration was verified by Vercel, and the
+site was observed loading successfully at `https://pathsofwonder.app` in Chrome.
 
-| Type | Host | Answer / value |
-| --- | --- | --- |
-| A | @ | 162.159.143.30 |
-| A | @ | 172.66.3.26 |
-| TXT | _openai-site-verification | openai-site-verification=m6NFbfvJRJctMP1bbd9JT8i46i1ZcPYJn4R5UHd3BgA |
-| TXT | _cf-custom-hostname | db2c1785-757d-4016-92e7-11ef642eb9cc |
+| Type | Host | Value | TTL |
+| --- | --- | --- | --- |
+| A | @ | 216.198.79.1 | 600 |
+| A | @ | 64.29.17.1 | 600 |
+| CNAME | www | 46d3625ef29c91a6.vercel-dns-017.com | 600 |
 
-Inspect existing root A/AAAA/CNAME records before replacing conflicting parking
-or web hosting records. Preserve mail records and unrelated verification records.
-These values were returned by the hosting service on September 26, 2026 (local).
-Use the host's current verification status if it supplies additional TLS records.
+Vercel redirects `www.pathsofwonder.app` to `pathsofwonder.app` with HTTP 308.
+Porkbun's existing `*.pathsofwonder.app` CNAME to `pixie.porkbun.com` is unchanged;
+the explicit www record takes precedence. No mail records existed on this domain,
+and no unrelated domain or nameserver settings were changed.
 
-## Finish launch
+The former root ALIAS was `pixie.porkbun.com`, TTL 600. It was edited to the first
+A record above; the second A record and explicit www CNAME were added.
 
-1. Add the DNS records and refresh domain status in the hosting service.
-2. Confirm hostname routing and certificate status are active.
-3. Make the site public when ready for visitors; the current deployment is private.
-4. Verify `https://pathsofwonder.app` in a signed-out browser.
-5. Configure the secondary domain `pathsofwonderstories.com` to redirect to
-   `https://pathsofwonder.app` after the primary works. That redirect is not yet set.
-6. Add canonical metadata for the verified primary origin when public launch is ready.
+## Secondary domain
 
-Sites identifiers for follow-up:
-- Project: `appgprj_6ab883c836b8819186000090d3293f0f`
-- Custom domain: `appgdom_6ab886788fa08191805085f196d740fa`
+`pathsofwonderstories.com` still uses the owner's existing Porkbun Link In Bio
+configuration. Its redirect has not been configured or its existing site changed.
 
-No Porkbun settings have been modified by this task.
+## Earlier preview
+
+https://paths-of-wonder.onefjeff.chatgpt.site remains the earlier private Sites
+preview. It is not the production host. Its pending custom-domain association was
+removed during the Vercel migration. Do not add the old Cloudflare/Sites A or TXT
+records; they were never applied at Porkbun.
+
+## Future changes
+
+Push marketing changes to `main` and verify Vercel reports READY for that commit.
+Only `marketing/dist` is served publicly. Canonical metadata identifies
+`https://pathsofwonder.app/`. Use Vercel's current domain verification output if
+routing recommendations change; preserve unrelated DNS and mail settings.

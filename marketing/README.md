@@ -32,15 +32,23 @@ complete `dist/` folder can be hosted unchanged. Keep generated HTML in sync wit
 
 ## Domains and hosting
 
-Primary intended domain: `pathsofwonder.app`, registered at Porkbun.
-Secondary intended domain: `pathsofwonderstories.com`; redirect it to the primary
-once the primary is live. Do not use `pathsofwonder.com` (corrected by the owner).
+Production: **https://pathsofwonder.app**, hosted on Vercel in the
+Ravensbreath Lab team, project `paths-of-wonder`. Porkbun remains the registrar
+and DNS provider. `www.pathsofwonder.app` redirects to the primary domain.
 
-The Sites project identity is in `.openai/hosting.json`. A private hosted preview
-is separate from a public domain launch. Domain verification, DNS routing, TLS,
-and public access must be complete before describing the custom domain as live.
-To preserve this repository, publish a dedicated copy outside its Git root using
-the Sites workflow; do not initialize a nested Git repository here.
+The project is connected to `jeffnovotny415/adventure-engine`, production branch
+`main`, root directory `marketing`. Git pushes trigger deployments. `vercel.json`
+builds with `node scripts/build.mjs`, skips dependency installation, and publishes
+only `dist/`. The existing `adventure-engine-edwg` Vercel project hosts `webapp/`
+and is separate from the marketing site.
+
+See [domain settings](DOMAIN_SETUP.md) for the verified DNS records. The secondary
+`pathsofwonderstories.com` still uses its existing Porkbun Link In Bio setup;
+its redirect has not been configured.
+
+The earlier private Sites preview remains available, but is no longer the
+production host. `.openai/hosting.json` is retained only to identify that preview
+and is excluded from Vercel uploads. Do not use its former DNS instructions.
 
 ## Verification
 
