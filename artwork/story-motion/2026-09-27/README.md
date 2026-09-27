@@ -1,6 +1,6 @@
 # Living illustrations — September 27, 2026
 
-Status: **17 approved motion types enabled in the production books**. The two robot-eye types have been revised into six scene-specific illustrations and remain review drafts. All authored text remains unchanged. New art follows `artwork/ART_DIRECTION.md`: “Generated alternatives remain review drafts until accepted.”
+Status: **All 19 motion types approved and enabled in the production books**, including six scene-specific robot illustrations. All authored text remains unchanged. New art follows `artwork/ART_DIRECTION.md`: “Generated alternatives remain review drafts until accepted.”
 
 ## Review
 
@@ -8,7 +8,7 @@ Start `npm run dev -- --host 127.0.0.1 --port 5190` from `webapp`, then open:
 
 http://127.0.0.1:5190/test/browser/story-motion.html
 
-The gallery contains 23 previews covering all 19 motion types, including each robot route separately. Each has a five-second preview, enlarged replay/pause/pinch viewer, frame inspection slider, exact paragraph anchor and a link to the real reader. Approved placements live in `story_artwork.json` and appear in normal reading. Reader preview links explicitly opt in with `motion` to include the six robot revisions from `story_motion.json`; these are not yet enabled in normal reading.
+The gallery contains 23 previews covering all 19 motion types, including each robot route separately. Each has a five-second preview, enlarged replay/pause/pinch viewer, frame inspection slider, exact paragraph anchor and a link to the real reader. Approved placements live in `story_artwork.json` and appear in normal reading. All six robot illustrations are now included in normal reading. The draft metadata in `story_motion.json` is empty; the review opt-in remains available for future artwork.
 
 ## Moments
 
@@ -40,7 +40,7 @@ The gallery contains 23 previews covering all 19 motion types, including each ro
 - `prompts.json`: recorded reference paths and generation/edit prompts.
 - `robot-scenes/`: six revised full-scene PNG masters and their prompts. Eye positions are defined separately for each illustration.
 - Optimized alpha WebP derivatives: `webapp/public/images/story-motion/`.
-- Approved placements and accessibility descriptions: `webapp/src/content/story_artwork.json`; remaining robot review placements: `webapp/src/content/story_motion.json`.
+- Approved placements and accessibility descriptions: `webapp/src/content/story_artwork.json`; future review placements: `webapp/src/content/story_motion.json`.
 - No authored prose, route identifiers, titles, choices or intro variants were edited.
 - Moving details are SVG layers in the same reserved canvas as the image. No video downloads, audio, network generation or runtime AI features.
 
@@ -48,6 +48,6 @@ The gallery contains 23 previews covering all 19 motion types, including each ro
 
 Each illustration runs for at most five seconds of visible time and settles. Offscreen art pauses. Reduced Motion renders the final still. A session remembers completed inline playback; the enlarged viewer has independent replay/pause controls and retains pan/pinch zoom. Failed animation assets fall back to the original still. Page-turn snapshots remain still.
 
-Verified with `npm run check` and `scripts/check-story-motion.mjs` (WebKit; set `PLAYWRIGHT_MODULE` to the installed Playwright module). Tests cover all 19 exact anchors, alternative branches, keeping unapproved art out of production, eye sequencing and the eleven-ship limit. Browser checks cover offscreen pause, replay, pause, pinch, zoom, live Reduced Motion, landscape phone (667×375 and 568×320), iPad (1024×768), portrait phone (390×844), larger text, pagination and rotation.
+Verified with `npm run check` and `scripts/check-story-motion.mjs` (WebKit; set `PLAYWRIGHT_MODULE` to the installed Playwright module). Tests cover all 19 exact anchors, alternative branches, production availability of approved motion, eye sequencing and the eleven-ship limit. Browser checks cover offscreen pause, replay, pause, pinch, zoom, live Reduced Motion, landscape phone (667×375 and 568×320), iPad (1024×768), portrait phone (390×844), larger text, pagination and rotation.
 
-The non-robot animations were approved on September 27. Robot scene revisions still need visual approval. This batch has not been installed on physical devices; browser checks do not substitute for a physical iPhone/iPad performance review.
+All animations, including the revised robot scenes, were approved on September 27. This batch has not been installed on physical devices; browser checks do not substitute for a physical iPhone/iPad performance review.

@@ -24,15 +24,14 @@ test('all 19 motion moments resolve to exact live paragraphs, including alternat
   assert.equal(storyArtwork.the_can_opener.filter(i=>i.motion?.type==='eyes-shutdown').length,5);
   assert.equal(storyArtwork.summoned_mage.filter(i=>i.motion?.type==='circle').length,2);
 });
-test('approved motion ships by default while robot-eye revisions stay in review',()=>{
+test('all approved motion including robot routes ships by default',()=>{
   const liveTypes = new Set();
   for (const [book,story] of Object.entries(stories)) for (const [sceneId,scene] of Object.entries(story.scenes)) {
     const live=artworkForPassage(book,sceneId,scene.text);
-    assert.ok(live.every(item=>!item.motion?.type.startsWith('eyes-')));
     live.forEach(item=>{if(item.motion) liveTypes.add(item.motion.type);});
     assert.equal(live.length,original[book].filter(item=>item.sceneId===sceneId).length);
   }
-  assert.equal(liveTypes.size,17);
+  assert.equal(liveTypes.size,19);
 });
 test('eye states follow introduction vs defeat; power transfer never lights the twelfth ship',()=>{
   assert.equal(eyeColor(0),'#ee514b');assert.equal(eyeColor(.5),'#65caff');assert.equal(eyeColor(1),'#ee514b');

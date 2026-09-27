@@ -42,7 +42,7 @@ try {
  console.log('PASS: failed animation asset retains approved still');
  for(const viewport of [{width:667,height:375},{width:568,height:320},{width:1024,height:768},{width:390,height:844}]) {
   const page=await browser.newPage({viewport});const faults=[];page.on('pageerror',e=>faults.push(e.message));
-  for(const [book,scene] of [['the_can_opener','scene_005'],['the_can_opener','scene_014'],['summoned_mage','scene_049'],['space_walker','scene_061']]) {
+  for(const [book,scene] of [...['005','006','008','009','010','014','015'].map(id=>['the_can_opener',`scene_${id}`]),['summoned_mage','scene_049'],['space_walker','scene_061']]) {
    await page.goto(`${base}/test/browser/story-artwork.html?story=${book}&scene=${scene}&large&animated`);
    await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(200);
    assert.ok(await page.locator('.story-art[data-motion]').count()>0,'approved animations render without review opt-in');

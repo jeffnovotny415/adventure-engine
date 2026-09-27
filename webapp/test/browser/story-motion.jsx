@@ -24,7 +24,7 @@ export function Card({ book, item }) {
 export function Gallery() {
   const types = new Set();
   const items = Object.entries(storyArtwork).flatMap(([book, list]) => list.filter(item => item.motion).sort((a,b) => a.sceneId.localeCompare(b.sceneId)).map(item => ({book,item}))).filter(({item}) => { if (types.has(item.motion.type) && !item.motion.type.startsWith('eyes-')) return false; types.add(item.motion.type); return true; });
-  return <main><header className="intro"><p>Paths of Wonder · artwork review</p><h1>A little life on the page.</h1><p>Nineteen moments across the three books. Each plays once for five seconds, then settles. Tap a drawing to enlarge, replay, pause or pinch to zoom. Seventeen approved moments are enabled in the books. All six robot-eye scene revisions are shown separately below for review.</p><nav>{Object.entries(books).map(([book,title]) => <a key={book} href={`#${book}`}>{title}</a>)}</nav></header>
+  return <main><header className="intro"><p>Paths of Wonder · artwork review</p><h1>A little life on the page.</h1><p>Nineteen moments across the three books. Each plays once for five seconds, then settles. Tap a drawing to enlarge, replay, pause or pinch to zoom. All nineteen motion types are approved and enabled in the books. The six robot-eye scenes are shown separately below.</p><nav>{Object.entries(books).map(([book,title]) => <a key={book} href={`#${book}`}>{title}</a>)}</nav></header>
     {Object.entries(books).map(([book,title]) => <section key={book} id={book}><h2>{title}</h2><div className="grid">{items.filter(value => value.book === book).map(({item}) => <Card key={item.id} book={book} item={item} />)}</div></section>)}
   </main>;
 }
