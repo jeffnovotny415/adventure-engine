@@ -62,8 +62,6 @@
 .selection-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:20px}
 .text-button{border:0;background:none;color:inherit;min-height:44px;padding:10px 12px;text-decoration:underline;text-underline-offset:5px}
 .library{border-top:0;padding-top:30px}
-.living-art{position:relative;isolation:isolate}
-.library-art::after{content:"";position:absolute;left:20%;top:32%;width:8px;height:8px;border-radius:50%;background:#fff6d9;box-shadow:0 0 12px #fff0b8;opacity:0;pointer-events:none}
 .theme-can-opener{--world-accent:#855231;--world-paper:#f0e2cc;--world-line:#b69773;--world-tint:#dec19a}
 .theme-space-walker{--world-accent:#456578;--world-paper:#e3ebec;--world-line:#9eb4c2;--world-tint:#b7c9d0}
 .theme-summoned-mage{--world-accent:#785276;--world-paper:#ede4ee;--world-line:#b7a0b5;--world-tint:#d7bfd8}
@@ -100,13 +98,7 @@
 [data-preview-prev]{grid-column:1;justify-self:start}[data-preview-status]{grid-column:2;grid-row:1;font-size:.8125rem;color:var(--muted)}[data-preview-next]{grid-column:3;grid-row:1;justify-self:end}
 body.modal-open{overflow:hidden}
 @media(prefers-reduced-motion:no-preference){
- body:not(.motion-paused) .living-art.arrived img{animation:art-settle 1.3s ease-out both}
- body:not(.motion-paused) .library-art.arrived::after{animation:eye-glint 2.2s ease-out both}
  body:not(.motion-paused) .story-world.arrived .world-decoration{animation:world-arrival 1.8s ease-out both}
- .living-art img{transition:transform .45s ease}
- body:not(.motion-paused) .how-art:hover img{transform:translateY(-5px) rotate(-1deg)}
- @keyframes art-settle{from{transform:translateY(12px) rotate(-1deg)}to{transform:none}}
- @keyframes eye-glint{0%,45%,100%{opacity:0;transform:scale(.4)}65%{opacity:.9;transform:scale(1.4)}}
  @keyframes world-arrival{from{opacity:.15;transform:translateY(12px)}to{opacity:.45;transform:none}}
 }
 .motion-paused *, .motion-paused *::before,.motion-paused *::after{animation:none!important;transition:none!important}
@@ -118,3 +110,15 @@ body.modal-open{overflow:hidden}
 .door-hotspot.is-hovered{background:color-mix(in srgb,var(--door-light) 14%,transparent);box-shadow:0 0 25px color-mix(in srgb,var(--door-light) 55%,transparent)}
 
 .preview-controls button{min-width:0;max-width:100%;overflow-wrap:anywhere}
+
+/* Layered illustrations keep the books and podium still. */
+.art-stage{position:relative;aspect-ratio:3/2}
+.art-layers{display:none;width:100%;height:auto;overflow:visible}
+.artwork-ready .art-fallback{display:none}
+.artwork-ready .art-layers{display:block}
+.art-tail{transform-origin:1190px 490px}
+.art-eyelid{transform:scaleY(0);transform-origin:248px 368px}
+.art-map{transform-origin:444px 578px}
+.art-map-reveal{stroke-dasharray:1;stroke-dashoffset:0}
+.art-replay{display:block;margin:4px auto 0;font-size:.875rem;color:var(--wine);min-height:44px}
+.art-replay:disabled{opacity:.5;cursor:default}

@@ -41,6 +41,7 @@ function updateMotion() {
   motionButton.hidden = reducedMotion.matches;
   motionButton.textContent = motionPaused ? motionButton.dataset.resume : motionButton.dataset.pause;
   if (!motionAllowed()) document.getAnimations().forEach(animation => animation.cancel());
+  document.dispatchEvent(new Event('artwork-motion-change'));
 }
 motionButton.addEventListener('click', () => {
   motionPaused = !motionPaused;

@@ -135,8 +135,8 @@
     ]
   },
   "about": {
-    "heading": "Made by one person, on purpose.",
-    "body": "Paths of Wonder is created and built by Jeff, an independent developer who wanted stories where kids aren’t along for the ride. They’re steering it."
+    "heading": "Made by a Dad, for his kid.",
+    "body": "Paths of Wonder is created, written, and built by Jeff, an independent creator who wanted stories where kids aren’t along for the ride. They’re steering it."
   },
   "launch": {
     "eyebrow": "The next chapter",
@@ -191,6 +191,8 @@
       "Make it yours",
       "A little personality"
     ],
+    "replayBooks": "Wake the books",
+    "replayMap": "Unfurl the map again",
     "pause": "Pause animations",
     "resume": "Play animations",
     "discoveryLabel": "Not sure where to start? Follow your curiosity."

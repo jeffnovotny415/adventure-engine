@@ -31,10 +31,19 @@ Phone previews use one column; tablet previews use facing pages when space permi
 Vertical scrolling and pinch zoom remain available.
 
 Each book section has its own restrained atmosphere: copper grid details for
-robots, blue stars for space, and violet/woodland accents for magic. The eye glints once, illustrations settle into
-place, and the podium responds on hover. No content depends on animation.
+robots, blue stars for space, and violet/woodland accents for magic. The library eye blinks and the tail swishes occasionally while visible. The map
+unfurls from the stationary podium book once on arrival. Each illustration has
+a replay control. No content depends on animation.
 The motion control persists for the session and system reduced-motion preferences
-disable the effects. There is no autoplay or continuous animation loop.
+disable the effects. Recurring motion stops offscreen and when the tab is hidden.
+The map never loops. The previous whole-image lift and eye-glint effects are removed.
+
+`dist/art-motion.js` controls the layers defined in `scripts/artwork.mjs`. Original
+images remain the fallback until all layers decode, and remain available in the
+illustration viewer. SVG masks retain the approved artwork pixels for the tail
+and map. The generated closed-eyelid patch and clean podium base are documented
+in `../artwork/brand/motion-2026-09-27/prompts.md`. Run the motion lifecycle checks
+with `node --test marketing/test/art-motion.test.mjs`.
 
 Interface prompts live under `explore` in `ui_copy.json`. The original authored
 story files are not used or modified by this marketing interaction.
