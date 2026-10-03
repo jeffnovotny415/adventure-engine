@@ -16,19 +16,14 @@
 .library-intro h1{max-width:760px;text-wrap:pretty;font-size:1.5rem;line-height:1.35;}
 @media(max-width:699px),(max-height:500px){.library-intro h1{font-size:1.25rem;}}
 
-/* Can Opener door proof: stationary arch, left hinge, then a step through. */
-.door-portal{display:block;position:relative;width:100%;height:100%;perspective:900px;isolation:isolate}
-.door-portal svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
-.door-leaf{transform-origin:21.5% 52%;backface-visibility:hidden}
-.door-frame{transform:translateZ(1px)}
+/* Stable painted endpoints, no cutout geometry or camera movement. */
+.door-portal{display:block;position:relative;width:100%;height:100%;isolation:isolate}
+.door-portal img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
 .can-opener.is-opening .book-cover{transform:none;opacity:1}
-.can-opener.is-opening .cover-portal{visibility:hidden}
-.door-journey{position:fixed;inset:0;z-index:30;pointer-events:auto;overflow:hidden}
-.door-journey::before{content:'';position:absolute;inset:0;background:#f5eedc;animation:journey-paper 1250ms both}
-.journey-art{position:absolute;transform-origin:50% 50%;animation:journey-travel 1250ms cubic-bezier(.3,.05,.2,1) both}
-.journey-art .door-leaf{animation:door-inward 700ms cubic-bezier(.2,.65,.25,1) both}
-.door-journey::after{content:'';position:absolute;inset:0;background:#f5eedc;animation:journey-arrive 1250ms both}
-@keyframes door-inward{0%{transform:rotateY(0);opacity:1}80%{opacity:1}100%{transform:rotateY(76deg);opacity:0}}
-@keyframes journey-travel{0%,45%{transform:rotate(-2deg)}100%{transform:translate(var(--travel-x),var(--travel-y)) scale(var(--travel-scale)) rotate(0)}}
-@keyframes journey-paper{0%,30%{opacity:0}70%,100%{opacity:1}}
-@keyframes journey-arrive{0%,80%{opacity:0}100%{opacity:1}}
+.can-opener.is-opening .door-closed{animation:door-reveal 680ms cubic-bezier(.4,0,.2,1) both;will-change:opacity}
+.prototype[data-view="library"]:has(.can-opener.is-opening)>header,
+.prototype[data-view="library"]:has(.can-opener.is-opening)>main{animation:library-depart 900ms ease-in-out both}
+.prototype:not([data-view="library"]) .open-book{animation:page-arrive 240ms ease-out both}
+@keyframes door-reveal{from{opacity:1}to{opacity:0}}
+@keyframes library-depart{0%,78%{opacity:1}100%{opacity:0}}
+@keyframes page-arrive{from{opacity:0}to{opacity:1}}

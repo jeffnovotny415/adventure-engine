@@ -5,11 +5,13 @@ editing the approved `webapp/public/images/library/can-opener.webp`.
 
 Saved asset: `webapp/test/browser/portal-proof/assets/can-opener-closed-v1.png`.
 PNG, 1024 × 1536, alpha preserved. The original open portal is unchanged.
-The proof clips the leaf and stationary arch from the same painting with SVG;
-the leaf hinges on the left and opens inward. It reveals the existing open
-portal, then moves forward into the welcome page. Continuing skips the welcome
-and opens the sample saved scene. This is still a motion proof; the other two
-books and production opening have not been converted.
+The proof gently dissolves between the aligned closed/open paintings, then
+fades into the welcome page. The zoom and simulated rotating leaf were removed
+following Jeff’s feedback: a rotating cutout over an already-open painted leaf
+caused a double-door handoff. A continuous animation clip is a future option.
+Continuing skips welcome and opens the sample saved scene. Reduced Motion is
+immediate. This is still a proof; the other two books and production opening
+have not been converted.
 
 ## Exact edit prompt
 

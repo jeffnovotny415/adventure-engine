@@ -37,9 +37,11 @@ Static captures sit beside this file for review away from the local server. They
 
 ## Closed-door transition, October 3
 
-The Can Opener closed-door painting is approved. The proof now hinges the door
-inward inside its stationary arch, then moves through to the welcome page.
-Continuing a sample save uses the same transition directly to the saved scene.
+The Can Opener closed-door painting is approved. The proof now gently dissolves
+between closed and open paintings, followed by a short fade to the welcome page.
+The zoom and rotating cutout were removed after feedback about choppiness; the
+book stays in place. A continuous door animation clip could replace the dissolve.
+Continuing uses the same transition directly to the saved scene.
 Reduced Motion skips the movement. Other books still use the earlier cover turn;
 this motion is a proof, not yet in the production app.
 

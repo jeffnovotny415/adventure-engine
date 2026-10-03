@@ -37,7 +37,6 @@ export function Prototype() {
   const [view, setView] = useState(query.get('view') === 'welcome' ? 'welcome' : 'library');
   const [index, setIndex] = useState(0);
   const [opening, setOpening] = useState(null);
-  const [journey, setJourney] = useState(null);
   const [turning, setTurning] = useState(false);
   const [resume, setResume] = useState(null);
   const [sampleScene, setSampleScene] = useState('scene_001');
@@ -56,21 +55,10 @@ export function Prototype() {
     setSampleScene(destination === 'reading' ? 'scene_005' : 'scene_001');
     const portal = document.querySelector(`[data-book="${book.id}"] .door-portal`);
     const animate = portal && !reduced();
-    if (animate) {
-      const rect = portal.getBoundingClientRect();
-      const height = Math.min(rect.height, rect.width * 1.5);
-      const width = height / 1.5;
-      const left = rect.left + (rect.width - width) / 2;
-      const top = rect.top + (rect.height - height) / 2;
-      setJourney({left, top, width, height,
-        '--travel-x': `${innerWidth / 2 - left - width / 2}px`,
-        '--travel-y': `${innerHeight / 2 - top - height / 2}px`,
-        '--travel-scale': Math.max(innerWidth / width, innerHeight / height) * 1.45});
-    }
     clearTimeout(timer.current);
     timer.current = setTimeout(() => {
-      setView(destination); setOpening(null); setJourney(null); window.scrollTo(0, 0);
-    }, reduced() ? 0 : animate ? 1250 : 520);
+      setView(destination); setOpening(null); window.scrollTo(0, 0);
+    }, reduced() ? 0 : animate ? 900 : 520);
   }
   function choose(book, event) {
     if (opening) return;
@@ -125,7 +113,6 @@ export function Prototype() {
         </> : <div className="sample-prose"><p className="eyebrow">{selected.title}</p><h1 ref={heading} tabIndex="-1">{scene.title}</h1>{scene.text.split('\n').filter(line=>line.trim()).map((line,i)=><p key={i}>{line}</p>)}<div className="sample-end"><p>End of this design preview</p><button onClick={()=>setView('welcome')}>← Welcome page</button><button onClick={goLibrary}>Your books {arrow}</button></div></div>}
       </main>
     </>}
-    {journey && <div className="door-journey" aria-hidden="true"><div className="journey-art" style={journey}><DoorPortal /></div></div>}
     <dialog ref={dialog} className="resume-dialog" onCancel={dismiss} onClick={e=>{if(e.target===dialog.current)dismiss();}}>
       {resume && <div><button className="close-button" aria-label="Close" onClick={dismiss}>×</button><p className="eyebrow">Welcome back</p><h2>{resume.title}</h2><p>Your place is saved at</p><strong>{tech.scenes.scene_005.title}</strong><button className="read-button" onClick={()=>{dismiss();openBook(resume, 'reading');}}>Continue reading {arrow}</button><button className="restart-button" onClick={()=>{dismiss();openBook(resume);}}>Start from the beginning</button></div>}
     </dialog>
@@ -141,10 +128,10 @@ export function Workbench() {
   const dimensions=device==='tablet' ? [1024,768] : [390,844];
   const scale=Math.min(1,width/dimensions[0]);
   const src=`./index.html?surface=1&view=${view}&book=${book}${returning?'&returning':''}${large?'&large':''}`;
-  return <div className="workbench"><header className="proof-header"><div><p className="eyebrow">Paths of Wonder · Design proof 03</p><h1>Every book, a doorway.</h1><p>A closed door, an invitation, and a step into the story.</p></div><a className="fullscreen-link" href={`?device=${device}`} target="_blank" rel="noreferrer">Open device preview ↗</a></header>
+  return <div className="workbench"><header className="proof-header"><div><p className="eyebrow">Paths of Wonder · Design proof 03</p><h1>Every book, a doorway.</h1><p>A closed door, a quiet opening, and the story begins.</p></div><a className="fullscreen-link" href={`?device=${device}`} target="_blank" rel="noreferrer">Open device preview ↗</a></header>
     <div className="proof-controls"><fieldset><legend>Fixed orientation</legend>{[['tablet','iPad · landscape'],['phone','iPhone · portrait']].map(([id,title])=><button key={id} aria-pressed={device===id} onClick={()=>setDevice(id)}>{title}</button>)}</fieldset><label>Screen<select value={view} onChange={e=>setView(e.target.value)}><option value="library">Choose a book</option><option value="welcome">Welcome page</option></select></label>{view==='welcome' && <label>Book<select value={book} onChange={e=>setBook(e.target.value)}>{books.map(b=><option key={b.id} value={b.id}>{b.title}</option>)}</select></label>}<label className="check-option"><input type="checkbox" checked={returning} onChange={e=>setReturning(e.target.checked)} />Sample saved place</label><label className="check-option"><input type="checkbox" checked={large} onChange={e=>setLarge(e.target.checked)} />Large text</label><button onClick={()=>setRevision(n=>n+1)}>Reset preview</button></div>
     <div ref={host} className="preview-host"><div className={`device-frame ${device}`} style={{width:dimensions[0]*scale,height:dimensions[1]*scale}}><iframe key={revision} src={src} title="Interactive portal book design proof" style={{width:dimensions[0],height:dimensions[1],transform:`scale(${scale})`}} /></div></div>
-    <footer className="proof-notes"><p><strong>Try it:</strong> open The Can Opener to see its door swing inward and move through into the welcome page. The other two books retain their previous opening in this proof.</p><p><strong>Orientation:</strong> iPhone portrait and iPad landscape. These preview frames keep their orientation when the browser changes size; the app also locks its native landing orientation.</p><p>The closed Can Opener artwork is approved; its opening motion is the new part to review. This proof does not change the installed app, story text, or saved progress. “Sample saved place” demonstrates skipping the welcome page when continuing.</p></footer>
+    <footer className="proof-notes"><p><strong>Try it:</strong> open The Can Opener to see a gentle dissolve from closed to open, then the welcome page. No zoom or simulated door swing; a continuous animation clip can replace this later. The other two books retain their previous opening in this proof.</p><p><strong>Orientation:</strong> iPhone portrait and iPad landscape. These preview frames keep their orientation when the browser changes size; the app also locks its native landing orientation.</p><p>The closed Can Opener artwork is approved; its opening motion is the new part to review. This proof does not change the installed app, story text, or saved progress. “Sample saved place” demonstrates skipping the welcome page when continuing.</p></footer>
   </div>;
 }
 
