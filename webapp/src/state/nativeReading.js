@@ -21,3 +21,10 @@ export async function pageTurnFeedback() {
   try { await ReaderAccessibility.pageTurnFeedback(); }
   catch { /* Optional feedback must never interrupt reading or saving. */ }
 }
+
+// Optional on the web; native owns orientation, independently of reading gestures.
+export async function setLandingOrientation(enabled) {
+  if (!hasNativeReading()) return;
+  try { await ReaderAccessibility.setLandingMode({ enabled }); }
+  catch { /* A declined window geometry request must not block navigation. */ }
+}

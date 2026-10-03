@@ -1,7 +1,6 @@
 {
-  "heading": "Which world will you choose?",
+  "heading": "Choose a book, step into its world.",
   "note": "A little wonder on every page.",
-  "instruction": "Choose a book. Shape the adventure.",
   "welcomeInstruction": "Turn the page to step into the world.",
   "books": [
     {

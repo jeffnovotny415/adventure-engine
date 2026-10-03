@@ -53,6 +53,7 @@ try {
     ['-convert', 'json', '-o', '-', path.join(app, 'Info.plist')], { encoding: 'utf8' }));
   assert.equal(info.CFBundleIdentifier, source.appId, 'Bundle identifier differs from native config');
   assert.deepEqual([...info.UIDeviceFamily].sort(), [1, 2], 'App must support iPhone and iPad');
+  assert.equal(info.UIRequiresFullScreen, true, 'iPad library orientation needs full-screen compatibility');
   for (const key of ['UISupportedInterfaceOrientations', 'UISupportedInterfaceOrientations~ipad']) {
     for (const orientation of ['LandscapeLeft', 'LandscapeRight', 'Portrait']) {
       assert(info[key]?.includes(`UIInterfaceOrientation${orientation}`), `Missing ${key}: ${orientation}`);

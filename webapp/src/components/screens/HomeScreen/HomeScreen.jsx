@@ -1,6 +1,7 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useContent } from '../../../hooks/useContent';
-import { StoryDoor } from './StoryDoor';
+import { PortalCover } from './PortalCover';
+import '../../../styles/portalBooks.css';
 import '../../../styles/doorwayLibrary.css';
 import { AppHeader } from '../../shared/AppHeader/AppHeader';
 import { ResumeBookmark } from './ResumeBookmark';
@@ -8,9 +9,9 @@ import { PassageBookmarks } from '../../shared/BookReader/PassageBookmarks';
 import { usePurchases } from '../../../hooks/usePurchases';
 import { LibraryUnlock } from '../../shared/LibraryUnlock/LibraryUnlock';
 
-const DOOR_ORDER = ['the_can_opener', 'space_walker', 'summoned_mage'];
+const DOOR_ORDER = ['the_can_opener', 'summoned_mage', 'space_walker'];
 
-export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onStartAgain, onDeveloperMode }) {
+export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onStartAgain, onDeveloperMode, initialBookId, onBrowse }) {
   const { getText } = useContent();
   const [passagesOpen, setPassagesOpen] = useState(false);
   const [selectedStory, setSelectedStory] = useState(null);
@@ -18,8 +19,36 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
   const mainRef = useRef(null);
   const purchases = usePurchases();
   const [unlockOpen, setUnlockOpen] = useState(false);
+  const shelfRef = useRef(null), openingTimer = useRef(null);
+  const [opening, setOpening] = useState(null);
+  useEffect(() => () => clearTimeout(openingTimer.current), []);
+  const [index, setIndex] = useState(Math.max(0, DOOR_ORDER.indexOf(initialBookId)));
+  const orderedStories = Object.values(stories).sort((a,b) => DOOR_ORDER.indexOf(a.id) - DOOR_ORDER.indexOf(b.id));
+  useEffect(() => {
+    const shelf = shelfRef.current;
+    const card = [...shelf.children].find(el => el.dataset.book === initialBookId);
+    if (card && getComputedStyle(shelf).display === 'flex') shelf.scrollLeft = card.offsetLeft - shelf.offsetLeft - parseFloat(getComputedStyle(shelf).paddingLeft);
+  }, [initialBookId]);
+  function navigate(i) {
+    const shelf = shelfRef.current, card = shelf.children[i];
+    if (card) shelf.scrollTo({left:card.offsetLeft-shelf.offsetLeft-parseFloat(getComputedStyle(shelf).paddingLeft),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+  }
+  function trackScroll() {
+    const shelf = shelfRef.current;
+    if (getComputedStyle(shelf).display !== 'flex') return;
+    const target = shelf.getBoundingClientRect().left + parseFloat(getComputedStyle(shelf).paddingLeft);
+    const distances = [...shelf.children].map(el => Math.abs(el.getBoundingClientRect().left-target));
+    setIndex(distances.indexOf(Math.min(...distances)));
+  }
+  function open(story) {
+    if (opening) return;
+    onBrowse?.(story.id);
+    if (bookmarks.some(saved => saved.storyId === story.id)) setSelectedStory(story);
+    else if (matchMedia('(prefers-reduced-motion: reduce)').matches) onSelectStory(story.id);
+    else { setOpening(story.id); openingTimer.current = setTimeout(() => { setOpening(null); onSelectStory(story.id); },520); }
+  }
   return (
-    <div className="doorway-library">
+    <div className="portal-design">
       <AppHeader className="library-header">
         <button type="button" className="text-button library-passages" aria-haspopup="dialog"
           onClick={() => setPassagesOpen(true)}>
@@ -27,20 +56,32 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
           {getText('passages.title')}
         </button>
       </AppHeader>
-      <main className="doorway-main" ref={mainRef}>
-        <section className="doorway-invitation">
-          <h1>{getText('home.door_heading')}</h1>
-          <p className="muted library-tagline">{getText(bookmarks.length ? 'home.door_saved_help' : 'home.door_help')}</p>
+      <main ref={mainRef}>
+        <section className="library-intro">
+          <h1>{getText('portal_library.heading')}</h1>
         </section>
-        <section className="doorway-spread" aria-label={getText('home.door_heading')}>
-          <div className="doorway-grid">
-            {Object.values(stories).sort((a, b) => DOOR_ORDER.indexOf(a.id) - DOOR_ORDER.indexOf(b.id)).map((story) => {
-              const bookmark = bookmarks.find(saved => saved.storyId === story.id);
-              return <StoryDoor key={story.id} story={story} bookmark={bookmark}
-                onClick={() => setSelectedStory(story)} />;
-            })}
-          </div>
+        <section className="book-shelf" ref={shelfRef} onScroll={trackScroll} aria-label={getText('portal_library.heading')}>
+          {orderedStories.map((story,i) => {
+            const bookmark = bookmarks.find(saved => saved.storyId === story.id);
+            const info = getText(`portal_library.books.${story.id}`);
+            const art = story.id === 'the_can_opener' ? 'can-opener' : story.id.replaceAll('_','-');
+            return <article className={`book-feature ${art} ${opening===story.id?'is-opening':''}`} data-book={story.id} data-resumable={Boolean(bookmark)} key={story.id}>
+              <button type="button" className="cover-button" aria-haspopup={bookmark ? 'dialog' : undefined} aria-label={`${getText('portal_library.open')} ${story.title}`} onClick={() => open(story)}><PortalCover story={story} /></button>
+              <div className="book-details">
+                <span className="book-number" aria-hidden="true">0{i+1}</span><p className="eyebrow">{info.genre}</p><h2>{story.title}</h2><p className="book-summary">{info.summary}</p>
+                {bookmark && <p className="saved-place">{getText('portal_library.saved')}<strong>{bookmark.sceneTitle}</strong></p>}
+                <button type="button" className="read-button" aria-haspopup={bookmark ? 'dialog' : undefined} onClick={() => open(story)}>{getText(bookmark ? 'home.bookmark_continue' : 'home.open_book')}<span aria-hidden="true">→</span></button>
+                <span className="choice-note">{getText('portal_library.choice_note')}</span>
+              </div>
+            </article>;
+          })}
         </section>
+        <nav className="shelf-pagination" aria-label={getText('home.choose_adventure_heading')}>
+          <button type="button" aria-label={getText('portal_library.previous')} disabled={index===0} onClick={()=>navigate(index-1)}>←</button>
+          <div>{orderedStories.map((story,i)=><button type="button" key={story.id} aria-label={`${getText('portal_library.show')} ${story.title}`} aria-current={index===i?'true':undefined} onClick={()=>navigate(i)}><span /></button>)}</div>
+          <button type="button" aria-label={getText('portal_library.next')} disabled={index===orderedStories.length-1} onClick={()=>navigate(index+1)}>→</button>
+        </nav>
+        <p className="library-footnote">{getText('portal_library.footer')}</p>
         {selectedStory && <ResumeBookmark story={selectedStory} bookmark={selectedBookmark} onClose={() => setSelectedStory(null)}
           onBegin={() => { setSelectedStory(null); onSelectStory(selectedStory.id); }}
           onStartAgain={() => { setSelectedStory(null); onStartAgain(selectedStory.id); }}

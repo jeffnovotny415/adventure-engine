@@ -1,0 +1,224 @@
+.portal-design .eyebrow{font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;line-height:1.5;font-weight:600}
+.portal-design{min-height:100svh;background:radial-gradient(ellipse at 15% 10%,#fffaf0aa,transparent 56%),url('/images/textures/leather-tan.jpg'),#f1e6d0;background-size:auto,800px;background-blend-mode:normal,soft-light;color:var(--ink);padding-bottom:env(safe-area-inset-bottom);overflow-x:clip}
+.portal-design .library-masthead{max-width:1440px;padding:25px max(48px,env(safe-area-inset-right)) 0 max(48px,env(safe-area-inset-left));margin:auto;display:flex;justify-content:space-between;gap:24px;align-items:center}
+.portal-design .library-masthead .proof-wordmark{width:220px;mix-blend-mode:multiply}
+.portal-design .library-masthead p{font:italic .76rem Georgia,serif;color:#76664d;margin:3px 0 0 2px}
+.portal-design .collection-note{text-align:right;font-size:.72rem;line-height:1.65;color:#76664d}
+.portal-design .library-intro{margin:32px auto 15px;padding-inline:48px;max-width:1440px}
+.portal-design .library-intro .eyebrow{color:#796c55;margin-bottom:10px}
+.portal-design .library-intro h1{font-size:2.4rem;line-height:1.12}
+.portal-design .library-intro>p:last-child{color:#776b59;font-size:.9rem;margin-top:12px}
+.portal-design .book-shelf{position:relative;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:48px;gap:66px;padding:24px 48px 32px;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.portal-design .book-shelf::-webkit-scrollbar{display:none}
+.portal-design .book-feature{position:relative;flex:0 0 calc(100% - 114px);max-width:1050px;display:grid;grid-template-columns:46% 1fr;gap:7%;align-items:center;scroll-snap-align:start;min-width:0;--cover:#235257;--cover-dark:#193638;--accent:#28575b;--corner:#b4a087}
+.portal-design .book-feature.summoned-mage, .portal-design .summoned-mage{--cover:#674653;--cover-dark:#372530;--accent:#6e4359;--corner:#b59989}
+.portal-design .book-feature.space-walker, .portal-design .space-walker{--cover:#773e39;--cover-dark:#472623;--accent:#80493d;--corner:#b28e7b}
+.portal-design .can-opener{--cover:#235257;--cover-dark:#193638;--accent:#28575b;--corner:#b4a087}
+.portal-design .cover-button{background:none;border:0;padding:0 13px 16px 4px;display:block;width:100%;max-width:310px;justify-self:center;perspective:1200px;touch-action:pan-x pan-y pinch-zoom}
+.portal-design .book-object{display:block;position:relative;aspect-ratio:.685;isolation:isolate;transform:rotate(-2deg);transition:transform .35s;filter:drop-shadow(12px 18px 13px #543d292f)}
+.portal-design .space-walker .book-object{transform:rotate(-1deg)}
+.portal-design .summoned-mage .book-object{transform:rotate(2deg)}
+.portal-design .book-back{position:absolute;inset:4px -9px -12px 0;border-radius:7px 12px 12px 7px;background:var(--cover-dark);border:1px solid #211b18;box-shadow:inset 0 -2px 0 #b69b6940}
+.portal-design .book-pages{position:absolute;inset:5px -6px -8px 9%;background:repeating-linear-gradient(0deg,#b5a587 0 1px,#e8d6b2 1px 3px,#f4e5c6 3px 5px);border-radius:2px 9px 9px 2px;border:1px solid #b49b75;box-shadow:inset 0 -2px 2px #816f4840}
+.portal-design .book-cover{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;border-radius:7px 12px 11px 5px;background-color:var(--cover);background-image:linear-gradient(90deg,#0008,transparent 5%,#ffffff0a 7%,#0007 10%,transparent 14%);border:1px solid #302a22;box-shadow:inset 0 0 0 2px #d5b57c55,inset 0 0 12px #0005;transform-origin:5% 50%;transition:transform .52s cubic-bezier(.25,.7,.3,1),opacity .52s;backface-visibility:hidden}
+.portal-design .cover-border{position:absolute;inset:13px 13px 14px 14%;border:1px solid #d7ba7270;box-shadow:inset 0 0 0 3px var(--cover),inset 0 0 0 4px #d7ba7230;border-radius:4px;pointer-events:none}
+.portal-design .book-cover::before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:url('/images/textures/leather-tan.jpg') 32% 60%/420px;filter:grayscale(1) brightness(2.2) contrast(1.8);mix-blend-mode:soft-light;opacity:.85}
+.portal-design .summoned-mage .book-cover::before{background-position:73% 21%}
+.portal-design .space-walker .book-cover::before{background-position:12% 83%}
+.portal-design .cover-spine{position:absolute;inset:0 auto -12px 0;width:10%;border:1px solid #211b1877;border-right:1px solid #0009;border-radius:7px 2px 3px 8px;background:linear-gradient(90deg,#0007,#ffffff10 36%,#0005 85%,#0009),url('/images/textures/leather-tan.jpg'),var(--cover);background-size:auto,350px;background-blend-mode:normal,soft-light;box-shadow:inset 1px 0 0 #c8af7850,inset 0 -3px 2px #17120f80;display:flex;flex-direction:column;justify-content:space-between;padding-block:24%;z-index:1}
+.portal-design .cover-spine::after{content:'';position:absolute;inset:auto 0 3px;height:4px;border-block:1px solid #b8996555;border-radius:0 0 2px 6px}
+.portal-design .cover-spine i{height:7px;border-block:1px solid #d4b58370;box-shadow:0 3px 3px #0007;background:#baa07b18}
+.portal-design .cover-title{position:relative;padding:9% 8% 3% 17%;font:500 clamp(16px,2.1vw,25px)/1.17 'Fraunces',Georgia,serif;color:#ecdaa5;text-align:center;text-shadow:0 1px 1px #161b17;letter-spacing:.015em;height:24%;display:flex;align-items:center;justify-content:center;width:100%}
+.portal-design .cover-portal{position:relative;display:block;width:77%;height:65%;margin-left:9%;filter:drop-shadow(0 1px 1px #0009);overflow:hidden}
+.portal-design .cover-portal img{width:100%;height:100%;object-fit:contain}
+.portal-design .cover-imprint{position:relative;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#d0b784;padding:4% 0 0 8%}
+.portal-design .cover-wear{position:absolute;inset:0;pointer-events:none;border-radius:inherit;opacity:.7;background:linear-gradient(132deg,var(--corner) 0 6px,transparent 7px) top left/33px 30px no-repeat,linear-gradient(220deg,var(--corner) 0 7px,transparent 8px) top right/27px 35px no-repeat,linear-gradient(42deg,var(--corner) 0 8px,transparent 9px) bottom left/22px 34px no-repeat,linear-gradient(320deg,var(--corner) 0 11px,transparent 12px) bottom right/39px 28px no-repeat,linear-gradient(13deg,transparent 48%,#c2b69b66 49% 50%,transparent 51%) 87% 92%/43px 32px no-repeat,linear-gradient(97deg,transparent 48%,#d2b98a77 49% 50%,transparent 51%) 4% 15%/12px 130px no-repeat}
+.portal-design .summoned-mage .cover-wear{transform:rotate(180deg);opacity:.62}
+.portal-design .space-walker .cover-wear{transform:scaleY(-1);opacity:.85}
+.portal-design .portal-shimmer{position:absolute;width:16%;height:15%;left:55%;top:42%;background:radial-gradient(ellipse,#ffe8a199,transparent 65%);mix-blend-mode:screen;opacity:0;pointer-events:none;animation:portal-light 4s ease-in-out 1}
+.portal-design .summoned-mage .portal-shimmer{background:radial-gradient(ellipse,#bd9ff999,transparent 65%);left:50%;top:53%}
+.portal-design .space-walker .portal-shimmer{background:radial-gradient(ellipse,#86cfff99,transparent 65%);left:59%;top:45%}
+@keyframes portal-light{0%,100%{opacity:0}45%{opacity:.85}}.portal-design .is-opening .book-cover{transform:rotateY(-110deg);opacity:0}
+.portal-design .book-details{min-width:0;position:relative;padding:18px 0}
+.portal-design .book-number{font:italic .9rem Georgia,serif;color:#9c8b6e;display:block;margin-bottom:27px}
+.portal-design .book-details .eyebrow{color:var(--accent);margin-bottom:12px}
+.portal-design .book-details h2{font-size:2.85rem;line-height:1.08;max-width:350px}
+.portal-design .book-summary{font-size:1rem;line-height:1.75;color:#6b5f4f;margin-top:19px;max-width:330px}
+.portal-design .read-button{border:1px solid var(--accent,#28575b);background:var(--accent,#28575b);color:#fff7e5;display:inline-flex;align-items:center;justify-content:center;gap:24px;border-radius:7px;padding:12px 22px;margin-top:26px;font-size:.9rem;min-height:48px;box-shadow:0 2px 0 #0001}
+.portal-design .read-button>span{font-size:1.25em}
+.portal-design .choice-note{display:block;margin-top:15px;color:#82725b;font:italic .8rem Georgia,serif}
+.portal-design .shelf-pagination{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:-6px}
+.portal-design .shelf-pagination>div{display:flex}
+.portal-design .shelf-pagination button{background:none;border:0;min-width:44px;min-height:44px;color:#625540;font-size:22px}
+.portal-design .shelf-pagination button span{display:block;width:6px;height:6px;border-radius:50%;background:#b7a889;margin:auto}
+.portal-design .shelf-pagination button[aria-current] span{width:8px;height:8px;background:#4b4b3d}
+.portal-design .shelf-pagination button:disabled{visibility:hidden}
+.portal-design .library-footnote{text-align:center;font:italic .76rem Georgia,serif;color:#85745c;padding:10px 0 22px}
+.portal-design .saved-place{border-left:2px solid #9b8156;padding-left:12px;margin-top:15px;font-size:.75rem;line-height:1.6;color:#786b59}
+.portal-design .saved-place strong{font-weight:500;color:#4a493c}
+.portal-design .reading-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px max(30px,env(safe-area-inset-right)) 14px max(30px,env(safe-area-inset-left));font-size:.78rem;color:#7a6b54}
+.portal-design .reading-bar button{background:transparent;border:0;padding:0 8px;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.portal-design .reading-bar>span{overflow-wrap:anywhere;text-align:center}
+.portal-design .page-label{font-style:italic}
+.portal-design .open-book{position:relative;max-width:1120px;min-height:calc(100svh - 112px);margin:7px 28px 35px;display:grid;grid-template-columns:1fr 1fr;border-radius:20px 13px 14px 20px;border:1px solid #b69e704a;background:linear-gradient(90deg,#dfcba5,#fbf3df 5%,#fbf5e6 46%,#e5d6b8 49%,#c4b38f 50%,#e9dcc2 51%,#fcf6e8 55%,#f5ebd2 97%,#e8d6b5);box-shadow:0 2px 0 #b9a684,0 5px 0 #f5e8c9,0 7px 0 #b3a383,0 11px 0 var(--cover-dark),0 15px 25px #6350392a;touch-action:pan-y pinch-zoom;perspective:1400px}
+.portal-design .open-book::after{content:'';position:absolute;inset:7px 10px;border:1px solid #b8a07433;border-radius:inherit;pointer-events:none}
+.portal-design .welcome-picture{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 35px}
+.portal-design .plate-label{text-transform:uppercase;font-size:.59rem;letter-spacing:.17em;color:#9a835c;text-align:center;margin-bottom:16px}
+.portal-design .welcome-portal{position:relative;width:100%;max-width:300px;height:430px}
+.portal-design .welcome-portal img{height:100%;width:100%;object-fit:contain}
+.portal-design .plate-ornament{color:#ac966b;font-size:25px;margin-top:14px}
+.portal-design .welcome-copy{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:46px 43px 30px;position:relative;transform-origin:left center;transition:transform .44s ease-in,opacity .44s}
+.portal-design .welcome-copy .eyebrow{color:#8b7857;font-weight:400;letter-spacing:.2em}
+.portal-design .welcome-copy h1{font-size:2.8rem;line-height:1.14;margin-top:16px;max-width:360px;outline:none}
+.portal-design .welcome-rule{width:125px;display:flex;align-items:center;gap:13px;font-size:18px;color:#a58a5b;margin:26px 0}
+.portal-design .welcome-rule::before, .portal-design .welcome-rule::after{content:'';height:1px;flex:1;background:#c7b58d}
+.portal-design .welcome-description{font:1.18rem/1.85 Georgia,serif;max-width:340px;color:#64543e}
+.portal-design .welcome-invitation{font:italic 1rem/1.6 Georgia,serif;max-width:260px;margin-top:28px;color:#7d6747}
+.portal-design .turn-button{margin-top:20px;background:none;border:0;border-bottom:1px solid #b29a7188;display:flex;gap:22px;align-items:center;padding:10px 2px;color:#4f665d;font-size:.88rem}
+.portal-design .turn-button span{font-size:1.25em}
+.portal-design .folio{font:italic .8rem Georgia,serif;margin-top:36px;color:#9c8661}
+.portal-design .is-turning .welcome-copy{transform:rotateY(-80deg);opacity:0}
+.portal-design .sample-page{display:block;padding:45px clamp(30px,8vw,110px)}
+.portal-design .sample-prose{max-width:650px;margin:auto}
+.portal-design .sample-prose h1{font-size:2.4rem;margin:22px 0}
+.portal-design .sample-prose>p:not(.eyebrow){font:1.2rem/1.85 Georgia,serif;margin:0 0 20px}
+.portal-design .sample-end{border-top:1px solid #c6b593;padding-top:15px;margin-top:30px;display:flex;gap:16px;flex-wrap:wrap}
+.portal-design .sample-end p{flex-basis:100%;font-size:.75rem;color:#7c6c55}
+.portal-design .sample-end button{background:none;border:0;text-decoration:underline;text-underline-offset:5px;font-size:.85rem;padding:0}
+.portal-design .resume-dialog{border:1px solid #c7b591;border-radius:16px;background:#f8f0de;color:var(--ink);padding:35px;width:min(450px,calc(100% - 32px));max-height:calc(100svh - 32px);box-shadow:0 20px 80px #0004}
+.portal-design .resume-dialog::backdrop{background:#29251ee0;backdrop-filter:blur(5px)}
+.portal-design .resume-dialog>div{display:flex;flex-direction:column;align-items:flex-start;position:relative;gap:12px}
+.portal-design .resume-dialog h2{font-size:2rem;padding-right:25px}
+.portal-design .resume-dialog p:not(.eyebrow){font-size:.85rem;margin-top:12px}
+.portal-design .resume-dialog strong{font:1.2rem Georgia,serif}
+.portal-design .resume-dialog .read-button{width:100%;margin-top:12px}
+.portal-design .close-button{position:absolute;right:-21px;top:-24px;background:none;border:0;font-size:30px;min-width:44px}
+.portal-design .restart-button{background:none;border:0;align-self:center;font-size:.82rem;text-decoration:underline;text-underline-offset:4px}
+
+/* Phone: three book-and-copy rows, alternating sides, including landscape. */
+@media(max-width:699px),(max-height:500px){.portal-design .library-masthead{padding:22px max(22px,env(safe-area-inset-right)) 0 max(22px,env(safe-area-inset-left))}
+.portal-design .library-masthead .proof-wordmark{width:183px}
+.portal-design .library-masthead p{font-size:.65rem}
+.portal-design .collection-note{display:none}
+.portal-design .library-intro{margin:32px 0 6px;padding-inline:24px}
+.portal-design .library-intro .eyebrow{font-size:.61rem;margin-bottom:8px}
+.portal-design .library-intro h1{font-size:2.1rem;max-width:310px}
+.portal-design .library-intro>p:last-child{font-size:.8rem;margin-top:12px}
+.portal-design .book-shelf{display:block;overflow:visible;padding:0 24px;scroll-snap-type:none}
+.portal-design .book-feature{display:grid;grid-template-columns:48% 1fr;gap:22px;max-width:none;padding:33px 0 27px;border-bottom:1px solid #bca68066;align-items:center}
+.portal-design .book-feature:last-child{border-bottom:0}
+.portal-design .book-feature:nth-child(even){grid-template-columns:1fr 48%}
+.portal-design .book-feature:nth-child(even) .cover-button{grid-column:2;grid-row:1}
+.portal-design .book-feature:nth-child(even) .book-details{grid-column:1;grid-row:1}
+.portal-design .cover-button{max-width:230px;padding:0 8px 12px 0}
+.portal-design .cover-title{font-size:clamp(12px,4.3vw,20px)}
+.portal-design .cover-border{inset:7px 7px 8px 14%}
+.portal-design .cover-spine i{height:4px}
+.portal-design .cover-imprint{font-size:6px;letter-spacing:.1em}
+.portal-design .book-back{inset:3px -6px -9px 0}
+.portal-design .book-pages{inset:3px -4px -6px 9%}
+.portal-design .cover-spine{bottom:-9px}
+.portal-design .book-details{padding:5px 0}
+.portal-design .book-number{font-size:.7rem;margin-bottom:13px}
+.portal-design .book-details .eyebrow{font-size:.55rem;letter-spacing:.1em;margin-bottom:8px}
+.portal-design .book-details h2{font-size:1.42rem;line-height:1.15}
+.portal-design .book-summary{font-size:.79rem;line-height:1.7;margin-top:12px}
+.portal-design .read-button{font-size:.77rem;padding:10px 12px;gap:13px;margin-top:17px;min-height:44px}
+.portal-design .choice-note{display:none}
+.portal-design .shelf-pagination{display:none}
+.portal-design .library-footnote{padding:12px 0 28px;font-size:.7rem}
+.portal-design .reading-bar{padding:9px 14px;gap:10px}
+.portal-design .reading-bar>span:not(.page-label){display:none}
+.portal-design .open-book{margin:0 13px 27px;grid-template-columns:1fr;min-height:calc(100svh - 90px);background:linear-gradient(90deg,#e7d6b7,#fcf5e5 6%,#fbf4e3 95%,#ebdabe);border-radius:9px}
+.portal-design .welcome-picture{padding:26px 25px 0}
+.portal-design .plate-label{font-size:.52rem;margin-bottom:12px}
+.portal-design .welcome-portal{height:270px;max-width:215px}
+.portal-design .plate-ornament{display:none}
+.portal-design .welcome-copy{padding:23px 26px 24px}
+.portal-design .welcome-copy h1{font-size:2rem;margin-top:9px;max-width:280px}
+.portal-design .welcome-copy .eyebrow{font-size:.59rem}
+.portal-design .welcome-rule{margin:16px 0;font-size:14px;width:100px}
+.portal-design .welcome-description{font-size:1rem;line-height:1.75;max-width:290px}
+.portal-design .welcome-invitation{font-size:.9rem;margin-top:22px;max-width:260px}
+.portal-design .turn-button{font-size:.82rem;margin-top:12px}
+.portal-design .folio{margin-top:20px}
+.portal-design .sample-page{padding:30px 26px}
+.portal-design .sample-prose h1{font-size:2rem}
+.portal-design .sample-prose>p:not(.eyebrow){font-size:1.12rem;line-height:1.8}
+}
+@media(min-width:500px) and (max-height:500px){.portal-design .library-masthead{padding-top:12px}
+.portal-design .library-intro{margin-top:18px}
+.portal-design .book-shelf{padding-inline:40px}
+.portal-design .book-feature{grid-template-columns:38% 1fr!important;gap:35px;max-width:700px;margin:auto;padding-block:24px}
+.portal-design .book-feature:nth-child(even) .cover-button{grid-column:1}
+.portal-design .book-feature:nth-child(even) .book-details{grid-column:2}
+.portal-design .cover-button{max-width:170px}
+.portal-design .cover-title{font-size:17px}
+.portal-design .book-details h2{font-size:1.9rem}
+.portal-design .book-summary{font-size:.9rem}
+.portal-design .open-book{grid-template-columns:40% 1fr}
+.portal-design .welcome-picture{padding:20px}
+.portal-design .welcome-portal{height:220px}
+.portal-design .welcome-copy{padding:25px}
+.portal-design .welcome-copy h1{font-size:1.8rem}
+.portal-design .welcome-description{font-size:1rem}
+.portal-design .welcome-invitation{margin-top:15px}
+.portal-design .folio{margin-top:12px}
+.portal-design .plate-label{display:none}
+.portal-design .sample-page{display:block}
+}
+@media(min-width:700px) and (min-height:501px) and (max-width:850px){.portal-design .book-shelf{gap:36px}
+.portal-design .book-feature{flex-basis:calc(100% - 50px);gap:6%}
+.portal-design .book-details h2{font-size:2.25rem}
+.portal-design .book-summary{font-size:.9rem}
+.portal-design .cover-title{font-size:20px}
+.portal-design .welcome-picture{padding-inline:20px}
+.portal-design .welcome-copy{padding-inline:25px}
+.portal-design .welcome-copy h1{font-size:2.3rem}
+.portal-design .welcome-description{font-size:1.05rem}
+.portal-design .welcome-portal{height:370px}
+}
+/* Large text may trade the two columns for readable full-width copy. */
+@media(max-width:699px){.portal-design .book-feature{container-type:inline-size}
+@container(max-width:13rem){.portal-design .book-details h2{font-size:1.3rem}
+.portal-design .book-summary{font-size:.85rem}
+.portal-design .book-number{margin-bottom:8px}
+}}
+@media(prefers-reduced-motion:reduce){.portal-design *, .portal-design *::before, .portal-design *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+.portal-design { --ink:#352f26; color:var(--ink); }
+.portal-design h1,.portal-design h2,.portal-design p { margin:0; }
+.portal-design h1,.portal-design h2 { letter-spacing:-.035em; }
+.portal-design button { min-height:44px; }
+.portal-design .book-object { container-type:inline-size; }
+.portal-design .cover-title { font-size:clamp(11px,6.3cqw,24px);padding-top:7%;padding-bottom:2%; }
+.portal-design .library-header { border:0; max-width:1440px;margin:auto;padding:25px max(48px,env(safe-area-inset-right)) 0 max(48px,env(safe-area-inset-left)); }
+.portal-design .app-wordmark-art { width:220px; }
+.portal-design .app-header-note { display:block; font:italic .76rem Georgia,serif; margin-top:3px; }
+.portal-design .library-footer { padding:10px 24px max(24px,env(safe-area-inset-bottom)); }
+.portal-design .book-feature { container-type:inline-size; }
+.portal-design .book-shelf { scroll-padding-inline:48px; }
+.portal-design .welcome-portal img { display:block; }
+.portal-design .saved-place strong { display:block; }
+.portal-design .book-details h2,.portal-design .book-summary { overflow-wrap:anywhere; }
+/* Accessibility sizing reflows each card without changing the tablet's carousel. */
+@container (max-width:22rem) {
+ .portal-design .cover-button { max-width:210px; }
+}
+@container (max-width:12rem) {
+ .portal-design .cover-button { grid-column:1 / -1!important;grid-row:1!important;max-width:160px; }
+ .portal-design .book-details { grid-column:1 / -1!important;grid-row:2!important; }
+}
+@media(max-width:699px),(max-height:500px) {
+ .portal-design .library-header {padding:22px max(22px,env(safe-area-inset-right)) 0 max(22px,env(safe-area-inset-left));gap:12px;align-items:flex-start;}
+ .portal-design .app-wordmark-art {width:183px;}
+ .portal-design .library-passages {font-size:.72rem;}
+}
+@media(min-width:700px) and (max-width:55rem) {
+ .portal-design .open-book { grid-template-columns:1fr; }
+ .portal-design .welcome-copy { padding-inline:30px; }
+ .portal-design .welcome-copy h1 { max-width:100%; }
+}
+
+.portal-design .library-intro h1{max-width:760px;text-wrap:pretty;}

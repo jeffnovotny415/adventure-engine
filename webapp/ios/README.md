@@ -26,7 +26,9 @@ web changes before building from Xcode. Commit the Swift package lockfile.
 - Apple team: `J29FAX7T97`, matching Jeff's Reforge project.
 - Version/build: 1.0 / 1. Increment the build for each distributed archive.
 - Deployment target: iOS 17.0 (modern WebKit layout baseline); iPhone and iPad device families.
-- Both landscape orientations, with portrait fallback (plus upside-down on iPad).
+- Library and hero setup: portrait on iPhone, landscape on iPad. Welcome pages
+  and reading release that lock and support both landscape orientations and
+  portrait fallback (plus upside-down on iPad).
 - Warm launch screen and opaque 1024px book icon. To redraw the icon, compile
   `Branding/generate-icon.swift` using `swiftc`, then run the executable with the
   destination `App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png`.
@@ -213,3 +215,15 @@ transactions. `npm run ios:test:purchases` runs the StoreKit integration tests.
 The release bundle check rejects the native author override, StoreKit testing
 configuration, and bundled test targets. App Store Connect product setup and a
 successful sandbox purchase/restore run remain required before release.
+
+### Portal library orientation (October 3)
+
+`ReaderAccessibility.setLandingMode` updates the bridge controller's supported
+orientations when the app changes screens. The native controller starts with the
+library policy before the web app loads; reader screens release it. iPad uses
+`UIRequiresFullScreen` compatibility on the current iOS 26 SDK: windowed mode can
+reject programmatic orientation changes. With Windowed Apps or Stage Manager,
+iPadOS may scale a fixed app window instead of making it fill the display. The responsive web fallback remains
+usable in either orientation and preserves pinch zoom. Revisit the full-screen
+compatibility setting when adopting the iOS 27 SDK; Apple has changed its behavior
+([TN3192](https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key)).

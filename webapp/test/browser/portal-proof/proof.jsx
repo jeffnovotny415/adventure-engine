@@ -79,7 +79,7 @@ export function Prototype() {
     {view === 'library' ? <>
       <header className="library-masthead"><div><svg className="proof-wordmark" viewBox="586 245 1586 280" role="img" aria-label="Paths of Wonder"><image href="/images/library/wordmark.webp" width="2172" height="724" /></svg><p>{copy.note}</p></div><span className="collection-note">Three books.<br />Countless possibilities.</span></header>
       <main>
-        <div className="library-intro"><p className="eyebrow">Your next adventure</p><h1>{copy.heading}</h1><p>{copy.instruction}</p></div>
+        <div className="library-intro"><h1>{copy.heading}</h1></div>
         <div className="book-shelf" ref={shelf} onScroll={trackScroll} aria-label="Choose an adventure">
           {books.map((book,i) => <article className={`book-feature ${book.art} ${opening === book.id ? 'is-opening' : ''}`} key={book.id} data-book={book.id}>
             <button className="cover-button" aria-label={`Open ${book.title}`} onClick={event => choose(book,event)}><Cover book={book} /></button>

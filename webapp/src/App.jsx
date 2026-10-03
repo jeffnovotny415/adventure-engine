@@ -1,4 +1,6 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { WelcomeScreen } from './components/screens/WelcomeScreen/WelcomeScreen';
+import { setLandingOrientation } from './state/nativeReading';
 import { HomeScreen } from './components/screens/HomeScreen/HomeScreen';
 import { HeroSetupScreen } from './components/screens/HeroSetupScreen/HeroSetupScreen';
 import { StoryScreen } from './components/screens/StoryScreen/StoryScreen';
@@ -20,6 +22,7 @@ import { LibraryUnlock } from './components/shared/LibraryUnlock/LibraryUnlock';
 
 const SCREENS = {
   HOME: 'home',
+  WELCOME: 'welcome',
   HERO_SETUP: 'hero_setup',
   STORY: 'story',
   END: 'end',
@@ -43,6 +46,9 @@ export default function App() {
   const [savedResult, setSavedResult] = useState(() => loadSave(storiesWithScenes));
   const [screen, setScreen] = useState(() => needsSaveRecovery(savedResult) ? SCREENS.SAVE_RECOVERY : SCREENS.HOME);
   const [pendingStoryId, setPendingStoryId] = useState(null);
+  const [libraryBookId, setLibraryBookId] = useState(null);
+  const persistenceDestination = useRef(SCREENS.STORY);
+  useEffect(() => { void setLandingOrientation([SCREENS.HOME, SCREENS.HERO_SETUP, SCREENS.SAVE_RECOVERY].includes(screen)); }, [screen]);
   const [devTestState, setDevTestState] = useState(null);
   const [previewTextScale, setPreviewTextScale] = useState(1);
   const [previewHaptics, setPreviewHaptics] = useState(false);
@@ -86,6 +92,7 @@ export default function App() {
 
   function goHome() {
     setUnlockRequest(null);
+    persistenceDestination.current = SCREENS.STORY;
     cancelPersistence();
     setPendingStoryId(null);
     setDevTestState(null);
@@ -112,21 +119,26 @@ export default function App() {
   function handleStartAgain(storyId) {
     const result = loadSave(storiesWithScenes, undefined, storyId);
     if (result.status !== 'valid') { showSaveResult(result); return; }
+    setPendingStoryId(storyId);
+    persistenceDestination.current = SCREENS.WELCOME;
     showSaveResult(startNewGame(storyId, result.save.heroName, result.save.worldName,
-      storiesWithScenes[storyId].start_scene), SCREENS.STORY);
+      storiesWithScenes[storyId].start_scene), SCREENS.WELCOME);
   }
 
   function handleHeroSetupSubmit(heroName, worldName) {
+    persistenceDestination.current = SCREENS.WELCOME;
     const story = storiesWithScenes[pendingStoryId];
-    showSaveResult(startNewGame(pendingStoryId, heroName, worldName, story.start_scene), SCREENS.STORY);
+    showSaveResult(startNewGame(pendingStoryId, heroName, worldName, story.start_scene), SCREENS.WELCOME);
   }
 
   function handleContinue(storyId) {
+    persistenceDestination.current = SCREENS.STORY;
     const result = continueGame(storyId);
     showSaveResult(result, result.status === 'valid' ? SCREENS.STORY : SCREENS.HOME);
   }
 
   function handleChoose(choice) {
+    persistenceDestination.current = SCREENS.STORY;
     if (!sceneAllowed) return;
     if (!canReadScene(activeStoryId, choice.next_scene, purchases)) {
       setUnlockRequest({ choice, storyId: activeStoryId, sceneId: activeSave.currentSceneId,
@@ -141,6 +153,7 @@ export default function App() {
   }
 
   function handleUndoChoice() {
+    persistenceDestination.current = SCREENS.STORY;
     if (devTestState) {
       setDevTestState(current => rewindChoice(current) ?? current);
       setScreen(SCREENS.STORY);
@@ -161,7 +174,9 @@ export default function App() {
       return;
     }
     const story = storiesWithScenes[activeStoryId];
-    showSaveResult(startNewGame(activeStoryId, save.heroName, save.worldName, story.start_scene), SCREENS.STORY);
+    setPendingStoryId(activeStoryId);
+    persistenceDestination.current = SCREENS.WELCOME;
+    showSaveResult(startNewGame(activeStoryId, save.heroName, save.worldName, story.start_scene), SCREENS.WELCOME);
   }
 
   function handleNewStory() {
@@ -234,7 +249,7 @@ export default function App() {
           error={persistenceError}
           onRetry={() => {
             const result = retryPersistence();
-            if (result.status !== 'empty') showSaveResult(result, SCREENS.STORY);
+            if (result.status !== 'empty') showSaveResult(result, persistenceDestination.current);
           }}
           onHome={goHome}
         />
@@ -250,12 +265,19 @@ export default function App() {
       {screen === SCREENS.HOME && (
         <HomeScreen
           stories={stories}
+          initialBookId={libraryBookId}
+          onBrowse={setLibraryBookId}
           bookmarks={bookmarks}
           onContinue={handleContinue}
           onStartAgain={handleStartAgain}
           onSelectStory={handleSelectStory}
           onDeveloperMode={purchases?.developerMode ? handleDeveloperMode : undefined}
         />
+      )}
+
+      {screen === SCREENS.WELCOME && pendingStoryId && (
+        <WelcomeScreen key={pendingStoryId} story={storiesWithScenes[pendingStoryId]} onBack={goHome}
+          onEnter={() => { persistenceDestination.current = SCREENS.STORY; setScreen(SCREENS.STORY); }} />
       )}
 
       {screen === SCREENS.HERO_SETUP && pendingStoryId && (

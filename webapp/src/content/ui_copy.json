@@ -220,5 +220,42 @@
       "restore_error": "Your purchase could not be restored. Check your connection and Apple Account, then try again.",
       "verification_failed": "Apple’s purchase verification was unsuccessful. Access has not changed. Try restoring your purchase."
     }
+  },
+  "portal_library": {
+    "heading": "Choose a book, step into its world.",
+    "note": "A little wonder on every page.",
+    "welcomeInstruction": "Turn the page to step into the world.",
+    "footer": "Every book is a new beginning.",
+    "previous": "Previous book",
+    "next": "Next book",
+    "show": "Show",
+    "open": "Open",
+    "saved": "Your place is saved",
+    "choice_note": "You choose what happens next.",
+    "books": {
+      "the_can_opener": {
+        "genre": "Gadgets & adventure",
+        "summary": "Build your own gadgets and take on the robots causing trouble in your neighborhood.",
+        "welcome": "An adventure of homemade gadgets, troublesome robots, and inventions that don’t always work quite as planned."
+      },
+      "summoned_mage": {
+        "genre": "Magic & friendship",
+        "summary": "Discover your magic, make unlikely friends, and help a world that’s losing its own.",
+        "welcome": "An adventure of unexpected magic, new friends, and a world that needs your help. Your choices will guide the way."
+      },
+      "space_walker": {
+        "genre": "Space & discovery",
+        "summary": "Join a spaceship’s crew, explore strange worlds, and uncover what’s happening to the missing planets.",
+        "welcome": "An adventure of strange planets, daring rescues, and a spaceship crew far from home. There’s a whole universe to explore."
+      }
+    }
+  },
+  "book_welcome": {
+    "heading": "Welcome to",
+    "plate": "A doorway to another world",
+    "label": "Welcome",
+    "turn": "Turn the page",
+    "library": "Your books",
+    "invitation": "Turn the page to step into the world."
   }
 }

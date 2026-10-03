@@ -3,6 +3,35 @@ import CoreHaptics
 import Capacitor
 
 class ReaderBridgeViewController: CAPBridgeViewController {
+    // Start in the library policy before JavaScript finishes booting.
+    private(set) var landingMode = true
+    private var isTablet: Bool { UIDevice.current.userInterfaceIdiom == .pad }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        landingMode ? (isTablet ? .landscape : .portrait) : (isTablet ? .all : .allButUpsideDown)
+    }
+
+    @available(iOS 26.0, *)
+    override var prefersInterfaceOrientationLocked: Bool { landingMode }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateLandingOrientation(landingMode)
+    }
+
+    func updateLandingOrientation(_ enabled: Bool) {
+        landingMode = enabled
+        setNeedsUpdateOfSupportedInterfaceOrientations()
+        if #available(iOS 26.0, *) { setNeedsUpdateOfPrefersInterfaceOrientationLocked() }
+        // Request the new orientation on entry; unlocking reading doesn't force a turn.
+        if enabled, let scene = view.window?.windowScene {
+            scene.requestGeometryUpdate(.iOS(interfaceOrientations: supportedInterfaceOrientations)) { error in
+                // Windowed iPad scenes may decline a request. Responsive UI remains usable.
+                NSLog("Landing orientation request: %@", error.localizedDescription)
+            }
+        }
+    }
+
     override func capacitorDidLoad() {
         bridge?.registerPluginInstance(ReaderAccessibilityPlugin())
         bridge?.registerPluginInstance(ReaderPurchasesPlugin())
@@ -15,6 +44,7 @@ public class ReaderAccessibilityPlugin: CAPPlugin, CAPBridgedPlugin {
     public let jsName = "ReaderAccessibility"
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "getSettings", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setLandingMode", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "pageTurnFeedback", returnType: CAPPluginReturnPromise)
     ]
     private var observers: [NSObjectProtocol] = []
@@ -45,6 +75,17 @@ public class ReaderAccessibilityPlugin: CAPPlugin, CAPBridgedPlugin {
         let scale = UIFontMetrics(forTextStyle: .body).scaledValue(for: 17, compatibleWith: traits) / 17
         return ["textScale": scale, "voiceOver": UIAccessibility.isVoiceOverRunning,
                 "hapticsAvailable": supportsFeedback]
+    }
+
+    @objc func setLandingMode(_ call: CAPPluginCall) {
+        guard let enabled = call.getBool("enabled") else { call.reject("Expected enabled"); return }
+        DispatchQueue.main.async {
+            guard let controller = self.bridge?.viewController as? ReaderBridgeViewController else {
+                call.reject("Reader controller unavailable"); return
+            }
+            controller.updateLandingOrientation(enabled)
+            call.resolve()
+        }
     }
 
     @objc func getSettings(_ call: CAPPluginCall) {

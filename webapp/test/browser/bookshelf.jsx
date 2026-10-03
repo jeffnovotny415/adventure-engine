@@ -16,24 +16,29 @@ const count = Math.max(0, Math.min(3, Number(query.get('bookmarks') ?? 2)));
 const sceneTitles = ['The Observation Deck', 'A Table at the Spoon', 'Building the Can Opener'];
 const bookmarks = bookIds.slice(0, count).map((storyId, i) => ({ storyId, storyTitle: stories[storyId].title,
   sceneTitle: query.has('long') ? `${sceneTitles[i]} — A longer chapter heading that should remain readable at every text size` : sceneTitles[i] }));
-function Fixture() {
+export function Fixture() {
   const [result, setResult] = useState('Not run');
   const [lastAction, setLastAction] = useState('None');
   async function check() {
     try {
-      const books = [...document.querySelectorAll('.story-door')];
+      const books = [...document.querySelectorAll('.cover-button')];
       if (books.length !== bookIds.length) throw Error('Every book appears once');
-      if (books.filter(book => book.dataset.resumable === 'true').length !== count) throw Error('Correct resume count');
+      if (books.filter(book => book.closest('[data-book]').dataset.resumable === 'true').length !== count) throw Error('Correct resume count');
       if (document.documentElement.scrollWidth > innerWidth + 1) throw Error('Horizontal overflow');
       const frame = () => new Promise(requestAnimationFrame);
       for (const book of books) {
-        const id = book.dataset.book;
+        const id = book.closest('[data-book]').dataset.book;
         const bookmark = bookmarks.find(saved => saved.storyId === id);
         const bounds = book.getBoundingClientRect();
         if (bounds.height < 44 || bounds.width < 44) throw Error('Touch target too small');
-        if (book.getAttribute('aria-label') !== `Open adventure: ${stories[id].title}`) throw Error('Wrong action label');
+        if (book.getAttribute('aria-label') !== `Open ${stories[id].title}`) throw Error('Wrong action label');
         const previousAction = document.querySelector('[data-last-action]').textContent;
         book.focus(); book.click(); await frame();
+        if (!bookmark) {
+          await new Promise(resolve => setTimeout(resolve,600));
+          if (document.querySelector('[data-last-action]').textContent !== `open:${id}`) throw Error('New book did not open');
+          continue;
+        }
         let dialog = document.querySelector('dialog[open]');
         if (!dialog || dialog.querySelector('h2').textContent !== stories[id].title) throw Error('Wrong story preview');
         if (document.querySelector('[data-last-action]').textContent !== previousAction) throw Error('Preview navigated early');

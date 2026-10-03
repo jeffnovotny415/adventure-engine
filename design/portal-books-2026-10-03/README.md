@@ -1,6 +1,7 @@
 # Portal books — design proof 02
 
-October 3, 2026. Review only; not imported by the production app or installed on devices.
+October 3, 2026. This isolated proof is retained for review. The approved direction
+is now integrated into the production app; see [INTEGRATION.md](INTEGRATION.md).
 
 Open the interactive proof with the webapp Vite server running:
 
