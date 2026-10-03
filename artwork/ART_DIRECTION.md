@@ -32,6 +32,7 @@ These rules record Jeff's artwork direction from September 23, 2026.
 
 ## Summoned Mage — approved September 23, 2026
 
+- The opening summoning circle is inside a natural cave, not a castle or masonry chamber. Its surrounding candles are unlit at the opening (October 3 clarification).
 - Use the first four drawings in `summoned-mage/2026-09-23/` as the approved narrative treatment: rich pencil texture, fine ink contours, warm fantasy color, expressive named characters and natural worn materials.
 - The reader's hero wears a charcoal-teal cloak with a raised hood, charcoal full gloves, covered trousers and boots; retain the identity concealment rules above. When Honey sits on the hero's head, show him on the raised hood.
 - Honey's body is grapefruit-sized. Keep him smaller than a person's head, including in group scenes.

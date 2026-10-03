@@ -20,9 +20,11 @@ layouts and 12 purchase/restore/revocation/recovery flows. Signed iOS Release
 bundle and all 189 web assets verified. All 58 protected source/draft/Python files
 match the existing SHA256 baseline. Existing lint and bundle-size warnings remain.
 
-Proposed next artwork: inside the garage, the Mage's circle with unlit candles,
-and the Space Walker's windowed metal corridor. These are discussion notes;
-welcome artwork has not been replaced in this change.
+Follow-up: all three interior welcome illustrations are now integrated. The
+Mage's circle is inside a natural cave per Jeff's correction. Sources, prompts,
+verification and the gallery are in `../artwork/welcome-interiors/2026-10-03/`.
+The welcome page accepts swipes over its illustration as well as text, while
+taps open the existing image viewer.
 
 ## Historical review — September 23, 2026
 

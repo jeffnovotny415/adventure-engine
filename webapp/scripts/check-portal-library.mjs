@@ -55,6 +55,17 @@ try {
   await page.locator('.persistence-notice button').first().click();
   await page.locator('[data-screen=welcome]').waitFor();
   assert.equal(await page.locator('.welcome-copy h1').textContent(),title);
+  const illustration=page.locator('.welcome-interior img');
+  await illustration.evaluate(image=>image.decode());
+  assert.ok((await illustration.getAttribute('src')).startsWith('/images/welcome/'));
+  await page.locator('.welcome-interior button').click();
+  await page.locator('.image-viewer[open]').waitFor();
+  await page.getByRole('button',{name:'Zoom in',exact:true}).click();
+  assert.equal(await page.locator('.image-viewer__canvas').getAttribute('data-zoom'),'1.50');
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator(':focus').getAttribute('class'),'scene-image__open');
+  assert.equal(await page.locator('[data-screen=welcome]').count(),1,'Viewing art must not turn the welcome page');
+
   const box=await page.locator('.welcome-description').boundingBox();
   await page.mouse.move(box.x+box.width*.8,box.y+20);await page.mouse.down();await page.mouse.move(box.x+box.width*.8-15,box.y+20,{steps:6});await page.mouse.up();
   assert.equal(await page.locator('[data-screen=welcome]').count(),1,'short swipe should cancel');

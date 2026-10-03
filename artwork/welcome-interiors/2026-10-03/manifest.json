@@ -1,0 +1,39 @@
+{
+  "generation": "built-in image_gen",
+  "date": "2026-10-03",
+  "assets": [
+    {
+      "id": "can-opener",
+      "title": "The Can Opener",
+      "source": "artwork/welcome-interiors/2026-10-03/can-opener-interior-v1.png",
+      "asset": "webapp/public/images/welcome/can-opener-interior-v1.webp",
+      "width": 1024,
+      "height": 1536,
+      "alpha_preserved": true,
+      "sha256": "7e2334e72f6c8223eb6be2135bcd52a95fba0c1bc9e842e73fdb736b6fda379a",
+      "asset_sha256": "3659f60b6b8c1108404a4bf222892d83e562ebc522b8636d7be7d76b647fcdc6"
+    },
+    {
+      "id": "summoned-mage",
+      "title": "The Summoned Mage",
+      "source": "artwork/welcome-interiors/2026-10-03/summoned-mage-interior-v2.png",
+      "asset": "webapp/public/images/welcome/summoned-mage-interior-v2.webp",
+      "width": 1024,
+      "height": 1536,
+      "alpha_preserved": true,
+      "sha256": "c0eeb2d8bb4d4b70996c9131fff1fb31bdd2485b538869b7d7cd7c7f5fa6053f",
+      "asset_sha256": "20a42dacb057a4ef95c9bc74415efa4b16357dd48930082cd3feff56a20f36b9"
+    },
+    {
+      "id": "space-walker",
+      "title": "The Space Walker",
+      "source": "artwork/welcome-interiors/2026-10-03/space-walker-interior-v1.png",
+      "asset": "webapp/public/images/welcome/space-walker-interior-v1.webp",
+      "width": 1024,
+      "height": 1536,
+      "alpha_preserved": true,
+      "sha256": "e78bfe3c43d353b5f6ce0fb50e15f6bdd4899cabedf7c3c090593e8a42fcc5df",
+      "asset_sha256": "3abcfc989d0b479d43e1bffe62d003c8ecac241564b44c1fe48c912459cce507"
+    }
+  ]
+}

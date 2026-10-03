@@ -1,0 +1,20 @@
+{
+  "the_can_opener": {
+    "src": "/images/welcome/can-opener-interior-v1.webp",
+    "alt": "Inside the garage: a worn workbench, hanging tools and a softly glowing computer, ready for a new invention.",
+    "width": 1024,
+    "height": 1536
+  },
+  "summoned_mage": {
+    "src": "/images/welcome/summoned-mage-interior-v2.webp",
+    "alt": "An empty summoning circle surrounded by unlit candles inside a quiet, rugged cave.",
+    "width": 1024,
+    "height": 1536
+  },
+  "space_walker": {
+    "src": "/images/welcome/space-walker-interior-v1.webp",
+    "alt": "Inside the spaceship: an empty steel corridor, warm amber lights and broad windows looking out onto the stars.",
+    "width": 1024,
+    "height": 1536
+  }
+}

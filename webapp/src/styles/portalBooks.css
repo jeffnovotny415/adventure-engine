@@ -200,6 +200,10 @@
 .portal-design .book-feature { container-type:inline-size; }
 .portal-design .book-shelf { scroll-padding-inline:48px; }
 .portal-design .welcome-portal img { display:block; }
+.portal-design .welcome-interior .scene-image { margin:0; height:100%; }
+.portal-design .welcome-interior .scene-image__open { display:block; height:100%; width:100%; }
+.portal-design .welcome-interior .scene-image__img { mix-blend-mode:normal; }
+.portal-design .open-book[data-dragging] { user-select:none; -webkit-user-select:none; cursor:grabbing; }
 .portal-design .saved-place strong { display:block; }
 .portal-design .book-details h2,.portal-design .book-summary { overflow-wrap:anywhere; }
 /* Accessibility sizing reflows each card without changing the tablet's carousel. */

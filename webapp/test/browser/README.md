@@ -185,3 +185,15 @@ screenshots. Both use `READER_URL` and `PLAYWRIGHT_MODULE` as above.
 `node scripts/check-purchases.mjs` includes starting the free opening again when
 a saved chapter is behind the purchase boundary, including failure recovery.
 Use isolated test browser contexts: the purchase fixture clears their storage.
+
+## Welcome illustrations and gestures
+
+`welcome-gestures.html?story=summoned_mage` previews the real welcome component
+without accessing saves. Use any live story ID. Run
+`node scripts/check-welcome-gestures.mjs` with `PLAYWRIGHT_MODULE`/`READER_URL` for
+phone portrait, short landscape and tablet gesture checks. It covers swipes from
+both illustration and text, a flick after resting, short/reversed/vertical
+gestures, two-finger cancellation, capture handoff, fresh image taps and Reduced
+Motion. Synthetic touch tests validate event routing; test real iOS swipes and
+pinch on devices as well. `check-portal-library.mjs` also checks all three welcome
+images, enlargement, zoom, close/focus restoration and subsequent page turns.
