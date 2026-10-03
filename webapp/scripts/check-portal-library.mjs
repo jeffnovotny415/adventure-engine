@@ -31,7 +31,6 @@ try {
   await page.locator('.story-shell').waitFor();assert.equal(await page.locator('[data-screen=welcome]').count(),0);
   await page.reload();await page.getByRole('button',{name:'Open The Can Opener',exact:true}).click();
   await page.locator('dialog[open]').getByRole('button',{name:'Start again',exact:true}).click();
-  await page.locator('dialog[open]').getByRole('button',{name:'Start again',exact:true}).click();
   await page.locator('[data-screen=welcome]').waitFor();
   await page.getByRole('button',{name:'Turn the page',exact:true}).click();await page.locator('.story-shell').waitFor();
   await page.close();

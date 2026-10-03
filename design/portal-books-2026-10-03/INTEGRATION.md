@@ -6,12 +6,11 @@ October 3, 2026. The approved proof is now integrated in the production app.
 - iPhone: alternating book/copy rows. iPad: horizontal swipe carousel, page dots,
   and Previous/Next alternatives. Leather covers retain full-length spines and
   page blocks; The Summoned Mage uses plum.
-- Existing saved passages, purchase management, developer controls and restart
-  confirmation remain available. Returning to the library restores the selected
+- Existing saved passages, purchase management, developer controls and the saved-place dialog remain available. Returning to the library restores the selected
   carousel book.
 - New adventure: book cover → hero setup → welcome page → first scene.
 - Continue: saved-place dialog → saved scene, skipping welcome.
-- Confirmed restart: existing save safeguards → welcome → first scene.
+- Start again (one tap, no second confirmation): existing save safeguards → welcome → first scene.
 - Welcome pages use new interface copy in `src/content/ui_copy.json`. Story files,
   choices, authored descriptions, entry intros, Python sources and drafts are
   unchanged. No save schema changes.

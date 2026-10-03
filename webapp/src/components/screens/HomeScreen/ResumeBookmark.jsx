@@ -1,21 +1,12 @@
-import { useEffect, useId, useRef, useState } from 'react';
+import { useEffect, useId, useRef } from 'react';
 import { doorArtwork } from './doorArtwork';
 import { useContent } from '../../../hooks/useContent';
 
 export function ResumeBookmark({ story, bookmark, onClose, onResume, onStartAgain, onBegin }) {
   const { getText } = useContent();
-  const [restarting, setRestarting] = useState(false);
   const dialogRef = useRef(null);
   const titleId = useId();
   const chapterId = useId();
-  const cancelRestartRef = useRef(null);
-  const restartRef = useRef(null);
-  const previousRestarting = useRef(false);
-  useEffect(() => {
-    if (restarting) cancelRestartRef.current?.focus();
-    else if (previousRestarting.current) restartRef.current?.focus();
-    previousRestarting.current = restarting;
-  }, [restarting]);
   useEffect(() => {
     const dialog = dialogRef.current;
     const previousFocus = document.activeElement;
@@ -39,19 +30,12 @@ export function ResumeBookmark({ story, bookmark, onClose, onResume, onStartAgai
     <div className="doorway-entry__content">
       <img className="doorway-entry__art" src={doorArtwork(story.id)} width="1024" height="1536" alt="" />
       <div className="resume-bookmark__body">
-      {restarting ? <>
-        <p className="resume-bookmark__chapter">{getText('home.bookmark_restart_heading')}</p>
-        <p id={chapterId}>{getText('home.bookmark_restart_help')}</p>
-        <div className="resume-bookmark__actions">
-          <button ref={cancelRestartRef} type="button" className="primary-button" onClick={() => setRestarting(false)}>{getText('home.bookmark_restart_cancel')}</button>
-          <button type="button" className="text-button" onClick={onStartAgain}>{getText('home.bookmark_restart')}</button>
-        </div>
-      </> : bookmark ? <>
+      {bookmark ? <>
         <p className="muted">{getText('home.bookmark_location')}</p>
         <p id={chapterId} className="resume-bookmark__chapter">{bookmark.sceneTitle}</p>
         <div className="resume-bookmark__actions">
           <button type="button" className="primary-button" onClick={onResume}>{getText('home.bookmark_continue')}</button>
-          <button ref={restartRef} type="button" className="text-button" onClick={() => setRestarting(true)}>{getText('home.bookmark_restart')}</button>
+          <button type="button" className="text-button" onClick={onStartAgain}>{getText('home.bookmark_restart')}</button>
         </div>
       </> : <>
         <p id={chapterId}>{story.description}</p>

@@ -48,18 +48,12 @@ export function Fixture() {
         dialog = document.querySelector('dialog[open]');
         if (bookmark) {
           if (dialog.querySelector('.resume-bookmark__chapter').textContent !== bookmark.sceneTitle) throw Error('Wrong saved place');
-          dialog.querySelector('.resume-bookmark__actions .text-button').click(); await frame();
-          if (document.activeElement.textContent !== 'Keep my place') throw Error('Safe action not focused');
-          if (document.querySelector('[data-last-action]').textContent !== previousAction) throw Error('Unconfirmed restart');
-          dialog.querySelector('.primary-button').click(); await frame();
-          if (dialog.querySelector('.resume-bookmark__chapter').textContent !== bookmark.sceneTitle) throw Error('Cancel lost place');
         } else if (dialog.querySelector('.resume-bookmark__body p').textContent !== stories[id].description) throw Error('Description changed');
         dialog.querySelector('.primary-button').click(); await frame();
         if (document.querySelector('[data-last-action]').textContent !== `${bookmark ? 'resume' : 'open'}:${id}`) throw Error('Wrong route');
         if (bookmark) {
           book.click(); await frame();
           dialog = document.querySelector('dialog[open]');
-          dialog.querySelector('.resume-bookmark__actions .text-button').click(); await frame();
           dialog.querySelector('.resume-bookmark__actions .text-button').click(); await frame();
           if (document.querySelector('[data-last-action]').textContent !== `restart:${id}`) throw Error('Wrong restart route');
         }

@@ -1,4 +1,4 @@
-# Portal books — design proof 02
+# Portal books — design proof 03
 
 October 3, 2026. This isolated proof is retained for review. The approved direction
 is now integrated into the production app; see [INTEGRATION.md](INTEGRATION.md).
@@ -9,7 +9,7 @@ http://127.0.0.1:5190/test/browser/portal-proof/
 
 The review controls switch between iPad landscape (1024×768) and iPhone portrait (390×844), the orientations Jeff selected. The selected device frame scales to the browser without changing its layout when the browser rotates or resizes. “Open device preview” preserves the chosen device. Choose a welcome page directly to inspect any book. The proof supports 200% text and Reduced Motion.
 
-These fixed frames demonstrate the requested landing orientation. They do not lock the physical device. Native per-screen orientation enforcement remains part of production integration; do not globally restrict the reader’s existing rotation behavior as a side effect.
+These fixed frames demonstrate the requested landing orientation. They do not lock the physical device. Native per-screen orientation enforcement is integrated; do not globally restrict the reader’s existing rotation behavior as a side effect.
 
 ## Proposed direction
 
@@ -21,7 +21,7 @@ These fixed frames demonstrate the requested landing orientation. They do not lo
 
 ## Files and boundaries
 
-The isolated entry point is `webapp/test/browser/portal-proof/index.html`. New interface copy is in its `ui_copy.json`. Existing story JSON is imported read-only for titles and sample passages. No changes were made to authored story, draft or Python files, the production landing page, onboarding or save formats.
+The isolated entry point is `webapp/test/browser/portal-proof/index.html`. New interface copy is in its `ui_copy.json`. Existing story JSON is imported read-only for titles and sample passages. No changes were made to authored story, draft or Python files or save formats. The approved library/welcome is integrated separately as described in INTEGRATION.md.
 
 The leather framing is a CSS composition of existing assets, not replacement production cover artwork. The brief cover-opening and page-turn treatments demonstrate direction; integration with the production reader’s finger-tracked page-turn implementation remains a separate step after design approval. The real hero-name setup and purchases are outside this proof.
 
@@ -34,3 +34,22 @@ The leather framing is a CSS composition of existing assets, not replacement pro
 - Protected story/draft/Python files compared byte-for-byte with the pre-work snapshot.
 
 Static captures sit beside this file for review away from the local server. They show the iPad/iPhone library and The Can Opener welcome. All three welcome pages are interactive in the proof.
+
+## Closed-door transition, October 3
+
+The Can Opener closed-door painting is approved. The proof now hinges the door
+inward inside its stationary arch, then moves through to the welcome page.
+Continuing a sample save uses the same transition directly to the saved scene.
+Reduced Motion skips the movement. Other books still use the earlier cover turn;
+this motion is a proof, not yet in the production app.
+
+The production saved-place dialog now has one-tap Continue or Start again, with
+no second restart confirmation. Existing persistence error handling is retained.
+
+WebKit verified the new motion on iPhone portrait and iPad landscape, normal and
+Reduced Motion, new/continue/restart destinations and no browser errors. The
+production library check passed five viewport sizes and 100/200/312% text,
+including saved-place flows and failed-write recovery. Lint/build passed with
+the existing two lint warnings and bundle-size advisory.
+
+See [DOOR_TRANSITION.md](DOOR_TRANSITION.md) for the saved artwork and exact prompt.
