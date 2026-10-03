@@ -27,10 +27,15 @@ try {
   await page.getByRole('button',{name:'Turn the page',exact:true}).click();
   await page.locator('.story-shell').waitFor();
   await page.reload();await page.getByRole('button',{name:'Open The Can Opener',exact:true}).click();
-  await page.locator('dialog[open]').getByRole('button',{name:'Continue reading',exact:true}).click();
   await page.locator('.story-shell').waitFor();assert.equal(await page.locator('[data-screen=welcome]').count(),0);
   await page.reload();await page.getByRole('button',{name:'Open The Can Opener',exact:true}).click();
-  await page.locator('dialog[open]').getByRole('button',{name:'Start again',exact:true}).click();
+  await page.locator('.story-shell').waitFor();
+  assert.equal(await page.locator('.saved-place').count(),0);
+  await page.getByRole('button',{name:'Reading settings',exact:true}).click();
+  await page.getByRole('button',{name:'Start again',exact:true}).click();
+  await page.getByRole('button',{name:'Keep my place',exact:true}).click();
+  await page.getByRole('button',{name:'Start again',exact:true}).click();
+  await page.getByRole('button',{name:'Start again',exact:true}).click();
   await page.locator('[data-screen=welcome]').waitFor();
   await page.getByRole('button',{name:'Turn the page',exact:true}).click();await page.locator('.story-shell').waitFor();
   await page.close();
@@ -60,5 +65,5 @@ try {
  await page.getByRole('button',{name:'Run bookshelf checks',exact:true}).click();
  await page.getByRole('status').filter({hasText:'PASS:'}).waitFor();
  await page.close();
- assert.deepEqual(errors,[]);console.log('PASS: five viewports at 100/200/312% text; new/resume/restart flows; all welcome identities; failed-save retries; short/complete swipes; bookshelf dialogs; no browser errors.');
+ assert.deepEqual(errors,[]);console.log('PASS: five viewports at 100/200/312% text; new/resume/restart flows; all welcome identities; failed-save retries; short/complete swipes; direct bookshelf entry and restart confirmation; no browser errors.');
 } finally {await browser.close();}

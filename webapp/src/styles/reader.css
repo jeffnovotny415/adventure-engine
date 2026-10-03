@@ -213,6 +213,10 @@
 .reading-settings[open] { display: flex; flex-direction: column; }
 .reading-settings__header { flex-shrink: 0; margin: 0; padding: 12px 20px; border-bottom: 1px solid var(--color-border); }
 .reading-settings__body { padding: 18px 20px 22px; overflow: auto; min-height: 0; overscroll-behavior: contain; }
+.reading-settings__book-actions { flex-shrink:0; padding:8px 20px; border-top:1px solid var(--color-border); }
+.reading-settings__book-actions button, .reading-settings__restart-actions button { min-height:44px; }
+.reading-settings__restart-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; justify-content:flex-end; }
+.reading-settings__restart-confirm p { margin:0; line-height:1.5; }
 /* Keep navigation compact enough to leave a usable scroll area on short phones,
    including at the largest system text category. Book text remains uncapped. */
 .reading-settings--reader > .reading-settings__header { flex-wrap: nowrap; }

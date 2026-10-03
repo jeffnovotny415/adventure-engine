@@ -170,11 +170,18 @@ decision to its passage before undoing another choice. No real saves are used.
 
 Open `test/browser/bookshelf.html` and run **Run bookshelf checks**. The fixture
 uses synthetic bookmarks and never accesses adventure saves. Use `?bookmarks=0`,
-`?bookmarks=2`, and `?bookmarks=3`, plus `&large&long` (200% and long chapter names)
-or `&system` (largest simulated iOS body size). Test 667×375, 568×320, 1024×768,
-390×844, and 320×568. Verify all doors open the right sheet, Begin/Continue route
-correctly, restart requires confirmation, and X/Escape restores door focus.
-Rotate with the sheet open. Large text may scroll vertically but must not overflow
-sideways. In the actual app, verify Begin reaches hero setup, resume retains a
-real saved chapter, Saved passages opens, and library purchase management remains
-available. The wordmark must contain only lettering, with no sliver of book art.
+`?bookmarks=2`, and `?bookmarks=3`, plus `&large&long` or `&system`.
+Saved books now resume directly; new books enter hero setup. No saved-place text
+or entry sheet should appear. The wordmark contains only lettering.
+
+Run `node scripts/check-portal-library.mjs` for all three welcome pages and
+phone/tablet/short landscape layouts at 100/200/312% text. It verifies direct
+resume skips welcome, and Reading settings → Start again shows it again after
+one confirmation. `node scripts/check-direct-resume.mjs` checks exact page
+restoration, focus/cancel, failed writes, retry and preservation of other books
+and reading preferences. Optional `SCREENSHOT_DIR` saves library/confirmation
+screenshots. Both use `READER_URL` and `PLAYWRIGHT_MODULE` as above.
+
+`node scripts/check-purchases.mjs` includes starting the free opening again when
+a saved chapter is behind the purchase boundary, including failure recovery.
+Use isolated test browser contexts: the purchase fixture clears their storage.

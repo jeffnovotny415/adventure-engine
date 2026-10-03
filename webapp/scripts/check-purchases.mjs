@@ -12,12 +12,11 @@ async function fixture(story, extra = '', viewport = sizes[0]) {
   const page = await context.newPage(); page.setDefaultTimeout(8000);
   page.on('pageerror', e => errors.push(e.message));
   await page.goto(`${base}/test/browser/purchases.html?story=${story}${extra}`);
-  await page.locator('.story-door').first().waitFor();
+  await page.locator('.cover-button').first().waitFor();
   return { page, context };
 }
 async function resume(page) {
-  await page.locator('.story-door[data-resumable="true"]').click();
-  await page.getByRole('button', {name:'Continue reading',exact:true}).click();
+  await page.locator('.book-feature[data-resumable="true"] .cover-button').click();
 }
 async function boundary(page, story) {
   await resume(page);
@@ -107,6 +106,26 @@ try {
     await page.getByRole('button',{name:'Restore purchases',exact:true}).click();
     await page.getByRole('button',{name:'Close library unlock',exact:true}).click();
     await page.locator('.saved-passage').waitFor();
+    flows++; await context.close();
+  }
+  {
+    const {page,context} = await fixture('space_walker','&scene=scene_050');
+    const before = await save(page); await resume(page);
+    await page.getByRole('button',{name:'Start again',exact:true}).click();
+    await checkDialog(page);
+    assert.equal(await page.locator(':focus').textContent(),'Keep my place');
+    await page.getByRole('button',{name:'Keep my place',exact:true}).click();
+    assert.equal(await save(page),before);
+    await page.getByRole('button',{name:'Start again',exact:true}).click();
+    await page.evaluate(() => { window.originalWrite = Storage.prototype.setItem; Storage.prototype.setItem = () => { throw new DOMException('test','QuotaExceededError'); }; });
+    await page.getByRole('button',{name:'Start again',exact:true}).click();
+    await page.locator('.persistence-notice').waitFor();
+    assert.equal(await page.locator('dialog[open]').count(),0,'Recovery must remain accessible');
+    assert.equal(await save(page),before,'Failed restart preserves locked progress');
+    await page.evaluate(() => { Storage.prototype.setItem = window.originalWrite; });
+    await page.locator('.persistence-notice button').first().click();
+    await page.locator('[data-screen=welcome]').waitFor();
+    assert.equal(JSON.parse(await save(page)).books.space_walker.currentSceneId,'scene_001');
     flows++; await context.close();
   }
   assert.deepEqual(errors,[]);

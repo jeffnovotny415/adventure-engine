@@ -5,18 +5,15 @@ import { PortalCover } from './PortalCover';
 import '../../../styles/portalBooks.css';
 import '../../../styles/doorwayLibrary.css';
 import { AppHeader } from '../../shared/AppHeader/AppHeader';
-import { ResumeBookmark } from './ResumeBookmark';
 import { PassageBookmarks } from '../../shared/BookReader/PassageBookmarks';
 import { usePurchases } from '../../../hooks/usePurchases';
 import { LibraryUnlock } from '../../shared/LibraryUnlock/LibraryUnlock';
 
 const DOOR_ORDER = ['the_can_opener', 'summoned_mage', 'space_walker'];
 
-export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onStartAgain, onDeveloperMode, initialBookId, onBrowse }) {
+export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory, onDeveloperMode, initialBookId, onBrowse }) {
   const { getText } = useContent();
   const [passagesOpen, setPassagesOpen] = useState(false);
-  const [selectedStory, setSelectedStory] = useState(null);
-  const selectedBookmark = bookmarks.find(saved => saved.storyId === selectedStory?.id);
   const mainRef = useRef(null);
   const purchases = usePurchases();
   const [unlockOpen, setUnlockOpen] = useState(false);
@@ -47,12 +44,10 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
   function open(story) {
     if (openingTimer.current) return;
     onBrowse?.(story.id);
-    if (bookmarks.some(saved => saved.storyId === story.id)) setSelectedStory(story);
-    else enter(story.id, onSelectStory);
+    enter(story.id, bookmarks.some(saved => saved.storyId === story.id) ? onContinue : onSelectStory);
   }
   function enter(id, action) {
     if (openingTimer.current) return;
-    setSelectedStory(null);
     const images = shelfRef.current?.querySelector(`[data-book="${id}"] .door-portal`)?.querySelectorAll('img');
     // A slow/missing image should never delay entry or flash during the dissolve.
     if (matchMedia('(prefers-reduced-motion: reduce)').matches || !images?.length || [...images].some(image => !image.complete || !image.naturalWidth)) {
@@ -87,11 +82,10 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
             const info = getText(`portal_library.books.${story.id}`);
             const art = story.id === 'the_can_opener' ? 'can-opener' : story.id.replaceAll('_','-');
             return <article className={`book-feature ${art} ${opening===story.id?'is-opening':''}`} data-book={story.id} data-resumable={Boolean(bookmark)} key={story.id}>
-              <button type="button" className="cover-button" aria-haspopup={bookmark ? 'dialog' : undefined} aria-label={`${getText('portal_library.open')} ${story.title}`} onClick={() => open(story)}><PortalCover story={story} playing={opening === story.id && motionOpening} onMotionReady={onMotionReady} /></button>
+              <button type="button" className="cover-button" aria-label={`${getText('portal_library.open')} ${story.title}`} onClick={() => open(story)}><PortalCover story={story} playing={opening === story.id && motionOpening} onMotionReady={onMotionReady} /></button>
               <div className="book-details">
                 <span className="book-number" aria-hidden="true">0{i+1}</span><p className="eyebrow">{info.genre}</p><h2>{story.title}</h2><p className="book-summary">{info.summary}</p>
-                {bookmark && <p className="saved-place">{getText('portal_library.saved')}<strong>{bookmark.sceneTitle}</strong></p>}
-                <button type="button" className="read-button" aria-haspopup={bookmark ? 'dialog' : undefined} onClick={() => open(story)}>{getText(bookmark ? 'home.bookmark_continue' : 'home.open_book')}<span aria-hidden="true">→</span></button>
+                <button type="button" className="read-button" onClick={() => open(story)}>{getText(bookmark ? 'home.bookmark_continue' : 'home.open_book')}<span aria-hidden="true">→</span></button>
                 <span className="choice-note">{getText('portal_library.choice_note')}</span>
               </div>
             </article>;
@@ -103,10 +97,6 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
           <button type="button" aria-label={getText('portal_library.next')} disabled={index===orderedStories.length-1} onClick={()=>navigate(index+1)}>→</button>
         </nav>
         <p className="library-footnote">{getText('portal_library.footer')}</p>
-        {selectedStory && <ResumeBookmark story={selectedStory} bookmark={selectedBookmark} onClose={() => setSelectedStory(null)}
-          onBegin={() => enter(selectedStory.id, onSelectStory)}
-          onStartAgain={() => enter(selectedStory.id, onStartAgain)}
-          onResume={() => enter(selectedStory.id, onContinue)} />}
         {passagesOpen && <PassageBookmarks portalTarget={mainRef.current} onClose={() => setPassagesOpen(false)} />}
       </main>
       <footer className="library-footer">

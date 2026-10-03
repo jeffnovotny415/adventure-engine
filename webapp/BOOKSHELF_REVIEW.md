@@ -1,4 +1,30 @@
-# Bookshelf bookmark review — September 23, 2026
+# Library entry review
+
+## October 3, 2026 — direct resume
+
+The production portal-book library now opens a saved book directly at its saved
+reading position. Removed the saved chapter text and resume/restart preview from
+the library. Existing cover art, door motion and Saved passages remain unchanged.
+
+Start again is available in Reading settings, with one confirmation and Keep my
+place focused by default. Cancellation preserves progress. Confirming starts the
+same hero at the welcome page, preserving reading preferences and other books.
+A saved book behind the purchase boundary also offers this restart path. Failed
+writes keep the existing save and expose retry/home recovery outside any dialog.
+The welcome page appears for a new start or restart, never normal resume.
+
+Verification: 140 unit tests, lint, story diagnostics and production build;
+WebKit library checks at five viewports and 100/200/312% text; exact reading-page
+restoration, confirmation focus/cancel, failed restart and retry; 36 purchase
+layouts and 12 purchase/restore/revocation/recovery flows. Signed iOS Release
+bundle and all 189 web assets verified. All 58 protected source/draft/Python files
+match the existing SHA256 baseline. Existing lint and bundle-size warnings remain.
+
+Proposed next artwork: inside the garage, the Mage's circle with unlit candles,
+and the Space Walker's windowed metal corridor. These are discussion notes;
+welcome artwork has not been replaced in this change.
+
+## Historical review — September 23, 2026
 
 The iPhone shelf previously stacked a separate resume card for each saved story above the books. Saved stories now have a ribbon on their book. The ribbon opens a preview with the story title, current chapter, Close, Continue reading, and Start again. Start again requires a second deliberate confirmation, with Keep my place initially focused. The original book titles, descriptions, ornament, leather, and individual wear remain. Tapping a saved book opens the same preview as its ribbon; an unsaved book opens hero setup. Confirmed restart preserves that book’s hero/world names and reading preferences through the existing checked persistence path.
 

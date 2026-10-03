@@ -20,16 +20,20 @@ function Options({ name, value, onChange, getText }) {
 }
 
 export function ReadingSettings({ textScale, onChange, onClose, nativeReading,
-  pageHaptics, onPageHapticsChange, readingStyle, onReadingStyleChange, portalTarget }) {
+  pageHaptics, onPageHapticsChange, readingStyle, onReadingStyleChange, portalTarget, onRestart }) {
   const { getText } = useContent();
   const dialogRef = useRef(null);
   const sliderRef = useRef(null);
   const bodyRef = useRef(null);
   const tabsRef = useRef([]);
   const [section, setSection] = useState('text');
+  const [confirmRestart, setConfirmRestart] = useState(false);
+  const restartButton = useRef(null), keepPlaceButton = useRef(null), restarting = useRef(false);
+  const confirmationWasOpen = useRef(false);
   const sectionId = useId();
   const titleId = useId();
   const sizeId = useId();
+  const restartHelpId = useId();
   const index = Math.max(0, TEXT_SCALES.indexOf(textScale));
   const percent = `${Math.round(textScale * 100)}%`;
   const preset = matchingReadingPreset(textScale, readingStyle);
@@ -61,13 +65,31 @@ export function ReadingSettings({ textScale, onChange, onClose, nativeReading,
       if (previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
     };
   }, []);
+  useEffect(() => {
+    if (confirmRestart) keepPlaceButton.current?.focus();
+    else if (confirmationWasOpen.current) restartButton.current?.focus();
+    confirmationWasOpen.current = confirmRestart;
+  }, [confirmRestart]);
   return createPortal(
     <dialog ref={dialogRef} className="reading-settings reading-settings--reader" aria-labelledby={titleId}
-      onCancel={(event) => { event.preventDefault(); onClose(); }}>
+      aria-describedby={confirmRestart ? restartHelpId : undefined}
+      onCancel={(event) => { event.preventDefault(); if (confirmRestart) setConfirmRestart(false); else onClose(); }}>
       <header className="reading-settings__header">
-        <h2 id={titleId}>{getText('reader.text_size')}</h2>
-        <button type="button" className="text-button" onClick={onClose}>{getText('reader.settings_done')}</button>
+        <h2 id={titleId}>{getText(confirmRestart ? 'home.bookmark_restart_heading' : 'reader.text_size')}</h2>
+        {!confirmRestart && <button type="button" className="text-button" onClick={onClose}>{getText('reader.settings_done')}</button>}
       </header>
+      {confirmRestart ? <div className="reading-settings__body reading-settings__restart-confirm">
+        <p id={restartHelpId}>{getText('home.bookmark_restart_help')}</p>
+        <div className="reading-settings__restart-actions">
+          <button type="button" className="text-button" onClick={() => {
+            if (restarting.current) return;
+            restarting.current = true;
+            onClose();
+            onRestart();
+          }}>{getText('home.bookmark_restart')}</button>
+          <button ref={keepPlaceButton} type="button" className="primary-button" onClick={() => setConfirmRestart(false)}>{getText('home.bookmark_restart_cancel')}</button>
+        </div>
+      </div> : <>
       <div className="reading-settings__tabs" role="tablist" aria-label={getText('reader.settings_sections')}>
         {SECTIONS.map((name, index) => <button type="button" role="tab" key={name}
           ref={element => { tabsRef.current[index] = element; }} data-section={name}
@@ -130,6 +152,10 @@ export function ReadingSettings({ textScale, onChange, onClose, nativeReading,
       <p className="reading-settings__help">{getText(nativeReading?.voiceOver ? 'reader.voiceover_help' : 'reader.gesture_help')}</p>
       </div>
       </div>
+      {onRestart && <footer className="reading-settings__book-actions">
+        <button ref={restartButton} type="button" className="text-button" onClick={() => setConfirmRestart(true)}>{getText('home.bookmark_restart')}</button>
+      </footer>}
+      </>}
     </dialog>, portalTarget ?? document.body
   );
 }

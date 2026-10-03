@@ -296,6 +296,7 @@ export function BookReader({ storyTitle, title, intro, body, image, choices, onC
         onReadingStyleChange={(patch) => { saveScrollRef.current(); cancelTurn(); onReadingStyleChange?.(patch); }}
         pageHaptics={pageHaptics} onPageHapticsChange={onPageHapticsChange}
         onChange={(scale) => { cancelTurn(); onTextScaleChange?.(scale); }}
+        onRestart={testing ? undefined : onRestart}
         onClose={() => setSettingsOpen(false)} />}
       {bookmarkPassage && <PassageBookmarks currentPassage={bookmarkPassage} storage={passageStorage}
         portalTarget={mainRef.current} onClose={() => setBookmarkPassage(null)} />}

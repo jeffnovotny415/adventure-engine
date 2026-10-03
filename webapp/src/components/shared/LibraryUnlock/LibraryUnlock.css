@@ -7,6 +7,7 @@
 .library-unlock button { min-width: 44px; min-height: 44px; white-space: normal; }
 .library-unlock__buy { width: 100%; margin-top: 4px; }
 .library-unlock .library-unlock__status { margin-top: 12px; }
+.library-unlock .reading-settings__body.reading-settings__restart-confirm { display: block; }
 .library-unlock__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; }
 .library-access { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 16px; font-size: clamp(14px, .9rem, 20px); }
 .library-access p { margin: 0; }

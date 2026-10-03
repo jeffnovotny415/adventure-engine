@@ -116,15 +116,6 @@ export default function App() {
     setScreen(SCREENS.HERO_SETUP);
   }
 
-  function handleStartAgain(storyId) {
-    const result = loadSave(storiesWithScenes, undefined, storyId);
-    if (result.status !== 'valid') { showSaveResult(result); return; }
-    setPendingStoryId(storyId);
-    persistenceDestination.current = SCREENS.WELCOME;
-    showSaveResult(startNewGame(storyId, result.save.heroName, result.save.worldName,
-      storiesWithScenes[storyId].start_scene), SCREENS.WELCOME);
-  }
-
   function handleHeroSetupSubmit(heroName, worldName) {
     persistenceDestination.current = SCREENS.WELCOME;
     const story = storiesWithScenes[pendingStoryId];
@@ -269,7 +260,6 @@ export default function App() {
           onBrowse={setLibraryBookId}
           bookmarks={bookmarks}
           onContinue={handleContinue}
-          onStartAgain={handleStartAgain}
           onSelectStory={handleSelectStory}
           onDeveloperMode={purchases?.developerMode ? handleDeveloperMode : undefined}
         />
@@ -302,6 +292,7 @@ export default function App() {
             image={displayText.image}
             choices={choices}
             onChoose={handleChoose}
+            onRestart={handleRestart}
             onHome={goHome}
             textScale={textScale}
             readingStyle={bookStyle}
@@ -344,7 +335,9 @@ export default function App() {
           />
         </div>
       )}
-      {(readerBlocked || unlockRequest) && <LibraryUnlock boundary onClose={() => readerBlocked ? goHome() : setUnlockRequest(null)} />}
+      {((readerBlocked && !persistenceError) || unlockRequest) && <LibraryUnlock boundary
+        onRestart={readerBlocked ? handleRestart : undefined}
+        onClose={() => readerBlocked ? goHome() : setUnlockRequest(null)} />}
     </div>
   );
 }

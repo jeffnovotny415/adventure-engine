@@ -37,31 +37,12 @@ export function Fixture() {
         const bounds = book.getBoundingClientRect();
         if (bounds.height < 44 || bounds.width < 44) throw Error('Touch target too small');
         if (book.getAttribute('aria-label') !== `Open ${stories[id].title}`) throw Error('Wrong action label');
-        const previousAction = document.querySelector('[data-last-action]').textContent;
         book.focus(); book.click(); await frame();
-        if (!bookmark) {
-          await entryFinished();
-          if (document.querySelector('[data-last-action]').textContent !== `open:${id}`) throw Error('New book did not open');
-          continue;
-        }
-        let dialog = document.querySelector('dialog[open]');
-        if (!dialog || dialog.querySelector('h2').textContent !== stories[id].title) throw Error('Wrong story preview');
-        if (document.querySelector('[data-last-action]').textContent !== previousAction) throw Error('Preview navigated early');
-        dialog.querySelector('header button').click(); await frame();
-        if (document.activeElement !== book) throw Error('Door focus not restored');
-        book.click(); await frame();
-        dialog = document.querySelector('dialog[open]');
-        if (bookmark) {
-          if (dialog.querySelector('.resume-bookmark__chapter').textContent !== bookmark.sceneTitle) throw Error('Wrong saved place');
-        } else if (dialog.querySelector('.resume-bookmark__body p').textContent !== stories[id].description) throw Error('Description changed');
-        dialog.querySelector('.primary-button').click(); await entryFinished();
-        if (document.querySelector('[data-last-action]').textContent !== `${bookmark ? 'resume' : 'open'}:${id}`) throw Error('Wrong route');
-        if (bookmark) {
-          book.click(); await frame();
-          dialog = document.querySelector('dialog[open]');
-          dialog.querySelector('.resume-bookmark__actions .text-button').click(); await entryFinished();
-          if (document.querySelector('[data-last-action]').textContent !== `restart:${id}`) throw Error('Wrong restart route');
-        }
+        if (document.querySelector('dialog[open]')) throw Error('Book entry must not ask again');
+        await entryFinished();
+        if (document.querySelector('[data-last-action]').textContent !== `${bookmark ? 'resume' : 'open'}:${id}`) throw Error('Wrong direct route');
+        if (document.querySelector('.saved-place')) throw Error('Saved-place text should not clutter the shelf');
+
       }
       if (scale === 1 && books[0].getBoundingClientRect().top >= innerHeight) throw Error('Doors pushed below viewport');
       setResult('PASS: every book once, correct resume/open routes, named controls, touch targets, no overflow');
@@ -69,7 +50,7 @@ export function Fixture() {
   }
   return <div className="app-shell" data-theme="shell">
     <HomeScreen stories={stories} bookmarks={bookmarks}
-      onStartAgain={id => setLastAction(`restart:${id}`)} onContinue={id => setLastAction(`resume:${id}`)} onSelectStory={id => setLastAction(`open:${id}`)} onDeveloperMode={() => {}} />
+      onContinue={id => setLastAction(`resume:${id}`)} onSelectStory={id => setLastAction(`open:${id}`)} onDeveloperMode={() => {}} />
     <aside style={{ padding: 16 }}><button onClick={check}>Run bookshelf checks</button><p role="status">{result}</p><p data-last-action>{lastAction}</p></aside>
   </div>;
 }
