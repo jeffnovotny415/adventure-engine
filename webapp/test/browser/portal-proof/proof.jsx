@@ -17,6 +17,7 @@ const arrow = <span aria-hidden="true">→</span>;
 
 export function Cover({ book }) {
   return <span className={`book-object ${book.art}`} aria-hidden="true">
+    <span className="book-back" />
     <span className="book-pages" />
     <span className="book-cover">
       <span className="cover-spine"><i /><i /><i /></span>
@@ -111,18 +112,18 @@ export function Prototype() {
 }
 
 export function Workbench() {
-  const [device,setDevice]=useState(()=>innerWidth<650 ? 'phone' : 'tablet');
+  const [device,setDevice]=useState(()=>query.get('device') === 'phone' || (!query.has('device') && innerWidth<650) ? 'phone' : 'tablet');
   const [view,setView]=useState('library'), [book,setBook]=useState(books[0].id), [returning,setReturning]=useState(false), [large,setLarge]=useState(false);
   const [width,setWidth]=useState(1024), [revision,setRevision]=useState(0);
   const host=useRef(null);
   useEffect(()=>{const observer=new ResizeObserver(entries=>setWidth(entries[0].contentRect.width));observer.observe(host.current);return()=>observer.disconnect();},[]);
-  const dimensions=device==='tablet' ? [1024,768] : device==='landscape' ? [667,375] : [390,844];
+  const dimensions=device==='tablet' ? [1024,768] : [390,844];
   const scale=Math.min(1,width/dimensions[0]);
   const src=`./index.html?surface=1&view=${view}&book=${book}${returning?'&returning':''}${large?'&large':''}`;
-  return <div className="workbench"><header className="proof-header"><div><p className="eyebrow">Paths of Wonder · Design proof 01</p><h1>Every book, a doorway.</h1><p>New covers, two ways to browse, and a quieter welcome.</p></div><a className="fullscreen-link" href={src} target="_blank" rel="noreferrer">Open full size ↗</a></header>
-    <div className="proof-controls"><fieldset><legend>Device</legend>{[['tablet','iPad'],['phone','iPhone'],['landscape','iPhone landscape']].map(([id,title])=><button key={id} aria-pressed={device===id} onClick={()=>setDevice(id)}>{title}</button>)}</fieldset><label>Screen<select value={view} onChange={e=>setView(e.target.value)}><option value="library">Choose a book</option><option value="welcome">Welcome page</option></select></label>{view==='welcome' && <label>Book<select value={book} onChange={e=>setBook(e.target.value)}>{books.map(b=><option key={b.id} value={b.id}>{b.title}</option>)}</select></label>}<label className="check-option"><input type="checkbox" checked={returning} onChange={e=>setReturning(e.target.checked)} />Sample saved place</label><label className="check-option"><input type="checkbox" checked={large} onChange={e=>setLarge(e.target.checked)} />Large text</label><button onClick={()=>setRevision(n=>n+1)}>Reset preview</button></div>
+  return <div className="workbench"><header className="proof-header"><div><p className="eyebrow">Paths of Wonder · Design proof 02</p><h1>Every book, a doorway.</h1><p>New covers, two ways to browse, and a quieter welcome.</p></div><a className="fullscreen-link" href={`?device=${device}`} target="_blank" rel="noreferrer">Open device preview ↗</a></header>
+    <div className="proof-controls"><fieldset><legend>Fixed orientation</legend>{[['tablet','iPad · landscape'],['phone','iPhone · portrait']].map(([id,title])=><button key={id} aria-pressed={device===id} onClick={()=>setDevice(id)}>{title}</button>)}</fieldset><label>Screen<select value={view} onChange={e=>setView(e.target.value)}><option value="library">Choose a book</option><option value="welcome">Welcome page</option></select></label>{view==='welcome' && <label>Book<select value={book} onChange={e=>setBook(e.target.value)}>{books.map(b=><option key={b.id} value={b.id}>{b.title}</option>)}</select></label>}<label className="check-option"><input type="checkbox" checked={returning} onChange={e=>setReturning(e.target.checked)} />Sample saved place</label><label className="check-option"><input type="checkbox" checked={large} onChange={e=>setLarge(e.target.checked)} />Large text</label><button onClick={()=>setRevision(n=>n+1)}>Reset preview</button></div>
     <div ref={host} className="preview-host"><div className={`device-frame ${device}`} style={{width:dimensions[0]*scale,height:dimensions[1]*scale}}><iframe key={revision} src={src} title="Interactive portal book design proof" style={{width:dimensions[0],height:dimensions[1],transform:`scale(${scale})`}} /></div></div>
-    <footer className="proof-notes"><p><strong>Try it:</strong> swipe between books on iPad; scroll the alternating rows on iPhone. Open any book, then turn its welcome page.</p><p>Proposed interface copy and existing approved art. This proof does not change the installed app, story text, or saved progress. “Sample saved place” demonstrates skipping the welcome page when continuing.</p></footer>
+    <footer className="proof-notes"><p><strong>Try it:</strong> swipe between books on iPad; scroll the alternating rows on iPhone. Open any book, then turn its welcome page.</p><p><strong>Orientation:</strong> iPhone portrait and iPad landscape. These preview frames keep their orientation when the browser changes size; native landing-screen rotation locking will be part of app integration.</p><p>Proposed interface copy and existing approved art. This proof does not change the installed app, story text, or saved progress. “Sample saved place” demonstrates skipping the welcome page when continuing.</p></footer>
   </div>;
 }
 
