@@ -35,3 +35,10 @@ surface. Use `/` for the integrated app.
 
 Native checks: iPhone portrait and iPad landscape landing verified through simulator
 rotation. iPad new-book setup, welcome and entry into the real reader verified in the compiled build.
+
+## Closed-door production update
+
+All three covers now use matching closed-door artwork and the approved quiet
+dissolve, followed by a short fade. There is no camera zoom or rotating cutout.
+Continue and Start again also use this reveal; Reduce Motion is immediate.
+See [CLOSED_DOORS.md](CLOSED_DOORS.md) for artwork provenance and verification.

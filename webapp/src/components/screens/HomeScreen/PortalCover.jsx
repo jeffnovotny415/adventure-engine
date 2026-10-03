@@ -1,5 +1,5 @@
 import { useContent } from '../../../hooks/useContent';
-import { doorArtwork } from './doorArtwork';
+import { DoorPortal } from './DoorPortal';
 
 export function PortalCover({ story }) {
   const { getText } = useContent();
@@ -9,7 +9,7 @@ export function PortalCover({ story }) {
       <span className="cover-spine"><i /><i /><i /></span>
       <span className="cover-border" />
       <span className="cover-title">{story.title}</span>
-      <span className="cover-portal"><img src={doorArtwork(story.id)} width="1024" height="1536" alt="" draggable="false" /><i className="portal-shimmer" /></span>
+      <span className="cover-portal"><DoorPortal storyId={story.id} /></span>
       <span className="cover-imprint">{getText('app_title')}</span><span className="cover-wear" />
     </span>
   </span>;

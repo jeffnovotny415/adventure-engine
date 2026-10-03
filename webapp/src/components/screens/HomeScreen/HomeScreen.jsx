@@ -41,14 +41,29 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
     setIndex(distances.indexOf(Math.min(...distances)));
   }
   function open(story) {
-    if (opening) return;
+    if (openingTimer.current) return;
     onBrowse?.(story.id);
     if (bookmarks.some(saved => saved.storyId === story.id)) setSelectedStory(story);
-    else if (matchMedia('(prefers-reduced-motion: reduce)').matches) onSelectStory(story.id);
-    else { setOpening(story.id); openingTimer.current = setTimeout(() => { setOpening(null); onSelectStory(story.id); },520); }
+    else enter(story.id, onSelectStory);
+  }
+  function enter(id, action) {
+    if (openingTimer.current) return;
+    setSelectedStory(null);
+    const images = shelfRef.current?.querySelector(`[data-book="${id}"] .door-portal`)?.querySelectorAll('img');
+    // A slow/missing image should never delay entry or flash during the dissolve.
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || !images?.length || [...images].some(image => !image.complete || !image.naturalWidth)) {
+      action(id);
+      return;
+    }
+    setOpening(id);
+    openingTimer.current = setTimeout(() => {
+      openingTimer.current = null;
+      setOpening(null);
+      action(id);
+    }, 900);
   }
   return (
-    <div className="portal-design">
+    <div className={`portal-design ${opening ? 'is-entering' : ''}`} aria-busy={Boolean(opening)} inert={Boolean(opening)}>
       <AppHeader className="library-header">
         <button type="button" className="text-button library-passages" aria-haspopup="dialog"
           onClick={() => setPassagesOpen(true)}>
@@ -83,9 +98,9 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
         </nav>
         <p className="library-footnote">{getText('portal_library.footer')}</p>
         {selectedStory && <ResumeBookmark story={selectedStory} bookmark={selectedBookmark} onClose={() => setSelectedStory(null)}
-          onBegin={() => { setSelectedStory(null); onSelectStory(selectedStory.id); }}
-          onStartAgain={() => { setSelectedStory(null); onStartAgain(selectedStory.id); }}
-          onResume={() => { setSelectedStory(null); onContinue(selectedStory.id); }} />}
+          onBegin={() => enter(selectedStory.id, onSelectStory)}
+          onStartAgain={() => enter(selectedStory.id, onStartAgain)}
+          onResume={() => enter(selectedStory.id, onContinue)} />}
         {passagesOpen && <PassageBookmarks portalTarget={mainRef.current} onClose={() => setPassagesOpen(false)} />}
       </main>
       <footer className="library-footer">

@@ -19,10 +19,10 @@
 /* Stable painted endpoints, no cutout geometry or camera movement. */
 .door-portal{display:block;position:relative;width:100%;height:100%;isolation:isolate}
 .door-portal img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
-.can-opener.is-opening .book-cover{transform:none;opacity:1}
-.can-opener.is-opening .door-closed{animation:door-reveal 680ms cubic-bezier(.4,0,.2,1) both;will-change:opacity}
-.prototype[data-view="library"]:has(.can-opener.is-opening)>header,
-.prototype[data-view="library"]:has(.can-opener.is-opening)>main{animation:library-depart 900ms ease-in-out both}
+.is-opening .book-cover{transform:none;opacity:1}
+.is-opening .door-closed{animation:door-reveal 680ms cubic-bezier(.4,0,.2,1) both;will-change:opacity}
+.prototype[data-view="library"]:has(.is-opening)>header,
+.prototype[data-view="library"]:has(.is-opening)>main{animation:library-depart 900ms ease-in-out both}
 .prototype:not([data-view="library"]) .open-book{animation:page-arrive 240ms ease-out both}
 @keyframes door-reveal{from{opacity:1}to{opacity:0}}
 @keyframes library-depart{0%,78%{opacity:1}100%{opacity:0}}

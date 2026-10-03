@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import copy from './ui_copy.json';
-import { DoorPortal } from './DoorPortal';
+import { DoorPortal } from '../../../src/components/screens/HomeScreen/DoorPortal';
 import tech from '../../../src/data/stories/the_can_opener.json';
 import mage from '../../../src/data/stories/summoned_mage.json';
 import space from '../../../src/data/stories/space_walker.json';
@@ -24,7 +24,7 @@ export function Cover({ book }) {
       <span className="cover-spine"><i /><i /><i /></span>
       <span className="cover-border" />
       <span className="cover-title">{book.title}</span>
-      <span className="cover-portal">{book.id === 'the_can_opener' ? <DoorPortal /> : <><img src={`/images/library/${book.art}.webp`} alt="" draggable="false" /><i className="portal-shimmer" /></>}</span>
+      <span className="cover-portal"><DoorPortal storyId={book.id} /></span>
       <span className="cover-imprint">Paths of Wonder</span>
       <span className="cover-wear" />
     </span>
@@ -131,7 +131,7 @@ export function Workbench() {
   return <div className="workbench"><header className="proof-header"><div><p className="eyebrow">Paths of Wonder · Design proof 03</p><h1>Every book, a doorway.</h1><p>A closed door, a quiet opening, and the story begins.</p></div><a className="fullscreen-link" href={`?device=${device}`} target="_blank" rel="noreferrer">Open device preview ↗</a></header>
     <div className="proof-controls"><fieldset><legend>Fixed orientation</legend>{[['tablet','iPad · landscape'],['phone','iPhone · portrait']].map(([id,title])=><button key={id} aria-pressed={device===id} onClick={()=>setDevice(id)}>{title}</button>)}</fieldset><label>Screen<select value={view} onChange={e=>setView(e.target.value)}><option value="library">Choose a book</option><option value="welcome">Welcome page</option></select></label>{view==='welcome' && <label>Book<select value={book} onChange={e=>setBook(e.target.value)}>{books.map(b=><option key={b.id} value={b.id}>{b.title}</option>)}</select></label>}<label className="check-option"><input type="checkbox" checked={returning} onChange={e=>setReturning(e.target.checked)} />Sample saved place</label><label className="check-option"><input type="checkbox" checked={large} onChange={e=>setLarge(e.target.checked)} />Large text</label><button onClick={()=>setRevision(n=>n+1)}>Reset preview</button></div>
     <div ref={host} className="preview-host"><div className={`device-frame ${device}`} style={{width:dimensions[0]*scale,height:dimensions[1]*scale}}><iframe key={revision} src={src} title="Interactive portal book design proof" style={{width:dimensions[0],height:dimensions[1],transform:`scale(${scale})`}} /></div></div>
-    <footer className="proof-notes"><p><strong>Try it:</strong> open The Can Opener to see a gentle dissolve from closed to open, then the welcome page. No zoom or simulated door swing; a continuous animation clip can replace this later. The other two books retain their previous opening in this proof.</p><p><strong>Orientation:</strong> iPhone portrait and iPad landscape. These preview frames keep their orientation when the browser changes size; the app also locks its native landing orientation.</p><p>The closed Can Opener artwork is approved; its opening motion is the new part to review. This proof does not change the installed app, story text, or saved progress. “Sample saved place” demonstrates skipping the welcome page when continuing.</p></footer>
+    <footer className="proof-notes"><p><strong>Try it:</strong> open any book to see a gentle dissolve from closed to open, then the welcome page. No zoom or simulated door swing; a continuous animation clip can replace this later.</p><p><strong>Orientation:</strong> iPhone portrait and iPad landscape. These preview frames keep their orientation when the browser changes size; the app also locks its native landing orientation.</p><p>All three books use the approved quiet reveal, now integrated in the app. This proof does not change the installed app, story text, or saved progress. “Sample saved place” demonstrates skipping the welcome page when continuing.</p></footer>
   </div>;
 }
 

@@ -55,3 +55,9 @@ including saved-place flows and failed-write recovery. Lint/build passed with
 the existing two lint warnings and bundle-size advisory.
 
 See [DOOR_TRANSITION.md](DOOR_TRANSITION.md) for the saved artwork and exact prompt.
+
+## Production follow-through
+
+The reveal is now integrated for all three books. The proof shares the production
+DoorPortal component. See [CLOSED_DOORS.md](CLOSED_DOORS.md) for the shipped behavior,
+new artwork and device build checks. Earlier proof-only notes above are history.

@@ -35,7 +35,7 @@ export function Fixture() {
         const previousAction = document.querySelector('[data-last-action]').textContent;
         book.focus(); book.click(); await frame();
         if (!bookmark) {
-          await new Promise(resolve => setTimeout(resolve,600));
+          await new Promise(resolve => setTimeout(resolve,1000));
           if (document.querySelector('[data-last-action]').textContent !== `open:${id}`) throw Error('New book did not open');
           continue;
         }
@@ -49,12 +49,12 @@ export function Fixture() {
         if (bookmark) {
           if (dialog.querySelector('.resume-bookmark__chapter').textContent !== bookmark.sceneTitle) throw Error('Wrong saved place');
         } else if (dialog.querySelector('.resume-bookmark__body p').textContent !== stories[id].description) throw Error('Description changed');
-        dialog.querySelector('.primary-button').click(); await frame();
+        dialog.querySelector('.primary-button').click(); await new Promise(resolve => setTimeout(resolve,1000));
         if (document.querySelector('[data-last-action]').textContent !== `${bookmark ? 'resume' : 'open'}:${id}`) throw Error('Wrong route');
         if (bookmark) {
           book.click(); await frame();
           dialog = document.querySelector('dialog[open]');
-          dialog.querySelector('.resume-bookmark__actions .text-button').click(); await frame();
+          dialog.querySelector('.resume-bookmark__actions .text-button').click(); await new Promise(resolve => setTimeout(resolve,1000));
           if (document.querySelector('[data-last-action]').textContent !== `restart:${id}`) throw Error('Wrong restart route');
         }
       }

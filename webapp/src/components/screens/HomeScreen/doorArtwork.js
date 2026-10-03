@@ -4,3 +4,4 @@ const ARTWORK = {
   summoned_mage: 'summoned-mage',
 };
 export const doorArtwork = id => `/images/library/${ARTWORK[id]}.webp`;
+export const closedDoorArtwork = id => `/images/library/${ARTWORK[id]}-closed-v1.png`;

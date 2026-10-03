@@ -223,3 +223,16 @@
 
 .portal-design .library-intro h1{max-width:760px;text-wrap:pretty;font-size:1.5rem;line-height:1.35;}
 @media(max-width:699px),(max-height:500px){.portal-design .library-intro h1{font-size:1.25rem;}}
+
+/* Approved door reveal: stable book, aligned paintings, no camera zoom. */
+.portal-design .door-portal{display:block;position:relative;width:100%;height:100%;isolation:isolate}
+.portal-design .door-portal img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.portal-design .is-opening .book-cover{transform:none;opacity:1}
+.portal-design .is-opening .door-closed{animation:book-door-reveal 680ms cubic-bezier(.4,0,.2,1) both;will-change:opacity}
+.portal-design.is-entering>header,.portal-design.is-entering>main,.portal-design.is-entering>footer{animation:book-library-depart 900ms ease-in-out both}
+@keyframes book-door-reveal{from{opacity:1}to{opacity:0}}
+@keyframes book-library-depart{0%,78%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:no-preference){
+  .portal-design[data-screen="welcome"] .open-book,.setup-layout{animation:book-page-arrive 240ms ease-out both}
+}
+@keyframes book-page-arrive{from{opacity:0}to{opacity:1}}
