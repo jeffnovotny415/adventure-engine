@@ -9,6 +9,7 @@ for(const [name,viewport] of [['phone',{width:390,height:844}],['ipad',{width:10
  for(const [id,title] of [['the_can_opener','The Can Opener'],['summoned_mage','The Summoned Mage'],['space_walker','The Space Walker']]){
   await page.goto(base);await page.evaluate(()=>document.fonts.ready);
   const card=page.locator(`[data-book="${id}"]`);
+  await card.locator('canvas[data-ready=true]').waitFor({state:'attached'});
   await card.locator('img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
   if(name==='ipad')await page.getByRole('button',{name:`Show ${title}`,exact:true}).click();
   await card.getByRole('button',{name:`Open ${title}`,exact:true}).scrollIntoViewIfNeeded();
@@ -16,11 +17,32 @@ for(const [name,viewport] of [['phone',{width:390,height:844}],['ipad',{width:10
   await card.getByRole('button',{name:`Open ${title}`,exact:true}).click();
   assert.equal(await page.locator('.portal-design').getAttribute('inert'),'');
   const samples=[];
-  for(let i=0;i<3;i++){await page.waitForTimeout(100);samples.push(await card.locator('.door-closed').evaluate(el=>({opacity:Number(getComputedStyle(el).opacity),width:el.getBoundingClientRect().width,x:el.getBoundingClientRect().x,cover:getComputedStyle(el.closest('.book-cover')).transform})));}
-  for(let i=1;i<samples.length;i++){assert.ok(samples[i].opacity<samples[i-1].opacity);assert.equal(samples[i].width,samples[0].width);assert.equal(samples[i].x,samples[0].x);assert.equal(samples[i].cover,'none');}
+  for(let i=0;i<3;i++){await page.waitForTimeout(100);samples.push(await card.locator('.door-motion').evaluate(el=>({frame:Number(el.dataset.frame),width:el.getBoundingClientRect().width,x:el.getBoundingClientRect().x,cover:getComputedStyle(el.closest('.book-cover')).transform,opacity:getComputedStyle(el).opacity})));}
+  for(let i=1;i<samples.length;i++){assert.ok(samples[i].frame>samples[i-1].frame);assert.equal(samples[i].width,samples[0].width);assert.equal(samples[i].x,samples[0].x);assert.equal(samples[i].cover,'none');assert.equal(samples[i].opacity,'1');}
+  await card.locator('canvas').evaluate(el=>new Promise(resolve=>{const check=()=>Number(el.dataset.frame)>=(el.closest('[data-book]').dataset.book==='summoned_mage'?24:35)?resolve():requestAnimationFrame(check);check();}));
   await page.getByRole('textbox').first().waitFor();
  }
  await page.close();
 }
-assert.deepEqual(errors,[]);console.log('PASS: all three production reveals, phone and iPad, stable positions, decreasing opacity, input guard, setup arrival and no browser errors.');
+// Decode failures and Reduce Motion must not trap a reader on the shelf.
+for(const mode of ['failed','late','reduced']) {
+ const page=await browser.newPage({viewport:{width:390,height:844}});
+ page.on('pageerror',e=>errors.push(e.message));
+ const pending=[];
+ if(mode==='reduced') await page.emulateMedia({reducedMotion:'reduce'});
+ else await page.route('**/*-motion-v1.webp',route=>mode==='failed'?route.abort():pending.push(route));
+ await page.goto(base);
+ const card=page.locator('[data-book="the_can_opener"]');
+ await card.locator('img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
+ await card.getByRole('button',{name:'Open The Can Opener',exact:true}).click();
+ assert.equal(await page.locator('.door-portal--playing').count(),0,mode+' fallback');
+ if(mode==='late') {
+  await Promise.all(pending.map(route=>route.continue()));
+  await page.waitForTimeout(150);
+  assert.equal(await page.locator('.door-portal--playing').count(),0,'late decode must not change active transition');
+ }
+ await page.getByRole('textbox').first().waitFor();
+ await page.close();
+}
+assert.deepEqual(errors,[]);console.log('PASS: all three production reveals, phone and iPad, stable positions, advancing frames, final frame reached, reduced motion and failed/late decode fallbacks, input guard, setup arrival and no browser errors.');
 }finally{await browser.close()}

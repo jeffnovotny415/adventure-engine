@@ -229,7 +229,7 @@
 .portal-design .door-portal img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
 .portal-design .is-opening .book-cover{transform:none;opacity:1}
 .portal-design .is-opening .door-closed{animation:book-door-reveal 680ms cubic-bezier(.4,0,.2,1) both;will-change:opacity}
-.portal-design.is-entering>header,.portal-design.is-entering>main,.portal-design.is-entering>footer{animation:book-library-depart 900ms ease-in-out both}
+.portal-design.is-entering>header,.portal-design.is-entering>main,.portal-design.is-entering>footer{animation:book-library-depart var(--door-entry-duration,900ms) ease-in-out both}
 @keyframes book-door-reveal{from{opacity:1}to{opacity:0}}
 @keyframes book-library-depart{0%,78%{opacity:1}100%{opacity:0}}
 @media(prefers-reduced-motion:no-preference){

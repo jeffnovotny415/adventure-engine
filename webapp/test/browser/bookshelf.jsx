@@ -26,6 +26,11 @@ export function Fixture() {
       if (books.filter(book => book.closest('[data-book]').dataset.resumable === 'true').length !== count) throw Error('Correct resume count');
       if (document.documentElement.scrollWidth > innerWidth + 1) throw Error('Horizontal overflow');
       const frame = () => new Promise(requestAnimationFrame);
+      const entryFinished = async () => {
+        const deadline = performance.now() + 2500;
+        while (document.querySelector('.portal-design').hasAttribute('inert') && performance.now() < deadline) await frame();
+        await frame();
+      };
       for (const book of books) {
         const id = book.closest('[data-book]').dataset.book;
         const bookmark = bookmarks.find(saved => saved.storyId === id);
@@ -35,7 +40,7 @@ export function Fixture() {
         const previousAction = document.querySelector('[data-last-action]').textContent;
         book.focus(); book.click(); await frame();
         if (!bookmark) {
-          await new Promise(resolve => setTimeout(resolve,1000));
+          await entryFinished();
           if (document.querySelector('[data-last-action]').textContent !== `open:${id}`) throw Error('New book did not open');
           continue;
         }
@@ -49,12 +54,12 @@ export function Fixture() {
         if (bookmark) {
           if (dialog.querySelector('.resume-bookmark__chapter').textContent !== bookmark.sceneTitle) throw Error('Wrong saved place');
         } else if (dialog.querySelector('.resume-bookmark__body p').textContent !== stories[id].description) throw Error('Description changed');
-        dialog.querySelector('.primary-button').click(); await new Promise(resolve => setTimeout(resolve,1000));
+        dialog.querySelector('.primary-button').click(); await entryFinished();
         if (document.querySelector('[data-last-action]').textContent !== `${bookmark ? 'resume' : 'open'}:${id}`) throw Error('Wrong route');
         if (bookmark) {
           book.click(); await frame();
           dialog = document.querySelector('dialog[open]');
-          dialog.querySelector('.resume-bookmark__actions .text-button').click(); await new Promise(resolve => setTimeout(resolve,1000));
+          dialog.querySelector('.resume-bookmark__actions .text-button').click(); await entryFinished();
           if (document.querySelector('[data-last-action]').textContent !== `restart:${id}`) throw Error('Wrong restart route');
         }
       }

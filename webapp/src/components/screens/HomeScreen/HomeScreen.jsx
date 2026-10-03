@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { DOOR_ENTRY_MS } from './doorMotion';
 import { useContent } from '../../../hooks/useContent';
 import { PortalCover } from './PortalCover';
 import '../../../styles/portalBooks.css';
@@ -21,6 +22,9 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
   const [unlockOpen, setUnlockOpen] = useState(false);
   const shelfRef = useRef(null), openingTimer = useRef(null);
   const [opening, setOpening] = useState(null);
+  const [motionOpening, setMotionOpening] = useState(false);
+  const readyDoors = useRef({});
+  const onMotionReady = useCallback((id, ready) => { readyDoors.current[id] = ready; }, []);
   useEffect(() => () => clearTimeout(openingTimer.current), []);
   const [index, setIndex] = useState(Math.max(0, DOOR_ORDER.indexOf(initialBookId)));
   const orderedStories = Object.values(stories).sort((a,b) => DOOR_ORDER.indexOf(a.id) - DOOR_ORDER.indexOf(b.id));
@@ -56,14 +60,16 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
       return;
     }
     setOpening(id);
+    const animate = Boolean(readyDoors.current[id]);
+    setMotionOpening(animate);
     openingTimer.current = setTimeout(() => {
       openingTimer.current = null;
       setOpening(null);
       action(id);
-    }, 900);
+    }, animate ? DOOR_ENTRY_MS : 900);
   }
   return (
-    <div className={`portal-design ${opening ? 'is-entering' : ''}`} aria-busy={Boolean(opening)} inert={Boolean(opening)}>
+    <div className={`portal-design ${opening ? 'is-entering' : ''}`} style={{ '--door-entry-duration': `${motionOpening ? DOOR_ENTRY_MS : 900}ms` }} aria-busy={Boolean(opening)} inert={Boolean(opening)}>
       <AppHeader className="library-header">
         <button type="button" className="text-button library-passages" aria-haspopup="dialog"
           onClick={() => setPassagesOpen(true)}>
@@ -81,7 +87,7 @@ export function HomeScreen({ stories, bookmarks = [], onContinue, onSelectStory,
             const info = getText(`portal_library.books.${story.id}`);
             const art = story.id === 'the_can_opener' ? 'can-opener' : story.id.replaceAll('_','-');
             return <article className={`book-feature ${art} ${opening===story.id?'is-opening':''}`} data-book={story.id} data-resumable={Boolean(bookmark)} key={story.id}>
-              <button type="button" className="cover-button" aria-haspopup={bookmark ? 'dialog' : undefined} aria-label={`${getText('portal_library.open')} ${story.title}`} onClick={() => open(story)}><PortalCover story={story} /></button>
+              <button type="button" className="cover-button" aria-haspopup={bookmark ? 'dialog' : undefined} aria-label={`${getText('portal_library.open')} ${story.title}`} onClick={() => open(story)}><PortalCover story={story} playing={opening === story.id && motionOpening} onMotionReady={onMotionReady} /></button>
               <div className="book-details">
                 <span className="book-number" aria-hidden="true">0{i+1}</span><p className="eyebrow">{info.genre}</p><h2>{story.title}</h2><p className="book-summary">{info.summary}</p>
                 {bookmark && <p className="saved-place">{getText('portal_library.saved')}<strong>{bookmark.sceneTitle}</strong></p>}

@@ -1,0 +1,10 @@
+.door-portal .door-motion { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; pointer-events:none; opacity:0; }
+.door-portal.door-portal--playing .door-world { visibility:hidden; }
+.door-portal.door-portal--playing .door-motion { opacity:1; }
+/* Briefly blend the full-resolution cover into the aligned animated drawing. */
+.is-opening .door-portal.door-portal--playing .door-closed { animation:door-motion-start 120ms ease-out both; }
+@keyframes door-motion-start { from { opacity:1; } to { opacity:0; } }
+@media(prefers-reduced-motion:reduce) {
+  .door-portal.door-portal--playing .door-motion { visibility:hidden; }
+  .is-opening .door-portal.door-portal--playing .door-closed { animation:none; opacity:1; }
+}

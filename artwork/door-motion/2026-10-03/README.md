@@ -1,4 +1,56 @@
-# Can Opener door animation test
+# Door opening animations
+
+## Production integration — October 3
+
+Jeff approved the Can Opener sample at App pace and requested the other two
+doors plus integration. All three now use local transparent sprite sheets inside
+the existing production leather covers, without the rough review-page mockup.
+
+- Mage job: `beaab382-7c8c-4e9d-abc9-00a039e6df71`; succeeded; 9 credits;
+  36 frames, 6×6, 2.833333 seconds. Sources retained in `summoned-mage/`.
+- Space Walker job: `95af602d-62c5-4adf-ae94-a81a24c692c4`; succeeded;
+  9 credits; 36 frames, 6×6, 2.583333 seconds. Sources in `space-walker/`.
+- Same Hydra request settings and input commit as the original Can Opener below.
+  Inputs are the corresponding `summoned-mage` / `space-walker` closed PNG and
+  open WebP in `webapp/public/images/library/`.
+- Mage prompt: The single golden wooden door swings inward smoothly on its left
+  hinges, revealing the magical forest and castle, then rests open. Keep the
+  illustrated arch, star, vines, threshold, background and camera completely
+  still. No zoom, pan, new objects or closing motion.
+- Space prompt: The single crimson wooden door swings inward smoothly on its
+  left hinges, revealing the spaceship interior and ringed planet, then rests
+  open. Keep the illustrated arch, star, vines, threshold, background and camera
+  completely still. No zoom, pan, new objects or closing motion.
+
+Playback lasts 1.35 seconds, followed by the end of the library fade (entry at
+1.55 seconds). Mage uses frames 0–24 to omit a generated late swing/bounce;
+the other two use all 36 frames. Original outputs remain unmodified. No looping,
+audio, service requests or video autoplay dependency. The full-resolution closed
+painting remains the idle cover. A 120 ms blend introduces the aligned motion.
+The generated art is softer than the original at tablet size; frame registration
+aligns the first-frame alpha bounds with the original painting so it does not
+shrink when playback starts. This is display composition, not a new book render.
+
+Only decoded and drawable sheets can animate. A missing or late sheet uses the
+existing dissolve; late decoding cannot switch modes mid-entry. Reduce Motion
+and unavailable still art skip the transition. Navigation has one guarded timer;
+canvas animation and loading callbacks are cancelled on unmount. No story or
+save schema changes.
+
+Verification: full `npm run check`; WebKit door checks for all three at phone and
+iPad sizes (frame advancement/end, stable cover, input guard, failed/late decode,
+Reduce Motion); library checks at five viewport sizes and 100/200/312% text,
+new/resume/restart, failed-save retry, welcome gestures and dialogs. Visual checks
+of all three covers before and during animation. All 58 protected authored files
+match the pre-change SHA-256 baseline.
+
+Signed iOS Release build passed; bundle verification found all 189 web assets
+byte-identical to the production build, and strict code-signature verification
+passed. Installed successfully on Jeff’s iPhone 16 Pro and Oliver’s iPad (A16).
+Neither app was uninstalled or launched after installation. Physical playback
+feel remains for Jeff/Ollie to assess; automated rendering checks used WebKit.
+
+## Original Can Opener review
 
 October 3, 2026. Review-only Ludo Hydra generation; production app unchanged.
 Open index.html for transparent frames on parchment and a book-cover mockup,
