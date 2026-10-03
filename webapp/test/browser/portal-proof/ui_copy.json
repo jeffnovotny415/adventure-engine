@@ -1,0 +1,29 @@
+{
+  "heading": "Which world will you choose?",
+  "note": "A little wonder on every page.",
+  "instruction": "Choose a book. Shape the adventure.",
+  "welcomeInstruction": "Turn the page to step into the world.",
+  "books": [
+    {
+      "id": "the_can_opener",
+      "art": "can-opener",
+      "genre": "Gadgets & adventure",
+      "summary": "Build your own gadgets and take on the robots causing trouble in your neighborhood.",
+      "welcome": "An adventure of homemade gadgets, troublesome robots, and inventions that don’t always work quite as planned."
+    },
+    {
+      "id": "summoned_mage",
+      "art": "summoned-mage",
+      "genre": "Magic & friendship",
+      "summary": "Discover your magic, make unlikely friends, and help a world that’s losing its own.",
+      "welcome": "An adventure of unexpected magic, new friends, and a world that needs your help. Your choices will guide the way."
+    },
+    {
+      "id": "space_walker",
+      "art": "space-walker",
+      "genre": "Space & discovery",
+      "summary": "Join a spaceship’s crew, explore strange worlds, and uncover what’s happening to the missing planets.",
+      "welcome": "An adventure of strange planets, daring rescues, and a spaceship crew far from home. There’s a whole universe to explore."
+    }
+  ]
+}
