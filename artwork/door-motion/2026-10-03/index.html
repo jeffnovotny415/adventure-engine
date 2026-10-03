@@ -6,19 +6,19 @@
 <div class="stage"><div class="book"><h2>The Can Opener</h2><img class="frame" src="frames/00.webp" alt="The illustrated Can Opener doorway"><small>PATHS OF WONDER</small></div><div class="detail"><img class="frame" src="frames/00.webp" alt="Enlarged animated doorway"><div class="note">Generated preview resolution</div></div></div>
 <div class="controls"><label>Book<select id="story"><option value="can-opener">The Can Opener</option><option value="summoned-mage">The Summoned Mage</option><option value="space-walker">The Space Walker</option></select></label><button id="play" disabled>Loading frames…</button><label>Playback<select id="speed"><option value="1">Original timing</option><option value="2" selected>App pace · 1.35 seconds</option></select></label><output id="position">Frame 1 / 36</output></div>
 <label class="scrub">Inspect individual frames<input id="scrubber" type="range" min="0" max="35" value="0"></label>
-<p class="note">No automatic looping or audio. Use Play to start; the door remains open at the end. App pace takes 1.35 seconds. The Mage playback holds before the generated late bounce; the scrubber includes the complete source.</p>
+<p class="note">No automatic looping or audio. Use Play to start; the door remains open at the end. App pace takes 1.35 seconds. Both replacement doors open inward continuously on fixed left hinges.</p>
 <details><summary>What to look for</summary><p>Does the swing feel natural? Does the arch stay still enough? The generated art is softer than the original, and the open pose does not exactly match our approved painting. The app aligns each clip to its original doorway and preserves the existing leather book.</p><p><a href="ludo-hydra.mp4">Original video</a> · <a href="ludo-hydra.gif">Animated GIF</a> · <a href="README.md">Generation notes</a></p><p>Higgsfield comparison was not generated: the connected free workspace does not have the required Kling entitlement. The Ludo test cost 9 credits.</p></details></main>
 <script>
 let frames=Array.from({length:36},(_,i)=>`frames/${String(i).padStart(2,'0')}.webp`), imgs=[...document.querySelectorAll('.frame')], button=document.querySelector('#play'), slider=document.querySelector('#scrubber'), speed=document.querySelector('#speed'), position=document.querySelector('#position');let request=0,start=0;
 function show(n){imgs.forEach(img=>img.src=frames[n]);slider.value=n;position.value=`Frame ${n+1} / 36`;}
 function stop(){cancelAnimationFrame(request);request=0;button.textContent='Replay opening';}
-function tick(now){if(!start)start=now;const app=speed.value==='2',last=app&&story.value==='summoned-mage'?24:35;const progress=(now-start)/(app?1350:durations[story.value]);show(Math.min(last,Math.floor(progress*(last+1))));if(progress<1)request=requestAnimationFrame(tick);else stop();}
+function tick(now){if(!start)start=now;const app=speed.value==='2',last=35;const progress=(now-start)/(app?1350:durations[story.value]);show(Math.min(last,Math.floor(progress*(last+1))));if(progress<1)request=requestAnimationFrame(tick);else stop();}
 button.onclick=()=>{if(request){stop();return;}start=0;show(0);button.textContent='Pause';request=requestAnimationFrame(tick);};slider.oninput=()=>{stop();show(Number(slider.value));};speed.onchange=()=>{stop();show(0);};
-const story=document.querySelector('#story'),durations={'can-opener':2708.333,'summoned-mage':2833.333,'space-walker':2583.333};
+const story=document.querySelector('#story'),durations={'can-opener':2708.333,'summoned-mage':2916.667,'space-walker':2482.564};
 let loadRevision=0;
 function load(){
  const revision=++loadRevision;stop();button.disabled=true;button.textContent='Loading frames…';
- const prefix=story.value==='can-opener'?'':story.value+'/';
+ const prefix=story.value==='can-opener'?'':(story.value==='summoned-mage'?'inward-v3/':'inward-v2/')+story.value+'/';
  frames=Array.from({length:36},(_,i)=>`${prefix}frames/${String(i).padStart(2,'0')}.webp`);
  document.querySelector('.book h2').textContent=story.selectedOptions[0].textContent;
  document.querySelector('.book').style.background={'can-opener':'#265659','summoned-mage':'#674653','space-walker':'#773e39'}[story.value];

@@ -8,12 +8,12 @@ export const DOOR_MOTION = {
     sourceBounds: [6, 29, 210, 331], targetBounds: [40, 13, 984, 1413],
   },
   summoned_mage: {
-    src: '/images/library/summoned-mage-motion-v1.webp', lastFrame: 24,
+    src: '/images/library/summoned-mage-motion-v2.webp', lastFrame: 35,
     sourceBounds: [13, 29, 209, 346], targetBounds: [70, 14, 980, 1486],
   },
   space_walker: {
-    src: '/images/library/space-walker-motion-v1.webp', lastFrame: 35,
-    sourceBounds: [14, 28, 208, 336], targetBounds: [75, 5, 975, 1435],
+    src: '/images/library/space-walker-motion-v2.webp', lastFrame: 35,
+    sourceBounds: [24, 49, 190, 327], targetBounds: [75, 5, 975, 1435],
   },
 };
 

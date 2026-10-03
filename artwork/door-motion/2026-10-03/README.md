@@ -1,5 +1,57 @@
 # Door opening animations
 
+## Inward swing correction — October 3
+
+Jeff reported that the two new doors opened outward or changed direction. The
+first Mage trim did not fix the geometry: it hid the reversal but kept an outward
+swing. The previous visual review was insufficient. Those two production sheets
+are superseded; the Can Opener clip and all book styling remain unchanged.
+
+Current production files are `summoned-mage-motion-v2.webp` and
+`space-walker-motion-v2.webp`, with all 36 frames at the existing 1.35-second pace.
+The review page points to these new source sequences too. No loop or tail trim.
+
+- Space Walker: `inward-v2/space-walker/`, motion-transfer job
+  `f1d533af-8125-4bce-8560-30dd5bfdaa34`, 9 credits, 2.482564-second source.
+  Uses the approved Can Opener MP4 as the motion reference and the original red
+  closed-door PNG as the image. Prompt requires inward movement on a fixed left
+  hinge, the right bottom corner receding above the threshold, no reversal,
+  source color/ornament, stationary arch/camera and a spaceship corridor with a
+  ringed planet instead of the reference workshop.
+- Rejected Mage transfer: `inward-v2/summoned-mage/`, job
+  `e6ac998c-ea2e-4ef2-8bdf-d2ddb0ab1d7d`, 9 credits. Same reference/settings,
+  asking for a magical forest, mushrooms and castle. Its hinge drifts to the
+  other side and the background has holes. Retained as source evidence only;
+  neither the app nor review page loads it.
+- Accepted Mage replacement: `inward-v3/summoned-mage/`, animateSprite job
+  `9305b527-c846-497c-bd38-c589ea639f7c`, 9 credits, 2.916667-second source.
+  Uses the original closed and open Mage artwork as endpoints. Prompt:
+  “The door is pushed away from the viewer, rotating INWARD into the forest on
+  the LEFT hinges. The left vertical edge stays fixed to the left jamb throughout.
+  The right free edge moves LEFT and AWAY into the forest; its bottom corner rises
+  behind the threshold. Finish partially open exactly like the final image. A
+  single rigid wooden leaf, never opens toward the viewer, never slides or swaps
+  hinges. Arch, vines and camera remain still.”
+
+All requests: Hydra, 3 seconds requested, 36 frames, 384px export, no loop, no
+crop, no added margin; Mage endpoint request uses ui_asset and no prompt augment.
+Source inputs/reference are from repository commit `8a28338`. All returned
+assets were downloaded locally, including rejected output; no temporary service
+URLs are used in the app. Total corrective generation cost: 27 Ludo credits.
+
+Visual review inspected the complete frame sequences: both selected replacements
+keep the left hinge attached and move the free edge into the opening above the
+threshold, with no outward phase or reversal. Space Walker's generated interior
+is slightly different from the still painting. First-frame alignment was
+recalibrated for its added margins. WebKit checks confirm frame progression,
+full completion, fallback/Reduce Motion behavior, stable cover placement and
+entry on phone/iPad. All 58 protected authored files remain byte-identical.
+
+Validation also passed `npm run check` (140 tests), library flows at five
+viewports and 100/200/312% text, the corrected review page and shared prototype,
+and the signed Release build with 189 matching bundled web assets and strict
+code-signature verification.
+
 ## Production integration — October 3
 
 Jeff approved the Can Opener sample at App pace and requested the other two

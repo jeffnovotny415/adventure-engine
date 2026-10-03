@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { DOOR_MOTION } from '../src/components/screens/HomeScreen/doorMotion.js';
 // Optional WebKit checks, isolated contexts; never touches device saves.
 const { webkit } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.READER_URL || 'http://127.0.0.1:5190';
@@ -19,7 +20,7 @@ for(const [name,viewport] of [['phone',{width:390,height:844}],['ipad',{width:10
   const samples=[];
   for(let i=0;i<3;i++){await page.waitForTimeout(100);samples.push(await card.locator('.door-motion').evaluate(el=>({frame:Number(el.dataset.frame),width:el.getBoundingClientRect().width,x:el.getBoundingClientRect().x,cover:getComputedStyle(el.closest('.book-cover')).transform,opacity:getComputedStyle(el).opacity})));}
   for(let i=1;i<samples.length;i++){assert.ok(samples[i].frame>samples[i-1].frame);assert.equal(samples[i].width,samples[0].width);assert.equal(samples[i].x,samples[0].x);assert.equal(samples[i].cover,'none');assert.equal(samples[i].opacity,'1');}
-  await card.locator('canvas').evaluate(el=>new Promise(resolve=>{const check=()=>Number(el.dataset.frame)>=(el.closest('[data-book]').dataset.book==='summoned_mage'?24:35)?resolve():requestAnimationFrame(check);check();}));
+  await page.waitForFunction(({id,last})=>Number(document.querySelector(`[data-book="${id}"] canvas`)?.dataset.frame)===last,{id,last:DOOR_MOTION[id].lastFrame},{timeout:2500});
   await page.getByRole('textbox').first().waitFor();
  }
  await page.close();
@@ -30,7 +31,7 @@ for(const mode of ['failed','late','reduced']) {
  page.on('pageerror',e=>errors.push(e.message));
  const pending=[];
  if(mode==='reduced') await page.emulateMedia({reducedMotion:'reduce'});
- else await page.route('**/*-motion-v1.webp',route=>mode==='failed'?route.abort():pending.push(route));
+ else await page.route('**/*-motion-v*.webp',route=>mode==='failed'?route.abort():pending.push(route));
  await page.goto(base);
  const card=page.locator('[data-book="the_can_opener"]');
  await card.locator('img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
